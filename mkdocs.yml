@@ -2,6 +2,8 @@ site_name: Кооперативная Экономика
 
 theme:
   name: material
+  features:
+    - content.code.copy
   # custom_dir: overrides
   palette:
     - scheme: default
@@ -48,7 +50,7 @@ plugins:
 extra:
   generator: false
 
-copyright: АНО «Кооперативная Экономика» &copy; 2023
+copyright: АНО «Кооперативная Экономика» &copy; 2024
 
 markdown_extensions:
   - admonition
@@ -67,11 +69,12 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Доктрина: index.md
-  - Платформа: dicoop/index.md
-  - Документация: dev/index.md
+  - Цифровой Коммунизм: index.md  
+  - Доктрина: doctrine.md
+  - Платформа: platform.md
+  - Документация: documentation.md
   - Словарь: vocabulary.md
-  - Вопрос - ответ: instructions/index.md  
+  - Вопрос - ответ: faq.md  
   # - Подключиться: joincoop.md
   # - Витрина: joincoop.md
   # - Документация: https://dev.dicoop.space/html/index.html
