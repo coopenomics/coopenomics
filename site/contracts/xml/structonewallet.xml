@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structonewallet" kind="struct" language="C++" prot="public">
+    <compoundname>onewallet</compoundname>
+    <includes refid="balances_8hpp" local="no">balances.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structonewallet_1a5a66fe10712023fa3feb150a70a1ae2a" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onewallet::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>onewallet::username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="93" column="15" bodyfile="common/balances.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonewallet_1ab5af1b54f6f90606126fd856e7df41ad" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onewallet::coopname</definition>
+        <argsstring></argsstring>
+        <name>coopname</name>
+        <qualifiedname>onewallet::coopname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="94" column="15" bodyfile="common/balances.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonewallet_1aa659b93abb2fa5ebbf504275bf22c20c" prot="public" static="no" mutable="no">
+        <type>eosio::asset</type>
+        <definition>eosio::asset onewallet::available</definition>
+        <argsstring></argsstring>
+        <name>available</name>
+        <qualifiedname>onewallet::available</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="95" column="16" bodyfile="common/balances.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonewallet_1a59b90255c9c947a96328566b68701771" prot="public" static="no" mutable="no">
+        <type>eosio::asset</type>
+        <definition>eosio::asset onewallet::blocked</definition>
+        <argsstring></argsstring>
+        <name>blocked</name>
+        <qualifiedname>onewallet::blocked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="96" column="16" bodyfile="common/balances.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonewallet_1a06655465d27abdb0d2a43e446d5737b1" prot="public" static="no" mutable="no">
+        <type>eosio::asset</type>
+        <definition>eosio::asset onewallet::minimum</definition>
+        <argsstring></argsstring>
+        <name>minimum</name>
+        <qualifiedname>onewallet::minimum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="97" column="16" bodyfile="common/balances.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structonewallet_1aefe303817bc1c3c9d373448d230c4bd4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onewallet::primary_key</definition>
+        <argsstring>() const</argsstring>
+        <name>primary_key</name>
+        <qualifiedname>onewallet::primary_key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return username - primary_key </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="99" column="12" bodyfile="common/balances.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>asset</label>
+      </node>
+      <node id="2">
+        <label>name</label>
+      </node>
+      <node id="1">
+        <label>onewallet</label>
+        <link refid="structonewallet"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>coopname</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>available</edgelabel>
+          <edgelabel>blocked</edgelabel>
+          <edgelabel>minimum</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="common/balances.hpp" line="92" column="1" bodyfile="common/balances.hpp" bodystart="92" bodyend="101"/>
+    <listofallmembers>
+      <member refid="structonewallet_1aa659b93abb2fa5ebbf504275bf22c20c" prot="public" virt="non-virtual"><scope>onewallet</scope><name>available</name></member>
+      <member refid="structonewallet_1a59b90255c9c947a96328566b68701771" prot="public" virt="non-virtual"><scope>onewallet</scope><name>blocked</name></member>
+      <member refid="structonewallet_1ab5af1b54f6f90606126fd856e7df41ad" prot="public" virt="non-virtual"><scope>onewallet</scope><name>coopname</name></member>
+      <member refid="structonewallet_1a06655465d27abdb0d2a43e446d5737b1" prot="public" virt="non-virtual"><scope>onewallet</scope><name>minimum</name></member>
+      <member refid="structonewallet_1aefe303817bc1c3c9d373448d230c4bd4" prot="public" virt="non-virtual"><scope>onewallet</scope><name>primary_key</name></member>
+      <member refid="structonewallet_1a5a66fe10712023fa3feb150a70a1ae2a" prot="public" virt="non-virtual"><scope>onewallet</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

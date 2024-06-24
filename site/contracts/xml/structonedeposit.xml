@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structonedeposit" kind="struct" language="C++" prot="public">
+    <compoundname>onedeposit</compoundname>
+    <includes refid="balances_8hpp" local="no">balances.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structonedeposit_1a6090f86dea75090fce69b5b0368506d9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t onedeposit::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>onedeposit::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Уникальный идентификатор записи депозита </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="8" column="14" bodyfile="common/balances.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1adbfdb7fb7261aaa752198442850bad9b" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onedeposit::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>onedeposit::username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Имя аккаунта пользователя, совершившего депозит </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="9" column="17" bodyfile="common/balances.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1ac762c5095e4b4a28ec1ee7a706d5650c" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onedeposit::coopname</definition>
+        <argsstring></argsstring>
+        <name>coopname</name>
+        <qualifiedname>onedeposit::coopname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Имя аккаунта кооператива, в контексте которого совершается депозит </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="10" column="17" bodyfile="common/balances.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1a17c93f62db5cb099f7376e393ba8297b" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onedeposit::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>onedeposit::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Тип взноса (deposit | initial) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="11" column="17" bodyfile="common/balances.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1a5bfc1419fba55633fc803cf06e988605" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onedeposit::token_contract</definition>
+        <argsstring></argsstring>
+        <name>token_contract</name>
+        <qualifiedname>onedeposit::token_contract</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Имя аккаунта контракта токена для депозита </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="13" column="17" bodyfile="common/balances.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1adc97f3ad3642b5b2edc9c78511423fef" prot="public" static="no" mutable="no">
+        <type>eosio::asset</type>
+        <definition>eosio::asset onedeposit::quantity</definition>
+        <argsstring></argsstring>
+        <name>quantity</name>
+        <qualifiedname>onedeposit::quantity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Количество средств во внутренней валюте </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="14" column="18" bodyfile="common/balances.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1a60d603a3a6e230ef8bc63fb28ff7c1e6" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name onedeposit::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>onedeposit::status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Статус депозита </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="16" column="17" bodyfile="common/balances.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1ad42d5e295939051fb54d3a2e18b8216d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedeposit::link</definition>
+        <argsstring></argsstring>
+        <name>link</name>
+        <qualifiedname>onedeposit::link</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ссылка на дополнительную информацию или внешние данные </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="17" column="17" bodyfile="common/balances.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1ae1922acd1fe9e36627974d92d8f2aab6" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedeposit::memo</definition>
+        <argsstring></argsstring>
+        <name>memo</name>
+        <qualifiedname>onedeposit::memo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Примечание к депозиту </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="18" column="17" bodyfile="common/balances.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedeposit_1a407656114b13ce7a1efa2a50cef793c9" prot="public" static="no" mutable="no">
+        <type>eosio::time_point_sec</type>
+        <definition>eosio::time_point_sec onedeposit::expired_at</definition>
+        <argsstring></argsstring>
+        <name>expired_at</name>
+        <qualifiedname>onedeposit::expired_at</qualifiedname>
+        <briefdescription>
+<para>Время истечения срока давности </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="19" column="27" bodyfile="common/balances.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structonedeposit_1abeee164f7df00f682e6def767dac1665" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedeposit::primary_key</definition>
+        <argsstring>() const</argsstring>
+        <name>primary_key</name>
+        <qualifiedname>onedeposit::primary_key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Возвращает id как первичный ключ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="21" column="14" bodyfile="common/balances.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="structonedeposit_1ae241f9b200147931c8e3483755c2b5ec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedeposit::by_username</definition>
+        <argsstring>() const</argsstring>
+        <name>by_username</name>
+        <qualifiedname>onedeposit::by_username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Индекс по имени пользователя </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="22" column="14" bodyfile="common/balances.hpp" bodystart="22" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="structonedeposit_1ae480adf5459f0eaba2dcbfcd0173a105" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedeposit::by_status</definition>
+        <argsstring>() const</argsstring>
+        <name>by_status</name>
+        <qualifiedname>onedeposit::by_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Индекс по статусу депозита </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="23" column="14" bodyfile="common/balances.hpp" bodystart="23" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structonedeposit_1a54009c69fca6db3304f12cb39cdd2581" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedeposit::by_expired</definition>
+        <argsstring>() const</argsstring>
+        <name>by_expired</name>
+        <qualifiedname>onedeposit::by_expired</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Индекс по статусу истечения </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/balances.hpp" line="24" column="14" bodyfile="common/balances.hpp" bodystart="24" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Таблица <computeroutput>deposits</computeroutput> отслеживает депозиты в контракте GATEWAY. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>asset</label>
+      </node>
+      <node id="2">
+        <label>name</label>
+      </node>
+      <node id="5">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1">
+        <label>onedeposit</label>
+        <link refid="structonedeposit"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>coopname</edgelabel>
+          <edgelabel>status</edgelabel>
+          <edgelabel>token_contract</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>quantity</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>link</edgelabel>
+          <edgelabel>memo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>expired_at</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="common/balances.hpp" line="7" column="1" bodyfile="common/balances.hpp" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structonedeposit_1a54009c69fca6db3304f12cb39cdd2581" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>by_expired</name></member>
+      <member refid="structonedeposit_1ae480adf5459f0eaba2dcbfcd0173a105" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>by_status</name></member>
+      <member refid="structonedeposit_1ae241f9b200147931c8e3483755c2b5ec" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>by_username</name></member>
+      <member refid="structonedeposit_1ac762c5095e4b4a28ec1ee7a706d5650c" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>coopname</name></member>
+      <member refid="structonedeposit_1a407656114b13ce7a1efa2a50cef793c9" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>expired_at</name></member>
+      <member refid="structonedeposit_1a6090f86dea75090fce69b5b0368506d9" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>id</name></member>
+      <member refid="structonedeposit_1ad42d5e295939051fb54d3a2e18b8216d" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>link</name></member>
+      <member refid="structonedeposit_1ae1922acd1fe9e36627974d92d8f2aab6" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>memo</name></member>
+      <member refid="structonedeposit_1abeee164f7df00f682e6def767dac1665" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>primary_key</name></member>
+      <member refid="structonedeposit_1adc97f3ad3642b5b2edc9c78511423fef" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>quantity</name></member>
+      <member refid="structonedeposit_1a60d603a3a6e230ef8bc63fb28ff7c1e6" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>status</name></member>
+      <member refid="structonedeposit_1a5bfc1419fba55633fc803cf06e988605" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>token_contract</name></member>
+      <member refid="structonedeposit_1a17c93f62db5cb099f7376e393ba8297b" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>type</name></member>
+      <member refid="structonedeposit_1adbfdb7fb7261aaa752198442850bad9b" prot="public" virt="non-virtual"><scope>onedeposit</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

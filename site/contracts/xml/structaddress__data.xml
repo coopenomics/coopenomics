@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structaddress__data" kind="struct" language="C++" prot="public">
+    <compoundname>address_data</compoundname>
+    <includes refid="coops_8hpp" local="no">coops.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structaddress__data_1a8f21b5f6425f610ee9420328cf312a1a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::latitude</definition>
+        <argsstring></argsstring>
+        <name>latitude</name>
+        <qualifiedname>address_data::latitude</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="330" column="15" bodyfile="common/coops.hpp" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1ae39d05535c727466dc2506248508769c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::longitude</definition>
+        <argsstring></argsstring>
+        <name>longitude</name>
+        <qualifiedname>address_data::longitude</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="331" column="15" bodyfile="common/coops.hpp" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a07d136135a3430d45cdf65f0712fa283" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::country</definition>
+        <argsstring></argsstring>
+        <name>country</name>
+        <qualifiedname>address_data::country</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="332" column="15" bodyfile="common/coops.hpp" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a3b4b232ef3ababb1da9962fc9f2eee35" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>address_data::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="333" column="15" bodyfile="common/coops.hpp" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a27ce0d16ed3d0ca2d0e7e22ace29c6aa" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::city</definition>
+        <argsstring></argsstring>
+        <name>city</name>
+        <qualifiedname>address_data::city</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="334" column="15" bodyfile="common/coops.hpp" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a1c7176a66b84b6b819059b4363780d61" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::district</definition>
+        <argsstring></argsstring>
+        <name>district</name>
+        <qualifiedname>address_data::district</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="335" column="15" bodyfile="common/coops.hpp" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a106cb3b84ce9123528df437a6cfc4a0f" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::street</definition>
+        <argsstring></argsstring>
+        <name>street</name>
+        <qualifiedname>address_data::street</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="336" column="15" bodyfile="common/coops.hpp" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a7cd9a23e05094f9e6d6936dd2e476727" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::house_number</definition>
+        <argsstring></argsstring>
+        <name>house_number</name>
+        <qualifiedname>address_data::house_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="337" column="15" bodyfile="common/coops.hpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a403717a4fba75af0ce7a79f66489d529" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::building_section</definition>
+        <argsstring></argsstring>
+        <name>building_section</name>
+        <qualifiedname>address_data::building_section</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="338" column="15" bodyfile="common/coops.hpp" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a3bb11f9ff0548c6c8a1c2531a4156325" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::unit_number</definition>
+        <argsstring></argsstring>
+        <name>unit_number</name>
+        <qualifiedname>address_data::unit_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="339" column="15" bodyfile="common/coops.hpp" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1ab5d20f04752d16900c225ee1a49361b3" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::directions</definition>
+        <argsstring></argsstring>
+        <name>directions</name>
+        <qualifiedname>address_data::directions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="340" column="15" bodyfile="common/coops.hpp" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1a9a377d7073624df22e07791cc204623d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::phone_number</definition>
+        <argsstring></argsstring>
+        <name>phone_number</name>
+        <qualifiedname>address_data::phone_number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="341" column="15" bodyfile="common/coops.hpp" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structaddress__data_1ad37c48bf079e77c72da8c0206f2a053b" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string address_data::business_hours</definition>
+        <argsstring></argsstring>
+        <name>business_hours</name>
+        <qualifiedname>address_data::business_hours</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="342" column="15" bodyfile="common/coops.hpp" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>address_data</label>
+        <link refid="structaddress__data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>building_section</edgelabel>
+          <edgelabel>business_hours</edgelabel>
+          <edgelabel>city</edgelabel>
+          <edgelabel>country</edgelabel>
+          <edgelabel>directions</edgelabel>
+          <edgelabel>district</edgelabel>
+          <edgelabel>house_number</edgelabel>
+          <edgelabel>latitude</edgelabel>
+          <edgelabel>longitude</edgelabel>
+          <edgelabel>phone_number</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="common/coops.hpp" line="329" column="1" bodyfile="common/coops.hpp" bodystart="329" bodyend="343"/>
+    <listofallmembers>
+      <member refid="structaddress__data_1a403717a4fba75af0ce7a79f66489d529" prot="public" virt="non-virtual"><scope>address_data</scope><name>building_section</name></member>
+      <member refid="structaddress__data_1ad37c48bf079e77c72da8c0206f2a053b" prot="public" virt="non-virtual"><scope>address_data</scope><name>business_hours</name></member>
+      <member refid="structaddress__data_1a27ce0d16ed3d0ca2d0e7e22ace29c6aa" prot="public" virt="non-virtual"><scope>address_data</scope><name>city</name></member>
+      <member refid="structaddress__data_1a07d136135a3430d45cdf65f0712fa283" prot="public" virt="non-virtual"><scope>address_data</scope><name>country</name></member>
+      <member refid="structaddress__data_1ab5d20f04752d16900c225ee1a49361b3" prot="public" virt="non-virtual"><scope>address_data</scope><name>directions</name></member>
+      <member refid="structaddress__data_1a1c7176a66b84b6b819059b4363780d61" prot="public" virt="non-virtual"><scope>address_data</scope><name>district</name></member>
+      <member refid="structaddress__data_1a7cd9a23e05094f9e6d6936dd2e476727" prot="public" virt="non-virtual"><scope>address_data</scope><name>house_number</name></member>
+      <member refid="structaddress__data_1a8f21b5f6425f610ee9420328cf312a1a" prot="public" virt="non-virtual"><scope>address_data</scope><name>latitude</name></member>
+      <member refid="structaddress__data_1ae39d05535c727466dc2506248508769c" prot="public" virt="non-virtual"><scope>address_data</scope><name>longitude</name></member>
+      <member refid="structaddress__data_1a9a377d7073624df22e07791cc204623d" prot="public" virt="non-virtual"><scope>address_data</scope><name>phone_number</name></member>
+      <member refid="structaddress__data_1a3b4b232ef3ababb1da9962fc9f2eee35" prot="public" virt="non-virtual"><scope>address_data</scope><name>state</name></member>
+      <member refid="structaddress__data_1a106cb3b84ce9123528df437a6cfc4a0f" prot="public" virt="non-virtual"><scope>address_data</scope><name>street</name></member>
+      <member refid="structaddress__data_1a3bb11f9ff0548c6c8a1c2531a4156325" prot="public" virt="non-virtual"><scope>address_data</scope><name>unit_number</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

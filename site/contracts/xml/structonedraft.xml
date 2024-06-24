@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structonedraft" kind="struct" language="C++" prot="public">
+    <compoundname>onedraft</compoundname>
+    <includes refid="drafts_8hpp" local="no">drafts.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structonedraft_1afcb9605f6196cfc05fae05641d4c61e1" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>onedraft::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="26" column="12" bodyfile="common/drafts.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1a15552c3fd1f5207e7cd3ab0b4a789fce" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::registry_id</definition>
+        <argsstring></argsstring>
+        <name>registry_id</name>
+        <qualifiedname>onedraft::registry_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="27" column="12" bodyfile="common/drafts.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1a32e4777a8617210181260229c4d872af" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>onedraft::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="28" column="12" bodyfile="common/drafts.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1a622e8d29194f3358d26b3d39b7a861f9" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::default_translation_id</definition>
+        <argsstring></argsstring>
+        <name>default_translation_id</name>
+        <qualifiedname>onedraft::default_translation_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="29" column="12" bodyfile="common/drafts.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1ad0d6075eaac651e9d7e6a884283584bb" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedraft::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <qualifiedname>onedraft::title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="30" column="15" bodyfile="common/drafts.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1ace57b74dd5e0c9b46f79a6ef96d69727" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedraft::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <qualifiedname>onedraft::description</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="31" column="15" bodyfile="common/drafts.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1a0789742f73c87731246e1fc3bf364477" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedraft::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>onedraft::context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="32" column="15" bodyfile="common/drafts.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structonedraft_1a2c904caf541396520243493a78f058cd" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string onedraft::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>onedraft::model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="33" column="15" bodyfile="common/drafts.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structonedraft_1addbe571021695f9aaec8988033f191dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::primary_key</definition>
+        <argsstring>() const</argsstring>
+        <name>primary_key</name>
+        <qualifiedname>onedraft::primary_key</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="35" column="12" bodyfile="common/drafts.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structonedraft_1a86d18e5742bd37e212b32c7251f34abb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t onedraft::by_registry_id</definition>
+        <argsstring>() const</argsstring>
+        <name>by_registry_id</name>
+        <qualifiedname>onedraft::by_registry_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/drafts.hpp" line="37" column="12" bodyfile="common/drafts.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>onedraft</label>
+        <link refid="structonedraft"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>context</edgelabel>
+          <edgelabel>description</edgelabel>
+          <edgelabel>model</edgelabel>
+          <edgelabel>title</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="common/drafts.hpp" line="24" column="1" bodyfile="common/drafts.hpp" bodystart="25" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structonedraft_1a86d18e5742bd37e212b32c7251f34abb" prot="public" virt="non-virtual"><scope>onedraft</scope><name>by_registry_id</name></member>
+      <member refid="structonedraft_1a0789742f73c87731246e1fc3bf364477" prot="public" virt="non-virtual"><scope>onedraft</scope><name>context</name></member>
+      <member refid="structonedraft_1a622e8d29194f3358d26b3d39b7a861f9" prot="public" virt="non-virtual"><scope>onedraft</scope><name>default_translation_id</name></member>
+      <member refid="structonedraft_1ace57b74dd5e0c9b46f79a6ef96d69727" prot="public" virt="non-virtual"><scope>onedraft</scope><name>description</name></member>
+      <member refid="structonedraft_1afcb9605f6196cfc05fae05641d4c61e1" prot="public" virt="non-virtual"><scope>onedraft</scope><name>id</name></member>
+      <member refid="structonedraft_1a2c904caf541396520243493a78f058cd" prot="public" virt="non-virtual"><scope>onedraft</scope><name>model</name></member>
+      <member refid="structonedraft_1addbe571021695f9aaec8988033f191dc" prot="public" virt="non-virtual"><scope>onedraft</scope><name>primary_key</name></member>
+      <member refid="structonedraft_1a15552c3fd1f5207e7cd3ab0b4a789fce" prot="public" virt="non-virtual"><scope>onedraft</scope><name>registry_id</name></member>
+      <member refid="structonedraft_1ad0d6075eaac651e9d7e6a884283584bb" prot="public" virt="non-virtual"><scope>onedraft</scope><name>title</name></member>
+      <member refid="structonedraft_1a32e4777a8617210181260229c4d872af" prot="public" virt="non-virtual"><scope>onedraft</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
