@@ -4,6 +4,7 @@ theme:
   name: material
   features:
     - content.code.copy
+    
   # custom_dir: overrides
   palette:
     - scheme: default
@@ -29,7 +30,7 @@ theme:
     # - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    # - navigation.expand
+    - navigation.expand
     # - toc.follow
     - toc.integrate
     - search.share
@@ -41,7 +42,9 @@ repo_url: https://github.com/copenomics
 plugins:
   - search
   - awesome-pages
-  # - social:
+  - table-reader
+  - blog
+  # - social:https://squidfunk.github.io/mkdocs-material/
   #   cards_layout: default
 
   # - literate-nav:
@@ -49,8 +52,11 @@ plugins:
 
 extra:
   generator: false
+  # social:
+  #   - icon: fontawesome/brands/telegram
+  #     link: https://twitter.com/your-profile
 
-copyright: АНО «Кооперативная Экономика» &copy; 2024
+copyright: ПК «ВОСХОД» &copy; 2024
 
 markdown_extensions:
   - admonition
@@ -58,25 +64,48 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+    # - pymdownx.superfences:
+    #   custom_fences:
+    #     - name: mermaid
+    #       class: mermaid
+    #       format: !!python/name:pymdownx.superfences.fence_code_format
+
+      # custom_fences:
+      #   - name: mermaid
+      #     class: mermaid
+      #     format: !!python/name:pymdownx.superfences.fence_code_format
+
+
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
   - toc:
       permalink: true
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Миссия: index.md  
-  - Доктрина: doctrine.md
-  - Платформа: platform.md
+  # - Миссия: index.md  
+  - Доктрина: index.md
+  # - Методология: metodology.md
   - Документация: documentation.md
-  - Словарь: vocabulary.md
-  - Вопрос - ответ: faq.md  
-  # - Подключиться: joincoop.md
-  # - Витрина: joincoop.md
-  # - Документация: https://dev.dicoop.space/html/index.html
+  - Протоколы: 
+      - Эмиссии: protocols/emission.md
+      # - protocols.md
+  # - Словарь: vocabulary.md
+  # - FAQ: faq.md  
+  - Председателям: info.md  
+  - Вкладчикам: invest.md
+  - Подключение: connect.md
+  - Блог: 
+      - blog/index.md
+  - Форум: https://forum.copenomics.world
+  - Контакты: contacts.md
   
  
