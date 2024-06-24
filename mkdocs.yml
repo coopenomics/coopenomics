@@ -42,7 +42,7 @@ repo_url: https://github.com/copenomics
 plugins:
   - search
   - awesome-pages
-  - table-reader
+  # - table-reader
   - blog
   # - social:https://squidfunk.github.io/mkdocs-material/
   #   cards_layout: default
