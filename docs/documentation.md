@@ -82,6 +82,7 @@
 
     Основной бэкенд-сервис, представляющий систему авторизации для доступа к документам кооператива и инструментам управления им. 
 
+    [:octicons-arrow-right-24: Подробнее](https://copenomics.world/coopback)
     [:octicons-arrow-right-24: Репозиторий](https://github.com/copenomics/coopback)
 
 
