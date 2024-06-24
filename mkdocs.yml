@@ -103,9 +103,9 @@ nav:
   - Председателям: info.md  
   - Вкладчикам: invest.md
   - Подключение: connect.md
-  # - Блог: 
-  #     - blog/index.md
   - Форум: https://forum.copenomics.world
   - Контакты: contacts.md
+  - Блог: 
+      - blog/index.md
   
  
