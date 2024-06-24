@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structfwithdraw" kind="struct" language="C++" prot="public">
+    <compoundname>fwithdraw</compoundname>
+    <includes refid="funds_8hpp" local="no">funds.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfwithdraw_1aec424f3556b3d87140abdc6e32fb22cb" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>fwithdraw::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="55" column="12" bodyfile="common/funds.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1aac252b2c39fcd3a4cd46d6f1e4e88531" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name fwithdraw::coopname</definition>
+        <argsstring></argsstring>
+        <name>coopname</name>
+        <qualifiedname>fwithdraw::coopname</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="56" column="15" bodyfile="common/funds.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1aa241770371604239e1a22277d5550b56" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name fwithdraw::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>fwithdraw::username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="57" column="15" bodyfile="common/funds.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1a0e922872fbfd419e3039853e3671b9fd" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name fwithdraw::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>fwithdraw::status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="58" column="15" bodyfile="common/funds.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1ac6fdc1eb3848db2f330f6c0c9cadb27f" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name fwithdraw::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>fwithdraw::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="59" column="15" bodyfile="common/funds.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1a61311798e4ec865c3d0cb82f9c910bc5" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::fund_id</definition>
+        <argsstring></argsstring>
+        <name>fund_id</name>
+        <qualifiedname>fwithdraw::fund_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="60" column="12" bodyfile="common/funds.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1ac8389ddf588ed1c8b1de8620dd6250d5" prot="public" static="no" mutable="no">
+        <type>eosio::asset</type>
+        <definition>eosio::asset fwithdraw::quantity</definition>
+        <argsstring></argsstring>
+        <name>quantity</name>
+        <qualifiedname>fwithdraw::quantity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="61" column="16" bodyfile="common/funds.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1a99bbbbc27dd77aab01148a8bcf3d66bc" prot="public" static="no" mutable="no">
+        <type><ref refid="structdocument" kindref="compound">document</ref></type>
+        <definition>document fwithdraw::document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <qualifiedname>fwithdraw::document</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="62" column="12" bodyfile="common/funds.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1aeab9fd0569cda6b199a66af465bfa18d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string fwithdraw::bank_data_id</definition>
+        <argsstring></argsstring>
+        <name>bank_data_id</name>
+        <qualifiedname>fwithdraw::bank_data_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="63" column="15" bodyfile="common/funds.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfwithdraw_1afe2ace33ad54604ab433db130e7f5f6f" prot="public" static="no" mutable="no">
+        <type>eosio::time_point_sec</type>
+        <definition>eosio::time_point_sec fwithdraw::expired_at</definition>
+        <argsstring></argsstring>
+        <name>expired_at</name>
+        <qualifiedname>fwithdraw::expired_at</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="64" column="25" bodyfile="common/funds.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structfwithdraw_1a4df2d2cb760a383e0c66b5cab7a76c39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::primary_key</definition>
+        <argsstring>() const</argsstring>
+        <name>primary_key</name>
+        <qualifiedname>fwithdraw::primary_key</qualifiedname>
+        <briefdescription>
+<para>Первичный ключ для индексации по идентификатору фонда </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="67" column="12" bodyfile="common/funds.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="structfwithdraw_1a80ac904627052d45b57170d87252897f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::by_username</definition>
+        <argsstring>() const</argsstring>
+        <name>by_username</name>
+        <qualifiedname>fwithdraw::by_username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="68" column="12" bodyfile="common/funds.hpp" bodystart="68" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structfwithdraw_1a9f164e957fc95159dc5aca03faed4967" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::by_status</definition>
+        <argsstring>() const</argsstring>
+        <name>by_status</name>
+        <qualifiedname>fwithdraw::by_status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="69" column="12" bodyfile="common/funds.hpp" bodystart="69" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structfwithdraw_1ad472c3a1808148ab8481f87801f69a75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t fwithdraw::by_expired</definition>
+        <argsstring>() const</argsstring>
+        <name>by_expired</name>
+        <qualifiedname>fwithdraw::by_expired</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Индекс по статусу истечения </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/funds.hpp" line="71" column="12" bodyfile="common/funds.hpp" bodystart="71" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>document</label>
+        <link refid="structdocument"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>public_key</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>asset</label>
+      </node>
+      <node id="5">
+        <label>checksum256</label>
+      </node>
+      <node id="2">
+        <label>name</label>
+      </node>
+      <node id="6">
+        <label>public_key</label>
+      </node>
+      <node id="8">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1">
+        <label>fwithdraw</label>
+        <link refid="structfwithdraw"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>coopname</edgelabel>
+          <edgelabel>status</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>quantity</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>document</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>bank_data_id</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>expired_at</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="common/funds.hpp" line="54" column="1" bodyfile="common/funds.hpp" bodystart="54" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structfwithdraw_1aeab9fd0569cda6b199a66af465bfa18d" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>bank_data_id</name></member>
+      <member refid="structfwithdraw_1ad472c3a1808148ab8481f87801f69a75" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>by_expired</name></member>
+      <member refid="structfwithdraw_1a9f164e957fc95159dc5aca03faed4967" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>by_status</name></member>
+      <member refid="structfwithdraw_1a80ac904627052d45b57170d87252897f" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>by_username</name></member>
+      <member refid="structfwithdraw_1aac252b2c39fcd3a4cd46d6f1e4e88531" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>coopname</name></member>
+      <member refid="structfwithdraw_1a99bbbbc27dd77aab01148a8bcf3d66bc" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>document</name></member>
+      <member refid="structfwithdraw_1afe2ace33ad54604ab433db130e7f5f6f" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>expired_at</name></member>
+      <member refid="structfwithdraw_1a61311798e4ec865c3d0cb82f9c910bc5" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>fund_id</name></member>
+      <member refid="structfwithdraw_1aec424f3556b3d87140abdc6e32fb22cb" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>id</name></member>
+      <member refid="structfwithdraw_1a4df2d2cb760a383e0c66b5cab7a76c39" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>primary_key</name></member>
+      <member refid="structfwithdraw_1ac8389ddf588ed1c8b1de8620dd6250d5" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>quantity</name></member>
+      <member refid="structfwithdraw_1a0e922872fbfd419e3039853e3671b9fd" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>status</name></member>
+      <member refid="structfwithdraw_1ac6fdc1eb3848db2f330f6c0c9cadb27f" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>type</name></member>
+      <member refid="structfwithdraw_1aa241770371604239e1a22277d5550b56" prot="public" virt="non-virtual"><scope>fwithdraw</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

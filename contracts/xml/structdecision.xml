@@ -1,0 +1,442 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="ru">
+  <compounddef id="structdecision" kind="struct" language="C++" prot="public">
+    <compoundname>decision</compoundname>
+    <includes refid="coops_8hpp" local="no">coops.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdecision_1a86975765d5b9f938fa95448b05e2c0c2" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>decision::id</qualifiedname>
+        <briefdescription>
+<para>Уникальный идентификатор решения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="214" column="12" bodyfile="common/coops.hpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a147f1532908bb95ae56a64a668425698" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name decision::coopname</definition>
+        <argsstring></argsstring>
+        <name>coopname</name>
+        <qualifiedname>decision::coopname</qualifiedname>
+        <briefdescription>
+<para>Имя кооператива, связанного с решением. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="215" column="15" bodyfile="common/coops.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1ab342c9e6c178e6b618032badf562884f" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name decision::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <qualifiedname>decision::username</qualifiedname>
+        <briefdescription>
+<para>Имя пользователя, связанного с решением. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="216" column="15" bodyfile="common/coops.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a201b377cbc190ff0b22f271f17b502de" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name decision::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>decision::type</qualifiedname>
+        <briefdescription>
+<para>Тип решения: // joincoop | change | ... </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="218" column="15" bodyfile="common/coops.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a6728d16176fe0983ec043b8a87b809a2" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::batch_id</definition>
+        <argsstring></argsstring>
+        <name>batch_id</name>
+        <qualifiedname>decision::batch_id</qualifiedname>
+        <briefdescription>
+<para>Идентификатор карточки, связанной с типом решения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="219" column="12" bodyfile="common/coops.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a5cc1903525dabf6808282f521f065d14" prot="public" static="no" mutable="no">
+        <type><ref refid="structdocument" kindref="compound">document</ref></type>
+        <definition>document decision::statement</definition>
+        <argsstring></argsstring>
+        <name>statement</name>
+        <qualifiedname>decision::statement</qualifiedname>
+        <briefdescription>
+<para>Документ заявления </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="220" column="12" bodyfile="common/coops.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1ab4dd0cf2e35bbea166ea7a60f7713c69" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; eosio::name &gt;</type>
+        <definition>std::vector&lt;eosio::name&gt; decision::votes_for</definition>
+        <argsstring></argsstring>
+        <name>votes_for</name>
+        <qualifiedname>decision::votes_for</qualifiedname>
+        <briefdescription>
+<para>Список имен, голосовавших &quot;за&quot; решение. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="222" column="15" bodyfile="common/coops.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a684d6c4cd9033cd2656f68c1e58b4e3e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; eosio::name &gt;</type>
+        <definition>std::vector&lt;eosio::name&gt; decision::votes_against</definition>
+        <argsstring></argsstring>
+        <name>votes_against</name>
+        <qualifiedname>decision::votes_against</qualifiedname>
+        <briefdescription>
+<para>Список имен, голосовавших &quot;против&quot; решения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="223" column="15" bodyfile="common/coops.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a09bb1322795b6253c0b731f666ca2bb0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool decision::validated</definition>
+        <argsstring></argsstring>
+        <name>validated</name>
+        <qualifiedname>decision::validated</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Сигнальный флаг, указывающий, что администратор подтверждает валидность решения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="225" column="8" bodyfile="common/coops.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a176e851e5b953c0e9b9c39cc0b39f871" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool decision::approved</definition>
+        <argsstring></argsstring>
+        <name>approved</name>
+        <qualifiedname>decision::approved</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Сигнальный флаг, указывающий, что решение советом принято. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="226" column="8" bodyfile="common/coops.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a98b195cb10f2bda166de4f2e62537b4a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool decision::authorized</definition>
+        <argsstring></argsstring>
+        <name>authorized</name>
+        <qualifiedname>decision::authorized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Флаг, указывающий, что получена авторизация председателя после голосования и валидации до исполнения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="227" column="8" bodyfile="common/coops.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1ae2660e98aa74206d24703002be0b51c0" prot="public" static="no" mutable="no">
+        <type>eosio::name</type>
+        <definition>eosio::name decision::authorized_by</definition>
+        <argsstring></argsstring>
+        <name>authorized_by</name>
+        <qualifiedname>decision::authorized_by</qualifiedname>
+        <briefdescription>
+<para>Имя аккаунта председателя </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="228" column="15" bodyfile="common/coops.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1a6f4192f7f409f46d36cd0e649f21d97b" prot="public" static="no" mutable="no">
+        <type><ref refid="structdocument" kindref="compound">document</ref></type>
+        <definition>document decision::authorization</definition>
+        <argsstring></argsstring>
+        <name>authorization</name>
+        <qualifiedname>decision::authorization</qualifiedname>
+        <briefdescription>
+<para>Документ подписанного решения председателем </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="229" column="12" bodyfile="common/coops.hpp" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structdecision_1ae266244dfa0786c21a193c848c6c2cc6" prot="public" static="no" mutable="no">
+        <type>eosio::time_point_sec</type>
+        <definition>eosio::time_point_sec decision::created_at</definition>
+        <argsstring></argsstring>
+        <name>created_at</name>
+        <qualifiedname>decision::created_at</qualifiedname>
+        <briefdescription>
+<para>Время создания карточки решения. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="231" column="25" bodyfile="common/coops.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdecision_1acc3e074e13d3d0bfa5fda840a7638adf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::primary_key</definition>
+        <argsstring>() const</argsstring>
+        <name>primary_key</name>
+        <qualifiedname>decision::primary_key</qualifiedname>
+        <briefdescription>
+<para>Возвращает первичный ключ решения. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - первичный ключ, равный уникальному идентификатору решения. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="237" column="12" bodyfile="common/coops.hpp" bodystart="237" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1a126af74e59573ce0c121023853d36696" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::by_secondary</definition>
+        <argsstring>() const</argsstring>
+        <name>by_secondary</name>
+        <qualifiedname>decision::by_secondary</qualifiedname>
+        <briefdescription>
+<para>Возвращает ключ для индексации по идентификатору карточки. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - ключ, равный идентификатору карточки. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="243" column="12" bodyfile="common/coops.hpp" bodystart="243" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1a76e524deedb113f8ad6d7cc4b36b18ef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::bytype</definition>
+        <argsstring>() const</argsstring>
+        <name>bytype</name>
+        <qualifiedname>decision::bytype</qualifiedname>
+        <briefdescription>
+<para>Возвращает ключ для индексации по типу решения. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - ключ, равный значению типа решения. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="249" column="12" bodyfile="common/coops.hpp" bodystart="249" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1abcfb5f848cc506e27149a600a725adf8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::byapproved</definition>
+        <argsstring>() const</argsstring>
+        <name>byapproved</name>
+        <qualifiedname>decision::byapproved</qualifiedname>
+        <briefdescription>
+<para>Возвращает ключ для индексации по статусу &quot;принято&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - ключ, равный статусу &quot;принято&quot; (1, если решение принято, иначе 0). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="255" column="12" bodyfile="common/coops.hpp" bodystart="255" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1aba735935551cd0d7eae6c5844d43b600" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::byvalidated</definition>
+        <argsstring>() const</argsstring>
+        <name>byvalidated</name>
+        <qualifiedname>decision::byvalidated</qualifiedname>
+        <briefdescription>
+<para>Возвращает ключ для индексации по статусу &quot;подтверждено&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - ключ, равный статусу &quot;подтверждено&quot; (1, если решение подтверждено, иначе 0). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="261" column="12" bodyfile="common/coops.hpp" bodystart="261" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1a25b3bc216e6e25da0fc58b1554edfbac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t decision::byauthorized</definition>
+        <argsstring>() const</argsstring>
+        <name>byauthorized</name>
+        <qualifiedname>decision::byauthorized</qualifiedname>
+        <briefdescription>
+<para>Возвращает ключ для индексации по статусу &quot;авторизовано&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint64_t - ключ, равный статусу &quot;авторизовано&quot; (1, если решение авторизовано, иначе 0). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="267" column="12" bodyfile="common/coops.hpp" bodystart="267" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1ae5e3e4f56823249b18d5487a19578696" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void decision::check_for_any_vote_exist</definition>
+        <argsstring>(eosio::name member) const</argsstring>
+        <name>check_for_any_vote_exist</name>
+        <qualifiedname>decision::check_for_any_vote_exist</qualifiedname>
+        <param>
+          <type>eosio::name</type>
+          <declname>member</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="270" column="8" bodyfile="common/coops.hpp" bodystart="270" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="structdecision_1a96d51a4697e1a8bfde7fd72c78a54e11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::pair&lt; uint64_t, uint64_t &gt;</type>
+        <definition>std::pair&lt; uint64_t, uint64_t &gt; decision::get_votes_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_votes_count</name>
+        <qualifiedname>decision::get_votes_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/coops.hpp" line="278" column="13" bodyfile="common/coops.hpp" bodystart="278" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Структура, представляющая решения кооператива. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Эта структура содержит информацию о решениях, включая уникальный идентификатор, имя кооператива, тип решения, идентификатор карточки, списки голосов &quot;за&quot; и &quot;против&quot;, а также различные флаги состояния решения. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>decision</label>
+        <link refid="structdecision"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>authorized_by</edgelabel>
+          <edgelabel>coopname</edgelabel>
+          <edgelabel>type</edgelabel>
+          <edgelabel>username</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>authorization</edgelabel>
+          <edgelabel>statement</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>created_at</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>document</label>
+        <link refid="structdocument"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>hash</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>public_key</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>meta</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>checksum256</label>
+      </node>
+      <node id="2">
+        <label>name</label>
+      </node>
+      <node id="5">
+        <label>public_key</label>
+      </node>
+      <node id="7">
+        <label>time_point_sec</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="common/coops.hpp" line="213" column="1" bodyfile="common/coops.hpp" bodystart="213" bodyend="281"/>
+    <listofallmembers>
+      <member refid="structdecision_1a176e851e5b953c0e9b9c39cc0b39f871" prot="public" virt="non-virtual"><scope>decision</scope><name>approved</name></member>
+      <member refid="structdecision_1a6f4192f7f409f46d36cd0e649f21d97b" prot="public" virt="non-virtual"><scope>decision</scope><name>authorization</name></member>
+      <member refid="structdecision_1a98b195cb10f2bda166de4f2e62537b4a" prot="public" virt="non-virtual"><scope>decision</scope><name>authorized</name></member>
+      <member refid="structdecision_1ae2660e98aa74206d24703002be0b51c0" prot="public" virt="non-virtual"><scope>decision</scope><name>authorized_by</name></member>
+      <member refid="structdecision_1a6728d16176fe0983ec043b8a87b809a2" prot="public" virt="non-virtual"><scope>decision</scope><name>batch_id</name></member>
+      <member refid="structdecision_1a126af74e59573ce0c121023853d36696" prot="public" virt="non-virtual"><scope>decision</scope><name>by_secondary</name></member>
+      <member refid="structdecision_1abcfb5f848cc506e27149a600a725adf8" prot="public" virt="non-virtual"><scope>decision</scope><name>byapproved</name></member>
+      <member refid="structdecision_1a25b3bc216e6e25da0fc58b1554edfbac" prot="public" virt="non-virtual"><scope>decision</scope><name>byauthorized</name></member>
+      <member refid="structdecision_1a76e524deedb113f8ad6d7cc4b36b18ef" prot="public" virt="non-virtual"><scope>decision</scope><name>bytype</name></member>
+      <member refid="structdecision_1aba735935551cd0d7eae6c5844d43b600" prot="public" virt="non-virtual"><scope>decision</scope><name>byvalidated</name></member>
+      <member refid="structdecision_1ae5e3e4f56823249b18d5487a19578696" prot="public" virt="non-virtual"><scope>decision</scope><name>check_for_any_vote_exist</name></member>
+      <member refid="structdecision_1a147f1532908bb95ae56a64a668425698" prot="public" virt="non-virtual"><scope>decision</scope><name>coopname</name></member>
+      <member refid="structdecision_1ae266244dfa0786c21a193c848c6c2cc6" prot="public" virt="non-virtual"><scope>decision</scope><name>created_at</name></member>
+      <member refid="structdecision_1a96d51a4697e1a8bfde7fd72c78a54e11" prot="public" virt="non-virtual"><scope>decision</scope><name>get_votes_count</name></member>
+      <member refid="structdecision_1a86975765d5b9f938fa95448b05e2c0c2" prot="public" virt="non-virtual"><scope>decision</scope><name>id</name></member>
+      <member refid="structdecision_1acc3e074e13d3d0bfa5fda840a7638adf" prot="public" virt="non-virtual"><scope>decision</scope><name>primary_key</name></member>
+      <member refid="structdecision_1a5cc1903525dabf6808282f521f065d14" prot="public" virt="non-virtual"><scope>decision</scope><name>statement</name></member>
+      <member refid="structdecision_1a201b377cbc190ff0b22f271f17b502de" prot="public" virt="non-virtual"><scope>decision</scope><name>type</name></member>
+      <member refid="structdecision_1ab342c9e6c178e6b618032badf562884f" prot="public" virt="non-virtual"><scope>decision</scope><name>username</name></member>
+      <member refid="structdecision_1a09bb1322795b6253c0b731f666ca2bb0" prot="public" virt="non-virtual"><scope>decision</scope><name>validated</name></member>
+      <member refid="structdecision_1a684d6c4cd9033cd2656f68c1e58b4e3e" prot="public" virt="non-virtual"><scope>decision</scope><name>votes_against</name></member>
+      <member refid="structdecision_1ab4dd0cf2e35bbea166ea7a60f7713c69" prot="public" virt="non-virtual"><scope>decision</scope><name>votes_for</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
