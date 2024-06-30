@@ -21,7 +21,7 @@ var searchData=
   ['close_18',['close',['../classeosio_1_1token.html#a88402f75888c4cfe6a3ef0391bd7ecbd',1,'eosio::token']]],
   ['combine_5fids_19',['combine_ids',['../utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39',1,'utils.hpp']]],
   ['complete_20',['complete',['../group__public__actions.html#ga082792b887a075f6fba43280d5a5e0cc',1,'marketplace']]],
-  ['confirmreg_21',['confirmreg',['../group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa',1,'registrator']]],
+  ['confirmreg_21',['confirmreg',['../group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477',1,'registrator']]],
   ['convert_22',['convert',['../structeosiosystem_1_1exchange__state.html#aff0f484e4eac6b51e3b01839a884e12e',1,'eosiosystem::exchange_state::convert(const asset &amp;from, const symbol &amp;to)'],['../structeosiosystem_1_1exchange__state.html#a9b44e4142697e729fe05dc028b932c0e',1,'eosiosystem::exchange_state::convert(asset from, const symbol &amp;to)']]],
   ['convert_5ffrom_5fexchange_23',['convert_from_exchange',['../structeosiosystem_1_1exchange__state.html#ade7bfd99be01e15093f27d95a3013ba7',1,'eosiosystem::exchange_state::convert_from_exchange(connector &amp;c, asset in)'],['../structeosiosystem_1_1exchange__state.html#a7056cfffba84abdf75b38f2d81d95ccd',1,'eosiosystem::exchange_state::convert_from_exchange(connector &amp;reserve, const asset &amp;tokens)']]],
   ['convert_5fto_5fblock_5fsigning_5fauthority_24',['convert_to_block_signing_authority',['../namespaceeosiosystem.html#ab75117312e65b8b2882d459d0b33ca43',1,'eosiosystem']]],

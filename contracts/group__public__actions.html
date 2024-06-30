@@ -119,9 +119,9 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 <tr class="memitem:ga68df314fe90a719f00f0931c097bc6c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga68df314fe90a719f00f0931c097bc6c5">registrator::changekey</a> (eosio::name username, eosio::public_key public_key)</td></tr>
 <tr class="memdesc:ga68df314fe90a719f00f0931c097bc6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изменение ключа активной учетной записи  <a href="group__public__actions.html#ga68df314fe90a719f00f0931c097bc6c5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga68df314fe90a719f00f0931c097bc6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga25e4c5c4eea2a2e1463ce911b61117aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa">registrator::confirmreg</a> (eosio::name coopname, eosio::name member)</td></tr>
-<tr class="memdesc:ga25e4c5c4eea2a2e1463ce911b61117aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение регистрации члена кооператива  <a href="group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga25e4c5c4eea2a2e1463ce911b61117aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0c0f6b1b9a5a3d8f14ca8adf71cf477"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477">registrator::confirmreg</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:gad0c0f6b1b9a5a3d8f14ca8adf71cf477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение регистрации члена кооператива  <a href="group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad0c0f6b1b9a5a3d8f14ca8adf71cf477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d78c0a4a104abcae663754dc08d8da8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga6d78c0a4a104abcae663754dc08d8da8">marketplace::newid</a> (uint64_t id, eosio::name type)</td></tr>
 <tr class="memdesc:ga6d78c0a4a104abcae663754dc08d8da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пустой метод регистрации нового идентификатораЭтот метод используется для возврата информации из контракта.  <a href="group__public__actions.html#ga6d78c0a4a104abcae663754dc08d8da8">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6d78c0a4a104abcae663754dc08d8da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -841,8 +841,8 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 
 </div>
 </div>
-<a id="ga25e4c5c4eea2a2e1463ce911b61117aa" name="ga25e4c5c4eea2a2e1463ce911b61117aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga25e4c5c4eea2a2e1463ce911b61117aa">&#9670;&nbsp;</a></span>confirmreg()</h2>
+<a id="gad0c0f6b1b9a5a3d8f14ca8adf71cf477" name="gad0c0f6b1b9a5a3d8f14ca8adf71cf477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad0c0f6b1b9a5a3d8f14ca8adf71cf477">&#9670;&nbsp;</a></span>confirmreg()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -857,7 +857,7 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>member</em>&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -872,7 +872,7 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">member</td><td>Имя члена кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя члена кооператива </td></tr>
     <tr><td class="paramname">position_title</td><td>Название должности </td></tr>
     <tr><td class="paramname">position</td><td>Код должности (например, chairman, director и др.)</td></tr>
   </table>

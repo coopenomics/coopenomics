@@ -40,7 +40,7 @@ var searchData=
   ['complete_37',['complete',['../group__public__actions.html#ga082792b887a075f6fba43280d5a5e0cc',1,'marketplace']]],
   ['completed_5fat_38',['completed_at',['../structrequest.html#ab2b03159767040ab5214f03ebfa01596',1,'request']]],
   ['confirmed_39',['confirmed',['../structeosiobios_1_1block__header.html#ad0e00f2357c447a2001b9192849aa839',1,'eosiobios::block_header::confirmed()'],['../structeosiosystem_1_1block__header.html#a4982fd9b60cbc7a50b5b533af097c373',1,'eosiosystem::block_header::confirmed()']]],
-  ['confirmreg_40',['confirmreg',['../group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa',1,'registrator']]],
+  ['confirmreg_40',['confirmreg',['../group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477',1,'registrator']]],
   ['connector_41',['connector',['../structeosiosystem_1_1exchange__state_1_1connector.html',1,'eosiosystem::exchange_state']]],
   ['consts_2ehpp_42',['consts.hpp',['../consts_8hpp.html',1,'']]],
   ['context_43',['context',['../structonedraft.html#a0789742f73c87731246e1fc3bf364477',1,'onedraft']]],

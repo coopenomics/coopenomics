@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structonewithdraw.html#a089ba318a3260eca1d33e55cb0620589":[1,3,6,1],
+"structonewithdraw.html#a239465bb576faa7a409429e761c23e67":[1,3,6,2],
 "structonewithdraw.html#a3d3a4a9a789ea7b8300775dc3cfffe95":[1,3,6,0],
 "structonewithdraw.html#a518fe0603ce9dde951e6970f93953be2":[1,3,6,7],
 "structonewithdraw.html#a5b72f21f2c86847c528d4b6fe3e8bfe3":[1,3,6,10],

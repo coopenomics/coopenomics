@@ -5,7 +5,7 @@ var group__public__contracts =
       [ "registrator", "classregistrator.html#a5031045fe1736a84cd445be212673c0b", null ],
       [ "changekey", "group__public__actions.html#ga68df314fe90a719f00f0931c097bc6c5", null ],
       [ "check", "classregistrator.html#a23c67801d0d0f374ba1160537ba314fb", null ],
-      [ "confirmreg", "group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa", null ],
+      [ "confirmreg", "group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477", null ],
       [ "init", "classregistrator.html#a640dbd37c2d97cc93ff00ec0dc4116be", null ],
       [ "joincoop", "group__public__actions.html#ga369a1d99c79f0429f2d1f7182382dcd8", null ],
       [ "newaccount", "group__public__actions.html#ga7f70d64012305e3dfca7990bffd3af82", null ],

@@ -11,7 +11,7 @@ var group__public__actions =
     [ "soviet::change", "group__public__actions.html#ga3666aba8b8d5a7b8ac50abdda8eb0438", null ],
     [ "registrator::changekey", "group__public__actions.html#ga68df314fe90a719f00f0931c097bc6c5", null ],
     [ "marketplace::complete", "group__public__actions.html#ga082792b887a075f6fba43280d5a5e0cc", null ],
-    [ "registrator::confirmreg", "group__public__actions.html#ga25e4c5c4eea2a2e1463ce911b61117aa", null ],
+    [ "registrator::confirmreg", "group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477", null ],
     [ "soviet::createboard", "group__public__actions.html#ga03967c07043b14f5239e50448362287a", null ],
     [ "soviet::createprog", "group__public__actions.html#ga0c242b184398cfcccbe628d1d9400f76", null ],
     [ "marketplace::decline", "group__public__actions.html#ga632cf8b33c10b9602cb694f4cb036049", null ],

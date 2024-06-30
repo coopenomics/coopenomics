@@ -133,6 +133,10 @@ $(document).ready(function(){initNavTree('group__public__consts.html',''); initR
 <tr class="separator:ga53c8b80330465342487f78d14fad4ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4977cb29c847a5a4fce4cce4b753c914"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::symbol&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__consts.html#ga4977cb29c847a5a4fce4cce4b753c914">_ramcore_symbol</a> = eosio::symbol(eosio::symbol_code(&quot;RAMCORE&quot;),4)</td></tr>
 <tr class="separator:ga4977cb29c847a5a4fce4cce4b753c914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0aa0d721b6159491c68d947cd7dc8be"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__consts.html#gae0aa0d721b6159491c68d947cd7dc8be">_ram_price_per_byte</a> = 1</td></tr>
+<tr class="separator:gae0aa0d721b6159491c68d947cd7dc8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga417d739fab2765427376cba4df6b3b03"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__consts.html#ga417d739fab2765427376cba4df6b3b03">_ram_bytes_for_new_account</a> = 16 * 1024</td></tr>
+<tr class="separator:ga417d739fab2765427376cba4df6b3b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8486c7b646ce00b3e04773a00cf1e5a6"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__consts.html#ga8486c7b646ce00b3e04773a00cf1e5a6">_ram_bytes</a> = 16384</td></tr>
 <tr class="separator:ga8486c7b646ce00b3e04773a00cf1e5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga835d48268b6c17e01d290de412eb4c81"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__consts.html#ga835d48268b6c17e01d290de412eb4c81">_stake_cpu_amount</a> = 10000</td></tr>
@@ -485,6 +489,52 @@ $(document).ready(function(){initNavTree('group__public__consts.html',''); initR
 
 </div>
 </div>
+<a id="ga417d739fab2765427376cba4df6b3b03" name="ga417d739fab2765427376cba4df6b3b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga417d739fab2765427376cba4df6b3b03">&#9670;&nbsp;</a></span>_ram_bytes_for_new_account</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint64_t _ram_bytes_for_new_account = 16 * 1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >оперативная память нового аккаунта </p>
+
+</div>
+</div>
+<a id="gae0aa0d721b6159491c68d947cd7dc8be" name="gae0aa0d721b6159491c68d947cd7dc8be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0aa0d721b6159491c68d947cd7dc8be">&#9670;&nbsp;</a></span>_ram_price_per_byte</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint64_t _ram_price_per_byte = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >стоимость 1 байта в эпсилон </p>
+
+</div>
+</div>
 <a id="ga4977cb29c847a5a4fce4cce4b753c914" name="ga4977cb29c847a5a4fce4cce4b753c914"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4977cb29c847a5a4fce4cce4b753c914">&#9670;&nbsp;</a></span>_ramcore_symbol</h2>
 
@@ -819,10 +869,11 @@ $(document).ready(function(){initNavTree('group__public__consts.html',''); initR
 <div class="line">        <span class="stringliteral">&quot;eosio.bpay&quot;</span>_n,</div>
 <div class="line">        <span class="stringliteral">&quot;eosio.saving&quot;</span>_n,</div>
 <div class="line">        <span class="stringliteral">&quot;eosio.power&quot;</span>_n,</div>
-<div class="line">        <span class="stringliteral">&quot;voskhod&quot;</span>_n,</div>
 <div class="line">        <span class="stringliteral">&quot;fund&quot;</span>_n,</div>
+<div class="line">        <a class="code hl_variable" href="group__public__consts.html#ga1ff8113eaea18bd553df59b9ad7df01a">_provider</a></div>
 <div class="line">        </div>
 <div class="line">      }</div>
+<div class="ttc" id="agroup__public__consts_html_ga1ff8113eaea18bd553df59b9ad7df01a"><div class="ttname"><a href="group__public__consts.html#ga1ff8113eaea18bd553df59b9ad7df01a">_provider</a></div><div class="ttdeci">static constexpr eosio::name _provider</div><div class="ttdef"><b>Definition:</b> consts.hpp:171</div></div>
 </div><!-- fragment -->
 </div>
 </div>

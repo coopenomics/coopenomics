@@ -15,6 +15,8 @@ var group__public__consts =
     [ "_provider_initial", "group__public__consts.html#ga3a2b682d2d7616aee19abf3001792595", null ],
     [ "_provider_minimum", "group__public__consts.html#gacf903cac90cfb816da7c0498d6ba77db", null ],
     [ "_ram_bytes", "group__public__consts.html#ga8486c7b646ce00b3e04773a00cf1e5a6", null ],
+    [ "_ram_bytes_for_new_account", "group__public__consts.html#ga417d739fab2765427376cba4df6b3b03", null ],
+    [ "_ram_price_per_byte", "group__public__consts.html#gae0aa0d721b6159491c68d947cd7dc8be", null ],
     [ "_ramcore_symbol", "group__public__consts.html#ga4977cb29c847a5a4fce4cce4b753c914", null ],
     [ "_registrator", "group__public__consts.html#gae4d59ec28af0642e3072dd36dd0a537b", null ],
     [ "_root_contract", "group__public__consts.html#ga905130dd4c8fc18bfffe9eec68f9061c", null ],
