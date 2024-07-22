@@ -1,4 +1,4 @@
-site_name: Кооперативная Экономика
+site_name: Цифровой Кошелёк
 
 theme:
   name: material
@@ -27,12 +27,12 @@ theme:
   features:
     - navigation.path
     - navigation.tabs
-    # - navigation.sections
+    - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.expand
     # - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - search.share
     - navigation.top
     - navigation.footer
@@ -41,7 +41,8 @@ repo_url: https://github.com/copenomics
 
 plugins:
   - search
-  - awesome-pages
+  - section-index
+  # - awesome-pages
   # - table-reader
   - blog
   # - social:https://squidfunk.github.io/mkdocs-material/
@@ -51,6 +52,7 @@ plugins:
   # nav_file: SUMMARY.md
 
 extra:
+  homepage: 'doctrine'
   generator: false
   # social:
   #   - icon: fontawesome/brands/telegram
@@ -91,21 +93,32 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  # - Миссия: index.md  
-  - Доктрина: index.md
-  # - Методология: metodology.md
-  - Документация: documentation.md
+  - Доктрина: 
+    - doctrine/index.md
+    - Платформа Поколений: 'doctrine/platforma_pokolenii.md' 
+    - Экономика Знаний: 'doctrine/economica_znanii.md' 
+    - Единое Сознание: 'doctrine/edinoe_soznanie.md'
+    - Управление будущим: 'doctrine/upravlenie_budushim.md'
+    - Операционная система: 'doctrine/operacionnaya_sistema.md'
+    - Потребительская кооперация: 'doctrine/digital_cooperative.md'
+    - Цифровой кошелёк: 'doctrine/digital_wallet.md'
+
+  - Руководство: 
+    - Введение: 'manual/introduction.md' 
+    - Руководителям: 
+      - Регистрация:
+        - 'manual/introduction.md' 
+  #   - Участникам: 
+  #     - 'manual/introduction.md' 
+  - Справка: info.md
+
   - Протоколы: 
-      - Эмиссии: protocols/emission.md
-      # - protocols.md
-  # - Словарь: vocabulary.md
-  # - FAQ: faq.md  
-  - Председателям: info.md  
-  - Вкладчикам: invest.md
+    - Эмиссии: protocols/emission.md
+  - Разработчикам: documentation.md
+  - Инвесторам: invest.md
   - Подключение: connect.md
   - Форум: https://forum.copenomics.world
   - Контакты: contacts.md
-  - Блог: 
-      - blog/index.md
+  - Блог: blog/index.md
   
  
