@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['one_5fpercent_0',['ONE_PERCENT',['../consts_8hpp.html#aa9f63b1425189a885d45283038d46e7a',1,'consts.hpp']]]
+  ['registrator_0',['REGISTRATOR',['../consts_8hpp.html#ae4acce2da4b2736a1fedfa921d84e32b',1,'consts.hpp']]]
 ];

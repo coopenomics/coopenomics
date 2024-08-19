@@ -15,7 +15,7 @@ var searchData=
   ['update_5fvoting_5fpower_12',['update_voting_power',['../classeosiosystem_1_1system__contract.html#aa192ed8af461c5162749a1a7f3886f06',1,'eosiosystem::system_contract']]],
   ['updateaccnt_13',['updateaccnt',['../group__public__actions.html#ga4bd57034d65697891fa59255c92435bf',1,'registrator']]],
   ['updateauth_14',['updateauth',['../classeosiobios_1_1bios.html#a6da029e3f9ffbcb2bfc3cc6f555a3bcd',1,'eosiobios::bios::updateauth()'],['../classeosioboot_1_1boot.html#a1f7d810103d9bbbecdb702c09ee99395',1,'eosioboot::boot::updateauth()'],['../classeosiosystem_1_1native.html#a2bbeca58b24029a5ab0fc90832dde56b',1,'eosiosystem::native::updateauth()']]],
-  ['updateboard_15',['updateboard',['../group__public__actions.html#ga633d78f7717ca0b13d800f1af3b298d3',1,'soviet']]],
+  ['updateboard_15',['updateboard',['../group__public__actions.html#ga797ca85c49a4a160412a91d55891d63c',1,'soviet']]],
   ['updatecoop_16',['updatecoop',['../group__public__actions.html#ga9b31f8344a801600abe636d4fa6a2ad8',1,'registrator']]],
   ['updtrevision_17',['updtrevision',['../classeosiosystem_1_1system__contract.html#a0af4a55018801131ae7dc7a923bead0b',1,'eosiosystem::system_contract']]]
 ];

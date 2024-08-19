@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Для разработчиков: Класс gateway</title>
+<title>Протокол COOPENOMICS: Класс gateway</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Для разработчиков
+   <div id="projectname">Протокол COOPENOMICS
    </div>
   </td>
  </tr>
@@ -115,11 +115,19 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
 Открытые члены</h2></td></tr>
 <tr class="memitem:a61f6973ac320eea0ad63680cfe3317ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a61f6973ac320eea0ad63680cfe3317ae">gateway</a> (eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td></tr>
 <tr class="separator:a61f6973ac320eea0ad63680cfe3317ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7340f7262f2b5c274919ef7f7f5a9800"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a7340f7262f2b5c274919ef7f7f5a9800">migrate</a> ()</td></tr>
+<tr class="separator:a7340f7262f2b5c274919ef7f7f5a9800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa2f4b2364f09b8728cbf12eb6e9b92f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gaa2f4b2364f09b8728cbf12eb6e9b92f1">newdepositid</a> (eosio::name username, uint64_t id)</td></tr>
 <tr class="memdesc:gaa2f4b2364f09b8728cbf12eb6e9b92f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пустой метод регистрации нового идентификатораЭтот метод используется для возврата информации из контракта.  <a href="group__public__actions.html#gaa2f4b2364f09b8728cbf12eb6e9b92f1">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa2f4b2364f09b8728cbf12eb6e9b92f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cbc501eda8ea4d6bb061068141f28ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a3cbc501eda8ea4d6bb061068141f28ba">newwithdrid</a> (eosio::name username, uint64_t id)</td></tr>
 <tr class="separator:a3cbc501eda8ea4d6bb061068141f28ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d01cbff840a6356992bc4ba3b359ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#af2d01cbff840a6356992bc4ba3b359ec">adduser</a> (eosio::name coopname, eosio::name username, eosio::asset initial, eosio::asset minimum, eosio::time_point_sec created_at, bool spread_initial)</td></tr>
+<tr class="separator:af2d01cbff840a6356992bc4ba3b359ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a303008649a1561d97bfcea3c08e0c32c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a303008649a1561d97bfcea3c08e0c32c">newdeposit</a> (eosio::name coopname, eosio::name username, uint64_t deposit_id, eosio::name type, eosio::asset amount, eosio::time_point_sec deposited_at)</td></tr>
+<tr class="separator:a303008649a1561d97bfcea3c08e0c32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88905bbe15584d34b265a883fe4b195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#ac88905bbe15584d34b265a883fe4b195">newwithdraw</a> (eosio::name coopname, eosio::name username, uint64_t withdraw_id, eosio::name type, eosio::asset amount)</td></tr>
+<tr class="separator:ac88905bbe15584d34b265a883fe4b195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69b49209b2cc17da42aa66890e2ca080"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a69b49209b2cc17da42aa66890e2ca080">apply</a> (uint64_t receiver, uint64_t code, uint64_t action)</td></tr>
 <tr class="separator:a69b49209b2cc17da42aa66890e2ca080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9a60c56226fe40235a45373eac0fea9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga9a60c56226fe40235a45373eac0fea9d">deposit</a> (eosio::name coopname, eosio::name username, eosio::name type, eosio::asset quantity)</td></tr>
@@ -205,6 +213,58 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
+<a id="af2d01cbff840a6356992bc4ba3b359ec" name="af2d01cbff840a6356992bc4ba3b359ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d01cbff840a6356992bc4ba3b359ec">&#9670;&nbsp;</a></span>adduser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gateway::adduser </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>initial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>minimum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>created_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>spread_initial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a69b49209b2cc17da42aa66890e2ca080" name="a69b49209b2cc17da42aa66890e2ca080"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69b49209b2cc17da42aa66890e2ca080">&#9670;&nbsp;</a></span>apply()</h2>
 
@@ -228,6 +288,121 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7340f7262f2b5c274919ef7f7f5a9800" name="a7340f7262f2b5c274919ef7f7f5a9800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7340f7262f2b5c274919ef7f7f5a9800">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gateway::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a303008649a1561d97bfcea3c08e0c32c" name="a303008649a1561d97bfcea3c08e0c32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a303008649a1561d97bfcea3c08e0c32c">&#9670;&nbsp;</a></span>newdeposit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gateway::newdeposit </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>deposit_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>deposited_at</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac88905bbe15584d34b265a883fe4b195" name="ac88905bbe15584d34b265a883fe4b195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88905bbe15584d34b265a883fe4b195">&#9670;&nbsp;</a></span>newwithdraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gateway::newwithdraw </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>withdraw_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -314,8 +489,8 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
 </div>
 </div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li>gateway/<a class="el" href="gateway_8hpp_source.html">gateway.hpp</a></li>
-<li>gateway/<a class="el" href="gateway_8cpp.html">gateway.cpp</a></li>
+<li>cpp/gateway/<a class="el" href="gateway_8hpp_source.html">gateway.hpp</a></li>
+<li>cpp/gateway/<a class="el" href="gateway_8cpp.html">gateway.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

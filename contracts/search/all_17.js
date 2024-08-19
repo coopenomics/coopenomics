@@ -10,7 +10,7 @@ var searchData=
   ['withdraw_7',['withdraw',['../classsoviet.html#a7089fa0bf46043a738f2080a110d6565',1,'soviet::withdraw()'],['../group__public__actions.html#ga5b0187a0110b5d1f1ca9296a4ed4156a',1,'gateway::withdraw()']]],
   ['withdraw_5feffect_8',['withdraw_effect',['../classsoviet.html#a74775bb15963afd3dec409c7a4df4b7a',1,'soviet']]],
   ['withdrawauth_9',['withdrawauth',['../classgateway.html#a5b244fde939d3cf2aaa7c36f91c228cb',1,'gateway']]],
-  ['withdrawed_10',['withdrawed',['../structfundwallet.html#a99ca9b77cca8ac9dad189a9a046f9d78',1,'fundwallet::withdrawed()'],['../structaccfund.html#a2d98cd28f245a720b54a9450eb7ab4ad',1,'accfund::withdrawed()']]],
+  ['withdrawed_10',['withdrawed',['../structfundwallet.html#a99ca9b77cca8ac9dad189a9a046f9d78',1,'fundwallet::withdrawed()'],['../structsimple__wallet.html#aedfc465cea04dd60e6dd19817554af51',1,'simple_wallet::withdrawed()'],['../structaccfund.html#a2d98cd28f245a720b54a9450eb7ab4ad',1,'accfund::withdrawed()']]],
   ['withdraws_5findex_11',['withdraws_index',['../balances_8hpp.html#a8689bd711e5cf08e0910f6bb2aaa96ba',1,'balances.hpp']]],
   ['wrap_12',['wrap',['../classeosio_1_1wrap.html',1,'eosio']]],
   ['wthdcomplete_13',['wthdcomplete',['../group__public__actions.html#ga2551c736852a98d33f2fcc9f569fe836',1,'gateway']]],

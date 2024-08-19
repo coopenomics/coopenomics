@@ -24,8 +24,20 @@
 */
 var NAVTREE =
 [
-  [ "Для разработчиков", "index.html", [
-    [ "Документация", "index.html", null ],
+  [ "Протокол COOPENOMICS", "index.html", [
+    [ "Введение", "index.html", [
+      [ "Окружение", "index.html#autotoc_md1", null ],
+      [ "Компиляция", "index.html#autotoc_md2", null ],
+      [ "Загрузка", "index.html#autotoc_md3", null ],
+      [ "Кошелёк", "index.html#autotoc_md4", null ],
+      [ "Тесты", "index.html#autotoc_md5", [
+        [ "Полные тесты", "index.html#autotoc_md6", null ],
+        [ "Выборочные тесты", "index.html#autotoc_md7", null ],
+        [ "Информативные тесты", "index.html#autotoc_md8", null ]
+      ] ],
+      [ "Документация", "index.html#autotoc_md9", null ],
+      [ "Лицензия", "index.html#autotoc_md10", null ]
+    ] ],
     [ "Группы", "modules.html", "modules" ],
     [ "Файлы", "files.html", [
       [ "Обозреватель", "files.html", "files_dup" ],
@@ -43,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accounts_8hpp.html",
-"globals_vars.html",
-"structexchange__params.html#a4984c8df3dba7213b1cd36e9c3886f8b"
+"eosio_8system_8hpp.html#ad71bd6c8c9f27a07f389e6a3ff365692",
+"structcooperative.html#a5c5336993628f9656944345a5d490ed8"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

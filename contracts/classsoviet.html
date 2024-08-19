@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Для разработчиков: Класс soviet</title>
+<title>Протокол COOPENOMICS: Класс soviet</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Для разработчиков
+   <div id="projectname">Протокол COOPENOMICS
    </div>
   </td>
  </tr>
@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 Открытые члены</h2></td></tr>
 <tr class="memitem:a3cbffb11d43c698868e90f0c20d59eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a3cbffb11d43c698868e90f0c20d59eaf">init</a> ()</td></tr>
 <tr class="separator:a3cbffb11d43c698868e90f0c20d59eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8013f13876ba1b7e40677cd1a72539a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a8013f13876ba1b7e40677cd1a72539a1">fix</a> ()</td></tr>
-<tr class="separator:a8013f13876ba1b7e40677cd1a72539a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4c12ffe2187919adbbe21710fa251c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a1f4c12ffe2187919adbbe21710fa251c">migrate</a> ()</td></tr>
+<tr class="separator:a1f4c12ffe2187919adbbe21710fa251c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">exec</a> (eosio::name executer, eosio::name coopname, uint64_t decision_id)</td></tr>
 <tr class="memdesc:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исполнение решения совета  <a href="group__public__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +127,9 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="memitem:gadeadfe2269b80480012be4a05a5b08ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gadeadfe2269b80480012be4a05a5b08ab">joincoop</a> (eosio::name coopname, eosio::name username, <a class="el" href="structdocument.html">document</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:gadeadfe2269b80480012be4a05a5b08ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявка на вступление в кооператив  <a href="group__public__actions.html#gadeadfe2269b80480012be4a05a5b08ab">Подробнее...</a><br /></td></tr>
 <tr class="separator:gadeadfe2269b80480012be4a05a5b08ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga772b091e54d602a3110c47f9c09dc411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga772b091e54d602a3110c47f9c09dc411">adduser</a> (eosio::name coopname, eosio::name username, eosio::name type, eosio::time_point_sec created_at, eosio::asset initial, eosio::asset minimum, bool spread_initial)</td></tr>
+<tr class="memdesc:ga772b091e54d602a3110c47f9c09dc411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление пайщика по API без процедуры подписания заявления на вступление. Действие добавляет действующего пайщика в систему, пропуская этап подписи заявления на вступление и оплату вступительного и минимального паевого взносов. Система позволяет установить дату регистрации участника, которая будет соответствовать дате уплаты им минимального и вступительного взносов. Если spread_initial установлен в false, то сумма вступительного взноса не распределяется среди фондов. Тогда система считает, что учет распределения вступительного взноса произошел за её пределами. Если spread_initial установлен в true, то сумма вступительного взноса распределяется по фондам согласно правилам распределения кооператива в контракте fund. Минимальный паевый взнос всегда добавляется в кошелёк пайщика и отмечается в статистике оборотного фонда кооператива.  <a href="group__public__actions.html#ga772b091e54d602a3110c47f9c09dc411">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga772b091e54d602a3110c47f9c09dc411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacd08501eb19d2733f9640cae3ae229f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gacd08501eb19d2733f9640cae3ae229f0">automate</a> (eosio::name coopname, uint64_t board_id, eosio::name member, eosio::name action_type, eosio::name provider, std::string encrypted_private_key)</td></tr>
 <tr class="memdesc:gacd08501eb19d2733f9640cae3ae229f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Автоматизация подписи на решениях  <a href="group__public__actions.html#gacd08501eb19d2733f9640cae3ae229f0">Подробнее...</a><br /></td></tr>
 <tr class="separator:gacd08501eb19d2733f9640cae3ae229f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,12 +139,12 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="memitem:ga3ca9fb1ee5a9584303c34e391af99e6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga3ca9fb1ee5a9584303c34e391af99e6c">authorize</a> (eosio::name coopname, eosio::name chairman, uint64_t decision_id, <a class="el" href="structdocument.html">document</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:ga3ca9fb1ee5a9584303c34e391af99e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация принятого решения советом  <a href="group__public__actions.html#ga3ca9fb1ee5a9584303c34e391af99e6c">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga3ca9fb1ee5a9584303c34e391af99e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga03967c07043b14f5239e50448362287a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga03967c07043b14f5239e50448362287a">createboard</a> (eosio::name coopname, eosio::name chairman, eosio::name type, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
-<tr class="memdesc:ga03967c07043b14f5239e50448362287a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового совета кооператива  <a href="group__public__actions.html#ga03967c07043b14f5239e50448362287a">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga03967c07043b14f5239e50448362287a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga633d78f7717ca0b13d800f1af3b298d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga633d78f7717ca0b13d800f1af3b298d3">updateboard</a> (eosio::name coopname, eosio::name chairman, uint64_t board_id, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
-<tr class="memdesc:ga633d78f7717ca0b13d800f1af3b298d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление совета или комиссии  <a href="group__public__actions.html#ga633d78f7717ca0b13d800f1af3b298d3">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga633d78f7717ca0b13d800f1af3b298d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68">createboard</a> (eosio::name coopname, eosio::name username, eosio::name type, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
+<tr class="memdesc:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового совета кооператива  <a href="group__public__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga797ca85c49a4a160412a91d55891d63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga797ca85c49a4a160412a91d55891d63c">updateboard</a> (eosio::name coopname, eosio::name username, uint64_t board_id, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
+<tr class="memdesc:ga797ca85c49a4a160412a91d55891d63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление совета или комиссии  <a href="group__public__actions.html#ga797ca85c49a4a160412a91d55891d63c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga797ca85c49a4a160412a91d55891d63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaed705497ce78823553360af42f1e0dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gaed705497ce78823553360af42f1e0dc6">addstaff</a> (eosio::name coopname, eosio::name chairman, eosio::name username, std::vector&lt; <a class="el" href="structright.html">right</a> &gt; rights, std::string position_title)</td></tr>
 <tr class="memdesc:gaed705497ce78823553360af42f1e0dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление персонала кооператива  <a href="group__public__actions.html#gaed705497ce78823553360af42f1e0dc6">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaed705497ce78823553360af42f1e0dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -658,23 +661,6 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 
 </div>
 </div>
-<a id="a8013f13876ba1b7e40677cd1a72539a1" name="a8013f13876ba1b7e40677cd1a72539a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8013f13876ba1b7e40677cd1a72539a1">&#9670;&nbsp;</a></span>fix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void soviet::fix </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a3cbffb11d43c698868e90f0c20d59eaf" name="a3cbffb11d43c698868e90f0c20d59eaf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3cbffb11d43c698868e90f0c20d59eaf">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -762,6 +748,23 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f4c12ffe2187919adbbe21710fa251c" name="a1f4c12ffe2187919adbbe21710fa251c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4c12ffe2187919adbbe21710fa251c">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 </div>
@@ -1263,19 +1266,19 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 </div>
 </div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li>soviet/<a class="el" href="soviet_8hpp_source.html">soviet.hpp</a></li>
-<li>soviet/<a class="el" href="soviet_2soviet_8cpp.html">soviet.cpp</a></li>
-<li>soviet/src/<a class="el" href="addresses_8cpp.html">addresses.cpp</a></li>
-<li>soviet/src/<a class="el" href="admin_8cpp.html">admin.cpp</a></li>
-<li>soviet/src/<a class="el" href="automator_8cpp.html">automator.cpp</a></li>
-<li>soviet/src/<a class="el" href="branches_8cpp.html">branches.cpp</a></li>
-<li>soviet/src/<a class="el" href="chairman_8cpp.html">chairman.cpp</a></li>
-<li>soviet/src/<a class="el" href="contributions_8cpp.html">contributions.cpp</a></li>
-<li>soviet/src/<a class="el" href="fund_8cpp.html">fund.cpp</a></li>
-<li>soviet/src/<a class="el" href="joincoop_8cpp.html">joincoop.cpp</a></li>
-<li>soviet/src/<a class="el" href="soviet_2src_2marketplace_8cpp.html">marketplace.cpp</a></li>
-<li>soviet/src/<a class="el" href="programs_8cpp.html">programs.cpp</a></li>
-<li>soviet/src/<a class="el" href="soviet_2src_2voting_8cpp.html">voting.cpp</a></li>
+<li>cpp/soviet/<a class="el" href="soviet_8hpp_source.html">soviet.hpp</a></li>
+<li>cpp/soviet/<a class="el" href="soviet_2soviet_8cpp.html">soviet.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="addresses_8cpp.html">addresses.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="admin_8cpp.html">admin.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="automator_8cpp.html">automator.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="branches_8cpp.html">branches.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="chairman_8cpp.html">chairman.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="contributions_8cpp.html">contributions.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="soviet_2src_2fund_8cpp.html">fund.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="soviet_2src_2marketplace_8cpp.html">marketplace.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="programs_8cpp.html">programs.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="soviet_2src_2registrator_8cpp.html">registrator.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="soviet_2src_2voting_8cpp.html">voting.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

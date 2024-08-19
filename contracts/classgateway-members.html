@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Для разработчиков: Cписок членов класса</title>
+<title>Протокол COOPENOMICS: Cписок членов класса</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Для разработчиков
+   <div id="projectname">Протокол COOPENOMICS
    </div>
   </td>
  </tr>
@@ -90,12 +90,16 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
 
 <p>Полный список членов класса <a class="el" href="classgateway.html">gateway</a>, включая наследуемые из базового класса</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classgateway.html#a69b49209b2cc17da42aa66890e2ca080">apply</a>(uint64_t receiver, uint64_t code, uint64_t action)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="group__public__actions.html#ga9a60c56226fe40235a45373eac0fea9d">deposit</a>(eosio::name coopname, eosio::name username, eosio::name type, eosio::asset quantity)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7">dpcomplete</a>(eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="group__public__actions.html#ga8776a33709be83c15957bc8e366db71d">dpfail</a>(eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classgateway.html#a61f6973ac320eea0ad63680cfe3317ae">gateway</a>(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="group__public__actions.html#gaa2f4b2364f09b8728cbf12eb6e9b92f1">newdepositid</a>(eosio::name username, uint64_t id)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgateway.html#af2d01cbff840a6356992bc4ba3b359ec">adduser</a>(eosio::name coopname, eosio::name username, eosio::asset initial, eosio::asset minimum, eosio::time_point_sec created_at, bool spread_initial)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgateway.html#a69b49209b2cc17da42aa66890e2ca080">apply</a>(uint64_t receiver, uint64_t code, uint64_t action)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="group__public__actions.html#ga9a60c56226fe40235a45373eac0fea9d">deposit</a>(eosio::name coopname, eosio::name username, eosio::name type, eosio::asset quantity)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7">dpcomplete</a>(eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="group__public__actions.html#ga8776a33709be83c15957bc8e366db71d">dpfail</a>(eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgateway.html#a61f6973ac320eea0ad63680cfe3317ae">gateway</a>(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classgateway.html#a7340f7262f2b5c274919ef7f7f5a9800">migrate</a>()</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgateway.html#a303008649a1561d97bfcea3c08e0c32c">newdeposit</a>(eosio::name coopname, eosio::name username, uint64_t deposit_id, eosio::name type, eosio::asset amount, eosio::time_point_sec deposited_at)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="group__public__actions.html#gaa2f4b2364f09b8728cbf12eb6e9b92f1">newdepositid</a>(eosio::name username, uint64_t id)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classgateway.html#ac88905bbe15584d34b265a883fe4b195">newwithdraw</a>(eosio::name coopname, eosio::name username, uint64_t withdraw_id, eosio::name type, eosio::asset amount)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgateway.html#a3cbc501eda8ea4d6bb061068141f28ba">newwithdrid</a>(eosio::name username, uint64_t id)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="group__public__actions.html#ga5b0187a0110b5d1f1ca9296a4ed4156a">withdraw</a>(eosio::name coopname, eosio::name username, eosio::asset quantity, document document, std::string bank_data_id, std::string memo)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classgateway.html#a5b244fde939d3cf2aaa7c36f91c228cb">withdrawauth</a>(eosio::name coopname, uint64_t withdraw_id)</td><td class="entry"><a class="el" href="classgateway.html">gateway</a></td><td class="entry"></td></tr>

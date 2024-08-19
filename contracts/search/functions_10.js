@@ -4,7 +4,7 @@ var searchData=
   ['recievecnfrm_1',['recievecnfrm',['../classmarketplace.html#a4ad158db16c8c5772026fedd3ad0ae05',1,'marketplace']]],
   ['recieved_2',['recieved',['../classsoviet.html#a955e0e3734f5d04715310aa967d099be',1,'soviet']]],
   ['refund_3',['refund',['../classeosiosystem_1_1system__contract.html#a10a63e006f9869caeaf2592bdfbccc42',1,'eosiosystem::system_contract']]],
-  ['regcoop_4',['regcoop',['../group__public__actions.html#ga20903d322ad4dab2a4d2b3b0871f5e26',1,'registrator']]],
+  ['regcoop_4',['regcoop',['../group__public__actions.html#gaed9f0648e72c52f5d2d4f7b0184122bd',1,'registrator']]],
   ['register_5fproducer_5',['register_producer',['../classeosiosystem_1_1system__contract.html#a0709db97aa347d697fb4cbf3f67f2a96',1,'eosiosystem::system_contract']]],
   ['registrator_6',['registrator',['../classregistrator.html#a5031045fe1736a84cd445be212673c0b',1,'registrator']]],
   ['regpaid_7',['regpaid',['../group__public__actions.html#gaddace7bdb215147f252a529422010022',1,'soviet']]],

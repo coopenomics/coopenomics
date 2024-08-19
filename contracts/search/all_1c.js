@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['таблицы_0',['Таблицы',['../group__public__tables.html',1,'']]]
+  ['структуры_0',['Структуры',['../group__public__structures.html',1,'']]]
 ];
