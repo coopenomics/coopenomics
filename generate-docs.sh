@@ -28,5 +28,5 @@ rsync -r docs/* "$BASE_PATH/doctrine/site/coopback"
 
 # Возвращаемся в первоначальную директорию и публикуем документацию
 cd "$BASE_PATH/doctrine" || exit
-#pnpm docs-publish
+pnpm docs-publish
 
