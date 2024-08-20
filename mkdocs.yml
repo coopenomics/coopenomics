@@ -1,4 +1,4 @@
-site_name: Цифровая Экономика
+site_name: Кооперативная Экономика
 
 theme:
   name: material
@@ -114,9 +114,8 @@ nav:
   #   - Участникам: 
   #     - 'manual/introduction.md' 
   # - Справка: info.md
-
-  - Протоколы: 
-    - Эмиссии: protocols/emission.md
+  # - Протоколы: 
+  #   - Эмиссии: protocols/emission.md
   # - Разработчикам: documentation.md
   # - Инвесторам: invest.md
   - Подключение: connect.md
