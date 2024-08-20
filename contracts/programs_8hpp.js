@@ -1,6 +1,6 @@
 var programs_8hpp =
 [
-    [ "progcomarket", "structprogcomarket.html", "structprogcomarket" ],
-    [ "progcomarket_index", "programs_8hpp.html#aabd2e28e71dda300438a22bd74bf1b55", null ],
-    [ "get_program_or_fail", "programs_8hpp.html#a23df1b7b83e383db3cce263bbcaa6a41", null ]
+    [ "program", "structprogram.html", "structprogram" ],
+    [ "programs_index", "programs_8hpp.html#a193e9f8140f44212d8d5dcb1f8ea96ca", null ],
+    [ "get_program_or_fail", "programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e", null ]
 ];

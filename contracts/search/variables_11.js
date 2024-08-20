@@ -8,12 +8,13 @@ var searchData=
   ['signature_5',['signature',['../structdocument.html#a9fd2739490e87378f466df2a0c65bd58',1,'document']]],
   ['stake_5faccount_6',['stake_account',['../classeosiosystem_1_1system__contract.html#a5cde7e6a57d453cc63d509c6657355e2',1,'eosiosystem::system_contract']]],
   ['staked_7',['staked',['../structeosiosystem_1_1voter__info.html#a3f1a76120b906f5f304c0c4604d4bf37',1,'eosiosystem::voter_info']]],
-  ['state_8',['state',['../structaddress__data.html#a3b4b232ef3ababb1da9962fc9f2eee35',1,'address_data']]],
-  ['statement_9',['statement',['../structdecision.html#a5cc1903525dabf6808282f521f065d14',1,'decision']]],
-  ['status_10',['status',['../structaccount.html#a8a3bb008be845158f23da8984f32d1b4',1,'account::status()'],['../structcooperative.html#ad0ecbe38c4dd9147263056860f6b1b03',1,'cooperative::status()'],['../structonedeposit.html#a60d603a3a6e230ef8bc63fb28ff7c1e6',1,'onedeposit::status()'],['../structonewithdraw.html#a953bbdd9979a6ca5b30d0cc5e7c5031b',1,'onewithdraw::status()'],['../structrequest.html#a50698c9ebdf1c2d72555ace3d6d1e965',1,'request::status()'],['../structparticipant.html#a9855988bfe1c23094656925325665756',1,'participant::status()'],['../structfwithdraw.html#a0e922872fbfd419e3039853e3671b9fd',1,'fwithdraw::status()']]],
-  ['storages_11',['storages',['../structaccount.html#a95185a9eeb41425a3174b21042d5cec6',1,'account']]],
-  ['street_12',['street',['../structaddress__data.html#a106cb3b84ce9123528df437a6cfc4a0f',1,'address_data']]],
-  ['supplied_5fat_13',['supplied_at',['../structrequest.html#aa32514e4db94d4ccbdea8788034e9d74',1,'request']]],
-  ['supplier_5famount_14',['supplier_amount',['../structrequest.html#ac029b5093d5452cbeb9a912a66168ed9',1,'request']]],
-  ['supply_15',['supply',['../structeosiosystem_1_1exchange__state.html#a46dd436b7c53a2cc5fb718f18176f55f',1,'eosiosystem::exchange_state::supply()'],['../structeosio_1_1token_1_1currency__stats.html#ab24e3519d9ea9063b80d74a64ec1fd73',1,'eosio::token::currency_stats::supply()']]]
+  ['start_5fat_8',['start_at',['../structprogram.html#a4ab247970586f2c364e5cc4941820bdd',1,'program']]],
+  ['state_9',['state',['../structaddress__data.html#a3b4b232ef3ababb1da9962fc9f2eee35',1,'address_data']]],
+  ['statement_10',['statement',['../structdecision.html#a5cc1903525dabf6808282f521f065d14',1,'decision']]],
+  ['status_11',['status',['../structaccount.html#a8a3bb008be845158f23da8984f32d1b4',1,'account::status()'],['../structcooperative.html#ad0ecbe38c4dd9147263056860f6b1b03',1,'cooperative::status()'],['../structonedeposit.html#a60d603a3a6e230ef8bc63fb28ff7c1e6',1,'onedeposit::status()'],['../structonewithdraw.html#a953bbdd9979a6ca5b30d0cc5e7c5031b',1,'onewithdraw::status()'],['../structrequest.html#a50698c9ebdf1c2d72555ace3d6d1e965',1,'request::status()'],['../structparticipant.html#a9855988bfe1c23094656925325665756',1,'participant::status()'],['../structfwithdraw.html#a0e922872fbfd419e3039853e3671b9fd',1,'fwithdraw::status()']]],
+  ['storages_12',['storages',['../structaccount.html#a95185a9eeb41425a3174b21042d5cec6',1,'account']]],
+  ['street_13',['street',['../structaddress__data.html#a106cb3b84ce9123528df437a6cfc4a0f',1,'address_data']]],
+  ['supplied_5fat_14',['supplied_at',['../structrequest.html#aa32514e4db94d4ccbdea8788034e9d74',1,'request']]],
+  ['supplier_5famount_15',['supplier_amount',['../structrequest.html#ac029b5093d5452cbeb9a912a66168ed9',1,'request']]],
+  ['supply_16',['supply',['../structeosiosystem_1_1exchange__state.html#a46dd436b7c53a2cc5fb718f18176f55f',1,'eosiosystem::exchange_state::supply()'],['../structeosio_1_1token_1_1currency__stats.html#ab24e3519d9ea9063b80d74a64ec1fd73',1,'eosio::token::currency_stats::supply()']]]
 ];

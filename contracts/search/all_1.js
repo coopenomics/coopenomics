@@ -44,7 +44,7 @@ var searchData=
   ['admins_2ehpp_41',['admins.hpp',['../admins_8hpp.html',1,'']]],
   ['allow_5fperms_42',['allow_perms',['../structeosiosystem_1_1limit__auth__change.html#a9535c07d3294a3a65a69adb9ff8f6301',1,'eosiosystem::limit_auth_change']]],
   ['amount_43',['amount',['../structeosiosystem_1_1bid__refund.html#aec14d41b70f2332af3e94d84f480077f',1,'eosiosystem::bid_refund']]],
-  ['announce_44',['announce',['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structprogcomarket.html#ae62aa2f18cc0ce05663bdc7d40bbead5',1,'progcomarket::announce()']]],
+  ['announce_44',['announce',['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7',1,'program::announce()']]],
   ['ano_45',['ANO',['../consts_8hpp.html#a53678aa3958110e34fce3501d7da1bdf',1,'consts.hpp']]],
   ['anonymous_5fnamespace_7bblock_5finfo_2ecpp_7d_46',['anonymous_namespace{block_info.cpp}',['../namespaceanonymous__namespace_02block__info_8cpp_03.html',1,'']]],
   ['anonymous_5fnamespace_7bblockinfo_5ftester_2ecpp_7d_47',['anonymous_namespace{blockinfo_tester.cpp}',['../namespaceanonymous__namespace_02blockinfo__tester_8cpp_03.html',1,'']]],

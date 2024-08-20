@@ -12,7 +12,7 @@ var searchData=
   ['active_5fpermission_9',['active_permission',['../classeosiosystem_1_1system__contract.html#adfc25b00a14e482c7fb1161dd38096bd',1,'eosiosystem::system_contract']]],
   ['allow_5fperms_10',['allow_perms',['../structeosiosystem_1_1limit__auth__change.html#a9535c07d3294a3a65a69adb9ff8f6301',1,'eosiosystem::limit_auth_change']]],
   ['amount_11',['amount',['../structeosiosystem_1_1bid__refund.html#aec14d41b70f2332af3e94d84f480077f',1,'eosiosystem::bid_refund']]],
-  ['announce_12',['announce',['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structprogcomarket.html#ae62aa2f18cc0ce05663bdc7d40bbead5',1,'progcomarket::announce()']]],
+  ['announce_12',['announce',['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7',1,'program::announce()']]],
   ['approved_13',['approved',['../structdecision.html#a176e851e5b953c0e9b9c39cc0b39f871',1,'decision']]],
   ['authorization_14',['authorization',['../structdecision.html#a6f4192f7f409f46d36cd0e649f21d97b',1,'decision']]],
   ['authorized_15',['authorized',['../structdecision.html#a98b195cb10f2bda166de4f2e62537b4a',1,'decision']]],

@@ -208,12 +208,12 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 <tr class="memitem:ga3666aba8b8d5a7b8ac50abdda8eb0438"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga3666aba8b8d5a7b8ac50abdda8eb0438">soviet::change</a> (eosio::name coopname, eosio::name parent_username, eosio::name username, uint64_t exchange_id, eosio::name money_contributor, eosio::name product_contributor)</td></tr>
 <tr class="memdesc:ga3666aba8b8d5a7b8ac50abdda8eb0438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обмен в кооперативе  <a href="group__public__actions.html#ga3666aba8b8d5a7b8ac50abdda8eb0438">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga3666aba8b8d5a7b8ac50abdda8eb0438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0c242b184398cfcccbe628d1d9400f76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga0c242b184398cfcccbe628d1d9400f76">soviet::createprog</a> (eosio::name coopname, eosio::name chairman, std::string title, std::string announce, std::string description, std::string preview, std::string images, eosio::name calculation_type, eosio::asset fixed_membership_contribution, uint64_t membership_percent_fee)</td></tr>
-<tr class="memdesc:ga0c242b184398cfcccbe628d1d9400f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод создания целевой программы  <a href="group__public__actions.html#ga0c242b184398cfcccbe628d1d9400f76">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga0c242b184398cfcccbe628d1d9400f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5630c673f95331a1796fda2dcc878803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga5630c673f95331a1796fda2dcc878803">soviet::editprog</a> (eosio::name coopname, uint64_t id, std::string title, std::string announce, std::string description, std::string preview, std::string images)</td></tr>
-<tr class="memdesc:ga5630c673f95331a1796fda2dcc878803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод редактирования целевой программы  <a href="group__public__actions.html#ga5630c673f95331a1796fda2dcc878803">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga5630c673f95331a1796fda2dcc878803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga449e887e1fb0511b758683a9223ab998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga449e887e1fb0511b758683a9223ab998">soviet::createprog</a> (eosio::name coopname, eosio::name username, std::string conditions, checksum256 hash_of_pdf_with_conditions, std::string title, std::string announce, std::string description, std::string preview, std::string images, eosio::name calculation_type, eosio::asset fixed_membership_contribution, uint64_t membership_percent_fee, std::string meta)</td></tr>
+<tr class="memdesc:ga449e887e1fb0511b758683a9223ab998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод создания целевой программы  <a href="group__public__actions.html#ga449e887e1fb0511b758683a9223ab998">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga449e887e1fb0511b758683a9223ab998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5df3904e034416f78768e5b6eefee1d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga5df3904e034416f78768e5b6eefee1d5">soviet::editprog</a> (eosio::name coopname, eosio::name username, uint64_t id, std::string conditions, checksum256 hash_of_conditions, std::string title, std::string announce, std::string description, std::string preview, std::string images, std::string meta)</td></tr>
+<tr class="memdesc:ga5df3904e034416f78768e5b6eefee1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод редактирования целевой программы  <a href="group__public__actions.html#ga5df3904e034416f78768e5b6eefee1d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5df3904e034416f78768e5b6eefee1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8c6922ba61c30a7c6409cb48e62e08b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga8c6922ba61c30a7c6409cb48e62e08b5">soviet::disableprog</a> (eosio::name coopname, uint64_t id)</td></tr>
 <tr class="memdesc:ga8c6922ba61c30a7c6409cb48e62e08b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод отключения целевой программы  <a href="group__public__actions.html#ga8c6922ba61c30a7c6409cb48e62e08b5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga8c6922ba61c30a7c6409cb48e62e08b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1165,8 +1165,8 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 
 </div>
 </div>
-<a id="ga0c242b184398cfcccbe628d1d9400f76" name="ga0c242b184398cfcccbe628d1d9400f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0c242b184398cfcccbe628d1d9400f76">&#9670;&nbsp;</a></span>createprog()</h2>
+<a id="ga449e887e1fb0511b758683a9223ab998" name="ga449e887e1fb0511b758683a9223ab998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga449e887e1fb0511b758683a9223ab998">&#9670;&nbsp;</a></span>createprog()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1181,7 +1181,19 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>chairman</em>, </td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>conditions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash_of_pdf_with_conditions</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1229,7 +1241,13 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>membership_percent_fee</em>&#160;</td>
+          <td class="paramname"><em>membership_percent_fee</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1577,8 +1595,8 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
 
 </div>
 </div>
-<a id="ga5630c673f95331a1796fda2dcc878803" name="ga5630c673f95331a1796fda2dcc878803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5630c673f95331a1796fda2dcc878803">&#9670;&nbsp;</a></span>editprog()</h2>
+<a id="ga5df3904e034416f78768e5b6eefee1d5" name="ga5df3904e034416f78768e5b6eefee1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5df3904e034416f78768e5b6eefee1d5">&#9670;&nbsp;</a></span>editprog()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1592,8 +1610,26 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>conditions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash_of_conditions</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1623,7 +1659,13 @@ $(document).ready(function(){initNavTree('group__public__actions.html',''); init
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>images</em>&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -14,7 +14,7 @@ var searchData=
   ['position_5ftitle_11',['position_title',['../structboard__member.html#a2961218c9a14c7125a53ade0c15e5598',1,'board_member::position_title()'],['../structstaff.html#a8fa0fdaf003c7588f9f1185a087785ba',1,'staff::position_title()']]],
   ['powerup_5fdays_12',['powerup_days',['../structeosiosystem_1_1powerup__config.html#a0bf5894e66ce146b1d46dab27ed79052',1,'eosiosystem::powerup_config::powerup_days()'],['../structeosiosystem_1_1powerup__state.html#a41192b702d0a81d46a3f19e87149c740',1,'eosiosystem::powerup_state::powerup_days()']]],
   ['powerup_5ffrac_13',['powerup_frac',['../namespaceeosiosystem.html#ad71bd6c8c9f27a07f389e6a3ff365692',1,'eosiosystem']]],
-  ['preview_14',['preview',['../structprogcomarket.html#a74aac7b95f2f1ab8a4d2b525d2c0b787',1,'progcomarket']]],
+  ['preview_14',['preview',['../structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2',1,'program']]],
   ['previous_15',['previous',['../structeosiobios_1_1block__header.html#aae1cc92b2256891adbd2539efa99cc34',1,'eosiobios::block_header::previous()'],['../structeosiosystem_1_1block__header.html#a777160bdbc82a251b0bfb9c7d6e2e4a8',1,'eosiosystem::block_header::previous()']]],
   ['procedure_16',['procedure',['../structverification.html#a0445ec6869e5259c336dd7010a357a6e',1,'verification']]],
   ['producer_17',['producer',['../structeosiosystem_1_1block__header.html#aaa922bddcad01318dc6fc11dc13c5e79',1,'eosiosystem::block_header::producer()'],['../structeosiobios_1_1block__header.html#a0c794f15d473ccc576dc403676689536',1,'eosiobios::block_header::producer()']]],
