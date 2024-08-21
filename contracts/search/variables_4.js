@@ -13,6 +13,7 @@ var searchData=
   ['disallow_5fperms_10',['disallow_perms',['../structeosiosystem_1_1limit__auth__change.html#a49b0036332a792a390387813cfe20afd',1,'eosiosystem::limit_auth_change']]],
   ['disputed_5fat_11',['disputed_at',['../structrequest.html#a5919de2e5040e1e2ab992f80d2a2302b',1,'request']]],
   ['district_12',['district',['../structaddress__data.html#a1c7176a66b84b6b819059b4363780d61',1,'address_data']]],
-  ['document_13',['document',['../structonewithdraw.html#af57f6fbf568adfb12c63ec49f7410119',1,'onewithdraw::document()'],['../structexchange__params.html#a86765a5769defdc2e1aefb64b8350abe',1,'exchange_params::document()'],['../structfwithdraw.html#a99bbbbc27dd77aab01148a8bcf3d66bc',1,'fwithdraw::document()']]],
-  ['draft_5fid_14',['draft_id',['../structtranslation.html#a971a02e842e4750af9f64a2113735726',1,'translation']]]
+  ['document_13',['document',['../structonewithdraw.html#af57f6fbf568adfb12c63ec49f7410119',1,'onewithdraw::document()'],['../structprogwallet.html#ae176d6808b220e631922ddafe768bb4c',1,'progwallet::document()'],['../structexchange__params.html#a86765a5769defdc2e1aefb64b8350abe',1,'exchange_params::document()'],['../structindocument.html#aa4453c7154718638518b72c8a9b1e0c7',1,'indocument::document()'],['../structfwithdraw.html#a99bbbbc27dd77aab01148a8bcf3d66bc',1,'fwithdraw::document()']]],
+  ['draft_5fid_14',['draft_id',['../structtranslation.html#a971a02e842e4750af9f64a2113735726',1,'translation']]],
+  ['draft_5fregistry_5fid_15',['draft_registry_id',['../structprogram.html#afcd8a4b0c0b7b1b3c4612ee28e1a533e',1,'program']]]
 ];

@@ -1,5 +1,13 @@
 var NAVTREEINDEX2 =
 {
+"structboards.html#ad1e613d161e0dfb3bee0b043b71c13db":[1,3,10,4],
+"structboards.html#ad9a12ccbc9bdbabfe1dbd5f7cffdb06f":[1,3,10,14],
+"structboards.html#add47e6975c343415f278a0414c714066":[1,3,10,9],
+"structboards.html#ae8f0825aa67789f638169abf513ce674":[1,3,10,10],
+"structcooperative.html":[1,3,3],
+"structcooperative.html#a447514af219d34d23db91a9e695ee548":[1,3,3,17],
+"structcooperative.html#a4feb9c6a43ca54359b2358ba1fff05d5":[1,3,3,7],
+"structcooperative.html#a520610090826f8da13096d28052cdd5e":[1,3,3,2],
 "structcooperative.html#a5c5336993628f9656944345a5d490ed8":[1,3,3,18],
 "structcooperative.html#a622edee9edae0426d7c47dce3c1784a1":[1,3,3,12],
 "structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f":[1,3,3,9],
@@ -194,12 +202,12 @@ var NAVTREEINDEX2 =
 "structverification.html#aeb6702bd4b7903963252735d6f760c50":[1,3,0,1],
 "system_2contracts_2eosio_8system_2src_2voting_8cpp.html":[2,0,0,6,0,3,1,9],
 "system_2contracts_2eosio_8system_2src_2voting_8cpp.html#a3e036636d2cc92c741db234dd33870db":[2,0,0,6,0,3,1,9,0],
-"utils_8hpp.html":[2,0,0,0,12],
-"utils_8hpp.html#a13e31620411de1a426d18d70a2e86b17":[2,0,0,0,12,5],
-"utils_8hpp.html#a36967481836d936c693f124a9ce33735":[2,0,0,0,12,1],
-"utils_8hpp.html#a64d2f38da75830fc3ccd9826391cfdc8":[2,0,0,0,12,2],
-"utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39":[2,0,0,0,12,0],
-"utils_8hpp.html#ab7a22a1903f5bfdad00a096b273691c1":[2,0,0,0,12,4],
-"utils_8hpp.html#ada508335b1eaf3038f9f3a69d2f584a5":[2,0,0,0,12,3],
-"utils_8hpp_source.html":[2,0,0,0,12]
+"utils_8hpp.html":[2,0,0,0,13],
+"utils_8hpp.html#a13e31620411de1a426d18d70a2e86b17":[2,0,0,0,13,5],
+"utils_8hpp.html#a36967481836d936c693f124a9ce33735":[2,0,0,0,13,1],
+"utils_8hpp.html#a64d2f38da75830fc3ccd9826391cfdc8":[2,0,0,0,13,2],
+"utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39":[2,0,0,0,13,0],
+"utils_8hpp.html#ab7a22a1903f5bfdad00a096b273691c1":[2,0,0,0,13,4],
+"utils_8hpp.html#ada508335b1eaf3038f9f3a69d2f584a5":[2,0,0,0,13,3],
+"utils_8hpp_source.html":[2,0,0,0,13]
 };

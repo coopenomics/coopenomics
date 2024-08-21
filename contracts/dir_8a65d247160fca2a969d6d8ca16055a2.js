@@ -4,6 +4,7 @@ var dir_8a65d247160fca2a969d6d8ca16055a2 =
     [ "admins.hpp", "admins_8hpp.html", "admins_8hpp" ],
     [ "balances.hpp", "balances_8hpp.html", "balances_8hpp" ],
     [ "changes.hpp", "changes_8hpp.html", "changes_8hpp" ],
+    [ "common.hpp", "common_8hpp.html", null ],
     [ "consts.hpp", "consts_8hpp.html", "consts_8hpp" ],
     [ "coops.hpp", "coops_8hpp.html", "coops_8hpp" ],
     [ "counts.hpp", "counts_8hpp.html", "counts_8hpp" ],

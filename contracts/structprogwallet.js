@@ -6,6 +6,7 @@ var structprogwallet =
     [ "primary_key", "structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398", null ],
     [ "available", "structprogwallet.html#a2af4089401221ea41833056eac18f538", null ],
     [ "coopname", "structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa", null ],
+    [ "document", "structprogwallet.html#ae176d6808b220e631922ddafe768bb4c", null ],
     [ "id", "structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b", null ],
     [ "program_id", "structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df", null ],
     [ "username", "structprogwallet.html#a410c433920c4d749335fd1f02937e038", null ]
