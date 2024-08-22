@@ -98,6 +98,8 @@ $(document).ready(function(){initNavTree('structprogram.html',''); initResizable
 Открытые члены</h2></td></tr>
 <tr class="memitem:ad4d9b6afeca865e65da012164e0356b2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ad4d9b6afeca865e65da012164e0356b2">primary_key</a> () const</td></tr>
 <tr class="separator:ad4d9b6afeca865e65da012164e0356b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec4054a69df9337167d3c83bcd51d3b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">by_program_type</a> () const</td></tr>
+<tr class="separator:a4ec4054a69df9337167d3c83bcd51d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Открытые атрибуты</h2></td></tr>
@@ -105,6 +107,8 @@ $(document).ready(function(){initNavTree('structprogram.html',''); initResizable
 <tr class="separator:ab6d3d430b2aa998ae899b5feba62ab48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a0be4e2c99c0d9b4d30eb933110e5f5"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">coopname</a></td></tr>
 <tr class="separator:a3a0be4e2c99c0d9b4d30eb933110e5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490f302a1518eecca0ca052303cb7480"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a490f302a1518eecca0ca052303cb7480">program_type</a></td></tr>
+<tr class="separator:a490f302a1518eecca0ca052303cb7480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd8a4b0c0b7b1b3c4612ee28e1a533e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#afcd8a4b0c0b7b1b3c4612ee28e1a533e">draft_registry_id</a></td></tr>
 <tr class="memdesc:afcd8a4b0c0b7b1b3c4612ee28e1a533e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ссылка на шаблон условий  <a href="structprogram.html#afcd8a4b0c0b7b1b3c4612ee28e1a533e">Подробнее...</a><br /></td></tr>
 <tr class="separator:afcd8a4b0c0b7b1b3c4612ee28e1a533e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +140,32 @@ $(document).ready(function(){initNavTree('structprogram.html',''); initResizable
 <tr class="separator:ab5de523da67f8b19a1ff113503d068a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Методы</h2>
+<a id="a4ec4054a69df9337167d3c83bcd51d3b" name="a4ec4054a69df9337167d3c83bcd51d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec4054a69df9337167d3c83bcd51d3b">&#9670;&nbsp;</a></span>by_program_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::by_program_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return program_type - secondary_key </p>
+
+</div>
+</div>
 <a id="ad4d9b6afeca865e65da012164e0356b2" name="ad4d9b6afeca865e65da012164e0356b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4d9b6afeca865e65da012164e0356b2">&#9670;&nbsp;</a></span>primary_key()</h2>
 
@@ -365,6 +395,21 @@ $(document).ready(function(){initNavTree('structprogram.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a490f302a1518eecca0ca052303cb7480" name="a490f302a1518eecca0ca052303cb7480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490f302a1518eecca0ca052303cb7480">&#9670;&nbsp;</a></span>program_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name program::program_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >тип кооперативной программы (wallet | market | ...) </p>
 
 </div>
 </div>

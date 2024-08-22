@@ -1,5 +1,6 @@
 var structprogram =
 [
+    [ "by_program_type", "structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b", null ],
     [ "primary_key", "structprogram.html#ad4d9b6afeca865e65da012164e0356b2", null ],
     [ "announce", "structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7", null ],
     [ "calculation_type", "structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6", null ],
@@ -15,6 +16,7 @@ var structprogram =
     [ "membership_percent_fee", "structprogram.html#adef512fdd2885e6a26c40b3a4c49979d", null ],
     [ "meta", "structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97", null ],
     [ "preview", "structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2", null ],
+    [ "program_type", "structprogram.html#a490f302a1518eecca0ca052303cb7480", null ],
     [ "start_at", "structprogram.html#a4ab247970586f2c364e5cc4941820bdd", null ],
     [ "title", "structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be", null ]
 ];

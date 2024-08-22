@@ -101,8 +101,8 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a193e9f8140f44212d8d5dcb1f8ea96ca"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a193e9f8140f44212d8d5dcb1f8ea96ca">programs_index</a></td></tr>
-<tr class="separator:a193e9f8140f44212d8d5dcb1f8ea96ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49bf84a1dc6d5221670938700284149"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt; &quot;programtype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#ab49bf84a1dc6d5221670938700284149">programs_index</a></td></tr>
+<tr class="separator:ab49bf84a1dc6d5221670938700284149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
@@ -112,14 +112,14 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 <tr class="separator:a625d6c74bd108bcd08a8cd308a2afd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
-<a id="a193e9f8140f44212d8d5dcb1f8ea96ca" name="a193e9f8140f44212d8d5dcb1f8ea96ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a193e9f8140f44212d8d5dcb1f8ea96ca">&#9670;&nbsp;</a></span>programs_index</h2>
+<a id="ab49bf84a1dc6d5221670938700284149" name="ab49bf84a1dc6d5221670938700284149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49bf84a1dc6d5221670938700284149">&#9670;&nbsp;</a></span>programs_index</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>&gt; <a class="el" href="programs_8hpp.html#a193e9f8140f44212d8d5dcb1f8ea96ca">programs_index</a></td>
+          <td class="memname">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt; &quot;programtype&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a>&gt; &gt;&gt; <a class="el" href="programs_8hpp.html#ab49bf84a1dc6d5221670938700284149">programs_index</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -36,5 +36,5 @@ var searchData=
   ['createboard_33',['createboard',['../group__public__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68',1,'soviet']]],
   ['createbranch_34',['createbranch',['../classsoviet.html#aa0c0ef5a9d90ba1abaf43fb8682d1c92',1,'soviet']]],
   ['createfund_35',['createfund',['../classfund.html#a5aa31a2069161c366359db571bbd5d14',1,'fund']]],
-  ['createprog_36',['createprog',['../group__public__actions.html#gab680723d59550e12053cf026898b0abb',1,'soviet']]]
+  ['createprog_36',['createprog',['../group__public__actions.html#ga8886740a6877ba6f8832160681f8e1e9',1,'soviet']]]
 ];
