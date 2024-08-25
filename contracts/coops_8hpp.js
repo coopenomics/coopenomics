@@ -14,5 +14,5 @@ var coops_8hpp =
     [ "get_board_by_type_or_fail", "coops_8hpp.html#a5975688eadd5a074161c268985282581", null ],
     [ "get_branch_or_fail", "coops_8hpp.html#a4ffb5444e9a916e7f96c624b030a3e3b", null ],
     [ "get_participant_or_fail", "coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd", null ],
-    [ "is_participant_exist", "coops_8hpp.html#aa23eebab5f5b5b8ba3881ca62ce600d0", null ]
+    [ "is_valid_participant", "coops_8hpp.html#a81e11846bc1e7b947af3af2d5363a524", null ]
 ];

@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Протокол COOPENOMICS", "index.html", [
+  [ "Системные контракты", "index.html", [
     [ "Введение", "index.html", [
       [ "Окружение", "index.html#autotoc_md1", null ],
       [ "Компиляция", "index.html#autotoc_md2", null ],
@@ -56,7 +56,7 @@ var NAVTREEINDEX =
 [
 "accounts_8hpp.html",
 "eosio_8system_8hpp.html#aa3f5a7875c9a421bed214a88d78d7750",
-"structboards.html#ad1e613d161e0dfb3bee0b043b71c13db"
+"structboards.html#ad04db86aca0d3390cbf18c1696818f16"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

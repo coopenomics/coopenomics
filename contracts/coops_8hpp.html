@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Протокол COOPENOMICS: Файл cpp/common/coops.hpp</title>
+<title>Системные контракты: Файл cpp/common/coops.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Протокол COOPENOMICS
+   <div id="projectname">Системные контракты
    </div>
   </td>
  </tr>
@@ -140,18 +140,18 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a32f674661ddff60e573e83fa952d16dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparticipant.html">participant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd">get_participant_or_fail</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="separator:a32f674661ddff60e573e83fa952d16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3541ce0c65865661aeb7230f280abf3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a3541ce0c65865661aeb7230f280abf3f">get_board_by_id</a> (eosio::name coopname, uint64_t board_id)</td></tr>
 <tr class="separator:a3541ce0c65865661aeb7230f280abf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5975688eadd5a074161c268985282581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a5975688eadd5a074161c268985282581">get_board_by_type_or_fail</a> (eosio::name coopname, eosio::name type)</td></tr>
 <tr class="separator:a5975688eadd5a074161c268985282581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7071d280b47702321a02ac12afe8f74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a7071d280b47702321a02ac12afe8f74b">check_for_exist_board_by_type</a> (eosio::name coopname, eosio::name type)</td></tr>
 <tr class="separator:a7071d280b47702321a02ac12afe8f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23eebab5f5b5b8ba3881ca62ce600d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#aa23eebab5f5b5b8ba3881ca62ce600d0">is_participant_exist</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="separator:aa23eebab5f5b5b8ba3881ca62ce600d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ffb5444e9a916e7f96c624b030a3e3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbranch.html">branch</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a4ffb5444e9a916e7f96c624b030a3e3b">get_branch_or_fail</a> (eosio::name coopname, eosio::name braname)</td></tr>
 <tr class="separator:a4ffb5444e9a916e7f96c624b030a3e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e11846bc1e7b947af3af2d5363a524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a81e11846bc1e7b947af3af2d5363a524">is_valid_participant</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="separator:a81e11846bc1e7b947af3af2d5363a524"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f674661ddff60e573e83fa952d16dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparticipant.html">participant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd">get_participant_or_fail</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="separator:a32f674661ddff60e573e83fa952d16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a6c81b62c4039360ceb1e61d409b58bff" name="a6c81b62c4039360ceb1e61d409b58bff"></a>
@@ -381,14 +381,14 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 
 </div>
 </div>
-<a id="aa23eebab5f5b5b8ba3881ca62ce600d0" name="aa23eebab5f5b5b8ba3881ca62ce600d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa23eebab5f5b5b8ba3881ca62ce600d0">&#9670;&nbsp;</a></span>is_participant_exist()</h2>
+<a id="a81e11846bc1e7b947af3af2d5363a524" name="a81e11846bc1e7b947af3af2d5363a524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e11846bc1e7b947af3af2d5363a524">&#9670;&nbsp;</a></span>is_valid_participant()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_participant_exist </td>
+          <td class="memname">bool is_valid_participant </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>

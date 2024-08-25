@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"structboards.html#ad04db86aca0d3390cbf18c1696818f16":[1,3,10,1],
 "structboards.html#ad1e613d161e0dfb3bee0b043b71c13db":[1,3,10,4],
 "structboards.html#ad9a12ccbc9bdbabfe1dbd5f7cffdb06f":[1,3,10,14],
 "structboards.html#add47e6975c343415f278a0414c714066":[1,3,10,9],

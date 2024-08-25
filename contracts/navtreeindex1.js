@@ -166,6 +166,7 @@ var NAVTREEINDEX1 =
 "programs_8hpp.html":[2,0,0,0,11],
 "programs_8hpp.html#a625d6c74bd108bcd08a8cd308a2afd82":[2,0,0,0,11,3],
 "programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e":[2,0,0,0,11,2],
+"programs_8hpp.html#a9da65e075750b3252fba8dad482eccaf":[2,0,0,0,11,4],
 "programs_8hpp.html#ab49bf84a1dc6d5221670938700284149":[2,0,0,0,11,1],
 "programs_8hpp_source.html":[2,0,0,0,11],
 "rammarket_8hpp.html":[2,0,0,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structboards.html#a784be337829b64e7caaa6c6657f5c262":[1,3,10,13],
 "structboards.html#a8a887a056d41000b8183975cc5fe0c91":[1,3,10,8],
 "structboards.html#acaad31053c6dc00a9b99faaece7213bc":[1,3,10,12],
-"structboards.html#acfe79079ce96ef59fea0f86c95506cb8":[1,3,10,7],
-"structboards.html#ad04db86aca0d3390cbf18c1696818f16":[1,3,10,1]
+"structboards.html#acfe79079ce96ef59fea0f86c95506cb8":[1,3,10,7]
 };
