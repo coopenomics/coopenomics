@@ -101,27 +101,27 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:ab49bf84a1dc6d5221670938700284149"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt; &quot;programtype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#ab49bf84a1dc6d5221670938700284149">programs_index</a></td></tr>
-<tr class="separator:ab49bf84a1dc6d5221670938700284149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4ee800aa3f48237083661e4ca5f0cf3"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt;&quot;programtype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">program::by_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a></td></tr>
+<tr class="separator:aa4ee800aa3f48237083661e4ca5f0cf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:a8c6258fd9e9d3d1a34b1e2dd4788e52e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprogram.html">program</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">get_program_or_fail</a> (eosio::name coopname, uint64_t program_id)</td></tr>
 <tr class="separator:a8c6258fd9e9d3d1a34b1e2dd4788e52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625d6c74bd108bcd08a8cd308a2afd82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a625d6c74bd108bcd08a8cd308a2afd82">is_participant_of_cpp</a> (eosio::name coopname, eosio::name username, uint64_t program_id)</td></tr>
-<tr class="separator:a625d6c74bd108bcd08a8cd308a2afd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9da65e075750b3252fba8dad482eccaf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a9da65e075750b3252fba8dad482eccaf">is_valid_participant_of_program</a> (eosio::name coopname, eosio::name username, eosio::name program_type)</td></tr>
-<tr class="separator:a9da65e075750b3252fba8dad482eccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9ba1ac07ea31f8bdbc6f357ef25868"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a9a9ba1ac07ea31f8bdbc6f357ef25868">is_participant_of_cpp_by_program_id</a> (eosio::name coopname, eosio::name username, uint64_t program_id)</td></tr>
+<tr class="separator:a9a9ba1ac07ea31f8bdbc6f357ef25868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a483bb697e0ed17799d2044e0a2e5ab39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a483bb697e0ed17799d2044e0a2e5ab39">is_valid_participant_of_program_by_type</a> (eosio::name coopname, eosio::name username, eosio::name program_type)</td></tr>
+<tr class="separator:a483bb697e0ed17799d2044e0a2e5ab39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
-<a id="ab49bf84a1dc6d5221670938700284149" name="ab49bf84a1dc6d5221670938700284149"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab49bf84a1dc6d5221670938700284149">&#9670;&nbsp;</a></span>programs_index</h2>
+<a id="aa4ee800aa3f48237083661e4ca5f0cf3" name="aa4ee800aa3f48237083661e4ca5f0cf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4ee800aa3f48237083661e4ca5f0cf3">&#9670;&nbsp;</a></span>programs_index</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt; &quot;programtype&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a>&gt; &gt;&gt; <a class="el" href="programs_8hpp.html#ab49bf84a1dc6d5221670938700284149">programs_index</a></td>
+          <td class="memname">typedef eosio::multi_index&lt;&quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt;&quot;programtype&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">program::by_draft</a>&gt; &gt;&gt; <a class="el" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -158,14 +158,14 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 
 </div>
 </div>
-<a id="a625d6c74bd108bcd08a8cd308a2afd82" name="a625d6c74bd108bcd08a8cd308a2afd82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a625d6c74bd108bcd08a8cd308a2afd82">&#9670;&nbsp;</a></span>is_participant_of_cpp()</h2>
+<a id="a9a9ba1ac07ea31f8bdbc6f357ef25868" name="a9a9ba1ac07ea31f8bdbc6f357ef25868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9ba1ac07ea31f8bdbc6f357ef25868">&#9670;&nbsp;</a></span>is_participant_of_cpp_by_program_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_participant_of_cpp </td>
+          <td class="memname">bool is_participant_of_cpp_by_program_id </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -192,14 +192,14 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 
 </div>
 </div>
-<a id="a9da65e075750b3252fba8dad482eccaf" name="a9da65e075750b3252fba8dad482eccaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9da65e075750b3252fba8dad482eccaf">&#9670;&nbsp;</a></span>is_valid_participant_of_program()</h2>
+<a id="a483bb697e0ed17799d2044e0a2e5ab39" name="a483bb697e0ed17799d2044e0a2e5ab39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a483bb697e0ed17799d2044e0a2e5ab39">&#9670;&nbsp;</a></span>is_valid_participant_of_program_by_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_valid_participant_of_program </td>
+          <td class="memname">bool is_valid_participant_of_program_by_type </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>

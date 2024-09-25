@@ -19,9 +19,9 @@ var searchData=
   ['check_5fsymbol_5for_5ffail_16',['check_symbol_or_fail',['../structcooperative.html#ade071f5cdf6c434868aa63a2467c7b10',1,'cooperative']]],
   ['claimrewards_17',['claimrewards',['../classeosiosystem_1_1system__contract.html#a34b35d1f073383e599d4e2bb56e20524',1,'eosiosystem::system_contract']]],
   ['close_18',['close',['../classeosio_1_1token.html#a88402f75888c4cfe6a3ef0391bd7ecbd',1,'eosio::token']]],
-  ['cnfrmindoc_19',['cnfrmindoc',['../classsoviet.html#ab91226208568b533fd3700e70e28947d',1,'soviet']]],
-  ['combine_5fids_20',['combine_ids',['../utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39',1,'utils.hpp']]],
-  ['complete_21',['complete',['../group__public__actions.html#ga082792b887a075f6fba43280d5a5e0cc',1,'marketplace::complete()'],['../classfund.html#a07db287df604bca59e82ae9d86007ced',1,'fund::complete()']]],
+  ['combine_5fids_19',['combine_ids',['../utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39',1,'utils.hpp']]],
+  ['complete_20',['complete',['../group__public__actions.html#ga082792b887a075f6fba43280d5a5e0cc',1,'marketplace::complete()'],['../classfund.html#a07db287df604bca59e82ae9d86007ced',1,'fund::complete()']]],
+  ['confirmagree_21',['confirmagree',['../classsoviet.html#aaebb26700c3dca525c3884a04d299e21',1,'soviet']]],
   ['confirmreg_22',['confirmreg',['../group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477',1,'registrator']]],
   ['convert_23',['convert',['../structeosiosystem_1_1exchange__state.html#a9b44e4142697e729fe05dc028b932c0e',1,'eosiosystem::exchange_state::convert(asset from, const symbol &amp;to)'],['../structeosiosystem_1_1exchange__state.html#aff0f484e4eac6b51e3b01839a884e12e',1,'eosiosystem::exchange_state::convert(const asset &amp;from, const symbol &amp;to)']]],
   ['convert_5ffrom_5fexchange_24',['convert_from_exchange',['../structeosiosystem_1_1exchange__state.html#a7056cfffba84abdf75b38f2d81d95ccd',1,'eosiosystem::exchange_state::convert_from_exchange(connector &amp;reserve, const asset &amp;tokens)'],['../structeosiosystem_1_1exchange__state.html#ade7bfd99be01e15093f27d95a3013ba7',1,'eosiosystem::exchange_state::convert_from_exchange(connector &amp;c, asset in)']]],
@@ -36,5 +36,5 @@ var searchData=
   ['createboard_33',['createboard',['../group__public__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68',1,'soviet']]],
   ['createbranch_34',['createbranch',['../classsoviet.html#aa0c0ef5a9d90ba1abaf43fb8682d1c92',1,'soviet']]],
   ['createfund_35',['createfund',['../classfund.html#a5aa31a2069161c366359db571bbd5d14',1,'fund']]],
-  ['createprog_36',['createprog',['../group__public__actions.html#ga8886740a6877ba6f8832160681f8e1e9',1,'soviet']]]
+  ['createprog_36',['createprog',['../group__public__actions.html#ga52fe2ef33af72238a01f2b7f97a9edd0',1,'soviet']]]
 ];

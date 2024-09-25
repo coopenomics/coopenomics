@@ -16,10 +16,10 @@ var searchData=
   ['get_5fboard_5fby_5ftype_5for_5ffail_13',['get_board_by_type_or_fail',['../coops_8hpp.html#a5975688eadd5a074161c268985282581',1,'coops.hpp']]],
   ['get_5fbranch_5for_5ffail_14',['get_branch_or_fail',['../coops_8hpp.html#a4ffb5444e9a916e7f96c624b030a3e3b',1,'coops.hpp']]],
   ['get_5fchairman_15',['get_chairman',['../structboards.html#ad04db86aca0d3390cbf18c1696818f16',1,'boards']]],
-  ['get_5fcooperative_5for_5ffail_16',['get_cooperative_or_fail',['../accounts_8hpp.html#a7a06d8140047dd1d128d2c7929c48b76',1,'accounts.hpp']]],
-  ['get_5fcore_5fsymbol_17',['get_core_symbol',['../classeosiosystem_1_1system__contract.html#a50976d2a74593cdd840662159dc21ab1',1,'eosiosystem::system_contract::get_core_symbol(name system_account=&quot;eosio&quot;_n)'],['../classeosiosystem_1_1system__contract.html#a91de00b875703918a8c95898a046bcc2',1,'eosiosystem::system_contract::get_core_symbol(const rammarket &amp;rm)']]],
-  ['get_5fdefault_5fparameters_18',['get_default_parameters',['../classeosiosystem_1_1system__contract.html#aa7000a5c93cf390e5495e65704919674',1,'eosiosystem::system_contract']]],
-  ['get_5fdraft_5fby_5fregistry_5for_5ffail_19',['get_draft_by_registry_or_fail',['../drafts_8hpp.html#a3b83495da8eb1eadf0e7922a99a812ce',1,'drafts.hpp']]],
+  ['get_5fcoagreement_5for_5ffail_16',['get_coagreement_or_fail',['../agreements_8hpp.html#a5ecb7c5b155972dc3bfbc2b78e96ea4d',1,'agreements.hpp']]],
+  ['get_5fcooperative_5for_5ffail_17',['get_cooperative_or_fail',['../accounts_8hpp.html#a7a06d8140047dd1d128d2c7929c48b76',1,'accounts.hpp']]],
+  ['get_5fcore_5fsymbol_18',['get_core_symbol',['../classeosiosystem_1_1system__contract.html#a50976d2a74593cdd840662159dc21ab1',1,'eosiosystem::system_contract::get_core_symbol(name system_account=&quot;eosio&quot;_n)'],['../classeosiosystem_1_1system__contract.html#a91de00b875703918a8c95898a046bcc2',1,'eosiosystem::system_contract::get_core_symbol(const rammarket &amp;rm)']]],
+  ['get_5fdefault_5fparameters_19',['get_default_parameters',['../classeosiosystem_1_1system__contract.html#aa7000a5c93cf390e5495e65704919674',1,'eosiosystem::system_contract']]],
   ['get_5ferror_20',['get_error',['../structsystem__contracts_1_1testing_1_1test__contracts_1_1blockinfo__tester_1_1latest__block__batch__info__result.html#a98a9efbd6bbda91e666bd57e16095adb',1,'system_contracts::testing::test_contracts::blockinfo_tester::latest_block_batch_info_result']]],
   ['get_5fglobal_5fid_21',['get_global_id',['../counts_8hpp.html#aeb06beaf4402f0222167ef9d12eacd5c',1,'counts.hpp']]],
   ['get_5fglobal_5fid_5fin_5fscope_22',['get_global_id_in_scope',['../counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0',1,'counts.hpp']]],
@@ -29,8 +29,9 @@ var searchData=
   ['get_5fparticipant_5for_5ffail_26',['get_participant_or_fail',['../coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd',1,'coops.hpp']]],
   ['get_5fproducer_5fauthority_27',['get_producer_authority',['../structeosiosystem_1_1producer__info.html#a2134cf5d2aa6af5b55fa9a577654e4aa',1,'eosiosystem::producer_info']]],
   ['get_5fprogram_5for_5ffail_28',['get_program_or_fail',['../programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e',1,'programs.hpp']]],
-  ['get_5fsupply_29',['get_supply',['../classeosio_1_1token.html#af0ca80206f8f0131147b0bec367c62d3',1,'eosio::token']]],
-  ['get_5ftrx_5fheader_30',['get_trx_header',['../namespaceeosio.html#a5a18f73f0452f4391a2e8abfc7d0f373',1,'eosio']]],
-  ['get_5fvotes_5fcount_31',['get_votes_count',['../structdecision.html#a96d51a4697e1a8bfde7fd72c78a54e11',1,'decision']]],
-  ['global_5fstate_5fsingleton_32',['global_state_singleton',['../namespaceeosiosystem.html#a2757bc4c835154772dce0d5891c93b58',1,'eosiosystem']]]
+  ['get_5fscoped_5fdraft_5fby_5fregistry_5for_5ffail_29',['get_scoped_draft_by_registry_or_fail',['../drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058',1,'drafts.hpp']]],
+  ['get_5fsupply_30',['get_supply',['../classeosio_1_1token.html#af0ca80206f8f0131147b0bec367c62d3',1,'eosio::token']]],
+  ['get_5ftrx_5fheader_31',['get_trx_header',['../namespaceeosio.html#a5a18f73f0452f4391a2e8abfc7d0f373',1,'eosio']]],
+  ['get_5fvotes_5fcount_32',['get_votes_count',['../structdecision.html#a96d51a4697e1a8bfde7fd72c78a54e11',1,'decision']]],
+  ['global_5fstate_5fsingleton_33',['global_state_singleton',['../namespaceeosiosystem.html#a2757bc4c835154772dce0d5891c93b58',1,'eosiosystem']]]
 ];

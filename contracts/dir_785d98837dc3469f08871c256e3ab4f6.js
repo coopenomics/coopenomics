@@ -2,6 +2,7 @@ var dir_785d98837dc3469f08871c256e3ab4f6 =
 [
     [ "addresses.cpp", "addresses_8cpp.html", null ],
     [ "admin.cpp", "admin_8cpp.html", null ],
+    [ "agreements.cpp", "agreements_8cpp.html", null ],
     [ "automator.cpp", "automator_8cpp.html", null ],
     [ "branches.cpp", "branches_8cpp.html", null ],
     [ "chairman.cpp", "chairman_8cpp.html", null ],

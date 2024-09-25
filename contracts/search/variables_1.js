@@ -10,13 +10,14 @@ var searchData=
   ['action_5fname_7',['action_name',['../structright.html#a7b8447f641a5a31a5c77b23ab3d97dd3',1,'right']]],
   ['action_5ftype_8',['action_type',['../structautomator.html#afcb1a4bcd330d3e3cb50fe5f977cc069',1,'automator']]],
   ['active_5fpermission_9',['active_permission',['../classeosiosystem_1_1system__contract.html#adfc25b00a14e482c7fb1161dd38096bd',1,'eosiosystem::system_contract']]],
-  ['allow_5fperms_10',['allow_perms',['../structeosiosystem_1_1limit__auth__change.html#a9535c07d3294a3a65a69adb9ff8f6301',1,'eosiosystem::limit_auth_change']]],
-  ['amount_11',['amount',['../structeosiosystem_1_1bid__refund.html#aec14d41b70f2332af3e94d84f480077f',1,'eosiosystem::bid_refund']]],
-  ['announce_12',['announce',['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7',1,'program::announce()']]],
-  ['approved_13',['approved',['../structdecision.html#a176e851e5b953c0e9b9c39cc0b39f871',1,'decision']]],
-  ['authorization_14',['authorization',['../structdecision.html#a6f4192f7f409f46d36cd0e649f21d97b',1,'decision']]],
-  ['authorized_15',['authorized',['../structdecision.html#a98b195cb10f2bda166de4f2e62537b4a',1,'decision']]],
-  ['authorized_5fby_16',['authorized_by',['../structdecision.html#ae2660e98aa74206d24703002be0b51c0',1,'decision']]],
-  ['authorizer_17',['authorizer',['../structbranch.html#a58cd189a529c380c356183f1adcce3f7',1,'branch']]],
-  ['available_18',['available',['../structonewallet.html#aa659b93abb2fa5ebbf504275bf22c20c',1,'onewallet::available()'],['../structprogwallet.html#a2af4089401221ea41833056eac18f538',1,'progwallet::available()'],['../structfundwallet.html#aa706c9090b7457a98ad757e007b47418',1,'fundwallet::available()'],['../structsimple__wallet.html#ad4e9b756393a264085843627df30900f',1,'simple_wallet::available()'],['../structaccfund.html#ae566206b604a1307539d3c8fdf2beebd',1,'accfund::available()']]]
+  ['agreement_5fid_10',['agreement_id',['../structprogwallet.html#a28452c58972d6265119beea328dc775b',1,'progwallet']]],
+  ['allow_5fperms_11',['allow_perms',['../structeosiosystem_1_1limit__auth__change.html#a9535c07d3294a3a65a69adb9ff8f6301',1,'eosiosystem::limit_auth_change']]],
+  ['amount_12',['amount',['../structeosiosystem_1_1bid__refund.html#aec14d41b70f2332af3e94d84f480077f',1,'eosiosystem::bid_refund']]],
+  ['announce_13',['announce',['../structorg__data.html#af31eb176481e60108b902def456ff225',1,'org_data::announce()'],['../structcooperative.html#a6fcf1c32b85b25d98dc49c1f8efebd5f',1,'cooperative::announce()'],['../structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7',1,'program::announce()']]],
+  ['approved_14',['approved',['../structdecision.html#a176e851e5b953c0e9b9c39cc0b39f871',1,'decision']]],
+  ['authorization_15',['authorization',['../structdecision.html#a6f4192f7f409f46d36cd0e649f21d97b',1,'decision']]],
+  ['authorized_16',['authorized',['../structdecision.html#a98b195cb10f2bda166de4f2e62537b4a',1,'decision']]],
+  ['authorized_5fby_17',['authorized_by',['../structdecision.html#ae2660e98aa74206d24703002be0b51c0',1,'decision']]],
+  ['authorizer_18',['authorizer',['../structbranch.html#a58cd189a529c380c356183f1adcce3f7',1,'branch']]],
+  ['available_19',['available',['../structonewallet.html#aa659b93abb2fa5ebbf504275bf22c20c',1,'onewallet::available()'],['../structprogwallet.html#a2af4089401221ea41833056eac18f538',1,'progwallet::available()'],['../structfundwallet.html#aa706c9090b7457a98ad757e007b47418',1,'fundwallet::available()'],['../structsimple__wallet.html#ad4e9b756393a264085843627df30900f',1,'simple_wallet::available()'],['../structaccfund.html#ae566206b604a1307539d3c8fdf2beebd',1,'accfund::available()']]]
 ];

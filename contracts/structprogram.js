@@ -1,15 +1,15 @@
 var structprogram =
 [
+    [ "by_draft", "structprogram.html#aaf63e798470130772fb9f75f9155c59d", null ],
     [ "by_program_type", "structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b", null ],
     [ "primary_key", "structprogram.html#ad4d9b6afeca865e65da012164e0356b2", null ],
     [ "announce", "structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7", null ],
     [ "calculation_type", "structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6", null ],
     [ "coopname", "structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5", null ],
     [ "description", "structprogram.html#aa54531f601484c26dcfba6a202a8deb8", null ],
-    [ "draft_registry_id", "structprogram.html#afcd8a4b0c0b7b1b3c4612ee28e1a533e", null ],
+    [ "draft_id", "structprogram.html#ab0d5e635de3166a8751151423c9c5819", null ],
     [ "expired_at", "structprogram.html#ab5de523da67f8b19a1ff113503d068a4", null ],
     [ "fixed_membership_contribution", "structprogram.html#a32ef71f31d28e722d42c752911c1cc4c", null ],
-    [ "hash_of_conditions", "structprogram.html#a760f93ee5336cd8d9d0f0d67cf9d6b0b", null ],
     [ "id", "structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48", null ],
     [ "images", "structprogram.html#ae531950400bdf0018d061bb7f148a995", null ],
     [ "is_active", "structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb", null ],

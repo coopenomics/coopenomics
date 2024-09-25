@@ -5,9 +5,10 @@ var searchData=
   ['account_2',['account',['../structaccount.html',1,'account'],['../structeosio_1_1token_1_1account.html',1,'eosio::token::account']]],
   ['address_3',['address',['../structaddress.html',1,'']]],
   ['address_5fdata_4',['address_data',['../structaddress__data.html',1,'']]],
-  ['approval_5',['approval',['../structeosio_1_1multisig_1_1approval.html',1,'eosio::multisig']]],
-  ['approvals_5finfo_6',['approvals_info',['../structeosio_1_1multisig_1_1approvals__info.html',1,'eosio::multisig']]],
-  ['authority_7',['authority',['../structauthority.html',1,'authority'],['../structeosiobios_1_1authority.html',1,'eosiobios::authority'],['../structeosioboot_1_1authority.html',1,'eosioboot::authority'],['../structeosiosystem_1_1authority.html',1,'eosiosystem::authority']]],
-  ['automator_8',['automator',['../structautomator.html',1,'']]],
-  ['autosigner_9',['autosigner',['../structautosigner.html',1,'']]]
+  ['agreement_5',['agreement',['../structagreement.html',1,'']]],
+  ['approval_6',['approval',['../structeosio_1_1multisig_1_1approval.html',1,'eosio::multisig']]],
+  ['approvals_5finfo_7',['approvals_info',['../structeosio_1_1multisig_1_1approvals__info.html',1,'eosio::multisig']]],
+  ['authority_8',['authority',['../structauthority.html',1,'authority'],['../structeosiobios_1_1authority.html',1,'eosiobios::authority'],['../structeosioboot_1_1authority.html',1,'eosioboot::authority'],['../structeosiosystem_1_1authority.html',1,'eosiosystem::authority']]],
+  ['automator_9',['automator',['../structautomator.html',1,'']]],
+  ['autosigner_10',['autosigner',['../structautosigner.html',1,'']]]
 ];

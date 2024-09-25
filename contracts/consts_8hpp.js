@@ -10,7 +10,6 @@ var consts_8hpp =
     [ "REGISTRATOR", "consts_8hpp.html#ae4acce2da4b2736a1fedfa921d84e32b", null ],
     [ "SOVIET", "consts_8hpp.html#a37a9762fc7553d1d410dc6e5c9c61e76", null ],
     [ "SYSTEM", "consts_8hpp.html#a21b97df85e65556468b28a576311271c", null ],
-    [ "TESTNET", "consts_8hpp.html#af8c22eeba158615304b6cc827f12560e", null ],
     [ "_afund_withdraw_action", "consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3", null ],
     [ "_ano", "group__public__consts.html#ga341b71e63284ca16c8b1561cb0cb0da4", null ],
     [ "_auction_name_length_limit", "group__public__consts.html#ga7907328ea2e6a0c7528a5116b1b837c1", null ],
