@@ -4,7 +4,7 @@ theme:
   name: material
   features:
     - content.code.copy
-    
+    - content.code.annotate
   # custom_dir: overrides
   palette:
     - scheme: default
@@ -25,14 +25,15 @@ theme:
 
   language: ru
   features:
+    - navigation.tracking
     # - navigation.path
-    - navigation.tabs
+    # - navigation.tabs
     - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    - navigation.expand
+    # - navigation.expand
     # - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - search.share
     - navigation.top
     - navigation.footer
@@ -42,6 +43,7 @@ repo_url: https://github.com/coopenomics
 plugins:
   - search
   - section-index
+  # - group
   # - awesome-pages
   # - table-reader
   - blog
@@ -58,9 +60,17 @@ extra:
   #   - icon: fontawesome/brands/telegram
   #     link: https://twitter.com/your-profile
 
-copyright: ПК «ВОСХОД» &copy; 2024
+copyright: АНО «КООПЕРАТИВНАЯ ЭКОНОМИКА» &copy; 2024
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+
   - admonition
   - def_list
   - pymdownx.tasklist:
@@ -116,7 +126,18 @@ nav:
   # - Справка: info.md
   # - Протоколы: 
   #   - Эмиссии: protocols/emission.md
-  # - Документация: documentation.md
+  - Документация: 
+    - Блокчейн:
+      - Состав: documentation/blockchain/sostav.md
+      - Быстрый старт: documentation/blockchain/install.md
+      - Режимы работы: documentation/blockchain/modes.md
+      - Конфигурация: documentation/blockchain/configuration.md
+      # - Синхронизация: documentation/blockchain/sync.md
+    # - Состав продукта: documentation/index.md
+    # - Основные концепции: documentation/main_concepts.md
+    # - Контракты: 
+    #   - documentation.md
+    #   - Операционная система: doctrine/operacionnaya_sistema.md
   # - Инвесторам: invest.md
   - Подключение: connect.md
   - Форум: https://forum.coopenomics.world
