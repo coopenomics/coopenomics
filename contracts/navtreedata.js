@@ -55,8 +55,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accounts_8hpp.html",
-"eosio_8system_8hpp.html#a783457e9dd7058cd7db98773e7049a8c",
-"structboards.html#a62601ce5131f1d2be8f17c3df5866f38"
+"eosio_8system_8hpp.html#a5528d1c28d5d062e4b4289b4f7ae1c77",
+"structboards.html#a277bb2ea397a8b6076584f07f2c4432f"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

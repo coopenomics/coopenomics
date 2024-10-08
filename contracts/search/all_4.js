@@ -39,7 +39,7 @@ var searchData=
   ['district_36',['district',['../structaddress__data.html#a1c7176a66b84b6b819059b4363780d61',1,'address_data']]],
   ['document_37',['document',['../structexchange__params.html#a86765a5769defdc2e1aefb64b8350abe',1,'exchange_params::document()'],['../structfwithdraw.html#a99bbbbc27dd77aab01148a8bcf3d66bc',1,'fwithdraw::document()'],['../structdocument.html',1,'document'],['../structonewithdraw.html#af57f6fbf568adfb12c63ec49f7410119',1,'onewithdraw::document()'],['../structagreement.html#a1012ddfb08219f0cbb8389da058851b2',1,'agreement::document()']]],
   ['dpcomplete_38',['dpcomplete',['../group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7',1,'gateway']]],
-  ['dpfail_39',['dpfail',['../group__public__actions.html#ga8776a33709be83c15957bc8e366db71d',1,'gateway']]],
+  ['dprefund_39',['dprefund',['../classgateway.html#a09b68b8da35dd3dd61b67a6326679f88',1,'gateway']]],
   ['draft_40',['DRAFT',['../consts_8hpp.html#a190d95586c2d20966655dbb2e51295d1',1,'consts.hpp']]],
   ['draft_5fid_41',['draft_id',['../structcoagreement.html#a1f28e8b80f9add6707a38eb6ee592251',1,'coagreement::draft_id()'],['../structagreement.html#a2ef5947e379c8983135c7895bdc28ca6',1,'agreement::draft_id()'],['../structtranslation.html#a971a02e842e4750af9f64a2113735726',1,'translation::draft_id()'],['../structprogram.html#ab0d5e635de3166a8751151423c9c5819',1,'program::draft_id()']]],
   ['drafts_2ehpp_42',['drafts.hpp',['../drafts_8hpp.html',1,'']]],

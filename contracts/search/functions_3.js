@@ -17,5 +17,5 @@ var searchData=
   ['disautomate_14',['disautomate',['../group__public__actions.html#gaa1c59a4f419370fbe9eeedde1b315ad7',1,'soviet']]],
   ['dispute_15',['dispute',['../classmarketplace.html#af5741e1afd512d7480cec3f54586e0a6',1,'marketplace']]],
   ['dpcomplete_16',['dpcomplete',['../group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7',1,'gateway']]],
-  ['dpfail_17',['dpfail',['../group__public__actions.html#ga8776a33709be83c15957bc8e366db71d',1,'gateway']]]
+  ['dprefund_17',['dprefund',['../classgateway.html#a09b68b8da35dd3dd61b67a6326679f88',1,'gateway']]]
 ];

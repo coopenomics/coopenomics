@@ -124,6 +124,8 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="separator:a5d6245a8abf1705be860dac5f9340573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ff1f3be14701afe025d92c6da3d1507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a2ff1f3be14701afe025d92c6da3d1507">newprogram</a> (eosio::name coopname, uint64_t program_id)</td></tr>
 <tr class="separator:a2ff1f3be14701afe025d92c6da3d1507"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e337dfb68432a15f5f72db6ac09afa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a7e337dfb68432a15f5f72db6ac09afa6">cancelreg</a> (eosio::name coopname, eosio::name username, std::string message)</td></tr>
+<tr class="separator:a7e337dfb68432a15f5f72db6ac09afa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadeadfe2269b80480012be4a05a5b08ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#gadeadfe2269b80480012be4a05a5b08ab">joincoop</a> (eosio::name coopname, eosio::name username, <a class="el" href="structdocument.html">document</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:gadeadfe2269b80480012be4a05a5b08ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявка на вступление в кооператив  <a href="group__public__actions.html#gadeadfe2269b80480012be4a05a5b08ab">Подробнее...</a><br /></td></tr>
 <tr class="separator:gadeadfe2269b80480012be4a05a5b08ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,8 +198,8 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="separator:a7089fa0bf46043a738f2080a110d6565"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5c5dfbe8b9210547f4fefc2f0276648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#aa5c5dfbe8b9210547f4fefc2f0276648">addbalance</a> (eosio::name coopname, eosio::name username, eosio::asset quantity)</td></tr>
 <tr class="separator:aa5c5dfbe8b9210547f4fefc2f0276648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf1b3f69ebcb2cff6d0bce0862b47404"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#adf1b3f69ebcb2cff6d0bce0862b47404">subbalance</a> (eosio::name coopname, eosio::name username, eosio::asset quantity)</td></tr>
-<tr class="separator:adf1b3f69ebcb2cff6d0bce0862b47404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af41652779d0f884124058ba4d181b340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#af41652779d0f884124058ba4d181b340">subbalance</a> (eosio::name coopname, eosio::name username, eosio::asset quantity, bool skip_available_check=false)</td></tr>
+<tr class="separator:af41652779d0f884124058ba4d181b340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca3c6a47edfec5e63d90abbee746eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a6ca3c6a47edfec5e63d90abbee746eee">blockbal</a> (eosio::name coopname, eosio::name username, eosio::asset quantity)</td></tr>
 <tr class="separator:a6ca3c6a47edfec5e63d90abbee746eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a6f4fbdbddc4ee02db668e4b5e4fcf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a6a6f4fbdbddc4ee02db668e4b5e4fcf5">unblockbal</a> (eosio::name coopname, eosio::name username, eosio::asset quantity)</td></tr>
@@ -224,6 +226,10 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="separator:a4d6213baff5aef73d5a99bf84395b65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga46020951b62e043b52d7e7c6939684a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga46020951b62e043b52d7e7c6939684a7">fundwithdraw</a> (eosio::name coopname, eosio::name username, eosio::name type, uint64_t withdraw_id, <a class="el" href="structdocument.html">document</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="separator:ga46020951b62e043b52d7e7c6939684a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d95b42c5dabc145800eadbe73e33799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a3d95b42c5dabc145800eadbe73e33799">block</a> (eosio::name coopname, eosio::name admin, eosio::name username, std::string message)</td></tr>
+<tr class="separator:a3d95b42c5dabc145800eadbe73e33799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4313cc120a12ff6dd71c0a221d457c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#aca4313cc120a12ff6dd71c0a221d457c">unblock</a> (eosio::name coopname, eosio::name admin, eosio::name username, bool is_registration, std::string message)</td></tr>
+<tr class="separator:aca4313cc120a12ff6dd71c0a221d457c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Открытые статические члены</h2></td></tr>
@@ -318,6 +324,46 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 
 </div>
 </div>
+<a id="a3d95b42c5dabc145800eadbe73e33799" name="a3d95b42c5dabc145800eadbe73e33799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d95b42c5dabc145800eadbe73e33799">&#9670;&nbsp;</a></span>block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::block </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>admin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6ca3c6a47edfec5e63d90abbee746eee" name="a6ca3c6a47edfec5e63d90abbee746eee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ca3c6a47edfec5e63d90abbee746eee">&#9670;&nbsp;</a></span>blockbal()</h2>
 
@@ -349,6 +395,41 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e337dfb68432a15f5f72db6ac09afa6" name="a7e337dfb68432a15f5f72db6ac09afa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e337dfb68432a15f5f72db6ac09afa6">&#9670;&nbsp;</a></span>cancelreg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::cancelreg </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Если отмена регистрации происходит до принятия решения советом - том отменять нам здесь нечего, и мы просто игнорируем код ниже.</p>
 
 </div>
 </div>
@@ -1289,8 +1370,8 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 
 </div>
 </div>
-<a id="adf1b3f69ebcb2cff6d0bce0862b47404" name="adf1b3f69ebcb2cff6d0bce0862b47404"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1b3f69ebcb2cff6d0bce0862b47404">&#9670;&nbsp;</a></span>subbalance()</h2>
+<a id="af41652779d0f884124058ba4d181b340" name="af41652779d0f884124058ba4d181b340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af41652779d0f884124058ba4d181b340">&#9670;&nbsp;</a></span>subbalance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1311,7 +1392,13 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">eosio::asset&#160;</td>
-          <td class="paramname"><em>quantity</em>&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_available_check</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1352,6 +1439,52 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
           <td></td>
           <td class="paramtype">eosio::asset&#160;</td>
           <td class="paramname"><em>quantity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca4313cc120a12ff6dd71c0a221d457c" name="aca4313cc120a12ff6dd71c0a221d457c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4313cc120a12ff6dd71c0a221d457c">&#9670;&nbsp;</a></span>unblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::unblock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>admin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_registration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1483,6 +1616,7 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <li>cpp/soviet/src/<a class="el" href="contributions_8cpp.html">contributions.cpp</a></li>
 <li>cpp/soviet/src/<a class="el" href="soviet_2src_2fund_8cpp.html">fund.cpp</a></li>
 <li>cpp/soviet/src/<a class="el" href="soviet_2src_2marketplace_8cpp.html">marketplace.cpp</a></li>
+<li>cpp/soviet/src/<a class="el" href="participants_8cpp.html">participants.cpp</a></li>
 <li>cpp/soviet/src/<a class="el" href="programs_8cpp.html">programs.cpp</a></li>
 <li>cpp/soviet/src/<a class="el" href="soviet_2src_2registrator_8cpp.html">registrator.cpp</a></li>
 <li>cpp/soviet/src/<a class="el" href="soviet_2src_2voting_8cpp.html">voting.cpp</a></li>

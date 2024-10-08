@@ -5,7 +5,6 @@ var group__public__contracts =
       [ "registrator", "classregistrator.html#a5031045fe1736a84cd445be212673c0b", null ],
       [ "adduser", "group__public__actions.html#ga93606cee02679fb9275969934785f81b", null ],
       [ "changekey", "group__public__actions.html#gad5b90e66aba8c47ea6f8ec3424bf5ba0", null ],
-      [ "confirmreg", "group__public__actions.html#gad0c0f6b1b9a5a3d8f14ca8adf71cf477", null ],
       [ "delcoop", "classregistrator.html#a7b2cd34bbb42d3dde36eb3a0197f7437", null ],
       [ "init", "classregistrator.html#a640dbd37c2d97cc93ff00ec0dc4116be", null ],
       [ "joincoop", "group__public__actions.html#ga369a1d99c79f0429f2d1f7182382dcd8", null ],
@@ -57,7 +56,9 @@ var group__public__contracts =
       [ "adduser", "group__public__actions.html#ga772b091e54d602a3110c47f9c09dc411", null ],
       [ "authorize", "group__public__actions.html#ga3ca9fb1ee5a9584303c34e391af99e6c", null ],
       [ "automate", "group__public__actions.html#gacd08501eb19d2733f9640cae3ae229f0", null ],
+      [ "block", "classsoviet.html#a3d95b42c5dabc145800eadbe73e33799", null ],
       [ "blockbal", "classsoviet.html#a6ca3c6a47edfec5e63d90abbee746eee", null ],
+      [ "cancelreg", "classsoviet.html#a7e337dfb68432a15f5f72db6ac09afa6", null ],
       [ "cancelvote", "group__public__actions.html#ga826e017b52f0b323a3339da457ecfa43", null ],
       [ "change", "group__public__actions.html#ga3666aba8b8d5a7b8ac50abdda8eb0438", null ],
       [ "change_effect", "classsoviet.html#a23926d9a06011b3bb37fe74d820fd41f", null ],
@@ -94,8 +95,9 @@ var group__public__contracts =
       [ "setrights", "group__public__actions.html#gaff82a212963ad56c994fca0d30548802", null ],
       [ "sndagreement", "classsoviet.html#af31be150fd44495d62713fd977f44e29", null ],
       [ "subaccum_effect", "classsoviet.html#a4d6213baff5aef73d5a99bf84395b65e", null ],
-      [ "subbalance", "classsoviet.html#adf1b3f69ebcb2cff6d0bce0862b47404", null ],
+      [ "subbalance", "classsoviet.html#af41652779d0f884124058ba4d181b340", null ],
       [ "subprogbal", "classsoviet.html#a99d0b2ee673a5daf92b1e55027a0d4b0", null ],
+      [ "unblock", "classsoviet.html#aca4313cc120a12ff6dd71c0a221d457c", null ],
       [ "unblockbal", "classsoviet.html#a6a6f4fbdbddc4ee02db668e4b5e4fcf5", null ],
       [ "updateboard", "group__public__actions.html#ga797ca85c49a4a160412a91d55891d63c", null ],
       [ "validate", "group__public__actions.html#ga2c3e9ad00f9266432144774c17eb4b43", null ],
@@ -111,7 +113,7 @@ var group__public__contracts =
       [ "apply", "classgateway.html#a69b49209b2cc17da42aa66890e2ca080", null ],
       [ "deposit", "group__public__actions.html#gaf9af29d3b917aaccc70424089b5db4a9", null ],
       [ "dpcomplete", "group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7", null ],
-      [ "dpfail", "group__public__actions.html#ga8776a33709be83c15957bc8e366db71d", null ],
+      [ "dprefund", "classgateway.html#a09b68b8da35dd3dd61b67a6326679f88", null ],
       [ "migrate", "classgateway.html#a7340f7262f2b5c274919ef7f7f5a9800", null ],
       [ "newdeposit", "classgateway.html#a303008649a1561d97bfcea3c08e0c32c", null ],
       [ "newdepositid", "group__public__actions.html#gaa2f4b2364f09b8728cbf12eb6e9b92f1", null ],
@@ -142,6 +144,7 @@ var group__public__contracts =
       [ "newwithdraw", "group__public__actions.html#gadb52de4c7d5aa5ebec6e6956dc6438e2", null ],
       [ "spreadamount", "classfund.html#a913dc75371f1b3e82984ba3a67e87db3", null ],
       [ "subaccum", "classfund.html#aee253c50ca9b80a2eb4b6b28ae5c2418", null ],
-      [ "subcirculate", "classfund.html#a88a2d772f0205063061d738a14d81fd9", null ]
+      [ "subcirculate", "classfund.html#a88b4897653b988b5ec2fb14f6ac4a934", null ],
+      [ "subinitial", "classfund.html#aecfb4ad117111423108b1d6fb76cc44c", null ]
     ] ]
 ];

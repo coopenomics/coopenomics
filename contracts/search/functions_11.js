@@ -22,10 +22,11 @@ var searchData=
   ['sub_5fbalance_19',['sub_balance',['../classeosio_1_1token.html#a28f25eaa6d0e7017f3d8760ad16960bc',1,'eosio::token::sub_balance()'],['../balances_8hpp.html#a535cbf0e546fa5cf6eaaca63d2d1d854',1,'sub_balance():&#160;balances.hpp']]],
   ['subaccum_20',['subaccum',['../classfund.html#aee253c50ca9b80a2eb4b6b28ae5c2418',1,'fund']]],
   ['subaccum_5feffect_21',['subaccum_effect',['../classsoviet.html#a4d6213baff5aef73d5a99bf84395b65e',1,'soviet']]],
-  ['subbalance_22',['subbalance',['../classsoviet.html#adf1b3f69ebcb2cff6d0bce0862b47404',1,'soviet']]],
-  ['subcirculate_23',['subcirculate',['../classfund.html#a88a2d772f0205063061d738a14d81fd9',1,'fund']]],
-  ['subprogbal_24',['subprogbal',['../classsoviet.html#a99d0b2ee673a5daf92b1e55027a0d4b0',1,'soviet']]],
-  ['supply_25',['supply',['../classmarketplace.html#ad941ef50a391bbda6af90e38e67d0777',1,'marketplace']]],
-  ['supplycnfrm_26',['supplycnfrm',['../group__public__actions.html#ga9ee9ac0937429488378463abd8bc5848',1,'marketplace']]],
-  ['system_5fcontract_27',['system_contract',['../classeosiosystem_1_1system__contract.html#ae1a0434a7adf53cc3a168f1b2f947ebd',1,'eosiosystem::system_contract']]]
+  ['subbalance_22',['subbalance',['../classsoviet.html#af41652779d0f884124058ba4d181b340',1,'soviet']]],
+  ['subcirculate_23',['subcirculate',['../classfund.html#a88b4897653b988b5ec2fb14f6ac4a934',1,'fund']]],
+  ['subinitial_24',['subinitial',['../classfund.html#aecfb4ad117111423108b1d6fb76cc44c',1,'fund']]],
+  ['subprogbal_25',['subprogbal',['../classsoviet.html#a99d0b2ee673a5daf92b1e55027a0d4b0',1,'soviet']]],
+  ['supply_26',['supply',['../classmarketplace.html#ad941ef50a391bbda6af90e38e67d0777',1,'marketplace']]],
+  ['supplycnfrm_27',['supplycnfrm',['../group__public__actions.html#ga9ee9ac0937429488378463abd8bc5848',1,'marketplace']]],
+  ['system_5fcontract_28',['system_contract',['../classeosiosystem_1_1system__contract.html#ae1a0434a7adf53cc3a168f1b2f947ebd',1,'eosiosystem::system_contract']]]
 ];

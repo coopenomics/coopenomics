@@ -134,9 +134,9 @@ $(document).ready(function(){initNavTree('classfund.html',''); initResizable(); 
 <tr class="memitem:a0284ae294c7c1313d617df963acfcb9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#a0284ae294c7c1313d617df963acfcb9e">addcirculate</a> (eosio::name coopname, eosio::asset quantity)</td></tr>
 <tr class="memdesc:a0284ae294c7c1313d617df963acfcb9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; добавить сумму в паевый фонд  <a href="classfund.html#a0284ae294c7c1313d617df963acfcb9e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0284ae294c7c1313d617df963acfcb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88a2d772f0205063061d738a14d81fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#a88a2d772f0205063061d738a14d81fd9">subcirculate</a> (eosio::name coopname, eosio::asset quantity)</td></tr>
-<tr class="memdesc:a88a2d772f0205063061d738a14d81fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; добавить сумму в паевый фонд  <a href="classfund.html#a88a2d772f0205063061d738a14d81fd9">Подробнее...</a><br /></td></tr>
-<tr class="separator:a88a2d772f0205063061d738a14d81fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b4897653b988b5ec2fb14f6ac4a934"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#a88b4897653b988b5ec2fb14f6ac4a934">subcirculate</a> (eosio::name coopname, eosio::asset quantity, bool skip_available_check=false)</td></tr>
+<tr class="memdesc:a88b4897653b988b5ec2fb14f6ac4a934"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; добавить сумму в паевый фонд  <a href="classfund.html#a88b4897653b988b5ec2fb14f6ac4a934">Подробнее...</a><br /></td></tr>
+<tr class="separator:a88b4897653b988b5ec2fb14f6ac4a934"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50b71509e637404db1f0ccfeedf1f921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#a50b71509e637404db1f0ccfeedf1f921">addaccum</a> (eosio::name coopname, uint64_t fund_id, eosio::asset quantity)</td></tr>
 <tr class="memdesc:a50b71509e637404db1f0ccfeedf1f921"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; списать сумму из паевого фонда  <a href="classfund.html#a50b71509e637404db1f0ccfeedf1f921">Подробнее...</a><br /></td></tr>
 <tr class="separator:a50b71509e637404db1f0ccfeedf1f921"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +147,9 @@ $(document).ready(function(){initNavTree('classfund.html',''); initResizable(); 
 <tr class="memitem:ac60913c278dcf294bf59985468d4d73d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#ac60913c278dcf294bf59985468d4d73d">addinitial</a> (eosio::name coopname, eosio::asset quantity)</td></tr>
 <tr class="memdesc:ac60913c278dcf294bf59985468d4d73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарный метод добавления вступительного взноса на счет кошелька кооператива.  <a href="classfund.html#ac60913c278dcf294bf59985468d4d73d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac60913c278dcf294bf59985468d4d73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecfb4ad117111423108b1d6fb76cc44c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#aecfb4ad117111423108b1d6fb76cc44c">subinitial</a> (eosio::name coopname, eosio::asset quantity)</td></tr>
+<tr class="memdesc:aecfb4ad117111423108b1d6fb76cc44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарный метод списания вступительного взноса. Используется только при отмене операции вступления.  <a href="classfund.html#aecfb4ad117111423108b1d6fb76cc44c">Подробнее...</a><br /></td></tr>
+<tr class="separator:aecfb4ad117111423108b1d6fb76cc44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a913dc75371f1b3e82984ba3a67e87db3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classfund.html#a913dc75371f1b3e82984ba3a67e87db3">spreadamount</a> (eosio::name coopname, eosio::asset quantity)</td></tr>
 <tr class="memdesc:a913dc75371f1b3e82984ba3a67e87db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод распределения членской части взноса по фондам накопления с остатком в кошельке для распределения по фондам списания. Распределить членские взносы по фондам накопления, положив остаток на накопительный счет списания. На входе мы получаем общую членскую часть, которую распределяем по счетам.  <a href="classfund.html#a913dc75371f1b3e82984ba3a67e87db3">Подробнее...</a><br /></td></tr>
 <tr class="separator:a913dc75371f1b3e82984ba3a67e87db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -790,14 +793,51 @@ $(document).ready(function(){initNavTree('classfund.html',''); initResizable(); 
 
 </div>
 </div>
-<a id="a88a2d772f0205063061d738a14d81fd9" name="a88a2d772f0205063061d738a14d81fd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88a2d772f0205063061d738a14d81fd9">&#9670;&nbsp;</a></span>subcirculate()</h2>
+<a id="a88b4897653b988b5ec2fb14f6ac4a934" name="a88b4897653b988b5ec2fb14f6ac4a934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b4897653b988b5ec2fb14f6ac4a934">&#9670;&nbsp;</a></span>subcirculate()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void fund::subcirculate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_available_check</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&lt; добавить сумму в паевый фонд </p>
+<p >&lt; списать сумму из паевого фонда </p>
+
+</div>
+</div>
+<a id="aecfb4ad117111423108b1d6fb76cc44c" name="aecfb4ad117111423108b1d6fb76cc44c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfb4ad117111423108b1d6fb76cc44c">&#9670;&nbsp;</a></span>subinitial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void fund::subinitial </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -816,8 +856,14 @@ $(document).ready(function(){initNavTree('classfund.html',''); initResizable(); 
       </table>
 </div><div class="memdoc">
 
-<p>&lt; добавить сумму в паевый фонд </p>
-<p >&lt; списать сумму из паевого фонда </p>
+<p>Атомарный метод списания вступительного взноса. Используется только при отмене операции вступления. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td></td></tr>
+    <tr><td class="paramname">quantity</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

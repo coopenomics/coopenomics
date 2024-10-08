@@ -136,9 +136,9 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
 <tr class="memitem:ga59936ddb45db401976fd3d404b92caa7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7">dpcomplete</a> (eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td></tr>
 <tr class="memdesc:ga59936ddb45db401976fd3d404b92caa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает обработку депозита в контракте <code>gateway</code>.  <a href="group__public__actions.html#ga59936ddb45db401976fd3d404b92caa7">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga59936ddb45db401976fd3d404b92caa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8776a33709be83c15957bc8e366db71d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga8776a33709be83c15957bc8e366db71d">dpfail</a> (eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td></tr>
-<tr class="memdesc:ga8776a33709be83c15957bc8e366db71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает статус депозита как "failed" в контракте <code>gateway</code>.  <a href="group__public__actions.html#ga8776a33709be83c15957bc8e366db71d">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga8776a33709be83c15957bc8e366db71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b68b8da35dd3dd61b67a6326679f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a09b68b8da35dd3dd61b67a6326679f88">dprefund</a> (eosio::name coopname, eosio::name admin, uint64_t deposit_id, std::string memo)</td></tr>
+<tr class="memdesc:a09b68b8da35dd3dd61b67a6326679f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new dprefund object.  <a href="classgateway.html#a09b68b8da35dd3dd61b67a6326679f88">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09b68b8da35dd3dd61b67a6326679f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b244fde939d3cf2aaa7c36f91c228cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgateway.html#a5b244fde939d3cf2aaa7c36f91c228cb">withdrawauth</a> (eosio::name coopname, uint64_t withdraw_id)</td></tr>
 <tr class="separator:a5b244fde939d3cf2aaa7c36f91c228cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b0187a0110b5d1f1ca9296a4ed4156a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__actions.html#ga5b0187a0110b5d1f1ca9296a4ed4156a">withdraw</a> (eosio::name coopname, eosio::name username, eosio::asset quantity, <a class="el" href="structdocument.html">document</a> <a class="el" href="structdocument.html">document</a>, std::string bank_data_id, std::string memo)</td></tr>
@@ -296,6 +296,57 @@ $(document).ready(function(){initNavTree('classgateway.html',''); initResizable(
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09b68b8da35dd3dd61b67a6326679f88" name="a09b68b8da35dd3dd61b67a6326679f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b68b8da35dd3dd61b67a6326679f88">&#9670;&nbsp;</a></span>dprefund()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gateway::dprefund </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>admin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>deposit_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new dprefund object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td></td></tr>
+    <tr><td class="paramname">admin</td><td></td></tr>
+    <tr><td class="paramname">deposit_id</td><td></td></tr>
+    <tr><td class="paramname">memo</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

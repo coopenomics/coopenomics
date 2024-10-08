@@ -132,48 +132,52 @@ $(document).ready(function(){initNavTree('fund_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      eosio::asset quantity);  </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  [[eosio::action]] <span class="keywordtype">void</span> subcirculate(</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      eosio::name coopname,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      eosio::asset quantity);  </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// фонды накопления</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  [[eosio::action]] <span class="keywordtype">void</span> addaccum(eosio::name coopname, uint64_t fund_id,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                  eosio::asset quantity);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  [[eosio::action]] <span class="keywordtype">void</span> subaccum(eosio::name coopname, uint64_t fund_id,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      eosio::asset quantity,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <span class="keywordtype">bool</span> skip_available_check = <span class="keyword">false</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      );  </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// фонды накопления</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  [[eosio::action]] <span class="keywordtype">void</span> addaccum(eosio::name coopname, uint64_t fund_id,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                  eosio::asset quantity);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// списать можно только с помощью вызова метода withdraw смарт-контракта</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// счет накопления для списаний</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  [[eosio::action]] <span class="keywordtype">void</span> addexpense(eosio::name coopname, uint64_t fund_id,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                    eosio::asset quantity);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">//счет вступительных взносов</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  [[eosio::action]] <span class="keywordtype">void</span> addinitial(eosio::name coopname,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                        eosio::asset quantity);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// метод распределения членской части взноса по фондам накопления с остатком в</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="comment">// кошельке для распределения по фондам списания</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  [[eosio::action]] <span class="keywordtype">void</span> spreadamount(</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      eosio::name coopname,</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      eosio::asset quantity);  </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="comment">// метод вывода средств из фондов накопления</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  [[eosio::action]] <span class="keywordtype">void</span> fundwithdraw(eosio::name coopname,</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                                      eosio::name username, eosio::name type,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                                      uint64_t fund_id, <a class="code hl_struct" href="structdocument.html">document</a> <a class="code hl_struct" href="structdocument.html">document</a>,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                      eosio::asset quantity,</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                      std::string bank_data_id);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="comment">// используется только на фондах накопления</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="comment">// метод авторизации средств из кошелька</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  [[eosio::action]] <span class="keywordtype">void</span> authorize(eosio::name coopname, eosio::name type,</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                                   uint64_t withdraw_id);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  [[eosio::action]] <span class="keywordtype">void</span> subaccum(eosio::name coopname, uint64_t fund_id,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                  eosio::asset quantity);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// списать можно только с помощью вызова метода withdraw смарт-контракта</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// счет накопления для списаний</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  [[eosio::action]] <span class="keywordtype">void</span> addexpense(eosio::name coopname, uint64_t fund_id,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                                    eosio::asset quantity);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">//счет вступительных взносов</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  [[eosio::action]] <span class="keywordtype">void</span> addinitial(eosio::name coopname,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                        eosio::asset quantity);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  [[eosio::action]] <span class="keywordtype">void</span> subinitial(eosio::name coopname, eosio::asset quantity);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                                          </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// метод распределения членской части взноса по фондам накопления с остатком в</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">// кошельке для распределения по фондам списания</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  [[eosio::action]] <span class="keywordtype">void</span> spreadamount(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      eosio::name coopname,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      eosio::asset quantity);  </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// метод вывода средств из фондов накопления</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  [[eosio::action]] <span class="keywordtype">void</span> fundwithdraw(eosio::name coopname,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                      eosio::name username, eosio::name type,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                      uint64_t fund_id, <a class="code hl_struct" href="structdocument.html">document</a> <a class="code hl_struct" href="structdocument.html">document</a>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                      eosio::asset quantity,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                      std::string bank_data_id);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="comment">// используется только на фондах накопления</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">// используется авторизованными участником для подтверждения совершения</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="comment">// выплаты</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  [[eosio::action]] <span class="keywordtype">void</span> complete(eosio::name coopname, eosio::name username,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                                  uint64_t withdraw_id);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="structfund_1_1counts.html">   95</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(FUND)]] <a class="code hl_struct" href="structfund_1_1counts.html">counts</a> : <a class="code hl_struct" href="structcounts__base.html">counts_base</a> {};</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">// метод авторизации средств из кошелька</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  [[eosio::action]] <span class="keywordtype">void</span> authorize(eosio::name coopname, eosio::name type,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                                   uint64_t withdraw_id);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// используется авторизованными участником для подтверждения совершения</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="comment">// выплаты</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  [[eosio::action]] <span class="keywordtype">void</span> complete(eosio::name coopname, eosio::name username,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                  uint64_t withdraw_id);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structfund_1_1counts.html">   99</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(FUND)]] <a class="code hl_struct" href="structfund_1_1counts.html">counts</a> : <a class="code hl_struct" href="structcounts__base.html">counts_base</a> {};</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
 <div class="ttc" id="aclassfund_html"><div class="ttname"><a href="classfund.html">fund</a></div><div class="ttdoc">Класс fund</div><div class="ttdef"><b>Definition:</b> fund.hpp:18</div></div>
 <div class="ttc" id="aclassfund_html_a82242c8242b7b4918954173ffdd967d0"><div class="ttname"><a href="classfund.html#a82242c8242b7b4918954173ffdd967d0">fund::apply</a></div><div class="ttdeci">void apply(uint64_t receiver, uint64_t code, uint64_t action)</div></div>
 <div class="ttc" id="aclassfund_html_a97b7678a54cd1931b886382f2344fe47"><div class="ttname"><a href="classfund.html#a97b7678a54cd1931b886382f2344fe47">fund::fund</a></div><div class="ttdeci">fund(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition:</b> fund.hpp:20</div></div>
@@ -181,7 +185,7 @@ $(document).ready(function(){initNavTree('fund_8hpp_source.html',''); initResiza
 <div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:8</div></div>
 <div class="ttc" id="astructcounts__base_html"><div class="ttname"><a href="structcounts__base.html">counts_base</a></div><div class="ttdef"><b>Definition:</b> counts.hpp:1</div></div>
 <div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
-<div class="ttc" id="astructfund_1_1counts_html"><div class="ttname"><a href="structfund_1_1counts.html">fund::counts</a></div><div class="ttdef"><b>Definition:</b> fund.hpp:95</div></div>
+<div class="ttc" id="astructfund_1_1counts_html"><div class="ttname"><a href="structfund_1_1counts.html">fund::counts</a></div><div class="ttdef"><b>Definition:</b> fund.hpp:99</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
