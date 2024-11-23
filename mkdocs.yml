@@ -1,5 +1,8 @@
 site_name: Кооперативная Экономика
 
+extra_css:
+  - css/extra.css
+  
 theme:
   name: material
   features:
@@ -31,7 +34,7 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    # - navigation.expand
+    - navigation.expand
     # - toc.follow
     # - toc.integrate
     - search.share
@@ -105,43 +108,35 @@ markdown_extensions:
 nav:
   - Доктрина: index.md
   - Платформа: platform.md
-  # - Доктрина: 
-  #   - doctrine/index.md
-  #   - Платформа Поколений: 'doctrine/platforma_pokolenii.md' 
-  #   - Экономика Знаний: 'doctrine/economica_znanii.md' 
-  #   - Единое Сознание: 'doctrine/edinoe_soznanie.md'
-  #   - Управление будущим: 'doctrine/upravlenie_budushim.md'
-  #   - Операционная система: 'doctrine/operacionnaya_sistema.md'
-  #   - Потребительская кооперация: 'doctrine/digital_cooperative.md'
-  #   - Цифровой кошелёк: 'doctrine/digital_wallet.md'
-
-  # - Руководство: 
-  #   - Введение: 'manual/introduction.md' 
-  #   - Руководителям: 
-  #     - Регистрация:
-  #       - 'manual/introduction.md' 
+  - Сравнение форм: compare.md
+  - Словарь: vocabulary.md
+  # - Вопрос-ответ: faq.md
   
-  #   - Участникам: 
-  #     - 'manual/introduction.md' 
-  # - Справка: info.md
-  # - Протоколы: 
-  #   - Эмиссии: protocols/emission.md
-  - Документация: 
+ 
+  - Стандарты: 
     - Блокчейн:
       - Состав: documentation/blockchain/sostav.md
       - Быстрый старт: documentation/blockchain/install.md
-      - Режимы работы: documentation/blockchain/modes.md
-      - Конфигурация: documentation/blockchain/configuration.md
+      - Типы нод: documentation/blockchain/modes.md
+      - Конфигурация нод: documentation/blockchain/configuration.md
+        
+      # - Документация API: https://developers.eos.io/welcome/latest/reference/index
       # - Синхронизация: documentation/blockchain/sync.md
+      # - Командный кошелёк: https://google.com
+      # - Транзакции: https://google.com
+      # - Контракты: "https://google.com"
+    
+    
+    # - Документы: 
+    # - Протоколы: 
+      # - 
     # - Состав продукта: documentation/index.md
     # - Основные концепции: documentation/main_concepts.md
     # - Контракты: 
     #   - documentation.md
     #   - Операционная система: doctrine/operacionnaya_sistema.md
   # - Инвесторам: invest.md
-  - Подключение: connect.md
-  - Форум: https://forum.coopenomics.world
-  - Контакты: contacts.md
-  # - Блог: blog/index.md
+  # - Подключение: connect.md
+  # - Форум: https://forum.coopenomics.world
+  - Провайдеры и подключение: providers.md
   
- 
