@@ -1,5 +1,8 @@
 site_name: Кооперативная Экономика
 
+extra_javascript:
+  - js/metrika.js
+
 extra_css:
   - css/extra.css
   
