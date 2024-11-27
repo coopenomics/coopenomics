@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Системные контракты: Исходный файл cpp/common/programs.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Системные контракты
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('programs_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">programs.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="programs_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="structprogram.html">    3</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(SOVIET)]] <a class="code hl_struct" href="structprogram.html">program</a> {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">    4</a></span>  uint64_t <a class="code hl_variable" href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">id</a>;                 </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">    5</a></span>  uint64_t <a class="code hl_variable" href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">draft_id</a>;         </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structprogram.html#a490f302a1518eecca0ca052303cb7480">    6</a></span>  eosio::name <a class="code hl_variable" href="structprogram.html#a490f302a1518eecca0ca052303cb7480">program_type</a>;  </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">    8</a></span>  eosio::name <a class="code hl_variable" href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">coopname</a>;      </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb">    9</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb">is_active</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be">   10</a></span>  std::string <a class="code hl_variable" href="structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be">title</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7">   11</a></span>  std::string <a class="code hl_variable" href="structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7">announce</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structprogram.html#aa54531f601484c26dcfba6a202a8deb8">   12</a></span>  std::string <a class="code hl_variable" href="structprogram.html#aa54531f601484c26dcfba6a202a8deb8">description</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2">   13</a></span>  std::string <a class="code hl_variable" href="structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2">preview</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structprogram.html#ae531950400bdf0018d061bb7f148a995">   14</a></span>  std::string <a class="code hl_variable" href="structprogram.html#ae531950400bdf0018d061bb7f148a995">images</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97">   15</a></span>  std::string <a class="code hl_variable" href="structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97">meta</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6">   17</a></span>  eosio::name <a class="code hl_variable" href="structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6">calculation_type</a>; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structprogram.html#adef512fdd2885e6a26c40b3a4c49979d">   18</a></span>  uint64_t <a class="code hl_variable" href="structprogram.html#adef512fdd2885e6a26c40b3a4c49979d">membership_percent_fee</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structprogram.html#a32ef71f31d28e722d42c752911c1cc4c">   19</a></span>  eosio::asset <a class="code hl_variable" href="structprogram.html#a32ef71f31d28e722d42c752911c1cc4c">fixed_membership_contribution</a>;  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">   21</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">start_at</a>;  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structprogram.html#ab5de523da67f8b19a1ff113503d068a4">   22</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structprogram.html#ab5de523da67f8b19a1ff113503d068a4">expired_at</a>;  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structprogram.html#ad4d9b6afeca865e65da012164e0356b2">   24</a></span>  uint64_t <a class="code hl_function" href="structprogram.html#ad4d9b6afeca865e65da012164e0356b2">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">id</a>; } </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">   25</a></span>  uint64_t <a class="code hl_function" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">by_program_type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> program_type.value;} </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">   26</a></span>  uint64_t <a class="code hl_function" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">by_draft</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">draft_id</a>;};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;programs&quot;</span>_n, <a class="code hl_struct" href="structprogram.html">program</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  eosio::indexed_by&lt;<span class="stringliteral">&quot;programtype&quot;</span>_n, eosio::const_mem_fun&lt;program, uint64_t, &amp;program::by_program_type&gt;&gt;,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  eosio::indexed_by&lt;<span class="stringliteral">&quot;bydraft&quot;</span>_n, eosio::const_mem_fun&lt;program, uint64_t, &amp;program::by_draft&gt;&gt;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">   32</a></span>&gt; <a class="code hl_typedef" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">   36</a></span><a class="code hl_struct" href="structprogram.html">program</a> <a class="code hl_function" href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">get_program_or_fail</a>(eosio::name coopname, uint64_t program_id) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_typedef" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a> programs(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">auto</span> <a class="code hl_struct" href="structprogram.html">program</a> = programs.find(program_id);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  eosio::check(<a class="code hl_struct" href="structprogram.html">program</a> != programs.end(), <span class="stringliteral">&quot;Программа не найдена&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">return</span> *<a class="code hl_struct" href="structprogram.html">program</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="programs_8hpp.html#a9a9ba1ac07ea31f8bdbc6f357ef25868">   45</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="programs_8hpp.html#a9a9ba1ac07ea31f8bdbc6f357ef25868">is_participant_of_cpp_by_program_id</a>(eosio::name coopname, eosio::name username, uint64_t program_id) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_typedef" href="balances_8hpp.html#a3a73fe5cb3a0177c68b24f76e2e520b2">progwallets_index</a> progwallets(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">auto</span> wallets_by_username_and_program = progwallets.template get_index&lt;<span class="stringliteral">&quot;byuserprog&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keyword">auto</span> username_and_program_index = <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(username.value, program_id);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">auto</span> wallet = wallets_by_username_and_program.find(username_and_program_index);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">if</span> (wallet == wallets_by_username_and_program.end())</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">auto</span> <a class="code hl_struct" href="structprogram.html">program</a> = <a class="code hl_function" href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">get_program_or_fail</a>(coopname, program_id);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">//достать agreement и проверить статус </span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_typedef" href="agreements_8hpp.html#a4a274491626085f9dcd73fd848d135c2">agreements_index</a> agreements(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">auto</span> <a class="code hl_struct" href="structagreement.html">agreement</a> = agreements.find(wallet -&gt; agreement_id);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structagreement.html">agreement</a> -&gt; status == <span class="stringliteral">&quot;declined&quot;</span>_n)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="programs_8hpp.html#a483bb697e0ed17799d2044e0a2e5ab39">   69</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="programs_8hpp.html#a483bb697e0ed17799d2044e0a2e5ab39">is_valid_participant_of_program_by_type</a>(eosio::name coopname, eosio::name username, eosio::name program_type) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_typedef" href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a> programs(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_typedef" href="balances_8hpp.html#a3a73fe5cb3a0177c68b24f76e2e520b2">progwallets_index</a> progwallets(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_typedef" href="agreements_8hpp.html#a394d8f39f9b77ee234cc63ba67e1a790">coagreements_index</a> coagreements(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">auto</span> <a class="code hl_struct" href="structcoagreement.html">coagreement</a> = coagreements.find(program_type.value);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structcoagreement.html">coagreement</a> == coagreements.end())</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">auto</span> exist = programs.find(<a class="code hl_struct" href="structcoagreement.html">coagreement</a> -&gt; program_id);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span> (exist == programs.end())</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">auto</span> wallets_by_username_and_program = progwallets.template get_index&lt;<span class="stringliteral">&quot;byuserprog&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keyword">auto</span> username_and_program_index = <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(username.value, exist -&gt; <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keyword">auto</span> wallet = wallets_by_username_and_program.find(username_and_program_index);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">if</span> (wallet == wallets_by_username_and_program.end())</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="comment">//достать agreement и проверить статус </span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_typedef" href="agreements_8hpp.html#a4a274491626085f9dcd73fd848d135c2">agreements_index</a> agreements(<a class="code hl_variable" href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">auto</span> <a class="code hl_struct" href="structagreement.html">agreement</a> = agreements.find(wallet -&gt; agreement_id);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structagreement.html">agreement</a> -&gt; status == <span class="stringliteral">&quot;declined&quot;</span>_n)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="ttc" id="aagreements_8hpp_html_a394d8f39f9b77ee234cc63ba67e1a790"><div class="ttname"><a href="agreements_8hpp.html#a394d8f39f9b77ee234cc63ba67e1a790">coagreements_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;coagreements&quot;_n, coagreement &gt; coagreements_index</div><div class="ttdef"><b>Definition:</b> agreements.hpp:11</div></div>
+<div class="ttc" id="aagreements_8hpp_html_a4a274491626085f9dcd73fd848d135c2"><div class="ttname"><a href="agreements_8hpp.html#a4a274491626085f9dcd73fd848d135c2">agreements_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;agreements&quot;_n, agreement, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; agreement, uint64_t, &amp;agreement::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; agreement, uint64_t, &amp;agreement::by_status &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; agreement, uint64_t, &amp;agreement::by_draft &gt; &gt;, eosio::indexed_by&lt;&quot;byuserdraft&quot;_n, eosio::const_mem_fun&lt; agreement, uint128_t, &amp;agreement::by_user_and_draft &gt; &gt; &gt; agreements_index</div><div class="ttdef"><b>Definition:</b> agreements.hpp:54</div></div>
+<div class="ttc" id="abalances_8hpp_html_a3a73fe5cb3a0177c68b24f76e2e520b2"><div class="ttname"><a href="balances_8hpp.html#a3a73fe5cb3a0177c68b24f76e2e520b2">progwallets_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;progwallets&quot;_n, progwallet, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;byprogram&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_program &gt; &gt;, eosio::indexed_by&lt;&quot;byuserprog&quot;_n, eosio::const_mem_fun&lt; progwallet, uint128_t, &amp;progwallet::by_username_and_program &gt; &gt;, eosio::indexed_by&lt;&quot;byagreement&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_agreement &gt; &gt; &gt; progwallets_index</div><div class="ttdef"><b>Definition:</b> balances.hpp:130</div></div>
+<div class="ttc" id="agroup__public__consts_html_gaf3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="group__public__consts.html#gaf3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition:</b> consts.hpp:96</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:8</div></div>
+<div class="ttc" id="aprograms_8hpp_html_a483bb697e0ed17799d2044e0a2e5ab39"><div class="ttname"><a href="programs_8hpp.html#a483bb697e0ed17799d2044e0a2e5ab39">is_valid_participant_of_program_by_type</a></div><div class="ttdeci">bool is_valid_participant_of_program_by_type(eosio::name coopname, eosio::name username, eosio::name program_type)</div><div class="ttdef"><b>Definition:</b> programs.hpp:69</div></div>
+<div class="ttc" id="aprograms_8hpp_html_a8c6258fd9e9d3d1a34b1e2dd4788e52e"><div class="ttname"><a href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">get_program_or_fail</a></div><div class="ttdeci">program get_program_or_fail(eosio::name coopname, uint64_t program_id)</div><div class="ttdef"><b>Definition:</b> programs.hpp:36</div></div>
+<div class="ttc" id="aprograms_8hpp_html_a9a9ba1ac07ea31f8bdbc6f357ef25868"><div class="ttname"><a href="programs_8hpp.html#a9a9ba1ac07ea31f8bdbc6f357ef25868">is_participant_of_cpp_by_program_id</a></div><div class="ttdeci">bool is_participant_of_cpp_by_program_id(eosio::name coopname, eosio::name username, uint64_t program_id)</div><div class="ttdef"><b>Definition:</b> programs.hpp:45</div></div>
+<div class="ttc" id="aprograms_8hpp_html_aa4ee800aa3f48237083661e4ca5f0cf3"><div class="ttname"><a href="programs_8hpp.html#aa4ee800aa3f48237083661e4ca5f0cf3">programs_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;programs&quot;_n, program, eosio::indexed_by&lt;&quot;programtype&quot;_n, eosio::const_mem_fun&lt; program, uint64_t, &amp;program::by_program_type &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; program, uint64_t, &amp;program::by_draft &gt; &gt; &gt; programs_index</div><div class="ttdef"><b>Definition:</b> programs.hpp:32</div></div>
+<div class="ttc" id="astructagreement_html"><div class="ttname"><a href="structagreement.html">agreement</a></div><div class="ttdef"><b>Definition:</b> agreements.hpp:23</div></div>
+<div class="ttc" id="astructcoagreement_html"><div class="ttname"><a href="structcoagreement.html">coagreement</a></div><div class="ttdef"><b>Definition:</b> agreements.hpp:1</div></div>
+<div class="ttc" id="astructprogram_html"><div class="ttname"><a href="structprogram.html">program</a></div><div class="ttdef"><b>Definition:</b> programs.hpp:3</div></div>
+<div class="ttc" id="astructprogram_html_a174f4d1517f840c98bcf8a5e922c66a2"><div class="ttname"><a href="structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2">program::preview</a></div><div class="ttdeci">std::string preview</div><div class="ttdef"><b>Definition:</b> programs.hpp:13</div></div>
+<div class="ttc" id="astructprogram_html_a32ef71f31d28e722d42c752911c1cc4c"><div class="ttname"><a href="structprogram.html#a32ef71f31d28e722d42c752911c1cc4c">program::fixed_membership_contribution</a></div><div class="ttdeci">eosio::asset fixed_membership_contribution</div><div class="ttdef"><b>Definition:</b> programs.hpp:19</div></div>
+<div class="ttc" id="astructprogram_html_a3a0be4e2c99c0d9b4d30eb933110e5f5"><div class="ttname"><a href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">program::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdef"><b>Definition:</b> programs.hpp:8</div></div>
+<div class="ttc" id="astructprogram_html_a490f302a1518eecca0ca052303cb7480"><div class="ttname"><a href="structprogram.html#a490f302a1518eecca0ca052303cb7480">program::program_type</a></div><div class="ttdeci">eosio::name program_type</div><div class="ttdef"><b>Definition:</b> programs.hpp:6</div></div>
+<div class="ttc" id="astructprogram_html_a4ab247970586f2c364e5cc4941820bdd"><div class="ttname"><a href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">program::start_at</a></div><div class="ttdeci">eosio::time_point_sec start_at</div><div class="ttdef"><b>Definition:</b> programs.hpp:21</div></div>
+<div class="ttc" id="astructprogram_html_a4ec4054a69df9337167d3c83bcd51d3b"><div class="ttname"><a href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a></div><div class="ttdeci">uint64_t by_program_type() const</div><div class="ttdef"><b>Definition:</b> programs.hpp:25</div></div>
+<div class="ttc" id="astructprogram_html_a5e9d4d29f4ab65ee95761ca27c6b02eb"><div class="ttname"><a href="structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb">program::is_active</a></div><div class="ttdeci">bool is_active</div><div class="ttdef"><b>Definition:</b> programs.hpp:9</div></div>
+<div class="ttc" id="astructprogram_html_a64f5cecc3b7e8623aae6a4e665ad12be"><div class="ttname"><a href="structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be">program::title</a></div><div class="ttdeci">std::string title</div><div class="ttdef"><b>Definition:</b> programs.hpp:10</div></div>
+<div class="ttc" id="astructprogram_html_a7b6b15e2ed7a541dfbc96ac430225f97"><div class="ttname"><a href="structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97">program::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition:</b> programs.hpp:15</div></div>
+<div class="ttc" id="astructprogram_html_aa54531f601484c26dcfba6a202a8deb8"><div class="ttname"><a href="structprogram.html#aa54531f601484c26dcfba6a202a8deb8">program::description</a></div><div class="ttdeci">std::string description</div><div class="ttdef"><b>Definition:</b> programs.hpp:12</div></div>
+<div class="ttc" id="astructprogram_html_aaf63e798470130772fb9f75f9155c59d"><div class="ttname"><a href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">program::by_draft</a></div><div class="ttdeci">uint64_t by_draft() const</div><div class="ttdef"><b>Definition:</b> programs.hpp:26</div></div>
+<div class="ttc" id="astructprogram_html_ab0d5e635de3166a8751151423c9c5819"><div class="ttname"><a href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">program::draft_id</a></div><div class="ttdeci">uint64_t draft_id</div><div class="ttdoc">Ссылка на шаблон условий</div><div class="ttdef"><b>Definition:</b> programs.hpp:5</div></div>
+<div class="ttc" id="astructprogram_html_ab5de523da67f8b19a1ff113503d068a4"><div class="ttname"><a href="structprogram.html#ab5de523da67f8b19a1ff113503d068a4">program::expired_at</a></div><div class="ttdeci">eosio::time_point_sec expired_at</div><div class="ttdef"><b>Definition:</b> programs.hpp:22</div></div>
+<div class="ttc" id="astructprogram_html_ab6d3d430b2aa998ae899b5feba62ab48"><div class="ttname"><a href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">program::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition:</b> programs.hpp:4</div></div>
+<div class="ttc" id="astructprogram_html_ad3746a5b6fb8b58ed84d797099a2f7d7"><div class="ttname"><a href="structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7">program::announce</a></div><div class="ttdeci">std::string announce</div><div class="ttdef"><b>Definition:</b> programs.hpp:11</div></div>
+<div class="ttc" id="astructprogram_html_ad4d9b6afeca865e65da012164e0356b2"><div class="ttname"><a href="structprogram.html#ad4d9b6afeca865e65da012164e0356b2">program::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> programs.hpp:24</div></div>
+<div class="ttc" id="astructprogram_html_adef512fdd2885e6a26c40b3a4c49979d"><div class="ttname"><a href="structprogram.html#adef512fdd2885e6a26c40b3a4c49979d">program::membership_percent_fee</a></div><div class="ttdeci">uint64_t membership_percent_fee</div><div class="ttdef"><b>Definition:</b> programs.hpp:18</div></div>
+<div class="ttc" id="astructprogram_html_ae531950400bdf0018d061bb7f148a995"><div class="ttname"><a href="structprogram.html#ae531950400bdf0018d061bb7f148a995">program::images</a></div><div class="ttdeci">std::string images</div><div class="ttdef"><b>Definition:</b> programs.hpp:14</div></div>
+<div class="ttc" id="astructprogram_html_af3ba9b6a4419e6ad7248bacd38d964f6"><div class="ttname"><a href="structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6">program::calculation_type</a></div><div class="ttdeci">eosio::name calculation_type</div><div class="ttdef"><b>Definition:</b> programs.hpp:17</div></div>
+<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition:</b> utils.hpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_8a65d247160fca2a969d6d8ca16055a2.html">common</a></li><li class="navelem"><a class="el" href="programs_8hpp.html">programs.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+</body>
+</html>
