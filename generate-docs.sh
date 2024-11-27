@@ -8,10 +8,10 @@ BASE_PATH=$BASE_PATH
 mkdocs build
 
 # # Переключаемся в директорию contracts, генерируем документацию и копируем
-# cd "$BASE_PATH/contracts" || exit
-# doxygen
-# mkdir -p "$BASE_PATH/doctrine/site/contracts"
-# rsync -r docs/html/* "$BASE_PATH/doctrine/site/contracts"
+cd "$BASE_PATH/contracts" || exit
+doxygen
+mkdir -p "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
+rsync -r docs/html/* "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
 
 # # Переключаемся в директорию cooptypes, генерируем документацию и копируем
 # cd "$BASE_PATH/monocoop/components/cooptypes" || exit

@@ -37,7 +37,7 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    - navigation.expand
+    # - navigation.expand
     # - toc.follow
     # - toc.integrate
     - search.share
@@ -110,36 +110,42 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Доктрина: index.md
-  - Платформа: platform.md
-  - Сравнение форм: compare.md
-  - Словарь: vocabulary.md
-  # - Вопрос-ответ: faq.md
-  
- 
-  - Стандарты: 
+  - Платформа: 
+    - Введение: documentation/intro.md
+    - Обзор: documentation/overview.md
+    # - Аудентификация и карта пайщика:
+    #   - Введение: documentation/cardcoop/intro.md 
+    # - Стандарты: 
     - Блокчейн:
-      - Состав: documentation/blockchain/sostav.md
+      - Введение: documentation/blockchain/intro.md
+      - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
+      - Действия и транзакции: documentation/blockchain/transactions.md
+      - Таблицы и индексы: documentation/blockchain/state.md
+      
+      - Компоненты: documentation/blockchain/components.md
+      # - Делегаты: documentation/blockchain/witnesses.md 
+      # - Состав: documentation/blockchain/sostav.md
       - Быстрый старт: documentation/blockchain/install.md
-      - Типы нод: documentation/blockchain/modes.md
-      - Конфигурация нод: documentation/blockchain/configuration.md
-        
-      # - Документация API: https://developers.eos.io/welcome/latest/reference/index
-      # - Синхронизация: documentation/blockchain/sync.md
+      - Протоколы: documentation/blockchain/protocols.md
+      # - Полный старт: documentation/blockchain/install.md
       # - Командный кошелёк: https://google.com
-      # - Транзакции: https://google.com
-      # - Контракты: "https://google.com"
+      - Типы нод: documentation/blockchain/modes.md
+      - Параметры конфигурации: documentation/blockchain/configuration.md
+      # - Смарт-контракты: documentation/blockchain/contracts.md
+      # - Синхронизация: documentation/blockchain/sync.md
+      # - API: https://developers.eos.io/welcome/latest/reference/index
     
+    # - Фабрика документов:
+    #   - Введение: documentation/fabric/intro.md
     
-    # - Документы: 
-    # - Протоколы: 
-      # - 
-    # - Состав продукта: documentation/index.md
-    # - Основные концепции: documentation/main_concepts.md
-    # - Контракты: 
-    #   - documentation.md
-    #   - Операционная система: doctrine/operacionnaya_sistema.md
-  # - Инвесторам: invest.md
-  # - Подключение: connect.md
-  # - Форум: https://forum.coopenomics.world
-  - Провайдеры и подключение: providers.md
+    # - Кооперативные контракты:
+    #   - Введение: documentation/coopcontracts/contracts.md
+      
+      
+  - Подключение: providers.md
+  - Словарь: vocabulary.md
+  - Вопрос-ответ: faq.md
+  - Контакты: contacts.md
   
+  # - Программные Модули: modules.md
+      
