@@ -1,0 +1,1449 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../blockchain/intro/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>Карта пайщика - Кооперативная Экономика</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Кооперативная Экономика" class="md-header__button md-logo" aria-label="Кооперативная Экономика" data-md-component="logo">
+      
+  <img src="../../assets/logo-white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Кооперативная Экономика
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Карта пайщика
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Поделиться" aria-label="Поделиться" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/coopenomics" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Кооперативная Экономика" class="md-nav__button md-logo" aria-label="Кооперативная Экономика" data-md-component="logo">
+      
+  <img src="../../assets/logo-white.png" alt="logo">
+
+    </a>
+    Кооперативная Экономика
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/coopenomics" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Доктрина
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Платформа
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Платформа
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Обзор
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Карта пайщика
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Карта пайщика
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Краткое описание
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основные компоненты системы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как работает система
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как работает система">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вход / регистрация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сохранение данных
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примечания
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примечания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Участники:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Алгоритм и методы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преимущества системы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Блокчейн
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Блокчейн
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Введение
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/accounts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Аккаунты, ключи и подписи
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/transactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Действия и транзакции
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Смарт-контракты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ноды и синхронизация истории
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/state/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    База данных
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Компоненты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/protocols/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Протоколы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/witnesses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Делегаты и консенсус
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Параметры конфигурации
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11" id="__nav_2_4_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Инструкции
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            Инструкции
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blockchain/install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Быстрый старт
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Подключение
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vocabulary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Словарь
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Вопрос-ответ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contacts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Контакты
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Краткое описание
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основные компоненты системы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Как работает система
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Как работает система">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вход / регистрация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сохранение данных
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Примечания
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примечания">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Участники:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Алгоритм и методы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Преимущества системы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Карта пайщика</h1>
+
+<p>Каждый пайщик при вступлении в любой кооператив платформы получают цифровое удостоверение - карту пайщика. </p>
+<p>Карта пайщика (CARD.COOP) - это цифровое удостоверение пайщика</p>
+<p>Каждая карта пайщика содержит зашифрованную информацию: ФИО, дату рождения, адрес электронной почты, по желанию пайщика - паспортные данные. Кроме информации о пайщике, каждая карта содержит приватный ключ, которым пайщик подписывает документы на платформе, а также информацию о том, какой кооператив выпустил карту, и о тех кооперативах, кто подтвердил корректность персональных данных на этой карте.</p>
+<p>Карты пайщика выпускаются кооперативами с использованием сервиса CARD.COOP. Для выпуска карт кооперативы используют программное обеспечение провайдеров, которые обеспечивают реализацию стандартизированных сценариев, описанных в этом разделе посредством официальных SDK или публичных точек доступа API.</p>
+<h2 id="_1">Краткое описание<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Система представляет собой стандарт для безопасной регистрации, аутентификации и обмена конфиденциальными данными между пользователями и кооперативами. Она использует протокол с нулевым разглашением (zero-knowledge), что означает, что сервер никогда не знает реального пароля пользователя, его ключей подписи или приватных данных. Вся чувствительная информация шифруется на стороне клиента, и сервер хранит только зашифрованные данные.</p>
+<h2 id="_2">Основные компоненты системы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Пользователь при регистрации или входе в любой кооператив платформы взаимодействует только с клиентским сервисом id.card.coop, который обеспечивает безопасное предоставление зашифрованных данных кооперативу и обеспечивает цифровую подпись документов без передачи приватного ключа за пределы клиентского приложения.  </p>
+<p><strong>Пользователь</strong>: Человек, который хочет зарегистрироваться и использовать систему для хранения и обмена конфиденциальными данными с кооперативами.</p>
+<p><strong>Клиентское приложение</strong>: Веб-сайт стандарта CARD.COOP, который пользователь использует в браузере для взаимодействия с системой.</p>
+<p><strong>Сервер</strong>: Бэкенд стандарта CARD.COOP, который обрабатывает запросы от клиентского приложения, хранит зашифрованные данные и управляет аутентификацией и авторизацией.</p>
+<p><strong>Кооператив</strong>: Организация или сервис, которому пользователь может предоставить доступ к своим конфиденциальным данным. Обычно это кооператив, который использует программное обеспечение своего провайдера. </p>
+<h2 id="_3">Как работает система<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Работу системы CARD.COOP можно разделить для пользователя на 5 этапов: регистрация, сохранение данных, предоставление доступа, подпись документов и отзыв доступа. </p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+    participant Кооператив
+
+    Кооператив-&gt;&gt;Пользователь: Запрос доступа
+
+    Пользователь-&gt;&gt;Клиент: Регистрация / Вход
+    Клиент-&gt;&gt;Сервер: Аутентификация
+    Сервер--&gt;&gt;Клиент: Токены доступа
+
+    Пользователь-&gt;&gt;Клиент: Ввод приватных данных
+    Клиент-&gt;&gt;Клиент: Генерация ключа подписи
+    Клиент-&gt;&gt;Клиент: Шифрование данных
+
+    Клиент-&gt;&gt;Сервер: Сохранение зашифрованных данных
+
+    Пользователь-&gt;&gt;Клиент: Предоставление доступа
+
+    Клиент-&gt;&gt;Сервер: Запрос личных данных и информации о кооперативе
+    Сервер--&gt;&gt;Клиент: Зашифрованные данные
+
+    Клиент-&gt;&gt;Клиент: Дешифрование данных
+
+    Клиент-&gt;&gt;Клиент: Перешифрование личных данных только для кооператива
+
+    Клиент-&gt;&gt;Сервер: Сохранение данных для кооператива
+
+    Сервер--&gt;&gt;Клиент: Тикет доступа
+    Клиент-&gt;&gt;Кооператив: Передача тикета
+
+    Кооператив-&gt;&gt;Сервер: Обмен тикета на токен
+    Сервер--&gt;&gt;Кооператив: Токен доступа кооператива
+    Кооператив-&gt;&gt;Сервер: Запрос данных
+    Сервер--&gt;&gt;Кооператив: Зашифрованные данные
+    Кооператив-&gt;&gt;Кооператив: Расшифровка данных
+
+    Кооператив -&gt;&gt;Пользователь: Документ на подпись
+
+    Пользователь -&gt;&gt;Клиент: Ввод PIN-кода
+    Клиент-&gt;&gt;Клиент: Дешифрование ключа подписи
+    Клиент-&gt;&gt;Клиент: Цифровая подпись документа
+    Клиент-&gt;&gt;Кооператив: Подписанный документ
+
+    Пользователь-&gt;&gt;Клиент: Отзыв доступа
+    Клиент-&gt;&gt;Сервер: Удаление зашифрованных данных для кооператива
+</code></pre>
+<h3 id="_4">Вход / регистрация<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>При регистрации пользователь вводит email, пароль. Из пароля генерируется мастер-ключ для шифрования данных, и хэш-ключ, который используется на сервере в качестве пароля. </p>
+<p>После ввода почты, пароля, сервер предоставляет клиенту токены доступа, которые клиент пользователя теперь будет прикладывать к каждому запросу, подтверждая собственную авторизацию. </p>
+<p>Пользователь попадает на этап регистрации при вступлении в любой кооператив. После вступления в любой кооператив, вступление в любой другой кооператив происходит по принципам "быстрого входа" - без повторного личных ввода данных. </p>
+<p>Ввод email: Пользователь начинает процесс регистрации, вводя свой адрес электронной почты в клиентском приложении.</p>
+<p>Получение серверной соли и UUID: Клиентское приложение отправляет email на сервер, и сервер отвечает, предоставляя уникальный идентификатор (UUID) и серверную соль (server_salt).</p>
+<p>Серверная соль - это случайная строка, которая используется для защиты от атак с использованием заготовленных таблиц. </p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+
+    Пользователь-&gt;&gt;Клиент: Вводит email (user@example.com)
+    Клиент-&gt;&gt;Сервер: POST /auth/initiate-registration&lt;br/&gt;{"email": "user@example.com"}
+    Сервер--&gt;&gt;Клиент: {"uuid": "...", "serverSalt": "..."}
+
+    Пользователь-&gt;&gt;Клиент: Вводит пароль
+    Клиент-&gt;&gt;Клиент: Генерирует хэш-ключ
+    Клиент-&gt;&gt;Сервер: POST /auth/complete-registration&lt;br/&gt;{"email": "user@example.com", "hashKey": "...", "uuid": "..."}
+    Сервер--&gt;&gt;Клиент: {"accessToken": "...", "refreshToken": "..."}</code></pre>
+<p>Генерация хэш-ключа: Клиентское приложение использует введенный пользователем пароль и полученную серверную соль для создания хэш-ключа (hashKey). Это делается с помощью криптографической функции хэширования, которая повторяется 1000 итераций.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>hashKey = hash(пароль + server_salt + 1000)
+</span></code></pre></div>
+<p>Отправка hashKey на сервер: Клиентское приложение отправляет на сервер email, hashKey и UUID.</p>
+<p>Сохранение пользователя: Сервер сохраняет информацию о пользователе, включая email, hashKey и серверную соль. Поскольку сервер знает только хэшированную версию пароля, он не может узнать сам пароль.</p>
+<p>Выдача токенов: Сервер генерирует пару токенов — accessToken и refreshToken — и отправляет их клиентскому приложению.</p>
+<p>Сохранение токенов: Клиентское приложение сохраняет полученные токены для последующего использования.</p>
+<h3 id="_5">Сохранение данных<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>пользователь вводит персональные данные. Данные зашифровываются и сохраняются на сервере с использованием мастер-ключа и пинкода пользователя. Сервер никогда не получает пароль или мастер-ключ пользователя, и не может расшифровать данные без пользователя. Все криптографические операции по работе с данными пользователь выполняет у себя на клиенте. </p>
+<p>и устанавливает пин-кодПин-код же используется для дополнительного шифрования ключа подписи карты в локальном хранилище клиента пользователя, откуда ключ извлекаются для подписи любого документа в дальнейшем. </p>
+<ol>
+<li>
+<p>Выпуск карты пользователя
+Ввод приватных данных: Пользователь вводит свои личные данные, которые он хочет сохранить (например, паспортные данные, личные заметки и т.д.).</p>
+</li>
+<li>
+<p>Выпуск карты пользователя
+Ввод приватных данных: Пользователь вводит свои личные данные, которые он хочет сохранить (например, паспортные данные, личные заметки и т.д.).</p>
+</li>
+</ol>
+<p>Генерация AES-ключа: Клиентское приложение создает симметричный ключ шифрования (AESKey) на основе пароля пользователя и его email (используется в качестве соли). Это делается с помощью функции деривации ключа с большим количеством итераций (например, 100000), чтобы усложнить перебор ключей.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+
+    Пользователь-&gt;&gt;Клиент: Вводит приватные данные
+    Клиент-&gt;&gt;Клиент: Генерирует AESKey = deriveKey(пароль, email, 100000)
+    Клиент-&gt;&gt;Клиент: Генерирует username и WIFKey
+    Клиент-&gt;&gt;Клиент: Шифрует данные и WIFKey с помощью AESKey
+    Клиент-&gt;&gt;Сервер: POST /card/issue&lt;br/&gt;{"username": "...", "encryptedData": "...", "coopName": "...", "signature": "..."}&lt;br/&gt;Authorization: Bearer accessToken
+    Сервер--&gt;&gt;Клиент: {"id": "...", "username": "...", "coopName": "..."}</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>AESKey = deriveKey(пароль, email, 100000)
+</span></code></pre></div>
+<p>Шифрование данных: Приватные данные и, возможно, приватный ключ пользователя (например, WIFKey) шифруются с использованием AESKey. Это гарантирует, что данные могут быть расшифрованы только с правильным паролем.</p>
+<p>Отправка зашифрованных данных на сервер: Клиентское приложение отправляет на сервер username, зашифрованные данные (encryptedData), название кооператива (coopName) и цифровую подпись (signature).</p>
+<p>Сохранение карты: Сервер сохраняет информацию о карте пользователя, включая username, encryptedData, coopName, signature и идентификатор пользователя.</p>
+<ol>
+<li>Аутентификация пользователя (Вход)
+Ввод email и пароля: Пользователь вводит свой email и пароль для входа в систему.</li>
+</ol>
+<p>Получение серверной соли и UUID: Клиентское приложение отправляет email на сервер, и сервер отвечает, предоставляя server_salt и UUID.</p>
+<p>Генерация hashKey: Клиентское приложение снова генерирует hashKey с использованием введенного пароля и полученной серверной соли.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+
+    Пользователь-&gt;&gt;Клиент: Вводит email (user@example.com)
+    Клиент-&gt;&gt;Сервер: POST /auth/initiate-login&lt;br/&gt;{"email": "user@example.com"}
+    Сервер--&gt;&gt;Клиент: {"uuid": "...", "serverSalt": "..."}
+
+    Пользователь-&gt;&gt;Клиент: Вводит пароль
+    Клиент-&gt;&gt;Клиент: Генерирует hashKey = hash(пароль + serverSalt + 1000)
+    Клиент-&gt;&gt;Сервер: POST /auth/complete-login&lt;br/&gt;{"email": "user@example.com", "hashKey": "...", "uuid": "..."}
+    Сервер--&gt;&gt;Клиент: {"accessToken": "...", "refreshToken": "..."}
+    Клиент-&gt;&gt;Пользователь: Сохраняет accessToken и refreshToken</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>hashKey = hash(пароль + server_salt + 1000)
+</span></code></pre></div>
+<p>Отправка hashKey на сервер: Клиентское приложение отправляет на сервер email, hashKey и UUID.</p>
+<p>Проверка на сервере: Сервер сравнивает полученный hashKey с тем, который хранится в базе данных для этого email.</p>
+<p>Выдача токенов: Если hashKey совпадает, сервер генерирует новый accessToken и refreshToken и отправляет их клиентскому приложению.</p>
+<ol>
+<li>Предоставление доступа кооперативу
+Переход по ссылке кооператива: Кооператив направляет пользователя на сайт системы с параметрами coopName и callbackUrl.</li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+    participant Кооператив
+
+    Кооператив-&gt;&gt;Пользователь: Перенаправляет на id.card.coop с coopName и callbackUrl
+    Пользователь-&gt;&gt;Клиент: Переходит на id.card.coop
+    Клиент-&gt;&gt;Сервер: POST /access/prepare-share-data&lt;br/&gt;{"coopName": "exampleCoop"}&lt;br/&gt;Authorization: Bearer accessToken
+    Сервер-&gt;&gt;Сервер: Получает coopPublicKey
+    Сервер--&gt;&gt;Клиент: {"coopName": "exampleCoop", "coopPublicKey": "COOP_PUBLIC_KEY"}</code></pre>
+<p>Получение информации о кооперативе: Клиентское приложение отправляет запрос на сервер, чтобы получить информацию о кооперативе, включая его публичный ключ (coopPublicKey).</p>
+<p>Получение и расшифровка данных: Клиентское приложение запрашивает зашифрованные данные пользователя с сервера и расшифровывает их с использованием AESKey.</p>
+<p>Перешифровка данных для кооператива: Расшифрованные данные затем шифруются на клиенте с использованием публичного ключа кооператива (coopPublicKey). Это гарантирует, что только кооператив сможет расшифровать эти данные своим приватным ключом.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+
+    Клиент-&gt;&gt;Сервер: GET /card/get&lt;br/&gt;Authorization: Bearer accessToken
+    Сервер--&gt;&gt;Клиент: {"encryptedData": "encrypted-private-data-xyz"}
+
+    Клиент-&gt;&gt;Клиент: Расшифровывает encryptedData с помощью AESKey
+    Клиент-&gt;&gt;Клиент: Перешифровывает данные с использованием coopPublicKey (COOP_PUBLIC_KEY)
+    Клиент-&gt;&gt;Сервер: POST /access/share-data&lt;br/&gt;{"coopName": "exampleCoop", "encryptedData": "encrypted-data-for-coop-999"}&lt;br/&gt;Authorization: Bearer accessToken
+    Сервер--&gt;&gt;Клиент: {"ticket": "access-ticket-abcdef"}
+    Клиент-&gt;&gt;Пользователь: Перенаправляет обратно на сайт кооператива с ticket
+</code></pre>
+<p>Отправка перешифрованных данных на сервер: Клиентское приложение отправляет зашифрованные для кооператива данные на сервер вместе с coopName.</p>
+<p>Получение тикета: Сервер сохраняет зашифрованные данные и возвращает уникальный тикет (accessId), который будет использоваться кооперативом для доступа к данным.</p>
+<p>Перенаправление на кооператив: Клиентское приложение перенаправляет пользователя обратно на сайт кооператива, передавая ему полученный тикет.</p>
+<ol>
+<li>Получение данных кооперативом
+<pre class="mermaid"><code>sequenceDiagram
+    participant Кооператив
+    participant Сервер
+
+    Кооператив-&gt;&gt;Сервер: POST /access/exchange-ticket&lt;br/&gt;{"ticket": "access-ticket-abcdef"}
+    Сервер-&gt;&gt;Сервер: Проверяет валидность ticket
+    Сервер--&gt;&gt;Кооператив: {"accessToken": "coop-access-token-112233"}</code></pre></li>
+</ol>
+<p>Обмен тикета на токен: Кооператив отправляет тикет на сервер и обменивает его на специальный accessToken, который предоставляет ограниченный доступ к данным пользователя.</p>
+<p>Запрос зашифрованных данных: Кооператив использует полученный accessToken для запроса зашифрованных данных пользователя с сервера.</p>
+<p>Расшифровка данных: Кооператив получает зашифрованные данные и расшифровывает их с помощью своего приватного ключа. Теперь он имеет доступ к информации, которую пользователь решил ему предоставить.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Кооператив
+    participant Сервер
+
+    Кооператив-&gt;&gt;Сервер: GET /access/get-encrypted-data/user123/exampleCoop&lt;br/&gt;Authorization: Bearer coop-access-token-112233
+    Сервер-&gt;&gt;Сервер: Проверяет coopAccessToken и права доступа
+    Сервер--&gt;&gt;Кооператив: {"encryptedData": "encrypted-data-for-coop-999"}
+    Кооператив-&gt;&gt;Кооператив: Расшифровывает encryptedData с помощью coopPrivateKey</code></pre>
+<ol>
+<li>Управление доступом
+Отзыв доступа: Пользователь может в любой момент отозвать доступ кооператива к своим данным. Для этого он отправляет соответствующий запрос на сервер, и сервер удаляет зашифрованные данные для этого кооператива.</li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+
+    Пользователь-&gt;&gt;Клиент: Решает отозвать доступ у exampleCoop
+    Клиент-&gt;&gt;Сервер: DELETE /access/revoke/exampleCoop&lt;br/&gt;Authorization: Bearer accessToken
+    Сервер-&gt;&gt;Сервер: Удаляет AccessRequest для пользователя и exampleCoop
+    Сервер--&gt;&gt;Клиент: {"message": "Доступ успешно отозван"}</code></pre>
+<p>Просмотр списка доступов: Пользователь может запросить список кооперативов, которым он предоставил доступ, и управлять ими.</p>
+<ol>
+<li>Обновление токенов и выход из системы
+Обновление accessToken: Когда срок действия accessToken истекает, клиентское приложение может использовать refreshToken для получения нового accessToken, отправив соответствующий запрос на сервер.</li>
+</ol>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Клиент
+    participant Сервер
+
+    Клиент-&gt;&gt;Сервер: POST /auth/refresh-token&lt;br/&gt;Authorization: Bearer refreshToken
+    Сервер-&gt;&gt;Сервер: Проверяет refreshToken
+    Сервер--&gt;&gt;Клиент: {"accessToken": "new-access-token", "refreshToken": "new-refresh-token"}
+    Клиент-&gt;&gt;Клиент: Сохраняет новые accessToken и refreshToken</code></pre>
+<p>Выход из системы: Пользователь может выйти из системы, и сервер аннулирует его refreshToken, что предотвращает дальнейшее использование токенов для доступа к системе.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Клиент
+    participant Сервер
+
+    Клиент-&gt;&gt;Сервер: POST /auth/logout&lt;br/&gt;Authorization: Bearer refreshToken
+    Сервер-&gt;&gt;Сервер: Отзывает refreshToken
+    Сервер--&gt;&gt;Клиент: {"message": "Вы успешно вышли из системы"}
+    Клиент-&gt;&gt;Клиент: Очищает сохраненные токены</code></pre>
+<h2 id="_6">Примечания<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">Участники:<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>Пользователь: Конечный пользователь, взаимодействующий с системой.
+Клиент: Клиентское приложение (например, веб-браузер или мобильное приложение).
+Сервер: Бэкенд-сервер, обрабатывающий API-запросы.
+Кооператив: Кооператив, запрашивающий доступ к данным пользователя.</p>
+<p>Заголовки авторизации:
+accessToken пользователя используется для аутентификации запросов от клиента к серверу.
+coopAccessToken кооператива используется кооперативом для доступа к данным пользователя после обмена тикета.
+Шифрование данных:</p>
+<p>AESKey: Получен путем деривации пароля пользователя и email, используется для шифрования/дешифрования приватных данных на стороне клиента.</p>
+<p>coopPublicKey: Публичный ключ кооператива, используется клиентом для перешифровки данных для кооператива.</p>
+<p>coopPrivateKey: Приватный ключ кооператива, используется для расшифровки полученных от сервера данных.</p>
+<p>Токены и тикеты:
+accessToken: Краткосрочный JWT для аутентификации запросов.
+refreshToken: Долгосрочный токен для получения новых accessToken.
+ticket: Уникальный идентификатор, используемый кооперативом для обмена на accessToken.
+Процессы:</p>
+<h2 id="_8">Алгоритм и методы<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">Преимущества системы<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>Регистрация и вход реализуют протокол нулевого разглашения (zero-knowledge), при котором сервер никогда не видит реальный пароль пользователя. Предоставление доступа требует согласия пользователя и включает перешифровку данных специально для кооператива. Отзыв доступа удаляет возможность кооператива получать данные пользователя. Обновление токенов и выход обеспечивают непрерывность сессии и безопасность.</p>
+<p>Безопасность: Поскольку сервер никогда не видит пароли или приватные данные пользователя в открытом виде, риск компрометации информации значительно снижается.</p>
+<p>Контроль пользователя: Пользователь полностью контролирует, кому и какие данные он предоставляет. Он может в любой момент отозвать доступ или предоставить его повторно.</p>
+<p>Гибкость: Система поддерживает множественные кооперативы, и пользователь может взаимодействовать с разными организациями, предоставляя им доступ к своим данным по мере необходимости.</p>
+<p>Приватность: Использование асимметричного шифрования гарантирует, что только кооператив, которому предназначены данные, сможет их расшифровать.</p>
+<p>Пример сценария использования
+Регистрация: Ирина регистрируется в системе, используя свой email и пароль. Ее пароль никогда не отправляется на сервер в открытом виде.</p>
+<p>Сохранение данных: Она вводит свои персональные данные и сохраняет их в зашифрованном виде на сервере.</p>
+<p>Предоставление доступа: Кооператив "Здоровье" запрашивает у Ирины доступ к ее медицинским данным. Ирина соглашается и предоставляет доступ, перешифровывая свои данные на публичный ключ кооператива.</p>
+<p>Получение данных кооперативом: Кооператив "Здоровье" получает зашифрованные данные и расшифровывает их своим приватным ключом.</p>
+<p>Отзыв доступа: Позже Ирина решает отозвать доступ кооператива к ее данным и делает это через клиентское приложение.</p>
+<h2 id="_10">Заключение<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>Система обеспечивает безопасное хранение и обмен конфиденциальными данными, предоставляя пользователю полный контроль над своими данными и тем, кто к ним имеет доступ. Использование протокола с нулевым разглашением и асимметричного шифрования делает систему надежной и устойчивой к компрометации данных.</p>
+<p>CARD.COOP - это стандарт, и его код опубликован. Клиентов и серверов CARD.COOP может быть много - как личных, пользовательских, так и кооперативных. Исполнение стандарта CARD.COOP возможно в физических (пластиковых) картах и мобильных приложениях. </p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Пользователь
+    participant Клиент
+    participant Сервер
+    participant Кооператив
+
+    Кооператив-&gt;&gt;Пользователь: Запрос доступа
+
+    Пользователь-&gt;&gt;Клиент: Регистрация / Вход
+    Клиент-&gt;&gt;Сервер: Аутентификация
+    Сервер--&gt;&gt;Клиент: Токены доступа</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+        
+          
+          <a href="../overview/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Обзор">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              <div class="md-ellipsis">
+                Обзор
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../blockchain/intro/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Введение">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              <div class="md-ellipsis">
+                Введение
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      АНО «КООПЕРАТИВНАЯ ЭКОНОМИКА» &copy; 2024
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "search.share", "navigation.top", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../js/metrika.js"></script>
+      
+    
+  </body>
+</html>
