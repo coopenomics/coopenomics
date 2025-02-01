@@ -37,7 +37,7 @@ theme:
     - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    # - navigation.expand
+    - navigation.expand
     # - toc.follow
     # - toc.integrate
     - search.share
@@ -110,28 +110,31 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Доктрина: index.md
+  - Капитализация идей: 
+    - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
+    - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
   - Платформа: 
     - Введение: documentation/intro.md
     - Обзор: documentation/overview.md
-    # - Аудентификация и карта пайщика:
-    #   - Введение: documentation/cardcoop/intro.md 
-    # - Стандарты: 
+    - Карта пайщика: documentation/cardcoop.md 
     - Блокчейн:
       - Введение: documentation/blockchain/intro.md
       - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
       - Действия и транзакции: documentation/blockchain/transactions.md
-      - Таблицы и индексы: documentation/blockchain/state.md
-      
+      - Смарт-контракты: documentation/blockchain/contracts.md
+      - Ноды и синхронизация истории: documentation/blockchain/nodes.md
+      - База данных: documentation/blockchain/state.md
       - Компоненты: documentation/blockchain/components.md
-      # - Делегаты: documentation/blockchain/witnesses.md 
-      # - Состав: documentation/blockchain/sostav.md
-      - Быстрый старт: documentation/blockchain/install.md
       - Протоколы: documentation/blockchain/protocols.md
-      # - Полный старт: documentation/blockchain/install.md
-      # - Командный кошелёк: https://google.com
-      - Типы нод: documentation/blockchain/modes.md
+      - Делегаты и консенсус: documentation/blockchain/witnesses.md 
       - Параметры конфигурации: documentation/blockchain/configuration.md
-      # - Смарт-контракты: documentation/blockchain/contracts.md
+      - Инструкции:
+        - Быстрый старт: documentation/blockchain/install.md
+        # - Полный старт: documentation/blockchain/install.md
+      # - Командный кошелёк: https://google.com
+      
+      
+      
       # - Синхронизация: documentation/blockchain/sync.md
       # - API: https://developers.eos.io/welcome/latest/reference/index
     
@@ -144,7 +147,7 @@ nav:
       
   - Подключение: providers.md
   - Словарь: vocabulary.md
-  - Вопрос-ответ: faq.md
+  # - Вопрос-ответ: faq.md
   - Контакты: contacts.md
   
   # - Программные Модули: modules.md
