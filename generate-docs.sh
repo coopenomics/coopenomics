@@ -8,17 +8,17 @@ BASE_PATH=$BASE_PATH
 mkdocs build
 
 # # Переключаемся в директорию contracts, генерируем документацию и копируем
-#cd "$BASE_PATH/contracts" || exit
-#doxygen
-#mkdir -p "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
-#rsync -r docs/html/* "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
+cd "$BASE_PATH/contracts" || exit
+doxygen
+mkdir -p "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
+rsync -r docs/html/* "$BASE_PATH/docsdocsdocs/coopenomics/site/contracts"
 
 # # Переключаемся в директорию cooptypes, генерируем документацию и копируем
-# cd "$BASE_PATH/monocoop/components/cooptypes" || exit
-# pwd
-# pnpm run docs
-# mkdir -p "$BASE_PATH/doctrine/site/cooptypes"
-# rsync -r docs/* "$BASE_PATH/doctrine/site/cooptypes"
+ cd "$BASE_PATH/monocoop/components/cooptypes" || exit
+ pwd
+ pnpm run docs
+ mkdir -p "$BASE_PATH/docsdocsdocs/site/cooptypes"
+ rsync -r docs/* "$BASE_PATH/docsdocsdocs/coopenomics/site/cooptypes"
 
 # # Переключаемся в директорию coopback, генерируем документацию и копируем
 # cd "$BASE_PATH/monocoop/components/coopback" || exit
@@ -27,6 +27,6 @@ mkdocs build
 # rsync -r docs/* "$BASE_PATH/doctrine/site/coopback"
 
 # Возвращаемся в первоначальную директорию и публикуем документацию
-# cd "$BASE_PATH/doctrine" || exit
+cd "$BASE_PATH/docsdocsdocs/coopenomics" || exit
 pnpm docs-publish
 

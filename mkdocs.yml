@@ -11,7 +11,24 @@ theme:
   features:
     - content.code.copy
     - content.code.annotate
-  # custom_dir: overrides
+    - announce.dismiss   # позволяет закрывать баннер
+    - navigation.tracking
+    # - navigation.path
+    - navigation.tabs
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.expand
+    # - toc.follow
+    # - toc.integrate
+    - search.share
+    - navigation.top
+    - navigation.footer
+    
+  announce:
+    type: info            # info | warning | error
+    text: Сервис будет недоступен 7 апреля с 01:00 до 03:00.
+  custom_dir: overrides
   palette:
     - scheme: default
       toggle:
@@ -30,19 +47,7 @@ theme:
   logo: assets/logo-white.png
 
   language: ru
-  features:
-    - navigation.tracking
-    # - navigation.path
-    # - navigation.tabs
-    - navigation.sections
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.expand
-    # - toc.follow
-    # - toc.integrate
-    - search.share
-    - navigation.top
-    - navigation.footer
+  
     
 repo_url: https://github.com/coopenomics
 
@@ -52,7 +57,6 @@ plugins:
   # - group
   # - awesome-pages
   # - table-reader
-  - blog
   # - social:https://squidfunk.github.io/mkdocs-material/
   #   cards_layout: default
 
@@ -109,8 +113,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Доктрина: index.md
-  - Капитализация идей: 
+  - Манифест: index.md
+  - Идеократия: 
     - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
     - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
   - Платформа: 
