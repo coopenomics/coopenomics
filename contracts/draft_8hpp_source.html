@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('draft_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eosio/system.hpp&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;eosio/time.hpp&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../common/common.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../lib/common.hpp&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classdraft.html">   11</a></span><span class="keyword">class </span>[[eosio::contract(<a class="code hl_define" href="consts_8hpp.html#a190d95586c2d20966655dbb2e51295d1">DRAFT</a>)]] <a class="code hl_class" href="classdraft.html">draft</a> : <span class="keyword">public</span> eosio::contract {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classdraft.html">   11</a></span><span class="keyword">class </span>[[eosio::contract(DRAFT)]] <a class="code hl_class" href="classdraft.html">draft</a> : <span class="keyword">public</span> eosio::contract {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classdraft.html#acddc6da16e3d5a7076a7d5807fa975e4">   14</a></span>  <a class="code hl_function" href="classdraft.html#acddc6da16e3d5a7076a7d5807fa975e4">draft</a>(eosio::name receiver, eosio::name code,</div>
@@ -125,14 +125,12 @@ $(document).ready(function(){initNavTree('draft_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  [[eosio::action]] <span class="keywordtype">void</span> upversion(eosio::name scope, eosio::name username, uint64_t registry_id);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structdraft_1_1counts.html">   39</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(DRAFT)]] <a class="code hl_struct" href="structdraft_1_1counts.html">counts</a> : <a class="code hl_struct" href="structcounts__base.html">counts_base</a> {};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structdraft_1_1counts.html">   39</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(DRAFT)]] <a class="code hl_struct" href="structdraft_1_1counts.html">counts</a> : counts_base {};</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
 <div class="ttc" id="aclassdraft_html"><div class="ttname"><a href="classdraft.html">draft</a></div><div class="ttdef"><b>Definition:</b> draft.hpp:11</div></div>
 <div class="ttc" id="aclassdraft_html_acddc6da16e3d5a7076a7d5807fa975e4"><div class="ttname"><a href="classdraft.html#acddc6da16e3d5a7076a7d5807fa975e4">draft::draft</a></div><div class="ttdeci">draft(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition:</b> draft.hpp:14</div></div>
 <div class="ttc" id="aclassdraft_html_adba835da9b11dddfdfc5a031f1275089"><div class="ttname"><a href="classdraft.html#adba835da9b11dddfdfc5a031f1275089">draft::apply</a></div><div class="ttdeci">void apply(uint64_t receiver, uint64_t code, uint64_t action)</div></div>
-<div class="ttc" id="aconsts_8hpp_html_a190d95586c2d20966655dbb2e51295d1"><div class="ttname"><a href="consts_8hpp.html#a190d95586c2d20966655dbb2e51295d1">DRAFT</a></div><div class="ttdeci">#define DRAFT</div><div class="ttdef"><b>Definition:</b> consts.hpp:107</div></div>
 <div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:8</div></div>
-<div class="ttc" id="astructcounts__base_html"><div class="ttname"><a href="structcounts__base.html">counts_base</a></div><div class="ttdef"><b>Definition:</b> counts.hpp:1</div></div>
 <div class="ttc" id="astructdraft_1_1counts_html"><div class="ttname"><a href="structdraft_1_1counts.html">draft::counts</a></div><div class="ttdef"><b>Definition:</b> draft.hpp:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

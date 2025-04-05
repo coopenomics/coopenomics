@@ -94,7 +94,7 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rammarket_8hpp_source.html">rammarket.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="exchange__state_8hpp_source.html">exchange_state.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
@@ -103,14 +103,6 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:a124e84f589746ad2bada2ea98af5b5e2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#a124e84f589746ad2bada2ea98af5b5e2">primary_key</a> () const</td></tr>
-<tr class="separator:a124e84f589746ad2bada2ea98af5b5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c029ed83a27b04524911cf1c3f647c8"><td class="memItemLeft" align="right" valign="top">asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#a7c029ed83a27b04524911cf1c3f647c8">convert_to_exchange</a> (<a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html">connector</a> &amp;c, asset in)</td></tr>
-<tr class="separator:a7c029ed83a27b04524911cf1c3f647c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade7bfd99be01e15093f27d95a3013ba7"><td class="memItemLeft" align="right" valign="top">asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#ade7bfd99be01e15093f27d95a3013ba7">convert_from_exchange</a> (<a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html">connector</a> &amp;c, asset in)</td></tr>
-<tr class="separator:ade7bfd99be01e15093f27d95a3013ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b44e4142697e729fe05dc028b932c0e"><td class="memItemLeft" align="right" valign="top">asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#a9b44e4142697e729fe05dc028b932c0e">convert</a> (asset from, const symbol &amp;to)</td></tr>
-<tr class="separator:a9b44e4142697e729fe05dc028b932c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a124e84f589746ad2bada2ea98af5b5e2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#a124e84f589746ad2bada2ea98af5b5e2">primary_key</a> () const</td></tr>
 <tr class="separator:a124e84f589746ad2bada2ea98af5b5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6e00de0427eba26f16acc1d0c85e5a7"><td class="memItemLeft" align="right" valign="top">asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1exchange__state.html#aa6e00de0427eba26f16acc1d0c85e5a7">convert_to_exchange</a> (<a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html">connector</a> &amp;reserve, const asset &amp;payment)</td></tr>
@@ -139,46 +131,11 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 <tr class="separator:a193594141203ddbb6a37d7cf56201f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p >Uses Bancor math to create a 50/50 relay between two asset types. The state of the bancor exchange is entirely contained within this struct. There are no external side effects associated with using this API. </p>
+<div class="textblock"><p >Uses Bancor math to create a 50/50 relay between two asset types.</p>
+<p >The state of the bancor exchange is entirely contained within this struct. There are no external side effects associated with using this API. </p>
 </div><h2 class="groupheader">Методы</h2>
-<a id="a9b44e4142697e729fe05dc028b932c0e" name="a9b44e4142697e729fe05dc028b932c0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b44e4142697e729fe05dc028b932c0e">&#9670;&nbsp;</a></span>convert() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">asset eosiosystem::exchange_state::convert </td>
-          <td>(</td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>from</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const symbol &amp;&#160;</td>
-          <td class="paramname"><em>to</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aff0f484e4eac6b51e3b01839a884e12e" name="aff0f484e4eac6b51e3b01839a884e12e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff0f484e4eac6b51e3b01839a884e12e">&#9670;&nbsp;</a></span>convert() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aff0f484e4eac6b51e3b01839a884e12e">&#9670;&nbsp;</a></span>convert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,44 +162,8 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 
 </div>
 </div>
-<a id="ade7bfd99be01e15093f27d95a3013ba7" name="ade7bfd99be01e15093f27d95a3013ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade7bfd99be01e15093f27d95a3013ba7">&#9670;&nbsp;</a></span>convert_from_exchange() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">asset eosiosystem::exchange_state::convert_from_exchange </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html">connector</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a7056cfffba84abdf75b38f2d81d95ccd" name="a7056cfffba84abdf75b38f2d81d95ccd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7056cfffba84abdf75b38f2d81d95ccd">&#9670;&nbsp;</a></span>convert_from_exchange() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7056cfffba84abdf75b38f2d81d95ccd">&#9670;&nbsp;</a></span>convert_from_exchange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,44 +190,8 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 
 </div>
 </div>
-<a id="a7c029ed83a27b04524911cf1c3f647c8" name="a7c029ed83a27b04524911cf1c3f647c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c029ed83a27b04524911cf1c3f647c8">&#9670;&nbsp;</a></span>convert_to_exchange() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">asset eosiosystem::exchange_state::convert_to_exchange </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html">connector</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa6e00de0427eba26f16acc1d0c85e5a7" name="aa6e00de0427eba26f16acc1d0c85e5a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6e00de0427eba26f16acc1d0c85e5a7">&#9670;&nbsp;</a></span>convert_to_exchange() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e00de0427eba26f16acc1d0c85e5a7">&#9670;&nbsp;</a></span>convert_to_exchange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,32 +331,7 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 </div>
 </div>
 <a id="a124e84f589746ad2bada2ea98af5b5e2" name="a124e84f589746ad2bada2ea98af5b5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a124e84f589746ad2bada2ea98af5b5e2">&#9670;&nbsp;</a></span>primary_key() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint64_t eosiosystem::exchange_state::primary_key </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a124e84f589746ad2bada2ea98af5b5e2" name="a124e84f589746ad2bada2ea98af5b5e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a124e84f589746ad2bada2ea98af5b5e2">&#9670;&nbsp;</a></span>primary_key() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a124e84f589746ad2bada2ea98af5b5e2">&#9670;&nbsp;</a></span>primary_key()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -539,7 +399,6 @@ $(document).ready(function(){initNavTree('structeosiosystem_1_1exchange__state.h
 </div>
 </div>
 <hr/>Объявления и описания членов структур находятся в файлах:<ul>
-<li>cpp/common/<a class="el" href="rammarket_8hpp_source.html">rammarket.hpp</a></li>
 <li>cpp/system/contracts/eosio.system/include/eosio.system/<a class="el" href="exchange__state_8hpp_source.html">exchange_state.hpp</a></li>
 <li>cpp/system/contracts/eosio.system/src/<a class="el" href="exchange__state_8cpp.html">exchange_state.cpp</a></li>
 </ul>

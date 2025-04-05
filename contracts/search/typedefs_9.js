@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['limit_5fauth_5fchange_5ftable_0',['limit_auth_change_table',['../namespaceeosiosystem.html#ab6669b0a3e740568b4ff28936a6ac5d5',1,'eosiosystem']]],
-  ['linkauth_5faction_1',['linkauth_action',['../classeosiobios_1_1bios.html#aa23c7a9882776e23792f72958e7e2698',1,'eosiobios::bios::linkauth_action()'],['../classeosioboot_1_1boot.html#a59658ecc01553c951f8d8126c0ec2b7d',1,'eosioboot::boot::linkauth_action()'],['../classeosiosystem_1_1native.html#a9003ba3e7e55f294f3d028f02873d5f9',1,'eosiosystem::native::linkauth_action()']]]
+  ['name_5fbid_5ftable_0',['name_bid_table',['../namespaceeosiosystem.html#a89109f288e4d5622f4abd4c033e5698b',1,'eosiosystem']]],
+  ['newaccount_5faction_1',['newaccount_action',['../classeosiobios_1_1bios.html#ac51372f90c1c7f5b9fe20c5fe1b414be',1,'eosiobios::bios::newaccount_action()'],['../classeosioboot_1_1boot.html#a0ba8ab7685d8e217a383f151c7aaee79',1,'eosioboot::boot::newaccount_action()'],['../classeosiosystem_1_1native.html#aae644336375e87bb08912d4f550c8aeb',1,'eosiosystem::native::newaccount_action()']]]
 ];

@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('fund_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eosio/system.hpp&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;eosio/time.hpp&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../common/common.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../lib/common.hpp&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classfund.html">   18</a></span><span class="keyword">class </span>[[eosio::contract(<a class="code hl_define" href="consts_8hpp.html#a0d37aec7ee39964f2e44caa6ad8ef88e">FUND</a>)]] <a class="code hl_class" href="classfund.html">fund</a> : <span class="keyword">public</span> eosio::contract {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classfund.html">   18</a></span><span class="keyword">class </span>[[eosio::contract(FUND)]] <a class="code hl_class" href="classfund.html">fund</a> : <span class="keyword">public</span> eosio::contract {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classfund.html#a97b7678a54cd1931b886382f2344fe47">   20</a></span>  <a class="code hl_function" href="classfund.html#a97b7678a54cd1931b886382f2344fe47">fund</a>(eosio::name receiver, eosio::name code,</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>       eosio::datastream&lt;const char *&gt; ds)</div>
@@ -162,7 +162,7 @@ $(document).ready(function(){initNavTree('fund_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="comment">// метод вывода средств из фондов накопления</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  [[eosio::action]] <span class="keywordtype">void</span> fundwithdraw(eosio::name coopname,</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                      eosio::name username, eosio::name type,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                      uint64_t fund_id, <a class="code hl_struct" href="structdocument.html">document</a> <a class="code hl_struct" href="structdocument.html">document</a>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                      uint64_t fund_id, document document,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                      eosio::asset quantity,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                      std::string bank_data_id);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="comment">// используется только на фондах накопления</span></div>
@@ -176,15 +176,12 @@ $(document).ready(function(){initNavTree('fund_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  [[eosio::action]] <span class="keywordtype">void</span> complete(eosio::name coopname, eosio::name username,</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                  uint64_t withdraw_id);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structfund_1_1counts.html">   99</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(FUND)]] <a class="code hl_struct" href="structfund_1_1counts.html">counts</a> : <a class="code hl_struct" href="structcounts__base.html">counts_base</a> {};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structfund_1_1counts.html">   99</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::contract(FUND)]] <a class="code hl_struct" href="structfund_1_1counts.html">counts</a> : counts_base {};</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
 <div class="ttc" id="aclassfund_html"><div class="ttname"><a href="classfund.html">fund</a></div><div class="ttdoc">Класс fund</div><div class="ttdef"><b>Definition:</b> fund.hpp:18</div></div>
 <div class="ttc" id="aclassfund_html_a82242c8242b7b4918954173ffdd967d0"><div class="ttname"><a href="classfund.html#a82242c8242b7b4918954173ffdd967d0">fund::apply</a></div><div class="ttdeci">void apply(uint64_t receiver, uint64_t code, uint64_t action)</div></div>
 <div class="ttc" id="aclassfund_html_a97b7678a54cd1931b886382f2344fe47"><div class="ttname"><a href="classfund.html#a97b7678a54cd1931b886382f2344fe47">fund::fund</a></div><div class="ttdeci">fund(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition:</b> fund.hpp:20</div></div>
-<div class="ttc" id="aconsts_8hpp_html_a0d37aec7ee39964f2e44caa6ad8ef88e"><div class="ttname"><a href="consts_8hpp.html#a0d37aec7ee39964f2e44caa6ad8ef88e">FUND</a></div><div class="ttdeci">#define FUND</div><div class="ttdef"><b>Definition:</b> consts.hpp:112</div></div>
 <div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:8</div></div>
-<div class="ttc" id="astructcounts__base_html"><div class="ttname"><a href="structcounts__base.html">counts_base</a></div><div class="ttdef"><b>Definition:</b> counts.hpp:1</div></div>
-<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
 <div class="ttc" id="astructfund_1_1counts_html"><div class="ttname"><a href="structfund_1_1counts.html">fund::counts</a></div><div class="ttdef"><b>Definition:</b> fund.hpp:99</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

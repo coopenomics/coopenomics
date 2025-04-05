@@ -38,13 +38,11 @@ var NAVTREE =
       [ "Документация", "index.html#autotoc_md9", null ],
       [ "Лицензия", "index.html#autotoc_md10", null ]
     ] ],
-    [ "Группы", "modules.html", "modules" ],
     [ "Файлы", "files.html", [
       [ "Обозреватель", "files.html", "files_dup" ],
       [ "Список членов всех файлов", "globals.html", [
         [ "Указатель", "globals.html", null ],
         [ "Функции", "globals_func.html", null ],
-        [ "Переменные", "globals_vars.html", null ],
         [ "Определения типов", "globals_type.html", null ],
         [ "Макросы", "globals_defs.html", null ]
       ] ]
@@ -54,10 +52,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"accounts_8hpp.html",
-"dir_6461df05d8dc00b7fc2670b59cd65c58.html",
-"programs_8hpp.html#acc1e7ef6047a61edfc0a4f00917d2770",
-"structparticipant.html#abe5d95bac42aa16addf425ad33aaa16a"
+"addresses_8cpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['accounts_2ehpp_0',['accounts.hpp',['../accounts_8hpp.html',1,'']]],
-  ['addresses_2ecpp_1',['addresses.cpp',['../addresses_8cpp.html',1,'']]],
-  ['admin_2ecpp_2',['admin.cpp',['../admin_8cpp.html',1,'']]],
-  ['admins_2ecpp_3',['admins.cpp',['../admins_8cpp.html',1,'']]],
-  ['admins_2ehpp_4',['admins.hpp',['../admins_8hpp.html',1,'']]],
-  ['agreements_2ecpp_5',['agreements.cpp',['../agreements_8cpp.html',1,'']]],
-  ['agreements_2ehpp_6',['agreements.hpp',['../agreements_8hpp.html',1,'']]],
-  ['automator_2ecpp_7',['automator.cpp',['../automator_8cpp.html',1,'']]]
+  ['addresses_2ecpp_0',['addresses.cpp',['../addresses_8cpp.html',1,'']]],
+  ['admin_2ecpp_1',['admin.cpp',['../admin_8cpp.html',1,'']]],
+  ['admins_2ecpp_2',['admins.cpp',['../admins_8cpp.html',1,'']]],
+  ['agenda_2ecpp_3',['agenda.cpp',['../agenda_8cpp.html',1,'']]],
+  ['agreements_2ecpp_4',['agreements.cpp',['../agreements_8cpp.html',1,'']]],
+  ['automator_2ecpp_5',['automator.cpp',['../automator_8cpp.html',1,'']]]
 ];

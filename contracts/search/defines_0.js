@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ano_0',['ANO',['../consts_8hpp.html#a53678aa3958110e34fce3501d7da1bdf',1,'consts.hpp']]]
+  ['channel_5fram_5fand_5fnamebid_5ffees_5fto_5frex_0',['CHANNEL_RAM_AND_NAMEBID_FEES_TO_REX',['../eosio_8system_8hpp.html#ab33aa73384b7c71f406673bc37eb817e',1,'eosio.system.hpp']]]
 ];

@@ -1,6 +1,8 @@
 var soviet_8hpp =
 [
+    [ "soviet", "classsoviet.html", "classsoviet" ],
     [ "counts", "structcounts.html", null ],
+    [ "automator", "structautomator.html", "structautomator" ],
     [ "autosigner", "structautosigner.html", "structautosigner" ],
     [ "joincoops", "structjoincoops.html", "structjoincoops" ],
     [ "changes", "structchanges.html", "structchanges" ],

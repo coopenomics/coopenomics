@@ -5,5 +5,5 @@ var searchData=
   ['freedecision_2',['freedecision',['../classsoviet.html#afc989d72fabf185ab22359a5219c11a0',1,'soviet']]],
   ['freedecision_5feffect_3',['freedecision_effect',['../classsoviet.html#aab0457554fac4989899c539f973d4156',1,'soviet']]],
   ['fund_4',['fund',['../classfund.html#a97b7678a54cd1931b886382f2344fe47',1,'fund']]],
-  ['fundwithdraw_5',['fundwithdraw',['../group__public__actions.html#ga46020951b62e043b52d7e7c6939684a7',1,'soviet::fundwithdraw()'],['../classfund.html#a53a8e639703401eaa7d83374516cdd8d',1,'fund::fundwithdraw()']]]
+  ['fundwithdraw_5',['fundwithdraw',['../classsoviet.html#a46020951b62e043b52d7e7c6939684a7',1,'soviet::fundwithdraw()'],['../classfund.html#a53a8e639703401eaa7d83374516cdd8d',1,'fund::fundwithdraw()']]]
 ];

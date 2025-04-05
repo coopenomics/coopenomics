@@ -152,10 +152,6 @@ $(document).ready(function(){initNavTree('namespaceeosiosystem.html',''); initRe
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a44b4ba2cc0f25ec73138308d16cb792f"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a44b4ba2cc0f25ec73138308d16cb792f">real_type</a></td></tr>
-<tr class="separator:a44b4ba2cc0f25ec73138308d16cb792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a084bb74fe483e49001e674d5e66001de"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;rammarket&quot;_n, <a class="el" href="structeosiosystem_1_1exchange__state.html">exchange_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a084bb74fe483e49001e674d5e66001de">rammarket</a></td></tr>
-<tr class="separator:a084bb74fe483e49001e674d5e66001de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e1fbfc9229b1616bfc70a519e26e9c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a5e1fbfc9229b1616bfc70a519e26e9c2">blockchain_parameters_t</a> = eosio::blockchain_parameters</td></tr>
 <tr class="separator:a5e1fbfc9229b1616bfc70a519e26e9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89109f288e4d5622f4abd4c033e5698b"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;namebids&quot;_n, <a class="el" href="structeosiosystem_1_1name__bid.html">name_bid</a>, indexed_by&lt;&quot;highbid&quot;_n, const_mem_fun&lt; <a class="el" href="structeosiosystem_1_1name__bid.html">name_bid</a>, uint64_t, &amp;<a class="el" href="structeosiosystem_1_1name__bid.html#a5b559444f1ddf4eee7a32c53a3ef9485">name_bid::by_high_bid</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a89109f288e4d5622f4abd4c033e5698b">name_bid_table</a></td></tr>
@@ -182,13 +178,13 @@ $(document).ready(function(){initNavTree('namespaceeosiosystem.html',''); initRe
 <tr class="separator:acc6ad551520c18fdac72d2ef9bfb26a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab020b27ad4ebc87d910cb31fbcf9e7ac"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;powup.order&quot;_n, <a class="el" href="structeosiosystem_1_1powerup__order.html">powerup_order</a>, indexed_by&lt;&quot;byowner&quot;_n, const_mem_fun&lt; <a class="el" href="structeosiosystem_1_1powerup__order.html">powerup_order</a>, uint64_t, &amp;<a class="el" href="structeosiosystem_1_1powerup__order.html#ad6f472ce4c90343ff6c3a2a312ac64ab">powerup_order::by_owner</a> &gt; &gt;, indexed_by&lt;&quot;byexpires&quot;_n, const_mem_fun&lt; <a class="el" href="structeosiosystem_1_1powerup__order.html">powerup_order</a>, uint64_t, &amp;<a class="el" href="structeosiosystem_1_1powerup__order.html#a9a404ef12847703055ba5da5b47af05a">powerup_order::by_expires</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#ab020b27ad4ebc87d910cb31fbcf9e7ac">powerup_order_table</a></td></tr>
 <tr class="separator:ab020b27ad4ebc87d910cb31fbcf9e7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084bb74fe483e49001e674d5e66001de"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;rammarket&quot;_n, <a class="el" href="structeosiosystem_1_1exchange__state.html">exchange_state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a084bb74fe483e49001e674d5e66001de">rammarket</a></td></tr>
+<tr class="separator:a084bb74fe483e49001e674d5e66001de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6669b0a3e740568b4ff28936a6ac5d5"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;limitauthchg&quot;_n, <a class="el" href="structeosiosystem_1_1limit__auth__change.html">limit_auth_change</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#ab6669b0a3e740568b4ff28936a6ac5d5">limit_auth_change_table</a></td></tr>
 <tr class="separator:ab6669b0a3e740568b4ff28936a6ac5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a554d168bb3ecdd68b09cabaabe5a90a5"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a554d168bb3ecdd68b09cabaabe5a90a5">determine_ram_price</a> (uint32_t bytes)</td></tr>
-<tr class="separator:a554d168bb3ecdd68b09cabaabe5a90a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c407cd2889dff2a2fd87aa6ff808b0e"><td class="memTemplParams" colspan="2">template&lt;typename E , typename F &gt; </td></tr>
 <tr class="memitem:a6c407cd2889dff2a2fd87aa6ff808b0e"><td class="memTemplItemLeft" align="right" valign="top">static auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a6c407cd2889dff2a2fd87aa6ff808b0e">has_field</a> (F flags, E field) -&gt; std::enable_if_t&lt; std::is_integral_v&lt; F &gt; &amp;&amp;std::is_unsigned_v&lt; F &gt; &amp;&amp;std::is_enum_v&lt; E &gt; &amp;&amp;std::is_same_v&lt; F, std::underlying_type_t&lt; E &gt; &gt;, bool &gt;</td></tr>
 <tr class="separator:a6c407cd2889dff2a2fd87aa6ff808b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,7 +193,7 @@ $(document).ready(function(){initNavTree('namespaceeosiosystem.html',''); initRe
 <tr class="separator:a5528d1c28d5d062e4b4289b4f7ae1c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab75117312e65b8b2882d459d0b33ca43"><td class="memItemLeft" align="right" valign="top">eosio::block_signing_authority&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#ab75117312e65b8b2882d459d0b33ca43">convert_to_block_signing_authority</a> (const eosio::public_key &amp;producer_key)</td></tr>
 <tr class="separator:ab75117312e65b8b2882d459d0b33ca43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4546341868a4a05f2e23a02e1fc33262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a4546341868a4a05f2e23a02e1fc33262">check_auth_change</a> (name contract, name <a class="el" href="structaccount.html">account</a>, const binary_extension&lt; name &gt; &amp;authorized_by)</td></tr>
+<tr class="memitem:a4546341868a4a05f2e23a02e1fc33262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a4546341868a4a05f2e23a02e1fc33262">check_auth_change</a> (name contract, name account, const binary_extension&lt; name &gt; &amp;authorized_by)</td></tr>
 <tr class="separator:a4546341868a4a05f2e23a02e1fc33262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e036636d2cc92c741db234dd33870db"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosiosystem.html#a3e036636d2cc92c741db234dd33870db">stake2vote</a> (int64_t staked)</td></tr>
 <tr class="separator:a3e036636d2cc92c741db234dd33870db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,20 +394,6 @@ $(document).ready(function(){initNavTree('namespaceeosiosystem.html',''); initRe
 
 </div>
 </div>
-<a id="a44b4ba2cc0f25ec73138308d16cb792f" name="a44b4ba2cc0f25ec73138308d16cb792f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44b4ba2cc0f25ec73138308d16cb792f">&#9670;&nbsp;</a></span>real_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef double <a class="el" href="namespaceeosiosystem.html#a44b4ba2cc0f25ec73138308d16cb792f">eosiosystem::real_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa3f5a7875c9a421bed214a88d78d7750" name="aa3f5a7875c9a421bed214a88d78d7750"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3f5a7875c9a421bed214a88d78d7750">&#9670;&nbsp;</a></span>refunds_table</h2>
 
@@ -511,24 +493,6 @@ $(document).ready(function(){initNavTree('namespaceeosiosystem.html',''); initRe
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a554d168bb3ecdd68b09cabaabe5a90a5" name="a554d168bb3ecdd68b09cabaabe5a90a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a554d168bb3ecdd68b09cabaabe5a90a5">&#9670;&nbsp;</a></span>determine_ram_price()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eosio::asset eosiosystem::determine_ram_price </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>bytes</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>
