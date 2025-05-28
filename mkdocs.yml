@@ -15,12 +15,12 @@ theme:
     - navigation.tracking
     # - navigation.path
     - navigation.tabs
-    - navigation.sections
+    # - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    - navigation.expand
+    # - navigation.expand
     # - toc.follow
-    # - toc.integrate
+    - toc.integrate
     - search.share
     - navigation.top
     - navigation.footer
@@ -66,7 +66,7 @@ extra:
   # social:
   #   - icon: fontawesome/brands/telegram
   #     link: https://twitter.com/your-profile
-
+  
 copyright: АНО «КООПЕРАТИВНАЯ ЭКОНОМИКА» &copy; 2024
 
 markdown_extensions:
@@ -111,18 +111,17 @@ markdown_extensions:
       alternate_style: true
 nav:
   - Манифест: index.md
-  - Идеократия: 
-    - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
-    - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
-  - Платформа: 
+  # - Идеократия: 
+    # - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
+    # - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
+  - Документация: 
     - Введение: documentation/intro.md
     - Обзор: documentation/overview.md
-    - Карта пайщика: documentation/cardcoop.md 
+    # - Карта пайщика: documentation/cardcoop.md 
     - Блокчейн:
       - Введение: documentation/blockchain/intro.md
       - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
       - Действия и транзакции: documentation/blockchain/transactions.md
-      - Смарт-контракты: documentation/blockchain/contracts.md
       - Ноды и синхронизация истории: documentation/blockchain/nodes.md
       - База данных: documentation/blockchain/state.md
       - Компоненты: documentation/blockchain/components.md
@@ -132,22 +131,23 @@ nav:
       - Инструкции:
         - Быстрый старт: documentation/blockchain/install.md
         # - Полный старт: documentation/blockchain/install.md
-      # - Командный кошелёк: https://google.com
-      
-      
-      
-      # - Синхронизация: documentation/blockchain/sync.md
-      # - API: https://developers.eos.io/welcome/latest/reference/index
+        # - Командный кошелёк: https://google.com
+        # - Синхронизация: documentation/blockchain/sync.md
+        # - API: https://developers.eos.io/welcome/latest/reference/index
     
-    # - Фабрика документов:
-    #   - Введение: documentation/fabric/intro.md
-    
-    # - Кооперативные контракты:
-    #   - Введение: documentation/coopcontracts/contracts.md
+    - Смарт-контракты: 
+      - Введение: documentation/blockchain/contracts.md
+      - Системные контракты: documentation/coopcontracts/system.md
+      - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
       
+    - Фабрика документов: 
+      - Введение: documentation/fabric/intro.md
+    - Словарь: vocabulary.md    
       
+  
+  - Блог: https://blog.coopenomics.world
   - Подключение: providers.md
-  - Словарь: vocabulary.md
+
   # - Вопрос-ответ: faq.md
   - Контакты: contacts.md
   
