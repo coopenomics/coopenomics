@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('exchange__state_8hpp_source.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -156,8 +144,8 @@ $(document).ready(function(){initNavTree('exchange__state_8hpp_source.html','');
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceeosiosystem.html">eosiosystem</a> {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>   <span class="keyword">using </span>eosio::asset;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>   <span class="keyword">using </span>eosio::symbol;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>   <span class="keyword">using</span> eosio::asset;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>   <span class="keyword">using</span> eosio::symbol;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>   <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(&quot;eosio.system&quot;)]] exchange_state {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      asset    <a class="code hl_variable" href="eosio_8token__tests_8cpp.html#ad37587c54682d8fea3f46f4976e16437">supply</a>;</div>
@@ -191,15 +179,15 @@ $(document).ready(function(){initNavTree('exchange__state_8hpp_source.html','');
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="keyword">typedef</span> eosio::multi_index&lt; <span class="stringliteral">&quot;rammarket&quot;</span>_n, exchange_state &gt; <a class="code hl_typedef" href="namespaceeosiosystem.html#a084bb74fe483e49001e674d5e66001de">rammarket</a>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} </div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="aeosio_8token__tests_8cpp_html_a1e7ef09ce66d09456a55c47a8c42f3dc"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#a1e7ef09ce66d09456a55c47a8c42f3dc">balance</a></div><div class="ttdeci">balance</div><div class="ttdef"><b>Definition</b> eosio.token_tests.cpp:226</div></div>
-<div class="ttc" id="aeosio_8token__tests_8cpp_html_ad37587c54682d8fea3f46f4976e16437"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#ad37587c54682d8fea3f46f4976e16437">supply</a></div><div class="ttdeci">supply</div><div class="ttdef"><b>Definition</b> eosio.token_tests.cpp:150</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="anamespaceeosiosystem_html"><div class="ttname"><a href="namespaceeosiosystem.html">eosiosystem</a></div><div class="ttdef"><b>Definition</b> rammarket.hpp:7</div></div>
-<div class="ttc" id="anamespaceeosiosystem_html_a084bb74fe483e49001e674d5e66001de"><div class="ttname"><a href="namespaceeosiosystem.html#a084bb74fe483e49001e674d5e66001de">eosiosystem::rammarket</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;rammarket&quot;_n, exchange_state &gt; rammarket</div><div class="ttdef"><b>Definition</b> rammarket.hpp:111</div></div>
-<div class="ttc" id="astructconnector_html"><div class="ttname"><a href="structconnector.html">connector</a></div><div class="ttdef"><b>Definition</b> eosio.system_tests.cpp:19</div></div>
-<div class="ttc" id="astructeosiosystem_1_1exchange__state_html"><div class="ttname"><a href="structeosiosystem_1_1exchange__state.html">eosiosystem::exchange_state</a></div><div class="ttdef"><b>Definition</b> rammarket.hpp:18</div></div>
-<div class="ttc" id="astructeosiosystem_1_1exchange__state_html_a124e84f589746ad2bada2ea98af5b5e2"><div class="ttname"><a href="structeosiosystem_1_1exchange__state.html#a124e84f589746ad2bada2ea98af5b5e2">eosiosystem::exchange_state::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> exchange_state.hpp:30</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8token__tests_8cpp_html_a1e7ef09ce66d09456a55c47a8c42f3dc"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#a1e7ef09ce66d09456a55c47a8c42f3dc">balance</a></div><div class="ttdeci">balance</div><div class="ttdef"><b>Definition:</b> eosio.token_tests.cpp:226</div></div>
+<div class="ttc" id="aeosio_8token__tests_8cpp_html_ad37587c54682d8fea3f46f4976e16437"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#ad37587c54682d8fea3f46f4976e16437">supply</a></div><div class="ttdeci">supply</div><div class="ttdef"><b>Definition:</b> eosio.token_tests.cpp:150</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="anamespaceeosiosystem_html"><div class="ttname"><a href="namespaceeosiosystem.html">eosiosystem</a></div><div class="ttdef"><b>Definition:</b> rammarket.hpp:7</div></div>
+<div class="ttc" id="anamespaceeosiosystem_html_a084bb74fe483e49001e674d5e66001de"><div class="ttname"><a href="namespaceeosiosystem.html#a084bb74fe483e49001e674d5e66001de">eosiosystem::rammarket</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;rammarket&quot;_n, exchange_state &gt; rammarket</div><div class="ttdef"><b>Definition:</b> rammarket.hpp:111</div></div>
+<div class="ttc" id="astructconnector_html"><div class="ttname"><a href="structconnector.html">connector</a></div><div class="ttdef"><b>Definition:</b> eosio.system_tests.cpp:19</div></div>
+<div class="ttc" id="astructeosiosystem_1_1exchange__state_html"><div class="ttname"><a href="structeosiosystem_1_1exchange__state.html">eosiosystem::exchange_state</a></div><div class="ttdef"><b>Definition:</b> rammarket.hpp:18</div></div>
+<div class="ttc" id="astructeosiosystem_1_1exchange__state_html_a124e84f589746ad2bada2ea98af5b5e2"><div class="ttname"><a href="structeosiosystem_1_1exchange__state.html#a124e84f589746ad2bada2ea98af5b5e2">eosiosystem::exchange_state::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> exchange_state.hpp:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -207,7 +195,7 @@ $(document).ready(function(){initNavTree('exchange__state_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_c7b17fecbe827499484b767f4a0bb353.html">system</a></li><li class="navelem"><a class="el" href="dir_765d85d7f96e8a0a5e7b3fc3c4f48a45.html">contracts</a></li><li class="navelem"><a class="el" href="dir_36027e831ba7e378111b1ed139ce8d26.html">eosio.system</a></li><li class="navelem"><a class="el" href="dir_4c387bed046ba3cdd7ad166ab912bc8b.html">include</a></li><li class="navelem"><a class="el" href="dir_51b9e2e6b70bf07abc825026db4a892f.html">eosio.system</a></li><li class="navelem"><a class="el" href="exchange__state_8hpp.html">exchange_state.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -31,7 +31,7 @@ var searchData=
   ['capdeclwthd2_28',['capdeclwthd2',['../group__public__capital__actions.html#ga43fa433367898cdad4ed7289914d3a08',1,'capital']]],
   ['capdeclwthd3_29',['capdeclwthd3',['../group__public__capital__actions.html#gae2650cc81987dde6a4b6132e1e2985fc',1,'capital']]],
   ['carol_30',['carol',['../eosio_8wrap__tests_8cpp.html#a84f3ef531d0454450811683adcd27d01',1,'eosio.wrap_tests.cpp']]],
-  ['cero_31',['cero',['../eosio_8token__tests_8cpp.html#a557af8169ceb02745b361bc7ede1d732',1,'CERO(&quot;max_supply&quot;, &quot;1000 CERO&quot;)(&quot;issuer&quot;:&#160;eosio.token_tests.cpp'],['../eosio_8token__tests_8cpp.html#ad015de3cd5822c81af828235f57f6f9d',1,'CERO(&quot;frozen&quot;, 0)(&quot;whitelist&quot;:&#160;eosio.token_tests.cpp']]],
+  ['cero_31',['CERO',['../eosio_8token__tests_8cpp.html#a557af8169ceb02745b361bc7ede1d732',1,'CERO(&quot;max_supply&quot;, &quot;1000 CERO&quot;)(&quot;issuer&quot;:&#160;eosio.token_tests.cpp'],['../eosio_8token__tests_8cpp.html#ad015de3cd5822c81af828235f57f6f9d',1,'CERO(&quot;frozen&quot;, 0)(&quot;whitelist&quot;:&#160;eosio.token_tests.cpp']]],
   ['cfgpowerup_32',['cfgpowerup',['../group__public__system__actions.html#gae71212071f747832a2a56eb4868d9c81',1,'eosiosystem::system_contract']]],
   ['change_5fweights_33',['change_weights',['../classeosiosystem_1_1system__contract.html#a7180a3661c6dcf143333569d64dc9a27',1,'eosiosystem::system_contract']]],
   ['changebw_34',['changebw',['../classeosiosystem_1_1system__contract.html#aa4121046f43083640f3276a4e7974572',1,'eosiosystem::system_contract']]],

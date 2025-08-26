@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,32 +128,25 @@ $(document).ready(function(){initNavTree('group__public__capital__calculate__vot
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Подсчет голосов по методу Водянова<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс завершения голосования для конкретного вкладчика с расчетом итоговых сумм по методу Водянова.</p>
+<p >Процесс завершения голосования для конкретного вкладчика с расчетом итоговых сумм по методу Водянова.</p>
 <h2><a class="anchor" id="autotoc_md269"></a>
 Назначение процесса</h2>
-<p>Подсчет голосов по методу Водянова обеспечивает:</p><ul>
+<p >Подсчет голосов по методу Водянова обеспечивает:</p><ul>
 <li>Расчет итоговых сумм вкладчика по результатам голосования</li>
 <li>Применение метода Водянова: (сумма голосов + средняя сумма распределения) / количество голосующих</li>
 <li>Распределение фиксированных премий авторам и создателям</li>
 <li>Обновление сегмента вкладчика с итоговыми суммами</li>
 </ul>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant У as Вкладчик
@@ -177,13 +170,13 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md271"></a>
 Шаг 1: Инициация подсчета голосов</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga5a69bd20db75d2d5f2849c404643fae5">Завершение голосования вкладчика</a></p>
-<p>Инициируется процесс подсчета голосов для конкретного вкладчика после завершения голосования по проекту.</p>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga5a69bd20db75d2d5f2849c404643fae5">Завершение голосования вкладчика</a></p>
+<p >Инициируется процесс подсчета голосов для конкретного вкладчика после завершения голосования по проекту.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка авторизации кооператива</dd></dl>
 <h3><a class="anchor" id="autotoc_md272"></a>
 Шаг 2: Проверка статуса проекта и завершения голосования</h3>
-<p><b>Действие:</b> Валидация состояния проекта</p>
-<p>Система проверяет, что:</p><ul>
+<p ><b>Действие:</b> Валидация состояния проекта</p>
+<p >Система проверяет, что:</p><ul>
 <li>Проект находится в статусе завершенного голосования</li>
 <li>Голосование по проекту завершено</li>
 <li>Вкладчик является вкладчиком голосования</li>
@@ -195,13 +188,13 @@ sequenceDiagram
 Подтверждено участие пользователя в голосовании</dd></dl>
 <h3><a class="anchor" id="autotoc_md273"></a>
 Шаг 3: Получение сегмента вкладчика</h3>
-<p><b>Действие:</b> Загрузка данных вкладчика</p>
-<p>Система получает сегмент вкладчика для расчета его итоговых сумм.</p>
+<p ><b>Действие:</b> Загрузка данных вкладчика</p>
+<p >Система получает сегмент вкладчика для расчета его итоговых сумм.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Получен сегмент вкладчика</dd></dl>
 <h3><a class="anchor" id="autotoc_md274"></a>
 Шаг 4: Расчет итоговых сумм</h3>
-<p><b>Действие:</b> Вычисление результатов голосования</p>
-<p>Система рассчитывает три типа итоговых сумм:</p><ul>
+<p ><b>Действие:</b> Вычисление результатов голосования</p>
+<p >Система рассчитывает три типа итоговых сумм:</p><ul>
 <li>Результаты по методу Водянова: (сумма голосов + средняя сумма распределения) / количество голосующих</li>
 <li>Равные распределения авторам: 61.8% авторских премий равномерно между авторами</li>
 <li>Прямые распределения создателям: 61.8% создательских премий</li>
@@ -209,21 +202,21 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Рассчитаны все итоговые суммы вкладчика</dd></dl>
 <h3><a class="anchor" id="autotoc_md275"></a>
 Шаг 5: Обновление сегмента вкладчика</h3>
-<p><b>Действие:</b> Сохранение результатов</p>
-<p>Система обновляет сегмент вкладчика с рассчитанными итоговыми суммами раздельно по пулам для дальнейшего использования.</p>
+<p ><b>Действие:</b> Сохранение результатов</p>
+<p >Система обновляет сегмент вкладчика с рассчитанными итоговыми суммами раздельно по пулам для дальнейшего использования.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Сегмент вкладчика обновлен с итоговыми суммами</dd></dl>
 <h2><a class="anchor" id="autotoc_md276"></a>
 Метод расчета по Водянову</h2>
-<p>Метод Водянова для расчета итоговой суммы вкладчика: </p><div class="fragment"><div class="line">итоговая_сумма = (сумма_голосов + средняя_сумма_распределения) / количество_голосующих</div>
+<p >Метод Водянова для расчета итоговой суммы вкладчика: </p><div class="fragment"><div class="line">итоговая_сумма = (сумма_голосов + средняя_сумма_распределения) / количество_голосующих</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md277"></a>
 Фиксированные распределения</h2>
-<p>Система также рассчитывает фиксированные распределения:</p><ul>
+<p >Система также рассчитывает фиксированные распределения:</p><ul>
 <li>61.8% авторских премий распределяются равномерно между всеми авторами</li>
 <li>61.8% создательских премий распределяются напрямую создателям</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md278"></a>
 Результат процесса</h2>
-<p>После завершения процесса:</p><ol type="1">
+<p >После завершения процесса:</p><ol type="1">
 <li>Рассчитаны все итоговые суммы вкладчика</li>
 <li>Сегмент вкладчика обновлен с результатами голосования</li>
 <li>Вкладчик получил свою долю по результатам голосования</li>
@@ -241,7 +234,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

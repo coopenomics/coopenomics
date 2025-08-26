@@ -8,7 +8,7 @@ var searchData=
   ['regproducer2_5faction_5',['regproducer2_action',['../classeosiosystem_1_1system__contract.html#ae39dfe220205b48d192a90abc3e790da',1,'eosiosystem::system_contract']]],
   ['regproducer_5faction_6',['regproducer_action',['../classeosiosystem_1_1system__contract.html#ab5efbdbade110f33fed3c39083d3f76f',1,'eosiosystem::system_contract']]],
   ['regproxy_5faction_7',['regproxy_action',['../classeosiosystem_1_1system__contract.html#a8b1c5e40db2dd35043dc289fec274da2',1,'eosiosystem::system_contract']]],
-  ['reqactivated_5faction_8',['reqactivated_action',['../classeosiobios_1_1bios.html#aeca598319b21f76fdf17fe8c5091d8bc',1,'eosiobios::bios::reqactivated_action'],['../classeosioboot_1_1boot.html#a5a7f8926f3b21fa1588c86472368903e',1,'eosioboot::boot::reqactivated_action']]],
+  ['reqactivated_5faction_8',['reqactivated_action',['../classeosiobios_1_1bios.html#aeca598319b21f76fdf17fe8c5091d8bc',1,'eosiobios::bios::reqactivated_action()'],['../classeosioboot_1_1boot.html#a5a7f8926f3b21fa1588c86472368903e',1,'eosioboot::boot::reqactivated_action()']]],
   ['reqauth_5faction_9',['reqauth_action',['../classeosiobios_1_1bios.html#ab0a2b9e56d84260b7cc1d496856ca232',1,'eosiobios::bios']]],
   ['requests_5findex_10',['requests_index',['../namespace_marketplace.html#a9bbcc4fa28cd7d2a6317cdffb05baeb6',1,'Marketplace']]],
   ['result_5findex_11',['result_index',['../namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4',1,'Capital']]],

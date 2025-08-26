@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('classeosio_1_1wrap.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -159,22 +152,22 @@ $(document).ready(function(){initNavTree('classeosio_1_1wrap.html',''); initResi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Открытые типы</h2></td></tr>
-<tr class="memitem:ab6b98aea95fa979a2740a617251c613e" id="r_ab6b98aea95fa979a2740a617251c613e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1wrap.html#ab6b98aea95fa979a2740a617251c613e">exec_action</a> = eosio::action_wrapper&lt;&quot;exec&quot;_n, &amp;<a class="el" href="group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60">wrap::exec</a> &gt;</td></tr>
+<tr class="memitem:ab6b98aea95fa979a2740a617251c613e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1wrap.html#ab6b98aea95fa979a2740a617251c613e">exec_action</a> = eosio::action_wrapper&lt;&quot;exec&quot;_n, &amp;<a class="el" href="group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60">wrap::exec</a> &gt;</td></tr>
 <tr class="separator:ab6b98aea95fa979a2740a617251c613e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
-<tr class="memitem:ga62a9871067de866d265fd69a5a4eac60" id="r_ga62a9871067de866d265fd69a5a4eac60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60">exec</a> (ignore&lt; name &gt; executer, ignore&lt; transaction &gt; <a class="el" href="eosio_8msig__tests_8cpp.html#a6935d36f50fec547a188728bc39593b6">trx</a>)</td></tr>
-<tr class="memdesc:ga62a9871067de866d265fd69a5a4eac60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет транзакцию, обходя обычные проверки авторизации.  <br /></td></tr>
+<tr class="memitem:ga62a9871067de866d265fd69a5a4eac60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60">exec</a> (ignore&lt; name &gt; executer, ignore&lt; transaction &gt; <a class="el" href="eosio_8msig__tests_8cpp.html#a25b4856cb0002d35fd95904362951aab">trx</a>)</td></tr>
+<tr class="memdesc:ga62a9871067de866d265fd69a5a4eac60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет транзакцию, обходя обычные проверки авторизации.  <a href="group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga62a9871067de866d265fd69a5a4eac60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p>The <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code> system contract allows block producers to bypass authorization checks or run privileged actions with 15/21 producer approval and thus simplifies block producers superuser actions. It also makes these actions easier to audit.</p>
-<p>It does not give block producers any additional powers or privileges that do not already exist within the EOSIO based blockchains. As it is implemented, in an EOSIO based blockchain, 15/21 block producers can change an account's permissions or modify an account's contract code if they decided it is beneficial for the blockchain and community. However, the current method is opaque and leaves undesirable side effects on specific system accounts, and thus the <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code>contract solves this matter by providing an easier method of executing important governance actions.</p>
-<p>The only action implemented by the <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code> system contract is the <code>exec</code> action. This action allows for execution of a transaction, which is passed to the <code>exec</code> method in the form of a packed transaction in json format via the 'trx' parameter and the <code>executer</code> account that executes the transaction. The same <code>executer</code> account will also be used to pay the RAM and CPU fees needed to execute the transaction. </p>
+<div class="textblock"><p >The <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code> system contract allows block producers to bypass authorization checks or run privileged actions with 15/21 producer approval and thus simplifies block producers superuser actions. It also makes these actions easier to audit.</p>
+<p >It does not give block producers any additional powers or privileges that do not already exist within the EOSIO based blockchains. As it is implemented, in an EOSIO based blockchain, 15/21 block producers can change an account's permissions or modify an account's contract code if they decided it is beneficial for the blockchain and community. However, the current method is opaque and leaves undesirable side effects on specific system accounts, and thus the <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code>contract solves this matter by providing an easier method of executing important governance actions.</p>
+<p >The only action implemented by the <code><a class="el" href="classeosio_1_1wrap.html">eosio.wrap</a></code> system contract is the <code>exec</code> action. This action allows for execution of a transaction, which is passed to the <code>exec</code> method in the form of a packed transaction in json format via the 'trx' parameter and the <code>executer</code> account that executes the transaction. The same <code>executer</code> account will also be used to pay the RAM and CPU fees needed to execute the transaction. </p>
 </div><h2 class="groupheader">Определения типов</h2>
 <a id="ab6b98aea95fa979a2740a617251c613e" name="ab6b98aea95fa979a2740a617251c613e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6b98aea95fa979a2740a617251c613e">&#9670;&#160;</a></span>exec_action</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6b98aea95fa979a2740a617251c613e">&#9670;&nbsp;</a></span>exec_action</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +191,7 @@ $(document).ready(function(){initNavTree('classeosio_1_1wrap.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeosio.html">eosio</a></li><li class="navelem"><a class="el" href="classeosio_1_1wrap.html">wrap</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

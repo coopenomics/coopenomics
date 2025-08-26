@@ -1,7 +1,7 @@
 var searchData=
 [
   ['cancel_5faction_0',['cancel_action',['../classeosio_1_1multisig.html#aa24ce647e2b69d4def57d629b12a5947',1,'eosio::multisig']]],
-  ['canceldelay_5faction_1',['canceldelay_action',['../classeosiobios_1_1bios.html#acf3f2105a1de301314fb8d559adb2f34',1,'eosiobios::bios::canceldelay_action'],['../classeosioboot_1_1boot.html#a429ac92bc85444c33f5bbb5045685120',1,'eosioboot::boot::canceldelay_action'],['../classeosiosystem_1_1native.html#aa83db95970cb619e8d1715e5d83bbb52',1,'eosiosystem::native::canceldelay_action']]],
+  ['canceldelay_5faction_1',['canceldelay_action',['../classeosiobios_1_1bios.html#acf3f2105a1de301314fb8d559adb2f34',1,'eosiobios::bios::canceldelay_action()'],['../classeosioboot_1_1boot.html#a429ac92bc85444c33f5bbb5045685120',1,'eosioboot::boot::canceldelay_action()'],['../classeosiosystem_1_1native.html#aa83db95970cb619e8d1715e5d83bbb52',1,'eosiosystem::native::canceldelay_action()']]],
   ['candidates_5findex_2',['candidates_index',['../namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3',1,'Registrator']]],
   ['candidates_5flegacy_5findex_3',['candidates_legacy_index',['../namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806',1,'Registrator']]],
   ['capital_5fwallets_5findex_4',['capital_wallets_index',['../namespace_capital.html#a043c1357e1f2b4bf4c7b23e4ee21663d',1,'Capital']]],

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -150,13 +138,11 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 </div><!--header-->
 <div class="contents">
 <a href="lib_2balances_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structbalances__base.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structbalances__base.html">balances_base</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structbalances__base.html#a2069a54454c59cae6ac2a977002bc8ce">   11</a></span>  uint64_t <a class="code hl_variable" href="structbalances__base.html#a2069a54454c59cae6ac2a977002bc8ce">id</a>;          </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structbalances__base.html#acebf235da280f8d16533b6913912da41">   12</a></span>  eosio::name <a class="code hl_variable" href="structbalances__base.html#acebf235da280f8d16533b6913912da41">contract</a>; </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structbalances__base.html#a1c3e3dfd8436a6e847dfbe620ba26c23">   13</a></span>  eosio::asset <a class="code hl_variable" href="structbalances__base.html#a1c3e3dfd8436a6e847dfbe620ba26c23">quantity</a>; </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structbalances__base.html#a242d9cbeea53e487eff7eb9349327931">   15</a></span>  uint64_t <a class="code hl_function" href="structbalances__base.html#a242d9cbeea53e487eff7eb9349327931">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structbalances__base.html#a2069a54454c59cae6ac2a977002bc8ce">id</a>; } </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structbalances__base.html#af43d841c9f521f6fbbed7c943d4fd366">   17</a></span>  uint128_t <a class="code hl_function" href="structbalances__base.html#af43d841c9f521f6fbbed7c943d4fd366">byconsym</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(<a class="code hl_variable" href="structbalances__base.html#acebf235da280f8d16533b6913912da41">contract</a>.value, <a class="code hl_variable" href="structbalances__base.html#a1c3e3dfd8436a6e847dfbe620ba26c23">quantity</a>.symbol.code().raw());</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  } </div>
@@ -166,8 +152,7 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// -----------------------------------------------------------------</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// Таблица кошельков конкретных программ</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// -----------------------------------------------------------------</span></div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structprogwallet.html">   39</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(SOVIET)]] <a class="code hl_struct" href="structprogwallet.html">progwallet</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structprogwallet.html">   39</a></span><span class="comment"></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(SOVIET)]] <a class="code hl_struct" href="structprogwallet.html">progwallet</a> {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b">   40</a></span>  uint64_t <a class="code hl_variable" href="structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b">id</a>; </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa">   41</a></span>  eosio::name <a class="code hl_variable" href="structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa">coopname</a>; </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df">   42</a></span>  uint64_t <a class="code hl_variable" href="structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df">program_id</a>; </div>
@@ -180,12 +165,9 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398">   50</a></span>  uint64_t <a class="code hl_function" href="structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b">id</a>; }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95">   51</a></span>  uint64_t <a class="code hl_function" href="structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95">by_username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c">   52</a></span>  uint64_t <a class="code hl_function" href="structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c">by_program</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df">program_id</a>; } </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd">   53</a></span>  uint64_t <a class="code hl_function" href="structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd">by_agreement</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structprogwallet.html#a28452c58972d6265119beea328dc775b">agreement_id</a>; } </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48">   55</a></span>  uint128_t <a class="code hl_function" href="structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48">by_username_and_program</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(username.value, program_id);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  } </div>
@@ -199,7 +181,6 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  eosio::indexed_by&lt;<span class="stringliteral">&quot;byuserprog&quot;</span>_n, eosio::const_mem_fun&lt;progwallet, uint128_t, &amp;progwallet::by_username_and_program&gt;&gt;,</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  eosio::indexed_by&lt;<span class="stringliteral">&quot;byagreement&quot;</span>_n, eosio::const_mem_fun&lt;progwallet, uint64_t, &amp;progwallet::by_agreement&gt;&gt;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="lib_2balances_8hpp.html#a0f40b9398838c9d5f9f4c83899c34cfd">   67</a></span>&gt; <a class="code hl_typedef" href="lib_2balances_8hpp.html#a0f40b9398838c9d5f9f4c83899c34cfd">progwallets_index</a>; </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="lib_2balances_8hpp.html#a2b13d77eb0cf762f057be96b5bd23f1f">   69</a></span><a class="code hl_struct" href="structprogwallet.html">progwallet</a> <a class="code hl_function" href="lib_2balances_8hpp.html#a2b13d77eb0cf762f057be96b5bd23f1f">get_user_program_wallet_or_fail</a>(eosio::name coopname, eosio::name username, uint64_t program_id) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_typedef" href="lib_2balances_8hpp.html#a0f40b9398838c9d5f9f4c83899c34cfd">progwallets_index</a> progwallets(<a class="code hl_variable" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  </div>
@@ -211,41 +192,34 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordflow">return</span> *<a class="code hl_class" href="classwallet.html">wallet</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ttc" id="aclasswallet_html"><div class="ttname"><a href="classwallet.html">wallet</a></div><div class="ttdoc">Контракт Wallet управляет взносами и возвратами взносов по ЦПП &quot;Цифровой Кошелёк&quot;.</div><div class="ttdef"><b>Definition</b> wallet.hpp:16</div></div>
-<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition</b> consts.hpp:156</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="alib_2balances_8hpp_html_a0f40b9398838c9d5f9f4c83899c34cfd"><div class="ttname"><a href="lib_2balances_8hpp.html#a0f40b9398838c9d5f9f4c83899c34cfd">progwallets_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;progwallets&quot;_n, progwallet, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;byprogram&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_program &gt; &gt;, eosio::indexed_by&lt;&quot;byuserprog&quot;_n, eosio::const_mem_fun&lt; progwallet, uint128_t, &amp;progwallet::by_username_and_program &gt; &gt;, eosio::indexed_by&lt;&quot;byagreement&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_agreement &gt; &gt; &gt; progwallets_index</div><div class="ttdef"><b>Definition</b> balances.hpp:67</div></div>
-<div class="ttc" id="alib_2balances_8hpp_html_a2b13d77eb0cf762f057be96b5bd23f1f"><div class="ttname"><a href="lib_2balances_8hpp.html#a2b13d77eb0cf762f057be96b5bd23f1f">get_user_program_wallet_or_fail</a></div><div class="ttdeci">progwallet get_user_program_wallet_or_fail(eosio::name coopname, eosio::name username, uint64_t program_id)</div><div class="ttdef"><b>Definition</b> balances.hpp:69</div></div>
-<div class="ttc" id="alib_2balances_8hpp_html_a2f044097a1d44c2a73b8f5bd7719439e"><div class="ttname"><a href="lib_2balances_8hpp.html#a2f044097a1d44c2a73b8f5bd7719439e">balances_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;balances&quot;_n, balances_base, eosio::indexed_by&lt;&quot;byconsym&quot;_n, eosio::const_mem_fun&lt; balances_base, uint128_t, &amp;balances_base::byconsym &gt; &gt; &gt; balances_index</div><div class="ttdef"><b>Definition</b> balances.hpp:22</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astructbalances__base_html"><div class="ttname"><a href="structbalances__base.html">balances_base</a></div><div class="ttdoc">Структура таблицы баланса.</div><div class="ttdef"><b>Definition</b> balances.hpp:10</div></div>
-<div class="ttc" id="astructbalances__base_html_a1c3e3dfd8436a6e847dfbe620ba26c23"><div class="ttname"><a href="structbalances__base.html#a1c3e3dfd8436a6e847dfbe620ba26c23">balances_base::quantity</a></div><div class="ttdeci">eosio::asset quantity</div><div class="ttdef"><b>Definition</b> balances.hpp:13</div></div>
-<div class="ttc" id="astructbalances__base_html_a2069a54454c59cae6ac2a977002bc8ce"><div class="ttname"><a href="structbalances__base.html#a2069a54454c59cae6ac2a977002bc8ce">balances_base::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition</b> balances.hpp:11</div></div>
-<div class="ttc" id="astructbalances__base_html_a242d9cbeea53e487eff7eb9349327931"><div class="ttname"><a href="structbalances__base.html#a242d9cbeea53e487eff7eb9349327931">balances_base::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> balances.hpp:15</div></div>
-<div class="ttc" id="astructbalances__base_html_acebf235da280f8d16533b6913912da41"><div class="ttname"><a href="structbalances__base.html#acebf235da280f8d16533b6913912da41">balances_base::contract</a></div><div class="ttdeci">eosio::name contract</div><div class="ttdef"><b>Definition</b> balances.hpp:12</div></div>
-<div class="ttc" id="astructbalances__base_html_af43d841c9f521f6fbbed7c943d4fd366"><div class="ttname"><a href="structbalances__base.html#af43d841c9f521f6fbbed7c943d4fd366">balances_base::byconsym</a></div><div class="ttdeci">uint128_t byconsym() const</div><div class="ttdef"><b>Definition</b> balances.hpp:17</div></div>
-<div class="ttc" id="astructprogwallet_html"><div class="ttname"><a href="structprogwallet.html">progwallet</a></div><div class="ttdoc">Таблица кошельков программ кооператива</div><div class="ttdef"><b>Definition</b> balances.hpp:39</div></div>
-<div class="ttc" id="astructprogwallet_html_a28452c58972d6265119beea328dc775b"><div class="ttname"><a href="structprogwallet.html#a28452c58972d6265119beea328dc775b">progwallet::agreement_id</a></div><div class="ttdeci">uint64_t agreement_id</div><div class="ttdoc">Идентификатор соглашения</div><div class="ttdef"><b>Definition</b> balances.hpp:43</div></div>
-<div class="ttc" id="astructprogwallet_html_a2af4089401221ea41833056eac18f538"><div class="ttname"><a href="structprogwallet.html#a2af4089401221ea41833056eac18f538">progwallet::available</a></div><div class="ttdeci">eosio::asset available</div><div class="ttdoc">Доступные средства паевого взноса</div><div class="ttdef"><b>Definition</b> balances.hpp:45</div></div>
-<div class="ttc" id="astructprogwallet_html_a31b4906def8d1a6b37bfd1432787360b"><div class="ttname"><a href="structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b">progwallet::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Уникальный идентификатор кошелька</div><div class="ttdef"><b>Definition</b> balances.hpp:40</div></div>
-<div class="ttc" id="astructprogwallet_html_a39f1d25b58c900fb3e4af41a4051f9b8"><div class="ttname"><a href="structprogwallet.html#a39f1d25b58c900fb3e4af41a4051f9b8">progwallet::membership_contribution</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; membership_contribution</div><div class="ttdoc">Внесенный членский взнос</div><div class="ttdef"><b>Definition</b> balances.hpp:47</div></div>
-<div class="ttc" id="astructprogwallet_html_a3dca49bf3da48d9de7e6033b1dd61c95"><div class="ttname"><a href="structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95">progwallet::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя</div><div class="ttdef"><b>Definition</b> balances.hpp:51</div></div>
-<div class="ttc" id="astructprogwallet_html_a410c433920c4d749335fd1f02937e038"><div class="ttname"><a href="structprogwallet.html#a410c433920c4d749335fd1f02937e038">progwallet::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя пользователя</div><div class="ttdef"><b>Definition</b> balances.hpp:44</div></div>
-<div class="ttc" id="astructprogwallet_html_a695c77f25046ba4d46476fead7bdae07"><div class="ttname"><a href="structprogwallet.html#a695c77f25046ba4d46476fead7bdae07">progwallet::blocked</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; blocked</div><div class="ttdoc">Недоступные средства паевого взноса</div><div class="ttdef"><b>Definition</b> balances.hpp:46</div></div>
-<div class="ttc" id="astructprogwallet_html_a95a8bfc8c2a21a4dbcd678b1454c52df"><div class="ttname"><a href="structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df">progwallet::program_id</a></div><div class="ttdeci">uint64_t program_id</div><div class="ttdoc">Идентификатор программы</div><div class="ttdef"><b>Definition</b> balances.hpp:42</div></div>
-<div class="ttc" id="astructprogwallet_html_ab865f7e15bca7860dee2b57f8118db48"><div class="ttname"><a href="structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48">progwallet::by_username_and_program</a></div><div class="ttdeci">uint128_t by_username_and_program() const</div><div class="ttdoc">Комбинированный индекс по имени пользователя и идентификатору программы</div><div class="ttdef"><b>Definition</b> balances.hpp:55</div></div>
-<div class="ttc" id="astructprogwallet_html_ac2e6359cb81bde879716cb56b89fc2bd"><div class="ttname"><a href="structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd">progwallet::by_agreement</a></div><div class="ttdeci">uint64_t by_agreement() const</div><div class="ttdoc">Индекс по идентификатору соглашения</div><div class="ttdef"><b>Definition</b> balances.hpp:53</div></div>
-<div class="ttc" id="astructprogwallet_html_ace9e56fc5b3da08327c06526680b90aa"><div class="ttname"><a href="structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa">progwallet::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> balances.hpp:41</div></div>
-<div class="ttc" id="astructprogwallet_html_ad7deef4dc1c9d49475969e9f87bf8398"><div class="ttname"><a href="structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398">progwallet::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> balances.hpp:50</div></div>
-<div class="ttc" id="astructprogwallet_html_af8ffd261685f17e66c52f6936f80f91c"><div class="ttname"><a href="structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c">progwallet::by_program</a></div><div class="ttdeci">uint64_t by_program() const</div><div class="ttdoc">Индекс по идентификатору программы</div><div class="ttdef"><b>Definition</b> balances.hpp:52</div></div>
-<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition</b> utils.hpp:5</div></div>
+<div class="ttc" id="aclasswallet_html"><div class="ttname"><a href="classwallet.html">wallet</a></div><div class="ttdoc">Контракт Wallet управляет взносами и возвратами взносов по ЦПП &quot;Цифровой Кошелёк&quot;.</div><div class="ttdef"><b>Definition:</b> wallet.hpp:16</div></div>
+<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition:</b> consts.hpp:156</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="alib_2balances_8hpp_html_a0f40b9398838c9d5f9f4c83899c34cfd"><div class="ttname"><a href="lib_2balances_8hpp.html#a0f40b9398838c9d5f9f4c83899c34cfd">progwallets_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;progwallets&quot;_n, progwallet, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;byprogram&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_program &gt; &gt;, eosio::indexed_by&lt;&quot;byuserprog&quot;_n, eosio::const_mem_fun&lt; progwallet, uint128_t, &amp;progwallet::by_username_and_program &gt; &gt;, eosio::indexed_by&lt;&quot;byagreement&quot;_n, eosio::const_mem_fun&lt; progwallet, uint64_t, &amp;progwallet::by_agreement &gt; &gt; &gt; progwallets_index</div><div class="ttdef"><b>Definition:</b> balances.hpp:67</div></div>
+<div class="ttc" id="alib_2balances_8hpp_html_a2b13d77eb0cf762f057be96b5bd23f1f"><div class="ttname"><a href="lib_2balances_8hpp.html#a2b13d77eb0cf762f057be96b5bd23f1f">get_user_program_wallet_or_fail</a></div><div class="ttdeci">progwallet get_user_program_wallet_or_fail(eosio::name coopname, eosio::name username, uint64_t program_id)</div><div class="ttdef"><b>Definition:</b> balances.hpp:69</div></div>
+<div class="ttc" id="alib_2balances_8hpp_html_a2f044097a1d44c2a73b8f5bd7719439e"><div class="ttname"><a href="lib_2balances_8hpp.html#a2f044097a1d44c2a73b8f5bd7719439e">balances_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;balances&quot;_n, balances_base, eosio::indexed_by&lt;&quot;byconsym&quot;_n, eosio::const_mem_fun&lt; balances_base, uint128_t, &amp;balances_base::byconsym &gt; &gt; &gt; balances_index</div><div class="ttdef"><b>Definition:</b> balances.hpp:22</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructbalances__base_html"><div class="ttname"><a href="structbalances__base.html">balances_base</a></div><div class="ttdoc">Структура таблицы баланса.</div><div class="ttdef"><b>Definition:</b> balances.hpp:10</div></div>
+<div class="ttc" id="astructbalances__base_html_a1c3e3dfd8436a6e847dfbe620ba26c23"><div class="ttname"><a href="structbalances__base.html#a1c3e3dfd8436a6e847dfbe620ba26c23">balances_base::quantity</a></div><div class="ttdeci">eosio::asset quantity</div><div class="ttdef"><b>Definition:</b> balances.hpp:13</div></div>
+<div class="ttc" id="astructbalances__base_html_a2069a54454c59cae6ac2a977002bc8ce"><div class="ttname"><a href="structbalances__base.html#a2069a54454c59cae6ac2a977002bc8ce">balances_base::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition:</b> balances.hpp:11</div></div>
+<div class="ttc" id="astructbalances__base_html_a242d9cbeea53e487eff7eb9349327931"><div class="ttname"><a href="structbalances__base.html#a242d9cbeea53e487eff7eb9349327931">balances_base::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> balances.hpp:15</div></div>
+<div class="ttc" id="astructbalances__base_html_acebf235da280f8d16533b6913912da41"><div class="ttname"><a href="structbalances__base.html#acebf235da280f8d16533b6913912da41">balances_base::contract</a></div><div class="ttdeci">eosio::name contract</div><div class="ttdef"><b>Definition:</b> balances.hpp:12</div></div>
+<div class="ttc" id="astructbalances__base_html_af43d841c9f521f6fbbed7c943d4fd366"><div class="ttname"><a href="structbalances__base.html#af43d841c9f521f6fbbed7c943d4fd366">balances_base::byconsym</a></div><div class="ttdeci">uint128_t byconsym() const</div><div class="ttdef"><b>Definition:</b> balances.hpp:17</div></div>
+<div class="ttc" id="astructprogwallet_html"><div class="ttname"><a href="structprogwallet.html">progwallet</a></div><div class="ttdoc">Таблица кошельков программ кооператива</div><div class="ttdef"><b>Definition:</b> balances.hpp:39</div></div>
+<div class="ttc" id="astructprogwallet_html_a28452c58972d6265119beea328dc775b"><div class="ttname"><a href="structprogwallet.html#a28452c58972d6265119beea328dc775b">progwallet::agreement_id</a></div><div class="ttdeci">uint64_t agreement_id</div><div class="ttdoc">Идентификатор соглашения</div><div class="ttdef"><b>Definition:</b> balances.hpp:43</div></div>
+<div class="ttc" id="astructprogwallet_html_a2af4089401221ea41833056eac18f538"><div class="ttname"><a href="structprogwallet.html#a2af4089401221ea41833056eac18f538">progwallet::available</a></div><div class="ttdeci">eosio::asset available</div><div class="ttdoc">Доступные средства паевого взноса</div><div class="ttdef"><b>Definition:</b> balances.hpp:45</div></div>
+<div class="ttc" id="astructprogwallet_html_a31b4906def8d1a6b37bfd1432787360b"><div class="ttname"><a href="structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b">progwallet::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Уникальный идентификатор кошелька</div><div class="ttdef"><b>Definition:</b> balances.hpp:40</div></div>
+<div class="ttc" id="astructprogwallet_html_a39f1d25b58c900fb3e4af41a4051f9b8"><div class="ttname"><a href="structprogwallet.html#a39f1d25b58c900fb3e4af41a4051f9b8">progwallet::membership_contribution</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; membership_contribution</div><div class="ttdoc">Внесенный членский взнос</div><div class="ttdef"><b>Definition:</b> balances.hpp:47</div></div>
+<div class="ttc" id="astructprogwallet_html_a3dca49bf3da48d9de7e6033b1dd61c95"><div class="ttname"><a href="structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95">progwallet::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя</div><div class="ttdef"><b>Definition:</b> balances.hpp:51</div></div>
+<div class="ttc" id="astructprogwallet_html_a410c433920c4d749335fd1f02937e038"><div class="ttname"><a href="structprogwallet.html#a410c433920c4d749335fd1f02937e038">progwallet::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя пользователя</div><div class="ttdef"><b>Definition:</b> balances.hpp:44</div></div>
+<div class="ttc" id="astructprogwallet_html_a695c77f25046ba4d46476fead7bdae07"><div class="ttname"><a href="structprogwallet.html#a695c77f25046ba4d46476fead7bdae07">progwallet::blocked</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; blocked</div><div class="ttdoc">Недоступные средства паевого взноса</div><div class="ttdef"><b>Definition:</b> balances.hpp:46</div></div>
+<div class="ttc" id="astructprogwallet_html_a95a8bfc8c2a21a4dbcd678b1454c52df"><div class="ttname"><a href="structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df">progwallet::program_id</a></div><div class="ttdeci">uint64_t program_id</div><div class="ttdoc">Идентификатор программы</div><div class="ttdef"><b>Definition:</b> balances.hpp:42</div></div>
+<div class="ttc" id="astructprogwallet_html_ab865f7e15bca7860dee2b57f8118db48"><div class="ttname"><a href="structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48">progwallet::by_username_and_program</a></div><div class="ttdeci">uint128_t by_username_and_program() const</div><div class="ttdoc">Комбинированный индекс по имени пользователя и идентификатору программы</div><div class="ttdef"><b>Definition:</b> balances.hpp:55</div></div>
+<div class="ttc" id="astructprogwallet_html_ac2e6359cb81bde879716cb56b89fc2bd"><div class="ttname"><a href="structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd">progwallet::by_agreement</a></div><div class="ttdeci">uint64_t by_agreement() const</div><div class="ttdoc">Индекс по идентификатору соглашения</div><div class="ttdef"><b>Definition:</b> balances.hpp:53</div></div>
+<div class="ttc" id="astructprogwallet_html_ace9e56fc5b3da08327c06526680b90aa"><div class="ttname"><a href="structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa">progwallet::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> balances.hpp:41</div></div>
+<div class="ttc" id="astructprogwallet_html_ad7deef4dc1c9d49475969e9f87bf8398"><div class="ttname"><a href="structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398">progwallet::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> balances.hpp:50</div></div>
+<div class="ttc" id="astructprogwallet_html_af8ffd261685f17e66c52f6936f80f91c"><div class="ttname"><a href="structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c">progwallet::by_program</a></div><div class="ttdeci">uint64_t by_program() const</div><div class="ttdoc">Индекс по идентификатору программы</div><div class="ttdef"><b>Definition:</b> balances.hpp:52</div></div>
+<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition:</b> utils.hpp:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -253,7 +227,7 @@ $(document).ready(function(){initNavTree('lib_2balances_8hpp_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="lib_2balances_8hpp.html">balances.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

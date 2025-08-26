@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('shared__actions_8hpp_source.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -156,12 +144,10 @@ $(document).ready(function(){initNavTree('shared__actions_8hpp_source.html','');
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespace_action.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_action.html">Action</a> {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> ExpectedSignature, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">   10</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">send</a>(name contract, name action_name, name actor, Args&amp;&amp;... args) {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">using </span>DecayedSignature = void(std::decay_t&lt;Args&gt;...);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">   10</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">send</a>(name <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>, name action_name, name actor, Args&amp;&amp;... args) {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">using</span> DecayedSignature = void(std::decay_t&lt;Args&gt;...);</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static_assert</span>(std::is_same_v&lt;ExpectedSignature, DecayedSignature&gt;,</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="stringliteral">&quot;Argument types do not match the expected action signature&quot;</span>);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
@@ -173,14 +159,12 @@ $(document).ready(function(){initNavTree('shared__actions_8hpp_source.html','');
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      std::make_tuple(std::forward&lt;Args&gt;(args)...)</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    ).<a class="code hl_function" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">send</a>();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  }</div>
-</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
-</div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_adb5a7af6f4a8319d70ccf6363031f4dc"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a></div><div class="ttdeci">permission_level</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:896</div></div>
-<div class="ttc" id="anamespace_action_html"><div class="ttname"><a href="namespace_action.html">Action</a></div><div class="ttdef"><b>Definition</b> shared_actions.hpp:8</div></div>
-<div class="ttc" id="anamespace_action_html_a834c43bc3c681b1b84987f3bdc248dcb"><div class="ttname"><a href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">Action::send</a></div><div class="ttdeci">void send(name contract, name action_name, name actor, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> shared_actions.hpp:10</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_adb5a7af6f4a8319d70ccf6363031f4dc"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a></div><div class="ttdeci">permission_level</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:896</div></div>
+<div class="ttc" id="anamespace_action_html"><div class="ttname"><a href="namespace_action.html">Action</a></div><div class="ttdef"><b>Definition:</b> shared_actions.hpp:8</div></div>
+<div class="ttc" id="anamespace_action_html_a834c43bc3c681b1b84987f3bdc248dcb"><div class="ttname"><a href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">Action::send</a></div><div class="ttdeci">void send(name contract, name action_name, name actor, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> shared_actions.hpp:10</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
 <div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -189,7 +173,7 @@ $(document).ready(function(){initNavTree('shared__actions_8hpp_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__actions_8hpp.html">shared_actions.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

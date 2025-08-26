@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('namespaceeosio.html',''); initResizabl
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -159,17 +152,17 @@ $(document).ready(function(){initNavTree('namespaceeosio.html',''); initResizabl
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a5a18f73f0452f4391a2e8abfc7d0f373" id="r_a5a18f73f0452f4391a2e8abfc7d0f373"><td class="memItemLeft" align="right" valign="top">transaction_header&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#a5a18f73f0452f4391a2e8abfc7d0f373">get_trx_header</a> (const char *ptr, size_t sz)</td></tr>
+<tr class="memitem:a5a18f73f0452f4391a2e8abfc7d0f373"><td class="memItemLeft" align="right" valign="top">transaction_header&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#a5a18f73f0452f4391a2e8abfc7d0f373">get_trx_header</a> (const char *ptr, size_t sz)</td></tr>
 <tr class="separator:a5a18f73f0452f4391a2e8abfc7d0f373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af902933339a070f5af0f38e4c4af7f07" id="r_af902933339a070f5af0f38e4c4af7f07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#af902933339a070f5af0f38e4c4af7f07">trx_is_authorized</a> (const std::vector&lt; permission_level &gt; &amp;approvals, const std::vector&lt; char &gt; &amp;packed_trx)</td></tr>
+<tr class="memitem:af902933339a070f5af0f38e4c4af7f07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#af902933339a070f5af0f38e4c4af7f07">trx_is_authorized</a> (const std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt; &amp;approvals, const std::vector&lt; char &gt; &amp;packed_trx)</td></tr>
 <tr class="separator:af902933339a070f5af0f38e4c4af7f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaa5d0db854d769ac41e2f062f417485" id="r_abaa5d0db854d769ac41e2f062f417485"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
-<tr class="memitem:abaa5d0db854d769ac41e2f062f417485"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; permission_level &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#abaa5d0db854d769ac41e2f062f417485">get_approvals_and_adjust_table</a> (name self, name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, Function &amp;&amp;table_op)</td></tr>
+<tr class="memitem:abaa5d0db854d769ac41e2f062f417485"><td class="memTemplParams" colspan="2">template&lt;typename Function &gt; </td></tr>
+<tr class="memitem:abaa5d0db854d769ac41e2f062f417485"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio.html#abaa5d0db854d769ac41e2f062f417485">get_approvals_and_adjust_table</a> (name self, name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, Function &amp;&amp;table_op)</td></tr>
 <tr class="separator:abaa5d0db854d769ac41e2f062f417485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
 <a id="abaa5d0db854d769ac41e2f062f417485" name="abaa5d0db854d769ac41e2f062f417485"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaa5d0db854d769ac41e2f062f417485">&#9670;&#160;</a></span>get_approvals_and_adjust_table()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa5d0db854d769ac41e2f062f417485">&#9670;&nbsp;</a></span>get_approvals_and_adjust_table()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +170,7 @@ $(document).ready(function(){initNavTree('namespaceeosio.html',''); initResizabl
 template&lt;typename Function &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; permission_level &gt; eosio::get_approvals_and_adjust_table </td>
+          <td class="memname">std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt; eosio::get_approvals_and_adjust_table </td>
           <td>(</td>
           <td class="paramtype">name&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -211,7 +204,7 @@ template&lt;typename Function &gt; </div>
 </div>
 </div>
 <a id="a5a18f73f0452f4391a2e8abfc7d0f373" name="a5a18f73f0452f4391a2e8abfc7d0f373"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a18f73f0452f4391a2e8abfc7d0f373">&#9670;&#160;</a></span>get_trx_header()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a18f73f0452f4391a2e8abfc7d0f373">&#9670;&nbsp;</a></span>get_trx_header()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +232,7 @@ template&lt;typename Function &gt; </div>
 </div>
 </div>
 <a id="af902933339a070f5af0f38e4c4af7f07" name="af902933339a070f5af0f38e4c4af7f07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af902933339a070f5af0f38e4c4af7f07">&#9670;&#160;</a></span>trx_is_authorized()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af902933339a070f5af0f38e4c4af7f07">&#9670;&nbsp;</a></span>trx_is_authorized()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +240,7 @@ template&lt;typename Function &gt; </div>
         <tr>
           <td class="memname">bool eosio::trx_is_authorized </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; permission_level &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>approvals</em>, </td>
         </tr>
         <tr>
@@ -273,7 +266,7 @@ template&lt;typename Function &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceeosio.html">eosio</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

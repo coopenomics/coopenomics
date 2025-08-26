@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,32 +128,25 @@ $(document).ready(function(){initNavTree('group__public__capital__project__openi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Открытие проекта для инвестиций<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс перевода запланированного проекта в статус открытого для привлечения инвестиций от участников кооператива.</p>
+<p >Процесс перевода запланированного проекта в статус открытого для привлечения инвестиций от участников кооператива.</p>
 <h2><a class="anchor" id="autotoc_md175"></a>
 Назначение процесса</h2>
-<p>Открытие проекта для инвестиций обеспечивает:</p><ul>
+<p >Открытие проекта для инвестиций обеспечивает:</p><ul>
 <li>Переход от фазы планирования к фазе привлечения средств</li>
 <li>Активацию возможности инвестирования для участников</li>
 <li>Начало формирования финансовой базы проекта</li>
 <li>Подготовку к активной фазе реализации</li>
 </ul>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant К as Кооператив
@@ -176,12 +169,12 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md177"></a>
 Шаг 1: Инициация открытия проекта</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga509604228af7d1590786d8722356ba62">Открытие проекта</a></p>
-<p>Кооператив инициирует открытие проекта для инвестиций после завершения фазы планирования и подготовки всех необходимых параметров проекта.</p>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga509604228af7d1590786d8722356ba62">Открытие проекта</a></p>
+<p >Кооператив инициирует открытие проекта для инвестиций после завершения фазы планирования и подготовки всех необходимых параметров проекта.</p>
 <h3><a class="anchor" id="autotoc_md178"></a>
 Шаг 2: Проверка готовности проекта</h3>
-<p><b>Действие:</b> Валидация предварительных условий</p>
-<p>Система проверяет готовность проекта к открытию:</p><ul>
+<p ><b>Действие:</b> Валидация предварительных условий</p>
+<p >Система проверяет готовность проекта к открытию:</p><ul>
 <li>Проект должен быть в статусе запланированного (is_planed = true)</li>
 <li>Проект не должен быть уже открыт (is_opened = false)</li>
 <li>План проекта должен быть установлен</li>
@@ -189,8 +182,8 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Подтверждены все предварительные условия</dd></dl>
 <h3><a class="anchor" id="autotoc_md179"></a>
 Шаг 3: Открытие проекта</h3>
-<p><b>Действие:</b> Активация инвестиционной фазы</p>
-<p>Система переводит проект в статус открытого для инвестиций:</p><ul>
+<p ><b>Действие:</b> Активация инвестиционной фазы</p>
+<p >Система переводит проект в статус открытого для инвестиций:</p><ul>
 <li>Устанавливает флаг is_opened = true</li>
 <li>Копирует план расходов в фактические данные (target_expense_pool)</li>
 <li>Активирует возможность операций инвестирования</li>
@@ -202,20 +195,20 @@ sequenceDiagram
 target_expense_pool скопирован в fact.target_expense_pool</dd></dl>
 <h2><a class="anchor" id="autotoc_md180"></a>
 Условия для открытия</h2>
-<p><b>Обязательные требования:</b></p><ul>
+<p ><b>Обязательные требования:</b></p><ul>
 <li>Проект должен быть запланирован (is_planed = true)</li>
 <li>Проект не должен быть уже открыт (is_opened = false)</li>
 <li>Должен быть установлен план проекта через setplan</li>
 <li>Должен быть назначен мастер проекта</li>
 </ul>
-<p><b>Результат открытия:</b></p><ul>
+<p ><b>Результат открытия:</b></p><ul>
 <li>Флаг is_opened устанавливается в true</li>
 <li>plan.target_expense_pool копируется в fact.target_expense_pool</li>
 <li>Разрешаются операции инвестирования</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md181"></a>
 Результат процесса</h2>
-<p>После завершения процесса:</p><ol type="1">
+<p >После завершения процесса:</p><ol type="1">
 <li>Проект переведен в статус открытого для инвестиций</li>
 <li>Активированы механизмы привлечения средств</li>
 <li>Создана финансовая основа для реализации проекта</li>
@@ -239,7 +232,7 @@ target_expense_pool скопирован в fact.target_expense_pool</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

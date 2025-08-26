@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,23 +128,16 @@ $(document).ready(function(){initNavTree('group__public__capital__allocate__proc
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Аллокация программных инвестиций<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс, при котором кооператив аллоцирует инвестиции из программы "Капитализация" в конкретный проект для использования в выдаче ссуд и возврате себестоимости вложений создателям, авторам и координаторам.</p>
+<p >Процесс, при котором кооператив аллоцирует инвестиции из программы "Капитализация" в конкретный проект для использования в выдаче ссуд и возврате себестоимости вложений создателям, авторам и координаторам.</p>
 <dl class="section pre"><dt>Предусловие</dt><dd><b>Обязательные условия:</b><ul>
 <li>Положительный баланс свободных инвестиционных средств в программе "Капитализация"</li>
 <li>Существующий и активный проект</li>
@@ -171,25 +164,25 @@ $(document).ready(function(){initNavTree('group__public__capital__allocate__proc
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md111"></a>
 Шаг 1: Инициация аллокации средств</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga863e1743ec6e7abb603e40217a4520c5">Аллокация инвестиций</a></p>
-<p>Кооператив инициирует процесс аллокации средств из программы "Капитализация" в конкретный проект. Это необходимо для использования средств в выдаче ссуд и возврате себестоимости вложений.</p>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga863e1743ec6e7abb603e40217a4520c5">Аллокация инвестиций</a></p>
+<p >Кооператив инициирует процесс аллокации средств из программы "Капитализация" в конкретный проект. Это необходимо для использования средств в выдаче ссуд и возврате себестоимости вложений.</p>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта кооператива, подтверждая его право распоряжаться средствами программы капитализации</dd></dl>
 <h3><a class="anchor" id="autotoc_md112"></a>
 Шаг 2: Проверка существования проекта</h3>
-<p><b>Действие:</b> Валидация целевого проекта</p>
-<p>Система проверяет, что проект существует и доступен для аллокации средств. Проект должен быть активным и принимать инвестиции (обладать установленным планом).</p>
+<p ><b>Действие:</b> Валидация целевого проекта</p>
+<p >Система проверяет, что проект существует и доступен для аллокации средств. Проект должен быть активным и принимать инвестиции (обладать установленным планом).</p>
 <h3><a class="anchor" id="autotoc_md113"></a>
 Шаг 3: Валидация суммы инвестиций</h3>
-<p><b>Действие:</b> Проверка корректности суммы</p>
-<p>Система проверяет, что сумма инвестиций корректна и соответствует требованиям:</p><ul>
+<p ><b>Действие:</b> Проверка корректности суммы</p>
+<p >Система проверяет, что сумма инвестиций корректна и соответствует требованиям:</p><ul>
 <li>Сумма должна быть положительной</li>
 <li>Сумма не должна превышать доступный баланс программы</li>
 <li>Сумма должна соответствовать символу кооператива</li>
 </ul>
 <h3><a class="anchor" id="autotoc_md114"></a>
 Шаг 4: Аллокация средств в проект</h3>
-<p><b>Действие:</b> Перевод средств из программы в проект</p>
-<p>Система аллоцирует средства из глобального пула программных инвестиций в проект:</p><ul>
+<p ><b>Действие:</b> Перевод средств из программы в проект</p>
+<p >Система аллоцирует средства из глобального пула программных инвестиций в проект:</p><ul>
 <li>Средства переводятся из кошелька программы капитализации</li>
 <li>Средства зачисляются в пул инвестиций проекта</li>
 <li>Обновляется баланс программы капитализации</li>
@@ -197,8 +190,8 @@ $(document).ready(function(){initNavTree('group__public__capital__allocate__proc
 <dl class="section note"><dt>Заметки</dt><dd>Распределение аллоцированных средств между пулом расходов и инвестиционным пулом проекта определяется в конфигурации кооператива. Если у проекта есть плановые непокрытые расходы, то в накопительный пул расходов выделяется процент от аллоцированной суммы, который установлен в конфигурации контракта параметром <code>expense_pool_percent</code>. Например, если у кооператива установлено значение 20% для пула расходов, то при аллокации средств в размере 10000 руб, в пул расходов пойдет 2000 руб, а оставшиеся 8000 руб пойдут в инвестиционный пул для обеспечения себестоимости затрат вкладчиков. При этом, если плановый пул расходов уже достаточно покрыт, то вся сумма может пойти в инвестиционный пул.</dd></dl>
 <h3><a class="anchor" id="autotoc_md115"></a>
 Шаг 5: Активация использования средств</h3>
-<p><b>Действие:</b> Интеграция в систему проекта</p>
-<p>После аллокации средства становятся доступны для использования в проекте:</p><ul>
+<p ><b>Действие:</b> Интеграция в систему проекта</p>
+<p >После аллокации средства становятся доступны для использования в проекте:</p><ul>
 <li>Для выдачи ссуд участникам проекта</li>
 <li>Для возврата себестоимости вложений создателям, авторам и координаторам</li>
 </ul>
@@ -215,7 +208,7 @@ $(document).ready(function(){initNavTree('group__public__capital__allocate__proc
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

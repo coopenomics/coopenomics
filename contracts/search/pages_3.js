@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['share_0',['Алгоритм CRPS (Cumulative Reward Per Share)',['../crps_algorithm.html',1,'']]]
+  ['обзор_20контракта_0',['Обзор контракта',['../group__public__capital.html',1,'']]]
 ];

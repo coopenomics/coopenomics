@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,24 +128,16 @@ $(document).ready(function(){initNavTree('shared__debts_8hpp_source.html',''); i
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">shared_debts.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="shared__debts_8hpp.html">См. документацию.</a><div class="fragment"><div class="foldopen" id="foldopen00001" data-start="{" data-end="};">
-<div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="structdebt.html">    1</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(CAPITAL)]] <a class="code hl_struct" href="structdebt.html">debt</a> {</div>
+<a href="shared__debts_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="structdebt.html">    1</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(CAPITAL)]] <a class="code hl_struct" href="structdebt.html">debt</a> {</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno"><a class="line" href="structdebt.html#a792b45eeaa4e2f094427ae3117f473c2">    2</a></span>  uint64_t         <a class="code hl_variable" href="structdebt.html#a792b45eeaa4e2f094427ae3117f473c2">id</a>;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="structdebt.html#a513bcce09755375233ec8508464bd7b9">    3</a></span>  eosio::name      <a class="code hl_variable" href="structdebt.html#a513bcce09755375233ec8508464bd7b9">coopname</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="structdebt.html#ad2d10f0afe328d85736db51ec682c540">    4</a></span>  eosio::name      <a class="code hl_variable" href="structdebt.html#ad2d10f0afe328d85736db51ec682c540">username</a>;</div>
@@ -170,7 +157,6 @@ $(document).ready(function(){initNavTree('shared__debts_8hpp_source.html',''); i
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structdebt.html#aa054d7013f78c0308ffab37ecda36e21">   18</a></span>  checksum256 <a class="code hl_function" href="structdebt.html#aa054d7013f78c0308ffab37ecda36e21">by_debt_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structdebt.html#af060b06b66d1983c9c5363f7ada357c2">debt_hash</a>; }</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structdebt.html#a360a1b107aad380e9f5445e1e2c337c8">   19</a></span>  checksum256 <a class="code hl_function" href="structdebt.html#a360a1b107aad380e9f5445e1e2c337c8">by_project_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structdebt.html#a711dff459201ca039dc89632ac6493ce">project_hash</a>; }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
-</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="stringliteral">&quot;debts&quot;</span>_n,</div>
@@ -179,26 +165,26 @@ $(document).ready(function(){initNavTree('shared__debts_8hpp_source.html',''); i
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  indexed_by&lt;<span class="stringliteral">&quot;bydebthash&quot;</span>_n, const_mem_fun&lt;debt, checksum256, &amp;debt::by_debt_hash&gt;&gt;,</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  indexed_by&lt;<span class="stringliteral">&quot;byprojhash&quot;</span>_n, const_mem_fun&lt;debt, checksum256, &amp;debt::by_project_hash&gt;&gt;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="shared__debts_8hpp.html#a6dce7c1774d30848fe30504ac9385e03">   28</a></span>&gt; <a class="code hl_typedef" href="shared__debts_8hpp.html#a6dce7c1774d30848fe30504ac9385e03">debts_index</a>;</div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="ashared__debts_8hpp_html_a6dce7c1774d30848fe30504ac9385e03"><div class="ttname"><a href="shared__debts_8hpp.html#a6dce7c1774d30848fe30504ac9385e03">debts_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;debts&quot;_n, debt, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; debt, uint64_t, &amp;debt::by_username &gt; &gt;, indexed_by&lt;&quot;bydebthash&quot;_n, const_mem_fun&lt; debt, checksum256, &amp;debt::by_debt_hash &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; debt, checksum256, &amp;debt::by_project_hash &gt; &gt; &gt; debts_index</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:28</div></div>
-<div class="ttc" id="astructdebt_html"><div class="ttname"><a href="structdebt.html">debt</a></div><div class="ttdef"><b>Definition</b> shared_debts.hpp:1</div></div>
-<div class="ttc" id="astructdebt_html_a360a1b107aad380e9f5445e1e2c337c8"><div class="ttname"><a href="structdebt.html#a360a1b107aad380e9f5445e1e2c337c8">debt::by_project_hash</a></div><div class="ttdeci">checksum256 by_project_hash() const</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:19</div></div>
-<div class="ttc" id="astructdebt_html_a38941a038a3ff21e25e2d57c71a33a70"><div class="ttname"><a href="structdebt.html#a38941a038a3ff21e25e2d57c71a33a70">debt::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:17</div></div>
-<div class="ttc" id="astructdebt_html_a513bcce09755375233ec8508464bd7b9"><div class="ttname"><a href="structdebt.html#a513bcce09755375233ec8508464bd7b9">debt::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:3</div></div>
-<div class="ttc" id="astructdebt_html_a5b7286a5f859b284d916be8aae498636"><div class="ttname"><a href="structdebt.html#a5b7286a5f859b284d916be8aae498636">debt::repaid_at</a></div><div class="ttdeci">time_point_sec repaid_at</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:8</div></div>
-<div class="ttc" id="astructdebt_html_a711dff459201ca039dc89632ac6493ce"><div class="ttname"><a href="structdebt.html#a711dff459201ca039dc89632ac6493ce">debt::project_hash</a></div><div class="ttdeci">checksum256 project_hash</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:7</div></div>
-<div class="ttc" id="astructdebt_html_a792b45eeaa4e2f094427ae3117f473c2"><div class="ttname"><a href="structdebt.html#a792b45eeaa4e2f094427ae3117f473c2">debt::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:2</div></div>
-<div class="ttc" id="astructdebt_html_a89e57b3a9e242b8895ca202171dc8d4f"><div class="ttname"><a href="structdebt.html#a89e57b3a9e242b8895ca202171dc8d4f">debt::memo</a></div><div class="ttdeci">std::string memo</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:13</div></div>
-<div class="ttc" id="astructdebt_html_a8d2456bfa02ede9e8aa9f7df1bc4230d"><div class="ttname"><a href="structdebt.html#a8d2456bfa02ede9e8aa9f7df1bc4230d">debt::approved_statement</a></div><div class="ttdeci">document2 approved_statement</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:11</div></div>
-<div class="ttc" id="astructdebt_html_aa054d7013f78c0308ffab37ecda36e21"><div class="ttname"><a href="structdebt.html#aa054d7013f78c0308ffab37ecda36e21">debt::by_debt_hash</a></div><div class="ttdeci">checksum256 by_debt_hash() const</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:18</div></div>
-<div class="ttc" id="astructdebt_html_ad2d10f0afe328d85736db51ec682c540"><div class="ttname"><a href="structdebt.html#ad2d10f0afe328d85736db51ec682c540">debt::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:4</div></div>
-<div class="ttc" id="astructdebt_html_ad9f16ff9ff585dcff6ea7ee6629d8b3c"><div class="ttname"><a href="structdebt.html#ad9f16ff9ff585dcff6ea7ee6629d8b3c">debt::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:10</div></div>
-<div class="ttc" id="astructdebt_html_add046b56c4ad43854f5f8d527594928e"><div class="ttname"><a href="structdebt.html#add046b56c4ad43854f5f8d527594928e">debt::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:15</div></div>
-<div class="ttc" id="astructdebt_html_aeca495e907f739d5b42672301f14dde3"><div class="ttname"><a href="structdebt.html#aeca495e907f739d5b42672301f14dde3">debt::amount</a></div><div class="ttdeci">asset amount</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:9</div></div>
-<div class="ttc" id="astructdebt_html_aef8e787d8c3dcf2631333467b38e0026"><div class="ttname"><a href="structdebt.html#aef8e787d8c3dcf2631333467b38e0026">debt::authorization</a></div><div class="ttdeci">document2 authorization</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:12</div></div>
-<div class="ttc" id="astructdebt_html_af060b06b66d1983c9c5363f7ada357c2"><div class="ttname"><a href="structdebt.html#af060b06b66d1983c9c5363f7ada357c2">debt::debt_hash</a></div><div class="ttdeci">checksum256 debt_hash</div><div class="ttdef"><b>Definition</b> shared_debts.hpp:6</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="ashared__debts_8hpp_html_a6dce7c1774d30848fe30504ac9385e03"><div class="ttname"><a href="shared__debts_8hpp.html#a6dce7c1774d30848fe30504ac9385e03">debts_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;debts&quot;_n, debt, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; debt, uint64_t, &amp;debt::by_username &gt; &gt;, indexed_by&lt;&quot;bydebthash&quot;_n, const_mem_fun&lt; debt, checksum256, &amp;debt::by_debt_hash &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; debt, checksum256, &amp;debt::by_project_hash &gt; &gt; &gt; debts_index</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:28</div></div>
+<div class="ttc" id="astructdebt_html"><div class="ttname"><a href="structdebt.html">debt</a></div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:1</div></div>
+<div class="ttc" id="astructdebt_html_a360a1b107aad380e9f5445e1e2c337c8"><div class="ttname"><a href="structdebt.html#a360a1b107aad380e9f5445e1e2c337c8">debt::by_project_hash</a></div><div class="ttdeci">checksum256 by_project_hash() const</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:19</div></div>
+<div class="ttc" id="astructdebt_html_a38941a038a3ff21e25e2d57c71a33a70"><div class="ttname"><a href="structdebt.html#a38941a038a3ff21e25e2d57c71a33a70">debt::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:17</div></div>
+<div class="ttc" id="astructdebt_html_a513bcce09755375233ec8508464bd7b9"><div class="ttname"><a href="structdebt.html#a513bcce09755375233ec8508464bd7b9">debt::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:3</div></div>
+<div class="ttc" id="astructdebt_html_a5b7286a5f859b284d916be8aae498636"><div class="ttname"><a href="structdebt.html#a5b7286a5f859b284d916be8aae498636">debt::repaid_at</a></div><div class="ttdeci">time_point_sec repaid_at</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:8</div></div>
+<div class="ttc" id="astructdebt_html_a711dff459201ca039dc89632ac6493ce"><div class="ttname"><a href="structdebt.html#a711dff459201ca039dc89632ac6493ce">debt::project_hash</a></div><div class="ttdeci">checksum256 project_hash</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:7</div></div>
+<div class="ttc" id="astructdebt_html_a792b45eeaa4e2f094427ae3117f473c2"><div class="ttname"><a href="structdebt.html#a792b45eeaa4e2f094427ae3117f473c2">debt::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:2</div></div>
+<div class="ttc" id="astructdebt_html_a89e57b3a9e242b8895ca202171dc8d4f"><div class="ttname"><a href="structdebt.html#a89e57b3a9e242b8895ca202171dc8d4f">debt::memo</a></div><div class="ttdeci">std::string memo</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:13</div></div>
+<div class="ttc" id="astructdebt_html_a8d2456bfa02ede9e8aa9f7df1bc4230d"><div class="ttname"><a href="structdebt.html#a8d2456bfa02ede9e8aa9f7df1bc4230d">debt::approved_statement</a></div><div class="ttdeci">document2 approved_statement</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:11</div></div>
+<div class="ttc" id="astructdebt_html_aa054d7013f78c0308ffab37ecda36e21"><div class="ttname"><a href="structdebt.html#aa054d7013f78c0308ffab37ecda36e21">debt::by_debt_hash</a></div><div class="ttdeci">checksum256 by_debt_hash() const</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:18</div></div>
+<div class="ttc" id="astructdebt_html_ad2d10f0afe328d85736db51ec682c540"><div class="ttname"><a href="structdebt.html#ad2d10f0afe328d85736db51ec682c540">debt::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:4</div></div>
+<div class="ttc" id="astructdebt_html_ad9f16ff9ff585dcff6ea7ee6629d8b3c"><div class="ttname"><a href="structdebt.html#ad9f16ff9ff585dcff6ea7ee6629d8b3c">debt::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:10</div></div>
+<div class="ttc" id="astructdebt_html_add046b56c4ad43854f5f8d527594928e"><div class="ttname"><a href="structdebt.html#add046b56c4ad43854f5f8d527594928e">debt::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:15</div></div>
+<div class="ttc" id="astructdebt_html_aeca495e907f739d5b42672301f14dde3"><div class="ttname"><a href="structdebt.html#aeca495e907f739d5b42672301f14dde3">debt::amount</a></div><div class="ttdeci">asset amount</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:9</div></div>
+<div class="ttc" id="astructdebt_html_aef8e787d8c3dcf2631333467b38e0026"><div class="ttname"><a href="structdebt.html#aef8e787d8c3dcf2631333467b38e0026">debt::authorization</a></div><div class="ttdeci">document2 authorization</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:12</div></div>
+<div class="ttc" id="astructdebt_html_af060b06b66d1983c9c5363f7ada357c2"><div class="ttname"><a href="structdebt.html#af060b06b66d1983c9c5363f7ada357c2">debt::debt_hash</a></div><div class="ttdeci">checksum256 debt_hash</div><div class="ttdef"><b>Definition:</b> shared_debts.hpp:6</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -206,7 +192,7 @@ $(document).ready(function(){initNavTree('shared__debts_8hpp_source.html',''); i
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__debts_8hpp.html">shared_debts.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

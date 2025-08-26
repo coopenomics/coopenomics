@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,25 +128,16 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp_source.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">shared_approver.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="shared__approver_8hpp.html">См. документацию.</a><div class="fragment"><div class="foldopen" id="foldopen00001" data-start="{" data-end="}">
-<div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespace_approver.html">    1</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_approver.html">Approver</a> {</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<a href="shared__approver_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespace_approver.html">    1</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_approver.html">Approver</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html">   13</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(SOVIET)]] <a class="code hl_struct" href="struct_approver_1_1approval.html">approval</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#af81cc14c4b6289aee31c8633842dafc6">   14</a></span>    uint64_t         <a class="code hl_variable" href="struct_approver_1_1approval.html#af81cc14c4b6289aee31c8633842dafc6">id</a>; </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#aafa3ff0d65619bf1f8ce4956742572d8">   15</a></span>    eosio::name      <a class="code hl_variable" href="struct_approver_1_1approval.html#aafa3ff0d65619bf1f8ce4956742572d8">coopname</a>; </div>
@@ -167,9 +153,7 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp_source.html','')
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#af1ef2f249646c87a15279b30f72de39c">   26</a></span>    uint64_t <a class="code hl_function" href="struct_approver_1_1approval.html#af1ef2f249646c87a15279b30f72de39c">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> id; }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">   27</a></span>    checksum256 <a class="code hl_function" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> approval_hash; } </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">   28</a></span>    uint64_t <a class="code hl_function" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">by_username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">   29</a></span>    uint64_t <a class="code hl_function" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">by_type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> type.value; } </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  };</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -179,7 +163,6 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp_source.html','')
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      eosio::indexed_by&lt;<span class="stringliteral">&quot;byusername&quot;</span>_n, eosio::const_mem_fun&lt;approval, uint64_t, &amp;approval::by_username&gt;&gt;,</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      eosio::indexed_by&lt;<span class="stringliteral">&quot;bytype&quot;</span>_n, eosio::const_mem_fun&lt;approval, uint64_t, &amp;approval::by_type&gt;&gt;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">   37</a></span>  &gt; <a class="code hl_typedef" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">approvals_index</a>; </div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">   40</a></span>  <span class="keyword">inline</span> std::optional&lt;approval&gt; <a class="code hl_function" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">get_approval</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;hash) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <a class="code hl_typedef" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">approvals_index</a> primary_index(<a class="code hl_variable" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>, coopname.value);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keyword">auto</span> secondary_index = primary_index.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
@@ -191,36 +174,31 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp_source.html','')
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordflow">return</span> *itr;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  }</div>
-</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition</b> consts.hpp:156</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespace_approver_html"><div class="ttname"><a href="namespace_approver.html">Approver</a></div><div class="ttdef"><b>Definition</b> shared_approver.hpp:1</div></div>
-<div class="ttc" id="anamespace_approver_html_a9e8214ddc8724f38c858d65c5cdaf627"><div class="ttname"><a href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">Approver::get_approval</a></div><div class="ttdeci">std::optional&lt; approval &gt; get_approval(eosio::name coopname, const checksum256 &amp;hash)</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:40</div></div>
-<div class="ttc" id="anamespace_approver_html_abb7ab0a4f7048134a795bc59d77100e9"><div class="ttname"><a href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">Approver::approvals_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;approvals&quot;_n, approval, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; approval, checksum256, &amp;approval::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_type &gt; &gt; &gt; approvals_index</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:37</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html"><div class="ttname"><a href="struct_approver_1_1approval.html">Approver::approval</a></div><div class="ttdoc">Таблица утверждений</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:13</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a0425546563b3404c55a066d4fc610614"><div class="ttname"><a href="struct_approver_1_1approval.html#a0425546563b3404c55a066d4fc610614">Approver::approval::callback_contract</a></div><div class="ttdeci">eosio::name callback_contract</div><div class="ttdoc">Контракт для обратного вызова</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:20</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a2c78ac733f707084db02053a71191244"><div class="ttname"><a href="struct_approver_1_1approval.html#a2c78ac733f707084db02053a71191244">Approver::approval::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdoc">Метаданные</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:23</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a2cad490c52da5f65f940b83047a7e641"><div class="ttname"><a href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">Approver::approval::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:27</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a2f5373f13d87b37a7ab9b601b65774bf"><div class="ttname"><a href="struct_approver_1_1approval.html#a2f5373f13d87b37a7ab9b601b65774bf">Approver::approval::callback_action_decline</a></div><div class="ttdeci">eosio::name callback_action_decline</div><div class="ttdoc">Действие при отклонении</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:22</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a5665b685c8c17dda0e97ee7d0bc24649"><div class="ttname"><a href="struct_approver_1_1approval.html#a5665b685c8c17dda0e97ee7d0bc24649">Approver::approval::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя пользователя</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:16</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a90e15bcd5b55f45bad26c4d79c5fe711"><div class="ttname"><a href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">Approver::approval::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:28</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_a99bb85ea8454d640404c377909513046"><div class="ttname"><a href="struct_approver_1_1approval.html#a99bb85ea8454d640404c377909513046">Approver::approval::callback_action_approve</a></div><div class="ttdeci">eosio::name callback_action_approve</div><div class="ttdoc">Действие при одобрении</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:21</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_aa5051cce7adfa011e303dad4717ae02e"><div class="ttname"><a href="struct_approver_1_1approval.html#aa5051cce7adfa011e303dad4717ae02e">Approver::approval::created_at</a></div><div class="ttdeci">eosio::time_point_sec created_at</div><div class="ttdoc">Время создания</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:24</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_aafa3ff0d65619bf1f8ce4956742572d8"><div class="ttname"><a href="struct_approver_1_1approval.html#aafa3ff0d65619bf1f8ce4956742572d8">Approver::approval::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:15</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_abcc46ad53c2491a2f2fad13610058554"><div class="ttname"><a href="struct_approver_1_1approval.html#abcc46ad53c2491a2f2fad13610058554">Approver::approval::approval_hash</a></div><div class="ttdeci">checksum256 approval_hash</div><div class="ttdoc">Хэш утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:19</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_abdb1c254ff4571c27ceac378bfd3fd37"><div class="ttname"><a href="struct_approver_1_1approval.html#abdb1c254ff4571c27ceac378bfd3fd37">Approver::approval::document</a></div><div class="ttdeci">document2 document</div><div class="ttdoc">Документ для утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:18</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_ac024875ff5bed519570113a47b2a9271"><div class="ttname"><a href="struct_approver_1_1approval.html#ac024875ff5bed519570113a47b2a9271">Approver::approval::type</a></div><div class="ttdeci">eosio::name type</div><div class="ttdoc">Тип утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:17</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_ad31de74ad37a5b04d953db894a2b1c2f"><div class="ttname"><a href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">Approver::approval::by_type</a></div><div class="ttdeci">uint64_t by_type() const</div><div class="ttdoc">Индекс по типу утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:29</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_af1ef2f249646c87a15279b30f72de39c"><div class="ttname"><a href="struct_approver_1_1approval.html#af1ef2f249646c87a15279b30f72de39c">Approver::approval::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:26</div></div>
-<div class="ttc" id="astruct_approver_1_1approval_html_af81cc14c4b6289aee31c8633842dafc6"><div class="ttname"><a href="struct_approver_1_1approval.html#af81cc14c4b6289aee31c8633842dafc6">Approver::approval::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Уникальный идентификатор утверждения</div><div class="ttdef"><b>Definition</b> shared_approver.hpp:14</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition:</b> consts.hpp:156</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespace_approver_html"><div class="ttname"><a href="namespace_approver.html">Approver</a></div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:1</div></div>
+<div class="ttc" id="anamespace_approver_html_a9e8214ddc8724f38c858d65c5cdaf627"><div class="ttname"><a href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">Approver::get_approval</a></div><div class="ttdeci">std::optional&lt; approval &gt; get_approval(eosio::name coopname, const checksum256 &amp;hash)</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:40</div></div>
+<div class="ttc" id="anamespace_approver_html_abb7ab0a4f7048134a795bc59d77100e9"><div class="ttname"><a href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">Approver::approvals_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;approvals&quot;_n, approval, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; approval, checksum256, &amp;approval::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_type &gt; &gt; &gt; approvals_index</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:37</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html"><div class="ttname"><a href="struct_approver_1_1approval.html">Approver::approval</a></div><div class="ttdoc">Таблица утверждений</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:13</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a0425546563b3404c55a066d4fc610614"><div class="ttname"><a href="struct_approver_1_1approval.html#a0425546563b3404c55a066d4fc610614">Approver::approval::callback_contract</a></div><div class="ttdeci">eosio::name callback_contract</div><div class="ttdoc">Контракт для обратного вызова</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:20</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a2c78ac733f707084db02053a71191244"><div class="ttname"><a href="struct_approver_1_1approval.html#a2c78ac733f707084db02053a71191244">Approver::approval::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdoc">Метаданные</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:23</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a2cad490c52da5f65f940b83047a7e641"><div class="ttname"><a href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">Approver::approval::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:27</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a2f5373f13d87b37a7ab9b601b65774bf"><div class="ttname"><a href="struct_approver_1_1approval.html#a2f5373f13d87b37a7ab9b601b65774bf">Approver::approval::callback_action_decline</a></div><div class="ttdeci">eosio::name callback_action_decline</div><div class="ttdoc">Действие при отклонении</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:22</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a5665b685c8c17dda0e97ee7d0bc24649"><div class="ttname"><a href="struct_approver_1_1approval.html#a5665b685c8c17dda0e97ee7d0bc24649">Approver::approval::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя пользователя</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:16</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a90e15bcd5b55f45bad26c4d79c5fe711"><div class="ttname"><a href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">Approver::approval::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:28</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_a99bb85ea8454d640404c377909513046"><div class="ttname"><a href="struct_approver_1_1approval.html#a99bb85ea8454d640404c377909513046">Approver::approval::callback_action_approve</a></div><div class="ttdeci">eosio::name callback_action_approve</div><div class="ttdoc">Действие при одобрении</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:21</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_aa5051cce7adfa011e303dad4717ae02e"><div class="ttname"><a href="struct_approver_1_1approval.html#aa5051cce7adfa011e303dad4717ae02e">Approver::approval::created_at</a></div><div class="ttdeci">eosio::time_point_sec created_at</div><div class="ttdoc">Время создания</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:24</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_aafa3ff0d65619bf1f8ce4956742572d8"><div class="ttname"><a href="struct_approver_1_1approval.html#aafa3ff0d65619bf1f8ce4956742572d8">Approver::approval::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:15</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_abcc46ad53c2491a2f2fad13610058554"><div class="ttname"><a href="struct_approver_1_1approval.html#abcc46ad53c2491a2f2fad13610058554">Approver::approval::approval_hash</a></div><div class="ttdeci">checksum256 approval_hash</div><div class="ttdoc">Хэш утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:19</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_abdb1c254ff4571c27ceac378bfd3fd37"><div class="ttname"><a href="struct_approver_1_1approval.html#abdb1c254ff4571c27ceac378bfd3fd37">Approver::approval::document</a></div><div class="ttdeci">document2 document</div><div class="ttdoc">Документ для утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:18</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_ac024875ff5bed519570113a47b2a9271"><div class="ttname"><a href="struct_approver_1_1approval.html#ac024875ff5bed519570113a47b2a9271">Approver::approval::type</a></div><div class="ttdeci">eosio::name type</div><div class="ttdoc">Тип утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:17</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_ad31de74ad37a5b04d953db894a2b1c2f"><div class="ttname"><a href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">Approver::approval::by_type</a></div><div class="ttdeci">uint64_t by_type() const</div><div class="ttdoc">Индекс по типу утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:29</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_af1ef2f249646c87a15279b30f72de39c"><div class="ttname"><a href="struct_approver_1_1approval.html#af1ef2f249646c87a15279b30f72de39c">Approver::approval::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:26</div></div>
+<div class="ttc" id="astruct_approver_1_1approval_html_af81cc14c4b6289aee31c8633842dafc6"><div class="ttname"><a href="struct_approver_1_1approval.html#af81cc14c4b6289aee31c8633842dafc6">Approver::approval::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Уникальный идентификатор утверждения</div><div class="ttdef"><b>Definition:</b> shared_approver.hpp:14</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -228,7 +206,7 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__approver_8hpp.html">shared_approver.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

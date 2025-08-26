@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('expenses_8hpp.html',''); initResizable
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -163,59 +156,59 @@ $(document).ready(function(){initNavTree('expenses_8hpp.html',''); initResizable
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_capital" id="r_namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
+<tr class="memitem:namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_expenses" id="r_namespace_capital_1_1_expenses"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html">Capital::Expenses</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_expenses"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html">Capital::Expenses</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_expenses_1_1_status" id="r_namespace_capital_1_1_expenses_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html">Capital::Expenses::Status</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_expenses_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html">Capital::Expenses::Status</a></td></tr>
 <tr class="memdesc:namespace_capital_1_1_expenses_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы статусов расходов <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:aa597c930163b70b171e0ba4ec668870b" id="r_aa597c930163b70b171e0ba4ec668870b"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;expenses&quot;_n, <a class="el" href="struct_capital_1_1expense.html">expense</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1expense.html">expense</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1expense.html#a14e55cc48052ffe16ee0e9b620d0f6ae">expense::by_username</a> &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1expense.html">expense</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1expense.html#a8a55988f9c4bdb4364440aa8b359874d">expense::by_expense_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1expense.html">expense</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1expense.html#a135e0266cb2bc3c5899ef21caeaa91aa">expense::by_project_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a></td></tr>
+<tr class="memitem:aa597c930163b70b171e0ba4ec668870b"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;expenses&quot;_n, expense, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; expense, uint64_t, &amp;expense::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; expense, checksum256, &amp;expense::by_expense_hash &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; expense, checksum256, &amp;expense::by_project_hash &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a></td></tr>
 <tr class="separator:aa597c930163b70b171e0ba4ec668870b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a39477bc4ec8ee57ee4fc2e32b2d9db38" id="r_a39477bc4ec8ee57ee4fc2e32b2d9db38"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1expense.html">expense</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Capital::get_expense</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:a39477bc4ec8ee57ee4fc2e32b2d9db38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает расход по хэшу.  <br /></td></tr>
+<tr class="memitem:a39477bc4ec8ee57ee4fc2e32b2d9db38"><td class="memItemLeft" align="right" valign="top">std::optional&lt; expense &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Capital::get_expense</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a39477bc4ec8ee57ee4fc2e32b2d9db38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает расход по хэшу.  <a href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Подробнее...</a><br /></td></tr>
 <tr class="separator:a39477bc4ec8ee57ee4fc2e32b2d9db38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a6fb98531f374aa87567739a8fa236" id="r_a82a6fb98531f374aa87567739a8fa236"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1expense.html">expense</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">Capital::Expenses::get_expense_or_fail</a> (eosio::name coopname, const checksum256 &amp;expense_hash)</td></tr>
-<tr class="memdesc:a82a6fb98531f374aa87567739a8fa236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает расход по хэшу или вызывает ошибку.  <br /></td></tr>
+<tr class="memitem:a82a6fb98531f374aa87567739a8fa236"><td class="memItemLeft" align="right" valign="top">expense&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">Capital::Expenses::get_expense_or_fail</a> (eosio::name coopname, const checksum256 &amp;expense_hash)</td></tr>
+<tr class="memdesc:a82a6fb98531f374aa87567739a8fa236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает расход по хэшу или вызывает ошибку.  <a href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">Подробнее...</a><br /></td></tr>
 <tr class="separator:a82a6fb98531f374aa87567739a8fa236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95636876d32d5a243f3bc4d4db5c4fca" id="r_a95636876d32d5a243f3bc4d4db5c4fca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">Capital::Expenses::create_expense</a> (eosio::name coopname, const checksum256 &amp;project_hash, const checksum256 &amp;expense_hash, eosio::name username, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const std::string &amp;description, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
-<tr class="memdesc:a95636876d32d5a243f3bc4d4db5c4fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает запись расхода в таблице.  <br /></td></tr>
+<tr class="memitem:a95636876d32d5a243f3bc4d4db5c4fca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">Capital::Expenses::create_expense</a> (eosio::name coopname, const checksum256 &amp;project_hash, const checksum256 &amp;expense_hash, eosio::name username, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const std::string &amp;description, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
+<tr class="memdesc:a95636876d32d5a243f3bc4d4db5c4fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает запись расхода в таблице.  <a href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">Подробнее...</a><br /></td></tr>
 <tr class="separator:a95636876d32d5a243f3bc4d4db5c4fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa158d63a8028682aa4fc62c493988365" id="r_aa158d63a8028682aa4fc62c493988365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">Capital::Expenses::update_status</a> (eosio::name coopname, const checksum256 &amp;expense_hash, eosio::name new_status)</td></tr>
-<tr class="memdesc:aa158d63a8028682aa4fc62c493988365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус расхода.  <br /></td></tr>
+<tr class="memitem:aa158d63a8028682aa4fc62c493988365"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">Capital::Expenses::update_status</a> (eosio::name coopname, const checksum256 &amp;expense_hash, eosio::name new_status)</td></tr>
+<tr class="memdesc:aa158d63a8028682aa4fc62c493988365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус расхода.  <a href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa158d63a8028682aa4fc62c493988365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfbf7e472016f9c9ea18de2d13fa02bd" id="r_acfbf7e472016f9c9ea18de2d13fa02bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">Capital::Expenses::set_approved</a> (eosio::name coopname, const checksum256 &amp;expense_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
-<tr class="memdesc:acfbf7e472016f9c9ea18de2d13fa02bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус и одобренную записку расхода.  <br /></td></tr>
+<tr class="memitem:acfbf7e472016f9c9ea18de2d13fa02bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">Capital::Expenses::set_approved</a> (eosio::name coopname, const checksum256 &amp;expense_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
+<tr class="memdesc:acfbf7e472016f9c9ea18de2d13fa02bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус и одобренную записку расхода.  <a href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">Подробнее...</a><br /></td></tr>
 <tr class="separator:acfbf7e472016f9c9ea18de2d13fa02bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8c5fb449623bf862793d2d0ce9b9606" id="r_af8c5fb449623bf862793d2d0ce9b9606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">Capital::Expenses::set_authorized</a> (eosio::name coopname, const checksum256 &amp;expense_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
-<tr class="memdesc:af8c5fb449623bf862793d2d0ce9b9606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус и авторизацию расхода.  <br /></td></tr>
+<tr class="memitem:af8c5fb449623bf862793d2d0ce9b9606"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">Capital::Expenses::set_authorized</a> (eosio::name coopname, const checksum256 &amp;expense_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
+<tr class="memdesc:af8c5fb449623bf862793d2d0ce9b9606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус и авторизацию расхода.  <a href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">Подробнее...</a><br /></td></tr>
 <tr class="separator:af8c5fb449623bf862793d2d0ce9b9606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15456c48b7f78972d70e599911e2a11a" id="r_a15456c48b7f78972d70e599911e2a11a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">Capital::Expenses::delete_expense</a> (eosio::name coopname, const checksum256 &amp;expense_hash)</td></tr>
-<tr class="memdesc:a15456c48b7f78972d70e599911e2a11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет запись расхода из таблицы.  <br /></td></tr>
+<tr class="memitem:a15456c48b7f78972d70e599911e2a11a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">Capital::Expenses::delete_expense</a> (eosio::name coopname, const checksum256 &amp;expense_hash)</td></tr>
+<tr class="memdesc:a15456c48b7f78972d70e599911e2a11a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет запись расхода из таблицы.  <a href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a15456c48b7f78972d70e599911e2a11a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:af4be1ff76f0d8dcf9260a56893b497cf" id="r_af4be1ff76f0d8dcf9260a56893b497cf"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">Capital::Expenses::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
-<tr class="memdesc:af4be1ff76f0d8dcf9260a56893b497cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход создан  <br /></td></tr>
+<tr class="memitem:af4be1ff76f0d8dcf9260a56893b497cf"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">Capital::Expenses::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
+<tr class="memdesc:af4be1ff76f0d8dcf9260a56893b497cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход создан  <a href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">Подробнее...</a><br /></td></tr>
 <tr class="separator:af4be1ff76f0d8dcf9260a56893b497cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8042da9db2270e898f277f4b8f039ab7" id="r_a8042da9db2270e898f277f4b8f039ab7"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">Capital::Expenses::Status::APPROVED</a> = &quot;approved&quot;_n</td></tr>
-<tr class="memdesc:a8042da9db2270e898f277f4b8f039ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход одобрен председателем  <br /></td></tr>
+<tr class="memitem:a8042da9db2270e898f277f4b8f039ab7"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">Capital::Expenses::Status::APPROVED</a> = &quot;approved&quot;_n</td></tr>
+<tr class="memdesc:a8042da9db2270e898f277f4b8f039ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход одобрен председателем  <a href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8042da9db2270e898f277f4b8f039ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc1110f94f5967da72cf5434b6c0d2a" id="r_a1fc1110f94f5967da72cf5434b6c0d2a"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">Capital::Expenses::Status::AUTHORIZED</a> = &quot;authorized&quot;_n</td></tr>
-<tr class="memdesc:a1fc1110f94f5967da72cf5434b6c0d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход авторизован советом  <br /></td></tr>
+<tr class="memitem:a1fc1110f94f5967da72cf5434b6c0d2a"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">Capital::Expenses::Status::AUTHORIZED</a> = &quot;authorized&quot;_n</td></tr>
+<tr class="memdesc:a1fc1110f94f5967da72cf5434b6c0d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход авторизован советом  <a href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1fc1110f94f5967da72cf5434b6c0d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d2208e444eeabebf6af1869e08ca0d3" id="r_a7d2208e444eeabebf6af1869e08ca0d3"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">Capital::Expenses::Status::PAID</a> = &quot;paid&quot;_n</td></tr>
-<tr class="memdesc:a7d2208e444eeabebf6af1869e08ca0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход оплачен  <br /></td></tr>
+<tr class="memitem:a7d2208e444eeabebf6af1869e08ca0d3"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">Capital::Expenses::Status::PAID</a> = &quot;paid&quot;_n</td></tr>
+<tr class="memdesc:a7d2208e444eeabebf6af1869e08ca0d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход оплачен  <a href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7d2208e444eeabebf6af1869e08ca0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c034f33ec0252aaf228832daf090eef" id="r_a4c034f33ec0252aaf228832daf090eef"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">Capital::Expenses::Status::DECLINED</a> = &quot;declined&quot;_n</td></tr>
-<tr class="memdesc:a4c034f33ec0252aaf228832daf090eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход отклонен  <br /></td></tr>
+<tr class="memitem:a4c034f33ec0252aaf228832daf090eef"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">Capital::Expenses::Status::DECLINED</a> = &quot;declined&quot;_n</td></tr>
+<tr class="memdesc:a4c034f33ec0252aaf228832daf090eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход отклонен  <a href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4c034f33ec0252aaf228832daf090eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -225,7 +218,7 @@ $(document).ready(function(){initNavTree('expenses_8hpp.html',''); initResizable
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="expenses_8hpp.html">expenses.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

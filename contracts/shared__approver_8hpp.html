@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp.html',''); initR
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -160,17 +153,17 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp.html',''); initR
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_approver" id="r_namespace_approver"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html">Approver</a></td></tr>
+<tr class="memitem:namespace_approver"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html">Approver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:abb7ab0a4f7048134a795bc59d77100e9" id="r_abb7ab0a4f7048134a795bc59d77100e9"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;approvals&quot;_n, <a class="el" href="struct_approver_1_1approval.html">approval</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, checksum256, &amp;<a class="el" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">approval::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">approval::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">approval::by_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">Approver::approvals_index</a></td></tr>
+<tr class="memitem:abb7ab0a4f7048134a795bc59d77100e9"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;approvals&quot;_n, approval, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; approval, checksum256, &amp;approval::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; approval, uint64_t, &amp;approval::by_type &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">Approver::approvals_index</a></td></tr>
 <tr class="separator:abb7ab0a4f7048134a795bc59d77100e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a9e8214ddc8724f38c858d65c5cdaf627" id="r_a9e8214ddc8724f38c858d65c5cdaf627"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">Approver::get_approval</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memitem:a9e8214ddc8724f38c858d65c5cdaf627"><td class="memItemLeft" align="right" valign="top">std::optional&lt; approval &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">Approver::get_approval</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="separator:a9e8214ddc8724f38c858d65c5cdaf627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -180,7 +173,7 @@ $(document).ready(function(){initNavTree('shared__approver_8hpp.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__approver_8hpp.html">shared_approver.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

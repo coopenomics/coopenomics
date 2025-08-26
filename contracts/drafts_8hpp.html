@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -172,23 +165,23 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a299db80d0621cd644a06cc1ea6ef4b70" id="r_a299db80d0621cd644a06cc1ea6ef4b70"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;drafts&quot;_n, <a class="el" href="structonedraft.html">onedraft</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a></td></tr>
+<tr class="memitem:a299db80d0621cd644a06cc1ea6ef4b70"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;drafts&quot;_n, <a class="el" href="structonedraft.html">onedraft</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a></td></tr>
 <tr class="separator:a299db80d0621cd644a06cc1ea6ef4b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab33f9403422d20c5528e4da3ddfbe417" id="r_ab33f9403422d20c5528e4da3ddfbe417"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;translations&quot;_n, <a class="el" href="structtranslation.html">translation</a>, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structtranslation.html">translation</a>, uint64_t, &amp;<a class="el" href="structtranslation.html#a17121e2068a26547b2db19de299cfae4">translation::by_draft</a> &gt; &gt;, eosio::indexed_by&lt; &quot;bydraftlang&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structtranslation.html">translation</a>, uint128_t, &amp;<a class="el" href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">translation::by_draft_lang</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">translations_index</a></td></tr>
+<tr class="memitem:ab33f9403422d20c5528e4da3ddfbe417"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;translations&quot;_n, <a class="el" href="structtranslation.html">translation</a>, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structtranslation.html">translation</a>, uint64_t, &amp;<a class="el" href="structtranslation.html#a17121e2068a26547b2db19de299cfae4">translation::by_draft</a> &gt; &gt;, eosio::indexed_by&lt; &quot;bydraftlang&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structtranslation.html">translation</a>, uint128_t, &amp;<a class="el" href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">translation::by_draft_lang</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">translations_index</a></td></tr>
 <tr class="separator:ab33f9403422d20c5528e4da3ddfbe417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a250c486fb09ccba9984e2fa2076d23de" id="r_a250c486fb09ccba9984e2fa2076d23de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">verify_document_or_fail</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;doc, const std::vector&lt; eosio::name &gt; &amp;required_signers={})</td></tr>
+<tr class="memitem:a250c486fb09ccba9984e2fa2076d23de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">verify_document_or_fail</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;doc, const std::vector&lt; eosio::name &gt; &amp;required_signers={})</td></tr>
 <tr class="separator:a250c486fb09ccba9984e2fa2076d23de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ab1953ae48f98a413a2e3d3a2d9210" id="r_a25ab1953ae48f98a413a2e3d3a2d9210"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">is_empty_document</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;doc)</td></tr>
+<tr class="memitem:a25ab1953ae48f98a413a2e3d3a2d9210"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">is_empty_document</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;doc)</td></tr>
 <tr class="separator:a25ab1953ae48f98a413a2e3d3a2d9210"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3cfefc61617bfa74ee31aafd9cb1058" id="r_af3cfefc61617bfa74ee31aafd9cb1058"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structonedraft.html">onedraft</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">get_scoped_draft_by_registry_or_fail</a> (eosio::name scope, uint64_t draft_id)</td></tr>
+<tr class="memitem:af3cfefc61617bfa74ee31aafd9cb1058"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structonedraft.html">onedraft</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">get_scoped_draft_by_registry_or_fail</a> (eosio::name scope, uint64_t draft_id)</td></tr>
 <tr class="separator:af3cfefc61617bfa74ee31aafd9cb1058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a299db80d0621cd644a06cc1ea6ef4b70" name="a299db80d0621cd644a06cc1ea6ef4b70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a299db80d0621cd644a06cc1ea6ef4b70">&#9670;&#160;</a></span>drafts_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a299db80d0621cd644a06cc1ea6ef4b70">&#9670;&nbsp;</a></span>drafts_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +195,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 </div>
 </div>
 <a id="ab33f9403422d20c5528e4da3ddfbe417" name="ab33f9403422d20c5528e4da3ddfbe417"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab33f9403422d20c5528e4da3ddfbe417">&#9670;&#160;</a></span>translations_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33f9403422d20c5528e4da3ddfbe417">&#9670;&nbsp;</a></span>translations_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +210,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="af3cfefc61617bfa74ee31aafd9cb1058" name="af3cfefc61617bfa74ee31aafd9cb1058"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3cfefc61617bfa74ee31aafd9cb1058">&#9670;&#160;</a></span>get_scoped_draft_by_registry_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3cfefc61617bfa74ee31aafd9cb1058">&#9670;&nbsp;</a></span>get_scoped_draft_by_registry_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +238,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 </div>
 </div>
 <a id="a25ab1953ae48f98a413a2e3d3a2d9210" name="a25ab1953ae48f98a413a2e3d3a2d9210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ab1953ae48f98a413a2e3d3a2d9210">&#9670;&#160;</a></span>is_empty_document()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ab1953ae48f98a413a2e3d3a2d9210">&#9670;&nbsp;</a></span>is_empty_document()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +256,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 </div>
 </div>
 <a id="a250c486fb09ccba9984e2fa2076d23de" name="a250c486fb09ccba9984e2fa2076d23de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a250c486fb09ccba9984e2fa2076d23de">&#9670;&#160;</a></span>verify_document_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a250c486fb09ccba9984e2fa2076d23de">&#9670;&nbsp;</a></span>verify_document_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +290,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp.html',''); initResizable()
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="drafts_8hpp.html">drafts.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

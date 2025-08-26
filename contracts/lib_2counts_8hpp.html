@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -158,21 +151,21 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a5af27e8af61127ac08bf8af64f4e4766" id="r_a5af27e8af61127ac08bf8af64f4e4766"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;counts&quot;_n, <a class="el" href="structcounts__base.html">counts_base</a>, eosio::indexed_by&lt;&quot;keyskey&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structcounts__base.html">counts_base</a>, uint128_t, &amp;<a class="el" href="structcounts__base.html#acabcbd93c1b35dca98c77646bbfda21d">counts_base::keyskey</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#a5af27e8af61127ac08bf8af64f4e4766">counts_index</a></td></tr>
+<tr class="memitem:a5af27e8af61127ac08bf8af64f4e4766"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;counts&quot;_n, <a class="el" href="structcounts__base.html">counts_base</a>, eosio::indexed_by&lt;&quot;keyskey&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structcounts__base.html">counts_base</a>, uint128_t, &amp;<a class="el" href="structcounts__base.html#acabcbd93c1b35dca98c77646bbfda21d">counts_base::keyskey</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#a5af27e8af61127ac08bf8af64f4e4766">counts_index</a></td></tr>
 <tr class="separator:a5af27e8af61127ac08bf8af64f4e4766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ac5a56feb4e32856beed484ddddf4a3b8" id="r_ac5a56feb4e32856beed484ddddf4a3b8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#ac5a56feb4e32856beed484ddddf4a3b8">get_id</a> (eosio::name code, eosio::name scope, eosio::name key)</td></tr>
+<tr class="memitem:ac5a56feb4e32856beed484ddddf4a3b8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#ac5a56feb4e32856beed484ddddf4a3b8">get_id</a> (eosio::name code, eosio::name scope, eosio::name key)</td></tr>
 <tr class="separator:ac5a56feb4e32856beed484ddddf4a3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb06beaf4402f0222167ef9d12eacd5c" id="r_aeb06beaf4402f0222167ef9d12eacd5c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#aeb06beaf4402f0222167ef9d12eacd5c">get_global_id</a> (eosio::name _me, eosio::name key)</td></tr>
+<tr class="memitem:aeb06beaf4402f0222167ef9d12eacd5c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#aeb06beaf4402f0222167ef9d12eacd5c">get_global_id</a> (eosio::name _me, eosio::name key)</td></tr>
 <tr class="separator:aeb06beaf4402f0222167ef9d12eacd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad99cf4a19b51981409c18e05b7fb35c0" id="r_ad99cf4a19b51981409c18e05b7fb35c0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a> (eosio::name _me, eosio::name scope, eosio::name key)</td></tr>
+<tr class="memitem:ad99cf4a19b51981409c18e05b7fb35c0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a> (eosio::name _me, eosio::name scope, eosio::name key)</td></tr>
 <tr class="separator:ad99cf4a19b51981409c18e05b7fb35c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a5af27e8af61127ac08bf8af64f4e4766" name="a5af27e8af61127ac08bf8af64f4e4766"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5af27e8af61127ac08bf8af64f4e4766">&#9670;&#160;</a></span>counts_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5af27e8af61127ac08bf8af64f4e4766">&#9670;&nbsp;</a></span>counts_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +180,7 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="aeb06beaf4402f0222167ef9d12eacd5c" name="aeb06beaf4402f0222167ef9d12eacd5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb06beaf4402f0222167ef9d12eacd5c">&#9670;&#160;</a></span>get_global_id()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb06beaf4402f0222167ef9d12eacd5c">&#9670;&nbsp;</a></span>get_global_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +208,7 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 </div>
 </div>
 <a id="ad99cf4a19b51981409c18e05b7fb35c0" name="ad99cf4a19b51981409c18e05b7fb35c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad99cf4a19b51981409c18e05b7fb35c0">&#9670;&#160;</a></span>get_global_id_in_scope()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99cf4a19b51981409c18e05b7fb35c0">&#9670;&nbsp;</a></span>get_global_id_in_scope()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +242,7 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 </div>
 </div>
 <a id="ac5a56feb4e32856beed484ddddf4a3b8" name="ac5a56feb4e32856beed484ddddf4a3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a56feb4e32856beed484ddddf4a3b8">&#9670;&#160;</a></span>get_id()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a56feb4e32856beed484ddddf4a3b8">&#9670;&nbsp;</a></span>get_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,7 +282,7 @@ $(document).ready(function(){initNavTree('lib_2counts_8hpp.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="lib_2counts_8hpp.html">counts.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

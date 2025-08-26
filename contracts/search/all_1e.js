@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7esystem_5fcontract_0',['~system_contract',['../classeosiosystem_1_1system__contract.html#ae0264c3f2d2a640d9a60a4c9c9ca089c',1,'eosiosystem::system_contract']]]
+  ['завершить_20голосование_0',['Завершить голосование',['../group__public__capital__voting__completion__process.html',1,'']]],
+  ['запуска_20генерации_20проекта_1',['Запуска генерации проекта',['../group__public__capital__project__start__process.html',1,'']]]
 ];

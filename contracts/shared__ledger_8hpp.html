@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('shared__ledger_8hpp.html',''); initRes
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -168,21 +161,21 @@ $(document).ready(function(){initNavTree('shared__ledger_8hpp.html',''); initRes
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:acfe19b75706d40cc57fce15b6b527bfe" id="r_acfe19b75706d40cc57fce15b6b527bfe"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;accounts&quot;_n, <a class="el" href="structlaccount.html">laccount</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__ledger_8hpp.html#acfe19b75706d40cc57fce15b6b527bfe">laccounts_index</a></td></tr>
-<tr class="memdesc:acfe19b75706d40cc57fce15b6b527bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы индексов для таблиц ledger.  <br /></td></tr>
+<tr class="memitem:acfe19b75706d40cc57fce15b6b527bfe"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;accounts&quot;_n, <a class="el" href="structlaccount.html">laccount</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__ledger_8hpp.html#acfe19b75706d40cc57fce15b6b527bfe">laccounts_index</a></td></tr>
+<tr class="memdesc:acfe19b75706d40cc57fce15b6b527bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы индексов для таблиц ledger.  <a href="shared__ledger_8hpp.html#acfe19b75706d40cc57fce15b6b527bfe">Подробнее...</a><br /></td></tr>
 <tr class="separator:acfe19b75706d40cc57fce15b6b527bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec440842df0fa11277a3815f32e1b913" id="r_aec440842df0fa11277a3815f32e1b913"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;writeoffs&quot;_n, <a class="el" href="structwriteoff__op.html">writeoff_op</a>, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structwriteoff__op.html">writeoff_op</a>, uint64_t, &amp;<a class="el" href="structwriteoff__op.html#a8dcdb5a8afc885e51c4890af151c9dd2">writeoff_op::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structwriteoff__op.html">writeoff_op</a>, checksum256, &amp;<a class="el" href="structwriteoff__op.html#ac478bb63f3c2bcb23f1f84377e9830b0">writeoff_op::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__ledger_8hpp.html#aec440842df0fa11277a3815f32e1b913">writeoffs_index</a></td></tr>
+<tr class="memitem:aec440842df0fa11277a3815f32e1b913"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;writeoffs&quot;_n, <a class="el" href="structwriteoff__op.html">writeoff_op</a>, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structwriteoff__op.html">writeoff_op</a>, uint64_t, &amp;<a class="el" href="structwriteoff__op.html#a8dcdb5a8afc885e51c4890af151c9dd2">writeoff_op::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structwriteoff__op.html">writeoff_op</a>, checksum256, &amp;<a class="el" href="structwriteoff__op.html#ac478bb63f3c2bcb23f1f84377e9830b0">writeoff_op::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__ledger_8hpp.html#aec440842df0fa11277a3815f32e1b913">writeoffs_index</a></td></tr>
 <tr class="separator:aec440842df0fa11277a3815f32e1b913"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:gaed4da661146b25970164bffecb448450" id="r_gaed4da661146b25970164bffecb448450"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; std::tuple&lt; uint64_t, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__consts.html#gaed4da661146b25970164bffecb448450">ACCOUNT_MAP</a></td></tr>
-<tr class="memdesc:gaed4da661146b25970164bffecb448450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Карта счетов для инициализации бухгалтерской книги СОХРАНЯЕМ - используется для получения названий при автосоздании счетов  <br /></td></tr>
+<tr class="memitem:gaed4da661146b25970164bffecb448450"><td class="memItemLeft" align="right" valign="top">static const std::vector&lt; std::tuple&lt; uint64_t, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__consts.html#gaed4da661146b25970164bffecb448450">ACCOUNT_MAP</a></td></tr>
+<tr class="memdesc:gaed4da661146b25970164bffecb448450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Карта счетов для инициализации бухгалтерской книги СОХРАНЯЕМ - используется для получения названий при автосоздании счетов  <a href="group__public__ledger__consts.html#gaed4da661146b25970164bffecb448450">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaed4da661146b25970164bffecb448450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="acfe19b75706d40cc57fce15b6b527bfe" name="acfe19b75706d40cc57fce15b6b527bfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfe19b75706d40cc57fce15b6b527bfe">&#9670;&#160;</a></span>laccounts_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acfe19b75706d40cc57fce15b6b527bfe">&#9670;&nbsp;</a></span>laccounts_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +191,7 @@ $(document).ready(function(){initNavTree('shared__ledger_8hpp.html',''); initRes
 </div>
 </div>
 <a id="aec440842df0fa11277a3815f32e1b913" name="aec440842df0fa11277a3815f32e1b913"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec440842df0fa11277a3815f32e1b913">&#9670;&#160;</a></span>writeoffs_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec440842df0fa11277a3815f32e1b913">&#9670;&nbsp;</a></span>writeoffs_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +211,7 @@ $(document).ready(function(){initNavTree('shared__ledger_8hpp.html',''); initRes
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__ledger_8hpp.html">shared_ledger.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

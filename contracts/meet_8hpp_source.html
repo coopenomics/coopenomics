@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('meet_8hpp_source.html',''); initResiza
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -158,54 +146,53 @@ $(document).ready(function(){initNavTree('meet_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="structs_8hpp.html">include/structs/structs.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>std::string;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using</span> std::string;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmeet.html">   42</a></span><span class="keyword">class </span>[[eosio::contract]] <a class="code hl_class" href="classmeet.html">meet</a> : <span class="keyword">public</span> <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmeet.html">   42</a></span><span class="keyword">class </span>[[<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">eosio::contract</a>]] <a class="code hl_class" href="classmeet.html">meet</a> : <span class="keyword">public</span> <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a> {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">using </span>contract::contract;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">using</span> <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract::contract</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__public__meet__consts.html#ga028142a1b507c62ec0dc4054f1d4ba09">   52</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t MIN_OPEN_AGM_DELAY_SEC = 60 * 60 * 24 * 15; <span class="comment">// 15 дней</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__public__meet__consts.html#gaf9a9d46382f765e93aa8a9c299e6b0fc">   60</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> TEST_MODE = <span class="keyword">true</span>; <span class="comment">// Флаг тестового режима</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> createmeet(name coopname, checksum256 hash, eosio::name initiator, name presider, name secretary, std::vector&lt;meet_point&gt; agenda, <a class="code hl_struct" href="structdocument2.html">document2</a> proposal, time_point_sec open_at, time_point_sec close_at);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> authmeet(eosio::name coopname, checksum256 hash, <a class="code hl_struct" href="structdocument2.html">document2</a> authorization);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> declmeet(name coopname, checksum256 hash, std::string reason);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> gmnotify(name coopname, checksum256 hash, name username, <a class="code hl_struct" href="structdocument2.html">document2</a> notification);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> vote(name coopname, checksum256 hash, name username, <a class="code hl_struct" href="structdocument2.html">document2</a> ballot, std::vector&lt;vote_point&gt; votes);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> restartmeet(name coopname, checksum256 hash, checksum256 new_hash, <a class="code hl_struct" href="structdocument2.html">document2</a> newproposal, time_point_sec new_open_at, time_point_sec new_close_at);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> signbysecr(name coopname, name username, checksum256 hash, <a class="code hl_struct" href="structdocument2.html">document2</a> secretary_decision);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    [[eosio::action]]</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]]</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> signbypresid(name coopname, name username, checksum256 hash, <a class="code hl_struct" href="structdocument2.html">document2</a> presider_decision);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    [[eosio::action]] <span class="keywordtype">void</span> migrate();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> migrate();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    [[eosio::action]] <span class="keywordtype">void</span> delmeet(eosio::name coopname, uint64_t meet_id);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> delmeet(eosio::name coopname, uint64_t meet_id);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Сервисное действие:</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    [[eosio::action]] <span class="keywordtype">void</span> newgdecision(<a class="code hl_define" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> newgdecision(<a class="code hl_define" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a>);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    std::optional&lt;Meet::meet&gt; get_meet(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;hash);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
-</div>
-<div class="ttc" id="aclassmeet_html"><div class="ttname"><a href="classmeet.html">meet</a></div><div class="ttdoc">Контракт Meet управляет собраниями пайщиков.</div><div class="ttdef"><b>Definition</b> meet.hpp:42</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="anewgdecision__interface_8hpp_html_abe1a065023e934310aeeb700f9aa7799"><div class="ttname"><a href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a></div><div class="ttdeci">#define NEWGDECISION_SIGNATURE</div><div class="ttdef"><b>Definition</b> newgdecision_interface.hpp:1</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+<div class="ttc" id="aclassmeet_html"><div class="ttname"><a href="classmeet.html">meet</a></div><div class="ttdoc">Контракт Meet управляет собраниями пайщиков.</div><div class="ttdef"><b>Definition:</b> meet.hpp:42</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="anewgdecision__interface_8hpp_html_abe1a065023e934310aeeb700f9aa7799"><div class="ttname"><a href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a></div><div class="ttdeci">#define NEWGDECISION_SIGNATURE</div><div class="ttdef"><b>Definition:</b> newgdecision_interface.hpp:1</div></div>
+<div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
 <div class="ttc" id="astructs_8hpp_html"><div class="ttname"><a href="structs_8hpp.html">structs.hpp</a></div></div>
 <div class="ttc" id="atables_8hpp_html"><div class="ttname"><a href="tables_8hpp.html">tables.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -215,7 +202,7 @@ $(document).ready(function(){initNavTree('meet_8hpp_source.html',''); initResiza
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_bb85938fef94aec577cdee28d9a5840c.html">meet</a></li><li class="navelem"><a class="el" href="meet_8hpp.html">meet.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

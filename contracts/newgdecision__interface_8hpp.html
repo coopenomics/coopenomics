@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('newgdecision__interface_8hpp.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -152,17 +145,17 @@ $(document).ready(function(){initNavTree('newgdecision__interface_8hpp.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Макросы</h2></td></tr>
-<tr class="memitem:abe1a065023e934310aeeb700f9aa7799" id="r_abe1a065023e934310aeeb700f9aa7799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a></td></tr>
+<tr class="memitem:abe1a065023e934310aeeb700f9aa7799"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a></td></tr>
 <tr class="separator:abe1a065023e934310aeeb700f9aa7799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a713cd8830903e03985473f08e02acf2d" id="r_a713cd8830903e03985473f08e02acf2d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newgdecision__interface_8hpp.html#a713cd8830903e03985473f08e02acf2d">newgdecision_interface</a> = void(<a class="el" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a>)</td></tr>
+<tr class="memitem:a713cd8830903e03985473f08e02acf2d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="newgdecision__interface_8hpp.html#a713cd8830903e03985473f08e02acf2d">newgdecision_interface</a> = void(<a class="el" href="newgdecision__interface_8hpp.html#abe1a065023e934310aeeb700f9aa7799">NEWGDECISION_SIGNATURE</a>)</td></tr>
 <tr class="separator:a713cd8830903e03985473f08e02acf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Макросы</h2>
 <a id="abe1a065023e934310aeeb700f9aa7799" name="abe1a065023e934310aeeb700f9aa7799"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe1a065023e934310aeeb700f9aa7799">&#9670;&#160;</a></span>NEWGDECISION_SIGNATURE</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe1a065023e934310aeeb700f9aa7799">&#9670;&nbsp;</a></span>NEWGDECISION_SIGNATURE</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,17 +171,16 @@ $(document).ready(function(){initNavTree('newgdecision__interface_8hpp.html','')
 <div class="line">  checksum256 hash,            <span class="comment">/* Хэш собрания */</span> \</div>
 <div class="line">  std::vector&lt;question_result&gt; results, <span class="comment">/* Итог по вопросам */</span> \</div>
 <div class="line">  uint64_t signed_ballots,     <span class="comment">/* Число подписанных бюллетеней */</span> \</div>
-<div class="line">  <span class="keywordtype">double</span> quorum_percent,     <span class="comment">/* Процент кворума */</span> \</div>
-<div class="line">  <span class="keywordtype">bool</span> quorum_passed,           <span class="comment">/* Флаг достигнутого кворума */</span> \</div>
-<div class="line">  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_struct" href="structdecision.html">decision</a>          <span class="comment">/* Протокол общего собрания */</span></div>
-<div class="ttc" id="astructdecision_html"><div class="ttname"><a href="structdecision.html">decision</a></div><div class="ttdoc">Таблица решений кооператива</div><div class="ttdef"><b>Definition</b> coops.hpp:251</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+<div class="line">  double quorum_percent,     <span class="comment">/* Процент кворума */</span> \</div>
+<div class="line">  bool quorum_passed,           <span class="comment">/* Флаг достигнутого кворума */</span> \</div>
+<div class="line">  document2 <a class="code hl_struct" href="structdecision.html">decision</a>          <span class="comment">/* Протокол общего собрания */</span></div>
+<div class="ttc" id="astructdecision_html"><div class="ttname"><a href="structdecision.html">decision</a></div><div class="ttdoc">Таблица решений кооператива</div><div class="ttdef"><b>Definition:</b> coops.hpp:251</div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Типы</h2>
 <a id="a713cd8830903e03985473f08e02acf2d" name="a713cd8830903e03985473f08e02acf2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a713cd8830903e03985473f08e02acf2d">&#9670;&#160;</a></span>newgdecision_interface</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a713cd8830903e03985473f08e02acf2d">&#9670;&nbsp;</a></span>newgdecision_interface</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +200,7 @@ $(document).ready(function(){initNavTree('newgdecision__interface_8hpp.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_bb85938fef94aec577cdee28d9a5840c.html">meet</a></li><li class="navelem"><a class="el" href="dir_dfbf2f07fb183a2222927c37b4d157cf.html">include</a></li><li class="navelem"><a class="el" href="dir_24f21286b52e622a9d6a45d687ff4dcc.html">structs</a></li><li class="navelem"><a class="el" href="newgdecision__interface_8hpp.html">newgdecision_interface.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

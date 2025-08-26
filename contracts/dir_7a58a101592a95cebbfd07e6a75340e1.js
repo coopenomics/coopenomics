@@ -13,7 +13,12 @@ var dir_7a58a101592a95cebbfd07e6a75340e1 =
     [ "counts.hpp", "lib_2counts_8hpp.html", "lib_2counts_8hpp" ],
     [ "drafts.hpp", "drafts_8hpp.html", "drafts_8hpp" ],
     [ "funds.hpp", "funds_8hpp.html", "funds_8hpp" ],
-    [ "permissions.hpp", "permissions_8hpp.html", "permissions_8hpp" ],
+    [ "permissions.hpp", "permissions_8hpp.html", [
+      [ "permission_level_weight", "structpermission__level__weight.html", "structpermission__level__weight" ],
+      [ "key_weight", "structkey__weight.html", "structkey__weight" ],
+      [ "wait_weight", "structwait__weight.html", "structwait__weight" ],
+      [ "authority", "structauthority.html", "structauthority" ]
+    ] ],
     [ "programs.hpp", "lib_2programs_8hpp.html", "lib_2programs_8hpp" ],
     [ "rammarket.hpp", "rammarket_8hpp.html", "rammarket_8hpp" ],
     [ "registry.hpp", "registry_8hpp.html", "registry_8hpp" ],

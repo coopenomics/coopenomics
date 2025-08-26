@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['per_20share_0',['Алгоритм CRPS (Cumulative Reward Per Share)',['../crps_algorithm.html',1,'']]]
+  ['алгоритм_20crps_20_28cumulative_20reward_20per_20share_29_0',['Алгоритм CRPS (Cumulative Reward Per Share)',['../crps_algorithm.html',1,'']]]
 ];

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,32 +128,25 @@ $(document).ready(function(){initNavTree('group__public__capital__configuration_
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Конфигурация контракта для кооператива<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс установки и обновления глобальных параметров работы контракта для конкретного кооператива, включая параметры голосования, распределения премий и временных ограничений.</p>
+<p >Процесс установки и обновления глобальных параметров работы контракта для конкретного кооператива, включая параметры голосования, распределения премий и временных ограничений.</p>
 <h2><a class="anchor" id="autotoc_md0"></a>
 Назначение процесса</h2>
-<p>Конфигурация определяет ключевые параметры функционирования системы:</p><ul>
+<p >Конфигурация определяет ключевые параметры функционирования системы:</p><ul>
 <li>Размеры премий и их распределение между участниками</li>
 <li>Временные рамки для различных операций</li>
 <li>Лимиты и ограничения на операции</li>
 <li>Процентные соотношения для расчетов</li>
 </ul>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant Кооператив
@@ -175,12 +168,12 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Шаг 1: Авторизация кооператива</h3>
-<p><b>Действие:</b> Проверка авторизации от имени кооператива</p>
-<p>Кооператив должен быть авторизован для изменения своих параметров. Это обеспечивает безопасность и предотвращает несанкционированные изменения конфигурации.</p>
+<p ><b>Действие:</b> Проверка авторизации от имени кооператива</p>
+<p >Кооператив должен быть авторизован для изменения своих параметров. Это обеспечивает безопасность и предотвращает несанкционированные изменения конфигурации.</p>
 <h3><a class="anchor" id="autotoc_md3"></a>
 Шаг 2: Валидация параметров конфигурации</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gad28bb6cfe6239f5413efa1d91295a494">Установка конфигурации</a></p>
-<p>Система проверяет корректность всех переданных параметров:</p><ul>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gad28bb6cfe6239f5413efa1d91295a494">Установка конфигурации</a></p>
+<p >Система проверяет корректность всех переданных параметров:</p><ul>
 <li>Премия координатора должна быть в диапазоне от 0 до 10 процентов от инвестиций</li>
 <li>Процент доли пула расходов должен быть между 0 и 100 процентами от инвестиций <br  />
 </li>
@@ -189,11 +182,11 @@ sequenceDiagram
 <li>Процент премий авторов на голосовании должен быть между 0 и 100</li>
 <li>Процент премий создателей на голосовании должен быть между 0 и 100</li>
 </ul>
-<p>Валидация предотвращает установку некорректных значений, которые могут нарушить экономическую модель или логику работы системы.</p>
+<p >Валидация предотвращает установку некорректных значений, которые могут нарушить экономическую модель или логику работы системы.</p>
 <h3><a class="anchor" id="autotoc_md4"></a>
 Шаг 3: Создание или обновление конфигурации</h3>
-<p><b>Действие:</b> Работа с таблицей <a class="el" href="struct_capital_1_1global__state.html">Capital::global_state</a></p>
-<p>Если конфигурация для кооператива не существует, создается новая запись. Если конфигурация уже есть, она обновляется новыми значениями.</p>
+<p ><b>Действие:</b> Работа с таблицей <a class="el" href="struct_capital_1_1global__state.html">Capital::global_state</a></p>
+<p >Если конфигурация для кооператива не существует, создается новая запись. Если конфигурация уже есть, она обновляется новыми значениями.</p>
 <dl class="section post"><dt>Постусловие</dt><dd><ul>
 <li>Конфигурация сохранена в таблице <a class="el" href="struct_capital_1_1global__state.html">Capital::global_state</a> контракта</li>
 <li>Установлены корректные параметры работы системы для кооператива</li>
@@ -206,7 +199,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

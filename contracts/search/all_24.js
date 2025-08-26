@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['жизненного_20цикла_20проекта_0',['Основной процесс жизненного цикла проекта',['../group__public__capital.html#autotoc_md301',1,'']]],
-  ['жизненный_20цикл_20компонентов_1',['Жизненный цикл компонентов',['../group__capital__meta__projects.html#autotoc_md346',1,'']]],
-  ['жизненный_20цикл_20проекта_2',['Влияние на жизненный цикл проекта',['../group__public__capital__set__master__process.html#autotoc_md193',1,'']]],
-  ['жизненный_20цикл_20участника_3',['Жизненный цикл участника',['../index.html#autotoc_md372',1,'']]]
+  ['расширение_20плана_20расходов_0',['Расширение плана расходов',['../group__public__capital__expand__expenses__process.html',1,'']]],
+  ['регистрация_20вкладчиков_1',['Регистрация вкладчиков',['../group__public__capital__registration__process.html',1,'']]],
+  ['регистрация_20доли_20вкладчика_2',['Регистрация доли вкладчика',['../group__public__capital__share__registration__process.html',1,'']]],
+  ['решение_3',['решение',['../project-property-docs_8dox.html#ab0668b5f0d3cd999ac1b6c70cd05a96c',1,'project-property-docs.dox']]]
 ];

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('ledger_8hpp_source.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -161,51 +149,47 @@ $(document).ready(function(){initNavTree('ledger_8hpp_source.html',''); initResi
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classledger.html">   45</a></span><span class="keyword">class </span>[[eosio::contract(<a class="code hl_define" href="consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5">LEDGER</a>)]] <a class="code hl_class" href="classledger.html">ledger</a> : <span class="keyword">public</span> eosio::contract {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classledger.html">   45</a></span><span class="keyword">class </span>[[<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">eosio::contract</a>(<a class="code hl_define" href="consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5">LEDGER</a>)]] <a class="code hl_class" href="classledger.html">ledger</a> : <span class="keyword">public</span> <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">eosio::contract</a> {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classledger.html#acef25d9c43198f5a63bd12bdf2df9f17">   48</a></span>  <a class="code hl_function" href="classledger.html#acef25d9c43198f5a63bd12bdf2df9f17">ledger</a>(eosio::name receiver, eosio::name code,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      eosio::datastream&lt;const char *&gt; ds)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      : <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(receiver, code, ds) {}</div>
-</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classledger.html#a708c6e83111e5a327b354c4ceb84025d">   52</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classledger.html#a708c6e83111e5a327b354c4ceb84025d">apply</a>(uint64_t receiver, uint64_t code, uint64_t <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  [[eosio::action]] <span class="keywordtype">void</span> migrate();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> migrate();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// Операции со счетами (common процесс)</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  [[eosio::action]] <span class="keywordtype">void</span> add(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  [[eosio::action]] <span class="keywordtype">void</span> sub(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> add(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> sub(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">// Операции блокировки/разблокировки средств</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  [[eosio::action]] <span class="keywordtype">void</span> block(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  [[eosio::action]] <span class="keywordtype">void</span> unblock(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> block(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> unblock(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// Атомарная операция списания</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  [[eosio::action]] <span class="keywordtype">void</span> writeoff(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);  </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> writeoff(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);  </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="comment">// Атомарная операция отмены списания</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  [[eosio::action]] <span class="keywordtype">void</span> writeoffcnsl(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);  </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> writeoffcnsl(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment);  </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">// Операции процесса списания через совет (writeoff процесс)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  [[eosio::action]] <span class="keywordtype">void</span> create(eosio::name coopname, eosio::name username, uint64_t account_id, eosio::asset quantity, std::string reason, <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_struct" href="structdocument.html">document</a>, checksum256 writeoff_hash);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  [[eosio::action]] <span class="keywordtype">void</span> auth(eosio::name coopname, checksum256 writeoff_hash);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> create(eosio::name coopname, eosio::name username, uint64_t account_id, eosio::asset quantity, std::string reason, <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_struct" href="structdocument.html">document</a>, checksum256 writeoff_hash);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> auth(eosio::name coopname, checksum256 writeoff_hash);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// Коллбэки от gateway</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  [[eosio::action]] <span class="keywordtype">void</span> complete(eosio::name coopname, checksum256 writeoff_hash);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  [[eosio::action]] <span class="keywordtype">void</span> decline(eosio::name coopname, checksum256 writeoff_hash, std::string reason);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> complete(eosio::name coopname, checksum256 writeoff_hash);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  [[<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>]] <span class="keywordtype">void</span> decline(eosio::name coopname, checksum256 writeoff_hash, std::string reason);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}; </div>
-</div>
-<div class="ttc" id="aclassledger_html"><div class="ttname"><a href="classledger.html">ledger</a></div><div class="ttdoc">Контракт ledger для управления бухгалтерской книгой кооператива</div><div class="ttdef"><b>Definition</b> ledger.hpp:45</div></div>
+<div class="ttc" id="aclassledger_html"><div class="ttname"><a href="classledger.html">ledger</a></div><div class="ttdoc">Контракт ledger для управления бухгалтерской книгой кооператива</div><div class="ttdef"><b>Definition:</b> ledger.hpp:45</div></div>
 <div class="ttc" id="aclassledger_html_a708c6e83111e5a327b354c4ceb84025d"><div class="ttname"><a href="classledger.html#a708c6e83111e5a327b354c4ceb84025d">ledger::apply</a></div><div class="ttdeci">void apply(uint64_t receiver, uint64_t code, uint64_t action)</div></div>
-<div class="ttc" id="aclassledger_html_acef25d9c43198f5a63bd12bdf2df9f17"><div class="ttname"><a href="classledger.html#acef25d9c43198f5a63bd12bdf2df9f17">ledger::ledger</a></div><div class="ttdeci">ledger(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition</b> ledger.hpp:48</div></div>
-<div class="ttc" id="aconsts_8hpp_html_a81b0e7cdf4e6040f1d20d74ad43196e5"><div class="ttname"><a href="consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5">LEDGER</a></div><div class="ttdeci">#define LEDGER</div><div class="ttdef"><b>Definition</b> consts.hpp:139</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="aclassledger_html_acef25d9c43198f5a63bd12bdf2df9f17"><div class="ttname"><a href="classledger.html#acef25d9c43198f5a63bd12bdf2df9f17">ledger::ledger</a></div><div class="ttdeci">ledger(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition:</b> ledger.hpp:48</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a81b0e7cdf4e6040f1d20d74ad43196e5"><div class="ttname"><a href="consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5">LEDGER</a></div><div class="ttdeci">#define LEDGER</div><div class="ttdef"><b>Definition:</b> consts.hpp:141</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
 <div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
-<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:7</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
+<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -213,7 +197,7 @@ $(document).ready(function(){initNavTree('ledger_8hpp_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_dad98a9b8bfa7288b72574e35ed095e9.html">ledger</a></li><li class="navelem"><a class="el" href="ledger_8hpp.html">ledger.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

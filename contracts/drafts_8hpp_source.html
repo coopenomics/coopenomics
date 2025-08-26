@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -154,7 +142,6 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;eosio/contract.hpp&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/system.hpp&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structdocument.html">    6</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdocument.html">document</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>  <span class="comment">// Чексумма документа (SHA256)</span></div>
@@ -166,9 +153,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="comment">// Публичные мета-данные документа</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">   15</a></span>  std::string <a class="code hl_variable" href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">meta</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structsignature__info.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structsignature__info.html">signature_info</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structsignature__info.html#a013ad507ed4209f622b1975a7929549a">   19</a></span>    uint32_t <a class="code hl_variable" href="structsignature__info.html#a013ad507ed4209f622b1975a7929549a">id</a>;                     <span class="comment">// идентификатор номера подписи</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structsignature__info.html#a0e53d0c301759138d438b300ccec6237">   20</a></span>    checksum256 <a class="code hl_variable" href="structsignature__info.html#a0e53d0c301759138d438b300ccec6237">signed_hash</a>;         <span class="comment">// подписанный хэш, включающий доп. данные (дату подписи)</span></div>
@@ -178,9 +163,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structsignature__info.html#ab63ff4056d6d636f7057ecea80c776d3">   24</a></span>    eosio::time_point_sec <a class="code hl_variable" href="structsignature__info.html#ab63ff4056d6d636f7057ecea80c776d3">signed_at</a>; <span class="comment">// время подписания</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structsignature__info.html#a6363cbbb6266f2d13b31902dde99c4e0">   25</a></span>    std::string <a class="code hl_variable" href="structsignature__info.html#a6363cbbb6266f2d13b31902dde99c4e0">meta</a>;                <span class="comment">// мета-данные подписи</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
-</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structdocument2.html">   28</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdocument2.html">document2</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Версия стандарта документа</span></div>
@@ -199,21 +182,19 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Вектор подписей (может содержать несколько подписантов)</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">   44</a></span>    std::vector&lt;signature_info&gt; <a class="code hl_variable" href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">signatures</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
-</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">   47</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">verify_document_or_fail</a>(</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a> &amp;doc,</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> std::vector&lt;eosio::name&gt;&amp; required_signers = {}</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sig : doc.signatures) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;sig : doc.<a class="code hl_variable" href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">signatures</a>) {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// Проверка завершится прерыванием, если восстановление подписи провалится</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    assert_recover_key(sig.signed_hash, sig.signature, sig.public_key);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordflow">if</span> (!required_signers.empty()) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; required : required_signers) {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordtype">bool</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sig : doc.signatures) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; sig : doc.<a class="code hl_variable" href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">signatures</a>) {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (sig.signer == required) {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>          found = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>          <span class="keywordflow">break</span>;</div>
@@ -223,18 +204,14 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
-</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">   69</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">is_empty_document</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a> &amp;doc)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">constexpr</span> checksum256 EMPTY_HASH = checksum256(); <span class="comment">// Все нули по умолчанию</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> doc.<a class="code hl_variable" href="structdocument2.html#a163db865e552295322304eb524bd56d4">hash</a> == EMPTY_HASH;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="};">
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structonedraft.html">   84</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(DRAFT)]] <a class="code hl_struct" href="structonedraft.html">onedraft</a></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structonedraft.html#a15552c3fd1f5207e7cd3ab0b4a789fce">   86</a></span>  uint64_t <a class="code hl_variable" href="structonedraft.html#a15552c3fd1f5207e7cd3ab0b4a789fce">registry_id</a>; </div>
@@ -248,12 +225,10 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="structonedraft.html#addbe571021695f9aaec8988033f191dc">   94</a></span>  uint64_t <a class="code hl_function" href="structonedraft.html#addbe571021695f9aaec8988033f191dc">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structonedraft.html#a15552c3fd1f5207e7cd3ab0b4a789fce">registry_id</a>; }; </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
-</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">   98</a></span><span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;drafts&quot;</span>_n, <a class="code hl_struct" href="structonedraft.html">onedraft</a>&gt; <a class="code hl_typedef" href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
-<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">  101</a></span><a class="code hl_struct" href="structonedraft.html">onedraft</a> <a class="code hl_function" href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">get_scoped_draft_by_registry_or_fail</a>(eosio::name scope, uint64_t draft_id) {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_typedef" href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a> drafts(<a class="code hl_variable" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a>, scope.value);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">auto</span> <a class="code hl_class" href="classdraft.html">draft</a> = drafts.find(draft_id);</div>
@@ -262,9 +237,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordflow">return</span> *<a class="code hl_class" href="classdraft.html">draft</a>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
-</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="};">
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="structtranslation.html">  118</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(DRAFT)]] <a class="code hl_struct" href="structtranslation.html">translation</a></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="structtranslation.html#abd4eb0141053f4624437fa657c508ece">  120</a></span>  uint64_t <a class="code hl_variable" href="structtranslation.html#abd4eb0141053f4624437fa657c508ece">id</a>; </div>
@@ -277,7 +250,6 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">  128</a></span>  uint128_t <a class="code hl_function" href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">by_draft_lang</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(draft_id, lang.value); }; </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>};</div>
-</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="stringliteral">&quot;translations&quot;</span>_n, <a class="code hl_struct" href="structtranslation.html">translation</a>,</div>
@@ -287,53 +259,53 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        eosio::const_mem_fun&lt;translation, uint128_t, &amp;translation::by_draft_lang&gt;&gt;&gt;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">  137</a></span>    <a class="code hl_typedef" href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">translations_index</a>;</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="ttc" id="aclassdraft_html"><div class="ttname"><a href="classdraft.html">draft</a></div><div class="ttdoc">Константы контракта шаблонов документов</div><div class="ttdef"><b>Definition</b> draft.hpp:45</div></div>
-<div class="ttc" id="aconsts_8hpp_html_a774dd561cf17ec65e59129b5ad8690d6"><div class="ttname"><a href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a></div><div class="ttdeci">static constexpr eosio::name _draft</div><div class="ttdef"><b>Definition</b> consts.hpp:154</div></div>
-<div class="ttc" id="adrafts_8hpp_html_a250c486fb09ccba9984e2fa2076d23de"><div class="ttname"><a href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">verify_document_or_fail</a></div><div class="ttdeci">void verify_document_or_fail(const document2 &amp;doc, const std::vector&lt; eosio::name &gt; &amp;required_signers={})</div><div class="ttdef"><b>Definition</b> drafts.hpp:47</div></div>
-<div class="ttc" id="adrafts_8hpp_html_a25ab1953ae48f98a413a2e3d3a2d9210"><div class="ttname"><a href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">is_empty_document</a></div><div class="ttdeci">bool is_empty_document(const document2 &amp;doc)</div><div class="ttdef"><b>Definition</b> drafts.hpp:69</div></div>
-<div class="ttc" id="adrafts_8hpp_html_a299db80d0621cd644a06cc1ea6ef4b70"><div class="ttname"><a href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;drafts&quot;_n, onedraft &gt; drafts_index</div><div class="ttdef"><b>Definition</b> drafts.hpp:98</div></div>
-<div class="ttc" id="adrafts_8hpp_html_ab33f9403422d20c5528e4da3ddfbe417"><div class="ttname"><a href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">translations_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;translations&quot;_n, translation, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; translation, uint64_t, &amp;translation::by_draft &gt; &gt;, eosio::indexed_by&lt; &quot;bydraftlang&quot;_n, eosio::const_mem_fun&lt; translation, uint128_t, &amp;translation::by_draft_lang &gt; &gt; &gt; translations_index</div><div class="ttdef"><b>Definition</b> drafts.hpp:137</div></div>
-<div class="ttc" id="adrafts_8hpp_html_af3cfefc61617bfa74ee31aafd9cb1058"><div class="ttname"><a href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">get_scoped_draft_by_registry_or_fail</a></div><div class="ttdeci">onedraft get_scoped_draft_by_registry_or_fail(eosio::name scope, uint64_t draft_id)</div><div class="ttdef"><b>Definition</b> drafts.hpp:101</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
-<div class="ttc" id="astructdocument2_html_a163db865e552295322304eb524bd56d4"><div class="ttname"><a href="structdocument2.html#a163db865e552295322304eb524bd56d4">document2::hash</a></div><div class="ttdeci">eosio::checksum256 hash</div><div class="ttdef"><b>Definition</b> drafts.hpp:36</div></div>
-<div class="ttc" id="astructdocument2_html_a705586bc66618edeab4bff430c32cba5"><div class="ttname"><a href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">document2::signatures</a></div><div class="ttdeci">std::vector&lt; signature_info &gt; signatures</div><div class="ttdef"><b>Definition</b> drafts.hpp:44</div></div>
-<div class="ttc" id="astructdocument2_html_a74309913b3a0d93684d869d46d0e67be"><div class="ttname"><a href="structdocument2.html#a74309913b3a0d93684d869d46d0e67be">document2::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition</b> drafts.hpp:41</div></div>
-<div class="ttc" id="astructdocument2_html_a954f22e8a8b6a879245bef8a1d5f39d4"><div class="ttname"><a href="structdocument2.html#a954f22e8a8b6a879245bef8a1d5f39d4">document2::meta_hash</a></div><div class="ttdeci">eosio::checksum256 meta_hash</div><div class="ttdef"><b>Definition</b> drafts.hpp:38</div></div>
-<div class="ttc" id="astructdocument2_html_aa83b078866e2b2d237d7e95af852d9b7"><div class="ttname"><a href="structdocument2.html#aa83b078866e2b2d237d7e95af852d9b7">document2::version</a></div><div class="ttdeci">std::string version</div><div class="ttdef"><b>Definition</b> drafts.hpp:31</div></div>
-<div class="ttc" id="astructdocument2_html_ae954c71ecf3aec057a32c4473c3c8880"><div class="ttname"><a href="structdocument2.html#ae954c71ecf3aec057a32c4473c3c8880">document2::doc_hash</a></div><div class="ttdeci">eosio::checksum256 doc_hash</div><div class="ttdef"><b>Definition</b> drafts.hpp:37</div></div>
-<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:7</div></div>
-<div class="ttc" id="astructdocument_html_a45763224394ca879e133b8a4bdad75d2"><div class="ttname"><a href="structdocument.html#a45763224394ca879e133b8a4bdad75d2">document::hash</a></div><div class="ttdeci">checksum256 hash</div><div class="ttdef"><b>Definition</b> drafts.hpp:9</div></div>
-<div class="ttc" id="astructdocument_html_a9fd2739490e87378f466df2a0c65bd58"><div class="ttname"><a href="structdocument.html#a9fd2739490e87378f466df2a0c65bd58">document::signature</a></div><div class="ttdeci">signature signature</div><div class="ttdef"><b>Definition</b> drafts.hpp:13</div></div>
-<div class="ttc" id="astructdocument_html_ad6e940cca29c2ca96fb1f740d3f2dc90"><div class="ttname"><a href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">document::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition</b> drafts.hpp:15</div></div>
-<div class="ttc" id="astructdocument_html_ad991dff7669688e9d726253bf16f64df"><div class="ttname"><a href="structdocument.html#ad991dff7669688e9d726253bf16f64df">document::public_key</a></div><div class="ttdeci">public_key public_key</div><div class="ttdef"><b>Definition</b> drafts.hpp:11</div></div>
-<div class="ttc" id="astructonedraft_html"><div class="ttname"><a href="structonedraft.html">onedraft</a></div><div class="ttdoc">Таблица шаблонов документов хранит информацию о шаблонах документов и их версиях.</div><div class="ttdef"><b>Definition</b> drafts.hpp:85</div></div>
-<div class="ttc" id="astructonedraft_html_a0789742f73c87731246e1fc3bf364477"><div class="ttname"><a href="structonedraft.html#a0789742f73c87731246e1fc3bf364477">onedraft::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:91</div></div>
-<div class="ttc" id="astructonedraft_html_a15552c3fd1f5207e7cd3ab0b4a789fce"><div class="ttname"><a href="structonedraft.html#a15552c3fd1f5207e7cd3ab0b4a789fce">onedraft::registry_id</a></div><div class="ttdeci">uint64_t registry_id</div><div class="ttdoc">Реестровый идентификатор шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:86</div></div>
-<div class="ttc" id="astructonedraft_html_a2c904caf541396520243493a78f058cd"><div class="ttname"><a href="structonedraft.html#a2c904caf541396520243493a78f058cd">onedraft::model</a></div><div class="ttdeci">std::string model</div><div class="ttdoc">Модель шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:92</div></div>
-<div class="ttc" id="astructonedraft_html_a32e4777a8617210181260229c4d872af"><div class="ttname"><a href="structonedraft.html#a32e4777a8617210181260229c4d872af">onedraft::version</a></div><div class="ttdeci">uint64_t version</div><div class="ttdoc">Версия шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:87</div></div>
-<div class="ttc" id="astructonedraft_html_a622e8d29194f3358d26b3d39b7a861f9"><div class="ttname"><a href="structonedraft.html#a622e8d29194f3358d26b3d39b7a861f9">onedraft::default_translation_id</a></div><div class="ttdeci">uint64_t default_translation_id</div><div class="ttdoc">Идентификатор перевода по умолчанию</div><div class="ttdef"><b>Definition</b> drafts.hpp:88</div></div>
-<div class="ttc" id="astructonedraft_html_ace57b74dd5e0c9b46f79a6ef96d69727"><div class="ttname"><a href="structonedraft.html#ace57b74dd5e0c9b46f79a6ef96d69727">onedraft::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">Описание шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:90</div></div>
-<div class="ttc" id="astructonedraft_html_ad0d6075eaac651e9d7e6a884283584bb"><div class="ttname"><a href="structonedraft.html#ad0d6075eaac651e9d7e6a884283584bb">onedraft::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Заголовок шаблона</div><div class="ttdef"><b>Definition</b> drafts.hpp:89</div></div>
-<div class="ttc" id="astructonedraft_html_addbe571021695f9aaec8988033f191dc"><div class="ttname"><a href="structonedraft.html#addbe571021695f9aaec8988033f191dc">onedraft::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> drafts.hpp:94</div></div>
-<div class="ttc" id="astructsignature__info_html"><div class="ttname"><a href="structsignature__info.html">signature_info</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:18</div></div>
-<div class="ttc" id="astructsignature__info_html_a013ad507ed4209f622b1975a7929549a"><div class="ttname"><a href="structsignature__info.html#a013ad507ed4209f622b1975a7929549a">signature_info::id</a></div><div class="ttdeci">uint32_t id</div><div class="ttdef"><b>Definition</b> drafts.hpp:19</div></div>
-<div class="ttc" id="astructsignature__info_html_a0e53d0c301759138d438b300ccec6237"><div class="ttname"><a href="structsignature__info.html#a0e53d0c301759138d438b300ccec6237">signature_info::signed_hash</a></div><div class="ttdeci">checksum256 signed_hash</div><div class="ttdef"><b>Definition</b> drafts.hpp:20</div></div>
-<div class="ttc" id="astructsignature__info_html_a33effc71ea076cc707d27f82e0e4b0b1"><div class="ttname"><a href="structsignature__info.html#a33effc71ea076cc707d27f82e0e4b0b1">signature_info::signer</a></div><div class="ttdeci">eosio::name signer</div><div class="ttdef"><b>Definition</b> drafts.hpp:21</div></div>
-<div class="ttc" id="astructsignature__info_html_a42d62a40561400f191494e3c094c8344"><div class="ttname"><a href="structsignature__info.html#a42d62a40561400f191494e3c094c8344">signature_info::public_key</a></div><div class="ttdeci">eosio::public_key public_key</div><div class="ttdef"><b>Definition</b> drafts.hpp:22</div></div>
-<div class="ttc" id="astructsignature__info_html_a6363cbbb6266f2d13b31902dde99c4e0"><div class="ttname"><a href="structsignature__info.html#a6363cbbb6266f2d13b31902dde99c4e0">signature_info::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition</b> drafts.hpp:25</div></div>
-<div class="ttc" id="astructsignature__info_html_ab63ff4056d6d636f7057ecea80c776d3"><div class="ttname"><a href="structsignature__info.html#ab63ff4056d6d636f7057ecea80c776d3">signature_info::signed_at</a></div><div class="ttdeci">eosio::time_point_sec signed_at</div><div class="ttdef"><b>Definition</b> drafts.hpp:24</div></div>
-<div class="ttc" id="astructsignature__info_html_aedca8baa0c5fe22be2df7c0ea6b3bd33"><div class="ttname"><a href="structsignature__info.html#aedca8baa0c5fe22be2df7c0ea6b3bd33">signature_info::signature</a></div><div class="ttdeci">eosio::signature signature</div><div class="ttdef"><b>Definition</b> drafts.hpp:23</div></div>
-<div class="ttc" id="astructtranslation_html"><div class="ttname"><a href="structtranslation.html">translation</a></div><div class="ttdoc">Таблица переводов шаблонов документов хранит переводы шаблонов на различные языки.</div><div class="ttdef"><b>Definition</b> drafts.hpp:119</div></div>
-<div class="ttc" id="astructtranslation_html_a17121e2068a26547b2db19de299cfae4"><div class="ttname"><a href="structtranslation.html#a17121e2068a26547b2db19de299cfae4">translation::by_draft</a></div><div class="ttdeci">uint64_t by_draft() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition</b> drafts.hpp:126</div></div>
-<div class="ttc" id="astructtranslation_html_a30da3077304d7b5d6042b7a2fbd6c775"><div class="ttname"><a href="structtranslation.html#a30da3077304d7b5d6042b7a2fbd6c775">translation::lang</a></div><div class="ttdeci">eosio::name lang</div><div class="ttdoc">Язык перевода</div><div class="ttdef"><b>Definition</b> drafts.hpp:122</div></div>
-<div class="ttc" id="astructtranslation_html_a3700267e3a8241b50d4df712d9e80e75"><div class="ttname"><a href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">translation::by_draft_lang</a></div><div class="ttdeci">uint128_t by_draft_lang() const</div><div class="ttdoc">Индекс по шаблону (2)</div><div class="ttdef"><b>Definition</b> drafts.hpp:128</div></div>
-<div class="ttc" id="astructtranslation_html_a38c080360d9246d918eaeb828b4ec2fb"><div class="ttname"><a href="structtranslation.html#a38c080360d9246d918eaeb828b4ec2fb">translation::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> drafts.hpp:125</div></div>
-<div class="ttc" id="astructtranslation_html_a971a02e842e4750af9f64a2113735726"><div class="ttname"><a href="structtranslation.html#a971a02e842e4750af9f64a2113735726">translation::draft_id</a></div><div class="ttdeci">uint64_t draft_id</div><div class="ttdoc">Идентификатор шаблона документа</div><div class="ttdef"><b>Definition</b> drafts.hpp:121</div></div>
-<div class="ttc" id="astructtranslation_html_ab0c91e1bbc71567f34f88f2eb32e1653"><div class="ttname"><a href="structtranslation.html#ab0c91e1bbc71567f34f88f2eb32e1653">translation::data</a></div><div class="ttdeci">std::string data</div><div class="ttdoc">Данные перевода</div><div class="ttdef"><b>Definition</b> drafts.hpp:123</div></div>
-<div class="ttc" id="astructtranslation_html_abd4eb0141053f4624437fa657c508ece"><div class="ttname"><a href="structtranslation.html#abd4eb0141053f4624437fa657c508ece">translation::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор перевода</div><div class="ttdef"><b>Definition</b> drafts.hpp:120</div></div>
-<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition</b> utils.hpp:5</div></div>
+<div class="ttc" id="aclassdraft_html"><div class="ttname"><a href="classdraft.html">draft</a></div><div class="ttdoc">Константы контракта шаблонов документов</div><div class="ttdef"><b>Definition:</b> draft.hpp:45</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a774dd561cf17ec65e59129b5ad8690d6"><div class="ttname"><a href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a></div><div class="ttdeci">static constexpr eosio::name _draft</div><div class="ttdef"><b>Definition:</b> consts.hpp:154</div></div>
+<div class="ttc" id="adrafts_8hpp_html_a250c486fb09ccba9984e2fa2076d23de"><div class="ttname"><a href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">verify_document_or_fail</a></div><div class="ttdeci">void verify_document_or_fail(const document2 &amp;doc, const std::vector&lt; eosio::name &gt; &amp;required_signers={})</div><div class="ttdef"><b>Definition:</b> drafts.hpp:47</div></div>
+<div class="ttc" id="adrafts_8hpp_html_a25ab1953ae48f98a413a2e3d3a2d9210"><div class="ttname"><a href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">is_empty_document</a></div><div class="ttdeci">bool is_empty_document(const document2 &amp;doc)</div><div class="ttdef"><b>Definition:</b> drafts.hpp:69</div></div>
+<div class="ttc" id="adrafts_8hpp_html_a299db80d0621cd644a06cc1ea6ef4b70"><div class="ttname"><a href="drafts_8hpp.html#a299db80d0621cd644a06cc1ea6ef4b70">drafts_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;drafts&quot;_n, onedraft &gt; drafts_index</div><div class="ttdef"><b>Definition:</b> drafts.hpp:98</div></div>
+<div class="ttc" id="adrafts_8hpp_html_ab33f9403422d20c5528e4da3ddfbe417"><div class="ttname"><a href="drafts_8hpp.html#ab33f9403422d20c5528e4da3ddfbe417">translations_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;translations&quot;_n, translation, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; translation, uint64_t, &amp;translation::by_draft &gt; &gt;, eosio::indexed_by&lt; &quot;bydraftlang&quot;_n, eosio::const_mem_fun&lt; translation, uint128_t, &amp;translation::by_draft_lang &gt; &gt; &gt; translations_index</div><div class="ttdef"><b>Definition:</b> drafts.hpp:137</div></div>
+<div class="ttc" id="adrafts_8hpp_html_af3cfefc61617bfa74ee31aafd9cb1058"><div class="ttname"><a href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">get_scoped_draft_by_registry_or_fail</a></div><div class="ttdeci">onedraft get_scoped_draft_by_registry_or_fail(eosio::name scope, uint64_t draft_id)</div><div class="ttdef"><b>Definition:</b> drafts.hpp:101</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
+<div class="ttc" id="astructdocument2_html_a163db865e552295322304eb524bd56d4"><div class="ttname"><a href="structdocument2.html#a163db865e552295322304eb524bd56d4">document2::hash</a></div><div class="ttdeci">eosio::checksum256 hash</div><div class="ttdef"><b>Definition:</b> drafts.hpp:36</div></div>
+<div class="ttc" id="astructdocument2_html_a705586bc66618edeab4bff430c32cba5"><div class="ttname"><a href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">document2::signatures</a></div><div class="ttdeci">std::vector&lt; signature_info &gt; signatures</div><div class="ttdef"><b>Definition:</b> drafts.hpp:44</div></div>
+<div class="ttc" id="astructdocument2_html_a74309913b3a0d93684d869d46d0e67be"><div class="ttname"><a href="structdocument2.html#a74309913b3a0d93684d869d46d0e67be">document2::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition:</b> drafts.hpp:41</div></div>
+<div class="ttc" id="astructdocument2_html_a954f22e8a8b6a879245bef8a1d5f39d4"><div class="ttname"><a href="structdocument2.html#a954f22e8a8b6a879245bef8a1d5f39d4">document2::meta_hash</a></div><div class="ttdeci">eosio::checksum256 meta_hash</div><div class="ttdef"><b>Definition:</b> drafts.hpp:38</div></div>
+<div class="ttc" id="astructdocument2_html_aa83b078866e2b2d237d7e95af852d9b7"><div class="ttname"><a href="structdocument2.html#aa83b078866e2b2d237d7e95af852d9b7">document2::version</a></div><div class="ttdeci">std::string version</div><div class="ttdef"><b>Definition:</b> drafts.hpp:31</div></div>
+<div class="ttc" id="astructdocument2_html_ae954c71ecf3aec057a32c4473c3c8880"><div class="ttname"><a href="structdocument2.html#ae954c71ecf3aec057a32c4473c3c8880">document2::doc_hash</a></div><div class="ttdeci">eosio::checksum256 doc_hash</div><div class="ttdef"><b>Definition:</b> drafts.hpp:37</div></div>
+<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
+<div class="ttc" id="astructdocument_html_a45763224394ca879e133b8a4bdad75d2"><div class="ttname"><a href="structdocument.html#a45763224394ca879e133b8a4bdad75d2">document::hash</a></div><div class="ttdeci">checksum256 hash</div><div class="ttdef"><b>Definition:</b> drafts.hpp:9</div></div>
+<div class="ttc" id="astructdocument_html_a9fd2739490e87378f466df2a0c65bd58"><div class="ttname"><a href="structdocument.html#a9fd2739490e87378f466df2a0c65bd58">document::signature</a></div><div class="ttdeci">signature signature</div><div class="ttdef"><b>Definition:</b> drafts.hpp:13</div></div>
+<div class="ttc" id="astructdocument_html_ad6e940cca29c2ca96fb1f740d3f2dc90"><div class="ttname"><a href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">document::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition:</b> drafts.hpp:15</div></div>
+<div class="ttc" id="astructdocument_html_ad991dff7669688e9d726253bf16f64df"><div class="ttname"><a href="structdocument.html#ad991dff7669688e9d726253bf16f64df">document::public_key</a></div><div class="ttdeci">public_key public_key</div><div class="ttdef"><b>Definition:</b> drafts.hpp:11</div></div>
+<div class="ttc" id="astructonedraft_html"><div class="ttname"><a href="structonedraft.html">onedraft</a></div><div class="ttdoc">Таблица шаблонов документов хранит информацию о шаблонах документов и их версиях.</div><div class="ttdef"><b>Definition:</b> drafts.hpp:85</div></div>
+<div class="ttc" id="astructonedraft_html_a0789742f73c87731246e1fc3bf364477"><div class="ttname"><a href="structonedraft.html#a0789742f73c87731246e1fc3bf364477">onedraft::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:91</div></div>
+<div class="ttc" id="astructonedraft_html_a15552c3fd1f5207e7cd3ab0b4a789fce"><div class="ttname"><a href="structonedraft.html#a15552c3fd1f5207e7cd3ab0b4a789fce">onedraft::registry_id</a></div><div class="ttdeci">uint64_t registry_id</div><div class="ttdoc">Реестровый идентификатор шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:86</div></div>
+<div class="ttc" id="astructonedraft_html_a2c904caf541396520243493a78f058cd"><div class="ttname"><a href="structonedraft.html#a2c904caf541396520243493a78f058cd">onedraft::model</a></div><div class="ttdeci">std::string model</div><div class="ttdoc">Модель шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:92</div></div>
+<div class="ttc" id="astructonedraft_html_a32e4777a8617210181260229c4d872af"><div class="ttname"><a href="structonedraft.html#a32e4777a8617210181260229c4d872af">onedraft::version</a></div><div class="ttdeci">uint64_t version</div><div class="ttdoc">Версия шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:87</div></div>
+<div class="ttc" id="astructonedraft_html_a622e8d29194f3358d26b3d39b7a861f9"><div class="ttname"><a href="structonedraft.html#a622e8d29194f3358d26b3d39b7a861f9">onedraft::default_translation_id</a></div><div class="ttdeci">uint64_t default_translation_id</div><div class="ttdoc">Идентификатор перевода по умолчанию</div><div class="ttdef"><b>Definition:</b> drafts.hpp:88</div></div>
+<div class="ttc" id="astructonedraft_html_ace57b74dd5e0c9b46f79a6ef96d69727"><div class="ttname"><a href="structonedraft.html#ace57b74dd5e0c9b46f79a6ef96d69727">onedraft::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">Описание шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:90</div></div>
+<div class="ttc" id="astructonedraft_html_ad0d6075eaac651e9d7e6a884283584bb"><div class="ttname"><a href="structonedraft.html#ad0d6075eaac651e9d7e6a884283584bb">onedraft::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Заголовок шаблона</div><div class="ttdef"><b>Definition:</b> drafts.hpp:89</div></div>
+<div class="ttc" id="astructonedraft_html_addbe571021695f9aaec8988033f191dc"><div class="ttname"><a href="structonedraft.html#addbe571021695f9aaec8988033f191dc">onedraft::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> drafts.hpp:94</div></div>
+<div class="ttc" id="astructsignature__info_html"><div class="ttname"><a href="structsignature__info.html">signature_info</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:18</div></div>
+<div class="ttc" id="astructsignature__info_html_a013ad507ed4209f622b1975a7929549a"><div class="ttname"><a href="structsignature__info.html#a013ad507ed4209f622b1975a7929549a">signature_info::id</a></div><div class="ttdeci">uint32_t id</div><div class="ttdef"><b>Definition:</b> drafts.hpp:19</div></div>
+<div class="ttc" id="astructsignature__info_html_a0e53d0c301759138d438b300ccec6237"><div class="ttname"><a href="structsignature__info.html#a0e53d0c301759138d438b300ccec6237">signature_info::signed_hash</a></div><div class="ttdeci">checksum256 signed_hash</div><div class="ttdef"><b>Definition:</b> drafts.hpp:20</div></div>
+<div class="ttc" id="astructsignature__info_html_a33effc71ea076cc707d27f82e0e4b0b1"><div class="ttname"><a href="structsignature__info.html#a33effc71ea076cc707d27f82e0e4b0b1">signature_info::signer</a></div><div class="ttdeci">eosio::name signer</div><div class="ttdef"><b>Definition:</b> drafts.hpp:21</div></div>
+<div class="ttc" id="astructsignature__info_html_a42d62a40561400f191494e3c094c8344"><div class="ttname"><a href="structsignature__info.html#a42d62a40561400f191494e3c094c8344">signature_info::public_key</a></div><div class="ttdeci">eosio::public_key public_key</div><div class="ttdef"><b>Definition:</b> drafts.hpp:22</div></div>
+<div class="ttc" id="astructsignature__info_html_a6363cbbb6266f2d13b31902dde99c4e0"><div class="ttname"><a href="structsignature__info.html#a6363cbbb6266f2d13b31902dde99c4e0">signature_info::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition:</b> drafts.hpp:25</div></div>
+<div class="ttc" id="astructsignature__info_html_ab63ff4056d6d636f7057ecea80c776d3"><div class="ttname"><a href="structsignature__info.html#ab63ff4056d6d636f7057ecea80c776d3">signature_info::signed_at</a></div><div class="ttdeci">eosio::time_point_sec signed_at</div><div class="ttdef"><b>Definition:</b> drafts.hpp:24</div></div>
+<div class="ttc" id="astructsignature__info_html_aedca8baa0c5fe22be2df7c0ea6b3bd33"><div class="ttname"><a href="structsignature__info.html#aedca8baa0c5fe22be2df7c0ea6b3bd33">signature_info::signature</a></div><div class="ttdeci">eosio::signature signature</div><div class="ttdef"><b>Definition:</b> drafts.hpp:23</div></div>
+<div class="ttc" id="astructtranslation_html"><div class="ttname"><a href="structtranslation.html">translation</a></div><div class="ttdoc">Таблица переводов шаблонов документов хранит переводы шаблонов на различные языки.</div><div class="ttdef"><b>Definition:</b> drafts.hpp:119</div></div>
+<div class="ttc" id="astructtranslation_html_a17121e2068a26547b2db19de299cfae4"><div class="ttname"><a href="structtranslation.html#a17121e2068a26547b2db19de299cfae4">translation::by_draft</a></div><div class="ttdeci">uint64_t by_draft() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition:</b> drafts.hpp:126</div></div>
+<div class="ttc" id="astructtranslation_html_a30da3077304d7b5d6042b7a2fbd6c775"><div class="ttname"><a href="structtranslation.html#a30da3077304d7b5d6042b7a2fbd6c775">translation::lang</a></div><div class="ttdeci">eosio::name lang</div><div class="ttdoc">Язык перевода</div><div class="ttdef"><b>Definition:</b> drafts.hpp:122</div></div>
+<div class="ttc" id="astructtranslation_html_a3700267e3a8241b50d4df712d9e80e75"><div class="ttname"><a href="structtranslation.html#a3700267e3a8241b50d4df712d9e80e75">translation::by_draft_lang</a></div><div class="ttdeci">uint128_t by_draft_lang() const</div><div class="ttdoc">Индекс по шаблону (2)</div><div class="ttdef"><b>Definition:</b> drafts.hpp:128</div></div>
+<div class="ttc" id="astructtranslation_html_a38c080360d9246d918eaeb828b4ec2fb"><div class="ttname"><a href="structtranslation.html#a38c080360d9246d918eaeb828b4ec2fb">translation::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> drafts.hpp:125</div></div>
+<div class="ttc" id="astructtranslation_html_a971a02e842e4750af9f64a2113735726"><div class="ttname"><a href="structtranslation.html#a971a02e842e4750af9f64a2113735726">translation::draft_id</a></div><div class="ttdeci">uint64_t draft_id</div><div class="ttdoc">Идентификатор шаблона документа</div><div class="ttdef"><b>Definition:</b> drafts.hpp:121</div></div>
+<div class="ttc" id="astructtranslation_html_ab0c91e1bbc71567f34f88f2eb32e1653"><div class="ttname"><a href="structtranslation.html#ab0c91e1bbc71567f34f88f2eb32e1653">translation::data</a></div><div class="ttdeci">std::string data</div><div class="ttdoc">Данные перевода</div><div class="ttdef"><b>Definition:</b> drafts.hpp:123</div></div>
+<div class="ttc" id="astructtranslation_html_abd4eb0141053f4624437fa657c508ece"><div class="ttname"><a href="structtranslation.html#abd4eb0141053f4624437fa657c508ece">translation::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор перевода</div><div class="ttdef"><b>Definition:</b> drafts.hpp:120</div></div>
+<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition:</b> utils.hpp:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -341,7 +313,7 @@ $(document).ready(function(){initNavTree('drafts_8hpp_source.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="drafts_8hpp.html">drafts.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -1,6 +1,8 @@
 var dir_d1eb7f32592100b226cc7f73f9055757 =
 [
-    [ "coopenomics_tester.hpp", "coopenomics__tester_8hpp.html", "coopenomics__tester_8hpp" ],
+    [ "coopenomics_tester.hpp", "coopenomics__tester_8hpp.html", [
+      [ "coopenomics_tester", "classcoopenomics__tester.html", "classcoopenomics__tester" ]
+    ] ],
     [ "eosio.limitauth_tests.cpp", "eosio_8limitauth__tests_8cpp.html", "eosio_8limitauth__tests_8cpp" ],
     [ "eosio.msig_tests.cpp", "eosio_8msig__tests_8cpp.html", "eosio_8msig__tests_8cpp" ],
     [ "eosio.powerup_tests.cpp", "eosio_8powerup__tests_8cpp.html", "eosio_8powerup__tests_8cpp" ],

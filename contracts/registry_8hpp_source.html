@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,31 +128,22 @@ $(document).ready(function(){initNavTree('registry_8hpp_source.html',''); initRe
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">registry.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="registry_8hpp.html">См. документацию.</a><div class="fragment"><div class="foldopen" id="foldopen00001" data-start="{" data-end="}">
-<div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">    1</a></span><span class="keyword">inline</span> eosio::name <a class="code hl_function" href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">get_valid_soviet_action</a>(<span class="keyword">const</span> eosio::name&amp; <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>) {</div>
+<a href="registry_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">    1</a></span><span class="keyword">inline</span> eosio::name <a class="code hl_function" href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">get_valid_soviet_action</a>(<span class="keyword">const</span> eosio::name&amp; <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>) {</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>    eosio::check(<a class="code hl_variable" href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">soviet_actions</a>.contains(<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>), <span class="stringliteral">&quot;Недопустимое имя действия&quot;</span>);</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>}</div>
-</div>
-<div class="ttc" id="aconsts_8hpp_html_a1969de36d0715731eeed6eb81951c87f"><div class="ttname"><a href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">soviet_actions</a></div><div class="ttdeci">static const std::set&lt; eosio::name &gt; soviet_actions</div><div class="ttdef"><b>Definition</b> consts.hpp:86</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a1969de36d0715731eeed6eb81951c87f"><div class="ttname"><a href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">soviet_actions</a></div><div class="ttdeci">static const std::set&lt; eosio::name &gt; soviet_actions</div><div class="ttdef"><b>Definition:</b> consts.hpp:86</div></div>
 <div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
-<div class="ttc" id="aregistry_8hpp_html_a4ca0aa4e49403b592d5452fd66376b17"><div class="ttname"><a href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">get_valid_soviet_action</a></div><div class="ttdeci">eosio::name get_valid_soviet_action(const eosio::name &amp;action)</div><div class="ttdef"><b>Definition</b> registry.hpp:1</div></div>
+<div class="ttc" id="aregistry_8hpp_html_a4ca0aa4e49403b592d5452fd66376b17"><div class="ttname"><a href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">get_valid_soviet_action</a></div><div class="ttdeci">eosio::name get_valid_soviet_action(const eosio::name &amp;action)</div><div class="ttdef"><b>Definition:</b> registry.hpp:1</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -165,7 +151,7 @@ $(document).ready(function(){initNavTree('registry_8hpp_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="registry_8hpp.html">registry.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

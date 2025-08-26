@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('question_8hpp_source.html',''); initRe
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -150,7 +138,6 @@ $(document).ready(function(){initNavTree('question_8hpp_source.html',''); initRe
 </div><!--header-->
 <div class="contents">
 <a href="question_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_meet.html">Meet</a> {</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html">   10</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(MEET)]] <a class="code hl_struct" href="struct_meet_1_1question.html">question</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html#a6a99a70ea9569dc3e511ff27ff73e88e">   11</a></span>    uint64_t <a class="code hl_variable" href="struct_meet_1_1question.html#a6a99a70ea9569dc3e511ff27ff73e88e">id</a>;                                 </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html#ac43469d2a009daa52de1fc7ad15f1692">   12</a></span>    uint64_t <a class="code hl_variable" href="struct_meet_1_1question.html#ac43469d2a009daa52de1fc7ad15f1692">number</a>;                             </div>
@@ -170,7 +157,6 @@ $(document).ready(function(){initNavTree('question_8hpp_source.html',''); initRe
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html#ad9bda11d243c1b733dfc4120396caf1a">   26</a></span>    std::vector&lt;name&gt; <a class="code hl_variable" href="struct_meet_1_1question.html#ad9bda11d243c1b733dfc4120396caf1a">voters_abstained</a>;          </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html#a3d4aa05bf91a0aa1a25682b50b50e254">   28</a></span>    uint64_t <a class="code hl_function" href="struct_meet_1_1question.html#a3d4aa05bf91a0aa1a25682b50b50e254">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> id; } </div>
-<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_meet_1_1question.html#aa9496dbfa82438b49359fccddab52136">   29</a></span>    uint64_t <a class="code hl_function" href="struct_meet_1_1question.html#aa9496dbfa82438b49359fccddab52136">by_meet_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> meet_id; } </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -180,28 +166,26 @@ $(document).ready(function(){initNavTree('question_8hpp_source.html',''); initRe
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespace_meet.html#ad8a1edc922a571da92a7f0cfe692c843">   35</a></span>&gt; <a class="code hl_typedef" href="namespace_meet.html#ad8a1edc922a571da92a7f0cfe692c843">questions_index</a>;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-</div>
-</div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="anamespace_meet_html"><div class="ttname"><a href="namespace_meet.html">Meet</a></div><div class="ttdef"><b>Definition</b> meet.hpp:1</div></div>
-<div class="ttc" id="anamespace_meet_html_ad8a1edc922a571da92a7f0cfe692c843"><div class="ttname"><a href="namespace_meet.html#ad8a1edc922a571da92a7f0cfe692c843">Meet::questions_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;questions&quot;_n, question, indexed_by&lt;&quot;bymeet&quot;_n, const_mem_fun&lt; question, uint64_t, &amp;question::by_meet_key &gt; &gt; &gt; questions_index</div><div class="ttdef"><b>Definition</b> question.hpp:35</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html"><div class="ttname"><a href="struct_meet_1_1question.html">Meet::question</a></div><div class="ttdoc">Структура вопросов повестки дня собрания.</div><div class="ttdef"><b>Definition</b> question.hpp:10</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a1b28166d05bb2f0080ed18f25f918930"><div class="ttname"><a href="struct_meet_1_1question.html#a1b28166d05bb2f0080ed18f25f918930">Meet::question::coopname</a></div><div class="ttdeci">name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> question.hpp:13</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a1cf3d2b83dbc8847a72cf6c1abbb18b4"><div class="ttname"><a href="struct_meet_1_1question.html#a1cf3d2b83dbc8847a72cf6c1abbb18b4">Meet::question::counter_votes_for</a></div><div class="ttdeci">uint64_t counter_votes_for</div><div class="ttdoc">Счётчик голосов за</div><div class="ttdef"><b>Definition</b> question.hpp:20</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a3d4aa05bf91a0aa1a25682b50b50e254"><div class="ttname"><a href="struct_meet_1_1question.html#a3d4aa05bf91a0aa1a25682b50b50e254">Meet::question::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Основной ключ</div><div class="ttdef"><b>Definition</b> question.hpp:28</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a5e974882d3ed50530317b91753adabc8"><div class="ttname"><a href="struct_meet_1_1question.html#a5e974882d3ed50530317b91753adabc8">Meet::question::counter_votes_against</a></div><div class="ttdeci">uint64_t counter_votes_against</div><div class="ttdoc">Счётчик голосов против</div><div class="ttdef"><b>Definition</b> question.hpp:21</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a65a636c531564d72c679d9c49de7d756"><div class="ttname"><a href="struct_meet_1_1question.html#a65a636c531564d72c679d9c49de7d756">Meet::question::counter_votes_abstained</a></div><div class="ttdeci">uint64_t counter_votes_abstained</div><div class="ttdoc">Счётчик воздержавшихся голосов</div><div class="ttdef"><b>Definition</b> question.hpp:22</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a6a99a70ea9569dc3e511ff27ff73e88e"><div class="ttname"><a href="struct_meet_1_1question.html#a6a99a70ea9569dc3e511ff27ff73e88e">Meet::question::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор вопроса</div><div class="ttdef"><b>Definition</b> question.hpp:11</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a914d4cb4fb4460be1a0e755acee9e5db"><div class="ttname"><a href="struct_meet_1_1question.html#a914d4cb4fb4460be1a0e755acee9e5db">Meet::question::voters_for</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_for</div><div class="ttdoc">Проголосовавшие за</div><div class="ttdef"><b>Definition</b> question.hpp:24</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_a9b69dd1d2383109cb3c4f2575db18f98"><div class="ttname"><a href="struct_meet_1_1question.html#a9b69dd1d2383109cb3c4f2575db18f98">Meet::question::decision</a></div><div class="ttdeci">std::string decision</div><div class="ttdoc">Проект решения по вопросу</div><div class="ttdef"><b>Definition</b> question.hpp:18</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_aa9496dbfa82438b49359fccddab52136"><div class="ttname"><a href="struct_meet_1_1question.html#aa9496dbfa82438b49359fccddab52136">Meet::question::by_meet_key</a></div><div class="ttdeci">uint64_t by_meet_key() const</div><div class="ttdoc">Ключ по идентификатору собрания</div><div class="ttdef"><b>Definition</b> question.hpp:29</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_aac9e06eb283253f16b09a6706599d228"><div class="ttname"><a href="struct_meet_1_1question.html#aac9e06eb283253f16b09a6706599d228">Meet::question::meet_id</a></div><div class="ttdeci">uint64_t meet_id</div><div class="ttdoc">Идентификатор общего собрания</div><div class="ttdef"><b>Definition</b> question.hpp:14</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_aad427bae5bc2faa78fa0bd6922f92d21"><div class="ttname"><a href="struct_meet_1_1question.html#aad427bae5bc2faa78fa0bd6922f92d21">Meet::question::voters_against</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_against</div><div class="ttdoc">Проголосовавшие против</div><div class="ttdef"><b>Definition</b> question.hpp:25</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_ac43469d2a009daa52de1fc7ad15f1692"><div class="ttname"><a href="struct_meet_1_1question.html#ac43469d2a009daa52de1fc7ad15f1692">Meet::question::number</a></div><div class="ttdeci">uint64_t number</div><div class="ttdoc">Номер вопроса в повестке</div><div class="ttdef"><b>Definition</b> question.hpp:12</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_ad7dbec1b1f2e9cec824bdbe89e11d672"><div class="ttname"><a href="struct_meet_1_1question.html#ad7dbec1b1f2e9cec824bdbe89e11d672">Meet::question::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Текст вопроса</div><div class="ttdef"><b>Definition</b> question.hpp:16</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_ad9bda11d243c1b733dfc4120396caf1a"><div class="ttname"><a href="struct_meet_1_1question.html#ad9bda11d243c1b733dfc4120396caf1a">Meet::question::voters_abstained</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_abstained</div><div class="ttdoc">Воздержавшиеся</div><div class="ttdef"><b>Definition</b> question.hpp:26</div></div>
-<div class="ttc" id="astruct_meet_1_1question_html_adb720df013961c8dc483aa31bba445c8"><div class="ttname"><a href="struct_meet_1_1question.html#adb720df013961c8dc483aa31bba445c8">Meet::question::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст вопроса</div><div class="ttdef"><b>Definition</b> question.hpp:17</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespace_meet_html"><div class="ttname"><a href="namespace_meet.html">Meet</a></div><div class="ttdef"><b>Definition:</b> meet.hpp:1</div></div>
+<div class="ttc" id="anamespace_meet_html_ad8a1edc922a571da92a7f0cfe692c843"><div class="ttname"><a href="namespace_meet.html#ad8a1edc922a571da92a7f0cfe692c843">Meet::questions_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;questions&quot;_n, question, indexed_by&lt;&quot;bymeet&quot;_n, const_mem_fun&lt; question, uint64_t, &amp;question::by_meet_key &gt; &gt; &gt; questions_index</div><div class="ttdef"><b>Definition:</b> question.hpp:35</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html"><div class="ttname"><a href="struct_meet_1_1question.html">Meet::question</a></div><div class="ttdoc">Структура вопросов повестки дня собрания.</div><div class="ttdef"><b>Definition:</b> question.hpp:10</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a1b28166d05bb2f0080ed18f25f918930"><div class="ttname"><a href="struct_meet_1_1question.html#a1b28166d05bb2f0080ed18f25f918930">Meet::question::coopname</a></div><div class="ttdeci">name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> question.hpp:13</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a1cf3d2b83dbc8847a72cf6c1abbb18b4"><div class="ttname"><a href="struct_meet_1_1question.html#a1cf3d2b83dbc8847a72cf6c1abbb18b4">Meet::question::counter_votes_for</a></div><div class="ttdeci">uint64_t counter_votes_for</div><div class="ttdoc">Счётчик голосов за</div><div class="ttdef"><b>Definition:</b> question.hpp:20</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a3d4aa05bf91a0aa1a25682b50b50e254"><div class="ttname"><a href="struct_meet_1_1question.html#a3d4aa05bf91a0aa1a25682b50b50e254">Meet::question::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Основной ключ</div><div class="ttdef"><b>Definition:</b> question.hpp:28</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a5e974882d3ed50530317b91753adabc8"><div class="ttname"><a href="struct_meet_1_1question.html#a5e974882d3ed50530317b91753adabc8">Meet::question::counter_votes_against</a></div><div class="ttdeci">uint64_t counter_votes_against</div><div class="ttdoc">Счётчик голосов против</div><div class="ttdef"><b>Definition:</b> question.hpp:21</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a65a636c531564d72c679d9c49de7d756"><div class="ttname"><a href="struct_meet_1_1question.html#a65a636c531564d72c679d9c49de7d756">Meet::question::counter_votes_abstained</a></div><div class="ttdeci">uint64_t counter_votes_abstained</div><div class="ttdoc">Счётчик воздержавшихся голосов</div><div class="ttdef"><b>Definition:</b> question.hpp:22</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a6a99a70ea9569dc3e511ff27ff73e88e"><div class="ttname"><a href="struct_meet_1_1question.html#a6a99a70ea9569dc3e511ff27ff73e88e">Meet::question::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор вопроса</div><div class="ttdef"><b>Definition:</b> question.hpp:11</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a914d4cb4fb4460be1a0e755acee9e5db"><div class="ttname"><a href="struct_meet_1_1question.html#a914d4cb4fb4460be1a0e755acee9e5db">Meet::question::voters_for</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_for</div><div class="ttdoc">Проголосовавшие за</div><div class="ttdef"><b>Definition:</b> question.hpp:24</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_a9b69dd1d2383109cb3c4f2575db18f98"><div class="ttname"><a href="struct_meet_1_1question.html#a9b69dd1d2383109cb3c4f2575db18f98">Meet::question::decision</a></div><div class="ttdeci">std::string decision</div><div class="ttdoc">Проект решения по вопросу</div><div class="ttdef"><b>Definition:</b> question.hpp:18</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_aa9496dbfa82438b49359fccddab52136"><div class="ttname"><a href="struct_meet_1_1question.html#aa9496dbfa82438b49359fccddab52136">Meet::question::by_meet_key</a></div><div class="ttdeci">uint64_t by_meet_key() const</div><div class="ttdoc">Ключ по идентификатору собрания</div><div class="ttdef"><b>Definition:</b> question.hpp:29</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_aac9e06eb283253f16b09a6706599d228"><div class="ttname"><a href="struct_meet_1_1question.html#aac9e06eb283253f16b09a6706599d228">Meet::question::meet_id</a></div><div class="ttdeci">uint64_t meet_id</div><div class="ttdoc">Идентификатор общего собрания</div><div class="ttdef"><b>Definition:</b> question.hpp:14</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_aad427bae5bc2faa78fa0bd6922f92d21"><div class="ttname"><a href="struct_meet_1_1question.html#aad427bae5bc2faa78fa0bd6922f92d21">Meet::question::voters_against</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_against</div><div class="ttdoc">Проголосовавшие против</div><div class="ttdef"><b>Definition:</b> question.hpp:25</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_ac43469d2a009daa52de1fc7ad15f1692"><div class="ttname"><a href="struct_meet_1_1question.html#ac43469d2a009daa52de1fc7ad15f1692">Meet::question::number</a></div><div class="ttdeci">uint64_t number</div><div class="ttdoc">Номер вопроса в повестке</div><div class="ttdef"><b>Definition:</b> question.hpp:12</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_ad7dbec1b1f2e9cec824bdbe89e11d672"><div class="ttname"><a href="struct_meet_1_1question.html#ad7dbec1b1f2e9cec824bdbe89e11d672">Meet::question::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Текст вопроса</div><div class="ttdef"><b>Definition:</b> question.hpp:16</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_ad9bda11d243c1b733dfc4120396caf1a"><div class="ttname"><a href="struct_meet_1_1question.html#ad9bda11d243c1b733dfc4120396caf1a">Meet::question::voters_abstained</a></div><div class="ttdeci">std::vector&lt; name &gt; voters_abstained</div><div class="ttdoc">Воздержавшиеся</div><div class="ttdef"><b>Definition:</b> question.hpp:26</div></div>
+<div class="ttc" id="astruct_meet_1_1question_html_adb720df013961c8dc483aa31bba445c8"><div class="ttname"><a href="struct_meet_1_1question.html#adb720df013961c8dc483aa31bba445c8">Meet::question::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст вопроса</div><div class="ttdef"><b>Definition:</b> question.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -209,7 +193,7 @@ $(document).ready(function(){initNavTree('question_8hpp_source.html',''); initRe
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_bb85938fef94aec577cdee28d9a5840c.html">meet</a></li><li class="navelem"><a class="el" href="dir_dfbf2f07fb183a2222927c37b4d157cf.html">include</a></li><li class="navelem"><a class="el" href="dir_0bd7726bae008606f203f49a94d8cd4c.html">tables</a></li><li class="navelem"><a class="el" href="question_8hpp.html">question.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

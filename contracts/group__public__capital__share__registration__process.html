@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,23 +128,16 @@ $(document).ready(function(){initNavTree('group__public__capital__share__registr
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Регистрация доли вкладчика<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс, при котором вкладчик, являющийся участником программы "Капитализация", регистрирует свою долю в конкретном проекте для получения премий из пула премий вкладчиков. Процесс позволяет вкладчику участвовать в распределении премий проекта пропорционально своему балансу в программе "Капитализация".</p>
+<p >Процесс, при котором вкладчик, являющийся участником программы "Капитализация", регистрирует свою долю в конкретном проекте для получения премий из пула премий вкладчиков. Процесс позволяет вкладчику участвовать в распределении премий проекта пропорционально своему балансу в программе "Капитализация".</p>
 <dl class="section pre"><dt>Предусловие</dt><dd><ul>
 <li>Активный договор УХД с кооперативом</li>
 <li>Подписанное приложение к целевому проекту</li>
@@ -154,7 +147,7 @@ $(document).ready(function(){initNavTree('group__public__capital__share__registr
 </dd></dl>
 <h2><a class="anchor" id="autotoc_md103"></a>
 Диаграмма процесса</h2>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant В as Вкладчик
@@ -168,13 +161,13 @@ sequenceDiagram
 </p>
 <h2><a class="anchor" id="autotoc_md104"></a>
 Запрос регистрации доли вкладчиком</h2>
-<p>Вкладчик, который уже участвует в программе "Капитализация", самостоятельно инициирует процесс регистрации своей доли в проекте. Это необходимо для получения премий вкладчиков проекта.</p>
+<p >Вкладчик, который уже участвует в программе "Капитализация", самостоятельно инициирует процесс регистрации своей доли в проекте. Это необходимо для получения премий вкладчиков проекта.</p>
 <h2><a class="anchor" id="autotoc_md105"></a>
 Проверка существования проекта</h2>
-<p>Система проверяет, что проект существует и доступен для регистрации долей вкладчиков. Проект должен быть активным и принимать участников.</p>
+<p >Система проверяет, что проект существует и доступен для регистрации долей вкладчиков. Проект должен быть активным и принимать участников.</p>
 <h2><a class="anchor" id="autotoc_md106"></a>
 Проверка условий участия</h2>
-<p>Система проверяет выполнение всех требований для участия в проекте:</p><ul>
+<p >Система проверяет выполнение всех требований для участия в проекте:</p><ul>
 <li>Наличие активного договора УХД с кооперативом у вкладчика</li>
 <li>Наличие подписанного приложения к конкретному проекту</li>
 <li>Положительный баланс вкладчика в программе "Капитализация"</li>
@@ -182,15 +175,15 @@ sequenceDiagram
 </ul>
 <h2><a class="anchor" id="autotoc_md107"></a>
 Регистрация доли вкладчика</h2>
-<p>Система создает сегмент вкладчика в проекте для учета его доли:</p><ul>
+<p >Система создает сегмент вкладчика в проекте для учета его доли:</p><ul>
 <li>Регистрирует долю пропорционально балансу в программе капитализации</li>
 <li>Устанавливает связь между программой и проектом</li>
 <li>Активирует пересчет доли в премиях вкладчиков при следующем <a class="el" href="group__public__capital__segment__refresh__process.html">обновлении сегмента</a></li>
 </ul>
 <h2><a class="anchor" id="autotoc_md108"></a>
 Регистрация доли вкладчика</h2>
-<p><a class="el" href="group__public__capital__actions.html#ga73ee2d8a890bf6f60b990aeb2b2666bf">Добавление вкладчика</a></p>
-<p>Вкладчик, который уже участвует в программе "Капитализация", самостоятельно инициирует процесс регистрации своей доли в проекте:</p>
+<p ><a class="el" href="group__public__capital__actions.html#ga73ee2d8a890bf6f60b990aeb2b2666bf">Добавление вкладчика</a></p>
+<p >Вкладчик, который уже участвует в программе "Капитализация", самостоятельно инициирует процесс регистрации своей доли в проекте:</p>
 <dl class="section pre"><dt>Предусловие</dt><dd><b>Предварительные условия:</b><ul>
 <li>Активный договор УХД с кооперативом</li>
 <li>Подписанное приложение к целевому проекту</li>
@@ -203,7 +196,7 @@ sequenceDiagram
 <li>Проверяются условия участия вкладчика</li>
 <li>Создается сегмент вкладчика в проекте</li>
 </ul>
-<p><b>Результат:</b> Вкладчик зарегистрирован в проекте и имеет право на получение премий пропорционально своему балансу в программе "Капитализация".</p>
+<p ><b>Результат:</b> Вкладчик зарегистрирован в проекте и имеет право на получение премий пропорционально своему балансу в программе "Капитализация".</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Требуется авторизация вкладчика </dd>
 <dd>
 Создан сегмент вкладчика в проекте </dd>
@@ -221,7 +214,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -165,21 +158,21 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a394d8f39f9b77ee234cc63ba67e1a790" id="r_a394d8f39f9b77ee234cc63ba67e1a790"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;coagreements&quot;_n, <a class="el" href="structcoagreement.html">coagreement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a394d8f39f9b77ee234cc63ba67e1a790">coagreements_index</a></td></tr>
+<tr class="memitem:a394d8f39f9b77ee234cc63ba67e1a790"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;coagreements&quot;_n, <a class="el" href="structcoagreement.html">coagreement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a394d8f39f9b77ee234cc63ba67e1a790">coagreements_index</a></td></tr>
 <tr class="separator:a394d8f39f9b77ee234cc63ba67e1a790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a274491626085f9dcd73fd848d135c2" id="r_a4a274491626085f9dcd73fd848d135c2"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;agreements&quot;_n, <a class="el" href="structagreement.html">agreement</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a616ee1038089460743185a8cd3c9f961">agreement::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a5d96d4ae290464c4a86c7bec6505e140">agreement::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a1235d9934fc5ddfb1dcf24fc659d37ab">agreement::by_draft</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byuserdraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint128_t, &amp;<a class="el" href="structagreement.html#ac33dd5863160e0a2a95d238f546368b4">agreement::by_user_and_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a4a274491626085f9dcd73fd848d135c2">agreements_index</a></td></tr>
+<tr class="memitem:a4a274491626085f9dcd73fd848d135c2"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;agreements&quot;_n, <a class="el" href="structagreement.html">agreement</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a616ee1038089460743185a8cd3c9f961">agreement::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a5d96d4ae290464c4a86c7bec6505e140">agreement::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint64_t, &amp;<a class="el" href="structagreement.html#a1235d9934fc5ddfb1dcf24fc659d37ab">agreement::by_draft</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byuserdraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement.html">agreement</a>, uint128_t, &amp;<a class="el" href="structagreement.html#ac33dd5863160e0a2a95d238f546368b4">agreement::by_user_and_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a4a274491626085f9dcd73fd848d135c2">agreements_index</a></td></tr>
 <tr class="separator:a4a274491626085f9dcd73fd848d135c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1e3c2d711afafa1d4f251f16a5f8446" id="r_ab1e3c2d711afafa1d4f251f16a5f8446"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;agreements3&quot;_n, <a class="el" href="structagreement2.html">agreement2</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#ae0abc045a93c6cc88d322047f2f7138c">agreement2::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#a87fb77043cbc08778bb35fab33569f0a">agreement2::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#a89458f5447c24096b90a583cbb432167">agreement2::by_draft</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byuserdraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint128_t, &amp;<a class="el" href="structagreement2.html#ac3737238c8def720f08a98e92e4d7140">agreement2::by_user_and_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#ab1e3c2d711afafa1d4f251f16a5f8446">agreements2_index</a></td></tr>
+<tr class="memitem:ab1e3c2d711afafa1d4f251f16a5f8446"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;agreements3&quot;_n, <a class="el" href="structagreement2.html">agreement2</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#ae0abc045a93c6cc88d322047f2f7138c">agreement2::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#a87fb77043cbc08778bb35fab33569f0a">agreement2::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint64_t, &amp;<a class="el" href="structagreement2.html#a89458f5447c24096b90a583cbb432167">agreement2::by_draft</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byuserdraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structagreement2.html">agreement2</a>, uint128_t, &amp;<a class="el" href="structagreement2.html#ac3737238c8def720f08a98e92e4d7140">agreement2::by_user_and_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#ab1e3c2d711afafa1d4f251f16a5f8446">agreements2_index</a></td></tr>
 <tr class="separator:ab1e3c2d711afafa1d4f251f16a5f8446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a5ecb7c5b155972dc3bfbc2b78e96ea4d" id="r_a5ecb7c5b155972dc3bfbc2b78e96ea4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoagreement.html">coagreement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a5ecb7c5b155972dc3bfbc2b78e96ea4d">get_coagreement_or_fail</a> (eosio::name coopname, eosio::name type)</td></tr>
+<tr class="memitem:a5ecb7c5b155972dc3bfbc2b78e96ea4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcoagreement.html">coagreement</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="agreements_8hpp.html#a5ecb7c5b155972dc3bfbc2b78e96ea4d">get_coagreement_or_fail</a> (eosio::name coopname, eosio::name type)</td></tr>
 <tr class="separator:a5ecb7c5b155972dc3bfbc2b78e96ea4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="ab1e3c2d711afafa1d4f251f16a5f8446" name="ab1e3c2d711afafa1d4f251f16a5f8446"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1e3c2d711afafa1d4f251f16a5f8446">&#9670;&#160;</a></span>agreements2_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e3c2d711afafa1d4f251f16a5f8446">&#9670;&nbsp;</a></span>agreements2_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +186,7 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 </div>
 </div>
 <a id="a4a274491626085f9dcd73fd848d135c2" name="a4a274491626085f9dcd73fd848d135c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a274491626085f9dcd73fd848d135c2">&#9670;&#160;</a></span>agreements_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a274491626085f9dcd73fd848d135c2">&#9670;&nbsp;</a></span>agreements_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,7 +200,7 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 </div>
 </div>
 <a id="a394d8f39f9b77ee234cc63ba67e1a790" name="a394d8f39f9b77ee234cc63ba67e1a790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a394d8f39f9b77ee234cc63ba67e1a790">&#9670;&#160;</a></span>coagreements_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a394d8f39f9b77ee234cc63ba67e1a790">&#9670;&nbsp;</a></span>coagreements_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +215,7 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a5ecb7c5b155972dc3bfbc2b78e96ea4d" name="a5ecb7c5b155972dc3bfbc2b78e96ea4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ecb7c5b155972dc3bfbc2b78e96ea4d">&#9670;&#160;</a></span>get_coagreement_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecb7c5b155972dc3bfbc2b78e96ea4d">&#9670;&nbsp;</a></span>get_coagreement_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +249,7 @@ $(document).ready(function(){initNavTree('agreements_8hpp.html',''); initResizab
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="agreements_8hpp.html">agreements.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

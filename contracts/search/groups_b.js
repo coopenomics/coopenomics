@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['алгоритм_20crps_0',['Алгоритм CRPS',['../group__public__capital__crps__algorithm.html',1,'']]],
-  ['аллокация_20программных_20инвестиций_1',['Аллокация программных инвестиций',['../group__public__capital__allocate__process.html',1,'']]]
+  ['создание_20коммита_0',['Создание коммита',['../group__public__capital__commit__creation__process.html',1,'']]],
+  ['создать_20проект_1',['Создать проект',['../group__public__capital__project__creation__process.html',1,'']]],
+  ['списание_20расходов_2',['Списание расходов',['../group__public__capital__create__expense__process.html',1,'']]]
 ];

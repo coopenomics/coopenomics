@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -152,7 +145,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_capital_1_1_debts_1_1_status" id="r_namespace_capital_1_1_debts_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts_1_1_status.html">Status</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_debts_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts_1_1_status.html">Status</a></td></tr>
 <tr class="memdesc:namespace_capital_1_1_debts_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статусы долгов <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -164,36 +157,36 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:ac8205f7a86bd57752733cadca134ee0f" id="r_ac8205f7a86bd57752733cadca134ee0f"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;debts&quot;_n, <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#a3a1ecb7d7e980c3109e2fec626d50ba0">debt::by_username</a> &gt; &gt;, indexed_by&lt;&quot;bydebthash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#aec06e719325039f9fe4ade259633f301">debt::by_debt_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#aacaa2a559f861cc5bb2439c490a6a144">debt::by_project_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#ac8205f7a86bd57752733cadca134ee0f">debts_index</a></td></tr>
+<tr class="memitem:ac8205f7a86bd57752733cadca134ee0f"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;debts&quot;_n, <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#a3a1ecb7d7e980c3109e2fec626d50ba0">debt::by_username</a> &gt; &gt;, indexed_by&lt;&quot;bydebthash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#aec06e719325039f9fe4ade259633f301">debt::by_debt_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#aacaa2a559f861cc5bb2439c490a6a144">debt::by_project_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#ac8205f7a86bd57752733cadca134ee0f">debts_index</a></td></tr>
 <tr class="separator:ac8205f7a86bd57752733cadca134ee0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a106e7b2730e725427169b2392719e770" id="r_a106e7b2730e725427169b2392719e770"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a106e7b2730e725427169b2392719e770">get_debt</a> (eosio::name coopname, const checksum256 &amp;debt_hash)</td></tr>
-<tr class="memdesc:a106e7b2730e725427169b2392719e770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает долг по хэшу  <br /></td></tr>
+<tr class="memitem:a106e7b2730e725427169b2392719e770"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a106e7b2730e725427169b2392719e770">get_debt</a> (eosio::name coopname, const checksum256 &amp;debt_hash)</td></tr>
+<tr class="memdesc:a106e7b2730e725427169b2392719e770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает долг по хэшу  <a href="namespace_capital_1_1_debts.html#a106e7b2730e725427169b2392719e770">Подробнее...</a><br /></td></tr>
 <tr class="separator:a106e7b2730e725427169b2392719e770"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9228a15413a54f29f8ba1babfdb297fb" id="r_a9228a15413a54f29f8ba1babfdb297fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a9228a15413a54f29f8ba1babfdb297fb">get_debt_or_fail</a> (eosio::name coopname, const checksum256 &amp;debt_hash, const char *msg=&quot;Долг не найден&quot;)</td></tr>
-<tr class="memdesc:a9228a15413a54f29f8ba1babfdb297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает долг по хэшу или падает с ошибкой  <br /></td></tr>
+<tr class="memitem:a9228a15413a54f29f8ba1babfdb297fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_debts_1_1debt.html">debt</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a9228a15413a54f29f8ba1babfdb297fb">get_debt_or_fail</a> (eosio::name coopname, const checksum256 &amp;debt_hash, const char *msg=&quot;Долг не найден&quot;)</td></tr>
+<tr class="memdesc:a9228a15413a54f29f8ba1babfdb297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает долг по хэшу или падает с ошибкой  <a href="namespace_capital_1_1_debts.html#a9228a15413a54f29f8ba1babfdb297fb">Подробнее...</a><br /></td></tr>
 <tr class="separator:a9228a15413a54f29f8ba1babfdb297fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc687d46479e31b5b92e4a8f81d9a3c" id="r_a8cc687d46479e31b5b92e4a8f81d9a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a8cc687d46479e31b5b92e4a8f81d9a3c">create_debt</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;project_hash, const checksum256 &amp;debt_hash, const asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const time_point_sec &amp;repaid_at, const <a class="el" href="structdocument2.html">document2</a> &amp;statement, eosio::name payer=name{})</td></tr>
-<tr class="memdesc:a8cc687d46479e31b5b92e4a8f81d9a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает долг в таблице  <br /></td></tr>
+<tr class="memitem:a8cc687d46479e31b5b92e4a8f81d9a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a8cc687d46479e31b5b92e4a8f81d9a3c">create_debt</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;project_hash, const checksum256 &amp;debt_hash, const asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const time_point_sec &amp;repaid_at, const <a class="el" href="structdocument2.html">document2</a> &amp;statement, eosio::name payer=name{})</td></tr>
+<tr class="memdesc:a8cc687d46479e31b5b92e4a8f81d9a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает долг в таблице  <a href="namespace_capital_1_1_debts.html#a8cc687d46479e31b5b92e4a8f81d9a3c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8cc687d46479e31b5b92e4a8f81d9a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1b7d9f6f3373aa7fa091a7ac3f8ddb3" id="r_ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3">update_debt_status</a> (eosio::name coopname, const checksum256 &amp;debt_hash, eosio::name new_status, eosio::name payer=name{}, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="structdocument.html">document</a>=<a class="el" href="structdocument2.html">document2</a>{}, const std::string &amp;memo=&quot;&quot;)</td></tr>
-<tr class="memdesc:ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус долга  <br /></td></tr>
+<tr class="memitem:ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3">update_debt_status</a> (eosio::name coopname, const checksum256 &amp;debt_hash, eosio::name new_status, eosio::name payer=name{}, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="structdocument.html">document</a>=<a class="el" href="structdocument2.html">document2</a>{}, const std::string &amp;memo=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус долга  <a href="namespace_capital_1_1_debts.html#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3">Подробнее...</a><br /></td></tr>
 <tr class="separator:ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c26c12f2b4c36c3c20a55a15924e7db" id="r_a8c26c12f2b4c36c3c20a55a15924e7db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a8c26c12f2b4c36c3c20a55a15924e7db">delete_debt</a> (eosio::name coopname, const checksum256 &amp;debt_hash)</td></tr>
-<tr class="memdesc:a8c26c12f2b4c36c3c20a55a15924e7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет долг  <br /></td></tr>
+<tr class="memitem:a8c26c12f2b4c36c3c20a55a15924e7db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a8c26c12f2b4c36c3c20a55a15924e7db">delete_debt</a> (eosio::name coopname, const checksum256 &amp;debt_hash)</td></tr>
+<tr class="memdesc:a8c26c12f2b4c36c3c20a55a15924e7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет долг  <a href="namespace_capital_1_1_debts.html#a8c26c12f2b4c36c3c20a55a15924e7db">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8c26c12f2b4c36c3c20a55a15924e7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaaccd3abb718042faed762649c5beca" id="r_adaaccd3abb718042faed762649c5beca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#adaaccd3abb718042faed762649c5beca">create_debt_approval</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;debt_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
-<tr class="memdesc:adaaccd3abb718042faed762649c5beca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает аппрув для долга  <br /></td></tr>
+<tr class="memitem:adaaccd3abb718042faed762649c5beca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#adaaccd3abb718042faed762649c5beca">create_debt_approval</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;debt_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
+<tr class="memdesc:adaaccd3abb718042faed762649c5beca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает аппрув для долга  <a href="namespace_capital_1_1_debts.html#adaaccd3abb718042faed762649c5beca">Подробнее...</a><br /></td></tr>
 <tr class="separator:adaaccd3abb718042faed762649c5beca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e4fc930ace484676de2087729cb6928" id="r_a0e4fc930ace484676de2087729cb6928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a0e4fc930ace484676de2087729cb6928">create_debt_agenda</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;debt_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
-<tr class="memdesc:a0e4fc930ace484676de2087729cb6928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает агенду в совете для долга  <br /></td></tr>
+<tr class="memitem:a0e4fc930ace484676de2087729cb6928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_debts.html#a0e4fc930ace484676de2087729cb6928">create_debt_agenda</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;debt_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
+<tr class="memdesc:a0e4fc930ace484676de2087729cb6928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает агенду в совете для долга  <a href="namespace_capital_1_1_debts.html#a0e4fc930ace484676de2087729cb6928">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0e4fc930ace484676de2087729cb6928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="ac8205f7a86bd57752733cadca134ee0f" name="ac8205f7a86bd57752733cadca134ee0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8205f7a86bd57752733cadca134ee0f">&#9670;&#160;</a></span>debts_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8205f7a86bd57752733cadca134ee0f">&#9670;&nbsp;</a></span>debts_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +201,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a8cc687d46479e31b5b92e4a8f81d9a3c" name="a8cc687d46479e31b5b92e4a8f81d9a3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cc687d46479e31b5b92e4a8f81d9a3c">&#9670;&#160;</a></span>create_debt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc687d46479e31b5b92e4a8f81d9a3c">&#9670;&nbsp;</a></span>create_debt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +275,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="a0e4fc930ace484676de2087729cb6928" name="a0e4fc930ace484676de2087729cb6928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e4fc930ace484676de2087729cb6928">&#9670;&#160;</a></span>create_debt_agenda()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e4fc930ace484676de2087729cb6928">&#9670;&nbsp;</a></span>create_debt_agenda()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +325,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="adaaccd3abb718042faed762649c5beca" name="adaaccd3abb718042faed762649c5beca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaaccd3abb718042faed762649c5beca">&#9670;&#160;</a></span>create_debt_approval()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaccd3abb718042faed762649c5beca">&#9670;&nbsp;</a></span>create_debt_approval()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +375,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="a8c26c12f2b4c36c3c20a55a15924e7db" name="a8c26c12f2b4c36c3c20a55a15924e7db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c26c12f2b4c36c3c20a55a15924e7db">&#9670;&#160;</a></span>delete_debt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c26c12f2b4c36c3c20a55a15924e7db">&#9670;&nbsp;</a></span>delete_debt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +413,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="a106e7b2730e725427169b2392719e770" name="a106e7b2730e725427169b2392719e770"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a106e7b2730e725427169b2392719e770">&#9670;&#160;</a></span>get_debt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a106e7b2730e725427169b2392719e770">&#9670;&nbsp;</a></span>get_debt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -458,7 +451,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="a9228a15413a54f29f8ba1babfdb297fb" name="a9228a15413a54f29f8ba1babfdb297fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9228a15413a54f29f8ba1babfdb297fb">&#9670;&#160;</a></span>get_debt_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9228a15413a54f29f8ba1babfdb297fb">&#9670;&nbsp;</a></span>get_debt_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +495,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 </div>
 </div>
 <a id="ae1b7d9f6f3373aa7fa091a7ac3f8ddb3" name="ae1b7d9f6f3373aa7fa091a7ac3f8ddb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3">&#9670;&#160;</a></span>update_debt_status()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3">&#9670;&nbsp;</a></span>update_debt_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,7 +563,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_debts.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_capital.html">Capital</a></li><li class="navelem"><a class="el" href="namespace_capital_1_1_debts.html">Debts</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

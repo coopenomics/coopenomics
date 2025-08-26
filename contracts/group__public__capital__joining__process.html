@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('group__public__capital__joining__proce
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -146,7 +139,7 @@ $(document).ready(function(){initNavTree('group__public__capital__joining__proce
 <div class="contents">
 <dl class="section pre"><dt>Предусловие</dt><dd>Пайщик имеет активный договор УХД и статус вкладчика</dd></dl>
 <p>Процесс подписания приложений к договору УХД для участия вкладчика в конкретном проекте. Приложение к договору УХД определяет проект, по которому ведется участие в хозяйственной деятельности.</p>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant V as Вкладчик
@@ -168,15 +161,15 @@ sequenceDiagram
 </p>
 <h3><a class="anchor" id="autotoc_md149"></a>
 Шаг 1: Подача заявки на допуск к проекту</h3>
-<p><a class="el" href="group__public__capital__actions.html#ga69186c013e6162fae90339c4d6641793">подача заявки на допуск к проекту</a></p>
-<p>Вкладчик с активным договором УХД подает заявку для участия в конкретном проекте. Необходимо предоставить подписанное приложение к договору УХД с указанием хеша проекта.</p>
+<p ><a class="el" href="group__public__capital__actions.html#ga69186c013e6162fae90339c4d6641793">подача заявки на допуск к проекту</a></p>
+<p >Вкладчик с активным договором УХД подает заявку для участия в конкретном проекте. Необходимо предоставить подписанное приложение к договору УХД с указанием хеша проекта.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>создается запись в таблице допуска со статусом PENDING </dd>
 <dd>
 заявка направляется на рассмотрение в совет</dd></dl>
 <h3><a class="anchor" id="autotoc_md150"></a>
 Шаг 2: Принятие приложения к договору УХД</h3>
-<p><a class="el" href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">принятие приложения к договору УХД</a></p>
-<p>Председатель совета или уполномоченное лицо рассматривает заявку и принимает приложение к договору УХД своей подписью на документе.</p>
+<p ><a class="el" href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">принятие приложения к договору УХД</a></p>
+<p >Председатель совета или уполномоченное лицо рассматривает заявку и принимает приложение к договору УХД своей подписью на документе.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>статус допуска изменяется с PENDING на ACTIVE </dd>
 <dd>
 вкладчик получает право участвовать в проекте </dd>
@@ -184,12 +177,12 @@ sequenceDiagram
 становится возможным создание коммитов и инвестиций в проект</dd></dl>
 <h3><a class="anchor" id="autotoc_md151"></a>
 Шаг 3: Отклонение заявки (альтернативный путь)</h3>
-<p><a class="el" href="group__public__capital__actions.html#ga6fa75502cfb8512799e98167aa08540d">отклонение заявки на допуск</a></p>
-<p>При отклонении заявки председателем или советом запись удаляется с указанием причины отказа.</p>
+<p ><a class="el" href="group__public__capital__actions.html#ga6fa75502cfb8512799e98167aa08540d">отклонение заявки на допуск</a></p>
+<p >При отклонении заявки председателем или советом запись удаляется с указанием причины отказа.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>вкладчик не получает доступ к участию в проекте</dd></dl>
 <h2><a class="anchor" id="autotoc_md152"></a>
 Документы процесса</h2>
-<p><ul>
+<p ><ul>
 <li>📄 Приложение к договору УХД по проекту</li>
 <li>📄 Визирующая подпись председателя на приложении к договору УХД </li>
 </ul>
@@ -200,7 +193,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

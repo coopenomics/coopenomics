@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,32 +128,25 @@ $(document).ready(function(){initNavTree('group__public__capital__submit__vote__
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Голосование по методу Водянова<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс распределения голосующей суммы вкладчиком между другими вкладчиками проекта по методу Водянова и сохранения результатов голосования в системе.</p>
+<p >Процесс распределения голосующей суммы вкладчиком между другими вкладчиками проекта по методу Водянова и сохранения результатов голосования в системе.</p>
 <h2><a class="anchor" id="autotoc_md280"></a>
 Назначение процесса</h2>
-<p>Подача голоса по методу Водянова обеспечивает:</p><ul>
+<p >Подача голоса по методу Водянова обеспечивает:</p><ul>
 <li>Распределение голосующей суммы вкладчика между другими вкладчиками проекта</li>
 <li>Валидацию корректности распределения голосов</li>
 <li>Сохранение голосов в системе для последующего подсчета</li>
 <li>Учет голоса в общем количестве полученных голосов вкладчиками</li>
 </ul>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant У as Вкладчик
@@ -178,13 +171,13 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md282"></a>
 Шаг 1: Инициация подачи голоса</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gad8c8f0ebd471b3d8e55aec914c6d14a4">Подача голоса по методу Водянова</a></p>
-<p>Вкладчик распределяет свою голосующую сумму между другими вкладчиками проекта в рамках голосования по методу Водянова.</p>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gad8c8f0ebd471b3d8e55aec914c6d14a4">Подача голоса по методу Водянова</a></p>
+<p >Вкладчик распределяет свою голосующую сумму между другими вкладчиками проекта в рамках голосования по методу Водянова.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка авторизации кооператива</dd></dl>
 <h3><a class="anchor" id="autotoc_md283"></a>
 Шаг 2: Проверка статуса проекта и срока голосования</h3>
-<p><b>Действие:</b> Валидация состояния проекта</p>
-<p>Система проверяет, что:</p><ul>
+<p ><b>Действие:</b> Валидация состояния проекта</p>
+<p >Система проверяет, что:</p><ul>
 <li>Проект находится в статусе голосования</li>
 <li>Срок голосования еще не истек</li>
 </ul>
@@ -193,8 +186,8 @@ sequenceDiagram
 Подтверждено, что срок голосования не истек</dd></dl>
 <h3><a class="anchor" id="autotoc_md284"></a>
 Шаг 3: Валидация вкладчика голосования</h3>
-<p><b>Действие:</b> Проверка прав вкладчика</p>
-<p>Система проверяет, что:</p><ul>
+<p ><b>Действие:</b> Проверка прав вкладчика</p>
+<p >Система проверяет, что:</p><ul>
 <li>Вкладчик является вкладчиком голосования по проекту (автор или создатель)</li>
 <li>Вкладчик еще не голосовал по данному проекту</li>
 </ul>
@@ -203,8 +196,8 @@ sequenceDiagram
 Подтверждено, что пользователь еще не голосовал</dd></dl>
 <h3><a class="anchor" id="autotoc_md285"></a>
 Шаг 4: Проверка корректности голосов</h3>
-<p><b>Действие:</b> Валидация распределения голосов</p>
-<p>Система проверяет корректность распределения голосов:</p><ul>
+<p ><b>Действие:</b> Валидация распределения голосов</p>
+<p >Система проверяет корректность распределения голосов:</p><ul>
 <li>Вкладчик не голосует за себя</li>
 <li>Все получатели голосов являются вкладчиками голосования</li>
 <li>Нет повторяющихся получателей голосов</li>
@@ -216,17 +209,17 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка корректности всех параметров голосования</dd></dl>
 <h3><a class="anchor" id="autotoc_md286"></a>
 Шаг 5: Сохранение голосов</h3>
-<p><b>Действие:</b> Фиксация голосов в системе</p>
-<p>Система сохраняет каждый голос в таблице голосов, связывая голосующего с получателем голоса и суммой голоса.</p>
+<p ><b>Действие:</b> Фиксация голосов в системе</p>
+<p >Система сохраняет каждый голос в таблице голосов, связывая голосующего с получателем голоса и суммой голоса.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Голоса сохранены в системе</dd></dl>
 <h3><a class="anchor" id="autotoc_md287"></a>
 Шаг 6: Обновление счетчика полученных голосов</h3>
-<p><b>Действие:</b> Учет голоса в статистике</p>
-<p>Система обновляет счетчик полученных голосов для проекта, увеличивая его на единицу для отслеживания завершения голосования.</p>
+<p ><b>Действие:</b> Учет голоса в статистике</p>
+<p >Система обновляет счетчик полученных голосов для проекта, увеличивая его на единицу для отслеживания завершения голосования.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Счетчик полученных голосов увеличен</dd></dl>
 <h2><a class="anchor" id="autotoc_md288"></a>
 Условия для подачи голоса</h2>
-<p><b>Обязательные требования:</b></p><ul>
+<p ><b>Обязательные требования:</b></p><ul>
 <li>Проект должен быть в статусе голосования</li>
 <li>Срок голосования не должен быть истекшим</li>
 <li>Вкладчик должен быть вкладчиком голосования</li>
@@ -235,7 +228,7 @@ sequenceDiagram
 </ul>
 <h2><a class="anchor" id="autotoc_md289"></a>
 Результат процесса</h2>
-<p>post"
+<p >post"
 1. Голоса вкладчика сохранены в системе
 2. Счетчик полученных голосов обновлен
 3. Вкладчик больше не может голосовать по данному проекту
@@ -251,7 +244,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

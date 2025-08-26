@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -153,7 +146,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_marketplace_1_1_document_names" id="r_namespace_marketplace_1_1_document_names"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_document_names.html">DocumentNames</a></td></tr>
+<tr class="memitem:namespace_marketplace_1_1_document_names"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_document_names.html">DocumentNames</a></td></tr>
 <tr class="memdesc:namespace_marketplace_1_1_document_names"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы для имен документов маркетплейса (максимум 12 символов) <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -171,34 +164,34 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a80d9e20aefd9d6e1235780f20dc6fd9f" id="r_a80d9e20aefd9d6e1235780f20dc6fd9f"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;segments&quot;_n, <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, eosio::indexed_by&lt;&quot;byrequest&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#a8470801b2565a293d97ecc9a4139a520">segment::by_request</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#aee617961213cbc4f5199364fa79f1ce2">segment::by_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#af2202c88593b9cb935821e38f2303234">segment::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a80d9e20aefd9d6e1235780f20dc6fd9f">segments_index</a></td></tr>
+<tr class="memitem:a80d9e20aefd9d6e1235780f20dc6fd9f"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;segments&quot;_n, <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, eosio::indexed_by&lt;&quot;byrequest&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#a8470801b2565a293d97ecc9a4139a520">segment::by_request</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#aee617961213cbc4f5199364fa79f1ce2">segment::by_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1segment.html">segment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1segment.html#af2202c88593b9cb935821e38f2303234">segment::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a80d9e20aefd9d6e1235780f20dc6fd9f">segments_index</a></td></tr>
 <tr class="separator:a80d9e20aefd9d6e1235780f20dc6fd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82529b4763af9d80f01135a8fa44f592" id="r_a82529b4763af9d80f01135a8fa44f592"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;shipments&quot;_n, <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#add4688312bc35a0588193be44f49db1b">shipment::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#aca1c0c66948a1a5c7bcc886414f2ac79">shipment::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydriver&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#aa2d2869e5b4620302ba9dbd707d72a60">shipment::by_driver</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bysource&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a49d6043f96dcb25ce080ef31418e7d51">shipment::by_source</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydest&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a4e924e0c97052ee0722ebafd7ef00432">shipment::by_destination</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a5f80bb50386f4745f692a4d47369eb3b">shipment::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a91810b42938507ea5b80a5bc95e331bd">shipment::by_created</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a82529b4763af9d80f01135a8fa44f592">shipments_index</a></td></tr>
+<tr class="memitem:a82529b4763af9d80f01135a8fa44f592"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;shipments&quot;_n, <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#add4688312bc35a0588193be44f49db1b">shipment::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#aca1c0c66948a1a5c7bcc886414f2ac79">shipment::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydriver&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#aa2d2869e5b4620302ba9dbd707d72a60">shipment::by_driver</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bysource&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a49d6043f96dcb25ce080ef31418e7d51">shipment::by_source</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydest&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a4e924e0c97052ee0722ebafd7ef00432">shipment::by_destination</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a5f80bb50386f4745f692a4d47369eb3b">shipment::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1shipment.html#a91810b42938507ea5b80a5bc95e331bd">shipment::by_created</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a82529b4763af9d80f01135a8fa44f592">shipments_index</a></td></tr>
 <tr class="separator:a82529b4763af9d80f01135a8fa44f592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bbcc4fa28cd7d2a6317cdffb05baeb6" id="r_a9bbcc4fa28cd7d2a6317cdffb05baeb6"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;requests&quot;_n, <a class="el" href="struct_marketplace_1_1request.html">request</a>, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#aeeb733544efe1babbc55f7cffcf363e5">request::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a76cd3a826f1532ce0ec10e3c670c818f">request::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a13816224e56a5885dd989b8f5d4d662c">request::by_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1request.html#a04c24ed40ac24521c19b0def69f4b54f">request::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#affffddbeed693920e4bbf75b66f70270">request::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a28b843843125e2a946ea8fbd24376097">request::by_created</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycompleted&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a7c8460dd067dec8be16acdc4f771dcf5">request::by_completed</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydeclined&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#ac414b920b7140e17bc5460be7eed09f9">request::by_declined</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycanceled&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a4db74eaac034731259be0ae7961d493b">request::by_canceled</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bywarrantyid&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#ab85c0692cd8edf3bdf1571cbc2112fb4">request::by_warranty_id</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a9bbcc4fa28cd7d2a6317cdffb05baeb6">requests_index</a></td></tr>
+<tr class="memitem:a9bbcc4fa28cd7d2a6317cdffb05baeb6"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;requests&quot;_n, <a class="el" href="struct_marketplace_1_1request.html">request</a>, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#aeeb733544efe1babbc55f7cffcf363e5">request::by_coop</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a76cd3a826f1532ce0ec10e3c670c818f">request::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a13816224e56a5885dd989b8f5d4d662c">request::by_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1request.html#a04c24ed40ac24521c19b0def69f4b54f">request::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#affffddbeed693920e4bbf75b66f70270">request::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a28b843843125e2a946ea8fbd24376097">request::by_created</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycompleted&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a7c8460dd067dec8be16acdc4f771dcf5">request::by_completed</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydeclined&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#ac414b920b7140e17bc5460be7eed09f9">request::by_declined</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bycanceled&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#a4db74eaac034731259be0ae7961d493b">request::by_canceled</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bywarrantyid&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1request.html#ab85c0692cd8edf3bdf1571cbc2112fb4">request::by_warranty_id</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a9bbcc4fa28cd7d2a6317cdffb05baeb6">requests_index</a></td></tr>
 <tr class="separator:a9bbcc4fa28cd7d2a6317cdffb05baeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:aeba4b827259d0e461e6e0aaf36806316" id="r_aeba4b827259d0e461e6e0aaf36806316"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">get_valid_marketplace_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>)</td></tr>
+<tr class="memitem:aeba4b827259d0e461e6e0aaf36806316"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">get_valid_marketplace_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
 <tr class="separator:aeba4b827259d0e461e6e0aaf36806316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d4bae127a59c993b6262ac276c59df" id="r_a46d4bae127a59c993b6262ac276c59df"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">get_request_by_hash</a> (eosio::name coopname, checksum256 request_hash)</td></tr>
+<tr class="memitem:a46d4bae127a59c993b6262ac276c59df"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="struct_marketplace_1_1request.html">request</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">get_request_by_hash</a> (eosio::name coopname, checksum256 request_hash)</td></tr>
 <tr class="separator:a46d4bae127a59c993b6262ac276c59df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac770cc85dc37eeeee1f7e13fc2d09b74" id="r_ac770cc85dc37eeeee1f7e13fc2d09b74"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">get_shipment_by_hash</a> (eosio::name coopname, checksum256 shipment_hash)</td></tr>
+<tr class="memitem:ac770cc85dc37eeeee1f7e13fc2d09b74"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">get_shipment_by_hash</a> (eosio::name coopname, checksum256 shipment_hash)</td></tr>
 <tr class="separator:ac770cc85dc37eeeee1f7e13fc2d09b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94b5f5347b46e3cfbce42010625434ba" id="r_a94b5f5347b46e3cfbce42010625434ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_marketplace_1_1request.html">request</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">get_request_by_hash_or_fail</a> (eosio::name coopname, checksum256 request_hash, const std::string &amp;error_msg=&quot;Заявка не найдена по хэшу&quot;)</td></tr>
+<tr class="memitem:a94b5f5347b46e3cfbce42010625434ba"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_marketplace_1_1request.html">request</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">get_request_by_hash_or_fail</a> (eosio::name coopname, checksum256 request_hash, const std::string &amp;error_msg=&quot;Заявка не найдена по хэшу&quot;)</td></tr>
 <tr class="separator:a94b5f5347b46e3cfbce42010625434ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef8efe3e0918a44ea23b0d8364e4f772" id="r_aef8efe3e0918a44ea23b0d8364e4f772"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">get_shipment_by_hash_or_fail</a> (eosio::name coopname, checksum256 shipment_hash, const std::string &amp;error_msg=&quot;Перевозка не найдена по хэшу&quot;)</td></tr>
+<tr class="memitem:aef8efe3e0918a44ea23b0d8364e4f772"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_marketplace_1_1shipment.html">shipment</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">get_shipment_by_hash_or_fail</a> (eosio::name coopname, checksum256 shipment_hash, const std::string &amp;error_msg=&quot;Перевозка не найдена по хэшу&quot;)</td></tr>
 <tr class="separator:aef8efe3e0918a44ea23b0d8364e4f772"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:aaa8c90d14e6080d4c13b395c518f8925" id="r_aaa8c90d14e6080d4c13b395c518f8925"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">marketplace_callback_actions</a></td></tr>
+<tr class="memitem:aaa8c90d14e6080d4c13b395c518f8925"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">marketplace_callback_actions</a></td></tr>
 <tr class="separator:aaa8c90d14e6080d4c13b395c518f8925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a9bbcc4fa28cd7d2a6317cdffb05baeb6" name="a9bbcc4fa28cd7d2a6317cdffb05baeb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bbcc4fa28cd7d2a6317cdffb05baeb6">&#9670;&#160;</a></span>requests_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbcc4fa28cd7d2a6317cdffb05baeb6">&#9670;&nbsp;</a></span>requests_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +205,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="a80d9e20aefd9d6e1235780f20dc6fd9f" name="a80d9e20aefd9d6e1235780f20dc6fd9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80d9e20aefd9d6e1235780f20dc6fd9f">&#9670;&#160;</a></span>segments_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d9e20aefd9d6e1235780f20dc6fd9f">&#9670;&nbsp;</a></span>segments_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +219,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="a82529b4763af9d80f01135a8fa44f592" name="a82529b4763af9d80f01135a8fa44f592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82529b4763af9d80f01135a8fa44f592">&#9670;&#160;</a></span>shipments_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a82529b4763af9d80f01135a8fa44f592">&#9670;&nbsp;</a></span>shipments_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +234,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a46d4bae127a59c993b6262ac276c59df" name="a46d4bae127a59c993b6262ac276c59df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46d4bae127a59c993b6262ac276c59df">&#9670;&#160;</a></span>get_request_by_hash()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46d4bae127a59c993b6262ac276c59df">&#9670;&nbsp;</a></span>get_request_by_hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +270,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="a94b5f5347b46e3cfbce42010625434ba" name="a94b5f5347b46e3cfbce42010625434ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94b5f5347b46e3cfbce42010625434ba">&#9670;&#160;</a></span>get_request_by_hash_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a94b5f5347b46e3cfbce42010625434ba">&#9670;&nbsp;</a></span>get_request_by_hash_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +312,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="ac770cc85dc37eeeee1f7e13fc2d09b74" name="ac770cc85dc37eeeee1f7e13fc2d09b74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac770cc85dc37eeeee1f7e13fc2d09b74">&#9670;&#160;</a></span>get_shipment_by_hash()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac770cc85dc37eeeee1f7e13fc2d09b74">&#9670;&nbsp;</a></span>get_shipment_by_hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +348,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="aef8efe3e0918a44ea23b0d8364e4f772" name="aef8efe3e0918a44ea23b0d8364e4f772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef8efe3e0918a44ea23b0d8364e4f772">&#9670;&#160;</a></span>get_shipment_by_hash_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aef8efe3e0918a44ea23b0d8364e4f772">&#9670;&nbsp;</a></span>get_shipment_by_hash_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,7 +390,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 </div>
 <a id="aeba4b827259d0e461e6e0aaf36806316" name="aeba4b827259d0e461e6e0aaf36806316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeba4b827259d0e461e6e0aaf36806316">&#9670;&#160;</a></span>get_valid_marketplace_action()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba4b827259d0e461e6e0aaf36806316">&#9670;&nbsp;</a></span>get_valid_marketplace_action()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +417,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 </div>
 <h2 class="groupheader">Переменные</h2>
 <a id="aaa8c90d14e6080d4c13b395c518f8925" name="aaa8c90d14e6080d4c13b395c518f8925"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa8c90d14e6080d4c13b395c518f8925">&#9670;&#160;</a></span>marketplace_callback_actions</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa8c90d14e6080d4c13b395c518f8925">&#9670;&nbsp;</a></span>marketplace_callback_actions</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,7 +452,7 @@ $(document).ready(function(){initNavTree('namespace_marketplace.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_marketplace.html">Marketplace</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

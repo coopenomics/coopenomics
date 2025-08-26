@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registrator_0',['Контракт REGISTRATOR',['../group__public__registrator.html',1,'']]]
+  ['мета_2dпроекты_0',['Мета-проекты',['../group__capital__meta__projects.html',1,'']]]
 ];

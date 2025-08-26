@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -152,21 +140,16 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <a href="program__invests_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>std::string;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using</span> std::string;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital_1_1_program_invests.html">Capital::ProgramInvests</a> {</div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests_1_1_status.html">   13</a></span>   <span class="keyword">namespace </span>Status {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">   14</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">CREATED</a> = <span class="stringliteral">&quot;created&quot;</span>_n;     </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  }</div>
-</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
-</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital.html">Capital</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html">   28</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(CAPITAL)]] <a class="code hl_struct" href="struct_capital_1_1program__invest.html">program_invest</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#ad82ed3adc668b2e62f9ed719cd70a6dd">   29</a></span>    uint64_t <a class="code hl_variable" href="struct_capital_1_1program__invest.html#ad82ed3adc668b2e62f9ed719cd70a6dd">id</a>;                                </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#a72735bdba0443e92c9ddaea10d56f20c">   30</a></span>    eosio::name <a class="code hl_variable" href="struct_capital_1_1program__invest.html#a72735bdba0443e92c9ddaea10d56f20c">coopname</a>;                       </div>
@@ -178,9 +161,7 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#aef2c97e26632c064e9426b8b550e0557">   36</a></span>    eosio::asset <a class="code hl_variable" href="struct_capital_1_1program__invest.html#aef2c97e26632c064e9426b8b550e0557">amount</a>;                        </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#aaa0aa9cbc8f0e4187dc0de6faf95ea9d">   38</a></span>    uint64_t <a class="code hl_function" href="struct_capital_1_1program__invest.html#aaa0aa9cbc8f0e4187dc0de6faf95ea9d">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> id; } </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#a81ce4571a7703d20354f00bfb453ab2c">   39</a></span>    uint64_t <a class="code hl_function" href="struct_capital_1_1program__invest.html#a81ce4571a7703d20354f00bfb453ab2c">by_username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_capital_1_1program__invest.html#a0835149eb9c68beeab9f273534e81583">   40</a></span>    checksum256 <a class="code hl_function" href="struct_capital_1_1program__invest.html#a0835149eb9c68beeab9f273534e81583">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> invest_hash; } </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  };</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
@@ -192,7 +173,6 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">namespace </span>ProgramInvests {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">   57</a></span>    <span class="keyword">inline</span> std::optional&lt;program_invest&gt; <a class="code hl_function" href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">get_program_invest</a>(eosio::name coopname, <span class="keyword">const</span> checksum256&amp; invest_hash) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb">program_invest_index</a> program_invests(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">auto</span> invest_hash_index = program_invests.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
@@ -204,17 +184,13 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> std::nullopt;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">   75</a></span>    <span class="keyword">inline</span> <a class="code hl_struct" href="struct_capital_1_1program__invest.html">program_invest</a> <a class="code hl_function" href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">get_program_invest_or_fail</a>(eosio::name coopname, <span class="keyword">const</span> checksum256&amp; invest_hash) {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1invest.html">invest</a> = <a class="code hl_function" href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">get_program_invest</a>(coopname, invest_hash);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        eosio::check(<a class="code hl_struct" href="struct_capital_1_1invest.html">invest</a>.has_value(), <span class="stringliteral">&quot;Программная инвестиция с указанным хэшем не найдена&quot;</span>);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> *<a class="code hl_struct" href="struct_capital_1_1invest.html">invest</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
-</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">   89</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">create_program_invest_with_approve</a>(</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        eosio::name coopname,</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        eosio::name username,</div>
@@ -251,9 +227,7 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            std::string(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        );</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
-</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">  131</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">remove_program_invest</a>(eosio::name coopname, <span class="keyword">const</span> checksum256&amp; invest_hash) {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_typedef" href="namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb">program_invest_index</a> program_invests(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keyword">auto</span> invest_hash_index = program_invests.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
@@ -262,45 +236,41 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        eosio::check(itr != invest_hash_index.end(), <span class="stringliteral">&quot;Программная инвестиция для удаления не найдена&quot;</span>);</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        invest_hash_index.erase(itr);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
-</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>} <span class="comment">// namespace ProgramInvests</span></div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>} <span class="comment">// namespace Capital</span></div>
-</div>
-</div>
-</div>
-<div class="ttc" id="aconsts_8hpp_html_a523079edf0da499462828993f69a920c"><div class="ttname"><a href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></div><div class="ttdeci">static constexpr eosio::name _capital</div><div class="ttdef"><b>Definition</b> consts.hpp:150</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="aeosio_8token__tests_8cpp_html_aca469ae89ae00a572ad079f6d8515ce1"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a></div><div class="ttdeci">share_type amount</div><div class="ttdef"><b>Definition</b> eosio.token_tests.cpp:174</div></div>
-<div class="ttc" id="alib_2counts_8hpp_html_ad99cf4a19b51981409c18e05b7fb35c0"><div class="ttname"><a href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a></div><div class="ttdeci">uint64_t get_global_id_in_scope(eosio::name _me, eosio::name scope, eosio::name key)</div><div class="ttdef"><b>Definition</b> counts.hpp:61</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_1_1_status_html_af696d0322b949a4ab9321a9400582b64"><div class="ttname"><a href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">Capital::ProgramInvests::Status::CREATED</a></div><div class="ttdeci">const eosio::name CREATED</div><div class="ttdoc">Программная инвестиция создана</div><div class="ttdef"><b>Definition</b> program_invests.hpp:14</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_html"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html">Capital::ProgramInvests</a></div><div class="ttdef"><b>Definition</b> program_invests.hpp:6</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a3d3d499075202bf27644396a0d6ef212"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">Capital::ProgramInvests::remove_program_invest</a></div><div class="ttdeci">void remove_program_invest(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Удаляет программную инвестицию после обработки.</div><div class="ttdef"><b>Definition</b> program_invests.hpp:131</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a416f935e741fefcb4e08cae6ba80a2e7"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">Capital::ProgramInvests::get_program_invest_or_fail</a></div><div class="ttdeci">program_invest get_program_invest_or_fail(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Получает программную инвестицию по хэшу или завершает выполнение с ошибкой.</div><div class="ttdef"><b>Definition</b> program_invests.hpp:75</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a80c9986e5acb5c8044588df59b3aa747"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">Capital::ProgramInvests::create_program_invest_with_approve</a></div><div class="ttdeci">void create_program_invest_with_approve(eosio::name coopname, eosio::name username, checksum256 invest_hash, eosio::asset amount, document2 statement)</div><div class="ttdoc">Создает программную инвестицию и отправляет её на утверждение.</div><div class="ttdef"><b>Definition</b> program_invests.hpp:89</div></div>
-<div class="ttc" id="anamespace_capital_1_1_program_invests_html_ac60500c9f0e0faaa18efa9acb7078eb2"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">Capital::ProgramInvests::get_program_invest</a></div><div class="ttdeci">std::optional&lt; program_invest &gt; get_program_invest(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Получает программную инвестицию по хэшу.</div><div class="ttdef"><b>Definition</b> program_invests.hpp:57</div></div>
-<div class="ttc" id="anamespace_capital_html"><div class="ttname"><a href="namespace_capital.html">Capital</a></div><div class="ttdef"><b>Definition</b> balances.cpp:6</div></div>
-<div class="ttc" id="anamespace_capital_html_a048ac73318cd0635f2d21d0ca76673cb"><div class="ttname"><a href="namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb">Capital::program_invest_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;progrinvests&quot;_n, program_invest, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; program_invest, uint64_t, &amp;program_invest::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; program_invest, checksum256, &amp;program_invest::by_hash &gt; &gt; &gt; program_invest_index</div><div class="ttdef"><b>Definition</b> program_invests.hpp:47</div></div>
-<div class="ttc" id="anamespace_names_1_1_capital_html_a2f641f9fdbd986cdf6018f9d8860d0e7"><div class="ttname"><a href="namespace_names_1_1_capital.html#a2f641f9fdbd986cdf6018f9d8860d0e7">Names::Capital::CREATE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name CREATE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition</b> shared_names.hpp:108</div></div>
-<div class="ttc" id="anamespace_names_1_1_capital_html_a7f4cde653a5e0beaae4267622424c248"><div class="ttname"><a href="namespace_names_1_1_capital.html#a7f4cde653a5e0beaae4267622424c248">Names::Capital::DECLINE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name DECLINE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition</b> shared_names.hpp:44</div></div>
-<div class="ttc" id="anamespace_names_1_1_capital_html_ab7bed41c203f5eb8944500ce011d266f"><div class="ttname"><a href="namespace_names_1_1_capital.html#ab7bed41c203f5eb8944500ce011d266f">Names::Capital::APPROVE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name APPROVE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition</b> shared_names.hpp:43</div></div>
-<div class="ttc" id="anamespace_soviet_html_ac2a7d429ce980f07d8fe02c278b037bd"><div class="ttname"><a href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></div><div class="ttdeci">void create_approval(name calling_contract, CREATEAPPRV_SIGNATURE)</div><div class="ttdoc">Создаёт аппрув в совете</div><div class="ttdef"><b>Definition</b> shared_soviet.hpp:73</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astruct_capital_1_1invest_html"><div class="ttname"><a href="struct_capital_1_1invest.html">Capital::invest</a></div><div class="ttdoc">Таблица инвестиций хранит данные о вложениях в проекты.</div><div class="ttdef"><b>Definition</b> invests.hpp:27</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html"><div class="ttname"><a href="struct_capital_1_1program__invest.html">Capital::program_invest</a></div><div class="ttdoc">Таблица программных инвестиций хранит данные об инвестициях в программу капитализации.</div><div class="ttdef"><b>Definition</b> program_invests.hpp:28</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a0835149eb9c68beeab9f273534e81583"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a0835149eb9c68beeab9f273534e81583">Capital::program_invest::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу инвестиции (3)</div><div class="ttdef"><b>Definition</b> program_invests.hpp:40</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a08a99a3478b9dedce67d255e163ab81f"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a08a99a3478b9dedce67d255e163ab81f">Capital::program_invest::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdoc">Заявление на инвестицию</div><div class="ttdef"><b>Definition</b> program_invests.hpp:35</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a0eccb10067fc424acf85a99928da47d0"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a0eccb10067fc424acf85a99928da47d0">Capital::program_invest::invest_hash</a></div><div class="ttdeci">checksum256 invest_hash</div><div class="ttdoc">Хэш инвестиции</div><div class="ttdef"><b>Definition</b> program_invests.hpp:32</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a1a2b6235a198b42d7dcf9d028c698a13"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a1a2b6235a198b42d7dcf9d028c698a13">Capital::program_invest::status</a></div><div class="ttdeci">eosio::name status</div><div class="ttdoc">Статус инвестиции</div><div class="ttdef"><b>Definition</b> program_invests.hpp:33</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a285ca5ec3543eec78866565607ca6604"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a285ca5ec3543eec78866565607ca6604">Capital::program_invest::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя инвестора</div><div class="ttdef"><b>Definition</b> program_invests.hpp:31</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a42324c1b1b5723b0e59111f941fbb6fc"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a42324c1b1b5723b0e59111f941fbb6fc">Capital::program_invest::invested_at</a></div><div class="ttdeci">time_point_sec invested_at</div><div class="ttdoc">Время создания инвестиции</div><div class="ttdef"><b>Definition</b> program_invests.hpp:34</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a72735bdba0443e92c9ddaea10d56f20c"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a72735bdba0443e92c9ddaea10d56f20c">Capital::program_invest::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> program_invests.hpp:30</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_a81ce4571a7703d20354f00bfb453ab2c"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a81ce4571a7703d20354f00bfb453ab2c">Capital::program_invest::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя (2)</div><div class="ttdef"><b>Definition</b> program_invests.hpp:39</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_aaa0aa9cbc8f0e4187dc0de6faf95ea9d"><div class="ttname"><a href="struct_capital_1_1program__invest.html#aaa0aa9cbc8f0e4187dc0de6faf95ea9d">Capital::program_invest::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition</b> program_invests.hpp:38</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_ad82ed3adc668b2e62f9ed719cd70a6dd"><div class="ttname"><a href="struct_capital_1_1program__invest.html#ad82ed3adc668b2e62f9ed719cd70a6dd">Capital::program_invest::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">ID программной инвестиции (внутренний ключ)</div><div class="ttdef"><b>Definition</b> program_invests.hpp:29</div></div>
-<div class="ttc" id="astruct_capital_1_1program__invest_html_aef2c97e26632c064e9426b8b550e0557"><div class="ttname"><a href="struct_capital_1_1program__invest.html#aef2c97e26632c064e9426b8b550e0557">Capital::program_invest::amount</a></div><div class="ttdeci">eosio::asset amount</div><div class="ttdoc">Сумма инвестиции</div><div class="ttdef"><b>Definition</b> program_invests.hpp:36</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a523079edf0da499462828993f69a920c"><div class="ttname"><a href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></div><div class="ttdeci">static constexpr eosio::name _capital</div><div class="ttdef"><b>Definition:</b> consts.hpp:150</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8token__tests_8cpp_html_aca469ae89ae00a572ad079f6d8515ce1"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a></div><div class="ttdeci">share_type amount</div><div class="ttdef"><b>Definition:</b> eosio.token_tests.cpp:174</div></div>
+<div class="ttc" id="alib_2counts_8hpp_html_ad99cf4a19b51981409c18e05b7fb35c0"><div class="ttname"><a href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a></div><div class="ttdeci">uint64_t get_global_id_in_scope(eosio::name _me, eosio::name scope, eosio::name key)</div><div class="ttdef"><b>Definition:</b> counts.hpp:61</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_1_1_status_html_af696d0322b949a4ab9321a9400582b64"><div class="ttname"><a href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">Capital::ProgramInvests::Status::CREATED</a></div><div class="ttdeci">const eosio::name CREATED</div><div class="ttdoc">Программная инвестиция создана</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:14</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_html"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html">Capital::ProgramInvests</a></div><div class="ttdef"><b>Definition:</b> program_invests.hpp:6</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a3d3d499075202bf27644396a0d6ef212"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">Capital::ProgramInvests::remove_program_invest</a></div><div class="ttdeci">void remove_program_invest(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Удаляет программную инвестицию после обработки.</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:131</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a416f935e741fefcb4e08cae6ba80a2e7"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">Capital::ProgramInvests::get_program_invest_or_fail</a></div><div class="ttdeci">program_invest get_program_invest_or_fail(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Получает программную инвестицию по хэшу или завершает выполнение с ошибкой.</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:75</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_html_a80c9986e5acb5c8044588df59b3aa747"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">Capital::ProgramInvests::create_program_invest_with_approve</a></div><div class="ttdeci">void create_program_invest_with_approve(eosio::name coopname, eosio::name username, checksum256 invest_hash, eosio::asset amount, document2 statement)</div><div class="ttdoc">Создает программную инвестицию и отправляет её на утверждение.</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:89</div></div>
+<div class="ttc" id="anamespace_capital_1_1_program_invests_html_ac60500c9f0e0faaa18efa9acb7078eb2"><div class="ttname"><a href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">Capital::ProgramInvests::get_program_invest</a></div><div class="ttdeci">std::optional&lt; program_invest &gt; get_program_invest(eosio::name coopname, const checksum256 &amp;invest_hash)</div><div class="ttdoc">Получает программную инвестицию по хэшу.</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:57</div></div>
+<div class="ttc" id="anamespace_capital_html"><div class="ttname"><a href="namespace_capital.html">Capital</a></div><div class="ttdef"><b>Definition:</b> balances.cpp:6</div></div>
+<div class="ttc" id="anamespace_capital_html_a048ac73318cd0635f2d21d0ca76673cb"><div class="ttname"><a href="namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb">Capital::program_invest_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;progrinvests&quot;_n, program_invest, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; program_invest, uint64_t, &amp;program_invest::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; program_invest, checksum256, &amp;program_invest::by_hash &gt; &gt; &gt; program_invest_index</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:47</div></div>
+<div class="ttc" id="anamespace_names_1_1_capital_html_a2f641f9fdbd986cdf6018f9d8860d0e7"><div class="ttname"><a href="namespace_names_1_1_capital.html#a2f641f9fdbd986cdf6018f9d8860d0e7">Names::Capital::CREATE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name CREATE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition:</b> shared_names.hpp:108</div></div>
+<div class="ttc" id="anamespace_names_1_1_capital_html_a7f4cde653a5e0beaae4267622424c248"><div class="ttname"><a href="namespace_names_1_1_capital.html#a7f4cde653a5e0beaae4267622424c248">Names::Capital::DECLINE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name DECLINE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition:</b> shared_names.hpp:44</div></div>
+<div class="ttc" id="anamespace_names_1_1_capital_html_ab7bed41c203f5eb8944500ce011d266f"><div class="ttname"><a href="namespace_names_1_1_capital.html#ab7bed41c203f5eb8944500ce011d266f">Names::Capital::APPROVE_PROGRAM_INVESTMENT</a></div><div class="ttdeci">constexpr eosio::name APPROVE_PROGRAM_INVESTMENT</div><div class="ttdef"><b>Definition:</b> shared_names.hpp:43</div></div>
+<div class="ttc" id="anamespace_soviet_html_ac2a7d429ce980f07d8fe02c278b037bd"><div class="ttname"><a href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></div><div class="ttdeci">void create_approval(name calling_contract, CREATEAPPRV_SIGNATURE)</div><div class="ttdoc">Создаёт аппрув в совете</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:73</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_capital_1_1invest_html"><div class="ttname"><a href="struct_capital_1_1invest.html">Capital::invest</a></div><div class="ttdoc">Таблица инвестиций хранит данные о вложениях в проекты.</div><div class="ttdef"><b>Definition:</b> invests.hpp:27</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html"><div class="ttname"><a href="struct_capital_1_1program__invest.html">Capital::program_invest</a></div><div class="ttdoc">Таблица программных инвестиций хранит данные об инвестициях в программу капитализации.</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:28</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a0835149eb9c68beeab9f273534e81583"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a0835149eb9c68beeab9f273534e81583">Capital::program_invest::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу инвестиции (3)</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:40</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a08a99a3478b9dedce67d255e163ab81f"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a08a99a3478b9dedce67d255e163ab81f">Capital::program_invest::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdoc">Заявление на инвестицию</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:35</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a0eccb10067fc424acf85a99928da47d0"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a0eccb10067fc424acf85a99928da47d0">Capital::program_invest::invest_hash</a></div><div class="ttdeci">checksum256 invest_hash</div><div class="ttdoc">Хэш инвестиции</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:32</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a1a2b6235a198b42d7dcf9d028c698a13"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a1a2b6235a198b42d7dcf9d028c698a13">Capital::program_invest::status</a></div><div class="ttdeci">eosio::name status</div><div class="ttdoc">Статус инвестиции</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:33</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a285ca5ec3543eec78866565607ca6604"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a285ca5ec3543eec78866565607ca6604">Capital::program_invest::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя инвестора</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:31</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a42324c1b1b5723b0e59111f941fbb6fc"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a42324c1b1b5723b0e59111f941fbb6fc">Capital::program_invest::invested_at</a></div><div class="ttdeci">time_point_sec invested_at</div><div class="ttdoc">Время создания инвестиции</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:34</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a72735bdba0443e92c9ddaea10d56f20c"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a72735bdba0443e92c9ddaea10d56f20c">Capital::program_invest::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:30</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_a81ce4571a7703d20354f00bfb453ab2c"><div class="ttname"><a href="struct_capital_1_1program__invest.html#a81ce4571a7703d20354f00bfb453ab2c">Capital::program_invest::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя (2)</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:39</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_aaa0aa9cbc8f0e4187dc0de6faf95ea9d"><div class="ttname"><a href="struct_capital_1_1program__invest.html#aaa0aa9cbc8f0e4187dc0de6faf95ea9d">Capital::program_invest::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:38</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_ad82ed3adc668b2e62f9ed719cd70a6dd"><div class="ttname"><a href="struct_capital_1_1program__invest.html#ad82ed3adc668b2e62f9ed719cd70a6dd">Capital::program_invest::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">ID программной инвестиции (внутренний ключ)</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:29</div></div>
+<div class="ttc" id="astruct_capital_1_1program__invest_html_aef2c97e26632c064e9426b8b550e0557"><div class="ttname"><a href="struct_capital_1_1program__invest.html#aef2c97e26632c064e9426b8b550e0557">Capital::program_invest::amount</a></div><div class="ttdeci">eosio::asset amount</div><div class="ttdoc">Сумма инвестиции</div><div class="ttdef"><b>Definition:</b> program_invests.hpp:36</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -308,7 +278,7 @@ $(document).ready(function(){initNavTree('program__invests_8hpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="program__invests_8hpp.html">program_invests.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

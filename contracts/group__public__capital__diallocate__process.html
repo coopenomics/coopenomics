@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,23 +128,16 @@ $(document).ready(function(){initNavTree('group__public__capital__diallocate__pr
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Деаллокации программных инвестиций<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс, при котором кооператив деаллоцирует неиспользованные инвестиции из завершенного проекта и возвращает их обратно в кооперативный кошелек программы "Капитализация" для повторного использования в других проектах.</p>
+<p >Процесс, при котором кооператив деаллоцирует неиспользованные инвестиции из завершенного проекта и возвращает их обратно в кооперативный кошелек программы "Капитализация" для повторного использования в других проектах.</p>
 <dl class="section pre"><dt>Предусловие</dt><dd><b>Обязательные условия:</b><ul>
 <li>Проект завершен со статусом COMPLETED</li>
 <li>В проекте есть неиспользованные программные средства</li>
@@ -176,23 +169,23 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md117"></a>
 Шаг 1: Инициация деаллокации средств</h3>
-<p><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gacd8a287d951f8477460a79048e4d1500">Деаллокация инвестиций</a></p>
-<p>Кооператив инициирует процесс деаллокации неиспользованных средств из завершенного проекта. Это необходимо для возврата средств в программу "Капитализация" и повторного их использования.</p>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gacd8a287d951f8477460a79048e4d1500">Деаллокация инвестиций</a></p>
+<p >Кооператив инициирует процесс деаллокации неиспользованных средств из завершенного проекта. Это необходимо для возврата средств в программу "Капитализация" и повторного их использования.</p>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта кооператива, подтверждая его право распоряжаться средствами программы капитализации</dd></dl>
 <h3><a class="anchor" id="autotoc_md118"></a>
 Шаг 2: Проверка статуса проекта</h3>
-<p><b>Действие:</b> Валидация статуса проекта</p>
-<p>Система проверяет, что проект завершен со статусом COMPLETED. Только завершенные проекты могут подвергаться деаллокации средств.</p>
+<p ><b>Действие:</b> Валидация статуса проекта</p>
+<p >Система проверяет, что проект завершен со статусом COMPLETED. Только завершенные проекты могут подвергаться деаллокации средств.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Projects::get_project_or_fail подтверждает существование и статус проекта</dd></dl>
 <h3><a class="anchor" id="autotoc_md119"></a>
 Шаг 3: Проверка наличия программных средств</h3>
-<p><b>Действие:</b> Проверка баланса программных средств</p>
-<p>Система проверяет, что в проекте есть неиспользованные программные средства. Проект должен иметь положительный баланс в fact.program_invest_pool.</p>
+<p ><b>Действие:</b> Проверка баланса программных средств</p>
+<p >Система проверяет, что в проекте есть неиспользованные программные средства. Проект должен иметь положительный баланс в fact.program_invest_pool.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка project.fact.program_invest_pool.amount &gt; 0</dd></dl>
 <h3><a class="anchor" id="autotoc_md120"></a>
 Шаг 4: Расчет неиспользованных средств</h3>
-<p><b>Действие:</b> Определение суммы к возврату</p>
-<p>Система рассчитывает сумму неиспользованных программных средств:</p><ul>
+<p ><b>Действие:</b> Определение суммы к возврату</p>
+<p >Система рассчитывает сумму неиспользованных программных средств:</p><ul>
 <li>При коэффициенте использования &gt; 100% часть средств считается неиспользованной</li>
 <li>При коэффициенте использования &lt;= 100% все программные средства считаются неиспользованными</li>
 <li>Расчет производится на основе фактически использованной суммы</li>
@@ -200,8 +193,8 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a4c05887fc952cc1e031ccda789397e4e" title="Рассчитывает фактически используемую сумму инвестора с учетом коэффициента использования">Capital::Core::Generation::calculate_investor_used_amount</a> рассчитывает использованную сумму</dd></dl>
 <h3><a class="anchor" id="autotoc_md121"></a>
 Шаг 5: Возврат средств в программу</h3>
-<p><b>Действие:</b> Деаллокация и возврат средств</p>
-<p>Система возвращает неиспользованные программные средства в глобальный пул:</p><ul>
+<p ><b>Действие:</b> Деаллокация и возврат средств</p>
+<p >Система возвращает неиспользованные программные средства в глобальный пул:</p><ul>
 <li>Средства списываются из пула инвестиций проекта</li>
 <li>Средства зачисляются в кошелек программы капитализации</li>
 <li>Обновляется баланс программы капитализации</li>
@@ -209,8 +202,8 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd><a class="el" href="namespace_capital_1_1_core.html#a781d4d919d7827a1460aff275ac49221" title="Диаллоцирует средства из проекта обратно в глобальный пул (после закрытия проекта)">Capital::Core::deallocate_program_investment_from_project</a> производит деаллокацию средств</dd></dl>
 <h3><a class="anchor" id="autotoc_md122"></a>
 Шаг 6: Завершение процесса</h3>
-<p><b>Действие:</b> Финализация операции</p>
-<p>После деаллокации средства становятся доступны для повторного использования:</p><ul>
+<p ><b>Действие:</b> Финализация операции</p>
+<p >После деаллокации средства становятся доступны для повторного использования:</p><ul>
 <li>В других проектах кооператива</li>
 <li>Для новых аллокаций в рамках программы капитализации</li>
 </ul>
@@ -227,7 +220,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

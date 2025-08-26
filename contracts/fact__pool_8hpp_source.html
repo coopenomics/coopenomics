@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('fact__pool_8hpp_source.html',''); init
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -158,7 +146,6 @@ $(document).ready(function(){initNavTree('fact__pool_8hpp_source.html',''); init
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital.html">Capital</a> {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="struct_capital_1_1fact__pool.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_capital_1_1fact__pool.html">fact_pool</a> {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="comment">// Стоимость часа и время создателей</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab">   15</a></span>  eosio::asset <a class="code hl_variable" href="struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab">hour_cost</a> = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);                 </div>
@@ -200,35 +187,34 @@ $(document).ready(function(){initNavTree('fact__pool_8hpp_source.html',''); init
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// Общая сумма генерации (с вкладчиками)  </span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">   52</a></span>  eosio::asset <a class="code hl_variable" href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">total</a> = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>); </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
-</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace Capital </span></div>
-<div class="ttc" id="aconsts_8hpp_html_a5c15ddd21a87c0b286a24580936dc4b7"><div class="ttname"><a href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_govern_symbol</div><div class="ttdef"><b>Definition</b> consts.hpp:209</div></div>
-<div class="ttc" id="anamespace_capital_html"><div class="ttname"><a href="namespace_capital.html">Capital</a></div><div class="ttdef"><b>Definition</b> balances.cpp:6</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html"><div class="ttname"><a href="struct_capital_1_1fact__pool.html">Capital::fact_pool</a></div><div class="ttdoc">Структура фактических показателей проекта</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:13</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a0caf690e778a7e5c61fd5b177151b79b"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b">Capital::fact_pool::total_returned_investments</a></div><div class="ttdeci">eosio::asset total_returned_investments</div><div class="ttdoc">Общая сумма возвращенных неиспользованных инвестиций</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:43</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a0da4563f2e52083033ef4cdce38ec759"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a0da4563f2e52083033ef4cdce38ec759">Capital::fact_pool::total_received_investments</a></div><div class="ttdeci">eosio::asset total_received_investments</div><div class="ttdoc">Общая сумма всех полученных инвестиций (до распределения)</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:42</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a2cefe1e0cceadca53745325702c93418"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">Capital::fact_pool::total</a></div><div class="ttdeci">eosio::asset total</div><div class="ttdoc">Общая фактическая сумма генерации с вкладчиками</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:52</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a30af7a721ef888ddbdcaf48eaa9698ab"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab">Capital::fact_pool::hour_cost</a></div><div class="ttdeci">eosio::asset hour_cost</div><div class="ttdoc">Фактическая стоимость часа</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:15</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a33084b70495d541a32993a4e30bfde3f"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a33084b70495d541a32993a4e30bfde3f">Capital::fact_pool::return_base_percent</a></div><div class="ttdeci">double return_base_percent</div><div class="ttdoc">Коэффициент возврата себестоимости для создателей/авторов/координаторов (0-100%)</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:19</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a4c9e8280e64229c8daa3b24c44109b14"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14">Capital::fact_pool::total_generation_pool</a></div><div class="ttdeci">eosio::asset total_generation_pool</div><div class="ttdoc">Общая фактическая сумма генерации</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:46</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a6a86109d41845abf0411c762c161be04"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a6a86109d41845abf0411c762c161be04">Capital::fact_pool::authors_base_pool</a></div><div class="ttdeci">eosio::asset authors_base_pool</div><div class="ttdoc">Фактическая авторская себестоимость</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:24</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a6d804125b9b1c50debe6b719228b37ad"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a6d804125b9b1c50debe6b719228b37ad">Capital::fact_pool::invest_pool</a></div><div class="ttdeci">eosio::asset invest_pool</div><div class="ttdoc">Фактические инвестиции от инвесторов (после вычета расходов)</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:39</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a70ef946f938f0beedc28949b9fe8f5e8"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a70ef946f938f0beedc28949b9fe8f5e8">Capital::fact_pool::target_expense_pool</a></div><div class="ttdeci">eosio::asset target_expense_pool</div><div class="ttdoc">Целевой размер расходов (копируется из плана)</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:34</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a743546cd7fc4e10c4b9e1ed9fc3752dd"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a743546cd7fc4e10c4b9e1ed9fc3752dd">Capital::fact_pool::coordinators_investment_pool</a></div><div class="ttdeci">eosio::asset coordinators_investment_pool</div><div class="ttdoc">Фактические инвестиции, привлеченные координаторами</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:40</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a869c05867e4cca30daa9c9684dd01028"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a869c05867e4cca30daa9c9684dd01028">Capital::fact_pool::property_base_pool</a></div><div class="ttdeci">eosio::asset property_base_pool</div><div class="ttdoc">Фактическая стоимость внесенного имущества</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:26</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_a8d372a36946ffa88d167f351cd695e92"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a8d372a36946ffa88d167f351cd695e92">Capital::fact_pool::used_expense_pool</a></div><div class="ttdeci">eosio::asset used_expense_pool</div><div class="ttdoc">Фактически израсходованные средства</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:36</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_aa83ca43bc9c9559ea85bab54057f2af3"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aa83ca43bc9c9559ea85bab54057f2af3">Capital::fact_pool::program_invest_pool</a></div><div class="ttdeci">eosio::asset program_invest_pool</div><div class="ttdoc">Фактические программные инвестиции, аллоцированные в проект</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:41</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ab3ebc096b2b0f1a2fbb4453901eb2ac5"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ab3ebc096b2b0f1a2fbb4453901eb2ac5">Capital::fact_pool::coordinators_base_pool</a></div><div class="ttdeci">eosio::asset coordinators_base_pool</div><div class="ttdoc">Фактические премии координаторов</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:25</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_aba457f704207bb1798a50a2605d946ab"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aba457f704207bb1798a50a2605d946ab">Capital::fact_pool::total_contribution</a></div><div class="ttdeci">eosio::asset total_contribution</div><div class="ttdoc">Общая сумма вкладов всех пайщиков</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:49</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_abb97d7536b4d57deceae715263327b0e"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#abb97d7536b4d57deceae715263327b0e">Capital::fact_pool::creators_bonus_pool</a></div><div class="ttdeci">eosio::asset creators_bonus_pool</div><div class="ttdoc">Фактические премии создателей</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:29</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ad5b56f96f72e185c0bb8d1bd40c7b20b"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ad5b56f96f72e185c0bb8d1bd40c7b20b">Capital::fact_pool::creators_base_pool</a></div><div class="ttdeci">eosio::asset creators_base_pool</div><div class="ttdoc">Фактическая себестоимость создателей</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:23</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ada8139380d000225ee36b6bbb7744751"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ada8139380d000225ee36b6bbb7744751">Capital::fact_pool::accumulated_expense_pool</a></div><div class="ttdeci">eosio::asset accumulated_expense_pool</div><div class="ttdoc">Фактически накопленные средства для расходов</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:35</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae08efd9251dfa0626be30319134d40ca"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae08efd9251dfa0626be30319134d40ca">Capital::fact_pool::authors_bonus_pool</a></div><div class="ttdeci">eosio::asset authors_bonus_pool</div><div class="ttdoc">Фактические премии авторов</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:30</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae6461a476b71b18b316050d6ba0f2835"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae6461a476b71b18b316050d6ba0f2835">Capital::fact_pool::contributors_bonus_pool</a></div><div class="ttdeci">eosio::asset contributors_bonus_pool</div><div class="ttdoc">Фактические премии вкладчиков</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:31</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae7df74a6099ebacbbda86bef98e3931e"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae7df74a6099ebacbbda86bef98e3931e">Capital::fact_pool::creators_hours</a></div><div class="ttdeci">uint64_t creators_hours</div><div class="ttdoc">Фактическое время в часах</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:16</div></div>
-<div class="ttc" id="astruct_capital_1_1fact__pool_html_aeb766b08ce97c1b10e0d244868330ff2"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aeb766b08ce97c1b10e0d244868330ff2">Capital::fact_pool::use_invest_percent</a></div><div class="ttdeci">double use_invest_percent</div><div class="ttdoc">Коэффициент используемых инвестиций для инвесторов (0-100%)</div><div class="ttdef"><b>Definition</b> fact_pool.hpp:20</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a5c15ddd21a87c0b286a24580936dc4b7"><div class="ttname"><a href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_govern_symbol</div><div class="ttdef"><b>Definition:</b> consts.hpp:209</div></div>
+<div class="ttc" id="anamespace_capital_html"><div class="ttname"><a href="namespace_capital.html">Capital</a></div><div class="ttdef"><b>Definition:</b> balances.cpp:6</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html"><div class="ttname"><a href="struct_capital_1_1fact__pool.html">Capital::fact_pool</a></div><div class="ttdoc">Структура фактических показателей проекта</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:13</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a0caf690e778a7e5c61fd5b177151b79b"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b">Capital::fact_pool::total_returned_investments</a></div><div class="ttdeci">eosio::asset total_returned_investments</div><div class="ttdoc">Общая сумма возвращенных неиспользованных инвестиций</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:43</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a0da4563f2e52083033ef4cdce38ec759"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a0da4563f2e52083033ef4cdce38ec759">Capital::fact_pool::total_received_investments</a></div><div class="ttdeci">eosio::asset total_received_investments</div><div class="ttdoc">Общая сумма всех полученных инвестиций (до распределения)</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:42</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a2cefe1e0cceadca53745325702c93418"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">Capital::fact_pool::total</a></div><div class="ttdeci">eosio::asset total</div><div class="ttdoc">Общая фактическая сумма генерации с вкладчиками</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:52</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a30af7a721ef888ddbdcaf48eaa9698ab"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab">Capital::fact_pool::hour_cost</a></div><div class="ttdeci">eosio::asset hour_cost</div><div class="ttdoc">Фактическая стоимость часа</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:15</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a33084b70495d541a32993a4e30bfde3f"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a33084b70495d541a32993a4e30bfde3f">Capital::fact_pool::return_base_percent</a></div><div class="ttdeci">double return_base_percent</div><div class="ttdoc">Коэффициент возврата себестоимости для создателей/авторов/координаторов (0-100%)</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:19</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a4c9e8280e64229c8daa3b24c44109b14"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14">Capital::fact_pool::total_generation_pool</a></div><div class="ttdeci">eosio::asset total_generation_pool</div><div class="ttdoc">Общая фактическая сумма генерации</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:46</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a6a86109d41845abf0411c762c161be04"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a6a86109d41845abf0411c762c161be04">Capital::fact_pool::authors_base_pool</a></div><div class="ttdeci">eosio::asset authors_base_pool</div><div class="ttdoc">Фактическая авторская себестоимость</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:24</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a6d804125b9b1c50debe6b719228b37ad"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a6d804125b9b1c50debe6b719228b37ad">Capital::fact_pool::invest_pool</a></div><div class="ttdeci">eosio::asset invest_pool</div><div class="ttdoc">Фактические инвестиции от инвесторов (после вычета расходов)</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:39</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a70ef946f938f0beedc28949b9fe8f5e8"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a70ef946f938f0beedc28949b9fe8f5e8">Capital::fact_pool::target_expense_pool</a></div><div class="ttdeci">eosio::asset target_expense_pool</div><div class="ttdoc">Целевой размер расходов (копируется из плана)</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:34</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a743546cd7fc4e10c4b9e1ed9fc3752dd"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a743546cd7fc4e10c4b9e1ed9fc3752dd">Capital::fact_pool::coordinators_investment_pool</a></div><div class="ttdeci">eosio::asset coordinators_investment_pool</div><div class="ttdoc">Фактические инвестиции, привлеченные координаторами</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:40</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a869c05867e4cca30daa9c9684dd01028"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a869c05867e4cca30daa9c9684dd01028">Capital::fact_pool::property_base_pool</a></div><div class="ttdeci">eosio::asset property_base_pool</div><div class="ttdoc">Фактическая стоимость внесенного имущества</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:26</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_a8d372a36946ffa88d167f351cd695e92"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#a8d372a36946ffa88d167f351cd695e92">Capital::fact_pool::used_expense_pool</a></div><div class="ttdeci">eosio::asset used_expense_pool</div><div class="ttdoc">Фактически израсходованные средства</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:36</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_aa83ca43bc9c9559ea85bab54057f2af3"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aa83ca43bc9c9559ea85bab54057f2af3">Capital::fact_pool::program_invest_pool</a></div><div class="ttdeci">eosio::asset program_invest_pool</div><div class="ttdoc">Фактические программные инвестиции, аллоцированные в проект</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:41</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ab3ebc096b2b0f1a2fbb4453901eb2ac5"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ab3ebc096b2b0f1a2fbb4453901eb2ac5">Capital::fact_pool::coordinators_base_pool</a></div><div class="ttdeci">eosio::asset coordinators_base_pool</div><div class="ttdoc">Фактические премии координаторов</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:25</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_aba457f704207bb1798a50a2605d946ab"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aba457f704207bb1798a50a2605d946ab">Capital::fact_pool::total_contribution</a></div><div class="ttdeci">eosio::asset total_contribution</div><div class="ttdoc">Общая сумма вкладов всех пайщиков</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:49</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_abb97d7536b4d57deceae715263327b0e"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#abb97d7536b4d57deceae715263327b0e">Capital::fact_pool::creators_bonus_pool</a></div><div class="ttdeci">eosio::asset creators_bonus_pool</div><div class="ttdoc">Фактические премии создателей</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:29</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ad5b56f96f72e185c0bb8d1bd40c7b20b"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ad5b56f96f72e185c0bb8d1bd40c7b20b">Capital::fact_pool::creators_base_pool</a></div><div class="ttdeci">eosio::asset creators_base_pool</div><div class="ttdoc">Фактическая себестоимость создателей</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:23</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ada8139380d000225ee36b6bbb7744751"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ada8139380d000225ee36b6bbb7744751">Capital::fact_pool::accumulated_expense_pool</a></div><div class="ttdeci">eosio::asset accumulated_expense_pool</div><div class="ttdoc">Фактически накопленные средства для расходов</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:35</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae08efd9251dfa0626be30319134d40ca"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae08efd9251dfa0626be30319134d40ca">Capital::fact_pool::authors_bonus_pool</a></div><div class="ttdeci">eosio::asset authors_bonus_pool</div><div class="ttdoc">Фактические премии авторов</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:30</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae6461a476b71b18b316050d6ba0f2835"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae6461a476b71b18b316050d6ba0f2835">Capital::fact_pool::contributors_bonus_pool</a></div><div class="ttdeci">eosio::asset contributors_bonus_pool</div><div class="ttdoc">Фактические премии вкладчиков</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:31</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_ae7df74a6099ebacbbda86bef98e3931e"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#ae7df74a6099ebacbbda86bef98e3931e">Capital::fact_pool::creators_hours</a></div><div class="ttdeci">uint64_t creators_hours</div><div class="ttdoc">Фактическое время в часах</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:16</div></div>
+<div class="ttc" id="astruct_capital_1_1fact__pool_html_aeb766b08ce97c1b10e0d244868330ff2"><div class="ttname"><a href="struct_capital_1_1fact__pool.html#aeb766b08ce97c1b10e0d244868330ff2">Capital::fact_pool::use_invest_percent</a></div><div class="ttdeci">double use_invest_percent</div><div class="ttdoc">Коэффициент используемых инвестиций для инвесторов (0-100%)</div><div class="ttdef"><b>Definition:</b> fact_pool.hpp:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -236,7 +222,7 @@ $(document).ready(function(){initNavTree('fact__pool_8hpp_source.html',''); init
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="fact__pool_8hpp.html">fact_pool.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

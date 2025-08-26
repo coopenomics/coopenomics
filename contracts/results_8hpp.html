@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('results_8hpp.html',''); initResizable(
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -161,74 +154,74 @@ $(document).ready(function(){initNavTree('results_8hpp.html',''); initResizable(
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_capital" id="r_namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
+<tr class="memitem:namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_results" id="r_namespace_capital_1_1_results"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html">Capital::Results</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_results"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html">Capital::Results</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_results_1_1_status" id="r_namespace_capital_1_1_results_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html">Capital::Results::Status</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_results_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html">Capital::Results::Status</a></td></tr>
 <tr class="memdesc:namespace_capital_1_1_results_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы статусов результата <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a84bb1eacd2b64f11d904455fd1ecf1f4" id="r_a84bb1eacd2b64f11d904455fd1ecf1f4"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;results&quot;_n, <a class="el" href="struct_capital_1_1result.html">result</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1result.html">result</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1result.html#ad8c249f7c7a259a5c931c1903c62d879">result::by_username</a> &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1result.html">result</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1result.html#afc55451857421967ba04045347e37a87">result::by_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojecthash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1result.html">result</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1result.html#a5ca4836a4d4f2369e47339c586c42e4b">result::by_project_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojuser&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1result.html">result</a>, uint128_t, &amp;<a class="el" href="struct_capital_1_1result.html#a7e2ed3cc504fb620ad3c717ea7088934">result::by_project_user</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4">Capital::result_index</a></td></tr>
+<tr class="memitem:a84bb1eacd2b64f11d904455fd1ecf1f4"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;results&quot;_n, result, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; result, uint64_t, &amp;result::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; result, checksum256, &amp;result::by_hash &gt; &gt;, indexed_by&lt;&quot;byprojecthash&quot;_n, const_mem_fun&lt; result, checksum256, &amp;result::by_project_hash &gt; &gt;, indexed_by&lt;&quot;byprojuser&quot;_n, const_mem_fun&lt; result, uint128_t, &amp;result::by_project_user &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4">Capital::result_index</a></td></tr>
 <tr class="separator:a84bb1eacd2b64f11d904455fd1ecf1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a633cc9cde5a92bf42224ec8060cd7502" id="r_a633cc9cde5a92bf42224ec8060cd7502"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1result.html">result</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a633cc9cde5a92bf42224ec8060cd7502">Capital::Results::get_result</a> (eosio::name coopname, const checksum256 &amp;result_hash)</td></tr>
+<tr class="memitem:a633cc9cde5a92bf42224ec8060cd7502"><td class="memItemLeft" align="right" valign="top">std::optional&lt; result &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a633cc9cde5a92bf42224ec8060cd7502">Capital::Results::get_result</a> (eosio::name coopname, const checksum256 &amp;result_hash)</td></tr>
 <tr class="separator:a633cc9cde5a92bf42224ec8060cd7502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75951c35e5c5986cc6ef6dbd1380880e" id="r_a75951c35e5c5986cc6ef6dbd1380880e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1result.html">result</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a75951c35e5c5986cc6ef6dbd1380880e">Capital::Results::get_result_by_project_and_username</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memitem:a75951c35e5c5986cc6ef6dbd1380880e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; result &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a75951c35e5c5986cc6ef6dbd1380880e">Capital::Results::get_result_by_project_and_username</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
 <tr class="separator:a75951c35e5c5986cc6ef6dbd1380880e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2db70b39e1df47631c5ac20473dff364" id="r_a2db70b39e1df47631c5ac20473dff364"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1result.html">result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a2db70b39e1df47631c5ac20473dff364">Capital::Results::get_result_by_project_and_username_or_fail</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const char *msg)</td></tr>
+<tr class="memitem:a2db70b39e1df47631c5ac20473dff364"><td class="memItemLeft" align="right" valign="top">result&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a2db70b39e1df47631c5ac20473dff364">Capital::Results::get_result_by_project_and_username_or_fail</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const char *msg)</td></tr>
 <tr class="separator:a2db70b39e1df47631c5ac20473dff364"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf1cb0354206bf99891a5e40423f29c9" id="r_abf1cb0354206bf99891a5e40423f29c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#abf1cb0354206bf99891a5e40423f29c9">Capital::Results::create_result_for_participant</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const checksum256 &amp;result_hash, eosio::asset segment_cost, eosio::asset debt_amount, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
-<tr class="memdesc:abf1cb0354206bf99891a5e40423f29c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает результат для конкретного участника  <br /></td></tr>
+<tr class="memitem:abf1cb0354206bf99891a5e40423f29c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#abf1cb0354206bf99891a5e40423f29c9">Capital::Results::create_result_for_participant</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const checksum256 &amp;result_hash, eosio::asset segment_cost, eosio::asset debt_amount, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
+<tr class="memdesc:abf1cb0354206bf99891a5e40423f29c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает результат для конкретного участника  <a href="namespace_capital_1_1_results.html#abf1cb0354206bf99891a5e40423f29c9">Подробнее...</a><br /></td></tr>
 <tr class="separator:abf1cb0354206bf99891a5e40423f29c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a062f5fe132fa2cdd1ae6fc764890a440" id="r_a062f5fe132fa2cdd1ae6fc764890a440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a062f5fe132fa2cdd1ae6fc764890a440">Capital::Results::delete_result_and_reset_segment</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:a062f5fe132fa2cdd1ae6fc764890a440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет объект результата и возвращает статус сегмента в ready.  <br /></td></tr>
+<tr class="memitem:a062f5fe132fa2cdd1ae6fc764890a440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a062f5fe132fa2cdd1ae6fc764890a440">Capital::Results::delete_result_and_reset_segment</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memdesc:a062f5fe132fa2cdd1ae6fc764890a440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет объект результата и возвращает статус сегмента в ready.  <a href="namespace_capital_1_1_results.html#a062f5fe132fa2cdd1ae6fc764890a440">Подробнее...</a><br /></td></tr>
 <tr class="separator:a062f5fe132fa2cdd1ae6fc764890a440"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3845632dda6cdf77ec8a62fec0bcf5c3" id="r_a3845632dda6cdf77ec8a62fec0bcf5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a3845632dda6cdf77ec8a62fec0bcf5c3">Capital::Results::delete_result</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:a3845632dda6cdf77ec8a62fec0bcf5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет объект результата после успешного принятия  <br /></td></tr>
+<tr class="memitem:a3845632dda6cdf77ec8a62fec0bcf5c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a3845632dda6cdf77ec8a62fec0bcf5c3">Capital::Results::delete_result</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memdesc:a3845632dda6cdf77ec8a62fec0bcf5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет объект результата после успешного принятия  <a href="namespace_capital_1_1_results.html#a3845632dda6cdf77ec8a62fec0bcf5c3">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3845632dda6cdf77ec8a62fec0bcf5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac860a22e85d52c912d30e590fe46a011" id="r_ac860a22e85d52c912d30e590fe46a011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#ac860a22e85d52c912d30e590fe46a011">Capital::Results::update_result_status</a> (eosio::name coopname, const checksum256 &amp;result_hash, eosio::name new_status)</td></tr>
-<tr class="memdesc:ac860a22e85d52c912d30e590fe46a011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус результата  <br /></td></tr>
+<tr class="memitem:ac860a22e85d52c912d30e590fe46a011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#ac860a22e85d52c912d30e590fe46a011">Capital::Results::update_result_status</a> (eosio::name coopname, const checksum256 &amp;result_hash, eosio::name new_status)</td></tr>
+<tr class="memdesc:ac860a22e85d52c912d30e590fe46a011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус результата  <a href="namespace_capital_1_1_results.html#ac860a22e85d52c912d30e590fe46a011">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac860a22e85d52c912d30e590fe46a011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b6899e1259b447bbd820658f1f3bfd" id="r_a32b6899e1259b447bbd820658f1f3bfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a32b6899e1259b447bbd820658f1f3bfd">Capital::Results::set_result_authorization</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
-<tr class="memdesc:a32b6899e1259b447bbd820658f1f3bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает документ авторизации результата  <br /></td></tr>
+<tr class="memitem:a32b6899e1259b447bbd820658f1f3bfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a32b6899e1259b447bbd820658f1f3bfd">Capital::Results::set_result_authorization</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
+<tr class="memdesc:a32b6899e1259b447bbd820658f1f3bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает документ авторизации результата  <a href="namespace_capital_1_1_results.html#a32b6899e1259b447bbd820658f1f3bfd">Подробнее...</a><br /></td></tr>
 <tr class="separator:a32b6899e1259b447bbd820658f1f3bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4475e09d4513f65c8cbddafffe5b5872" id="r_a4475e09d4513f65c8cbddafffe5b5872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a4475e09d4513f65c8cbddafffe5b5872">Capital::Results::set_result_approved_statement</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement, eosio::name payer)</td></tr>
-<tr class="memdesc:a4475e09d4513f65c8cbddafffe5b5872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает одобренное заявление результата  <br /></td></tr>
+<tr class="memitem:a4475e09d4513f65c8cbddafffe5b5872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a4475e09d4513f65c8cbddafffe5b5872">Capital::Results::set_result_approved_statement</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement, eosio::name payer)</td></tr>
+<tr class="memdesc:a4475e09d4513f65c8cbddafffe5b5872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает одобренное заявление результата  <a href="namespace_capital_1_1_results.html#a4475e09d4513f65c8cbddafffe5b5872">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4475e09d4513f65c8cbddafffe5b5872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37c32a19995a0f5eb9bba46810867219" id="r_a37c32a19995a0f5eb9bba46810867219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a37c32a19995a0f5eb9bba46810867219">Capital::Results::set_result_act1</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
-<tr class="memdesc:a37c32a19995a0f5eb9bba46810867219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает первый акт результата  <br /></td></tr>
+<tr class="memitem:a37c32a19995a0f5eb9bba46810867219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a37c32a19995a0f5eb9bba46810867219">Capital::Results::set_result_act1</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a37c32a19995a0f5eb9bba46810867219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает первый акт результата  <a href="namespace_capital_1_1_results.html#a37c32a19995a0f5eb9bba46810867219">Подробнее...</a><br /></td></tr>
 <tr class="separator:a37c32a19995a0f5eb9bba46810867219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f77ddaca940fe08e212211cccfff92a" id="r_a3f77ddaca940fe08e212211cccfff92a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a3f77ddaca940fe08e212211cccfff92a">Capital::Results::set_result_act2</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
-<tr class="memdesc:a3f77ddaca940fe08e212211cccfff92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает второй акт результата  <br /></td></tr>
+<tr class="memitem:a3f77ddaca940fe08e212211cccfff92a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a3f77ddaca940fe08e212211cccfff92a">Capital::Results::set_result_act2</a> (eosio::name coopname, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a3f77ddaca940fe08e212211cccfff92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает второй акт результата  <a href="namespace_capital_1_1_results.html#a3f77ddaca940fe08e212211cccfff92a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3f77ddaca940fe08e212211cccfff92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c3c448d77bd71c193e68255313601e8" id="r_a8c3c448d77bd71c193e68255313601e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a8c3c448d77bd71c193e68255313601e8">Capital::Results::send_result_to_soviet</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
-<tr class="memdesc:a8c3c448d77bd71c193e68255313601e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет результат на рассмотрение в совет  <br /></td></tr>
+<tr class="memitem:a8c3c448d77bd71c193e68255313601e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results.html#a8c3c448d77bd71c193e68255313601e8">Capital::Results::send_result_to_soviet</a> (eosio::name coopname, eosio::name username, const checksum256 &amp;result_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
+<tr class="memdesc:a8c3c448d77bd71c193e68255313601e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправляет результат на рассмотрение в совет  <a href="namespace_capital_1_1_results.html#a8c3c448d77bd71c193e68255313601e8">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8c3c448d77bd71c193e68255313601e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:a2ab8ce5e5450d92eb5473cdc0d040224" id="r_a2ab8ce5e5450d92eb5473cdc0d040224"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a2ab8ce5e5450d92eb5473cdc0d040224">Capital::Results::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
-<tr class="memdesc:a2ab8ce5e5450d92eb5473cdc0d040224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявление подано  <br /></td></tr>
+<tr class="memitem:a2ab8ce5e5450d92eb5473cdc0d040224"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a2ab8ce5e5450d92eb5473cdc0d040224">Capital::Results::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
+<tr class="memdesc:a2ab8ce5e5450d92eb5473cdc0d040224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявление подано  <a href="namespace_capital_1_1_results_1_1_status.html#a2ab8ce5e5450d92eb5473cdc0d040224">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2ab8ce5e5450d92eb5473cdc0d040224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb6de1ce60bd97cee72a96290b94d61a" id="r_abb6de1ce60bd97cee72a96290b94d61a"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#abb6de1ce60bd97cee72a96290b94d61a">Capital::Results::Status::APPROVED</a> = &quot;approved&quot;_n</td></tr>
-<tr class="memdesc:abb6de1ce60bd97cee72a96290b94d61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобрено председателем  <br /></td></tr>
+<tr class="memitem:abb6de1ce60bd97cee72a96290b94d61a"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#abb6de1ce60bd97cee72a96290b94d61a">Capital::Results::Status::APPROVED</a> = &quot;approved&quot;_n</td></tr>
+<tr class="memdesc:abb6de1ce60bd97cee72a96290b94d61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобрено председателем  <a href="namespace_capital_1_1_results_1_1_status.html#abb6de1ce60bd97cee72a96290b94d61a">Подробнее...</a><br /></td></tr>
 <tr class="separator:abb6de1ce60bd97cee72a96290b94d61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aec757880450b0807b9eba4d77a8dd9" id="r_a6aec757880450b0807b9eba4d77a8dd9"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a6aec757880450b0807b9eba4d77a8dd9">Capital::Results::Status::AUTHORIZED</a> = &quot;authorized&quot;_n</td></tr>
-<tr class="memdesc:a6aec757880450b0807b9eba4d77a8dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизовано советом  <br /></td></tr>
+<tr class="memitem:a6aec757880450b0807b9eba4d77a8dd9"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a6aec757880450b0807b9eba4d77a8dd9">Capital::Results::Status::AUTHORIZED</a> = &quot;authorized&quot;_n</td></tr>
+<tr class="memdesc:a6aec757880450b0807b9eba4d77a8dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизовано советом  <a href="namespace_capital_1_1_results_1_1_status.html#a6aec757880450b0807b9eba4d77a8dd9">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6aec757880450b0807b9eba4d77a8dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea17cde0cf1774c43d7e7bb29ac191c" id="r_abea17cde0cf1774c43d7e7bb29ac191c"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#abea17cde0cf1774c43d7e7bb29ac191c">Capital::Results::Status::DECLINED</a> = &quot;declined&quot;_n</td></tr>
-<tr class="memdesc:abea17cde0cf1774c43d7e7bb29ac191c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонено советом  <br /></td></tr>
+<tr class="memitem:abea17cde0cf1774c43d7e7bb29ac191c"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#abea17cde0cf1774c43d7e7bb29ac191c">Capital::Results::Status::DECLINED</a> = &quot;declined&quot;_n</td></tr>
+<tr class="memdesc:abea17cde0cf1774c43d7e7bb29ac191c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонено советом  <a href="namespace_capital_1_1_results_1_1_status.html#abea17cde0cf1774c43d7e7bb29ac191c">Подробнее...</a><br /></td></tr>
 <tr class="separator:abea17cde0cf1774c43d7e7bb29ac191c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c1d39c327d4fa1d8f0bad2e0be24b5f" id="r_a1c1d39c327d4fa1d8f0bad2e0be24b5f"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a1c1d39c327d4fa1d8f0bad2e0be24b5f">Capital::Results::Status::ACT1</a> = &quot;act1&quot;_n</td></tr>
-<tr class="memdesc:a1c1d39c327d4fa1d8f0bad2e0be24b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первый акт подписан  <br /></td></tr>
+<tr class="memitem:a1c1d39c327d4fa1d8f0bad2e0be24b5f"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a1c1d39c327d4fa1d8f0bad2e0be24b5f">Capital::Results::Status::ACT1</a> = &quot;act1&quot;_n</td></tr>
+<tr class="memdesc:a1c1d39c327d4fa1d8f0bad2e0be24b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первый акт подписан  <a href="namespace_capital_1_1_results_1_1_status.html#a1c1d39c327d4fa1d8f0bad2e0be24b5f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1c1d39c327d4fa1d8f0bad2e0be24b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04cc0d877eeb5577e3b8cd2637146baf" id="r_a04cc0d877eeb5577e3b8cd2637146baf"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a04cc0d877eeb5577e3b8cd2637146baf">Capital::Results::Status::ACT2</a> = &quot;act2&quot;_n</td></tr>
-<tr class="memdesc:a04cc0d877eeb5577e3b8cd2637146baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Второй акт подписан  <br /></td></tr>
+<tr class="memitem:a04cc0d877eeb5577e3b8cd2637146baf"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_results_1_1_status.html#a04cc0d877eeb5577e3b8cd2637146baf">Capital::Results::Status::ACT2</a> = &quot;act2&quot;_n</td></tr>
+<tr class="memdesc:a04cc0d877eeb5577e3b8cd2637146baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Второй акт подписан  <a href="namespace_capital_1_1_results_1_1_status.html#a04cc0d877eeb5577e3b8cd2637146baf">Подробнее...</a><br /></td></tr>
 <tr class="separator:a04cc0d877eeb5577e3b8cd2637146baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -238,7 +231,7 @@ $(document).ready(function(){initNavTree('results_8hpp.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="results_8hpp.html">results.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

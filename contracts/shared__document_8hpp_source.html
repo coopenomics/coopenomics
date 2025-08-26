@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,45 +128,30 @@ $(document).ready(function(){initNavTree('shared__document_8hpp_source.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">shared_document.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="shared__document_8hpp.html">См. документацию.</a><div class="fragment"><div class="foldopen" id="foldopen00001" data-start="{" data-end="}">
-<div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespace_document.html">    1</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_document.html">Document</a> {</div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="}">
+<a href="shared__document_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespace_document.html">    1</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_document.html">Document</a> {</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e">    7</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e">validate_registry_id</a>(<a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_struct" href="structdocument.html">document</a>, uint64_t expected_registry_id) {</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    uint64_t registry_id = <a class="code hl_function" href="utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99">extract_registry_id_from_meta</a>(<a class="code hl_struct" href="structdocument.html">document</a>.<a class="code hl_variable" href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">meta</a>);</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    eosio::check(registry_id == expected_registry_id, <span class="stringliteral">&quot;Передан неверный шаблон документа&quot;</span>);</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>  }</div>
-</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_document_1_1named__document.html">   15</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="struct_document_1_1named__document.html">named_document</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_document_1_1named__document.html#a695f3c08af0b90c88d93235f2da100f7">   16</a></span>    <a class="code hl_variable" href="struct_document_1_1named__document.html#a695f3c08af0b90c88d93235f2da100f7">name</a> <a class="code hl_variable" href="struct_document_1_1named__document.html#a695f3c08af0b90c88d93235f2da100f7">name</a>;      </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_document_1_1named__document.html#ae17e83bf55254c525f0a5bb0b138bdc1">   17</a></span>    <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_document_1_1named__document.html#ae17e83bf55254c525f0a5bb0b138bdc1">document</a>;    </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  };</div>
-</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_document.html#a11a30750aad2714572a68661627f6a26">   26</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_document.html#a11a30750aad2714572a68661627f6a26">add_document</a>(std::vector&lt;named_document&gt;&amp; docs, <span class="keyword">const</span> name&amp; name, <span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a>&amp; doc) {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    docs.push_back({name, doc});</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  }</div>
-</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  </div>
-<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespace_document.html#adc75b53570b08e7eb3bd2b4dc718b4a3">   37</a></span>  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_document.html#adc75b53570b08e7eb3bd2b4dc718b4a3">find_document</a>(<span class="keyword">const</span> std::vector&lt;named_document&gt;&amp; docs, <span class="keyword">const</span> name&amp; name, <a class="code hl_struct" href="structdocument2.html">document2</a>&amp; found_doc) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; nd : docs) {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="keywordflow">if</span> (nd.name == name) {</div>
@@ -181,9 +161,7 @@ $(document).ready(function(){initNavTree('shared__document_8hpp_source.html','')
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
-</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  </div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">   53</a></span>  <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">has_document</a>(<span class="keyword">const</span> std::vector&lt;named_document&gt;&amp; docs, <span class="keyword">const</span> name&amp; name) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; nd : docs) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">if</span> (nd.name == name) {</div>
@@ -192,22 +170,20 @@ $(document).ready(function(){initNavTree('shared__document_8hpp_source.html','')
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
-</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
-</div>
-<div class="ttc" id="anamespace_document_html"><div class="ttname"><a href="namespace_document.html">Document</a></div><div class="ttdef"><b>Definition</b> shared_document.hpp:1</div></div>
-<div class="ttc" id="anamespace_document_html_a110240016fd00fc973bac7429e4a406c"><div class="ttname"><a href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">Document::has_document</a></div><div class="ttdeci">bool has_document(const std::vector&lt; named_document &gt; &amp;docs, const name &amp;name)</div><div class="ttdoc">Проверить наличие документа</div><div class="ttdef"><b>Definition</b> shared_document.hpp:53</div></div>
-<div class="ttc" id="anamespace_document_html_a11a30750aad2714572a68661627f6a26"><div class="ttname"><a href="namespace_document.html#a11a30750aad2714572a68661627f6a26">Document::add_document</a></div><div class="ttdeci">void add_document(std::vector&lt; named_document &gt; &amp;docs, const name &amp;name, const document2 &amp;doc)</div><div class="ttdoc">Добавить документ с проверкой длины имени</div><div class="ttdef"><b>Definition</b> shared_document.hpp:26</div></div>
-<div class="ttc" id="anamespace_document_html_acab14216599db1fcb9fe3c0ac764f56e"><div class="ttname"><a href="namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e">Document::validate_registry_id</a></div><div class="ttdeci">void validate_registry_id(document2 document, uint64_t expected_registry_id)</div><div class="ttdoc">Проверяет, что переданный документ соответствует ожидаемому шаблону</div><div class="ttdef"><b>Definition</b> shared_document.hpp:7</div></div>
-<div class="ttc" id="anamespace_document_html_adc75b53570b08e7eb3bd2b4dc718b4a3"><div class="ttname"><a href="namespace_document.html#adc75b53570b08e7eb3bd2b4dc718b4a3">Document::find_document</a></div><div class="ttdeci">bool find_document(const std::vector&lt; named_document &gt; &amp;docs, const name &amp;name, document2 &amp;found_doc)</div><div class="ttdoc">Найти документ по имени</div><div class="ttdef"><b>Definition</b> shared_document.hpp:37</div></div>
-<div class="ttc" id="astruct_document_1_1named__document_html"><div class="ttname"><a href="struct_document_1_1named__document.html">Document::named_document</a></div><div class="ttdoc">Структура именованного документа</div><div class="ttdef"><b>Definition</b> shared_document.hpp:15</div></div>
-<div class="ttc" id="astruct_document_1_1named__document_html_a695f3c08af0b90c88d93235f2da100f7"><div class="ttname"><a href="struct_document_1_1named__document.html#a695f3c08af0b90c88d93235f2da100f7">Document::named_document::name</a></div><div class="ttdeci">name name</div><div class="ttdef"><b>Definition</b> shared_document.hpp:16</div></div>
-<div class="ttc" id="astruct_document_1_1named__document_html_ae17e83bf55254c525f0a5bb0b138bdc1"><div class="ttname"><a href="struct_document_1_1named__document.html#ae17e83bf55254c525f0a5bb0b138bdc1">Document::named_document::document</a></div><div class="ttdeci">document2 document</div><div class="ttdef"><b>Definition</b> shared_document.hpp:17</div></div>
-<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
-<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:7</div></div>
-<div class="ttc" id="astructdocument_html_ad6e940cca29c2ca96fb1f740d3f2dc90"><div class="ttname"><a href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">document::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition</b> drafts.hpp:15</div></div>
-<div class="ttc" id="autils_8hpp_html_a5319377f6457a226b9050bcc3f2c8a99"><div class="ttname"><a href="utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99">extract_registry_id_from_meta</a></div><div class="ttdeci">uint64_t extract_registry_id_from_meta(const std::string &amp;meta_json)</div><div class="ttdef"><b>Definition</b> utils.hpp:73</div></div>
+<div class="ttc" id="anamespace_document_html"><div class="ttname"><a href="namespace_document.html">Document</a></div><div class="ttdef"><b>Definition:</b> shared_document.hpp:1</div></div>
+<div class="ttc" id="anamespace_document_html_a110240016fd00fc973bac7429e4a406c"><div class="ttname"><a href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">Document::has_document</a></div><div class="ttdeci">bool has_document(const std::vector&lt; named_document &gt; &amp;docs, const name &amp;name)</div><div class="ttdoc">Проверить наличие документа</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:53</div></div>
+<div class="ttc" id="anamespace_document_html_a11a30750aad2714572a68661627f6a26"><div class="ttname"><a href="namespace_document.html#a11a30750aad2714572a68661627f6a26">Document::add_document</a></div><div class="ttdeci">void add_document(std::vector&lt; named_document &gt; &amp;docs, const name &amp;name, const document2 &amp;doc)</div><div class="ttdoc">Добавить документ с проверкой длины имени</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:26</div></div>
+<div class="ttc" id="anamespace_document_html_acab14216599db1fcb9fe3c0ac764f56e"><div class="ttname"><a href="namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e">Document::validate_registry_id</a></div><div class="ttdeci">void validate_registry_id(document2 document, uint64_t expected_registry_id)</div><div class="ttdoc">Проверяет, что переданный документ соответствует ожидаемому шаблону</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:7</div></div>
+<div class="ttc" id="anamespace_document_html_adc75b53570b08e7eb3bd2b4dc718b4a3"><div class="ttname"><a href="namespace_document.html#adc75b53570b08e7eb3bd2b4dc718b4a3">Document::find_document</a></div><div class="ttdeci">bool find_document(const std::vector&lt; named_document &gt; &amp;docs, const name &amp;name, document2 &amp;found_doc)</div><div class="ttdoc">Найти документ по имени</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:37</div></div>
+<div class="ttc" id="astruct_document_1_1named__document_html"><div class="ttname"><a href="struct_document_1_1named__document.html">Document::named_document</a></div><div class="ttdoc">Структура именованного документа</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:15</div></div>
+<div class="ttc" id="astruct_document_1_1named__document_html_a695f3c08af0b90c88d93235f2da100f7"><div class="ttname"><a href="struct_document_1_1named__document.html#a695f3c08af0b90c88d93235f2da100f7">Document::named_document::name</a></div><div class="ttdeci">name name</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:16</div></div>
+<div class="ttc" id="astruct_document_1_1named__document_html_ae17e83bf55254c525f0a5bb0b138bdc1"><div class="ttname"><a href="struct_document_1_1named__document.html#ae17e83bf55254c525f0a5bb0b138bdc1">Document::named_document::document</a></div><div class="ttdeci">document2 document</div><div class="ttdef"><b>Definition:</b> shared_document.hpp:17</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
+<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
+<div class="ttc" id="astructdocument_html_ad6e940cca29c2ca96fb1f740d3f2dc90"><div class="ttname"><a href="structdocument.html#ad6e940cca29c2ca96fb1f740d3f2dc90">document::meta</a></div><div class="ttdeci">std::string meta</div><div class="ttdef"><b>Definition:</b> drafts.hpp:15</div></div>
+<div class="ttc" id="autils_8hpp_html_a5319377f6457a226b9050bcc3f2c8a99"><div class="ttname"><a href="utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99">extract_registry_id_from_meta</a></div><div class="ttdeci">uint64_t extract_registry_id_from_meta(const std::string &amp;meta_json)</div><div class="ttdef"><b>Definition:</b> utils.hpp:73</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -215,7 +191,7 @@ $(document).ready(function(){initNavTree('shared__document_8hpp_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__document_8hpp.html">shared_document.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

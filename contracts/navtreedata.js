@@ -59,6 +59,7 @@ var NAVTREE =
       ] ],
       [ "Технологический стек", "index.html#autotoc_md375", null ]
     ] ],
+    [ "Группы", "modules.html", "modules" ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],
@@ -98,22 +99,27 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "accept_8cpp.html",
-"classeosio_1_1token.html",
-"classeosio__system_1_1eosio__system__tester.html#ad6573013c72ff4f563acf10eea34600a",
-"classeosiosystem_1_1system__contract.html#a405cf7f71120642d5d043fa4648be9b1",
-"consts_8hpp.html#aaaec43ca6b154688f53c660c7519590c",
-"dir_54b98929349bb3935cf90acff2cd99f9.html",
-"eosio_8powerup__tests_8cpp.html#a530d2c9bc2c763953817fd683520a598",
-"functions_v.html",
-"memo_8hpp.html#a4c0cb1023c690bf66497f0c79fd3e1f8",
-"namespace_capital_1_1_projects_1_1_status.html#a65b4c620fe5589e02828da8cad85b429",
-"namespacemembers_func.html",
-"results_8hpp.html#a4475e09d4513f65c8cbddafffe5b5872",
-"sndagreement_8cpp.html",
-"struct_marketplace_1_1request.html#a646ed253fe5ec3dd53aabbc6ada33752",
-"structbalances__base.html#a242d9cbeea53e487eff7eb9349327931",
-"structeosiosystem_1_1block__header.html",
-"structtest_1_1testrecord.html#ae9a3db43401a77d0cbd7cb4e937785ba"
+"classeosio_1_1token.html#af0ca80206f8f0131147b0bec367c62d3",
+"classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35a334c4a4c42fdb79d7ebc3e73b517e6f8",
+"classeosiosystem_1_1system__contract.html#a5ef59ea3e3db4bb9bbe075531109d687",
+"consts_8hpp.html#af042516f92d25052ae67d9224b34bea6",
+"dir_a70bb9289170a5d682647121786a0ed4.html",
+"eosio_8system__tester_8hpp.html#a1c048c3ca2828ed3dae2d2d968decf0b",
+"generation_8hpp.html#a349d9e3b1bffd65ce1a2643151db88eb",
+"group__public__loan__actions.html#gac4f37de708f710a03b3f462b0f6ecdc2",
+"lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b",
+"namespace_capital_1_1_program_properties.html#a00170a677e1015c704742e66326a19e9",
+"namespace_names_1_1_soviet_actions.html",
+"rammarket_8hpp.html#a44b4ba2cc0f25ec73138308d16cb792f",
+"shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5",
+"struct_capital_1_1crps__data.html",
+"struct_capital_1_1result.html#abb8e2359df7521bdcea044d98800efce",
+"struct_marketplace_1_1request.html#aed0730cf208feb8fa677b1147de7d79e",
+"structaddress__data.html#a300a50871b53a9d6d1b7e436659397b8",
+"structdebt.html#a792b45eeaa4e2f094427ae3117f473c2",
+"structeosiosystem_1_1delegated__bandwidth.html#a62526659e054a4e788ecfd334056dfdf",
+"structmeet__point.html#a098bd044a19d292ca36837cb53f5cc92",
+"utils_8hpp.html#a5dc7f20f695363268de62e5415a51946"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

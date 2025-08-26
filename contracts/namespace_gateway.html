@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -161,37 +154,37 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:ae81fcd7a7ad80534b2cc00653bbec0b9" id="r_ae81fcd7a7ad80534b2cc00653bbec0b9"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;incomes&quot;_n, <a class="el" href="struct_gateway_1_1income.html">income</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, checksum256, &amp;<a class="el" href="struct_gateway_1_1income.html#a5521dc378222edc99d597843883f026c">income::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1income.html#a525350dabfda2d48ef6b3087296878e4">income::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1income.html#a6796a6789932f6538a476e190e724f56">income::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#ae81fcd7a7ad80534b2cc00653bbec0b9">incomes_index</a></td></tr>
+<tr class="memitem:ae81fcd7a7ad80534b2cc00653bbec0b9"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;incomes&quot;_n, <a class="el" href="struct_gateway_1_1income.html">income</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, checksum256, &amp;<a class="el" href="struct_gateway_1_1income.html#a5521dc378222edc99d597843883f026c">income::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1income.html#a525350dabfda2d48ef6b3087296878e4">income::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1income.html">income</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1income.html#a6796a6789932f6538a476e190e724f56">income::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#ae81fcd7a7ad80534b2cc00653bbec0b9">incomes_index</a></td></tr>
 <tr class="separator:ae81fcd7a7ad80534b2cc00653bbec0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae591a6d30b0b35dd77bcb2ff9db81824" id="r_ae591a6d30b0b35dd77bcb2ff9db81824"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;outcomes&quot;_n, <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, checksum256, &amp;<a class="el" href="struct_gateway_1_1outcome.html#afcde77ed20d9e380a7ceb9857507a51e">outcome::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1outcome.html#afa755624db6b4f2b8e1dda764cc49da8">outcome::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1outcome.html#af3d27af8c5540e68b8493ec1151c72a2">outcome::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#ae591a6d30b0b35dd77bcb2ff9db81824">outcomes_index</a></td></tr>
+<tr class="memitem:ae591a6d30b0b35dd77bcb2ff9db81824"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;outcomes&quot;_n, <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, checksum256, &amp;<a class="el" href="struct_gateway_1_1outcome.html#afcde77ed20d9e380a7ceb9857507a51e">outcome::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1outcome.html#afa755624db6b4f2b8e1dda764cc49da8">outcome::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a>, uint64_t, &amp;<a class="el" href="struct_gateway_1_1outcome.html#af3d27af8c5540e68b8493ec1151c72a2">outcome::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#ae591a6d30b0b35dd77bcb2ff9db81824">outcomes_index</a></td></tr>
 <tr class="separator:ae591a6d30b0b35dd77bcb2ff9db81824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a7acc8b2bc711b313ca82d432cd9e84aa" id="r_a7acc8b2bc711b313ca82d432cd9e84aa"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a7acc8b2bc711b313ca82d432cd9e84aa">get_valid_income_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>)</td></tr>
+<tr class="memitem:a7acc8b2bc711b313ca82d432cd9e84aa"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a7acc8b2bc711b313ca82d432cd9e84aa">get_valid_income_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
 <tr class="separator:a7acc8b2bc711b313ca82d432cd9e84aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29393787b1a856bf099856d74d2ee18e" id="r_a29393787b1a856bf099856d74d2ee18e"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a29393787b1a856bf099856d74d2ee18e">get_valid_outcome_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>)</td></tr>
+<tr class="memitem:a29393787b1a856bf099856d74d2ee18e"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a29393787b1a856bf099856d74d2ee18e">get_valid_outcome_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
 <tr class="separator:a29393787b1a856bf099856d74d2ee18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89bb33c209f9597d3314921cc917d315" id="r_a89bb33c209f9597d3314921cc917d315"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1income.html">income</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">get_income</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:a89bb33c209f9597d3314921cc917d315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает возврат из кошелька по хэшу.  <br /></td></tr>
+<tr class="memitem:a89bb33c209f9597d3314921cc917d315"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1income.html">income</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">get_income</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a89bb33c209f9597d3314921cc917d315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает возврат из кошелька по хэшу.  <a href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">Подробнее...</a><br /></td></tr>
 <tr class="separator:a89bb33c209f9597d3314921cc917d315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f70c3eb62afe31d8b7644551a8df3b" id="r_a47f70c3eb62afe31d8b7644551a8df3b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a47f70c3eb62afe31d8b7644551a8df3b">get_outcome</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memitem:a47f70c3eb62afe31d8b7644551a8df3b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a47f70c3eb62afe31d8b7644551a8df3b">get_outcome</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="separator:a47f70c3eb62afe31d8b7644551a8df3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9bf607ccf012b2e29dc34b26210255" id="r_a1c9bf607ccf012b2e29dc34b26210255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a1c9bf607ccf012b2e29dc34b26210255">create_outcome</a> (name calling_contract, <a class="el" href="shared__gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>)</td></tr>
+<tr class="memitem:a1c9bf607ccf012b2e29dc34b26210255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a1c9bf607ccf012b2e29dc34b26210255">create_outcome</a> (name calling_contract, <a class="el" href="shared__gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>)</td></tr>
 <tr class="separator:a1c9bf607ccf012b2e29dc34b26210255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:ga5557e17c9b2fe878823af5c5d343261a" id="r_ga5557e17c9b2fe878823af5c5d343261a"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">gateway_income_actions</a></td></tr>
-<tr class="memdesc:ga5557e17c9b2fe878823af5c5d343261a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для входящих платежей  <br /></td></tr>
+<tr class="memitem:ga5557e17c9b2fe878823af5c5d343261a"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">gateway_income_actions</a></td></tr>
+<tr class="memdesc:ga5557e17c9b2fe878823af5c5d343261a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для входящих платежей  <a href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga5557e17c9b2fe878823af5c5d343261a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5677d45e7c58841918273a527b7be9ce" id="r_ga5677d45e7c58841918273a527b7be9ce"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">gateway_outcome_actions</a></td></tr>
-<tr class="memdesc:ga5677d45e7c58841918273a527b7be9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для исходящих платежей  <br /></td></tr>
+<tr class="memitem:ga5677d45e7c58841918273a527b7be9ce"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">gateway_outcome_actions</a></td></tr>
+<tr class="memdesc:ga5677d45e7c58841918273a527b7be9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для исходящих платежей  <a href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga5677d45e7c58841918273a527b7be9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="ae81fcd7a7ad80534b2cc00653bbec0b9" name="ae81fcd7a7ad80534b2cc00653bbec0b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae81fcd7a7ad80534b2cc00653bbec0b9">&#9670;&#160;</a></span>incomes_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae81fcd7a7ad80534b2cc00653bbec0b9">&#9670;&nbsp;</a></span>incomes_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,12 +194,12 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Мультииндекс для доступа и манипуляции данными таблицы <code>incomes</code> </p>
+<p >Мультииндекс для доступа и манипуляции данными таблицы <code>incomes</code> </p>
 
 </div>
 </div>
 <a id="ae591a6d30b0b35dd77bcb2ff9db81824" name="ae591a6d30b0b35dd77bcb2ff9db81824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae591a6d30b0b35dd77bcb2ff9db81824">&#9670;&#160;</a></span>outcomes_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae591a6d30b0b35dd77bcb2ff9db81824">&#9670;&nbsp;</a></span>outcomes_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,13 +209,13 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Мультииндекс для доступа и манипуляции данными таблицы <code>outcome</code> </p>
+<p >Мультииндекс для доступа и манипуляции данными таблицы <code>outcome</code> </p>
 
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a1c9bf607ccf012b2e29dc34b26210255" name="a1c9bf607ccf012b2e29dc34b26210255"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c9bf607ccf012b2e29dc34b26210255">&#9670;&#160;</a></span>create_outcome()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9bf607ccf012b2e29dc34b26210255">&#9670;&nbsp;</a></span>create_outcome()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +251,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </div>
 </div>
 <a id="a89bb33c209f9597d3314921cc917d315" name="a89bb33c209f9597d3314921cc917d315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89bb33c209f9597d3314921cc917d315">&#9670;&#160;</a></span>get_income()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a89bb33c209f9597d3314921cc917d315">&#9670;&nbsp;</a></span>get_income()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,7 +297,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </div>
 </div>
 <a id="a47f70c3eb62afe31d8b7644551a8df3b" name="a47f70c3eb62afe31d8b7644551a8df3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47f70c3eb62afe31d8b7644551a8df3b">&#9670;&#160;</a></span>get_outcome()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f70c3eb62afe31d8b7644551a8df3b">&#9670;&nbsp;</a></span>get_outcome()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +333,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </div>
 </div>
 <a id="a7acc8b2bc711b313ca82d432cd9e84aa" name="a7acc8b2bc711b313ca82d432cd9e84aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7acc8b2bc711b313ca82d432cd9e84aa">&#9670;&#160;</a></span>get_valid_income_action()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acc8b2bc711b313ca82d432cd9e84aa">&#9670;&nbsp;</a></span>get_valid_income_action()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -366,7 +359,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </div>
 </div>
 <a id="a29393787b1a856bf099856d74d2ee18e" name="a29393787b1a856bf099856d74d2ee18e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29393787b1a856bf099856d74d2ee18e">&#9670;&#160;</a></span>get_valid_outcome_action()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29393787b1a856bf099856d74d2ee18e">&#9670;&nbsp;</a></span>get_valid_outcome_action()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +391,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_gateway.html">Gateway</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

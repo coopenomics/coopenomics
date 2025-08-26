@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -179,34 +172,34 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a78302821fd10bd5b552f1c9cf16d57f7" id="r_a78302821fd10bd5b552f1c9cf16d57f7"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;boards&quot;_n, <a class="el" href="structboards.html">boards</a>, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structboards.html">boards</a>, uint64_t, &amp;<a class="el" href="structboards.html#a62601ce5131f1d2be8f17c3df5866f38">boards::by_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a78302821fd10bd5b552f1c9cf16d57f7">boards_index</a></td></tr>
+<tr class="memitem:a78302821fd10bd5b552f1c9cf16d57f7"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;boards&quot;_n, <a class="el" href="structboards.html">boards</a>, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structboards.html">boards</a>, uint64_t, &amp;<a class="el" href="structboards.html#a62601ce5131f1d2be8f17c3df5866f38">boards::by_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a78302821fd10bd5b552f1c9cf16d57f7">boards_index</a></td></tr>
 <tr class="separator:a78302821fd10bd5b552f1c9cf16d57f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04b2c83df71b9adc976ae65b894f4b3d" id="r_a04b2c83df71b9adc976ae65b894f4b3d"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;staff&quot;_n, <a class="el" href="structstaff.html">staff</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d">staff_index</a></td></tr>
-<tr class="memdesc:a04b2c83df71b9adc976ae65b894f4b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип мультииндекса для таблицы администраторов  <br /></td></tr>
+<tr class="memitem:a04b2c83df71b9adc976ae65b894f4b3d"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;staff&quot;_n, <a class="el" href="structstaff.html">staff</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d">staff_index</a></td></tr>
+<tr class="memdesc:a04b2c83df71b9adc976ae65b894f4b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип мультииндекса для таблицы администраторов  <a href="coops_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a04b2c83df71b9adc976ae65b894f4b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dfce87901c722d59acf731e0141a8c0" id="r_a6dfce87901c722d59acf731e0141a8c0"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;participants&quot;_n, <a class="el" href="structparticipant.html">participant</a>, eosio::indexed_by&lt;&quot;bylastpay&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#a10f27e0747dd58289afc982af0a2104a">participant::bylastpay</a> &gt; &gt;, eosio::indexed_by&lt;&quot;createdat&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#ae99592d91313f341e9fc51f7479aee0f">participant::by_created_at</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bybranch&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#a20f3461b5fe0e29fb80f7dc0c69f78f3">participant::by_braname</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a6dfce87901c722d59acf731e0141a8c0">participants_index</a></td></tr>
+<tr class="memitem:a6dfce87901c722d59acf731e0141a8c0"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;participants&quot;_n, <a class="el" href="structparticipant.html">participant</a>, eosio::indexed_by&lt;&quot;bylastpay&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#a10f27e0747dd58289afc982af0a2104a">participant::bylastpay</a> &gt; &gt;, eosio::indexed_by&lt;&quot;createdat&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#ae99592d91313f341e9fc51f7479aee0f">participant::by_created_at</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bybranch&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structparticipant.html">participant</a>, uint64_t, &amp;<a class="el" href="structparticipant.html#a20f3461b5fe0e29fb80f7dc0c69f78f3">participant::by_braname</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a6dfce87901c722d59acf731e0141a8c0">participants_index</a></td></tr>
 <tr class="separator:a6dfce87901c722d59acf731e0141a8c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade6d5164cce5c82fdb56b0ea35df27e3" id="r_ade6d5164cce5c82fdb56b0ea35df27e3"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;decisions&quot;_n, <a class="el" href="structdecision.html">decision</a>, eosio::indexed_by&lt;&quot;bysecondary&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a126af74e59573ce0c121023853d36696">decision::by_secondary</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a76e524deedb113f8ad6d7cc4b36b18ef">decision::bytype</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byapproved&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#abcfb5f848cc506e27149a600a725adf8">decision::byapproved</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byvalidated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#aba735935551cd0d7eae6c5844d43b600">decision::byvalidated</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byauthorized&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a25b3bc216e6e25da0fc58b1554edfbac">decision::byauthorized</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, checksum256, &amp;<a class="el" href="structdecision.html#aafadb2f9fa73cafd1fa465eaa0129a1a">decision::byhash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#ade6d5164cce5c82fdb56b0ea35df27e3">decisions_index</a></td></tr>
+<tr class="memitem:ade6d5164cce5c82fdb56b0ea35df27e3"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;decisions&quot;_n, <a class="el" href="structdecision.html">decision</a>, eosio::indexed_by&lt;&quot;bysecondary&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a126af74e59573ce0c121023853d36696">decision::by_secondary</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a76e524deedb113f8ad6d7cc4b36b18ef">decision::bytype</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byapproved&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#abcfb5f848cc506e27149a600a725adf8">decision::byapproved</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byvalidated&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#aba735935551cd0d7eae6c5844d43b600">decision::byvalidated</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byauthorized&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, uint64_t, &amp;<a class="el" href="structdecision.html#a25b3bc216e6e25da0fc58b1554edfbac">decision::byauthorized</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structdecision.html">decision</a>, checksum256, &amp;<a class="el" href="structdecision.html#aafadb2f9fa73cafd1fa465eaa0129a1a">decision::byhash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#ade6d5164cce5c82fdb56b0ea35df27e3">decisions_index</a></td></tr>
 <tr class="separator:ade6d5164cce5c82fdb56b0ea35df27e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c81b62c4039360ceb1e61d409b58bff" id="r_a6c81b62c4039360ceb1e61d409b58bff"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;addresses&quot;_n, <a class="el" href="structaddress.html">address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a6c81b62c4039360ceb1e61d409b58bff">addresses_index</a></td></tr>
+<tr class="memitem:a6c81b62c4039360ceb1e61d409b58bff"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;addresses&quot;_n, <a class="el" href="structaddress.html">address</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a6c81b62c4039360ceb1e61d409b58bff">addresses_index</a></td></tr>
 <tr class="separator:a6c81b62c4039360ceb1e61d409b58bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a3541ce0c65865661aeb7230f280abf3f" id="r_a3541ce0c65865661aeb7230f280abf3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a3541ce0c65865661aeb7230f280abf3f">get_board_by_id</a> (eosio::name coopname, uint64_t board_id)</td></tr>
+<tr class="memitem:a3541ce0c65865661aeb7230f280abf3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a3541ce0c65865661aeb7230f280abf3f">get_board_by_id</a> (eosio::name coopname, uint64_t board_id)</td></tr>
 <tr class="separator:a3541ce0c65865661aeb7230f280abf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5975688eadd5a074161c268985282581" id="r_a5975688eadd5a074161c268985282581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a5975688eadd5a074161c268985282581">get_board_by_type_or_fail</a> (eosio::name coopname, eosio::name type)</td></tr>
+<tr class="memitem:a5975688eadd5a074161c268985282581"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structboards.html">boards</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a5975688eadd5a074161c268985282581">get_board_by_type_or_fail</a> (eosio::name coopname, eosio::name type)</td></tr>
 <tr class="separator:a5975688eadd5a074161c268985282581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7071d280b47702321a02ac12afe8f74b" id="r_a7071d280b47702321a02ac12afe8f74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a7071d280b47702321a02ac12afe8f74b">check_for_exist_board_by_type</a> (eosio::name coopname, eosio::name type)</td></tr>
+<tr class="memitem:a7071d280b47702321a02ac12afe8f74b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a7071d280b47702321a02ac12afe8f74b">check_for_exist_board_by_type</a> (eosio::name coopname, eosio::name type)</td></tr>
 <tr class="separator:a7071d280b47702321a02ac12afe8f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e11846bc1e7b947af3af2d5363a524" id="r_a81e11846bc1e7b947af3af2d5363a524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a81e11846bc1e7b947af3af2d5363a524">is_valid_participant</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memitem:a81e11846bc1e7b947af3af2d5363a524"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a81e11846bc1e7b947af3af2d5363a524">is_valid_participant</a> (eosio::name coopname, eosio::name username)</td></tr>
 <tr class="separator:a81e11846bc1e7b947af3af2d5363a524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f674661ddff60e573e83fa952d16dd" id="r_a32f674661ddff60e573e83fa952d16dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparticipant.html">participant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd">get_participant_or_fail</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memitem:a32f674661ddff60e573e83fa952d16dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structparticipant.html">participant</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd">get_participant_or_fail</a> (eosio::name coopname, eosio::name username)</td></tr>
 <tr class="separator:a32f674661ddff60e573e83fa952d16dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a6c81b62c4039360ceb1e61d409b58bff" name="a6c81b62c4039360ceb1e61d409b58bff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c81b62c4039360ceb1e61d409b58bff">&#9670;&#160;</a></span>addresses_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c81b62c4039360ceb1e61d409b58bff">&#9670;&nbsp;</a></span>addresses_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +213,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a78302821fd10bd5b552f1c9cf16d57f7" name="a78302821fd10bd5b552f1c9cf16d57f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78302821fd10bd5b552f1c9cf16d57f7">&#9670;&#160;</a></span>boards_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a78302821fd10bd5b552f1c9cf16d57f7">&#9670;&nbsp;</a></span>boards_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +227,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="ade6d5164cce5c82fdb56b0ea35df27e3" name="ade6d5164cce5c82fdb56b0ea35df27e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade6d5164cce5c82fdb56b0ea35df27e3">&#9670;&#160;</a></span>decisions_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ade6d5164cce5c82fdb56b0ea35df27e3">&#9670;&nbsp;</a></span>decisions_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +241,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a6dfce87901c722d59acf731e0141a8c0" name="a6dfce87901c722d59acf731e0141a8c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dfce87901c722d59acf731e0141a8c0">&#9670;&#160;</a></span>participants_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfce87901c722d59acf731e0141a8c0">&#9670;&nbsp;</a></span>participants_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,7 +255,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a04b2c83df71b9adc976ae65b894f4b3d" name="a04b2c83df71b9adc976ae65b894f4b3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04b2c83df71b9adc976ae65b894f4b3d">&#9670;&#160;</a></span>staff_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b2c83df71b9adc976ae65b894f4b3d">&#9670;&nbsp;</a></span>staff_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +272,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a7071d280b47702321a02ac12afe8f74b" name="a7071d280b47702321a02ac12afe8f74b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7071d280b47702321a02ac12afe8f74b">&#9670;&#160;</a></span>check_for_exist_board_by_type()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7071d280b47702321a02ac12afe8f74b">&#9670;&nbsp;</a></span>check_for_exist_board_by_type()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +300,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a3541ce0c65865661aeb7230f280abf3f" name="a3541ce0c65865661aeb7230f280abf3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3541ce0c65865661aeb7230f280abf3f">&#9670;&#160;</a></span>get_board_by_id()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3541ce0c65865661aeb7230f280abf3f">&#9670;&nbsp;</a></span>get_board_by_id()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +328,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a5975688eadd5a074161c268985282581" name="a5975688eadd5a074161c268985282581"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5975688eadd5a074161c268985282581">&#9670;&#160;</a></span>get_board_by_type_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5975688eadd5a074161c268985282581">&#9670;&nbsp;</a></span>get_board_by_type_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +356,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a32f674661ddff60e573e83fa952d16dd" name="a32f674661ddff60e573e83fa952d16dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32f674661ddff60e573e83fa952d16dd">&#9670;&#160;</a></span>get_participant_or_fail()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f674661ddff60e573e83fa952d16dd">&#9670;&nbsp;</a></span>get_participant_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -391,7 +384,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 </div>
 </div>
 <a id="a81e11846bc1e7b947af3af2d5363a524" name="a81e11846bc1e7b947af3af2d5363a524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81e11846bc1e7b947af3af2d5363a524">&#9670;&#160;</a></span>is_valid_participant()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e11846bc1e7b947af3af2d5363a524">&#9670;&nbsp;</a></span>is_valid_participant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +418,7 @@ $(document).ready(function(){initNavTree('coops_8hpp.html',''); initResizable();
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="coops_8hpp.html">coops.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -149,29 +142,29 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:gacb9cee084979625820b6f45492f13be0" id="r_gacb9cee084979625820b6f45492f13be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#gacb9cee084979625820b6f45492f13be0">eosio::multisig::propose</a> (name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, std::vector&lt; permission_level &gt; requested, ignore&lt; transaction &gt; <a class="el" href="eosio_8msig__tests_8cpp.html#a6935d36f50fec547a188728bc39593b6">trx</a>)</td></tr>
-<tr class="memdesc:gacb9cee084979625820b6f45492f13be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает предложение транзакции. Позволяет аккаунту proposer создать предложение proposal_name с требуемыми уровнями разрешений.  <br /></td></tr>
+<tr class="memitem:gacb9cee084979625820b6f45492f13be0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#gacb9cee084979625820b6f45492f13be0">eosio::multisig::propose</a> (name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt; requested, ignore&lt; transaction &gt; <a class="el" href="eosio_8msig__tests_8cpp.html#a25b4856cb0002d35fd95904362951aab">trx</a>)</td></tr>
+<tr class="memdesc:gacb9cee084979625820b6f45492f13be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает предложение транзакции. Позволяет аккаунту proposer создать предложение proposal_name с требуемыми уровнями разрешений.  <a href="group__public__msig__actions.html#gacb9cee084979625820b6f45492f13be0">Подробнее...</a><br /></td></tr>
 <tr class="separator:gacb9cee084979625820b6f45492f13be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5cccb8b23b9fffa1b27d443fad9ce3e9" id="r_ga5cccb8b23b9fffa1b27d443fad9ce3e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga5cccb8b23b9fffa1b27d443fad9ce3e9">eosio::multisig::approve</a> (name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, permission_level level, const eosio::binary_extension&lt; eosio::checksum256 &gt; &amp;proposal_hash)</td></tr>
-<tr class="memdesc:ga5cccb8b23b9fffa1b27d443fad9ce3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет существующее предложение. Позволяет аккаунту, владельцу level разрешения, одобрить предложение proposal_name.  <br /></td></tr>
+<tr class="memitem:ga5cccb8b23b9fffa1b27d443fad9ce3e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga5cccb8b23b9fffa1b27d443fad9ce3e9">eosio::multisig::approve</a> (name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> level, const eosio::binary_extension&lt; eosio::checksum256 &gt; &amp;proposal_hash)</td></tr>
+<tr class="memdesc:ga5cccb8b23b9fffa1b27d443fad9ce3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет существующее предложение. Позволяет аккаунту, владельцу level разрешения, одобрить предложение proposal_name.  <a href="group__public__msig__actions.html#ga5cccb8b23b9fffa1b27d443fad9ce3e9">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga5cccb8b23b9fffa1b27d443fad9ce3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d6e568f96c6697728e316557a9bcf1e" id="r_ga7d6e568f96c6697728e316557a9bcf1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga7d6e568f96c6697728e316557a9bcf1e">eosio::multisig::unapprove</a> (name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, permission_level level)</td></tr>
-<tr class="memdesc:ga7d6e568f96c6697728e316557a9bcf1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отзывает одобрение существующего предложения. Позволяет аккаунту отозвать свое одобрение предложения, перемещая разрешение из provided_approvals обратно в requested_approvals.  <br /></td></tr>
+<tr class="memitem:ga7d6e568f96c6697728e316557a9bcf1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga7d6e568f96c6697728e316557a9bcf1e">eosio::multisig::unapprove</a> (name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> level)</td></tr>
+<tr class="memdesc:ga7d6e568f96c6697728e316557a9bcf1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отзывает одобрение существующего предложения. Позволяет аккаунту отозвать свое одобрение предложения, перемещая разрешение из provided_approvals обратно в requested_approvals.  <a href="group__public__msig__actions.html#ga7d6e568f96c6697728e316557a9bcf1e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga7d6e568f96c6697728e316557a9bcf1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2dc849ab961ea31c0e93ebace0f0dd00" id="r_ga2dc849ab961ea31c0e93ebace0f0dd00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga2dc849ab961ea31c0e93ebace0f0dd00">eosio::multisig::cancel</a> (name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, name canceler)</td></tr>
-<tr class="memdesc:ga2dc849ab961ea31c0e93ebace0f0dd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет существующее предложение. Позволяет аккаунту canceler отменить предложение proposal_name, созданное proposer.  <br /></td></tr>
+<tr class="memitem:ga2dc849ab961ea31c0e93ebace0f0dd00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga2dc849ab961ea31c0e93ebace0f0dd00">eosio::multisig::cancel</a> (name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, name canceler)</td></tr>
+<tr class="memdesc:ga2dc849ab961ea31c0e93ebace0f0dd00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет существующее предложение. Позволяет аккаунту canceler отменить предложение proposal_name, созданное proposer.  <a href="group__public__msig__actions.html#ga2dc849ab961ea31c0e93ebace0f0dd00">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2dc849ab961ea31c0e93ebace0f0dd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac31b3d91892bf8fcdad8d6f123c278ff" id="r_gac31b3d91892bf8fcdad8d6f123c278ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#gac31b3d91892bf8fcdad8d6f123c278ff">eosio::multisig::exec</a> (name <a class="el" href="eosio_8msig__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, name executer)</td></tr>
-<tr class="memdesc:gac31b3d91892bf8fcdad8d6f123c278ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет предложение. Позволяет аккаунту executer выполнить предложение, если все условия выполнены.  <br /></td></tr>
+<tr class="memitem:gac31b3d91892bf8fcdad8d6f123c278ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#gac31b3d91892bf8fcdad8d6f123c278ff">eosio::multisig::exec</a> (name <a class="el" href="eosio_8wrap__tests_8cpp.html#ab724f733e7563decf08c3a7b40f940db">proposer</a>, name proposal_name, name executer)</td></tr>
+<tr class="memdesc:gac31b3d91892bf8fcdad8d6f123c278ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполняет предложение. Позволяет аккаунту executer выполнить предложение, если все условия выполнены.  <a href="group__public__msig__actions.html#gac31b3d91892bf8fcdad8d6f123c278ff">Подробнее...</a><br /></td></tr>
 <tr class="separator:gac31b3d91892bf8fcdad8d6f123c278ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59e26671d5a02dd2f809b08f56b4d3b8" id="r_ga59e26671d5a02dd2f809b08f56b4d3b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga59e26671d5a02dd2f809b08f56b4d3b8">eosio::multisig::invalidate</a> (name <a class="el" href="structaccount.html">account</a>)</td></tr>
-<tr class="memdesc:ga59e26671d5a02dd2f809b08f56b4d3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инвалидирует аккаунт. Позволяет аккаунту инвалидировать себя, добавляя свое имя в таблицу инвалидаций.  <br /></td></tr>
+<tr class="memitem:ga59e26671d5a02dd2f809b08f56b4d3b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__msig__actions.html#ga59e26671d5a02dd2f809b08f56b4d3b8">eosio::multisig::invalidate</a> (name <a class="el" href="structaccount.html">account</a>)</td></tr>
+<tr class="memdesc:ga59e26671d5a02dd2f809b08f56b4d3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инвалидирует аккаунт. Позволяет аккаунту инвалидировать себя, добавляя свое имя в таблицу инвалидаций.  <a href="group__public__msig__actions.html#ga59e26671d5a02dd2f809b08f56b4d3b8">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga59e26671d5a02dd2f809b08f56b4d3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <h2 class="groupheader">Функции</h2>
 <a id="ga5cccb8b23b9fffa1b27d443fad9ce3e9" name="ga5cccb8b23b9fffa1b27d443fad9ce3e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5cccb8b23b9fffa1b27d443fad9ce3e9">&#9670;&#160;</a></span>approve()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5cccb8b23b9fffa1b27d443fad9ce3e9">&#9670;&nbsp;</a></span>approve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +184,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">permission_level&#160;</td>
+          <td class="paramtype"><a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
@@ -209,7 +202,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Одобряет существующее предложение. Позволяет аккаунту, владельцу level разрешения, одобрить предложение proposal_name. </p>
-<p>Approve action approves an existing proposal. Allows an account, the owner of <code>level</code> permission, to approve a proposal <code>proposal_name</code> proposed by <code>proposer</code>. If the proposal's requested approval list contains the <code>level</code> permission then the <code>level</code> permission is moved from internal <code>requested_approvals</code> list to internal <code>provided_approvals</code> list of the proposal, thus persisting the approval for the <code>proposal_name</code> proposal. Storage changes are billed to <code>proposer</code>.</p>
+<p >Approve action approves an existing proposal. Allows an account, the owner of <code>level</code> permission, to approve a proposal <code>proposal_name</code> proposed by <code>proposer</code>. If the proposal's requested approval list contains the <code>level</code> permission then the <code>level</code> permission is moved from internal <code>requested_approvals</code> list to internal <code>provided_approvals</code> list of the proposal, thus persisting the approval for the <code>proposal_name</code> proposal. Storage changes are billed to <code>proposer</code>.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">proposer</td><td>- The account proposing a transaction </td></tr>
@@ -228,7 +221,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div>
 </div>
 <a id="ga2dc849ab961ea31c0e93ebace0f0dd00" name="ga2dc849ab961ea31c0e93ebace0f0dd00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2dc849ab961ea31c0e93ebace0f0dd00">&#9670;&#160;</a></span>cancel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2dc849ab961ea31c0e93ebace0f0dd00">&#9670;&nbsp;</a></span>cancel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +253,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Отменяет существующее предложение. Позволяет аккаунту canceler отменить предложение proposal_name, созданное proposer. </p>
-<p>Cancel action cancels an existing proposal.</p>
+<p >Cancel action cancels an existing proposal.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">proposer</td><td>- The account proposing a transaction </td></tr>
@@ -283,7 +276,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div>
 </div>
 <a id="gac31b3d91892bf8fcdad8d6f123c278ff" name="gac31b3d91892bf8fcdad8d6f123c278ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac31b3d91892bf8fcdad8d6f123c278ff">&#9670;&#160;</a></span>exec()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac31b3d91892bf8fcdad8d6f123c278ff">&#9670;&nbsp;</a></span>exec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -315,15 +308,15 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Выполняет предложение. Позволяет аккаунту executer выполнить предложение, если все условия выполнены. </p>
-<p>Exec action allows an <code>executer</code> account to execute a proposal.</p>
-<p>Preconditions:</p><ul>
+<p >Exec action allows an <code>executer</code> account to execute a proposal.</p>
+<p >Preconditions:</p><ul>
 <li><code>executer</code> has authorization,</li>
 <li><code>proposal_name</code> is found in the proposals table,</li>
 <li>all requested approvals are received,</li>
 <li>proposed transaction is not expired,</li>
 <li>and approval accounts are not found in invalidations table.</li>
 </ul>
-<p>If all preconditions are met the transaction is executed as a deferred transaction, and the proposal is erased from the proposals table.</p>
+<p >If all preconditions are met the transaction is executed as a deferred transaction, and the proposal is erased from the proposals table.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">proposer</td><td>- The account proposing a transaction </td></tr>
@@ -340,7 +333,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div>
 </div>
 <a id="ga59e26671d5a02dd2f809b08f56b4d3b8" name="ga59e26671d5a02dd2f809b08f56b4d3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga59e26671d5a02dd2f809b08f56b4d3b8">&#9670;&#160;</a></span>invalidate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga59e26671d5a02dd2f809b08f56b4d3b8">&#9670;&nbsp;</a></span>invalidate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +349,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Инвалидирует аккаунт. Позволяет аккаунту инвалидировать себя, добавляя свое имя в таблицу инвалидаций. </p>
-<p>Invalidate action allows an <code>account</code> to invalidate itself, that is, its name is added to the invalidations table and this table will be cross referenced when exec is performed.</p>
+<p >Invalidate action allows an <code>account</code> to invalidate itself, that is, its name is added to the invalidations table and this table will be cross referenced when exec is performed.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">account</td><td>- The account invalidating the transaction</td></tr>
@@ -369,7 +362,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div>
 </div>
 <a id="gacb9cee084979625820b6f45492f13be0" name="gacb9cee084979625820b6f45492f13be0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacb9cee084979625820b6f45492f13be0">&#9670;&#160;</a></span>propose()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb9cee084979625820b6f45492f13be0">&#9670;&nbsp;</a></span>propose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +382,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; permission_level &gt;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a> &gt;&#160;</td>
           <td class="paramname"><em>requested</em>, </td>
         </tr>
         <tr>
@@ -407,7 +400,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Создает предложение транзакции. Позволяет аккаунту proposer создать предложение proposal_name с требуемыми уровнями разрешений. </p>
-<p>Propose action, creates a proposal containing one transaction. Allows an account <code>proposer</code> to make a proposal <code>proposal_name</code> which has <code>requested</code> permission levels expected to approve the proposal, and if approved by all expected permission levels then <code>trx</code> transaction can we executed by this proposal. The <code>proposer</code> account is authorized and the <code>trx</code> transaction is verified if it was authorized by the provided keys and permissions, and if the proposal name doesn’t already exist; if all validations pass the <code>proposal_name</code> and <code>trx</code> trasanction are saved in the proposals table and the <code>requested</code> permission levels to the approvals table (for the <code>proposer</code> context). Storage changes are billed to <code>proposer</code>.</p>
+<p >Propose action, creates a proposal containing one transaction. Allows an account <code>proposer</code> to make a proposal <code>proposal_name</code> which has <code>requested</code> permission levels expected to approve the proposal, and if approved by all expected permission levels then <code>trx</code> transaction can we executed by this proposal. The <code>proposer</code> account is authorized and the <code>trx</code> transaction is verified if it was authorized by the provided keys and permissions, and if the proposal name doesn’t already exist; if all validations pass the <code>proposal_name</code> and <code>trx</code> trasanction are saved in the proposals table and the <code>requested</code> permission levels to the approvals table (for the <code>proposer</code> context). Storage changes are billed to <code>proposer</code>.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">proposer</td><td>- The account proposing a transaction </td></tr>
@@ -426,7 +419,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div>
 </div>
 <a id="ga7d6e568f96c6697728e316557a9bcf1e" name="ga7d6e568f96c6697728e316557a9bcf1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d6e568f96c6697728e316557a9bcf1e">&#9670;&#160;</a></span>unapprove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d6e568f96c6697728e316557a9bcf1e">&#9670;&nbsp;</a></span>unapprove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,7 +439,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">permission_level&#160;</td>
+          <td class="paramtype"><a class="el" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a>&#160;</td>
           <td class="paramname"><em>level</em>&#160;</td>
         </tr>
         <tr>
@@ -458,7 +451,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 </div><div class="memdoc">
 
 <p>Отзывает одобрение существующего предложения. Позволяет аккаунту отозвать свое одобрение предложения, перемещая разрешение из provided_approvals обратно в requested_approvals. </p>
-<p>Unapprove action revokes an existing proposal. This action is the reverse of the <code>approve</code> action: if all validations pass the <code>level</code> permission is erased from internal <code>provided_approvals</code> and added to the internal <code>requested_approvals</code> list, and thus un-approve or revoke the proposal.</p>
+<p >Unapprove action revokes an existing proposal. This action is the reverse of the <code>approve</code> action: if all validations pass the <code>level</code> permission is erased from internal <code>provided_approvals</code> and added to the internal <code>requested_approvals</code> list, and thus un-approve or revoke the proposal.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">proposer</td><td>- The account proposing a transaction </td></tr>
@@ -480,7 +473,7 @@ $(document).ready(function(){initNavTree('group__public__msig__actions.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

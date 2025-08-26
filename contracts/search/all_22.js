@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['генерации_0',['генерации',['../group__public__capital.html#autotoc_md313',1,'Запуск генерации'],['../group__public__capital.html#autotoc_md298',1,'1. Процесс Генерации']]],
-  ['генерации_20проекта_1',['Запуска генерации проекта',['../group__public__capital__project__start__process.html',1,'']]],
-  ['генерация_2',['Фаза 3: Активная генерация',['../group__public__capital.html#autotoc_md312',1,'']]],
-  ['голоса_3',['голоса',['../group__public__capital__submit__vote__process.html#autotoc_md288',1,'Условия для подачи голоса'],['../group__public__capital__submit__vote__process.html#autotoc_md282',1,'Шаг 1: Инициация подачи голоса']]],
-  ['голосование_4',['голосование',['../group__public__capital__voting__completion__process.html',1,'Завершить голосование'],['../group__public__capital__voting__start__process.html',1,'Открыть голосование']]],
-  ['голосование_20по_20методу_20водянова_5',['голосование по методу водянова',['../group__public__capital.html#autotoc_md318',1,'Голосование по методу Водянова'],['../group__public__capital__submit__vote__process.html',1,'Голосование по методу Водянова']]],
-  ['голосования_6',['голосования',['../group__public__capital__voting__start__process.html#autotoc_md221',1,'Параметры голосования'],['../group__public__capital__voting__start__process.html#autotoc_md222',1,'Условия для начала голосования'],['../group__public__capital__voting__completion__process.html#autotoc_md163',1,'Шаг 1: Завершение голосования'],['../group__public__capital__voting__start__process.html#autotoc_md216',1,'Шаг 1: Инициация голосования'],['../group__public__capital__calculate__votes__process.html#autotoc_md272',1,'Шаг 2: Проверка статуса проекта и завершения голосования'],['../group__public__capital__submit__vote__process.html#autotoc_md283',1,'Шаг 2: Проверка статуса проекта и срока голосования'],['../group__public__capital__submit__vote__process.html#autotoc_md284',1,'Шаг 3: Валидация вкладчика голосования'],['../group__public__capital__voting__start__process.html#autotoc_md218',1,'Шаг 3: Перевод в статус голосования']]],
-  ['голосования_20по_20методу_20водянова_7',['Шаг 4: Инициализация голосования по методу Водянова',['../group__public__capital__voting__start__process.html#autotoc_md219',1,'']]],
-  ['голосов_8',['голосов',['../group__public__capital__calculate__votes__process.html#autotoc_md271',1,'Шаг 1: Инициация подсчета голосов'],['../group__public__capital__submit__vote__process.html#autotoc_md285',1,'Шаг 4: Проверка корректности голосов'],['../group__public__capital__submit__vote__process.html#autotoc_md286',1,'Шаг 5: Сохранение голосов'],['../group__public__capital__submit__vote__process.html#autotoc_md287',1,'Шаг 6: Обновление счетчика полученных голосов']]],
-  ['голосов_20по_20методу_20водянова_9',['Подсчет голосов по методу Водянова',['../group__public__capital__calculate__votes__process.html',1,'']]],
-  ['готовности_20проекта_10',['готовности проекта',['../group__public__capital__project__start__process.html#autotoc_md208',1,'Шаг 2: Проверка готовности проекта'],['../group__public__capital__project__opening__process.html#autotoc_md178',1,'Шаг 2: Проверка готовности проекта'],['../group__public__capital__voting__start__process.html#autotoc_md217',1,'Шаг 2: Проверка готовности проекта']]]
+  ['обзор_20контракта_0',['Обзор контракта',['../group__public__capital.html',1,'']]],
+  ['обновление_20кошелька_20программы_1',['Обновление кошелька программы',['../group__public__capital__refresh__program__process.html',1,'']]],
+  ['обновления_20кошелька_20проекта_2',['Обновления кошелька проекта',['../group__public__capital__refresh__project__process.html',1,'']]],
+  ['обновления_20сегмента_20участника_3',['Обновления сегмента участника',['../group__public__capital__segment__refresh__process.html',1,'']]],
+  ['открытие_20проекта_20для_20инвестиций_4',['Открытие проекта для инвестиций',['../group__public__capital__project__opening__process.html',1,'']]],
+  ['открыть_20голосование_5',['Открыть голосование',['../group__public__capital__voting__start__process.html',1,'']]]
 ];

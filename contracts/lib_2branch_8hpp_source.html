@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -102,11 +102,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function() { init_codefold(0); });
-/* @license-end */
-</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -133,16 +128,9 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -151,18 +139,15 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="contents">
 <a href="lib_2branch_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structbranchstat.html">   11</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(BRANCH)]] <a class="code hl_struct" href="structbranchstat.html">branchstat</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structbranchstat.html#a9beb7f157a9b99f1d5b5c2ead48c5161">   12</a></span>  eosio::name <a class="code hl_variable" href="structbranchstat.html#a9beb7f157a9b99f1d5b5c2ead48c5161">coopname</a>; </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structbranchstat.html#a4f6cdc7a6bc23f4bb043f543fa129e52">   13</a></span>  uint64_t <a class="code hl_variable" href="structbranchstat.html#a4f6cdc7a6bc23f4bb043f543fa129e52">count</a>; </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structbranchstat.html#a77b7bc69b458810eb533aacb409bc0a3">   15</a></span>  uint64_t <a class="code hl_function" href="structbranchstat.html#a77b7bc69b458810eb533aacb409bc0a3">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> coopname.value; }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">   18</a></span><span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;branchstat&quot;</span>_n, <a class="code hl_struct" href="structbranchstat.html">branchstat</a>&gt; <a class="code hl_typedef" href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">branchstat_index</a>;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf">   20</a></span>uint64_t <a class="code hl_function" href="lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf">add_branch_count</a>(eosio::name coopname){</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_typedef" href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">branchstat_index</a> stat(<a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>, <a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>.value);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">auto</span> st = stat.find(coopname.value);</div>
@@ -184,9 +169,7 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">return</span> new_count;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
-</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962">   42</a></span>uint64_t <a class="code hl_function" href="lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962">sub_branch_count</a>(eosio::name coopname){</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_typedef" href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">branchstat_index</a> stat(<a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>, <a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>.value);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">auto</span> st = stat.find(coopname.value);</div>
@@ -203,10 +186,8 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> new_count;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
-</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structcoobranch.html">   68</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(BRANCH)]] <a class="code hl_struct" href="structcoobranch.html">coobranch</a> {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structcoobranch.html#afa0c5d1765e9a8952c2e1dc376a4df52">   69</a></span>  eosio::name <a class="code hl_variable" href="structcoobranch.html#afa0c5d1765e9a8952c2e1dc376a4df52">braname</a>; </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structcoobranch.html#ac8ca2c168ca4a3fdbfc53bfbc6366a23">   70</a></span>  eosio::name <a class="code hl_variable" href="structcoobranch.html#ac8ca2c168ca4a3fdbfc53bfbc6366a23">trustee</a>; </div>
@@ -214,30 +195,22 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structcoobranch.html#a939c4f76a4b9ceb2621a6855ba4f4073">   74</a></span>  uint64_t <a class="code hl_function" href="structcoobranch.html#a939c4f76a4b9ceb2621a6855ba4f4073">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> braname.value; } </div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="structcoobranch.html#a2b80ac77c7bf5bd7abd99e8c889a8986">   75</a></span>  uint64_t <a class="code hl_function" href="structcoobranch.html#a2b80ac77c7bf5bd7abd99e8c889a8986">by_trustee</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> trustee.value; } </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  </div>
-<div class="foldopen" id="foldopen00077" data-start="{" data-end="}">
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structcoobranch.html#a32707e8f1bd432b99318aa22500588cd">   77</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="structcoobranch.html#a32707e8f1bd432b99318aa22500588cd">add_account_to_trusted</a>(<span class="keyword">const</span> eosio::name&amp; <a class="code hl_struct" href="structaccount.html">account</a>) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    trusted.push_back(<a class="code hl_struct" href="structaccount.html">account</a>);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
-</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structcoobranch.html#a94e2de729fe500ce80692059e6a306f6">   81</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="structcoobranch.html#a94e2de729fe500ce80692059e6a306f6">remove_account_from_trusted</a>(<span class="keyword">const</span> eosio::name&amp; <a class="code hl_struct" href="structaccount.html">account</a>) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">auto</span> itr = std::remove(trusted.begin(), trusted.end(), <a class="code hl_struct" href="structaccount.html">account</a>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    check(itr != trusted.end(), <span class="stringliteral">&quot;Account not found in trusted list&quot;</span>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    trusted.erase(itr, trusted.end());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
-</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structcoobranch.html#aa851947ab19d6a293e6c5c82993ca3e1">   87</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="structcoobranch.html#aa851947ab19d6a293e6c5c82993ca3e1">is_account_in_trusted</a>(<span class="keyword">const</span> eosio::name&amp; <a class="code hl_struct" href="structaccount.html">account</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">return</span> std::find(trusted.begin(), trusted.end(), <a class="code hl_struct" href="structaccount.html">account</a>) != trusted.end();</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  }</div>
-</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structcoobranch.html#a95db25602834e79cb086443a8813212b">   96</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="structcoobranch.html#a95db25602834e79cb086443a8813212b">is_user_authorized</a>(<span class="keyword">const</span> eosio::name&amp; username)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// Проверяем является ли пользователь доверенным лицом (trustee)</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (trustee == username) {</div>
@@ -247,7 +220,6 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// Проверяем находится ли пользователь в списке доверенных (trusted)</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> is_account_in_trusted(username);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
-</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;branches&quot;</span>_n, <a class="code hl_struct" href="structcoobranch.html">coobranch</a>,</div>
@@ -255,7 +227,6 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b">  109</a></span>&gt; <a class="code hl_typedef" href="lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b">branch_index</a>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44">  112</a></span><a class="code hl_struct" href="structcoobranch.html">coobranch</a> <a class="code hl_function" href="lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44">get_branch_or_fail</a>(eosio::name coopname, eosio::name braname) {</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_typedef" href="lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b">branch_index</a> branches(<a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>, coopname.value);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">auto</span> <a class="code hl_class" href="classbranch.html">branch</a> = branches.find(braname.value);</div>
@@ -264,34 +235,31 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> *<a class="code hl_class" href="classbranch.html">branch</a>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>};</div>
-</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-</div>
-</div>
-<div class="ttc" id="aclassbranch_html"><div class="ttname"><a href="classbranch.html">branch</a></div><div class="ttdoc">Константы контракта кооперативных участков</div><div class="ttdef"><b>Definition</b> branch.hpp:51</div></div>
-<div class="ttc" id="aconsts_8hpp_html_ae36fefc5b4aa30cf32d3ae22b64fb348"><div class="ttname"><a href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a></div><div class="ttdeci">static constexpr eosio::name _branch</div><div class="ttdef"><b>Definition</b> consts.hpp:160</div></div>
-<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
-<div class="ttc" id="alib_2branch_8hpp_html_a16146d9a07155666111bdc8c7b8e2a58"><div class="ttname"><a href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">branchstat_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;branchstat&quot;_n, branchstat &gt; branchstat_index</div><div class="ttdef"><b>Definition</b> branch.hpp:18</div></div>
-<div class="ttc" id="alib_2branch_8hpp_html_a367a281392e1d478e40e1c86e83becaf"><div class="ttname"><a href="lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf">add_branch_count</a></div><div class="ttdeci">uint64_t add_branch_count(eosio::name coopname)</div><div class="ttdef"><b>Definition</b> branch.hpp:20</div></div>
-<div class="ttc" id="alib_2branch_8hpp_html_a6ff81a6a4e3a37181ec3f6d67aa0d42b"><div class="ttname"><a href="lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b">branch_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;branches&quot;_n, coobranch, eosio::indexed_by&lt;&quot;bytrustee&quot;_n, eosio::const_mem_fun&lt; coobranch, uint64_t, &amp;coobranch::by_trustee &gt; &gt; &gt; branch_index</div><div class="ttdef"><b>Definition</b> branch.hpp:109</div></div>
-<div class="ttc" id="alib_2branch_8hpp_html_a95889df16c361ff1b2f72d95f4019a44"><div class="ttname"><a href="lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44">get_branch_or_fail</a></div><div class="ttdeci">coobranch get_branch_or_fail(eosio::name coopname, eosio::name braname)</div><div class="ttdef"><b>Definition</b> branch.hpp:112</div></div>
-<div class="ttc" id="alib_2branch_8hpp_html_ac191cfacbeffffdd521a232b31a1b962"><div class="ttname"><a href="lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962">sub_branch_count</a></div><div class="ttdeci">uint64_t sub_branch_count(eosio::name coopname)</div><div class="ttdef"><b>Definition</b> branch.hpp:42</div></div>
-<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
-<div class="ttc" id="astructaccount_html"><div class="ttname"><a href="structaccount.html">account</a></div><div class="ttdoc">Структура, представляющая учетные записи аккаунтов.</div><div class="ttdef"><b>Definition</b> accounts.hpp:60</div></div>
-<div class="ttc" id="astructbranchstat_html"><div class="ttname"><a href="structbranchstat.html">branchstat</a></div><div class="ttdoc">Таблица статистики кооперативных участков хранит количество участков для каждого кооператива.</div><div class="ttdef"><b>Definition</b> branch.hpp:11</div></div>
-<div class="ttc" id="astructbranchstat_html_a4f6cdc7a6bc23f4bb043f543fa129e52"><div class="ttname"><a href="structbranchstat.html#a4f6cdc7a6bc23f4bb043f543fa129e52">branchstat::count</a></div><div class="ttdeci">uint64_t count</div><div class="ttdoc">Количество кооперативных участков</div><div class="ttdef"><b>Definition</b> branch.hpp:13</div></div>
-<div class="ttc" id="astructbranchstat_html_a77b7bc69b458810eb533aacb409bc0a3"><div class="ttname"><a href="structbranchstat.html#a77b7bc69b458810eb533aacb409bc0a3">branchstat::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition</b> branch.hpp:15</div></div>
-<div class="ttc" id="astructbranchstat_html_a9beb7f157a9b99f1d5b5c2ead48c5161"><div class="ttname"><a href="structbranchstat.html#a9beb7f157a9b99f1d5b5c2ead48c5161">branchstat::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> branch.hpp:12</div></div>
-<div class="ttc" id="astructcoobranch_html"><div class="ttname"><a href="structcoobranch.html">coobranch</a></div><div class="ttdoc">Таблица кооперативных участков хранит информацию о кооперативных участках и их доверенных лицах.</div><div class="ttdef"><b>Definition</b> branch.hpp:68</div></div>
-<div class="ttc" id="astructcoobranch_html_a2b80ac77c7bf5bd7abd99e8c889a8986"><div class="ttname"><a href="structcoobranch.html#a2b80ac77c7bf5bd7abd99e8c889a8986">coobranch::by_trustee</a></div><div class="ttdeci">uint64_t by_trustee() const</div><div class="ttdoc">Индекс по доверенному лицу (2)</div><div class="ttdef"><b>Definition</b> branch.hpp:75</div></div>
-<div class="ttc" id="astructcoobranch_html_a32707e8f1bd432b99318aa22500588cd"><div class="ttname"><a href="structcoobranch.html#a32707e8f1bd432b99318aa22500588cd">coobranch::add_account_to_trusted</a></div><div class="ttdeci">void add_account_to_trusted(const eosio::name &amp;account)</div><div class="ttdef"><b>Definition</b> branch.hpp:77</div></div>
-<div class="ttc" id="astructcoobranch_html_a939c4f76a4b9ceb2621a6855ba4f4073"><div class="ttname"><a href="structcoobranch.html#a939c4f76a4b9ceb2621a6855ba4f4073">coobranch::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition</b> branch.hpp:74</div></div>
-<div class="ttc" id="astructcoobranch_html_a94e2de729fe500ce80692059e6a306f6"><div class="ttname"><a href="structcoobranch.html#a94e2de729fe500ce80692059e6a306f6">coobranch::remove_account_from_trusted</a></div><div class="ttdeci">void remove_account_from_trusted(const eosio::name &amp;account)</div><div class="ttdef"><b>Definition</b> branch.hpp:81</div></div>
-<div class="ttc" id="astructcoobranch_html_a95db25602834e79cb086443a8813212b"><div class="ttname"><a href="structcoobranch.html#a95db25602834e79cb086443a8813212b">coobranch::is_user_authorized</a></div><div class="ttdeci">bool is_user_authorized(const eosio::name &amp;username) const</div><div class="ttdoc">Проверяет права доступа пользователя к данному кооперативному участку</div><div class="ttdef"><b>Definition</b> branch.hpp:96</div></div>
-<div class="ttc" id="astructcoobranch_html_aa851947ab19d6a293e6c5c82993ca3e1"><div class="ttname"><a href="structcoobranch.html#aa851947ab19d6a293e6c5c82993ca3e1">coobranch::is_account_in_trusted</a></div><div class="ttdeci">bool is_account_in_trusted(const eosio::name &amp;account) const</div><div class="ttdef"><b>Definition</b> branch.hpp:87</div></div>
-<div class="ttc" id="astructcoobranch_html_ac8ca2c168ca4a3fdbfc53bfbc6366a23"><div class="ttname"><a href="structcoobranch.html#ac8ca2c168ca4a3fdbfc53bfbc6366a23">coobranch::trustee</a></div><div class="ttdeci">eosio::name trustee</div><div class="ttdoc">Председатель кооперативного участка</div><div class="ttdef"><b>Definition</b> branch.hpp:70</div></div>
-<div class="ttc" id="astructcoobranch_html_ac9270130a66e62196456774227a34e5f"><div class="ttname"><a href="structcoobranch.html#ac9270130a66e62196456774227a34e5f">coobranch::trusted</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; trusted</div><div class="ttdoc">Список доверенных лиц кооперативного участка</div><div class="ttdef"><b>Definition</b> branch.hpp:71</div></div>
-<div class="ttc" id="astructcoobranch_html_afa0c5d1765e9a8952c2e1dc376a4df52"><div class="ttname"><a href="structcoobranch.html#afa0c5d1765e9a8952c2e1dc376a4df52">coobranch::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">Имя кооперативного участка</div><div class="ttdef"><b>Definition</b> branch.hpp:69</div></div>
+<div class="ttc" id="aclassbranch_html"><div class="ttname"><a href="classbranch.html">branch</a></div><div class="ttdoc">Константы контракта кооперативных участков</div><div class="ttdef"><b>Definition:</b> branch.hpp:51</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ae36fefc5b4aa30cf32d3ae22b64fb348"><div class="ttname"><a href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a></div><div class="ttdeci">static constexpr eosio::name _branch</div><div class="ttdef"><b>Definition:</b> consts.hpp:160</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="alib_2branch_8hpp_html_a16146d9a07155666111bdc8c7b8e2a58"><div class="ttname"><a href="lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58">branchstat_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;branchstat&quot;_n, branchstat &gt; branchstat_index</div><div class="ttdef"><b>Definition:</b> branch.hpp:18</div></div>
+<div class="ttc" id="alib_2branch_8hpp_html_a367a281392e1d478e40e1c86e83becaf"><div class="ttname"><a href="lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf">add_branch_count</a></div><div class="ttdeci">uint64_t add_branch_count(eosio::name coopname)</div><div class="ttdef"><b>Definition:</b> branch.hpp:20</div></div>
+<div class="ttc" id="alib_2branch_8hpp_html_a6ff81a6a4e3a37181ec3f6d67aa0d42b"><div class="ttname"><a href="lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b">branch_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;branches&quot;_n, coobranch, eosio::indexed_by&lt;&quot;bytrustee&quot;_n, eosio::const_mem_fun&lt; coobranch, uint64_t, &amp;coobranch::by_trustee &gt; &gt; &gt; branch_index</div><div class="ttdef"><b>Definition:</b> branch.hpp:109</div></div>
+<div class="ttc" id="alib_2branch_8hpp_html_a95889df16c361ff1b2f72d95f4019a44"><div class="ttname"><a href="lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44">get_branch_or_fail</a></div><div class="ttdeci">coobranch get_branch_or_fail(eosio::name coopname, eosio::name braname)</div><div class="ttdef"><b>Definition:</b> branch.hpp:112</div></div>
+<div class="ttc" id="alib_2branch_8hpp_html_ac191cfacbeffffdd521a232b31a1b962"><div class="ttname"><a href="lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962">sub_branch_count</a></div><div class="ttdeci">uint64_t sub_branch_count(eosio::name coopname)</div><div class="ttdef"><b>Definition:</b> branch.hpp:42</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructaccount_html"><div class="ttname"><a href="structaccount.html">account</a></div><div class="ttdoc">Структура, представляющая учетные записи аккаунтов.</div><div class="ttdef"><b>Definition:</b> accounts.hpp:60</div></div>
+<div class="ttc" id="astructbranchstat_html"><div class="ttname"><a href="structbranchstat.html">branchstat</a></div><div class="ttdoc">Таблица статистики кооперативных участков хранит количество участков для каждого кооператива.</div><div class="ttdef"><b>Definition:</b> branch.hpp:11</div></div>
+<div class="ttc" id="astructbranchstat_html_a4f6cdc7a6bc23f4bb043f543fa129e52"><div class="ttname"><a href="structbranchstat.html#a4f6cdc7a6bc23f4bb043f543fa129e52">branchstat::count</a></div><div class="ttdeci">uint64_t count</div><div class="ttdoc">Количество кооперативных участков</div><div class="ttdef"><b>Definition:</b> branch.hpp:13</div></div>
+<div class="ttc" id="astructbranchstat_html_a77b7bc69b458810eb533aacb409bc0a3"><div class="ttname"><a href="structbranchstat.html#a77b7bc69b458810eb533aacb409bc0a3">branchstat::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> branch.hpp:15</div></div>
+<div class="ttc" id="astructbranchstat_html_a9beb7f157a9b99f1d5b5c2ead48c5161"><div class="ttname"><a href="structbranchstat.html#a9beb7f157a9b99f1d5b5c2ead48c5161">branchstat::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> branch.hpp:12</div></div>
+<div class="ttc" id="astructcoobranch_html"><div class="ttname"><a href="structcoobranch.html">coobranch</a></div><div class="ttdoc">Таблица кооперативных участков хранит информацию о кооперативных участках и их доверенных лицах.</div><div class="ttdef"><b>Definition:</b> branch.hpp:68</div></div>
+<div class="ttc" id="astructcoobranch_html_a2b80ac77c7bf5bd7abd99e8c889a8986"><div class="ttname"><a href="structcoobranch.html#a2b80ac77c7bf5bd7abd99e8c889a8986">coobranch::by_trustee</a></div><div class="ttdeci">uint64_t by_trustee() const</div><div class="ttdoc">Индекс по доверенному лицу (2)</div><div class="ttdef"><b>Definition:</b> branch.hpp:75</div></div>
+<div class="ttc" id="astructcoobranch_html_a32707e8f1bd432b99318aa22500588cd"><div class="ttname"><a href="structcoobranch.html#a32707e8f1bd432b99318aa22500588cd">coobranch::add_account_to_trusted</a></div><div class="ttdeci">void add_account_to_trusted(const eosio::name &amp;account)</div><div class="ttdef"><b>Definition:</b> branch.hpp:77</div></div>
+<div class="ttc" id="astructcoobranch_html_a939c4f76a4b9ceb2621a6855ba4f4073"><div class="ttname"><a href="structcoobranch.html#a939c4f76a4b9ceb2621a6855ba4f4073">coobranch::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition:</b> branch.hpp:74</div></div>
+<div class="ttc" id="astructcoobranch_html_a94e2de729fe500ce80692059e6a306f6"><div class="ttname"><a href="structcoobranch.html#a94e2de729fe500ce80692059e6a306f6">coobranch::remove_account_from_trusted</a></div><div class="ttdeci">void remove_account_from_trusted(const eosio::name &amp;account)</div><div class="ttdef"><b>Definition:</b> branch.hpp:81</div></div>
+<div class="ttc" id="astructcoobranch_html_a95db25602834e79cb086443a8813212b"><div class="ttname"><a href="structcoobranch.html#a95db25602834e79cb086443a8813212b">coobranch::is_user_authorized</a></div><div class="ttdeci">bool is_user_authorized(const eosio::name &amp;username) const</div><div class="ttdoc">Проверяет права доступа пользователя к данному кооперативному участку</div><div class="ttdef"><b>Definition:</b> branch.hpp:96</div></div>
+<div class="ttc" id="astructcoobranch_html_aa851947ab19d6a293e6c5c82993ca3e1"><div class="ttname"><a href="structcoobranch.html#aa851947ab19d6a293e6c5c82993ca3e1">coobranch::is_account_in_trusted</a></div><div class="ttdeci">bool is_account_in_trusted(const eosio::name &amp;account) const</div><div class="ttdef"><b>Definition:</b> branch.hpp:87</div></div>
+<div class="ttc" id="astructcoobranch_html_ac8ca2c168ca4a3fdbfc53bfbc6366a23"><div class="ttname"><a href="structcoobranch.html#ac8ca2c168ca4a3fdbfc53bfbc6366a23">coobranch::trustee</a></div><div class="ttdeci">eosio::name trustee</div><div class="ttdoc">Председатель кооперативного участка</div><div class="ttdef"><b>Definition:</b> branch.hpp:70</div></div>
+<div class="ttc" id="astructcoobranch_html_ac9270130a66e62196456774227a34e5f"><div class="ttname"><a href="structcoobranch.html#ac9270130a66e62196456774227a34e5f">coobranch::trusted</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; trusted</div><div class="ttdoc">Список доверенных лиц кооперативного участка</div><div class="ttdef"><b>Definition:</b> branch.hpp:71</div></div>
+<div class="ttc" id="astructcoobranch_html_afa0c5d1765e9a8952c2e1dc376a4df52"><div class="ttname"><a href="structcoobranch.html#afa0c5d1765e9a8952c2e1dc376a4df52">coobranch::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">Имя кооперативного участка</div><div class="ttdef"><b>Definition:</b> branch.hpp:69</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->
@@ -299,7 +267,7 @@ $(document).ready(function(){initNavTree('lib_2branch_8hpp_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="lib_2branch_8hpp.html">branch.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

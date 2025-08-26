@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('votes_8hpp.html',''); initResizable();
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -171,26 +164,26 @@ $(document).ready(function(){initNavTree('votes_8hpp.html',''); initResizable();
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
-<tr class="memitem:namespace_capital" id="r_namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
+<tr class="memitem:namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_votes" id="r_namespace_capital_1_1_votes"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html">Capital::Votes</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_votes"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html">Capital::Votes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a477f1081fcd9c5bb1af0d117ac7805c0" id="r_a477f1081fcd9c5bb1af0d117ac7805c0"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;votes&quot;_n, <a class="el" href="struct_capital_1_1vote.html">vote</a>, indexed_by&lt;&quot;byproject&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1vote.html">vote</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1vote.html#a52fc68b4ac34e3b943bf3356a75b3f7e">vote::by_project</a> &gt; &gt;, indexed_by&lt;&quot;byprojvoter&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1vote.html">vote</a>, uint128_t, &amp;<a class="el" href="struct_capital_1_1vote.html#a3e9eb6a4593256f93968cbefc676463e">vote::by_project_voter</a> &gt; &gt;, indexed_by&lt;&quot;byprojrecip&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1vote.html">vote</a>, uint128_t, &amp;<a class="el" href="struct_capital_1_1vote.html#a08d60572efe54a1d5a1287ec48057831">vote::by_project_recipient</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a477f1081fcd9c5bb1af0d117ac7805c0">Capital::votes_index</a></td></tr>
+<tr class="memitem:a477f1081fcd9c5bb1af0d117ac7805c0"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;votes&quot;_n, vote, indexed_by&lt;&quot;byproject&quot;_n, const_mem_fun&lt; vote, checksum256, &amp;vote::by_project &gt; &gt;, indexed_by&lt;&quot;byprojvoter&quot;_n, const_mem_fun&lt; vote, uint128_t, &amp;vote::by_project_voter &gt; &gt;, indexed_by&lt;&quot;byprojrecip&quot;_n, const_mem_fun&lt; vote, uint128_t, &amp;vote::by_project_recipient &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a477f1081fcd9c5bb1af0d117ac7805c0">Capital::votes_index</a></td></tr>
 <tr class="separator:a477f1081fcd9c5bb1af0d117ac7805c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:aba88996b0321ddd75ca3fc4d746986b2" id="r_aba88996b0321ddd75ca3fc4d746986b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#aba88996b0321ddd75ca3fc4d746986b2">Capital::Votes::has_user_voted</a> (name coopname, checksum256 project_hash, name voter)</td></tr>
-<tr class="memdesc:aba88996b0321ddd75ca3fc4d746986b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет голосовал ли пользователь в данном проекте  <br /></td></tr>
+<tr class="memitem:aba88996b0321ddd75ca3fc4d746986b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#aba88996b0321ddd75ca3fc4d746986b2">Capital::Votes::has_user_voted</a> (name coopname, checksum256 project_hash, name voter)</td></tr>
+<tr class="memdesc:aba88996b0321ddd75ca3fc4d746986b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет голосовал ли пользователь в данном проекте  <a href="namespace_capital_1_1_votes.html#aba88996b0321ddd75ca3fc4d746986b2">Подробнее...</a><br /></td></tr>
 <tr class="separator:aba88996b0321ddd75ca3fc4d746986b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430609f2b750c0a8f57b6a280ace5a23" id="r_a430609f2b750c0a8f57b6a280ace5a23"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_capital_1_1vote.html">vote</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23">Capital::Votes::get_votes_for_recipient</a> (name coopname, checksum256 project_hash, name recipient)</td></tr>
-<tr class="memdesc:a430609f2b750c0a8f57b6a280ace5a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает все голоса получателя в проекте  <br /></td></tr>
+<tr class="memitem:a430609f2b750c0a8f57b6a280ace5a23"><td class="memItemLeft" align="right" valign="top">std::vector&lt; vote &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23">Capital::Votes::get_votes_for_recipient</a> (name coopname, checksum256 project_hash, name recipient)</td></tr>
+<tr class="memdesc:a430609f2b750c0a8f57b6a280ace5a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает все голоса получателя в проекте  <a href="namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23">Подробнее...</a><br /></td></tr>
 <tr class="separator:a430609f2b750c0a8f57b6a280ace5a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcd9611c6e3bfac3f15e745934ebbda1" id="r_abcd9611c6e3bfac3f15e745934ebbda1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#abcd9611c6e3bfac3f15e745934ebbda1">Capital::Votes::add_vote</a> (name coopname, checksum256 project_hash, name voter, name recipient, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:abcd9611c6e3bfac3f15e745934ebbda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет голос в проект  <br /></td></tr>
+<tr class="memitem:abcd9611c6e3bfac3f15e745934ebbda1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html#abcd9611c6e3bfac3f15e745934ebbda1">Capital::Votes::add_vote</a> (name coopname, checksum256 project_hash, name voter, name recipient, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:abcd9611c6e3bfac3f15e745934ebbda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет голос в проект  <a href="namespace_capital_1_1_votes.html#abcd9611c6e3bfac3f15e745934ebbda1">Подробнее...</a><br /></td></tr>
 <tr class="separator:abcd9611c6e3bfac3f15e745934ebbda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -200,7 +193,7 @@ $(document).ready(function(){initNavTree('votes_8hpp.html',''); initResizable();
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="votes_8hpp.html">votes.hpp</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

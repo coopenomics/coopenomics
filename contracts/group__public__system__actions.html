@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -149,113 +142,113 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ga93950629ac6f931b47542727a5411097" id="r_ga93950629ac6f931b47542727a5411097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga93950629ac6f931b47542727a5411097">eosiosystem::system_contract::buyrambytes</a> (const name &amp;payer, const name &amp;receiver, uint32_t bytes)</td></tr>
-<tr class="memdesc:ga93950629ac6f931b47542727a5411097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Покупает точное количество RAM в байтах. Покупает точное количество байт RAM и выставляет счет плательщику по текущей рыночной цене.  <br /></td></tr>
+<tr class="memitem:ga93950629ac6f931b47542727a5411097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga93950629ac6f931b47542727a5411097">eosiosystem::system_contract::buyrambytes</a> (const name &amp;payer, const name &amp;receiver, uint32_t bytes)</td></tr>
+<tr class="memdesc:ga93950629ac6f931b47542727a5411097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Покупает точное количество RAM в байтах. Покупает точное количество байт RAM и выставляет счет плательщику по текущей рыночной цене.  <a href="group__public__system__actions.html#ga93950629ac6f931b47542727a5411097">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga93950629ac6f931b47542727a5411097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga04be77ea83f87d1533606390c37cf5d1" id="r_ga04be77ea83f87d1533606390c37cf5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga04be77ea83f87d1533606390c37cf5d1">eosiosystem::system_contract::buyram</a> (const name &amp;payer, const name &amp;receiver, const asset &amp;quant)</td></tr>
-<tr class="memdesc:ga04be77ea83f87d1533606390c37cf5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Покупает RAM для указанного аккаунта. При покупке RAM плательщик безвозвратно передает токены системному контракту, и только получатель может вернуть токены через действие sellram. Получатель оплачивает хранение всех записей базы данных, связанных с этим действием. RAM - это ограниченный ресурс, предложение которого определяется глобальным свойством max_ram_size. RAM оценивается с использованием алгоритма Bancor с постоянным резервным соотношением 100:1.  <br /></td></tr>
+<tr class="memitem:ga04be77ea83f87d1533606390c37cf5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga04be77ea83f87d1533606390c37cf5d1">eosiosystem::system_contract::buyram</a> (const name &amp;payer, const name &amp;receiver, const asset &amp;quant)</td></tr>
+<tr class="memdesc:ga04be77ea83f87d1533606390c37cf5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Покупает RAM для указанного аккаунта. При покупке RAM плательщик безвозвратно передает токены системному контракту, и только получатель может вернуть токены через действие sellram. Получатель оплачивает хранение всех записей базы данных, связанных с этим действием. RAM - это ограниченный ресурс, предложение которого определяется глобальным свойством max_ram_size. RAM оценивается с использованием алгоритма Bancor с постоянным резервным соотношением 100:1.  <a href="group__public__system__actions.html#ga04be77ea83f87d1533606390c37cf5d1">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga04be77ea83f87d1533606390c37cf5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6b00b900a128d2718244ac8a408f65d3" id="r_ga6b00b900a128d2718244ac8a408f65d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga6b00b900a128d2718244ac8a408f65d3">eosiosystem::system_contract::sellram</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, int64_t bytes)</td></tr>
-<tr class="memdesc:ga6b00b900a128d2718244ac8a408f65d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Продает RAM обратно в систему. Позволяет аккаунту продать свои байты RAM обратно в систему и получить токены.  <br /></td></tr>
+<tr class="memitem:ga6b00b900a128d2718244ac8a408f65d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga6b00b900a128d2718244ac8a408f65d3">eosiosystem::system_contract::sellram</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, int64_t bytes)</td></tr>
+<tr class="memdesc:ga6b00b900a128d2718244ac8a408f65d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Продает RAM обратно в систему. Позволяет аккаунту продать свои байты RAM обратно в систему и получить токены.  <a href="group__public__system__actions.html#ga6b00b900a128d2718244ac8a408f65d3">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6b00b900a128d2718244ac8a408f65d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa54b498595abb1a3ad9c62c597d4f7b5" id="r_gaa54b498595abb1a3ad9c62c597d4f7b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa54b498595abb1a3ad9c62c597d4f7b5">eosiosystem::system_contract::delegatebw</a> (const name &amp;from, const name &amp;receiver, const asset &amp;stake_net_quantity, const asset &amp;stake_cpu_quantity, bool <a class="el" href="eosio_8token__tests_8cpp.html#a842c5467344efbabdf1da5f8aee477e1">transfer</a>)</td></tr>
-<tr class="memdesc:gaa54b498595abb1a3ad9c62c597d4f7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Делегирует пропускную способность сети и CPU другому аккаунту. Позволяет аккаунту застейкать токены для предоставления ресурсов сети и CPU другому аккаунту.  <br /></td></tr>
+<tr class="memitem:gaa54b498595abb1a3ad9c62c597d4f7b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa54b498595abb1a3ad9c62c597d4f7b5">eosiosystem::system_contract::delegatebw</a> (const name &amp;from, const name &amp;receiver, const asset &amp;stake_net_quantity, const asset &amp;stake_cpu_quantity, bool <a class="el" href="eosio_8token__tests_8cpp.html#a842c5467344efbabdf1da5f8aee477e1">transfer</a>)</td></tr>
+<tr class="memdesc:gaa54b498595abb1a3ad9c62c597d4f7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Делегирует пропускную способность сети и CPU другому аккаунту. Позволяет аккаунту застейкать токены для предоставления ресурсов сети и CPU другому аккаунту.  <a href="group__public__system__actions.html#gaa54b498595abb1a3ad9c62c597d4f7b5">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa54b498595abb1a3ad9c62c597d4f7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4db0be2c90d342ecd269fdbb57c51091" id="r_ga4db0be2c90d342ecd269fdbb57c51091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga4db0be2c90d342ecd269fdbb57c51091">eosiosystem::system_contract::undelegatebw</a> (const name &amp;from, const name &amp;receiver, const asset &amp;unstake_net_quantity, const asset &amp;unstake_cpu_quantity)</td></tr>
-<tr class="memdesc:ga4db0be2c90d342ecd269fdbb57c51091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет делегирование пропускной способности сети и CPU. Позволяет аккаунту отменить стейкинг токенов для ресурсов сети и CPU.  <br /></td></tr>
+<tr class="memitem:ga4db0be2c90d342ecd269fdbb57c51091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga4db0be2c90d342ecd269fdbb57c51091">eosiosystem::system_contract::undelegatebw</a> (const name &amp;from, const name &amp;receiver, const asset &amp;unstake_net_quantity, const asset &amp;unstake_cpu_quantity)</td></tr>
+<tr class="memdesc:ga4db0be2c90d342ecd269fdbb57c51091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет делегирование пропускной способности сети и CPU. Позволяет аккаунту отменить стейкинг токенов для ресурсов сети и CPU.  <a href="group__public__system__actions.html#ga4db0be2c90d342ecd269fdbb57c51091">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga4db0be2c90d342ecd269fdbb57c51091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10a63e006f9869caeaf2592bdfbccc42" id="r_ga10a63e006f9869caeaf2592bdfbccc42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga10a63e006f9869caeaf2592bdfbccc42">eosiosystem::system_contract::refund</a> (const name &amp;<a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>)</td></tr>
-<tr class="memdesc:ga10a63e006f9869caeaf2592bdfbccc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает застейканные токены после истечения периода задержки. Позволяет аккаунту получить обратно свои токены после отмены делегирования.  <br /></td></tr>
+<tr class="memitem:ga10a63e006f9869caeaf2592bdfbccc42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga10a63e006f9869caeaf2592bdfbccc42">eosiosystem::system_contract::refund</a> (const name &amp;<a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>)</td></tr>
+<tr class="memdesc:ga10a63e006f9869caeaf2592bdfbccc42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает застейканные токены после истечения периода задержки. Позволяет аккаунту получить обратно свои токены после отмены делегирования.  <a href="group__public__system__actions.html#ga10a63e006f9869caeaf2592bdfbccc42">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga10a63e006f9869caeaf2592bdfbccc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad8a6eb47fd97c9f243019d93916ff78f" id="r_gad8a6eb47fd97c9f243019d93916ff78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gad8a6eb47fd97c9f243019d93916ff78f">eosiosystem::system_contract::setram</a> (uint64_t max_ram_size)</td></tr>
-<tr class="memdesc:gad8a6eb47fd97c9f243019d93916ff78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает максимальный размер RAM в системе. Увеличивает количество RAM доступного для продажи на основе изменения максимального размера RAM.  <br /></td></tr>
+<tr class="memitem:gad8a6eb47fd97c9f243019d93916ff78f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gad8a6eb47fd97c9f243019d93916ff78f">eosiosystem::system_contract::setram</a> (uint64_t max_ram_size)</td></tr>
+<tr class="memdesc:gad8a6eb47fd97c9f243019d93916ff78f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает максимальный размер RAM в системе. Увеличивает количество RAM доступного для продажи на основе изменения максимального размера RAM.  <a href="group__public__system__actions.html#gad8a6eb47fd97c9f243019d93916ff78f">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad8a6eb47fd97c9f243019d93916ff78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae248c8483e7ff56c697793c49bd58700" id="r_gae248c8483e7ff56c697793c49bd58700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae248c8483e7ff56c697793c49bd58700">eosiosystem::system_contract::update_ram_supply</a> ()</td></tr>
-<tr class="memdesc:gae248c8483e7ff56c697793c49bd58700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет предложение RAM на основе времени с последнего увеличения. Увеличивает количество RAM доступного для продажи на основе времени блоков.  <br /></td></tr>
+<tr class="memitem:gae248c8483e7ff56c697793c49bd58700"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae248c8483e7ff56c697793c49bd58700">eosiosystem::system_contract::update_ram_supply</a> ()</td></tr>
+<tr class="memdesc:gae248c8483e7ff56c697793c49bd58700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет предложение RAM на основе времени с последнего увеличения. Увеличивает количество RAM доступного для продажи на основе времени блоков.  <a href="group__public__system__actions.html#gae248c8483e7ff56c697793c49bd58700">Подробнее...</a><br /></td></tr>
 <tr class="separator:gae248c8483e7ff56c697793c49bd58700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d984add31b6060bb59d472f9f1bd1a1" id="r_ga7d984add31b6060bb59d472f9f1bd1a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga7d984add31b6060bb59d472f9f1bd1a1">eosiosystem::system_contract::setramrate</a> (uint16_t bytes_per_block)</td></tr>
-<tr class="memdesc:ga7d984add31b6060bb59d472f9f1bd1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает скорость увеличения RAM в байтах за блок.  <br /></td></tr>
+<tr class="memitem:ga7d984add31b6060bb59d472f9f1bd1a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga7d984add31b6060bb59d472f9f1bd1a1">eosiosystem::system_contract::setramrate</a> (uint16_t bytes_per_block)</td></tr>
+<tr class="memdesc:ga7d984add31b6060bb59d472f9f1bd1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает скорость увеличения RAM в байтах за блок.  <a href="group__public__system__actions.html#ga7d984add31b6060bb59d472f9f1bd1a1">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga7d984add31b6060bb59d472f9f1bd1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4ea1b93cfb3d99fcaaabb994c711bee" id="r_gaa4ea1b93cfb3d99fcaaabb994c711bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa4ea1b93cfb3d99fcaaabb994c711bee">eosiosystem::system_contract::setparams</a> (const <a class="el" href="namespaceeosiosystem.html#a5e1fbfc9229b1616bfc70a519e26e9c2">blockchain_parameters_t</a> &amp;params)</td></tr>
-<tr class="memdesc:gaa4ea1b93cfb3d99fcaaabb994c711bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает параметры блокчейна. Обновляет глобальные параметры блокчейна, включая лимиты блоков, транзакций и авторизаций.  <br /></td></tr>
+<tr class="memitem:gaa4ea1b93cfb3d99fcaaabb994c711bee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa4ea1b93cfb3d99fcaaabb994c711bee">eosiosystem::system_contract::setparams</a> (const <a class="el" href="namespaceeosiosystem.html#a5e1fbfc9229b1616bfc70a519e26e9c2">blockchain_parameters_t</a> &amp;params)</td></tr>
+<tr class="memdesc:gaa4ea1b93cfb3d99fcaaabb994c711bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает параметры блокчейна. Обновляет глобальные параметры блокчейна, включая лимиты блоков, транзакций и авторизаций.  <a href="group__public__system__actions.html#gaa4ea1b93cfb3d99fcaaabb994c711bee">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa4ea1b93cfb3d99fcaaabb994c711bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga648ec27a9bc3bf7e36c5c88f6932b9ca" id="r_ga648ec27a9bc3bf7e36c5c88f6932b9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga648ec27a9bc3bf7e36c5c88f6932b9ca">eosiosystem::system_contract::setpriv</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, uint8_t is_priv)</td></tr>
-<tr class="memdesc:ga648ec27a9bc3bf7e36c5c88f6932b9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает привилегированный статус для аккаунта. Позволяет включить или выключить привилегированный статус для аккаунта.  <br /></td></tr>
+<tr class="memitem:ga648ec27a9bc3bf7e36c5c88f6932b9ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga648ec27a9bc3bf7e36c5c88f6932b9ca">eosiosystem::system_contract::setpriv</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, uint8_t is_priv)</td></tr>
+<tr class="memdesc:ga648ec27a9bc3bf7e36c5c88f6932b9ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает привилегированный статус для аккаунта. Позволяет включить или выключить привилегированный статус для аккаунта.  <a href="group__public__system__actions.html#ga648ec27a9bc3bf7e36c5c88f6932b9ca">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga648ec27a9bc3bf7e36c5c88f6932b9ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad5b9178dfbe60ba6059c52d488ecf303" id="r_gad5b9178dfbe60ba6059c52d488ecf303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gad5b9178dfbe60ba6059c52d488ecf303">eosiosystem::system_contract::setalimits</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, int64_t ram_bytes, int64_t net_weight, int64_t cpu_weight)</td></tr>
-<tr class="memdesc:gad5b9178dfbe60ba6059c52d488ecf303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты ресурсов для аккаунта. Устанавливает абсолютные лимиты RAM, NET и CPU для указанного аккаунта. Поддерживает только аккаунты с неограниченными ресурсами.  <br /></td></tr>
+<tr class="memitem:gad5b9178dfbe60ba6059c52d488ecf303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gad5b9178dfbe60ba6059c52d488ecf303">eosiosystem::system_contract::setalimits</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, int64_t ram_bytes, int64_t net_weight, int64_t cpu_weight)</td></tr>
+<tr class="memdesc:gad5b9178dfbe60ba6059c52d488ecf303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты ресурсов для аккаунта. Устанавливает абсолютные лимиты RAM, NET и CPU для указанного аккаунта. Поддерживает только аккаунты с неограниченными ресурсами.  <a href="group__public__system__actions.html#gad5b9178dfbe60ba6059c52d488ecf303">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad5b9178dfbe60ba6059c52d488ecf303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacdd7c75402f43876338d33649d2e6903" id="r_gacdd7c75402f43876338d33649d2e6903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gacdd7c75402f43876338d33649d2e6903">eosiosystem::system_contract::setacctram</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;ram_bytes)</td></tr>
-<tr class="memdesc:gacdd7c75402f43876338d33649d2e6903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты RAM для аккаунта. Устанавливает лимит RAM в абсолютных байтах для указанного аккаунта.  <br /></td></tr>
+<tr class="memitem:gacdd7c75402f43876338d33649d2e6903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gacdd7c75402f43876338d33649d2e6903">eosiosystem::system_contract::setacctram</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;ram_bytes)</td></tr>
+<tr class="memdesc:gacdd7c75402f43876338d33649d2e6903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты RAM для аккаунта. Устанавливает лимит RAM в абсолютных байтах для указанного аккаунта.  <a href="group__public__system__actions.html#gacdd7c75402f43876338d33649d2e6903">Подробнее...</a><br /></td></tr>
 <tr class="separator:gacdd7c75402f43876338d33649d2e6903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4559928f468c62867916d1251fa33b3" id="r_gaa4559928f468c62867916d1251fa33b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa4559928f468c62867916d1251fa33b3">eosiosystem::system_contract::setacctnet</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;net_weight)</td></tr>
-<tr class="memdesc:gaa4559928f468c62867916d1251fa33b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты NET для аккаунта. Устанавливает пропорциональный лимит NET для указанного аккаунта.  <br /></td></tr>
+<tr class="memitem:gaa4559928f468c62867916d1251fa33b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa4559928f468c62867916d1251fa33b3">eosiosystem::system_contract::setacctnet</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;net_weight)</td></tr>
+<tr class="memdesc:gaa4559928f468c62867916d1251fa33b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты NET для аккаунта. Устанавливает пропорциональный лимит NET для указанного аккаунта.  <a href="group__public__system__actions.html#gaa4559928f468c62867916d1251fa33b3">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa4559928f468c62867916d1251fa33b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9a005d230746b68cafa934a067f287af" id="r_ga9a005d230746b68cafa934a067f287af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga9a005d230746b68cafa934a067f287af">eosiosystem::system_contract::setacctcpu</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;cpu_weight)</td></tr>
-<tr class="memdesc:ga9a005d230746b68cafa934a067f287af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты CPU для аккаунта. Устанавливает пропорциональный лимит CPU для указанного аккаунта.  <br /></td></tr>
+<tr class="memitem:ga9a005d230746b68cafa934a067f287af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga9a005d230746b68cafa934a067f287af">eosiosystem::system_contract::setacctcpu</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::optional&lt; int64_t &gt; &amp;cpu_weight)</td></tr>
+<tr class="memdesc:ga9a005d230746b68cafa934a067f287af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает лимиты CPU для аккаунта. Устанавливает пропорциональный лимит CPU для указанного аккаунта.  <a href="group__public__system__actions.html#ga9a005d230746b68cafa934a067f287af">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga9a005d230746b68cafa934a067f287af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1873247483b285e19010b7469419a60d" id="r_ga1873247483b285e19010b7469419a60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga1873247483b285e19010b7469419a60d">eosiosystem::system_contract::activate</a> (const eosio::checksum256 &amp;feature_digest)</td></tr>
-<tr class="memdesc:ga1873247483b285e19010b7469419a60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активирует протокольную функцию. Активирует протокольную функцию по хешу перед деплоем системного контракта с большим количеством функций.  <br /></td></tr>
+<tr class="memitem:ga1873247483b285e19010b7469419a60d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga1873247483b285e19010b7469419a60d">eosiosystem::system_contract::activate</a> (const eosio::checksum256 &amp;feature_digest)</td></tr>
+<tr class="memdesc:ga1873247483b285e19010b7469419a60d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активирует протокольную функцию. Активирует протокольную функцию по хешу перед деплоем системного контракта с большим количеством функций.  <a href="group__public__system__actions.html#ga1873247483b285e19010b7469419a60d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga1873247483b285e19010b7469419a60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2a41dc1871059a536a55626b8c76f5b9" id="r_ga2a41dc1871059a536a55626b8c76f5b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga2a41dc1871059a536a55626b8c76f5b9">eosiosystem::system_contract::rmvproducer</a> (const name &amp;producer)</td></tr>
-<tr class="memdesc:ga2a41dc1871059a536a55626b8c76f5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет продюсера по имени. Деактивирует продюсера по имени, если не найден - вызывает ошибку.  <br /></td></tr>
+<tr class="memitem:ga2a41dc1871059a536a55626b8c76f5b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga2a41dc1871059a536a55626b8c76f5b9">eosiosystem::system_contract::rmvproducer</a> (const name &amp;producer)</td></tr>
+<tr class="memdesc:ga2a41dc1871059a536a55626b8c76f5b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет продюсера по имени. Деактивирует продюсера по имени, если не найден - вызывает ошибку.  <a href="group__public__system__actions.html#ga2a41dc1871059a536a55626b8c76f5b9">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2a41dc1871059a536a55626b8c76f5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0af4a55018801131ae7dc7a923bead0b" id="r_ga0af4a55018801131ae7dc7a923bead0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga0af4a55018801131ae7dc7a923bead0b">eosiosystem::system_contract::updtrevision</a> (uint8_t revision)</td></tr>
-<tr class="memdesc:ga0af4a55018801131ae7dc7a923bead0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет текущую ревизию. Обновляет текущую ревизию. Ревизия должна быть увеличена на 1 по сравнению с текущей. Текущая ревизия не может быть выше 254 и должна быть меньше или равна 1.  <br /></td></tr>
+<tr class="memitem:ga0af4a55018801131ae7dc7a923bead0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga0af4a55018801131ae7dc7a923bead0b">eosiosystem::system_contract::updtrevision</a> (uint8_t revision)</td></tr>
+<tr class="memdesc:ga0af4a55018801131ae7dc7a923bead0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет текущую ревизию. Обновляет текущую ревизию. Ревизия должна быть увеличена на 1 по сравнению с текущей. Текущая ревизия не может быть выше 254 и должна быть меньше или равна 1.  <a href="group__public__system__actions.html#ga0af4a55018801131ae7dc7a923bead0b">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga0af4a55018801131ae7dc7a923bead0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ca6a4de00cf033d13ed6d587440d2fc" id="r_ga9ca6a4de00cf033d13ed6d587440d2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga9ca6a4de00cf033d13ed6d587440d2fc">eosiosystem::system_contract::createaccnt</a> (const name coopname, const name new_account_name, <a class="el" href="structeosiosystem_1_1authority.html">authority</a> <a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>, <a class="el" href="structeosiosystem_1_1authority.html">authority</a> <a class="el" href="eosio_8limitauth__tests_8cpp.html#a260a6616099c3487f3cd7dd73e6a979a">active</a>)</td></tr>
-<tr class="memdesc:ga9ca6a4de00cf033d13ed6d587440d2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает новый аккаунт через кооператив. Позволяет кооперативу создать новый аккаунт с указанными владельцем и активными разрешениями.  <br /></td></tr>
+<tr class="memitem:ga9ca6a4de00cf033d13ed6d587440d2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga9ca6a4de00cf033d13ed6d587440d2fc">eosiosystem::system_contract::createaccnt</a> (const name coopname, const name new_account_name, <a class="el" href="structeosiosystem_1_1authority.html">authority</a> <a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>, <a class="el" href="structeosiosystem_1_1authority.html">authority</a> <a class="el" href="eosio_8limitauth__tests_8cpp.html#a260a6616099c3487f3cd7dd73e6a979a">active</a>)</td></tr>
+<tr class="memdesc:ga9ca6a4de00cf033d13ed6d587440d2fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает новый аккаунт через кооператив. Позволяет кооперативу создать новый аккаунт с указанными владельцем и активными разрешениями.  <a href="group__public__system__actions.html#ga9ca6a4de00cf033d13ed6d587440d2fc">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga9ca6a4de00cf033d13ed6d587440d2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga314f5afbd81e51d5e319ba81398f2e06" id="r_ga314f5afbd81e51d5e319ba81398f2e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga314f5afbd81e51d5e319ba81398f2e06">eosiosystem::system_contract::init</a> (uint64_t version, const symbol &amp;core)</td></tr>
-<tr class="memdesc:ga314f5afbd81e51d5e319ba81398f2e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует системный контракт для версии и символа. Действие выполняется успешно только когда:  <br /></td></tr>
+<tr class="memitem:ga314f5afbd81e51d5e319ba81398f2e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga314f5afbd81e51d5e319ba81398f2e06">eosiosystem::system_contract::init</a> (uint64_t version, const symbol &amp;core)</td></tr>
+<tr class="memdesc:ga314f5afbd81e51d5e319ba81398f2e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует системный контракт для версии и символа. Действие выполняется успешно только когда:  <a href="group__public__system__actions.html#ga314f5afbd81e51d5e319ba81398f2e06">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga314f5afbd81e51d5e319ba81398f2e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab940f454d4d3d0018f22bf472caf3b52" id="r_gab940f454d4d3d0018f22bf472caf3b52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gab940f454d4d3d0018f22bf472caf3b52">eosiosystem::system_contract::limitauthchg</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::vector&lt; name &gt; &amp;allow_perms, const std::vector&lt; name &gt; &amp;disallow_perms)</td></tr>
-<tr class="memdesc:gab940f454d4d3d0018f22bf472caf3b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ограничивает или отменяет ограничения на изменение авторизации. Позволяет аккаунту включиться в ограничения или выйти из них для действий updateauth, deleteauth, linkauth и unlinkauth. Если allow_perms не пуст, то authorized_by должен быть в векторе. Если disallow_perms не пуст, то authorized_by не должен быть в векторе. Если оба вектора пусты, то аккаунт выходит из ограничений.  <br /></td></tr>
+<tr class="memitem:gab940f454d4d3d0018f22bf472caf3b52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gab940f454d4d3d0018f22bf472caf3b52">eosiosystem::system_contract::limitauthchg</a> (const name &amp;<a class="el" href="structaccount.html">account</a>, const std::vector&lt; name &gt; &amp;allow_perms, const std::vector&lt; name &gt; &amp;disallow_perms)</td></tr>
+<tr class="memdesc:gab940f454d4d3d0018f22bf472caf3b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ограничивает или отменяет ограничения на изменение авторизации. Позволяет аккаунту включиться в ограничения или выйти из них для действий updateauth, deleteauth, linkauth и unlinkauth. Если allow_perms не пуст, то authorized_by должен быть в векторе. Если disallow_perms не пуст, то authorized_by не должен быть в векторе. Если оба вектора пусты, то аккаунт выходит из ограничений.  <a href="group__public__system__actions.html#gab940f454d4d3d0018f22bf472caf3b52">Подробнее...</a><br /></td></tr>
 <tr class="separator:gab940f454d4d3d0018f22bf472caf3b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf1c329fbf0e3e45b62b729e6ee743c62" id="r_gaf1c329fbf0e3e45b62b729e6ee743c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaf1c329fbf0e3e45b62b729e6ee743c62">eosiosystem::system_contract::bidname</a> (const name &amp;bidder, const name &amp;newname, const asset &amp;bid)</td></tr>
-<tr class="memdesc:gaf1c329fbf0e3e45b62b729e6ee743c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размещает ставку на премиум имя. Позволяет аккаунту разместить ставку на премиум имя. Ставки можно размещать только на имена длиной не более 5 символов без точек. Ставка должна быть больше текущей на 10%.  <br /></td></tr>
+<tr class="memitem:gaf1c329fbf0e3e45b62b729e6ee743c62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaf1c329fbf0e3e45b62b729e6ee743c62">eosiosystem::system_contract::bidname</a> (const name &amp;bidder, const name &amp;newname, const asset &amp;bid)</td></tr>
+<tr class="memdesc:gaf1c329fbf0e3e45b62b729e6ee743c62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размещает ставку на премиум имя. Позволяет аккаунту разместить ставку на премиум имя. Ставки можно размещать только на имена длиной не более 5 символов без точек. Ставка должна быть больше текущей на 10%.  <a href="group__public__system__actions.html#gaf1c329fbf0e3e45b62b729e6ee743c62">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaf1c329fbf0e3e45b62b729e6ee743c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ad9f05ad7242412bf5ad87706f923ff" id="r_ga1ad9f05ad7242412bf5ad87706f923ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga1ad9f05ad7242412bf5ad87706f923ff">eosiosystem::system_contract::bidrefund</a> (const name &amp;bidder, const name &amp;newname)</td></tr>
-<tr class="memdesc:ga1ad9f05ad7242412bf5ad87706f923ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ставку на имя. Позволяет аккаунту получить обратно сумму своей ставки на имя, если она была перебита.  <br /></td></tr>
+<tr class="memitem:ga1ad9f05ad7242412bf5ad87706f923ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga1ad9f05ad7242412bf5ad87706f923ff">eosiosystem::system_contract::bidrefund</a> (const name &amp;bidder, const name &amp;newname)</td></tr>
+<tr class="memdesc:ga1ad9f05ad7242412bf5ad87706f923ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ставку на имя. Позволяет аккаунту получить обратно сумму своей ставки на имя, если она была перебита.  <a href="group__public__system__actions.html#ga1ad9f05ad7242412bf5ad87706f923ff">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga1ad9f05ad7242412bf5ad87706f923ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae71212071f747832a2a56eb4868d9c81" id="r_gae71212071f747832a2a56eb4868d9c81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae71212071f747832a2a56eb4868d9c81">eosiosystem::system_contract::cfgpowerup</a> (<a class="el" href="structeosiosystem_1_1powerup__config.html">powerup_config</a> &amp;args)</td></tr>
-<tr class="memdesc:gae71212071f747832a2a56eb4868d9c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конфигурирует систему аренды ресурсов. Настраивает параметры рынка ресурсов powerup, включая количество дней и минимальную комиссию. Рынок становится доступным при первом вызове этого действия.  <br /></td></tr>
+<tr class="memitem:gae71212071f747832a2a56eb4868d9c81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae71212071f747832a2a56eb4868d9c81">eosiosystem::system_contract::cfgpowerup</a> (<a class="el" href="structeosiosystem_1_1powerup__config.html">powerup_config</a> &amp;args)</td></tr>
+<tr class="memdesc:gae71212071f747832a2a56eb4868d9c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конфигурирует систему аренды ресурсов. Настраивает параметры рынка ресурсов powerup, включая количество дней и минимальную комиссию. Рынок становится доступным при первом вызове этого действия.  <a href="group__public__system__actions.html#gae71212071f747832a2a56eb4868d9c81">Подробнее...</a><br /></td></tr>
 <tr class="separator:gae71212071f747832a2a56eb4868d9c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa573d628b237c167aa99fc71cb150736" id="r_gaa573d628b237c167aa99fc71cb150736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa573d628b237c167aa99fc71cb150736">eosiosystem::system_contract::powerupexec</a> (const name &amp;user, uint16_t <a class="el" href="eosio_8token__tests_8cpp.html#a92759dbaf055ca451db93a2d11393122">max</a>)</td></tr>
-<tr class="memdesc:gaa573d628b237c167aa99fc71cb150736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает очередь powerup и обновляет состояние. Действие не выполняет ничего связанного с конкретным пользователем, а обрабатывает очередь заказов powerup и обновляет состояние рынка ресурсов.  <br /></td></tr>
+<tr class="memitem:gaa573d628b237c167aa99fc71cb150736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gaa573d628b237c167aa99fc71cb150736">eosiosystem::system_contract::powerupexec</a> (const name &amp;user, uint16_t <a class="el" href="eosio_8token__tests_8cpp.html#a198a12b0d692958ae8d6a39e98bcc679">max</a>)</td></tr>
+<tr class="memdesc:gaa573d628b237c167aa99fc71cb150736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает очередь powerup и обновляет состояние. Действие не выполняет ничего связанного с конкретным пользователем, а обрабатывает очередь заказов powerup и обновляет состояние рынка ресурсов.  <a href="group__public__system__actions.html#gaa573d628b237c167aa99fc71cb150736">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa573d628b237c167aa99fc71cb150736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab3d6d9e77d6b9ac63b79e6d8104d8312" id="r_gab3d6d9e77d6b9ac63b79e6d8104d8312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gab3d6d9e77d6b9ac63b79e6d8104d8312">eosiosystem::system_contract::powerup</a> (const name &amp;payer, const name &amp;receiver, uint32_t days, const asset &amp;payment, const bool <a class="el" href="eosio_8token__tests_8cpp.html#a842c5467344efbabdf1da5f8aee477e1">transfer</a>=false)</td></tr>
-<tr class="memdesc:gab3d6d9e77d6b9ac63b79e6d8104d8312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Аренда ресурсов NET и CPU через систему powerup. Позволяет аккаунту арендовать ресурсы сети и CPU на определенное количество дней. Ресурсы предоставляются получателю, а плательщик оплачивает их стоимость.  <br /></td></tr>
+<tr class="memitem:gab3d6d9e77d6b9ac63b79e6d8104d8312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gab3d6d9e77d6b9ac63b79e6d8104d8312">eosiosystem::system_contract::powerup</a> (const name &amp;payer, const name &amp;receiver, uint32_t days, const asset &amp;payment, const bool <a class="el" href="eosio_8token__tests_8cpp.html#a842c5467344efbabdf1da5f8aee477e1">transfer</a>=false)</td></tr>
+<tr class="memdesc:gab3d6d9e77d6b9ac63b79e6d8104d8312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Аренда ресурсов NET и CPU через систему powerup. Позволяет аккаунту арендовать ресурсы сети и CPU на определенное количество дней. Ресурсы предоставляются получателю, а плательщик оплачивает их стоимость.  <a href="group__public__system__actions.html#gab3d6d9e77d6b9ac63b79e6d8104d8312">Подробнее...</a><br /></td></tr>
 <tr class="separator:gab3d6d9e77d6b9ac63b79e6d8104d8312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae75458e3f898b3bc834311fa54abc6a0" id="r_gae75458e3f898b3bc834311fa54abc6a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae75458e3f898b3bc834311fa54abc6a0">eosiosystem::system_contract::onblock</a> (ignore&lt; <a class="el" href="structeosiosystem_1_1block__header.html">block_header</a> &gt; header)</td></tr>
-<tr class="memdesc:gae75458e3f898b3bc834311fa54abc6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действие при блоке. Это специальное действие срабатывает при применении блока данным продюсером и не может быть сгенерировано из любого другого источника. Используется для оплаты продюсеров и расчета пропущенных блоков других продюсеров. Оплата продюсера депонируется в баланс ставки продюсера и может быть выведена со временем. Раз в минуту может обновлять активную конфигурацию продюсера из голосов продюсеров. Действие также заполняет таблицу blockinfo.  <br /></td></tr>
+<tr class="memitem:gae75458e3f898b3bc834311fa54abc6a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae75458e3f898b3bc834311fa54abc6a0">eosiosystem::system_contract::onblock</a> (ignore&lt; <a class="el" href="structeosiosystem_1_1block__header.html">block_header</a> &gt; header)</td></tr>
+<tr class="memdesc:gae75458e3f898b3bc834311fa54abc6a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действие при блоке. Это специальное действие срабатывает при применении блока данным продюсером и не может быть сгенерировано из любого другого источника. Используется для оплаты продюсеров и расчета пропущенных блоков других продюсеров. Оплата продюсера депонируется в баланс ставки продюсера и может быть выведена со временем. Раз в минуту может обновлять активную конфигурацию продюсера из голосов продюсеров. Действие также заполняет таблицу blockinfo.  <a href="group__public__system__actions.html#gae75458e3f898b3bc834311fa54abc6a0">Подробнее...</a><br /></td></tr>
 <tr class="separator:gae75458e3f898b3bc834311fa54abc6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7e80c965d15f6613db3ee04188d68af5" id="r_ga7e80c965d15f6613db3ee04188d68af5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga7e80c965d15f6613db3ee04188d68af5">eosiosystem::system_contract::emit</a> (eosio::asset new_emission)</td></tr>
-<tr class="memdesc:ga7e80c965d15f6613db3ee04188d68af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выпускает новые токены в фонд. Выпускает указанное количество новых токенов и передает их в сберегательный фонд.  <br /></td></tr>
+<tr class="memitem:ga7e80c965d15f6613db3ee04188d68af5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga7e80c965d15f6613db3ee04188d68af5">eosiosystem::system_contract::emit</a> (eosio::asset new_emission)</td></tr>
+<tr class="memdesc:ga7e80c965d15f6613db3ee04188d68af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выпускает новые токены в фонд. Выпускает указанное количество новых токенов и передает их в сберегательный фонд.  <a href="group__public__system__actions.html#ga7e80c965d15f6613db3ee04188d68af5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga7e80c965d15f6613db3ee04188d68af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga34b35d1f073383e599d4e2bb56e20524" id="r_ga34b35d1f073383e599d4e2bb56e20524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga34b35d1f073383e599d4e2bb56e20524">eosiosystem::system_contract::claimrewards</a> (const name &amp;<a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>)</td></tr>
-<tr class="memdesc:ga34b35d1f073383e599d4e2bb56e20524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает награды за производство блоков и голосование. Позволяет продюсеру получить награды за производство блоков и голосование. Награды можно получать не чаще одного раза в день.  <br /></td></tr>
+<tr class="memitem:ga34b35d1f073383e599d4e2bb56e20524"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga34b35d1f073383e599d4e2bb56e20524">eosiosystem::system_contract::claimrewards</a> (const name &amp;<a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>)</td></tr>
+<tr class="memdesc:ga34b35d1f073383e599d4e2bb56e20524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает награды за производство блоков и голосование. Позволяет продюсеру получить награды за производство блоков и голосование. Награды можно получать не чаще одного раза в день.  <a href="group__public__system__actions.html#ga34b35d1f073383e599d4e2bb56e20524">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga34b35d1f073383e599d4e2bb56e20524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga252441c7b5811068d336f37ab627ecd9" id="r_ga252441c7b5811068d336f37ab627ecd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga252441c7b5811068d336f37ab627ecd9">eosiosystem::system_contract::regproducer</a> (const name &amp;producer, const public_key &amp;producer_key, const std::string &amp;url, uint16_t location)</td></tr>
-<tr class="memdesc:ga252441c7b5811068d336f37ab627ecd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрирует блок-продюсера в системе. Создает или обновляет запись продюсера с публичным ключом, URL и локацией.  <br /></td></tr>
+<tr class="memitem:ga252441c7b5811068d336f37ab627ecd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga252441c7b5811068d336f37ab627ecd9">eosiosystem::system_contract::regproducer</a> (const name &amp;producer, const public_key &amp;producer_key, const std::string &amp;url, uint16_t location)</td></tr>
+<tr class="memdesc:ga252441c7b5811068d336f37ab627ecd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрирует блок-продюсера в системе. Создает или обновляет запись продюсера с публичным ключом, URL и локацией.  <a href="group__public__system__actions.html#ga252441c7b5811068d336f37ab627ecd9">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga252441c7b5811068d336f37ab627ecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c1143de786b7d7601ac0b0968cb0f19" id="r_ga6c1143de786b7d7601ac0b0968cb0f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga6c1143de786b7d7601ac0b0968cb0f19">eosiosystem::system_contract::regproducer2</a> (const name &amp;producer, const eosio::block_signing_authority &amp;producer_authority, const std::string &amp;url, uint16_t location)</td></tr>
-<tr class="memdesc:ga6c1143de786b7d7601ac0b0968cb0f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрирует блок-продюсера с расширенной авторизацией подписи блоков. Создает или обновляет запись продюсера с блок-подписывающей авторизацией, URL и локацией.  <br /></td></tr>
+<tr class="memitem:ga6c1143de786b7d7601ac0b0968cb0f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga6c1143de786b7d7601ac0b0968cb0f19">eosiosystem::system_contract::regproducer2</a> (const name &amp;producer, const eosio::block_signing_authority &amp;producer_authority, const std::string &amp;url, uint16_t location)</td></tr>
+<tr class="memdesc:ga6c1143de786b7d7601ac0b0968cb0f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрирует блок-продюсера с расширенной авторизацией подписи блоков. Создает или обновляет запись продюсера с блок-подписывающей авторизацией, URL и локацией.  <a href="group__public__system__actions.html#ga6c1143de786b7d7601ac0b0968cb0f19">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6c1143de786b7d7601ac0b0968cb0f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b8c45d3226929472bc5785742c05152" id="r_ga0b8c45d3226929472bc5785742c05152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga0b8c45d3226929472bc5785742c05152">eosiosystem::system_contract::unregprod</a> (const name &amp;producer)</td></tr>
-<tr class="memdesc:ga0b8c45d3226929472bc5785742c05152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет регистрацию блок-продюсера. Деактивирует продюсера, делая его неактивным в системе.  <br /></td></tr>
+<tr class="memitem:ga0b8c45d3226929472bc5785742c05152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga0b8c45d3226929472bc5785742c05152">eosiosystem::system_contract::unregprod</a> (const name &amp;producer)</td></tr>
+<tr class="memdesc:ga0b8c45d3226929472bc5785742c05152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменяет регистрацию блок-продюсера. Деактивирует продюсера, делая его неактивным в системе.  <a href="group__public__system__actions.html#ga0b8c45d3226929472bc5785742c05152">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga0b8c45d3226929472bc5785742c05152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga19d51a2b9b57ffb656612c280ee4ab4e" id="r_ga19d51a2b9b57ffb656612c280ee4ab4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga19d51a2b9b57ffb656612c280ee4ab4e">eosiosystem::system_contract::voteproducer</a> (const name &amp;voter, const name &amp;proxy, const std::vector&lt; name &gt; &amp;producers)</td></tr>
-<tr class="memdesc:ga19d51a2b9b57ffb656612c280ee4ab4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосует за продюсеров или делегирует голос прокси. Позволяет пользователю голосовать за до 30 продюсеров или делегировать свой голос прокси.  <br /></td></tr>
+<tr class="memitem:ga19d51a2b9b57ffb656612c280ee4ab4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga19d51a2b9b57ffb656612c280ee4ab4e">eosiosystem::system_contract::voteproducer</a> (const name &amp;voter, const name &amp;proxy, const std::vector&lt; name &gt; &amp;producers)</td></tr>
+<tr class="memdesc:ga19d51a2b9b57ffb656612c280ee4ab4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосует за продюсеров или делегирует голос прокси. Позволяет пользователю голосовать за до 30 продюсеров или делегировать свой голос прокси.  <a href="group__public__system__actions.html#ga19d51a2b9b57ffb656612c280ee4ab4e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga19d51a2b9b57ffb656612c280ee4ab4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd8f9ea7890c647010bc9bccdcda6ba9" id="r_gafd8f9ea7890c647010bc9bccdcda6ba9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gafd8f9ea7890c647010bc9bccdcda6ba9">eosiosystem::system_contract::voteupdate</a> (const name &amp;voter_name)</td></tr>
-<tr class="memdesc:gafd8f9ea7890c647010bc9bccdcda6ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет голоса пользователя на основе текущих застейканных токенов. Пересчитывает вес голоса пользователя и обновляет его голоса за продюсеров.  <br /></td></tr>
+<tr class="memitem:gafd8f9ea7890c647010bc9bccdcda6ba9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gafd8f9ea7890c647010bc9bccdcda6ba9">eosiosystem::system_contract::voteupdate</a> (const name &amp;voter_name)</td></tr>
+<tr class="memdesc:gafd8f9ea7890c647010bc9bccdcda6ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет голоса пользователя на основе текущих застейканных токенов. Пересчитывает вес голоса пользователя и обновляет его голоса за продюсеров.  <a href="group__public__system__actions.html#gafd8f9ea7890c647010bc9bccdcda6ba9">Подробнее...</a><br /></td></tr>
 <tr class="separator:gafd8f9ea7890c647010bc9bccdcda6ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <h2 class="groupheader">Функции</h2>
 <a id="ga1873247483b285e19010b7469419a60d" name="ga1873247483b285e19010b7469419a60d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1873247483b285e19010b7469419a60d">&#9670;&#160;</a></span>activate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1873247483b285e19010b7469419a60d">&#9670;&nbsp;</a></span>activate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +275,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gaf1c329fbf0e3e45b62b729e6ee743c62" name="gaf1c329fbf0e3e45b62b729e6ee743c62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf1c329fbf0e3e45b62b729e6ee743c62">&#9670;&#160;</a></span>bidname()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1c329fbf0e3e45b62b729e6ee743c62">&#9670;&nbsp;</a></span>bidname()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,7 +320,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga1ad9f05ad7242412bf5ad87706f923ff" name="ga1ad9f05ad7242412bf5ad87706f923ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1ad9f05ad7242412bf5ad87706f923ff">&#9670;&#160;</a></span>bidrefund()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ad9f05ad7242412bf5ad87706f923ff">&#9670;&nbsp;</a></span>bidrefund()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +358,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga04be77ea83f87d1533606390c37cf5d1" name="ga04be77ea83f87d1533606390c37cf5d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga04be77ea83f87d1533606390c37cf5d1">&#9670;&#160;</a></span>buyram()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04be77ea83f87d1533606390c37cf5d1">&#9670;&nbsp;</a></span>buyram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +404,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga93950629ac6f931b47542727a5411097" name="ga93950629ac6f931b47542727a5411097"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga93950629ac6f931b47542727a5411097">&#9670;&#160;</a></span>buyrambytes()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93950629ac6f931b47542727a5411097">&#9670;&nbsp;</a></span>buyrambytes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,7 +449,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gae71212071f747832a2a56eb4868d9c81" name="gae71212071f747832a2a56eb4868d9c81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae71212071f747832a2a56eb4868d9c81">&#9670;&#160;</a></span>cfgpowerup()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae71212071f747832a2a56eb4868d9c81">&#9670;&nbsp;</a></span>cfgpowerup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -483,7 +476,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga34b35d1f073383e599d4e2bb56e20524" name="ga34b35d1f073383e599d4e2bb56e20524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga34b35d1f073383e599d4e2bb56e20524">&#9670;&#160;</a></span>claimrewards()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34b35d1f073383e599d4e2bb56e20524">&#9670;&nbsp;</a></span>claimrewards()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,7 +503,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga9ca6a4de00cf033d13ed6d587440d2fc" name="ga9ca6a4de00cf033d13ed6d587440d2fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ca6a4de00cf033d13ed6d587440d2fc">&#9670;&#160;</a></span>createaccnt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ca6a4de00cf033d13ed6d587440d2fc">&#9670;&nbsp;</a></span>createaccnt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +555,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gaa54b498595abb1a3ad9c62c597d4f7b5" name="gaa54b498595abb1a3ad9c62c597d4f7b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa54b498595abb1a3ad9c62c597d4f7b5">&#9670;&#160;</a></span>delegatebw()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa54b498595abb1a3ad9c62c597d4f7b5">&#9670;&nbsp;</a></span>delegatebw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -621,7 +614,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga7e80c965d15f6613db3ee04188d68af5" name="ga7e80c965d15f6613db3ee04188d68af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7e80c965d15f6613db3ee04188d68af5">&#9670;&#160;</a></span>emit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e80c965d15f6613db3ee04188d68af5">&#9670;&nbsp;</a></span>emit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,7 +649,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga314f5afbd81e51d5e319ba81398f2e06" name="ga314f5afbd81e51d5e319ba81398f2e06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga314f5afbd81e51d5e319ba81398f2e06">&#9670;&#160;</a></span>init()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga314f5afbd81e51d5e319ba81398f2e06">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +693,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gab940f454d4d3d0018f22bf472caf3b52" name="gab940f454d4d3d0018f22bf472caf3b52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab940f454d4d3d0018f22bf472caf3b52">&#9670;&#160;</a></span>limitauthchg()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab940f454d4d3d0018f22bf472caf3b52">&#9670;&nbsp;</a></span>limitauthchg()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,7 +738,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gae75458e3f898b3bc834311fa54abc6a0" name="gae75458e3f898b3bc834311fa54abc6a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae75458e3f898b3bc834311fa54abc6a0">&#9670;&#160;</a></span>onblock()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae75458e3f898b3bc834311fa54abc6a0">&#9670;&nbsp;</a></span>onblock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -768,15 +761,15 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>eosio.system</code> </dd></dl>
-<p>until activation, no new rewards are paid</p>
-<p>start the presses</p>
-<p>At startup the initial producer may not be one that is registered / elected and therefore there may be no producer object for them.</p>
-<p>only update block producers once every minute, block_timestamp is in half seconds</p>
+<p >until activation, no new rewards are paid</p>
+<p >start the presses</p>
+<p >At startup the initial producer may not be one that is registered / elected and therefore there may be no producer object for them.</p>
+<p >only update block producers once every minute, block_timestamp is in half seconds</p>
 
 </div>
 </div>
 <a id="gab3d6d9e77d6b9ac63b79e6d8104d8312" name="gab3d6d9e77d6b9ac63b79e6d8104d8312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab3d6d9e77d6b9ac63b79e6d8104d8312">&#9670;&#160;</a></span>powerup()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3d6d9e77d6b9ac63b79e6d8104d8312">&#9670;&nbsp;</a></span>powerup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -835,7 +828,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gaa573d628b237c167aa99fc71cb150736" name="gaa573d628b237c167aa99fc71cb150736"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa573d628b237c167aa99fc71cb150736">&#9670;&#160;</a></span>powerupexec()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa573d628b237c167aa99fc71cb150736">&#9670;&nbsp;</a></span>powerupexec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -873,7 +866,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga10a63e006f9869caeaf2592bdfbccc42" name="ga10a63e006f9869caeaf2592bdfbccc42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10a63e006f9869caeaf2592bdfbccc42">&#9670;&#160;</a></span>refund()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10a63e006f9869caeaf2592bdfbccc42">&#9670;&nbsp;</a></span>refund()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -900,7 +893,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga252441c7b5811068d336f37ab627ecd9" name="ga252441c7b5811068d336f37ab627ecd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga252441c7b5811068d336f37ab627ecd9">&#9670;&#160;</a></span>regproducer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga252441c7b5811068d336f37ab627ecd9">&#9670;&nbsp;</a></span>regproducer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -952,7 +945,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga6c1143de786b7d7601ac0b0968cb0f19" name="ga6c1143de786b7d7601ac0b0968cb0f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6c1143de786b7d7601ac0b0968cb0f19">&#9670;&#160;</a></span>regproducer2()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c1143de786b7d7601ac0b0968cb0f19">&#9670;&nbsp;</a></span>regproducer2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1004,7 +997,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga2a41dc1871059a536a55626b8c76f5b9" name="ga2a41dc1871059a536a55626b8c76f5b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2a41dc1871059a536a55626b8c76f5b9">&#9670;&#160;</a></span>rmvproducer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a41dc1871059a536a55626b8c76f5b9">&#9670;&nbsp;</a></span>rmvproducer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1031,7 +1024,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga6b00b900a128d2718244ac8a408f65d3" name="ga6b00b900a128d2718244ac8a408f65d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6b00b900a128d2718244ac8a408f65d3">&#9670;&#160;</a></span>sellram()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b00b900a128d2718244ac8a408f65d3">&#9670;&nbsp;</a></span>sellram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1069,7 +1062,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga9a005d230746b68cafa934a067f287af" name="ga9a005d230746b68cafa934a067f287af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9a005d230746b68cafa934a067f287af">&#9670;&#160;</a></span>setacctcpu()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a005d230746b68cafa934a067f287af">&#9670;&nbsp;</a></span>setacctcpu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1107,7 +1100,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gaa4559928f468c62867916d1251fa33b3" name="gaa4559928f468c62867916d1251fa33b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa4559928f468c62867916d1251fa33b3">&#9670;&#160;</a></span>setacctnet()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4559928f468c62867916d1251fa33b3">&#9670;&nbsp;</a></span>setacctnet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1145,7 +1138,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gacdd7c75402f43876338d33649d2e6903" name="gacdd7c75402f43876338d33649d2e6903"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacdd7c75402f43876338d33649d2e6903">&#9670;&#160;</a></span>setacctram()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdd7c75402f43876338d33649d2e6903">&#9670;&nbsp;</a></span>setacctram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1183,7 +1176,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gad5b9178dfbe60ba6059c52d488ecf303" name="gad5b9178dfbe60ba6059c52d488ecf303"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad5b9178dfbe60ba6059c52d488ecf303">&#9670;&#160;</a></span>setalimits()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5b9178dfbe60ba6059c52d488ecf303">&#9670;&nbsp;</a></span>setalimits()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1235,7 +1228,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gaa4ea1b93cfb3d99fcaaabb994c711bee" name="gaa4ea1b93cfb3d99fcaaabb994c711bee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa4ea1b93cfb3d99fcaaabb994c711bee">&#9670;&#160;</a></span>setparams()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4ea1b93cfb3d99fcaaabb994c711bee">&#9670;&nbsp;</a></span>setparams()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1262,7 +1255,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga648ec27a9bc3bf7e36c5c88f6932b9ca" name="ga648ec27a9bc3bf7e36c5c88f6932b9ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga648ec27a9bc3bf7e36c5c88f6932b9ca">&#9670;&#160;</a></span>setpriv()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga648ec27a9bc3bf7e36c5c88f6932b9ca">&#9670;&nbsp;</a></span>setpriv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1300,7 +1293,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gad8a6eb47fd97c9f243019d93916ff78f" name="gad8a6eb47fd97c9f243019d93916ff78f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad8a6eb47fd97c9f243019d93916ff78f">&#9670;&#160;</a></span>setram()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8a6eb47fd97c9f243019d93916ff78f">&#9670;&nbsp;</a></span>setram()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1323,13 +1316,13 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>eosio.system</code> </dd></dl>
-<p>decreasing ram might result market maker issues</p>
-<p>Increase the amount of ram for sale based upon the change in max ram size.</p>
+<p >decreasing ram might result market maker issues</p>
+<p >Increase the amount of ram for sale based upon the change in max ram size.</p>
 
 </div>
 </div>
 <a id="ga7d984add31b6060bb59d472f9f1bd1a1" name="ga7d984add31b6060bb59d472f9f1bd1a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d984add31b6060bb59d472f9f1bd1a1">&#9670;&#160;</a></span>setramrate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d984add31b6060bb59d472f9f1bd1a1">&#9670;&nbsp;</a></span>setramrate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1356,7 +1349,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga4db0be2c90d342ecd269fdbb57c51091" name="ga4db0be2c90d342ecd269fdbb57c51091"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4db0be2c90d342ecd269fdbb57c51091">&#9670;&#160;</a></span>undelegatebw()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4db0be2c90d342ecd269fdbb57c51091">&#9670;&nbsp;</a></span>undelegatebw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1408,7 +1401,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga0b8c45d3226929472bc5785742c05152" name="ga0b8c45d3226929472bc5785742c05152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0b8c45d3226929472bc5785742c05152">&#9670;&#160;</a></span>unregprod()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b8c45d3226929472bc5785742c05152">&#9670;&nbsp;</a></span>unregprod()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1435,7 +1428,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gae248c8483e7ff56c697793c49bd58700" name="gae248c8483e7ff56c697793c49bd58700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae248c8483e7ff56c697793c49bd58700">&#9670;&#160;</a></span>update_ram_supply()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae248c8483e7ff56c697793c49bd58700">&#9670;&nbsp;</a></span>update_ram_supply()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1458,12 +1451,12 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div><div class="memdoc">
 
 <p>Обновляет предложение RAM на основе времени с последнего увеличения. Увеличивает количество RAM доступного для продажи на основе времени блоков. </p>
-<p>Increase the amount of ram for sale based upon the change in max ram size.</p>
+<p >Increase the amount of ram for sale based upon the change in max ram size.</p>
 
 </div>
 </div>
 <a id="ga0af4a55018801131ae7dc7a923bead0b" name="ga0af4a55018801131ae7dc7a923bead0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0af4a55018801131ae7dc7a923bead0b">&#9670;&#160;</a></span>updtrevision()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0af4a55018801131ae7dc7a923bead0b">&#9670;&nbsp;</a></span>updtrevision()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1490,7 +1483,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="ga19d51a2b9b57ffb656612c280ee4ab4e" name="ga19d51a2b9b57ffb656612c280ee4ab4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga19d51a2b9b57ffb656612c280ee4ab4e">&#9670;&#160;</a></span>voteproducer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19d51a2b9b57ffb656612c280ee4ab4e">&#9670;&nbsp;</a></span>voteproducer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1535,7 +1528,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 </div>
 </div>
 <a id="gafd8f9ea7890c647010bc9bccdcda6ba9" name="gafd8f9ea7890c647010bc9bccdcda6ba9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafd8f9ea7890c647010bc9bccdcda6ba9">&#9670;&#160;</a></span>voteupdate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd8f9ea7890c647010bc9bccdcda6ba9">&#9670;&nbsp;</a></span>voteupdate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1567,7 +1560,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

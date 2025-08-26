@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,16 +128,9 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
@@ -160,23 +153,23 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:a3b6083ab1ad701b4b7e35b4891fd7806" id="r_a3b6083ab1ad701b4b7e35b4891fd7806"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;candidates&quot;_n, <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">candidate_legacy::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806">candidates_legacy_index</a></td></tr>
+<tr class="memitem:a3b6083ab1ad701b4b7e35b4891fd7806"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;candidates&quot;_n, <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">candidate_legacy::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806">candidates_legacy_index</a></td></tr>
 <tr class="separator:a3b6083ab1ad701b4b7e35b4891fd7806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6257257542818d58b281ff1dbf6af1f3" id="r_a6257257542818d58b281ff1dbf6af1f3"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;candidates2&quot;_n, <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">candidate::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">candidates_index</a></td></tr>
+<tr class="memitem:a6257257542818d58b281ff1dbf6af1f3"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;candidates2&quot;_n, <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">candidate::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">candidates_index</a></td></tr>
 <tr class="separator:a6257257542818d58b281ff1dbf6af1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:acddd176ac46ca054d4d6d54cf48c9bad" id="r_acddd176ac46ca054d4d6d54cf48c9bad"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">get_candidate_by_hash</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:acddd176ac46ca054d4d6d54cf48c9bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кандидата по хэшу регистрации.  <br /></td></tr>
+<tr class="memitem:acddd176ac46ca054d4d6d54cf48c9bad"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">get_candidate_by_hash</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:acddd176ac46ca054d4d6d54cf48c9bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кандидата по хэшу регистрации.  <a href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">Подробнее...</a><br /></td></tr>
 <tr class="separator:acddd176ac46ca054d4d6d54cf48c9bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a165e72a766426e1399f38888fd948190" id="r_a165e72a766426e1399f38888fd948190"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">get_active_participants_count</a> (eosio::name coopname)</td></tr>
-<tr class="memdesc:a165e72a766426e1399f38888fd948190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает количество активных пайщиков кооператива.  <br /></td></tr>
+<tr class="memitem:a165e72a766426e1399f38888fd948190"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">get_active_participants_count</a> (eosio::name coopname)</td></tr>
+<tr class="memdesc:a165e72a766426e1399f38888fd948190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает количество активных пайщиков кооператива.  <a href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">Подробнее...</a><br /></td></tr>
 <tr class="separator:a165e72a766426e1399f38888fd948190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a6257257542818d58b281ff1dbf6af1f3" name="a6257257542818d58b281ff1dbf6af1f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6257257542818d58b281ff1dbf6af1f3">&#9670;&#160;</a></span>candidates_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6257257542818d58b281ff1dbf6af1f3">&#9670;&nbsp;</a></span>candidates_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +183,7 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 </div>
 </div>
 <a id="a3b6083ab1ad701b4b7e35b4891fd7806" name="a3b6083ab1ad701b4b7e35b4891fd7806"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b6083ab1ad701b4b7e35b4891fd7806">&#9670;&#160;</a></span>candidates_legacy_index</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6083ab1ad701b4b7e35b4891fd7806">&#9670;&nbsp;</a></span>candidates_legacy_index</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +198,7 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 </div>
 <h2 class="groupheader">Функции</h2>
 <a id="a165e72a766426e1399f38888fd948190" name="a165e72a766426e1399f38888fd948190"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a165e72a766426e1399f38888fd948190">&#9670;&#160;</a></span>get_active_participants_count()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a165e72a766426e1399f38888fd948190">&#9670;&nbsp;</a></span>get_active_participants_count()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +239,7 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 </div>
 </div>
 <a id="acddd176ac46ca054d4d6d54cf48c9bad" name="acddd176ac46ca054d4d6d54cf48c9bad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acddd176ac46ca054d4d6d54cf48c9bad">&#9670;&#160;</a></span>get_candidate_by_hash()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acddd176ac46ca054d4d6d54cf48c9bad">&#9670;&nbsp;</a></span>get_candidate_by_hash()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,7 +291,7 @@ $(document).ready(function(){initNavTree('namespace_registrator.html',''); initR
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespace_registrator.html">Registrator</a></li>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">

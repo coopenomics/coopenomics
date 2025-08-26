@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
 <meta property="og:title" content="Doxygen Awesome" />
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 </table>
 </div>
 <!-- end header part -->
-<!-- Создано системой Doxygen 1.9.8 -->
+<!-- Создано системой Doxygen 1.9.3 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search/",'.html');
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -128,28 +128,21 @@ $(document).ready(function(){initNavTree('group__public__capital__refresh__progr
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<div id="MSearchResults">
-<div class="SRPage">
-<div id="SRIndex">
-<div id="SRResults"></div>
-<div class="SRStatus" id="Loading">Загрузка...</div>
-<div class="SRStatus" id="Searching">Поиск...</div>
-<div class="SRStatus" id="NoMatches">Не найдено</div>
-</div>
-</div>
-</div>
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
 </div>
 
 <div class="header">
   <div class="headertitle"><div class="title">Обновление кошелька программы<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p>Процесс обновления в кошельке вкладчика информации о накопленном обеспечения членскими взносами в программе для возврата. Использует алгоритм CRPS для расчёта персональных начислений на основе кумулятивного показателя программы и доли вкладчика.</p>
-<p>Процесс обновляет доступные средства в кошельке программы вкладчика на основе разности между текущим кумулятивным показателем программы и персональным слепком вкладчика.</p>
+<p >Процесс обновления в кошельке вкладчика информации о накопленном обеспечения членскими взносами в программе для возврата. Использует алгоритм CRPS для расчёта персональных начислений на основе кумулятивного показателя программы и доли вкладчика.</p>
+<p >Процесс обновляет доступные средства в кошельке программы вкладчика на основе разности между текущим кумулятивным показателем программы и персональным слепком вкладчика.</p>
 <dl class="section note"><dt>Заметки</dt><dd>кошелёк программы содержит информацию о накопленных членских взносах, доступных к возврату.</dd></dl>
 <h2><a class="anchor" id="autotoc_md32"></a>
 Диаграмма процесса</h2>
-<p> 
+<p > 
 <div class="mermaid">
 sequenceDiagram
     participant P as Вкладчик
@@ -168,15 +161,15 @@ sequenceDiagram
 Пошаговое описание</h2>
 <h3><a class="anchor" id="autotoc_md34"></a>
 Шаг 1: Обновление кошелька программы</h3>
-<p><a class="el" href="group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea">Обновление кошелька программы</a></p>
-<p>Вкладчик инициирует обновление своего кошелька программы для обновления информации о доступных средствах к возврату из числа членских взносов в программу.</p>
-<p>Механика расчёта:</p><ul>
+<p ><a class="el" href="group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea">Обновление кошелька программы</a></p>
+<p >Вкладчик инициирует обновление своего кошелька программы для обновления информации о доступных средствах к возврату из числа членских взносов в программу.</p>
+<p >Механика расчёта:</p><ul>
 <li>доля участника равна сумме заблокированных средств и доступных средств в кошельке программы</li>
 <li>delta_crps равна разности кумулятивного показателя программы и персонального слепка вкладчика <br  />
 </li>
 <li>новые начисления равны произведению delta_crps на долю участника</li>
 </ul>
-<p>Вкладчик получает начисления пропорционально своей доле в программе. Алгоритм CRPS обеспечивает справедливое распределение с учётом времени вхождения в программу и исключает начисления задним числом.</p>
+<p >Вкладчик получает начисления пропорционально своей доле в программе. Алгоритм CRPS обеспечивает справедливое распределение с учётом времени вхождения в программу и исключает начисления задним числом.</p>
 <dl class="section note"><dt>Заметки</dt><dd>Математический пример: Вкладчик с долей 100000 рублей при кумулятивном показателе программы равном 0.15 и персональном слепке вкладчика равном 0.05 получит: (0.15 - 0.05) * 100000 = 10000 рублей.</dd></dl>
 <dl class="section post"><dt>Постусловие</dt><dd>доступные средства в кошельке программы увеличиваются на сумму новых начислений </dd>
 <dd>
@@ -193,7 +186,7 @@ sequenceDiagram
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 <script type="text/javascript">
