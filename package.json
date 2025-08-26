@@ -1,6 +1,6 @@
 {
 	"scripts": {
-	  "docs-publish": "pnpm gh-pages --nojekyll -d site --repo git@github.com:coopenomics/doctrine.git"
+	  "docs-publish": "pnpm gh-pages --nojekyll -d site --repo git@github.com:coopenomics/coopenomics.git"
 	},
 	"dependencies": {
 		"gh-pages": "^6.1.1"
