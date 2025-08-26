@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/lib/shared_soviet.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('shared__soviet_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл shared_soviet.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+</div>
+<p><a href="shared__soviet_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_soviet" id="r_namespace_soviet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_soviet.html">Soviet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ad60091c12735c92b09cb8157f2585a6b" id="r_ad60091c12735c92b09cb8157f2585a6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name type, checksum256 hash, name callback_contract, name confirm_callback, name decline_callback, <a class="el" href="structdocument2.html">document2</a> statement, std::string meta</td></tr>
+<tr class="separator:ad60091c12735c92b09cb8157f2585a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b9238650968640df3f667e9ab89178" id="r_af1b9238650968640df3f667e9ab89178"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>, name type, checksum256 approval_hash, name callback_contract, name callback_action_approve, name callback_action_decline, std::string meta</td></tr>
+<tr class="separator:af1b9238650968640df3f667e9ab89178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fce21808c492f33adb4f9fc844660a5" id="r_a8fce21808c492f33adb4f9fc844660a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">DECLINE_CALLBACK_SIGNATURE</a>&#160;&#160;&#160;name coopname, checksum256 hash, std::string reason</td></tr>
+<tr class="separator:a8fce21808c492f33adb4f9fc844660a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206e28cd6d6191f48b32d42fdeb878ec" id="r_a206e28cd6d6191f48b32d42fdeb878ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:a206e28cd6d6191f48b32d42fdeb878ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779972998ecf7ea47fdbea1960aefce9" id="r_a779972998ecf7ea47fdbea1960aefce9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:a779972998ecf7ea47fdbea1960aefce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec64d3b68504b000f68b0a31de4bdd5" id="r_a4ec64d3b68504b000f68b0a31de4bdd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:a4ec64d3b68504b000f68b0a31de4bdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5da0c75ff2772d5af152463845b1830" id="r_ac5da0c75ff2772d5af152463845b1830"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:ac5da0c75ff2772d5af152463845b1830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93d9710591738a183988beb6084d441" id="r_ab93d9710591738a183988beb6084d441"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:ab93d9710591738a183988beb6084d441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f971a5eeabcc60de262be21d56a17bf" id="r_a3f971a5eeabcc60de262be21d56a17bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:a3f971a5eeabcc60de262be21d56a17bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b063cf349aa2bf79d619ae244da2556" id="r_a3b063cf349aa2bf79d619ae244da2556"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name type, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td></tr>
+<tr class="separator:a3b063cf349aa2bf79d619ae244da2556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee8ec7d6489adcb3f0708e303e66f74b" id="r_aee8ec7d6489adcb3f0708e303e66f74b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package</td></tr>
+<tr class="separator:aee8ec7d6489adcb3f0708e303e66f74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039a246ed508cb98eadd3c61320218e7" id="r_a039a246ed508cb98eadd3c61320218e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">OPENPROGWALL_SIGNATURE</a>&#160;&#160;&#160;name coopname, name username, name program_type, uint64_t agreement_id</td></tr>
+<tr class="separator:a039a246ed508cb98eadd3c61320218e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a9b54c7e95e7a4553628d76257816514d" id="r_a9b54c7e95e7a4553628d76257816514d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d">createagenda_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
+<tr class="separator:a9b54c7e95e7a4553628d76257816514d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693e4deeebe24d80d511f5d8517d6249" id="r_a693e4deeebe24d80d511f5d8517d6249"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249">createapprv_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
+<tr class="separator:a693e4deeebe24d80d511f5d8517d6249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac071a9a6ce438b190e29e408ed4b8241" id="r_ac071a9a6ce438b190e29e408ed4b8241"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#ac071a9a6ce438b190e29e408ed4b8241">decline_callback_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">DECLINE_CALLBACK_SIGNATURE</a>)</td></tr>
+<tr class="separator:ac071a9a6ce438b190e29e408ed4b8241"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2152571aed7fcaaa5a3f9c4b4843f06" id="r_ab2152571aed7fcaaa5a3f9c4b4843f06"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#ab2152571aed7fcaaa5a3f9c4b4843f06">newsubmitted_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>)</td></tr>
+<tr class="separator:ab2152571aed7fcaaa5a3f9c4b4843f06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461bfb688f2a0b8b1509b576dfaae866" id="r_a461bfb688f2a0b8b1509b576dfaae866"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a461bfb688f2a0b8b1509b576dfaae866">newresolved_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>)</td></tr>
+<tr class="separator:a461bfb688f2a0b8b1509b576dfaae866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69bbcacb08452549f6d5918538a0c1c2" id="r_a69bbcacb08452549f6d5918538a0c1c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a69bbcacb08452549f6d5918538a0c1c2">newdecision_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>)</td></tr>
+<tr class="separator:a69bbcacb08452549f6d5918538a0c1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c8d28c327ee0ef52e0b3ad8363c70b" id="r_a71c8d28c327ee0ef52e0b3ad8363c70b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a71c8d28c327ee0ef52e0b3ad8363c70b">newdeclined_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>)</td></tr>
+<tr class="separator:a71c8d28c327ee0ef52e0b3ad8363c70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3194772d5ea5c670bd3346bd9092c329" id="r_a3194772d5ea5c670bd3346bd9092c329"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a3194772d5ea5c670bd3346bd9092c329">newact_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>)</td></tr>
+<tr class="separator:a3194772d5ea5c670bd3346bd9092c329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697ba71d248bbff1151aee923658a010" id="r_a697ba71d248bbff1151aee923658a010"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a697ba71d248bbff1151aee923658a010">newlink_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>)</td></tr>
+<tr class="separator:a697ba71d248bbff1151aee923658a010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469c0e6f099986808454e29e331a89b5" id="r_a469c0e6f099986808454e29e331a89b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5">newagreement_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>)</td></tr>
+<tr class="separator:a469c0e6f099986808454e29e331a89b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdb626b1f08524bd2a859b083247527f" id="r_abdb626b1f08524bd2a859b083247527f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#abdb626b1f08524bd2a859b083247527f">newpackage_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>)</td></tr>
+<tr class="separator:abdb626b1f08524bd2a859b083247527f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece1205460ace8f2cb031fd226906752" id="r_aece1205460ace8f2cb031fd226906752"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared__soviet_8hpp.html#aece1205460ace8f2cb031fd226906752">openprogwall_interface</a> = void(<a class="el" href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">OPENPROGWALL_SIGNATURE</a>)</td></tr>
+<tr class="separator:aece1205460ace8f2cb031fd226906752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a62507a32e3b1f484f8af7dc3606795ff" id="r_a62507a32e3b1f484f8af7dc3606795ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff">Soviet::create_agenda</a> (name calling_contract, <a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:a62507a32e3b1f484f8af7dc3606795ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт агенду в совете  <br /></td></tr>
+<tr class="separator:a62507a32e3b1f484f8af7dc3606795ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a7d429ce980f07d8fe02c278b037bd" id="r_ac2a7d429ce980f07d8fe02c278b037bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a> (name calling_contract, <a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ac2a7d429ce980f07d8fe02c278b037bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создаёт аппрув в совете  <br /></td></tr>
+<tr class="separator:ac2a7d429ce980f07d8fe02c278b037bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ad60091c12735c92b09cb8157f2585a6b" name="ad60091c12735c92b09cb8157f2585a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60091c12735c92b09cb8157f2585a6b">&#9670;&#160;</a></span>CREATEAGENDA_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CREATEAGENDA_SIGNATURE&#160;&#160;&#160;name coopname, name username, name type, checksum256 hash, name callback_contract, name confirm_callback, name decline_callback, <a class="el" href="structdocument2.html">document2</a> statement, std::string meta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1b9238650968640df3f667e9ab89178" name="af1b9238650968640df3f667e9ab89178"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b9238650968640df3f667e9ab89178">&#9670;&#160;</a></span>CREATEAPPRV_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CREATEAPPRV_SIGNATURE&#160;&#160;&#160;name coopname, name username, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>, name type, checksum256 approval_hash, name callback_contract, name callback_action_approve, name callback_action_decline, std::string meta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fce21808c492f33adb4f9fc844660a5" name="a8fce21808c492f33adb4f9fc844660a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fce21808c492f33adb4f9fc844660a5">&#9670;&#160;</a></span>DECLINE_CALLBACK_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DECLINE_CALLBACK_SIGNATURE&#160;&#160;&#160;name coopname, checksum256 hash, std::string reason</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab93d9710591738a183988beb6084d441" name="ab93d9710591738a183988beb6084d441"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93d9710591738a183988beb6084d441">&#9670;&#160;</a></span>NEWACT_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWACT_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b063cf349aa2bf79d619ae244da2556" name="a3b063cf349aa2bf79d619ae244da2556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b063cf349aa2bf79d619ae244da2556">&#9670;&#160;</a></span>NEWAGREEMENT_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWAGREEMENT_SIGNATURE&#160;&#160;&#160;name coopname, name username, name type, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ec64d3b68504b000f68b0a31de4bdd5" name="a4ec64d3b68504b000f68b0a31de4bdd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec64d3b68504b000f68b0a31de4bdd5">&#9670;&#160;</a></span>NEWDECISION_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWDECISION_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5da0c75ff2772d5af152463845b1830" name="ac5da0c75ff2772d5af152463845b1830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5da0c75ff2772d5af152463845b1830">&#9670;&#160;</a></span>NEWDECLINED_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWDECLINED_SIGNATURE&#160;&#160;&#160;name coopname, name username, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f971a5eeabcc60de262be21d56a17bf" name="a3f971a5eeabcc60de262be21d56a17bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f971a5eeabcc60de262be21d56a17bf">&#9670;&#160;</a></span>NEWLINK_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWLINK_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee8ec7d6489adcb3f0708e303e66f74b" name="aee8ec7d6489adcb3f0708e303e66f74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee8ec7d6489adcb3f0708e303e66f74b">&#9670;&#160;</a></span>NEWPACKAGE_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWPACKAGE_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a779972998ecf7ea47fdbea1960aefce9" name="a779972998ecf7ea47fdbea1960aefce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779972998ecf7ea47fdbea1960aefce9">&#9670;&#160;</a></span>NEWRESOLVED_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWRESOLVED_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a206e28cd6d6191f48b32d42fdeb878ec" name="a206e28cd6d6191f48b32d42fdeb878ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206e28cd6d6191f48b32d42fdeb878ec">&#9670;&#160;</a></span>NEWSUBMITTED_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEWSUBMITTED_SIGNATURE&#160;&#160;&#160;name coopname, name username, name <a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>, checksum256 package, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a039a246ed508cb98eadd3c61320218e7" name="a039a246ed508cb98eadd3c61320218e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039a246ed508cb98eadd3c61320218e7">&#9670;&#160;</a></span>OPENPROGWALL_SIGNATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPENPROGWALL_SIGNATURE&#160;&#160;&#160;name coopname, name username, name program_type, uint64_t agreement_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a9b54c7e95e7a4553628d76257816514d" name="a9b54c7e95e7a4553628d76257816514d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b54c7e95e7a4553628d76257816514d">&#9670;&#160;</a></span>createagenda_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d">createagenda_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a693e4deeebe24d80d511f5d8517d6249" name="a693e4deeebe24d80d511f5d8517d6249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a693e4deeebe24d80d511f5d8517d6249">&#9670;&#160;</a></span>createapprv_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249">createapprv_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac071a9a6ce438b190e29e408ed4b8241" name="ac071a9a6ce438b190e29e408ed4b8241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac071a9a6ce438b190e29e408ed4b8241">&#9670;&#160;</a></span>decline_callback_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#ac071a9a6ce438b190e29e408ed4b8241">decline_callback_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">DECLINE_CALLBACK_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3194772d5ea5c670bd3346bd9092c329" name="a3194772d5ea5c670bd3346bd9092c329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3194772d5ea5c670bd3346bd9092c329">&#9670;&#160;</a></span>newact_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a3194772d5ea5c670bd3346bd9092c329">newact_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a469c0e6f099986808454e29e331a89b5" name="a469c0e6f099986808454e29e331a89b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469c0e6f099986808454e29e331a89b5">&#9670;&#160;</a></span>newagreement_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5">newagreement_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69bbcacb08452549f6d5918538a0c1c2" name="a69bbcacb08452549f6d5918538a0c1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69bbcacb08452549f6d5918538a0c1c2">&#9670;&#160;</a></span>newdecision_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a69bbcacb08452549f6d5918538a0c1c2">newdecision_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71c8d28c327ee0ef52e0b3ad8363c70b" name="a71c8d28c327ee0ef52e0b3ad8363c70b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c8d28c327ee0ef52e0b3ad8363c70b">&#9670;&#160;</a></span>newdeclined_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a71c8d28c327ee0ef52e0b3ad8363c70b">newdeclined_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a697ba71d248bbff1151aee923658a010" name="a697ba71d248bbff1151aee923658a010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697ba71d248bbff1151aee923658a010">&#9670;&#160;</a></span>newlink_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a697ba71d248bbff1151aee923658a010">newlink_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdb626b1f08524bd2a859b083247527f" name="abdb626b1f08524bd2a859b083247527f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdb626b1f08524bd2a859b083247527f">&#9670;&#160;</a></span>newpackage_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#abdb626b1f08524bd2a859b083247527f">newpackage_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a461bfb688f2a0b8b1509b576dfaae866" name="a461bfb688f2a0b8b1509b576dfaae866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461bfb688f2a0b8b1509b576dfaae866">&#9670;&#160;</a></span>newresolved_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#a461bfb688f2a0b8b1509b576dfaae866">newresolved_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2152571aed7fcaaa5a3f9c4b4843f06" name="ab2152571aed7fcaaa5a3f9c4b4843f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2152571aed7fcaaa5a3f9c4b4843f06">&#9670;&#160;</a></span>newsubmitted_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#ab2152571aed7fcaaa5a3f9c4b4843f06">newsubmitted_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aece1205460ace8f2cb031fd226906752" name="aece1205460ace8f2cb031fd226906752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece1205460ace8f2cb031fd226906752">&#9670;&#160;</a></span>openprogwall_interface</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="shared__soviet_8hpp.html#aece1205460ace8f2cb031fd226906752">openprogwall_interface</a> =  void(<a class="el" href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">OPENPROGWALL_SIGNATURE</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__soviet_8hpp.html">shared_soviet.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

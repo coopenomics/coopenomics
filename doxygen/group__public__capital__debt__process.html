@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Выдача ссуды</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__public__capital__debt__process.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Выдача ссуды<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<p>Процесс выдачи беспроцентных ссуд Вкладчикам проекта на основании их трудовых и иных вкладов. Ссуды ограничены provisional_amount сегмента и погашаются автоматически при внесении результата в кооператив.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Назначение процесса</h2>
+<p>Система ссуд обеспечивает Вкладчикам компенсацию трудозатрат в процессе работы над проектом:</p><ul>
+<li>Вкладчики получают средства до завершения проекта</li>
+<li>Размер ссуды ограничен фактическими вкладами и привлечёнными инвестициями</li>
+<li>Ссуды беспроцентные, что стимулирует активное участие</li>
+<li>Ссулы автоматически погашаются при внесении результата исключает проблемы с возвратом</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Математические основы расчёта ссуд</h2>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Базовая формула доступной себестоимости</h3>
+<p>Доступная себестоимость - это себестоимость труда, которую вкладчик может использовать для получения ссуды.</p>
+<div class="fragment"><div class="line">cpp</div>
+<div class="line"> provisional_amount = (creator_base + author_base + coordinator_base) × (return_base_percent / 100)</div>
+</div><!-- fragment --><p>где:</p><ul>
+<li>creator_base - стоимость коммитов создателя</li>
+<li>author_base - авторская себестоимость (61.8% от создателей) <br  />
+</li>
+<li>coordinator_base - координаторская премия от привлечённых инвестиций</li>
+<li>return_base_percent - коэффициент доступности средств (зависит от количества инвестиций)</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Ограничения на выдачу</h3>
+<ul>
+<li>Долг Вкладчика по проекту меньше доступной себестоимости (debt_amount &lt; provisional_amount)</li>
+<li>Вкладчик находится в одной из или нескольких ролях: автор, создатель или координатор</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Диаграмма процесса</h2>
+<p> 
+  <div class="mermaid">
+  sequenceDiagram
+      participant P as Вкладчик
+      participant C as Capital Contract
+      participant S as Soviet Contract
+      participant G as Gateway Contract
+      participant L as Loan Contract
+      
+      P->>C: 1. createdebt(заявление на ссуду)
+      Note over C: Проверка лимитов
+      Note over C: debt_amount + amount ≤ provisional_amount
+      Note over C: Увеличение debt_amount в сегменте вкладчика
+      
+      C->>S: 2. soviet::create_approval
+      
+      alt Предварительное одобрение председателем
+          S->>C: 3. approvedebt()
+          C->>S: 4. soviet::create_agenda
+          
+          alt Решение совета
+              S->>C: 5. debtauthcnfr(решение совета)
+              C->>G: 6. Gateway::create_outcome(платёж)
+              
+              alt Успешная оплата
+                  G->>C: 7. debtpaycnfrm()
+                  C->>L: 8. Создание записи о долге
+                  Note over C: Долг зафиксирован
+              else Отказ оплаты
+                  G->>C: 7. debtpaydcln()
+                  Note over C: Уменьшение debt_amount
+              end
+              
+          else Отклонение советом
+              S->>C: 5. declinedebt()
+              Note over C: Уменьшение debt_amount
+          end
+          
+      else Отклонение председателем
+          S->>C: 3. declinereg()
+          Note over C: Уменьшение debt_amount
+      end
+      
+      Note over P,L: Погашение при внесении результата
+      P->>C: 9. pushrslt(с суммой долга)
+  </div>
+  </p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Пошаговое описание</h2>
+<h3><a class="anchor" id="autotoc_md11"></a>
+Шаг 1: Создание заявления на получение ссуды</h3>
+<p>Вкладчик подаёт заявление на получение беспроцентной ссуды через действие <a class="el" href="group__public__capital__actions.html#ga088830db9f7aaed6367743f25c959a03">capital::createdebt</a>.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>Предварительные условия:<ul>
+<li>Проект находится в активном статусе</li>
+<li>Вкладчик имеет активный сегмент в проекте <br  />
+</li>
+<li>Общий долг Вкладчика плюс запрашиваемая сумма меньше или равна сумме доступной себестоимости</li>
+<li>Сумма доступной себестоимости больше нуля (есть вклады, обеспеченные инвестициями)</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Доступная себестоимость (provisional_amount) представляет собой себестоимость вкладов Вкладчика, скорректированную на коэффициент возврата. Этот коэффициент показывает, какая часть базовых затрат обеспечена привлечёнными в проект инвестициями. Чем больше инвестиций привлечено, тем выше коэффициент и тем больше средств доступно для выдачи в виде ссуд. Коэффициент возврата себестоимости не превышает 100% от себестоимости затрат Вкладчиков. При превышении количества инвестиций суммы затрат, у инвесторов уменьшается коэффициент использования инвестиций, и они получат часть средств назад при закрытии проекта.</dd></dl>
+<p><b>Входящие параметры:</b></p><ul>
+<li>amount - запрашиваемая сумма ссуды</li>
+<li>repaid_at - планируемая дата погашения ссуды</li>
+<li>statement - заявление на получение ссуды</li>
+</ul>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>📄 Создаётся заявление в таблице Capital::debts</li>
+<li>Резервируется сумма долга в сегменте Вкладчика, что не позволяет повторно отправлять заявления</li>
+</ul>
+</dd></dl>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Шаг 2: Одобрение заявки председателем</h3>
+<p>Председатель или доверенное им лицо принимает предварительное решение через действие <a class="el" href="group__public__capital__actions.html#ga7a667965f9770a7fe938f39fa9db03e9">capital::approvedebt</a>.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>Предварительные условия:<ul>
+<li>📄 Заявление создано и ожидает рассмотрения</li>
+</ul>
+</dd></dl>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>📄 При одобрении заявление передаётся в совет для получения протокола решения</li>
+<li>При отклонении заявка закрывается с указанием причин</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Председатель оценивает обоснованность запроса, проверяет финансовое состояние проекта и подтверждает корректность расчётов перед передачей в совет. Председатель может делегировать эти полномочия доверенному Администратору.</dd></dl>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Шаг 3: Авторизация советом</h3>
+<p>Совет принимает решение о выдаче ссуды через действие <a class="el" href="group__public__capital__actions.html#ga80722d2ef17b482640419bbc095a4484">capital::debtauthcnfr</a>.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>Предварительные условия:<ul>
+<li>📄 Заявление одобрено председателем</li>
+</ul>
+</dd></dl>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>При положительном решении инициируется исходящий платёж через контракт <a class="el" href="group__public__gateway.html">Шлюза</a></li>
+<li>При отклонении заявка закрывается</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Совет рассматривает целесообразность выдачи, оценивает риски для проекта и утверждает выдачу ссуды по заявлению вкладчика или отклоняет его.</dd></dl>
+<h3><a class="anchor" id="autotoc_md14"></a>
+Шаг 4: Подтверждение оплаты</h3>
+<p>Лицо, обладающее доступом к расчётному счёту кооператива совершает исходящий платеж и отмечает его выполненным. Контракт <a class="el" href="group__public__gateway.html">Шлюза</a> подтверждает успешное перечисление средств Вкладчику через действие <a class="el" href="group__public__capital__actions.html#ga93ccd53ea98eb829e8d4621c8bfb1bfe">capital::debtpaycnfrm</a>.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>Предварительные условия:<ul>
+<li>📄 Совет авторизовал выдачу ссуды</li>
+<li><a class="el" href="namespace_gateway.html">Gateway</a> инициировал платёж</li>
+</ul>
+</dd></dl>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>📄 Фиксируется факт получения средств Вкладчиком</li>
+<li>Создаётся запись в контракте <a class="el" href="group__public__loan.html">Ссуд</a></li>
+<li>Увеличивается общий долг Вкладчика в системе</li>
+<li>Вкладчик получает средства на свой банковский счёт</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Создание записи о долге в контракте loan фиксирует обязательство Вкладчика по возврату полученных средств, информация о котором доступна в том числе и в других контрактах.</dd></dl>
+<h3><a class="anchor" id="autotoc_md15"></a>
+Альтернативные пути: Отклонение и отказы</h3>
+<h4><a class="anchor" id="autotoc_md16"></a>
+Отказ в оплате Gateway</h4>
+<p>При техническом сбое или неверных реквизитах администратор платежей через контракт <a class="el" href="group__public__gateway.html">Шлюза</a> отклоняет платёж действием <a class="el" href="group__public__capital__actions.html#ga65065dc6d83f5263d273c066183c3373">capital::debtpaydcln</a>.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>Заявка удаляется из системы</li>
+<li>Размер долга в сегменте уменьшается</li>
+<li>Вкладчик может подать заявку повторно</li>
+</ul>
+</dd></dl>
+<h4><a class="anchor" id="autotoc_md17"></a>
+Отклонение заявки</h4>
+<p>Отклонение может произойти на любом этапе рассмотрения через действие <a class="el" href="group__public__capital__actions.html#gac98adbedeb223c823d985f043feb788b">capital::declinedebt</a>.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>Указывается причина отказа</li>
+<li>Освобождается зарезервированная сумма долга в сегмента</li>
+</ul>
+</dd></dl>
+<h3><a class="anchor" id="autotoc_md18"></a>
+Шаг 5: Погашение ссуды</h3>
+<p>Ссуды погашаются автоматически при внесении результата через действие <a class="el" href="group__public__capital__actions.html#gae6e9af483e87009ac918c6167ba87ca8">capital::pushrslt</a>.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>Предварительные условия:<ul>
+<li>Вкладчик вносит результат через pushrslt</li>
+<li>Указывается сумма долга для погашения</li>
+</ul>
+</dd></dl>
+<dl class="section post"><dt>Постусловие</dt><dd>Результат выполнения:<ul>
+<li>Сумма долга вычитается из стоимости результата после его внесения</li>
+<li>Производится зачёт через контракт <a class="el" href="group__public__loan.html">Контракт LOAN</a></li>
+<li>Списывается долг в контракте <a class="el" href="group__public__loan.html">Контракт LOAN</a></li>
+<li>Уменьшаются обязательства Вкладчика</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Автоматическое погашение обеспечивает защиту от рисков невозврата средств.</dd></dl>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Примеры расчёта доступных ссуд</h2>
+<h3><a class="anchor" id="autotoc_md20"></a>
+Пример 1: Создатель с коммитами</h3>
+<ul>
+<li>Себестоимость работы создателя = 100,000 рублей (50 часов × 2000 рублей/час)</li>
+<li>Коэффициент возврата = 80% (инвестиции покрывают 80% себестоимости затрат)</li>
+<li>Обеспеченная сумма = 100,000 × 0.8 = 80,000 рублей</li>
+<li><b>Доступная ссуда: до 80,000 рублей</b></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md21"></a>
+Пример 2: Автор проекта</h3>
+<ul>
+<li>Авторская себестоимость = 61,800 рублей (61.8% от 100,000 рублей создателей)</li>
+<li>Коэффициент возврата = 80%</li>
+<li>Обеспеченная сумма = 61,800 × 0.8 = 49,440 рублей</li>
+<li><b>Доступная ссуда: до 49,440 рублей</b></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md22"></a>
+Пример 3: Координатор</h3>
+<ul>
+<li>Координаторская премия = 6,400 рублей (4% от привлечённых 160,000 рублей)</li>
+<li>Коэффициент возврата = 80%</li>
+<li>Обеспеченная сумма = 6,400 × 0.8 = 5,120 рублей</li>
+<li><b>Доступная ссуда: до 5,120 рублей</b></li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>В примерах показано, как размер доступной ссуды зависит от фактических вкладов Вкладчика и коэффициента обеспеченности инвестициями. Чем больше Вкладчик вложил и чем больше инвестиций привлечено в проект, тем больше средств доступно для получения в виде ссуды.</dd></dl>
+<h2><a class="anchor" id="autotoc_md23"></a>
+Влияние на конвертацию сегмента</h2>
+<p>Полученные ссуды влияют на доступные для конвертации суммы. Доступная часть себестоимости после погашения долга рассчитывается как общая стоимость сегмента результата минус размер долга.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Чем больше ссуда, тем меньше средств остаётся для конвертации в главный кошелёкёк, кошелёк проект или кошелёк программы. Премиальная часть не затрагивается и полностью доступна для конвертации в программу капитализации или для конвертации в кошелёк проекта.</dd></dl>
+<h2><a class="anchor" id="autotoc_md24"></a>
+Эффекты процесса</h2>
+<p>➕🏛️ <a class="el" href="class_ledger.html#ab49534dd0e92c5ba0cd31a1d22265506" title="Добавить средства на счёт кооператива">Ledger::add</a> на счёт <a class="el" href="struct_ledger_1_1accounts.html#a1b7e121a0d047c9101860047536f4592" title="Расчеты по долгосрочным кредитам и займам">Ledger::accounts::LONG_TERM_LOANS</a> на сумму выданной ссуды<br  />
+🫴 <a class="el" href="namespace_loan.html#adfc9fd88d34397a97c2fe712aeede1e4" title="Создает долговое обязательство пайщика.">Loan::create_debt</a> на сумму выданной ссуды </p>
+<h2><a class="anchor" id="autotoc_md25"></a>
+Документы процесса</h2>
+<p><ul>
+<li>📄 Заявление на получение ссуды</li>
+<li>📄 Визирующая подпись председателя на заявл. на заявлении</li>
+<li>📄 Протокол решения совета о выдаче ссуды </li>
+</ul>
+</p>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Связанные процессы</h2>
+<ul>
+<li><a class="el" href="group__public__capital__project__investment__process.html">Инвестиции в проект</a> - инвестиции обеспечивают ссуды</li>
+<li><a class="el" href="group__public__capital__result__process.html">Приём результата</a> - ссуды погашаются при внесении результата</li>
+<li><a class="el" href="group__public__capital__conversion__process.html">Конвертация взносов</a> - учитывает выданные и погашенные ссуды </li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var struct_capital_1_1fact__pool =
+[
+    [ "accumulated_expense_pool", "struct_capital_1_1fact__pool.html#ada8139380d000225ee36b6bbb7744751", null ],
+    [ "authors_base_pool", "struct_capital_1_1fact__pool.html#a6a86109d41845abf0411c762c161be04", null ],
+    [ "authors_bonus_pool", "struct_capital_1_1fact__pool.html#ae08efd9251dfa0626be30319134d40ca", null ],
+    [ "contributors_bonus_pool", "struct_capital_1_1fact__pool.html#ae6461a476b71b18b316050d6ba0f2835", null ],
+    [ "coordinators_base_pool", "struct_capital_1_1fact__pool.html#ab3ebc096b2b0f1a2fbb4453901eb2ac5", null ],
+    [ "coordinators_investment_pool", "struct_capital_1_1fact__pool.html#a743546cd7fc4e10c4b9e1ed9fc3752dd", null ],
+    [ "creators_base_pool", "struct_capital_1_1fact__pool.html#ad5b56f96f72e185c0bb8d1bd40c7b20b", null ],
+    [ "creators_bonus_pool", "struct_capital_1_1fact__pool.html#abb97d7536b4d57deceae715263327b0e", null ],
+    [ "creators_hours", "struct_capital_1_1fact__pool.html#ae7df74a6099ebacbbda86bef98e3931e", null ],
+    [ "hour_cost", "struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab", null ],
+    [ "invest_pool", "struct_capital_1_1fact__pool.html#a6d804125b9b1c50debe6b719228b37ad", null ],
+    [ "program_invest_pool", "struct_capital_1_1fact__pool.html#aa83ca43bc9c9559ea85bab54057f2af3", null ],
+    [ "property_base_pool", "struct_capital_1_1fact__pool.html#a869c05867e4cca30daa9c9684dd01028", null ],
+    [ "return_base_percent", "struct_capital_1_1fact__pool.html#a33084b70495d541a32993a4e30bfde3f", null ],
+    [ "target_expense_pool", "struct_capital_1_1fact__pool.html#a70ef946f938f0beedc28949b9fe8f5e8", null ],
+    [ "total", "struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418", null ],
+    [ "total_contribution", "struct_capital_1_1fact__pool.html#aba457f704207bb1798a50a2605d946ab", null ],
+    [ "total_generation_pool", "struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14", null ],
+    [ "total_received_investments", "struct_capital_1_1fact__pool.html#a0da4563f2e52083033ef4cdce38ec759", null ],
+    [ "total_returned_investments", "struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b", null ],
+    [ "use_invest_percent", "struct_capital_1_1fact__pool.html#aeb766b08ce97c1b10e0d244868330ff2", null ],
+    [ "used_expense_pool", "struct_capital_1_1fact__pool.html#a8d372a36946ffa88d167f351cd695e92", null ]
+];

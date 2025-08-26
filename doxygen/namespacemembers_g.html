@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Члены пространств имен</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespacemembers_g.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Полный список членов простанств имен.</div>
+
+<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>gateway_income_actions&#160;:&#160;<a class="el" href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">Gateway</a></li>
+<li>gateway_outcome_actions&#160;:&#160;<a class="el" href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">Gateway</a></li>
+<li>GENERATION&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981">Capital::Segments::Status</a></li>
+<li>get_account_or_fail()&#160;:&#160;<a class="el" href="namespace_core_1_1_registrator.html#ac45a6e784e2438615c65460beebaf9a8">Core::Registrator</a></li>
+<li>get_active_contributor_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_contributors.html#aa62caaeac458155572e7e8fe9de17d38">Capital::Contributors</a></li>
+<li>get_active_contributor_with_appendix_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_contributors.html#a3290427125419e6245bb5df26a5c95a6">Capital::Contributors</a></li>
+<li>get_active_participants_count()&#160;:&#160;<a class="el" href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">Registrator</a></li>
+<li>get_appendix()&#160;:&#160;<a class="el" href="namespace_capital_1_1_appendix.html#add7927fd3e3918af2e6e631538218843">Capital::Appendix</a></li>
+<li>get_approval()&#160;:&#160;<a class="el" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">Approver</a></li>
+<li>get_approvals_and_adjust_table()&#160;:&#160;<a class="el" href="namespaceeosio.html#abaa5d0db854d769ac41e2f062f417485">eosio</a></li>
+<li>get_approve_convert_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#aa61ea4df7a870d52611b02aef03eef25">Capital::Memo</a></li>
+<li>get_approve_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ac332203ba24eae5cb77bf6395e959a55">Capital::Memo</a></li>
+<li>get_approve_program_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ac27806e789ef8be1a59f17855d1aa301">Capital::Memo</a></li>
+<li>get_branch_count()&#160;:&#160;<a class="el" href="namespace_branch.html#ad86dc7c17b6e7ae489b9381b6f0746c4">Branch</a></li>
+<li>get_candidate_by_hash()&#160;:&#160;<a class="el" href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">Registrator</a></li>
+<li>get_capital_program_or_fail()&#160;:&#160;<a class="el" href="namespace_capital.html#aa23b59f5d79fc12397bc3a8185647e22">Capital</a></li>
+<li>get_capital_program_share_balance()&#160;:&#160;<a class="el" href="namespace_capital_1_1_core.html#ab8a53aebd4c22547bd164229906855b7">Capital::Core</a></li>
+<li>get_capital_user_share_balance()&#160;:&#160;<a class="el" href="namespace_capital_1_1_core.html#a6a32921a37fa63c4feba3dd1d2ac8feb">Capital::Core</a></li>
+<li>get_capital_wallet()&#160;:&#160;<a class="el" href="namespace_capital_1_1_wallet.html#acad0ebbaf80b162101e23b67c9b2aa16">Capital::Wallet</a></li>
+<li>get_capital_wallet_by_username()&#160;:&#160;<a class="el" href="namespace_capital_1_1_wallet.html#a841ed8a96c61a35eded6550e90055118">Capital::Wallet</a></li>
+<li>get_capital_wallet_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_wallet.html#a30314a42ab8c997647842e5fd6f8701c">Capital::Wallet</a></li>
+<li>get_commit()&#160;:&#160;<a class="el" href="namespace_capital_1_1_commits.html#acd515fccf3c002b9c2343bcb6570d6cf">Capital::Commits</a></li>
+<li>get_commit_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_commits.html#aa85b9f3e3bb6d653b776a350049cf609">Capital::Commits</a></li>
+<li>get_contributor()&#160;:&#160;<a class="el" href="namespace_capital_1_1_contributors.html#a952e793bd70394e9a59d5bb8048b8b3b">Capital::Contributors</a></li>
+<li>get_contributor_by_hash()&#160;:&#160;<a class="el" href="namespace_capital_1_1_contributors.html#a59465c807f0b4ef8b5f8041cea9f051a">Capital::Contributors</a></li>
+<li>get_convert_segment_to_capital_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a505f94a1fcd6d0c847d48cc2c3324372">Capital::Memo</a></li>
+<li>get_convert_segment_to_project_wallet_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a3dde2fac36961125c1792db17859b0d2">Capital::Memo</a></li>
+<li>get_convert_segment_to_wallet_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a80bdc0524b8d12dde449bbaff68f8c84">Capital::Memo</a></li>
+<li>get_convert_to_blagorost_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ad2cb7f9a881333c4fc0743113b53a7f0">Capital::Memo</a></li>
+<li>get_convert_to_wallet_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#af3687272f0cdf8bef9b5a2561bea68a7">Capital::Memo</a></li>
+<li>get_coordinator_amount()&#160;:&#160;<a class="el" href="namespace_capital_1_1_invests.html#ac42fbcbe730fd25d1359c76b14794ecb">Capital::Invests</a></li>
+<li>get_coordinator_payment_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a61bbe66eb93c5ac89f5f9def583ff1bc">Capital::Memo</a></li>
+<li>get_create_program_withdraw_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a5bd877de9c147fd63b39103b690efe74">Capital::Memo</a></li>
+<li>get_debt()&#160;:&#160;<a class="el" href="namespace_capital_1_1_debts.html#a106e7b2730e725427169b2392719e770">Capital::Debts</a>, <a class="el" href="namespace_loan.html#a294fb805afefbd524fda41cc024c5d59">Loan</a></li>
+<li>get_debt_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_debts.html#a9228a15413a54f29f8ba1babfdb297fb">Capital::Debts</a></li>
+<li>get_decline_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ab49b81781a34d73ddb14faf7527e8377">Capital::Memo</a></li>
+<li>get_decline_program_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a983f612c284ddafdc908ce2793230fa6">Capital::Memo</a></li>
+<li>get_expense()&#160;:&#160;<a class="el" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Capital</a></li>
+<li>get_expense_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">Capital::Expenses</a></li>
+<li>get_external_contract_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a4c0cb1023c690bf66497f0c79fd3e1f8">Capital::Memo</a></li>
+<li>get_global_state()&#160;:&#160;<a class="el" href="namespace_capital.html#ad4e470a04c6012d5b10efaf87399dda1">Capital</a></li>
+<li>get_income()&#160;:&#160;<a class="el" href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">Gateway</a></li>
+<li>get_invest()&#160;:&#160;<a class="el" href="namespace_capital_1_1_invests.html#a2f1afc233cab533bc6f50eddc147e106">Capital::Invests</a></li>
+<li>get_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a2bf3df5ff404d79814e60ac1b2b35a1e">Capital::Memo</a></li>
+<li>get_invest_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_invests.html#a2d960ad1d2cbb05fd857f4a85851fe96">Capital::Invests</a></li>
+<li>get_latest_block_batch_info()&#160;:&#160;<a class="el" href="namespaceeosiosystem_1_1block__info.html#a2874613dc8993ab1cc70301c121823c6">eosiosystem::block_info</a></li>
+<li>get_outcome()&#160;:&#160;<a class="el" href="namespace_gateway.html#a47f70c3eb62afe31d8b7644551a8df3b">Gateway</a></li>
+<li>get_program_invest()&#160;:&#160;<a class="el" href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">Capital::ProgramInvests</a></li>
+<li>get_program_invest_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ad8ddb83d4c5ef53f12fa1ba4cce19731">Capital::Memo</a></li>
+<li>get_program_invest_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">Capital::ProgramInvests</a></li>
+<li>get_program_property()&#160;:&#160;<a class="el" href="namespace_capital_1_1_program_properties.html#a13430dc29f76a36f6205bcfd054b3bbc">Capital::ProgramProperties</a></li>
+<li>get_program_property_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#af9c4811593f28292e235e49e1df0376b">Capital::Memo</a></li>
+<li>get_program_property_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b">Capital::ProgramProperties</a></li>
+<li>get_program_withdraw()&#160;:&#160;<a class="el" href="namespace_capital.html#ac9b611f36123e8dcb07121850b719eb5">Capital</a></li>
+<li>get_program_withdraw_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a810c02ee4e65f9ae3a1bfee56df2e3bf">Capital::Memo</a></li>
+<li>get_project()&#160;:&#160;<a class="el" href="namespace_capital_1_1_projects.html#a150840dacd380d92c57ea912609f3800">Capital::Projects</a></li>
+<li>get_project_authors()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#ac40a7014b2f2110478db132efc0f82d1">Capital::Segments</a></li>
+<li>get_project_coordinators()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#a9cb1f6569134e6326cc5d6a9d1f07ffe">Capital::Segments</a></li>
+<li>get_project_creators()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#a148136875b94e0bfaf621405d46367e6">Capital::Segments</a></li>
+<li>get_project_investors()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#a4582884090f6441bb5f15dd849e2f6ad">Capital::Segments</a></li>
+<li>get_project_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_projects.html#a6d32f88a10efefdda09553373ac6a70d">Capital::Projects</a></li>
+<li>get_project_wallet()&#160;:&#160;<a class="el" href="namespace_capital_1_1_wallet.html#a70fe231d2707373d9bd3a6e30cbefc66">Capital::Wallet</a></li>
+<li>get_project_wallet_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_wallet.html#a45dba503577d466a620964792b9ac91f">Capital::Wallet</a></li>
+<li>get_project_withdraw()&#160;:&#160;<a class="el" href="namespace_capital.html#ac3e81b37cfb7bc46734cbc049bd929be">Capital</a></li>
+<li>get_project_withdraw_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a8f2e94a0563adece55f899215ae7e616">Capital::Memo</a></li>
+<li>get_property()&#160;:&#160;<a class="el" href="namespace_capital_1_1_project_properties.html#a0b54b8d7240fa80262306462f3febac1">Capital::ProjectProperties</a></li>
+<li>get_property_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_project_properties.html#a3ecb5db5b8590ada9f78c17b07dd0eb1">Capital::ProjectProperties</a></li>
+<li>get_request_by_hash()&#160;:&#160;<a class="el" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">Marketplace</a></li>
+<li>get_request_by_hash_or_fail()&#160;:&#160;<a class="el" href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">Marketplace</a></li>
+<li>get_result()&#160;:&#160;<a class="el" href="namespace_capital_1_1_results.html#a633cc9cde5a92bf42224ec8060cd7502">Capital::Results</a></li>
+<li>get_result_by_project_and_username()&#160;:&#160;<a class="el" href="namespace_capital_1_1_results.html#a75951c35e5c5986cc6ef6dbd1380880e">Capital::Results</a></li>
+<li>get_result_by_project_and_username_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_results.html#a2db70b39e1df47631c5ac20473dff364">Capital::Results</a></li>
+<li>get_result_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#ae808e4458d95d1c8300f97d78503f190">Capital::Memo</a></li>
+<li>get_result_withdraw_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a5c7177388253db7ad1fa3a3711ae552f">Capital::Memo</a></li>
+<li>get_return_unused_investments_memo()&#160;:&#160;<a class="el" href="namespace_capital_1_1_memo.html#a56a1dcb67972b284cb1c7d92389fad93">Capital::Memo</a></li>
+<li>get_segment()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#a28c440ae4f13d4e39dd5705aeb705fc9">Capital::Segments</a></li>
+<li>get_segment_or_fail()&#160;:&#160;<a class="el" href="namespace_capital_1_1_segments.html#a0304b44fb97648f0d44fe7d53b146886">Capital::Segments</a></li>
+<li>get_shipment_by_hash()&#160;:&#160;<a class="el" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">Marketplace</a></li>
+<li>get_shipment_by_hash_or_fail()&#160;:&#160;<a class="el" href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">Marketplace</a></li>
+<li>get_source_program_or_fail()&#160;:&#160;<a class="el" href="namespace_capital.html#ac6241e395295206269ca7a4c825f040c">Capital</a></li>
+<li>get_summary()&#160;:&#160;<a class="el" href="namespace_loan.html#aead3955fb761a3c4637faa1f01808d14">Loan</a></li>
+<li>get_trx_header()&#160;:&#160;<a class="el" href="namespaceeosio.html#a5a18f73f0452f4391a2e8abfc7d0f373">eosio</a></li>
+<li>get_valid_income_action()&#160;:&#160;<a class="el" href="namespace_gateway.html#a7acc8b2bc711b313ca82d432cd9e84aa">Gateway</a></li>
+<li>get_valid_marketplace_action()&#160;:&#160;<a class="el" href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">Marketplace</a></li>
+<li>get_valid_outcome_action()&#160;:&#160;<a class="el" href="namespace_gateway.html#a29393787b1a856bf099856d74d2ee18e">Gateway</a></li>
+<li>get_votes_for_recipient()&#160;:&#160;<a class="el" href="namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23">Capital::Votes</a></li>
+<li>global_state_singleton&#160;:&#160;<a class="el" href="namespaceeosiosystem.html#a2757bc4c835154772dce0d5891c93b58">eosiosystem</a></li>
+<li>global_state_table&#160;:&#160;<a class="el" href="namespace_capital.html#a927158096490fceaac1ddadc58844760">Capital</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

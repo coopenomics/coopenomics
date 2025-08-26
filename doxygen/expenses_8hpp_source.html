@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/capital/domain/entities/expenses.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('expenses_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">expenses.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="expenses_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/asset.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>std::string;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital_1_1_expenses.html">Capital::Expenses</a> {</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html">   16</a></span>   <span class="keyword">namespace </span>Status {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">   17</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">CREATED</a> = <span class="stringliteral">&quot;created&quot;</span>_n;        </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">   18</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">APPROVED</a> = <span class="stringliteral">&quot;approved&quot;</span>_n;      </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">   19</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">AUTHORIZED</a> = <span class="stringliteral">&quot;authorized&quot;</span>_n;  </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">   20</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">PAID</a> = <span class="stringliteral">&quot;paid&quot;</span>_n;             </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">   21</a></span>    <span class="keyword">const</span> eosio::name <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">DECLINED</a> = <span class="stringliteral">&quot;declined&quot;</span>_n;      </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital.html">Capital</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html">   35</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(CAPITAL)]] <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a3029f517ce8ec1f512bbd5e473742433">   36</a></span>    uint64_t <a class="code hl_variable" href="struct_capital_1_1expense.html#a3029f517ce8ec1f512bbd5e473742433">id</a>;                                    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a15cbca786855095b3eea9bd1bc94f159">   37</a></span>    name <a class="code hl_variable" href="struct_capital_1_1expense.html#a15cbca786855095b3eea9bd1bc94f159">coopname</a>;                                  </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a9cbdfe75897456205e528d5c94913681">   38</a></span>    name <a class="code hl_variable" href="struct_capital_1_1expense.html#a9cbdfe75897456205e528d5c94913681">username</a>;                                  </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">   40</a></span>    name status = Expenses::Status::CREATED;        </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#aafec9c55298c277108b7733aef2cc39c">   41</a></span>    checksum256 <a class="code hl_variable" href="struct_capital_1_1expense.html#aafec9c55298c277108b7733aef2cc39c">project_hash</a>;                       </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a62ba78803f3395395705a80d5b2ab6a2">   42</a></span>    checksum256 <a class="code hl_variable" href="struct_capital_1_1expense.html#a62ba78803f3395395705a80d5b2ab6a2">expense_hash</a>;                       </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a627045f313b8ab1adb9764dbf6123094">   43</a></span>    uint64_t <a class="code hl_variable" href="struct_capital_1_1expense.html#a627045f313b8ab1adb9764dbf6123094">fund_id</a>;                               </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a15ba212eeef94d90cf9ae3ad0c908f60">   44</a></span>    eosio::asset <a class="code hl_variable" href="struct_capital_1_1expense.html#a15ba212eeef94d90cf9ae3ad0c908f60">amount</a>;                            </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a1ce34817a8b7f10abd9080afa6a00111">   45</a></span>    std::string <a class="code hl_variable" href="struct_capital_1_1expense.html#a1ce34817a8b7f10abd9080afa6a00111">description</a>;                        </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a4685bd4ae1b2510b61abc9a2aaba1f1c">   47</a></span>    <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_capital_1_1expense.html#a4685bd4ae1b2510b61abc9a2aaba1f1c">expense_statement</a>;                    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a60eb0635b3a9196739c7657289541ee7">   48</a></span>    <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_capital_1_1expense.html#a60eb0635b3a9196739c7657289541ee7">approved_statement</a>;                   </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a908c1f201914a3c8eef586dfc83f3fb1">   49</a></span>    <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_capital_1_1expense.html#a908c1f201914a3c8eef586dfc83f3fb1">authorization</a>;                        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                                  </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a04a1e1d81d7100787ec969b0d6f52d52">   51</a></span>    time_point_sec spended_at = current_time_point(); </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a8a6b70dc82bb9a3b935fb35916b651d1">   53</a></span>    uint64_t <a class="code hl_function" href="struct_capital_1_1expense.html#a8a6b70dc82bb9a3b935fb35916b651d1">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> id; }     </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a14e55cc48052ffe16ee0e9b620d0f6ae">   54</a></span>    uint64_t <a class="code hl_function" href="struct_capital_1_1expense.html#a14e55cc48052ffe16ee0e9b620d0f6ae">by_username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a8a55988f9c4bdb4364440aa8b359874d">   55</a></span>    checksum256 <a class="code hl_function" href="struct_capital_1_1expense.html#a8a55988f9c4bdb4364440aa8b359874d">by_expense_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> expense_hash; } </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_capital_1_1expense.html#a135e0266cb2bc3c5899ef21caeaa91aa">   56</a></span>    checksum256 <a class="code hl_function" href="struct_capital_1_1expense.html#a135e0266cb2bc3c5899ef21caeaa91aa">by_project_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> project_hash; } </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  };</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="stringliteral">&quot;expenses&quot;</span>_n, expense,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    indexed_by&lt;<span class="stringliteral">&quot;byusername&quot;</span>_n, const_mem_fun&lt;expense, uint64_t, &amp;expense::by_username&gt;&gt;,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n, const_mem_fun&lt;expense, checksum256, &amp;expense::by_expense_hash&gt;&gt;,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    indexed_by&lt;<span class="stringliteral">&quot;byprojhash&quot;</span>_n, const_mem_fun&lt;expense, checksum256, &amp;expense::by_project_hash&gt;&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">   64</a></span>  &gt; <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">expense_index</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">   73</a></span> <span class="keyword">inline</span> std::optional&lt;expense&gt; <a class="code hl_function" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">get_expense</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;hash) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keyword">auto</span> <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">expense_index</a> = expenses.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">auto</span> itr = <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">expense_index</a>.find(hash);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordflow">if</span> (itr == <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">expense_index</a>.end()) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">return</span> *itr;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace Capital</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital_1_1_expenses.html">Capital::Expenses</a> {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">   96</a></span>  <span class="keyword">inline</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">get_expense_or_fail</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;expense_hash) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> = <a class="code hl_function" href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Capital::get_expense</a>(coopname, expense_hash);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    eosio::check(<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>.has_value(), <span class="stringliteral">&quot;Расход с указанным хэшем не найден&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> *<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="}">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">  112</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">create_expense</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;project_hash, </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                            <span class="keyword">const</span> checksum256 &amp;expense_hash, eosio::name username, </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                            <span class="keyword">const</span> eosio::asset &amp;<a class="code hl_variable" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                            <span class="keyword">const</span> std::string &amp;description, <span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a> &amp;statement) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    uint64_t expense_id = <a class="code hl_function" href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a>(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname, <span class="stringliteral">&quot;expenses&quot;</span>_n);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    expenses.emplace(coopname, [&amp;](<span class="keyword">auto</span> &amp;e) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      e.id = expense_id;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      e.coopname = coopname;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      e.username = username;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      e.project_hash = project_hash;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      e.expense_hash = expense_hash;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      e.fund_id = <a class="code hl_variable" href="struct_ledger_1_1accounts.html#aba75b5d36f6cea77b1c2e0e8a6993d3f">Ledger::accounts::ECONOMIC_ACTIVITY_FUND</a>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      e.status = <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">Expenses::Status::CREATED</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      e.spended_at = current_time_point();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      e.expense_statement = statement;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      e.amount = <a class="code hl_variable" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      e.description = description;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    });</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="foldopen" id="foldopen00141" data-start="{" data-end="}">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">  141</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">update_status</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;expense_hash, eosio::name new_status) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keyword">auto</span> exist_expense = <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">get_expense_or_fail</a>(coopname, expense_hash);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> = expenses.find(exist_expense.id);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    expenses.modify(<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>, coopname, [&amp;](<span class="keyword">auto</span> &amp;e) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      e.<a class="code hl_variable" href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">status</a> = new_status;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    });</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  }</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">  158</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">set_approved</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;expense_hash, </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                          <span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a> &amp;approved_statement) {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">auto</span> exist_expense = <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">get_expense_or_fail</a>(coopname, expense_hash);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> = expenses.find(exist_expense.id);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    expenses.modify(<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>, coopname, [&amp;](<span class="keyword">auto</span> &amp;e) {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      e.<a class="code hl_variable" href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">status</a> = <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">Expenses::Status::APPROVED</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      e.approved_statement = approved_statement;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    });</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">  177</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">set_authorized</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;expense_hash, </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                            <span class="keyword">const</span> <a class="code hl_struct" href="structdocument2.html">document2</a> &amp;authorization) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keyword">auto</span> exist_expense = <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">get_expense_or_fail</a>(coopname, expense_hash);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> = expenses.find(exist_expense.id);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    expenses.modify(<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>, coopname, [&amp;](<span class="keyword">auto</span> &amp;e) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      e.<a class="code hl_variable" href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">status</a> = <a class="code hl_variable" href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">Expenses::Status::AUTHORIZED</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>      e.authorization = authorization;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    });</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  }</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00195" data-start="{" data-end="}">
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">  195</a></span>  <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">delete_expense</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;expense_hash) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">auto</span> exist_expense = <a class="code hl_function" href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">get_expense_or_fail</a>(coopname, expense_hash);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <a class="code hl_typedef" href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a> expenses(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">auto</span> <a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a> = expenses.find(exist_expense.id);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    expenses.erase(<a class="code hl_struct" href="struct_capital_1_1expense.html">expense</a>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  }</div>
+</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>} <span class="comment">// namespace Capital::Expenses</span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttc" id="aconsts_8hpp_html_a523079edf0da499462828993f69a920c"><div class="ttname"><a href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></div><div class="ttdeci">static constexpr eosio::name _capital</div><div class="ttdef"><b>Definition</b> consts.hpp:150</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8token__tests_8cpp_html_aca469ae89ae00a572ad079f6d8515ce1"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a></div><div class="ttdeci">share_type amount</div><div class="ttdef"><b>Definition</b> eosio.token_tests.cpp:174</div></div>
+<div class="ttc" id="alib_2counts_8hpp_html_ad99cf4a19b51981409c18e05b7fb35c0"><div class="ttname"><a href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a></div><div class="ttdeci">uint64_t get_global_id_in_scope(eosio::name _me, eosio::name scope, eosio::name key)</div><div class="ttdef"><b>Definition</b> counts.hpp:61</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_1_1_status_html_a1fc1110f94f5967da72cf5434b6c0d2a"><div class="ttname"><a href="namespace_capital_1_1_expenses_1_1_status.html#a1fc1110f94f5967da72cf5434b6c0d2a">Capital::Expenses::Status::AUTHORIZED</a></div><div class="ttdeci">const eosio::name AUTHORIZED</div><div class="ttdoc">Расход авторизован советом</div><div class="ttdef"><b>Definition</b> expenses.hpp:19</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_1_1_status_html_a4c034f33ec0252aaf228832daf090eef"><div class="ttname"><a href="namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef">Capital::Expenses::Status::DECLINED</a></div><div class="ttdeci">const eosio::name DECLINED</div><div class="ttdoc">Расход отклонен</div><div class="ttdef"><b>Definition</b> expenses.hpp:21</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_1_1_status_html_a7d2208e444eeabebf6af1869e08ca0d3"><div class="ttname"><a href="namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3">Capital::Expenses::Status::PAID</a></div><div class="ttdeci">const eosio::name PAID</div><div class="ttdoc">Расход оплачен</div><div class="ttdef"><b>Definition</b> expenses.hpp:20</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_1_1_status_html_a8042da9db2270e898f277f4b8f039ab7"><div class="ttname"><a href="namespace_capital_1_1_expenses_1_1_status.html#a8042da9db2270e898f277f4b8f039ab7">Capital::Expenses::Status::APPROVED</a></div><div class="ttdeci">const eosio::name APPROVED</div><div class="ttdoc">Расход одобрен председателем</div><div class="ttdef"><b>Definition</b> expenses.hpp:18</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_1_1_status_html_af4be1ff76f0d8dcf9260a56893b497cf"><div class="ttname"><a href="namespace_capital_1_1_expenses_1_1_status.html#af4be1ff76f0d8dcf9260a56893b497cf">Capital::Expenses::Status::CREATED</a></div><div class="ttdeci">const eosio::name CREATED</div><div class="ttdoc">Расход создан</div><div class="ttdef"><b>Definition</b> expenses.hpp:17</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html"><div class="ttname"><a href="namespace_capital_1_1_expenses.html">Capital::Expenses</a></div><div class="ttdef"><b>Definition</b> expenses.hpp:9</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_a15456c48b7f78972d70e599911e2a11a"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a">Capital::Expenses::delete_expense</a></div><div class="ttdeci">void delete_expense(eosio::name coopname, const checksum256 &amp;expense_hash)</div><div class="ttdoc">Удаляет запись расхода из таблицы.</div><div class="ttdef"><b>Definition</b> expenses.hpp:195</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_a82a6fb98531f374aa87567739a8fa236"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236">Capital::Expenses::get_expense_or_fail</a></div><div class="ttdeci">expense get_expense_or_fail(eosio::name coopname, const checksum256 &amp;expense_hash)</div><div class="ttdoc">Получает расход по хэшу или вызывает ошибку.</div><div class="ttdef"><b>Definition</b> expenses.hpp:96</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_a95636876d32d5a243f3bc4d4db5c4fca"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca">Capital::Expenses::create_expense</a></div><div class="ttdeci">void create_expense(eosio::name coopname, const checksum256 &amp;project_hash, const checksum256 &amp;expense_hash, eosio::name username, const eosio::asset &amp;amount, const std::string &amp;description, const document2 &amp;statement)</div><div class="ttdoc">Создает запись расхода в таблице.</div><div class="ttdef"><b>Definition</b> expenses.hpp:112</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_aa158d63a8028682aa4fc62c493988365"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365">Capital::Expenses::update_status</a></div><div class="ttdeci">void update_status(eosio::name coopname, const checksum256 &amp;expense_hash, eosio::name new_status)</div><div class="ttdoc">Обновляет статус расхода.</div><div class="ttdef"><b>Definition</b> expenses.hpp:141</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_acfbf7e472016f9c9ea18de2d13fa02bd"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd">Capital::Expenses::set_approved</a></div><div class="ttdeci">void set_approved(eosio::name coopname, const checksum256 &amp;expense_hash, const document2 &amp;approved_statement)</div><div class="ttdoc">Обновляет статус и одобренную записку расхода.</div><div class="ttdef"><b>Definition</b> expenses.hpp:158</div></div>
+<div class="ttc" id="anamespace_capital_1_1_expenses_html_af8c5fb449623bf862793d2d0ce9b9606"><div class="ttname"><a href="namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606">Capital::Expenses::set_authorized</a></div><div class="ttdeci">void set_authorized(eosio::name coopname, const checksum256 &amp;expense_hash, const document2 &amp;authorization)</div><div class="ttdoc">Обновляет статус и авторизацию расхода.</div><div class="ttdef"><b>Definition</b> expenses.hpp:177</div></div>
+<div class="ttc" id="anamespace_capital_html"><div class="ttname"><a href="namespace_capital.html">Capital</a></div><div class="ttdef"><b>Definition</b> balances.cpp:6</div></div>
+<div class="ttc" id="anamespace_capital_html_a39477bc4ec8ee57ee4fc2e32b2d9db38"><div class="ttname"><a href="namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38">Capital::get_expense</a></div><div class="ttdeci">std::optional&lt; expense &gt; get_expense(eosio::name coopname, const checksum256 &amp;hash)</div><div class="ttdoc">Получает расход по хэшу.</div><div class="ttdef"><b>Definition</b> expenses.hpp:73</div></div>
+<div class="ttc" id="anamespace_capital_html_aa597c930163b70b171e0ba4ec668870b"><div class="ttname"><a href="namespace_capital.html#aa597c930163b70b171e0ba4ec668870b">Capital::expense_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;expenses&quot;_n, expense, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; expense, uint64_t, &amp;expense::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; expense, checksum256, &amp;expense::by_expense_hash &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; expense, checksum256, &amp;expense::by_project_hash &gt; &gt; &gt; expense_index</div><div class="ttdef"><b>Definition</b> expenses.hpp:64</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html"><div class="ttname"><a href="struct_capital_1_1expense.html">Capital::expense</a></div><div class="ttdoc">Таблица расходов хранит информацию о расходах проектов кооператива.</div><div class="ttdef"><b>Definition</b> expenses.hpp:35</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a135e0266cb2bc3c5899ef21caeaa91aa"><div class="ttname"><a href="struct_capital_1_1expense.html#a135e0266cb2bc3c5899ef21caeaa91aa">Capital::expense::by_project_hash</a></div><div class="ttdeci">checksum256 by_project_hash() const</div><div class="ttdoc">Индекс по хэшу проекта (4)</div><div class="ttdef"><b>Definition</b> expenses.hpp:56</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a14e55cc48052ffe16ee0e9b620d0f6ae"><div class="ttname"><a href="struct_capital_1_1expense.html#a14e55cc48052ffe16ee0e9b620d0f6ae">Capital::expense::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdoc">Индекс по имени пользователя (2)</div><div class="ttdef"><b>Definition</b> expenses.hpp:54</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a15ba212eeef94d90cf9ae3ad0c908f60"><div class="ttname"><a href="struct_capital_1_1expense.html#a15ba212eeef94d90cf9ae3ad0c908f60">Capital::expense::amount</a></div><div class="ttdeci">eosio::asset amount</div><div class="ttdoc">Сумма расхода</div><div class="ttdef"><b>Definition</b> expenses.hpp:44</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a15cbca786855095b3eea9bd1bc94f159"><div class="ttname"><a href="struct_capital_1_1expense.html#a15cbca786855095b3eea9bd1bc94f159">Capital::expense::coopname</a></div><div class="ttdeci">name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition</b> expenses.hpp:37</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a1ce34817a8b7f10abd9080afa6a00111"><div class="ttname"><a href="struct_capital_1_1expense.html#a1ce34817a8b7f10abd9080afa6a00111">Capital::expense::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">Публичное описание расхода</div><div class="ttdef"><b>Definition</b> expenses.hpp:45</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a3029f517ce8ec1f512bbd5e473742433"><div class="ttname"><a href="struct_capital_1_1expense.html#a3029f517ce8ec1f512bbd5e473742433">Capital::expense::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">ID расхода (внутренний ключ)</div><div class="ttdef"><b>Definition</b> expenses.hpp:36</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a4685bd4ae1b2510b61abc9a2aaba1f1c"><div class="ttname"><a href="struct_capital_1_1expense.html#a4685bd4ae1b2510b61abc9a2aaba1f1c">Capital::expense::expense_statement</a></div><div class="ttdeci">document2 expense_statement</div><div class="ttdoc">Служебная записка</div><div class="ttdef"><b>Definition</b> expenses.hpp:47</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a60eb0635b3a9196739c7657289541ee7"><div class="ttname"><a href="struct_capital_1_1expense.html#a60eb0635b3a9196739c7657289541ee7">Capital::expense::approved_statement</a></div><div class="ttdeci">document2 approved_statement</div><div class="ttdoc">Принятая записка председателем или доверенным</div><div class="ttdef"><b>Definition</b> expenses.hpp:48</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a627045f313b8ab1adb9764dbf6123094"><div class="ttname"><a href="struct_capital_1_1expense.html#a627045f313b8ab1adb9764dbf6123094">Capital::expense::fund_id</a></div><div class="ttdeci">uint64_t fund_id</div><div class="ttdoc">Идентификатор фонда списания (expfunds в контакте fund)</div><div class="ttdef"><b>Definition</b> expenses.hpp:43</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a62ba78803f3395395705a80d5b2ab6a2"><div class="ttname"><a href="struct_capital_1_1expense.html#a62ba78803f3395395705a80d5b2ab6a2">Capital::expense::expense_hash</a></div><div class="ttdeci">checksum256 expense_hash</div><div class="ttdoc">Хэш расхода</div><div class="ttdef"><b>Definition</b> expenses.hpp:42</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a8a55988f9c4bdb4364440aa8b359874d"><div class="ttname"><a href="struct_capital_1_1expense.html#a8a55988f9c4bdb4364440aa8b359874d">Capital::expense::by_expense_hash</a></div><div class="ttdeci">checksum256 by_expense_hash() const</div><div class="ttdoc">Индекс по хэшу расхода (3)</div><div class="ttdef"><b>Definition</b> expenses.hpp:55</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a8a6b70dc82bb9a3b935fb35916b651d1"><div class="ttname"><a href="struct_capital_1_1expense.html#a8a6b70dc82bb9a3b935fb35916b651d1">Capital::expense::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdoc">Первичный ключ (1)</div><div class="ttdef"><b>Definition</b> expenses.hpp:53</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a908c1f201914a3c8eef586dfc83f3fb1"><div class="ttname"><a href="struct_capital_1_1expense.html#a908c1f201914a3c8eef586dfc83f3fb1">Capital::expense::authorization</a></div><div class="ttdeci">document2 authorization</div><div class="ttdoc">Утвержденная записка советом</div><div class="ttdef"><b>Definition</b> expenses.hpp:49</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_a9cbdfe75897456205e528d5c94913681"><div class="ttname"><a href="struct_capital_1_1expense.html#a9cbdfe75897456205e528d5c94913681">Capital::expense::username</a></div><div class="ttdeci">name username</div><div class="ttdoc">Имя пользователя, создавшего расход</div><div class="ttdef"><b>Definition</b> expenses.hpp:38</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_aafec9c55298c277108b7733aef2cc39c"><div class="ttname"><a href="struct_capital_1_1expense.html#aafec9c55298c277108b7733aef2cc39c">Capital::expense::project_hash</a></div><div class="ttdeci">checksum256 project_hash</div><div class="ttdoc">Хэш проекта, связанного с расходом</div><div class="ttdef"><b>Definition</b> expenses.hpp:41</div></div>
+<div class="ttc" id="astruct_capital_1_1expense_html_ad3ea5bfad32920e7d2b5f234542dbc4d"><div class="ttname"><a href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">Capital::expense::status</a></div><div class="ttdeci">name status</div><div class="ttdoc">Статус расхода (created | approved | authorized | paid | declined)</div><div class="ttdef"><b>Definition</b> expenses.hpp:40</div></div>
+<div class="ttc" id="astruct_ledger_1_1accounts_html_aba75b5d36f6cea77b1c2e0e8a6993d3f"><div class="ttname"><a href="struct_ledger_1_1accounts.html#aba75b5d36f6cea77b1c2e0e8a6993d3f">Ledger::accounts::ECONOMIC_ACTIVITY_FUND</a></div><div class="ttdeci">static constexpr uint64_t ECONOMIC_ACTIVITY_FUND</div><div class="ttdoc">Фонд обеспечения хозяйственной деятельности</div><div class="ttdef"><b>Definition</b> shared_ledger.hpp:191</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition</b> drafts.hpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="expenses_8hpp.html">expenses.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

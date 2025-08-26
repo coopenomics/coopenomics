@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Список членов всех файлов</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">Список членов</div>
+
+<h3><a id="index__5F" name="index__5F"></a>- _ -</h3><ul>
+<li>_afund_withdraw_action&#160;:&#160;<a class="el" href="consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3">consts.hpp</a></li>
+<li>_ano&#160;:&#160;<a class="el" href="consts_8hpp.html#a341b71e63284ca16c8b1561cb0cb0da4">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#ad3f0f719a2d5f3b0c7c9dfef60701d41">eosio.system_tester.hpp</a></li>
+<li>_auction_name_length_limit&#160;:&#160;<a class="el" href="consts_8hpp.html#a7907328ea2e6a0c7528a5116b1b837c1">consts.hpp</a></li>
+<li>_branch&#160;:&#160;<a class="el" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">consts.hpp</a></li>
+<li>_capital&#160;:&#160;<a class="el" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">consts.hpp</a></li>
+<li>_capital_program&#160;:&#160;<a class="el" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">consts.hpp</a></li>
+<li>_capital_program_id&#160;:&#160;<a class="el" href="consts_8hpp.html#a7e8a974646ccb637b2c8e6fe8baf5c5b">consts.hpp</a></li>
+<li>_change_action&#160;:&#160;<a class="el" href="consts_8hpp.html#a4815e0ccce32e816ccd173a076751310">consts.hpp</a></li>
+<li>_decision_expiration&#160;:&#160;<a class="el" href="consts_8hpp.html#a483a3602cc61b81b5c45376f12d303ee">consts.hpp</a></li>
+<li>_deposit_action&#160;:&#160;<a class="el" href="consts_8hpp.html#a9a8ae96090f27543d172f8801022700a">consts.hpp</a></li>
+<li>_deposit_expiration_seconds&#160;:&#160;<a class="el" href="consts_8hpp.html#aad53f3329a5e977fbcf8ebc0b9670d7d">consts.hpp</a></li>
+<li>_draft&#160;:&#160;<a class="el" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a84b944c5f21fa679bb648e5da9d07aa3">eosio.system_tester.hpp</a></li>
+<li>_efund_withdraw_action&#160;:&#160;<a class="el" href="consts_8hpp.html#aa1a351c6a529206a55a33115bac447d3">consts.hpp</a></li>
+<li>_free_decision_action&#160;:&#160;<a class="el" href="consts_8hpp.html#ab27ed06dfe2790bc04843a0a9ee7e766">consts.hpp</a></li>
+<li>_fund&#160;:&#160;<a class="el" href="consts_8hpp.html#a4538cae0be703aafb0a4e4ec9d2e3b53">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a2c0961ddfff56f19617fe9d149332de3">eosio.system_tester.hpp</a></li>
+<li>_fund_percent&#160;:&#160;<a class="el" href="consts_8hpp.html#a6d8fd359800ecc9d5a1e2adff5e55b29">consts.hpp</a></li>
+<li>_gateway&#160;:&#160;<a class="el" href="consts_8hpp.html#a55ba70333702ff882cdb79c9c1fcb9e6">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#aaeb17865ea8dac2c4b5763cef3307e81">eosio.system_tester.hpp</a></li>
+<li>_ledger&#160;:&#160;<a class="el" href="consts_8hpp.html#ac879096c6b02dc92c04f61b60c037395">consts.hpp</a></li>
+<li>_loan&#160;:&#160;<a class="el" href="consts_8hpp.html#aaaec43ca6b154688f53c660c7519590c">consts.hpp</a></li>
+<li>_marketplace&#160;:&#160;<a class="el" href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a77810873d105ffcecf83ed475cd60d77">eosio.system_tester.hpp</a></li>
+<li>_marketplace_program&#160;:&#160;<a class="el" href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">consts.hpp</a></li>
+<li>_marketplace_program_id&#160;:&#160;<a class="el" href="consts_8hpp.html#a9861a2d150dc964f83f640f2b6e9096d">consts.hpp</a></li>
+<li>_meet&#160;:&#160;<a class="el" href="consts_8hpp.html#aef7e2a1a07c6daf943acf7717224ee4d">consts.hpp</a></li>
+<li>_power_account&#160;:&#160;<a class="el" href="consts_8hpp.html#a98383cb202d2d3d56f7796a53a7f3d03">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a1c048c3ca2828ed3dae2d2d968decf0b">eosio.system_tester.hpp</a></li>
+<li>_producers_percent&#160;:&#160;<a class="el" href="consts_8hpp.html#a37aa40ea0f7329fa18e7e9be9d1d52ba">consts.hpp</a></li>
+<li>_product_contribution_action&#160;:&#160;<a class="el" href="consts_8hpp.html#ad83abcace3f0bc51e4a2e3761ae1ec19">consts.hpp</a></li>
+<li>_product_return_action&#160;:&#160;<a class="el" href="consts_8hpp.html#a582339576ca3f9240da595e1cc0720d3">consts.hpp</a></li>
+<li>_provider&#160;:&#160;<a class="el" href="consts_8hpp.html#a1ff8113eaea18bd553df59b9ad7df01a">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a43ce4f6f5c1aa46e6a7d6c3fbc401e78">eosio.system_tester.hpp</a></li>
+<li>_provider_chairman&#160;:&#160;<a class="el" href="consts_8hpp.html#a42013fa54096a8d11445a6006eaa0771">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#ae71cbe61bed1af649380278fc1500ac4">eosio.system_tester.hpp</a></li>
+<li>_provider_initial&#160;:&#160;<a class="el" href="consts_8hpp.html#a3a2b682d2d7616aee19abf3001792595">consts.hpp</a></li>
+<li>_provider_minimum&#160;:&#160;<a class="el" href="consts_8hpp.html#acf903cac90cfb816da7c0498d6ba77db">consts.hpp</a></li>
+<li>_provider_org_initial&#160;:&#160;<a class="el" href="consts_8hpp.html#ab17a40fe9229dfa6f28be4de7f739feb">consts.hpp</a></li>
+<li>_provider_org_minimum&#160;:&#160;<a class="el" href="consts_8hpp.html#a03d73e3110b452143134592d7af9b672">consts.hpp</a></li>
+<li>_ram_price_per_byte&#160;:&#160;<a class="el" href="consts_8hpp.html#ae0aa0d721b6159491c68d947cd7dc8be">consts.hpp</a></li>
+<li>_ramcore_symbol&#160;:&#160;<a class="el" href="consts_8hpp.html#a4977cb29c847a5a4fce4cce4b753c914">consts.hpp</a></li>
+<li>_regaccount_action&#160;:&#160;<a class="el" href="consts_8hpp.html#ace206e4d1676c54066a8ed734347d072">consts.hpp</a></li>
+<li>_register_amount&#160;:&#160;<a class="el" href="consts_8hpp.html#af525e3bc464504ee975a366f5f1cc4fc">consts.hpp</a></li>
+<li>_registrator&#160;:&#160;<a class="el" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a1b652bd9f596e25ba829c40b6879c9b6">eosio.system_tester.hpp</a></li>
+<li>_result_action&#160;:&#160;<a class="el" href="consts_8hpp.html#a643cfb8cb374e7433aaecc210874bc4b">consts.hpp</a></li>
+<li>_root_contract&#160;:&#160;<a class="el" href="consts_8hpp.html#a905130dd4c8fc18bfffe9eec68f9061c">consts.hpp</a></li>
+<li>_root_govern_symbol&#160;:&#160;<a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">consts.hpp</a></li>
+<li>_root_symbol&#160;:&#160;<a class="el" href="consts_8hpp.html#a6b01540b618a86e6bd5303db76e3b45f">consts.hpp</a></li>
+<li>_saving_account&#160;:&#160;<a class="el" href="consts_8hpp.html#ad32963d71641affbcefb02212f3166f3">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#af00426771f677e7044614af50ee791cd">eosio.system_tester.hpp</a></li>
+<li>_signature_expiration&#160;:&#160;<a class="el" href="consts_8hpp.html#a3c1178761f963d8c1b074a29b7d7732d">consts.hpp</a></li>
+<li>_source_program&#160;:&#160;<a class="el" href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">consts.hpp</a></li>
+<li>_source_program_id&#160;:&#160;<a class="el" href="consts_8hpp.html#ab68249b6bea4ffcec73391bf7ae2b741">consts.hpp</a></li>
+<li>_soviet&#160;:&#160;<a class="el" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a1a4a880dd86f4fc05dc380bb4ab26ab2">eosio.system_tester.hpp</a></li>
+<li>_STRINGIZE1&#160;:&#160;<a class="el" href="test__symbol_8hpp.html#a17dd8a3b0b62abfa457cb1c0b5ec4f43">test_symbol.hpp</a></li>
+<li>_STRINGIZE2&#160;:&#160;<a class="el" href="test__symbol_8hpp.html#a7d3d2e0e9471e0bfb3f3492c7db5a38c">test_symbol.hpp</a></li>
+<li>_system&#160;:&#160;<a class="el" href="consts_8hpp.html#a52724c95f23545d7efc4db16f3fe42ce">consts.hpp</a>, <a class="el" href="eosio_8system__tester_8hpp.html#a35fc6bba07a8091fdc5a3748d0534d2c">eosio.system_tester.hpp</a></li>
+<li>_wallet&#160;:&#160;<a class="el" href="consts_8hpp.html#a6bf96b63b136a53e53e817b74af2691e">consts.hpp</a></li>
+<li>_wallet_program&#160;:&#160;<a class="el" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">consts.hpp</a></li>
+<li>_wallet_program_id&#160;:&#160;<a class="el" href="consts_8hpp.html#a352f520a4bd7b6fb5e7b2687eba65684">consts.hpp</a></li>
+<li>_withdraw_action&#160;:&#160;<a class="el" href="consts_8hpp.html#a9e2440f7709ebcf63b4e0f7ca5c65fe5">consts.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

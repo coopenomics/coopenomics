@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/tests/eosio.system_blockinfo_tests.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('eosio_8system__blockinfo__tests_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл eosio.system_blockinfo_tests.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;boost/test/unit_test.hpp&gt;</code><br />
+<code>#include &lt;eosio/chain/config.hpp&gt;</code><br />
+<code>#include &lt;eosio/chain/contract_table_objects.hpp&gt;</code><br />
+<code>#include &lt;eosio/testing/tester.hpp&gt;</code><br />
+<code>#include &lt;fc/io/datastream.hpp&gt;</code><br />
+<code>#include &lt;fc/io/raw.hpp&gt;</code><br />
+<code>#include &lt;fc/log/logger.hpp&gt;</code><br />
+<code>#include &lt;fc/time.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="eosio_8system__tester_8hpp_source.html">eosio.system_tester.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="blockinfo__tester_8hpp_source.html">../system/contracts/test_contracts/blockinfo_tester/include/blockinfo_tester/blockinfo_tester.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html">anonymous_namespace{eosio.system_blockinfo_tests.cpp}::block_info_record</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03" id="r_namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html">anonymous_namespace{eosio.system_blockinfo_tests.cpp}</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:afe9656fa7a33eb511ad71853ee74445f" id="r_afe9656fa7a33eb511ad71853ee74445f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#afe9656fa7a33eb511ad71853ee74445f">TEST_INCLUDE</a></td></tr>
+<tr class="separator:afe9656fa7a33eb511ad71853ee74445f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a476f5ce4da004fbf486836a28856f1cd" id="r_a476f5ce4da004fbf486836a28856f1cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a476f5ce4da004fbf486836a28856f1cd">FC_REFLECT</a> (block_info_record,(version)(block_height)(block_timestamp)) namespace</td></tr>
+<tr class="separator:a476f5ce4da004fbf486836a28856f1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95fdc8cfd66a090d82b4c0b12470bce9" id="r_a95fdc8cfd66a090d82b4c0b12470bce9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a95fdc8cfd66a090d82b4c0b12470bce9">produce_blocks</a> (1)</td></tr>
+<tr class="separator:a95fdc8cfd66a090d82b4c0b12470bce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6e8251cfab108de26bcbfe67caea153" id="r_ad6e8251cfab108de26bcbfe67caea153"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ad6e8251cfab108de26bcbfe67caea153">add_to_expected_table</a> (<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a>)</td></tr>
+<tr class="separator:ad6e8251cfab108de26bcbfe67caea153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471c6cb052d56a242d74b9e9d0fa9375" id="r_a471c6cb052d56a242d74b9e9d0fa9375"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a471c6cb052d56a242d74b9e9d0fa9375">BOOST_REQUIRE</a> (check_tables_match(<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a42754b2e6f416c61253896f83953535d">actual_table</a>))</td></tr>
+<tr class="separator:a471c6cb052d56a242d74b9e9d0fa9375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9254d3a439e45c854ee21c789430a904" id="r_a9254d3a439e45c854ee21c789430a904"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a9254d3a439e45c854ee21c789430a904">produce_blocks</a> (rolling_window_size - 1)</td></tr>
+<tr class="separator:a9254d3a439e45c854ee21c789430a904"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33208b97b72a5c9529da7213df41fb6a" id="r_a33208b97b72a5c9529da7213df41fb6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a33208b97b72a5c9529da7213df41fb6a">for</a> (uint32_t end_block_height=<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>+rolling_window_size - 1;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>&lt;=end_block_height;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#acb3b40cb14a16b925c7347b2030578ed">advance_cur_block</a>())</td></tr>
+<tr class="separator:a33208b97b72a5c9529da7213df41fb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2495b4e23b5fcc416a80f6aea86bda2a" id="r_a2495b4e23b5fcc416a80f6aea86bda2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a2495b4e23b5fcc416a80f6aea86bda2a">BOOST_CHECK</a> (rolling_window_size==actual_table.size())</td></tr>
+<tr class="separator:a2495b4e23b5fcc416a80f6aea86bda2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56a1021d27d25834a71c228653965dc" id="r_ad56a1021d27d25834a71c228653965dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ad56a1021d27d25834a71c228653965dc">BOOST_CHECK</a> (check_tables_match(<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a42754b2e6f416c61253896f83953535d">actual_table</a>))</td></tr>
+<tr class="separator:ad56a1021d27d25834a71c228653965dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94549b8e5cd43ffaf0c3f07ab82b401b" id="r_a94549b8e5cd43ffaf0c3f07ab82b401b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a94549b8e5cd43ffaf0c3f07ab82b401b">erase</a> (expected_table.begin())</td></tr>
+<tr class="separator:a94549b8e5cd43ffaf0c3f07ab82b401b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6e0d4a05a7e57c14fe8ef548297f49" id="r_a9c6e0d4a05a7e57c14fe8ef548297f49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a9c6e0d4a05a7e57c14fe8ef548297f49">add_to_expected_table</a> (<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a>)</td></tr>
+<tr class="separator:a9c6e0d4a05a7e57c14fe8ef548297f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a515ee9857a59bd933ac9a613c3897" id="r_ad6a515ee9857a59bd933ac9a613c3897"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ad6a515ee9857a59bd933ac9a613c3897">create_account_with_resources</a> (blockinfo_tester_account_name, config::system_account_name, <a class="el" href="structcore__sym.html#a3e6ce4f2125788d8fd56a9e1b1ef9353">core_sym::from_string</a>(&quot;10.0000&quot;), false)</td></tr>
+<tr class="separator:ad6a515ee9857a59bd933ac9a613c3897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d5e40c00e07c83846725fb72d668cc" id="r_a21d5e40c00e07c83846725fb72d668cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a21d5e40c00e07c83846725fb72d668cc">set_code</a> (blockinfo_tester_account_name, test_contracts::blockinfo_tester_wasm())</td></tr>
+<tr class="separator:a21d5e40c00e07c83846725fb72d668cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0de63b5a7fc006c114033820f4494c" id="r_a4b0de63b5a7fc006c114033820f4494c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a4b0de63b5a7fc006c114033820f4494c">BOOST_CHECK</a> (result.has_error())</td></tr>
+<tr class="separator:a4b0de63b5a7fc006c114033820f4494c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefac43c555a8e3a09b07519e6f2f1a8d" id="r_aefac43c555a8e3a09b07519e6f2f1a8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#aefac43c555a8e3a09b07519e6f2f1a8d">BOOST_REQUIRE</a> (8&lt; <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>)</td></tr>
+<tr class="separator:aefac43c555a8e3a09b07519e6f2f1a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb0c10efe394d4075a99b388385ea9c5" id="r_aeb0c10efe394d4075a99b388385ea9c5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#aeb0c10efe394d4075a99b388385ea9c5">BOOST_CHECK</a> (info.batch_start_height==info.batch_current_end_height)</td></tr>
+<tr class="separator:aeb0c10efe394d4075a99b388385ea9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89420b9accc777683e61e0b899aa75f8" id="r_a89420b9accc777683e61e0b899aa75f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a89420b9accc777683e61e0b899aa75f8">produce_blocks</a> (2)</td></tr>
+<tr class="separator:a89420b9accc777683e61e0b899aa75f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a8af8482f663883a74d851f6e286ac4b9" id="r_a8af8482f663883a74d851f6e286ac4b9"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html#a8af8482f663883a74d851f6e286ac4b9">anonymous_namespace{eosio.system_blockinfo_tests.cpp}::rolling_window_size</a> = 10</td></tr>
+<tr class="separator:a8af8482f663883a74d851f6e286ac4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe4cc9788f52e49485473dc699537388" id="r_abe4cc9788f52e49485473dc699537388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#abe4cc9788f52e49485473dc699537388">try</a></td></tr>
+<tr class="separator:abe4cc9788f52e49485473dc699537388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6369f71c4b84b10d58345619fec31fee" id="r_a6369f71c4b84b10d58345619fec31fee"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a> = control-&gt;head_block_num()</td></tr>
+<tr class="separator:a6369f71c4b84b10d58345619fec31fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e35c55d12712562a8a5d9345e64f1c" id="r_ae8e35c55d12712562a8a5d9345e64f1c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> = control-&gt;head_block_time()</td></tr>
+<tr class="separator:ae8e35c55d12712562a8a5d9345e64f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dcaa62cbf75da019544765096f5223" id="r_a52dcaa62cbf75da019544765096f5223"><td class="memItemLeft" align="right" valign="top">std::vector&lt; block_info_record &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a></td></tr>
+<tr class="separator:a52dcaa62cbf75da019544765096f5223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606e24772d6361fa36da671b89088c3e" id="r_a606e24772d6361fa36da671b89088c3e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a606e24772d6361fa36da671b89088c3e">add_to_expected_table</a></td></tr>
+<tr class="separator:a606e24772d6361fa36da671b89088c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42754b2e6f416c61253896f83953535d" id="r_a42754b2e6f416c61253896f83953535d"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a42754b2e6f416c61253896f83953535d">actual_table</a> = get_blockinfo_table()</td></tr>
+<tr class="separator:a42754b2e6f416c61253896f83953535d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5691386f78599c28782c81b13fc68f09" id="r_a5691386f78599c28782c81b13fc68f09"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a> = fc::milliseconds(eosio::chain::config::block_interval_ms)</td></tr>
+<tr class="separator:a5691386f78599c28782c81b13fc68f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e16ff9e8ecdc3cedca030bb339fd24d" id="r_a7e16ff9e8ecdc3cedca030bb339fd24d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a> = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a> + 1</td></tr>
+<tr class="separator:a7e16ff9e8ecdc3cedca030bb339fd24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a45f253270dfac5878067abeda33b7c" id="r_a7a45f253270dfac5878067abeda33b7c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a> = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a></td></tr>
+<tr class="separator:a7a45f253270dfac5878067abeda33b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb3b40cb14a16b925c7347b2030578ed" id="r_acb3b40cb14a16b925c7347b2030578ed"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#acb3b40cb14a16b925c7347b2030578ed">advance_cur_block</a></td></tr>
+<tr class="separator:acb3b40cb14a16b925c7347b2030578ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f94ed60768eb5ac104d28aed9262cb" id="r_a95f94ed60768eb5ac104d28aed9262cb"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a95f94ed60768eb5ac104d28aed9262cb">latest_block_batch_info</a></td></tr>
+<tr class="separator:a95f94ed60768eb5ac104d28aed9262cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e7d3a467934b48346b45c920193ca5" id="r_a06e7d3a467934b48346b45c920193ca5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a06e7d3a467934b48346b45c920193ca5">require_latest_block_batch_info</a></td></tr>
+<tr class="separator:a06e7d3a467934b48346b45c920193ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec503f718282cf8b966eeaa60b33695" id="r_abec503f718282cf8b966eeaa60b33695"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#abec503f718282cf8b966eeaa60b33695">expected_batch_start_timestamp</a> = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>(1)</td></tr>
+<tr class="separator:abec503f718282cf8b966eeaa60b33695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f9ce5e1154f7e29d1aeea4a1f96444" id="r_ab9f9ce5e1154f7e29d1aeea4a1f96444"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ab9f9ce5e1154f7e29d1aeea4a1f96444">expected_batch_current_end_timestamp</a> = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>(2)</td></tr>
+<tr class="separator:ab9f9ce5e1154f7e29d1aeea4a1f96444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="afe9656fa7a33eb511ad71853ee74445f" name="afe9656fa7a33eb511ad71853ee74445f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9656fa7a33eb511ad71853ee74445f">&#9670;&#160;</a></span>TEST_INCLUDE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEST_INCLUDE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a9c6e0d4a05a7e57c14fe8ef548297f49" name="a9c6e0d4a05a7e57c14fe8ef548297f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6e0d4a05a7e57c14fe8ef548297f49">&#9670;&#160;</a></span>add_to_expected_table() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">add_to_expected_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6e8251cfab108de26bcbfe67caea153" name="ad6e8251cfab108de26bcbfe67caea153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e8251cfab108de26bcbfe67caea153">&#9670;&#160;</a></span>add_to_expected_table() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">add_to_expected_table </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad56a1021d27d25834a71c228653965dc" name="ad56a1021d27d25834a71c228653965dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56a1021d27d25834a71c228653965dc">&#9670;&#160;</a></span>BOOST_CHECK() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_CHECK </td>
+          <td>(</td>
+          <td class="paramtype">check_tables_match(<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a42754b2e6f416c61253896f83953535d">actual_table</a>)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb0c10efe394d4075a99b388385ea9c5" name="aeb0c10efe394d4075a99b388385ea9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb0c10efe394d4075a99b388385ea9c5">&#9670;&#160;</a></span>BOOST_CHECK() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_CHECK </td>
+          <td>(</td>
+          <td class="paramtype">info.&#160;</td>
+          <td class="paramname"><em>batch_start_height</em> = <code>=info.batch_current_end_height</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">{</div>
+<div class="line">      <span class="keyword">auto</span> info = <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a06e7d3a467934b48346b45c920193ca5">require_latest_block_batch_info</a>(<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>, std::numeric_limits&lt;uint32_t&gt;::max())</div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a06e7d3a467934b48346b45c920193ca5"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a06e7d3a467934b48346b45c920193ca5">require_latest_block_batch_info</a></div><div class="ttdeci">auto require_latest_block_batch_info</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:342</div></div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a6369f71c4b84b10d58345619fec31fee"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a></div><div class="ttdeci">auto start_block_height</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:261</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4b0de63b5a7fc006c114033820f4494c" name="a4b0de63b5a7fc006c114033820f4494c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0de63b5a7fc006c114033820f4494c">&#9670;&#160;</a></span>BOOST_CHECK() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_CHECK </td>
+          <td>(</td>
+          <td class="paramtype">result.&#160;</td>
+          <td class="paramname"><em>has_error</em>()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">{</div>
+<div class="line">      <span class="keyword">auto</span> result = <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a95f94ed60768eb5ac104d28aed9262cb">latest_block_batch_info</a>(0, 1)</div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a95f94ed60768eb5ac104d28aed9262cb"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a95f94ed60768eb5ac104d28aed9262cb">latest_block_batch_info</a></div><div class="ttdeci">auto latest_block_batch_info</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:325</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2495b4e23b5fcc416a80f6aea86bda2a" name="a2495b4e23b5fcc416a80f6aea86bda2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2495b4e23b5fcc416a80f6aea86bda2a">&#9670;&#160;</a></span>BOOST_CHECK() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_CHECK </td>
+          <td>(</td>
+          <td class="paramtype">rolling_window_size&#160;</td>
+          <td class="paramname"> = <code>=actual_table.size()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefac43c555a8e3a09b07519e6f2f1a8d" name="aefac43c555a8e3a09b07519e6f2f1a8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefac43c555a8e3a09b07519e6f2f1a8d">&#9670;&#160;</a></span>BOOST_REQUIRE() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_REQUIRE </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a471c6cb052d56a242d74b9e9d0fa9375" name="a471c6cb052d56a242d74b9e9d0fa9375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a471c6cb052d56a242d74b9e9d0fa9375">&#9670;&#160;</a></span>BOOST_REQUIRE() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOST_REQUIRE </td>
+          <td>(</td>
+          <td class="paramtype">check_tables_match(<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a42754b2e6f416c61253896f83953535d">actual_table</a>)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6a515ee9857a59bd933ac9a613c3897" name="ad6a515ee9857a59bd933ac9a613c3897"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a515ee9857a59bd933ac9a613c3897">&#9670;&#160;</a></span>create_account_with_resources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">create_account_with_resources </td>
+          <td>(</td>
+          <td class="paramtype">blockinfo_tester_account_name&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">config::system_account_name&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcore__sym.html#a3e6ce4f2125788d8fd56a9e1b1ef9353">core_sym::from_string</a>(&quot;10.0000&quot;)&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">false&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94549b8e5cd43ffaf0c3f07ab82b401b" name="a94549b8e5cd43ffaf0c3f07ab82b401b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94549b8e5cd43ffaf0c3f07ab82b401b">&#9670;&#160;</a></span>erase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a> erase </td>
+          <td>(</td>
+          <td class="paramtype">expected_table.&#160;</td>
+          <td class="paramname"><em>begin</em>()</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a476f5ce4da004fbf486836a28856f1cd" name="a476f5ce4da004fbf486836a28856f1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a476f5ce4da004fbf486836a28856f1cd">&#9670;&#160;</a></span>FC_REFLECT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FC_REFLECT </td>
+          <td>(</td>
+          <td class="paramtype">block_info_record&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(version)(block_height)(block_timestamp)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Scans filtered rows in blockinfo table in order of ascending block height where filtering only picks rows corresponding to block heights in the closed interval [start_block_height, end_block_height].</p>
+<p>For each row visited, its deserialized block_info_record structure is passed into the visitor function. If a call to the visitor function returns false, scanning will stop and this function will return.</p>
+<dl class="section pre"><dt>Предусловие</dt><dd>start_block_height &lt;= end_block_height </dd></dl>
+<dl class="section return"><dt>Возвращает</dt><dd>number of rows visited</dd></dl>
+
+</div>
+</div>
+<a id="a33208b97b72a5c9529da7213df41fb6a" name="a33208b97b72a5c9529da7213df41fb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33208b97b72a5c9529da7213df41fb6a">&#9670;&#160;</a></span>for()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">for </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>end_block_height</em> = <code><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a>&#160;+&#160;rolling_window_size&#160;-&#160;1;&#160;&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>&#160;&lt;=&#160;end_block_height;&#160;&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#acb3b40cb14a16b925c7347b2030578ed">advance_cur_block</a>()</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95fdc8cfd66a090d82b4c0b12470bce9" name="a95fdc8cfd66a090d82b4c0b12470bce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fdc8cfd66a090d82b4c0b12470bce9">&#9670;&#160;</a></span>produce_blocks() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">produce_blocks </td>
+          <td>(</td>
+          <td class="paramtype">1&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89420b9accc777683e61e0b899aa75f8" name="a89420b9accc777683e61e0b899aa75f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89420b9accc777683e61e0b899aa75f8">&#9670;&#160;</a></span>produce_blocks() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">produce_blocks </td>
+          <td>(</td>
+          <td class="paramtype">2&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9254d3a439e45c854ee21c789430a904" name="a9254d3a439e45c854ee21c789430a904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9254d3a439e45c854ee21c789430a904">&#9670;&#160;</a></span>produce_blocks() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">produce_blocks </td>
+          <td>(</td>
+          <td class="paramtype">rolling_window_size -&#160;</td>
+          <td class="paramname"><em>1</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21d5e40c00e07c83846725fb72d668cc" name="a21d5e40c00e07c83846725fb72d668cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d5e40c00e07c83846725fb72d668cc">&#9670;&#160;</a></span>set_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_code </td>
+          <td>(</td>
+          <td class="paramtype">blockinfo_tester_account_name&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test_contracts::blockinfo_tester_wasm()&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a42754b2e6f416c61253896f83953535d" name="a42754b2e6f416c61253896f83953535d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42754b2e6f416c61253896f83953535d">&#9670;&#160;</a></span>actual_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">actual_table = get_blockinfo_table()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a606e24772d6361fa36da671b89088c3e" name="a606e24772d6361fa36da671b89088c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606e24772d6361fa36da671b89088c3e">&#9670;&#160;</a></span>add_to_expected_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto add_to_expected_table</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= [&amp;<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>](uint32_t block_height, fc::time_point block_timestamp) {</div>
+<div class="line">      <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a>.push_back(block_info_record{</div>
+<div class="line">         .block_height    = block_height,</div>
+<div class="line">         .block_timestamp = block_timestamp,</div>
+<div class="line">      });</div>
+<div class="line">   }</div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a52dcaa62cbf75da019544765096f5223"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a52dcaa62cbf75da019544765096f5223">expected_table</a></div><div class="ttdeci">std::vector&lt; block_info_record &gt; expected_table</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:264</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="acb3b40cb14a16b925c7347b2030578ed" name="acb3b40cb14a16b925c7347b2030578ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb3b40cb14a16b925c7347b2030578ed">&#9670;&#160;</a></span>advance_cur_block</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">advance_cur_block</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= [&amp;<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>, &amp;<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a>, <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>]() {</div>
+<div class="line">      ++<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a>;</div>
+<div class="line">      <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a> += <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>;</div>
+<div class="line">   }</div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a5691386f78599c28782c81b13fc68f09"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a></div><div class="ttdeci">auto block_time_delta</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:281</div></div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a7a45f253270dfac5878067abeda33b7c"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a7a45f253270dfac5878067abeda33b7c">cur_block_timestamp</a></div><div class="ttdeci">auto cur_block_timestamp</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:284</div></div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_a7e16ff9e8ecdc3cedca030bb339fd24d"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#a7e16ff9e8ecdc3cedca030bb339fd24d">cur_block_height</a></div><div class="ttdeci">uint32_t cur_block_height</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:283</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5691386f78599c28782c81b13fc68f09" name="a5691386f78599c28782c81b13fc68f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5691386f78599c28782c81b13fc68f09">&#9670;&#160;</a></span>block_time_delta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto block_time_delta = fc::milliseconds(eosio::chain::config::block_interval_ms)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e16ff9e8ecdc3cedca030bb339fd24d" name="a7e16ff9e8ecdc3cedca030bb339fd24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e16ff9e8ecdc3cedca030bb339fd24d">&#9670;&#160;</a></span>cur_block_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t cur_block_height = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a6369f71c4b84b10d58345619fec31fee">start_block_height</a> + 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a45f253270dfac5878067abeda33b7c" name="a7a45f253270dfac5878067abeda33b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a45f253270dfac5878067abeda33b7c">&#9670;&#160;</a></span>cur_block_timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto cur_block_timestamp = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9f9ce5e1154f7e29d1aeea4a1f96444" name="ab9f9ce5e1154f7e29d1aeea4a1f96444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f9ce5e1154f7e29d1aeea4a1f96444">&#9670;&#160;</a></span>expected_batch_current_end_timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto expected_batch_current_end_timestamp = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abec503f718282cf8b966eeaa60b33695" name="abec503f718282cf8b966eeaa60b33695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec503f718282cf8b966eeaa60b33695">&#9670;&#160;</a></span>expected_batch_start_timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto expected_batch_start_timestamp = <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ae8e35c55d12712562a8a5d9345e64f1c">start_block_timestamp</a> + <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a5691386f78599c28782c81b13fc68f09">block_time_delta</a>(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52dcaa62cbf75da019544765096f5223" name="a52dcaa62cbf75da019544765096f5223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52dcaa62cbf75da019544765096f5223">&#9670;&#160;</a></span>expected_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;block_info_record&gt; expected_table</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95f94ed60768eb5ac104d28aed9262cb" name="a95f94ed60768eb5ac104d28aed9262cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f94ed60768eb5ac104d28aed9262cb">&#9670;&#160;</a></span>latest_block_batch_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto latest_block_batch_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= [<span class="keyword">this</span>](uint32_t batch_start_height_offset,</div>
+<div class="line">                                         uint32_t batch_size) -&gt; blockinfo_tester::latest_block_batch_info_result </div>
+<div class="line">   {</div>
+<div class="line">      <span class="keyword">auto</span> result = get_latest_block_batch_info(blockinfo_tester::get_latest_block_batch_info{</div>
+<div class="line">         .batch_start_height_offset = batch_start_height_offset,</div>
+<div class="line">         .batch_size                = batch_size,</div>
+<div class="line">      });</div>
+<div class="line">      <span class="keywordflow">if</span> (!result.first.has_value()) {</div>
+<div class="line">         <span class="keyword">const</span> eosio::chain::transaction_trace&amp; <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a176b44375feec0c1f90f3bde5f1feb2e">trace</a> = *result.second;</div>
+<div class="line">         <span class="keywordflow">if</span> (<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a176b44375feec0c1f90f3bde5f1feb2e">trace</a>.except.has_value()) {</div>
+<div class="line">            elog(<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a176b44375feec0c1f90f3bde5f1feb2e">trace</a>.except-&gt;to_detail_string());</div>
+<div class="line">         }</div>
+<div class="line">      }</div>
+<div class="line">      <a class="code hl_function" href="eosio_8system__blockinfo__tests_8cpp.html#aefac43c555a8e3a09b07519e6f2f1a8d">BOOST_REQUIRE</a>(result.first.has_value());</div>
+<div class="line">      <span class="keywordflow">return</span> *result.first;</div>
+<div class="line">   }</div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a176b44375feec0c1f90f3bde5f1feb2e"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a176b44375feec0c1f90f3bde5f1feb2e">trace</a></div><div class="ttdeci">transaction_trace_ptr trace</div><div class="ttdef"><b>Definition</b> eosio.msig_tests.cpp:305</div></div>
+<div class="ttc" id="aeosio_8system__blockinfo__tests_8cpp_html_aefac43c555a8e3a09b07519e6f2f1a8d"><div class="ttname"><a href="eosio_8system__blockinfo__tests_8cpp.html#aefac43c555a8e3a09b07519e6f2f1a8d">BOOST_REQUIRE</a></div><div class="ttdeci">BOOST_REQUIRE(8&lt; start_block_height)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a06e7d3a467934b48346b45c920193ca5" name="a06e7d3a467934b48346b45c920193ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e7d3a467934b48346b45c920193ca5">&#9670;&#160;</a></span>require_latest_block_batch_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto require_latest_block_batch_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">=</div>
+<div class="line">      [<a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a95f94ed60768eb5ac104d28aed9262cb">latest_block_batch_info</a>](uint32_t batch_start_height_offset,</div>
+<div class="line">                                uint32_t batch_size) -&gt; blockinfo_tester::block_batch_info </div>
+<div class="line">   {</div>
+<div class="line">      <span class="keyword">auto</span> result = <a class="code hl_variable" href="eosio_8system__blockinfo__tests_8cpp.html#a95f94ed60768eb5ac104d28aed9262cb">latest_block_batch_info</a>(batch_start_height_offset, batch_size);</div>
+<div class="line">      <span class="keywordflow">if</span> (result.has_error()) {</div>
+<div class="line">         elog(<span class="stringliteral">&quot;require_latest_block_batch_info returned error: ${err}&quot;</span>, (<span class="stringliteral">&quot;err&quot;</span>, result.get_error()));</div>
+<div class="line">      }</div>
+<div class="line">      <a class="code hl_function" href="eosio_8system__blockinfo__tests_8cpp.html#aefac43c555a8e3a09b07519e6f2f1a8d">BOOST_REQUIRE</a>(!result.has_error());</div>
+<div class="line"> </div>
+<div class="line">      <span class="keywordflow">return</span> *result.result;</div>
+<div class="line">   }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6369f71c4b84b10d58345619fec31fee" name="a6369f71c4b84b10d58345619fec31fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6369f71c4b84b10d58345619fec31fee">&#9670;&#160;</a></span>start_block_height</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto start_block_height = control-&gt;head_block_num()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8e35c55d12712562a8a5d9345e64f1c" name="ae8e35c55d12712562a8a5d9345e64f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e35c55d12712562a8a5d9345e64f1c">&#9670;&#160;</a></span>start_block_timestamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto start_block_timestamp = control-&gt;head_block_time()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe4cc9788f52e49485473dc699537388" name="abe4cc9788f52e49485473dc699537388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4cc9788f52e49485473dc699537388">&#9670;&#160;</a></span>try</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">try</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">{</div>
+<div class="line">   <span class="keyword">static_assert</span>(<a class="code hl_variable" href="namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html#a8af8482f663883a74d851f6e286ac4b9">rolling_window_size</a> &gt;= 2)</div>
+<div class="ttc" id="anamespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_html_a8af8482f663883a74d851f6e286ac4b9"><div class="ttname"><a href="namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html#a8af8482f663883a74d851f6e286ac4b9">anonymous_namespace{eosio.system_blockinfo_tests.cpp}::rolling_window_size</a></div><div class="ttdeci">static constexpr uint32_t rolling_window_size</div><div class="ttdef"><b>Definition</b> eosio.system_blockinfo_tests.cpp:35</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_d1eb7f32592100b226cc7f73f9055757.html">tests</a></li><li class="navelem"><a class="el" href="eosio_8system__blockinfo__tests_8cpp.html">eosio.system_blockinfo_tests.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

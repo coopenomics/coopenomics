@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Члены классов - Переменные</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_vars_b.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="contents">
+<div class="textblock">&#160;</div>
+
+<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>back_from_producers&#160;:&#160;<a class="el" href="structeosiosystem_1_1emission__state.html#a11f8ea9b43b4483e667bc2359e30a710">eosiosystem::emission_state</a></li>
+<li>balance&#160;:&#160;<a class="el" href="structconnector.html#a7ccbf3db174c260f734d246d0a9cf3bd">connector</a>, <a class="el" href="structeosio_1_1token_1_1account.html#a6d6aaf37aa4e794b64a1b04990339043">eosio::token::account</a>, <a class="el" href="structeosiosystem_1_1exchange__state_1_1connector.html#aa0c34b770479927ae7d4f0760bc0e574">eosiosystem::exchange_state::connector</a></li>
+<li>BANK_ACCOUNT&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#ac58da0c11b45c0e43dc0889611aa9dc8">Ledger::accounts</a></li>
+<li>bank_data_id&#160;:&#160;<a class="el" href="structfwithdraw.html#aeab9fd0569cda6b199a66af465bfa18d">fwithdraw</a></li>
+<li>base&#160;:&#160;<a class="el" href="structeosiosystem_1_1exchange__state.html#a64022b0822ac4b53ff484590f76ef021">eosiosystem::exchange_state</a></li>
+<li>base_cost&#160;:&#160;<a class="el" href="struct_marketplace_1_1request.html#a8ccbf8f4ac693d1d23a5f909ce018acf">Marketplace::request</a></li>
+<li>batch_current_end_height&#160;:&#160;<a class="el" href="structeosiosystem_1_1block__info_1_1block__batch__info.html#a54af69850d006e2a43fdea538f5c0695">eosiosystem::block_info::block_batch_info</a></li>
+<li>batch_current_end_timestamp&#160;:&#160;<a class="el" href="structeosiosystem_1_1block__info_1_1block__batch__info.html#aef63da736d0ed2568917a4e9aeb44931">eosiosystem::block_info::block_batch_info</a></li>
+<li>batch_id&#160;:&#160;<a class="el" href="structdecision.html#a6728d16176fe0983ec043b8a87b809a2">decision</a></li>
+<li>batch_size&#160;:&#160;<a class="el" href="structsystem__contracts_1_1testing_1_1test__contracts_1_1blockinfo__tester_1_1get__latest__block__batch__info.html#a82ebd86affa47e2f8024b9083374ed8a">system_contracts::testing::test_contracts::blockinfo_tester::get_latest_block_batch_info</a></li>
+<li>batch_start_height&#160;:&#160;<a class="el" href="structeosiosystem_1_1block__info_1_1block__batch__info.html#aabf1478c4a361b8fc044f77c4617e32b">eosiosystem::block_info::block_batch_info</a></li>
+<li>batch_start_height_offset&#160;:&#160;<a class="el" href="structsystem__contracts_1_1testing_1_1test__contracts_1_1blockinfo__tester_1_1get__latest__block__batch__info.html#ac601553260c24e5fe6ed17828e4a41ef">system_contracts::testing::test_contracts::blockinfo_tester::get_latest_block_batch_info</a></li>
+<li>batch_start_timestamp&#160;:&#160;<a class="el" href="structeosiosystem_1_1block__info_1_1block__batch__info.html#af7f9f6a56f32f91ec80622736fe86478">eosiosystem::block_info::block_batch_info</a></li>
+<li>bidder&#160;:&#160;<a class="el" href="structeosiosystem_1_1bid__refund.html#ae6bd67f412850f81514ea8b5a5ad4abd">eosiosystem::bid_refund</a></li>
+<li>block_height&#160;:&#160;<a class="el" href="structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5">anonymous_namespace{eosio.system_blockinfo_tests.cpp}::block_info_record</a>, <a class="el" href="structeosiosystem_1_1block__info_1_1block__info__record.html#a7e0b0f4b78c5dcdff23495596e7cb488">eosiosystem::block_info::block_info_record</a></li>
+<li>block_timestamp&#160;:&#160;<a class="el" href="structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364">anonymous_namespace{eosio.system_blockinfo_tests.cpp}::block_info_record</a>, <a class="el" href="structeosiosystem_1_1block__info_1_1block__info__record.html#afaa04cfe4be674be7f3d4d497e90c072">eosiosystem::block_info::block_info_record</a></li>
+<li>blocked&#160;:&#160;<a class="el" href="structlaccount.html#adb6c8bee562277c363492e7e5ab48d0b">laccount</a>, <a class="el" href="structprogram.html#ad77ddc1785fa618b649488e8ccf4cc71">program</a>, <a class="el" href="structprogwallet.html#a695c77f25046ba4d46476fead7bdae07">progwallet</a></li>
+<li>board_id&#160;:&#160;<a class="el" href="structautomator.html#af9991df3151a7d8205c4205caf993a92">automator</a></li>
+<li>bpay_account&#160;:&#160;<a class="el" href="classeosiosystem_1_1system__contract.html#aeec189aa121eaf90aee0c180cd59cc26">eosiosystem::system_contract</a></li>
+<li>braname&#160;:&#160;<a class="el" href="structaddress.html#af748837166c7a3e26168697f31499d8d">address</a>, <a class="el" href="structcoobranch.html#afa0c5d1765e9a8952c2e1dc376a4df52">coobranch</a>, <a class="el" href="structjoincoops.html#a1d654c829ab078b3d7e07edd44b4483b">joincoops</a>, <a class="el" href="struct_marketplace_1_1request.html#a80fdf8d5025a1767f5ed0adc4725ff8b">Marketplace::request</a>, <a class="el" href="structparticipant.html#a01c5e1d21edc0f1e7c7a8a8173984eba">participant</a>, <a class="el" href="struct_registrator_1_1candidate.html#ac4a7fb69afe63a6ea12de8ae8c0977e7">Registrator::candidate</a>, <a class="el" href="struct_registrator_1_1candidate__legacy.html#a0340efbdbc0bf3fd5caa664ee6b9bced">Registrator::candidate_legacy</a></li>
+<li>building_section&#160;:&#160;<a class="el" href="structaddress__data.html#a403717a4fba75af0ce7a79f66489d529">address_data</a></li>
+<li>business_hours&#160;:&#160;<a class="el" href="structaddress__data.html#ad37c48bf079e77c72da8c0206f2a053b">address_data</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/capital/domain/core/voting/voting.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('voting_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл voting.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+<code>#include &lt;eosio/asset.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="projects_8hpp_source.html">../../entities/projects.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="segments_8hpp_source.html">../../entities/segments.hpp</a>&quot;</code><br />
+</div>
+<p><a href="voting_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_capital" id="r_namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_capital_1_1_core" id="r_namespace_capital_1_1_core"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core.html">Capital::Core</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_capital_1_1_core_1_1_voting" id="r_namespace_capital_1_1_core_1_1_voting"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html">Capital::Core::Voting</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3c4f2672ae5462ed9871bd87fbdedc01" id="r_a3c4f2672ae5462ed9871bd87fbdedc01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a3c4f2672ae5462ed9871bd87fbdedc01">Capital::Core::Voting::initialize_project_voting</a> (name coopname, checksum256 project_hash)</td></tr>
+<tr class="memdesc:a3c4f2672ae5462ed9871bd87fbdedc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует голосование по проекту при его завершении  <br /></td></tr>
+<tr class="separator:a3c4f2672ae5462ed9871bd87fbdedc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0ba2c7ad3327a4ef026f10c7cd9b2f" id="r_a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1voting__amounts.html">voting_amounts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a3a0ba2c7ad3327a4ef026f10c7cd9b2f">Capital::Core::Voting::calculate_voting_amounts</a> (const eosio::asset &amp;authors_bonus_pool, const eosio::asset &amp;creators_bonus_pool, uint64_t total_author_shares, uint32_t total_voters, double authors_voting_percent=38.2, double creators_voting_percent=38.2)</td></tr>
+<tr class="memdesc:a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает все суммы для голосования по пулам  <br /></td></tr>
+<tr class="separator:a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c67cb70c6380ff4e693e26d66e244c" id="r_a71c67cb70c6380ff4e693e26d66e244c"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a71c67cb70c6380ff4e693e26d66e244c">Capital::Core::Voting::calculate_voting_final_amount</a> (name coopname, checksum256 project_hash, name <a class="el" href="structparticipant.html">participant</a>)</td></tr>
+<tr class="memdesc:a71c67cb70c6380ff4e693e26d66e244c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает итоговые суммы для участника по методу Водянова  <br /></td></tr>
+<tr class="separator:a71c67cb70c6380ff4e693e26d66e244c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1e5f87a4d173588176115c17d2926b" id="r_a2a1e5f87a4d173588176115c17d2926b"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a2a1e5f87a4d173588176115c17d2926b">Capital::Core::Voting::calculate_equal_author_bonus</a> (const <a class="el" href="struct_capital_1_1project.html">Capital::project</a> &amp;<a class="el" href="struct_capital_1_1project.html">project</a>, const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">Capital::Segments::segment</a> &amp;segment)</td></tr>
+<tr class="memdesc:a2a1e5f87a4d173588176115c17d2926b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает равную премию автора  <br /></td></tr>
+<tr class="separator:a2a1e5f87a4d173588176115c17d2926b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fc9c2ecce3743691372b84463a4995" id="r_ab1fc9c2ecce3743691372b84463a4995"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#ab1fc9c2ecce3743691372b84463a4995">Capital::Core::Voting::calculate_direct_creator_bonus</a> (const <a class="el" href="struct_capital_1_1project.html">Capital::project</a> &amp;<a class="el" href="struct_capital_1_1project.html">project</a>, const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">Capital::Segments::segment</a> &amp;segment)</td></tr>
+<tr class="memdesc:ab1fc9c2ecce3743691372b84463a4995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает прямую премию создателя  <br /></td></tr>
+<tr class="separator:ab1fc9c2ecce3743691372b84463a4995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa75831b631f7fd08410e395597324f9" id="r_aaa75831b631f7fd08410e395597324f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#aaa75831b631f7fd08410e395597324f9">Capital::Core::Voting::is_voting_completed</a> (const <a class="el" href="struct_capital_1_1project.html">Capital::project</a> &amp;<a class="el" href="struct_capital_1_1project.html">project</a>)</td></tr>
+<tr class="memdesc:aaa75831b631f7fd08410e395597324f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, завершено ли голосование (кто-то проголосовал или истек срок)  <br /></td></tr>
+<tr class="separator:aaa75831b631f7fd08410e395597324f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83e51b9c8a7af0b1b7ecb1e49a3812b" id="r_ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#ac83e51b9c8a7af0b1b7ecb1e49a3812b">Capital::Core::Voting::update_voting_status</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memdesc:ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус сегмента участника, предоставляя ему право голоса, если это необходимо  <br /></td></tr>
+<tr class="separator:ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_a2b2af46d26d7ef7d7c281a8c4aa14f2.html">core</a></li><li class="navelem"><a class="el" href="dir_9985f075dd1f3e5865b3e186282e2c9e.html">voting</a></li><li class="navelem"><a class="el" href="voting_8hpp.html">voting.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

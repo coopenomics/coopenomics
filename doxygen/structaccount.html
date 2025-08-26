@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура account</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structaccount.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structaccount-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура account</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Структура, представляющая учетные записи аккаунтов.  
+ <a href="structaccount.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="accounts_8hpp_source.html">accounts.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a69acdb708adce988c16e5c4e46d631d1" id="r_a69acdb708adce988c16e5c4e46d631d1"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a69acdb708adce988c16e5c4e46d631d1">primary_key</a> () const</td></tr>
+<tr class="memdesc:a69acdb708adce988c16e5c4e46d631d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает первичный ключ учетной записи аккаунта.  <br /></td></tr>
+<tr class="separator:a69acdb708adce988c16e5c4e46d631d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83306a3d2a29ab942504ebb68e42d71" id="r_ae83306a3d2a29ab942504ebb68e42d71"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ae83306a3d2a29ab942504ebb68e42d71">by_referer</a> () const</td></tr>
+<tr class="memdesc:ae83306a3d2a29ab942504ebb68e42d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ключ по рефереру.  <br /></td></tr>
+<tr class="separator:ae83306a3d2a29ab942504ebb68e42d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e111ab46596e20d058891f9d24efac" id="r_ab9e111ab46596e20d058891f9d24efac"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ab9e111ab46596e20d058891f9d24efac">by_type</a> () const</td></tr>
+<tr class="memdesc:ab9e111ab46596e20d058891f9d24efac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ключ по типу аккаунта.  <br /></td></tr>
+<tr class="separator:ab9e111ab46596e20d058891f9d24efac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75dc254d23308647a184e11c19b3edb8" id="r_a75dc254d23308647a184e11c19b3edb8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a75dc254d23308647a184e11c19b3edb8">by_status</a> () const</td></tr>
+<tr class="memdesc:a75dc254d23308647a184e11c19b3edb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ключ по статусу аккаунта.  <br /></td></tr>
+<tr class="separator:a75dc254d23308647a184e11c19b3edb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b046f1d8181edd9d4ffef1cc0b35c2" id="r_ac4b046f1d8181edd9d4ffef1cc0b35c2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ac4b046f1d8181edd9d4ffef1cc0b35c2">by_registr</a> () const</td></tr>
+<tr class="memdesc:ac4b046f1d8181edd9d4ffef1cc0b35c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает ключ по регистратору.  <br /></td></tr>
+<tr class="separator:ac4b046f1d8181edd9d4ffef1cc0b35c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7a160d5b2d34e3e5273fd1dda9cba7" id="r_a3d7a160d5b2d34e3e5273fd1dda9cba7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a3d7a160d5b2d34e3e5273fd1dda9cba7">is_active</a> () const</td></tr>
+<tr class="separator:a3d7a160d5b2d34e3e5273fd1dda9cba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688414885704233ae57b4093f7c60dd5" id="r_a688414885704233ae57b4093f7c60dd5"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a688414885704233ae57b4093f7c60dd5">by_registered_at</a> () const</td></tr>
+<tr class="separator:a688414885704233ae57b4093f7c60dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9b1c94522c856703a6f6fab6b20f55" id="r_a0b9b1c94522c856703a6f6fab6b20f55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a0b9b1c94522c856703a6f6fab6b20f55">is_verified</a> () const</td></tr>
+<tr class="memdesc:a0b9b1c94522c856703a6f6fab6b20f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, верифицирована ли организация.  <br /></td></tr>
+<tr class="separator:a0b9b1c94522c856703a6f6fab6b20f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d9022a82d8767baa0cb56347cc1ac6" id="r_a89d9022a82d8767baa0cb56347cc1ac6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a89d9022a82d8767baa0cb56347cc1ac6">is_verified_index</a> () const</td></tr>
+<tr class="memdesc:a89d9022a82d8767baa0cb56347cc1ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает индекс для определения, является ли организация верифицированной.  <br /></td></tr>
+<tr class="separator:a89d9022a82d8767baa0cb56347cc1ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a6ba28d058e936aeecc71303af6f543c4" id="r_a6ba28d058e936aeecc71303af6f543c4"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a6ba28d058e936aeecc71303af6f543c4">username</a></td></tr>
+<tr class="memdesc:a6ba28d058e936aeecc71303af6f543c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта гостя. Имя пользователя в системе.  <br /></td></tr>
+<tr class="separator:a6ba28d058e936aeecc71303af6f543c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad816d8356a21e2b77c6d4f35b1b4ae3a" id="r_ad816d8356a21e2b77c6d4f35b1b4ae3a"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ad816d8356a21e2b77c6d4f35b1b4ae3a">referer</a></td></tr>
+<tr class="memdesc:ad816d8356a21e2b77c6d4f35b1b4ae3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта, который был реферером при регистрации.  <br /></td></tr>
+<tr class="separator:ad816d8356a21e2b77c6d4f35b1b4ae3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753aadd7880d6e4a20a4de3da9b415bf" id="r_a753aadd7880d6e4a20a4de3da9b415bf"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a753aadd7880d6e4a20a4de3da9b415bf">registrator</a></td></tr>
+<tr class="memdesc:a753aadd7880d6e4a20a4de3da9b415bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта регистратора, который создал этот аккаунт.  <br /></td></tr>
+<tr class="separator:a753aadd7880d6e4a20a4de3da9b415bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e46c559f699df03e1820bf710e778fd" id="r_a2e46c559f699df03e1820bf710e778fd"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a2e46c559f699df03e1820bf710e778fd">type</a></td></tr>
+<tr class="memdesc:a2e46c559f699df03e1820bf710e778fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип аккаунта: individual | entrepreneur | org.  <br /></td></tr>
+<tr class="separator:a2e46c559f699df03e1820bf710e778fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3bb008be845158f23da8984f32d1b4" id="r_a8a3bb008be845158f23da8984f32d1b4"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a8a3bb008be845158f23da8984f32d1b4">status</a></td></tr>
+<tr class="memdesc:a8a3bb008be845158f23da8984f32d1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статус аккаунта  <br /></td></tr>
+<tr class="separator:a8a3bb008be845158f23da8984f32d1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0580323930615035d7abe2e6cef4d1e" id="r_ac0580323930615035d7abe2e6cef4d1e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ac0580323930615035d7abe2e6cef4d1e">meta</a></td></tr>
+<tr class="memdesc:ac0580323930615035d7abe2e6cef4d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дополнительная мета-информация о аккаунте.  <br /></td></tr>
+<tr class="separator:ac0580323930615035d7abe2e6cef4d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95185a9eeb41425a3174b21042d5cec6" id="r_a95185a9eeb41425a3174b21042d5cec6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a95185a9eeb41425a3174b21042d5cec6">storages</a></td></tr>
+<tr class="memdesc:a95185a9eeb41425a3174b21042d5cec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хранилища персональных данных и идентификаторы данных в них.  <br /></td></tr>
+<tr class="separator:a95185a9eeb41425a3174b21042d5cec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7df3e4e5504129a4e0275b4a7264614" id="r_ae7df3e4e5504129a4e0275b4a7264614"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structverification.html">verification</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#ae7df3e4e5504129a4e0275b4a7264614">verifications</a></td></tr>
+<tr class="memdesc:ae7df3e4e5504129a4e0275b4a7264614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Информация о верификации пользователя.  <br /></td></tr>
+<tr class="separator:ae7df3e4e5504129a4e0275b4a7264614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c91ba498b674bee1658b1c5eaf0dc9" id="r_a32c91ba498b674bee1658b1c5eaf0dc9"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaccount.html#a32c91ba498b674bee1658b1c5eaf0dc9">registered_at</a></td></tr>
+<tr class="memdesc:a32c91ba498b674bee1658b1c5eaf0dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время регистрации аккаунта.  <br /></td></tr>
+<tr class="separator:a32c91ba498b674bee1658b1c5eaf0dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Структура, представляющая учетные записи аккаунтов. </p>
+<p>Эта структура хранит информацию о пользователях аккаунта и их статусе, репутации и других параметрах. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="ae83306a3d2a29ab942504ebb68e42d71" name="ae83306a3d2a29ab942504ebb68e42d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83306a3d2a29ab942504ebb68e42d71">&#9670;&#160;</a></span>by_referer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::by_referer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает ключ по рефереру. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - ключ, равный значению имени реферера. </dd></dl>
+
+</div>
+</div>
+<a id="a688414885704233ae57b4093f7c60dd5" name="a688414885704233ae57b4093f7c60dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688414885704233ae57b4093f7c60dd5">&#9670;&#160;</a></span>by_registered_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::by_registered_at </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4b046f1d8181edd9d4ffef1cc0b35c2" name="ac4b046f1d8181edd9d4ffef1cc0b35c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b046f1d8181edd9d4ffef1cc0b35c2">&#9670;&#160;</a></span>by_registr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::by_registr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает ключ по регистратору. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - ключ, равный значению имени регистратора. </dd></dl>
+
+</div>
+</div>
+<a id="a75dc254d23308647a184e11c19b3edb8" name="a75dc254d23308647a184e11c19b3edb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75dc254d23308647a184e11c19b3edb8">&#9670;&#160;</a></span>by_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::by_status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает ключ по статусу аккаунта. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - ключ, равный значению статуса аккаунта. </dd></dl>
+
+</div>
+</div>
+<a id="ab9e111ab46596e20d058891f9d24efac" name="ab9e111ab46596e20d058891f9d24efac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e111ab46596e20d058891f9d24efac">&#9670;&#160;</a></span>by_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::by_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает ключ по типу аккаунта. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - ключ, равный значению типа аккаунта. </dd></dl>
+
+</div>
+</div>
+<a id="a3d7a160d5b2d34e3e5273fd1dda9cba7" name="a3d7a160d5b2d34e3e5273fd1dda9cba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d7a160d5b2d34e3e5273fd1dda9cba7">&#9670;&#160;</a></span>is_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool account::is_active </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b9b1c94522c856703a6f6fab6b20f55" name="a0b9b1c94522c856703a6f6fab6b20f55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9b1c94522c856703a6f6fab6b20f55">&#9670;&#160;</a></span>is_verified()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool account::is_verified </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, верифицирована ли организация. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>bool - true, если организация верифицирована, иначе false. </dd></dl>
+
+</div>
+</div>
+<a id="a89d9022a82d8767baa0cb56347cc1ac6" name="a89d9022a82d8767baa0cb56347cc1ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d9022a82d8767baa0cb56347cc1ac6">&#9670;&#160;</a></span>is_verified_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::is_verified_index </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает индекс для определения, является ли организация верифицированной. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - ключ, равный 1, если организация верифицирована, иначе 0. </dd></dl>
+
+</div>
+</div>
+<a id="a69acdb708adce988c16e5c4e46d631d1" name="a69acdb708adce988c16e5c4e46d631d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69acdb708adce988c16e5c4e46d631d1">&#9670;&#160;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t account::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает первичный ключ учетной записи аккаунта. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>uint64_t - первичный ключ, равный значению имени аккаунта. return username - primary_key </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ac0580323930615035d7abe2e6cef4d1e" name="ac0580323930615035d7abe2e6cef4d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0580323930615035d7abe2e6cef4d1e">&#9670;&#160;</a></span>meta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string account::meta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дополнительная мета-информация о аккаунте. </p>
+
+</div>
+</div>
+<a id="ad816d8356a21e2b77c6d4f35b1b4ae3a" name="ad816d8356a21e2b77c6d4f35b1b4ae3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad816d8356a21e2b77c6d4f35b1b4ae3a">&#9670;&#160;</a></span>referer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name account::referer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя аккаунта, который был реферером при регистрации. </p>
+
+</div>
+</div>
+<a id="a32c91ba498b674bee1658b1c5eaf0dc9" name="a32c91ba498b674bee1658b1c5eaf0dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c91ba498b674bee1658b1c5eaf0dc9">&#9670;&#160;</a></span>registered_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec account::registered_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Время регистрации аккаунта. </p>
+
+</div>
+</div>
+<a id="a753aadd7880d6e4a20a4de3da9b415bf" name="a753aadd7880d6e4a20a4de3da9b415bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753aadd7880d6e4a20a4de3da9b415bf">&#9670;&#160;</a></span>registrator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name account::registrator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя аккаунта регистратора, который создал этот аккаунт. </p>
+
+</div>
+</div>
+<a id="a8a3bb008be845158f23da8984f32d1b4" name="a8a3bb008be845158f23da8984f32d1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3bb008be845158f23da8984f32d1b4">&#9670;&#160;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name account::status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Статус аккаунта </p>
+
+</div>
+</div>
+<a id="a95185a9eeb41425a3174b21042d5cec6" name="a95185a9eeb41425a3174b21042d5cec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95185a9eeb41425a3174b21042d5cec6">&#9670;&#160;</a></span>storages</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;eosio::name&gt; account::storages</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Хранилища персональных данных и идентификаторы данных в них. </p>
+
+</div>
+</div>
+<a id="a2e46c559f699df03e1820bf710e778fd" name="a2e46c559f699df03e1820bf710e778fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e46c559f699df03e1820bf710e778fd">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name account::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тип аккаунта: individual | entrepreneur | org. </p>
+
+</div>
+</div>
+<a id="a6ba28d058e936aeecc71303af6f543c4" name="a6ba28d058e936aeecc71303af6f543c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba28d058e936aeecc71303af6f543c4">&#9670;&#160;</a></span>username</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name account::username</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя аккаунта гостя. Имя пользователя в системе. </p>
+
+</div>
+</div>
+<a id="ae7df3e4e5504129a4e0275b4a7264614" name="ae7df3e4e5504129a4e0275b4a7264614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7df3e4e5504129a4e0275b4a7264614">&#9670;&#160;</a></span>verifications</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structverification.html">verification</a>&gt; account::verifications</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Информация о верификации пользователя. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/<a class="el" href="accounts_8hpp_source.html">accounts.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structaccount.html">account</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

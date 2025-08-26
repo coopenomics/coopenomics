@@ -1,0 +1,28 @@
+var struct_capital_1_1result =
+[
+    [ "by_hash", "struct_capital_1_1result.html#afc55451857421967ba04045347e37a87", null ],
+    [ "by_project_hash", "struct_capital_1_1result.html#a5ca4836a4d4f2369e47339c586c42e4b", null ],
+    [ "by_project_user", "struct_capital_1_1result.html#a7e2ed3cc504fb620ad3c717ea7088934", null ],
+    [ "by_username", "struct_capital_1_1result.html#ad8c249f7c7a259a5c931c1903c62d879", null ],
+    [ "primary_key", "struct_capital_1_1result.html#a3413850cca3b54a0dc0fe90027921ea5", null ],
+    [ "act", "struct_capital_1_1result.html#a91a9733373bb301c3d7641d81681ee0b", null ],
+    [ "author_base_amount", "struct_capital_1_1result.html#ab0b6ea63c8d4c6a318cd0fe85fd6557a", null ],
+    [ "author_bonus_amount", "struct_capital_1_1result.html#a4701f91097a0e4c2741bc2309c8dd7d4", null ],
+    [ "authorization", "struct_capital_1_1result.html#a6fa7fb047dd183eb3ed5ed5ff69c2dec", null ],
+    [ "available_for_convert", "struct_capital_1_1result.html#a3c3aba786a5340d4998a1cd3bae41e43", null ],
+    [ "available_for_return", "struct_capital_1_1result.html#abb8e2359df7521bdcea044d98800efce", null ],
+    [ "capitalist_bonus_amount", "struct_capital_1_1result.html#a15b22cbfa8843b1c90f55aa18165f17f", null ],
+    [ "coopname", "struct_capital_1_1result.html#ab9f9f999ed4dc47aee5d37837cab370c", null ],
+    [ "created_at", "struct_capital_1_1result.html#a37a4bade83a9dfce317509508e78c79f", null ],
+    [ "creator_base_amount", "struct_capital_1_1result.html#a267a8d7ee710203283ea93b08254ec89", null ],
+    [ "creator_bonus_amount", "struct_capital_1_1result.html#a7c29e7a563098d6b962805d70ea46103", null ],
+    [ "debt_amount", "struct_capital_1_1result.html#a3b7dac21c35c5987ee9445d6e5522e76", null ],
+    [ "generation_amount", "struct_capital_1_1result.html#a561205391387404ef590b5ea3758c96c", null ],
+    [ "id", "struct_capital_1_1result.html#aa95c5d48c02aa51444aa308025ffd9dd", null ],
+    [ "project_hash", "struct_capital_1_1result.html#ae623da0f73ed22bdd5d8d81f0ad22749", null ],
+    [ "result_hash", "struct_capital_1_1result.html#ad6dbcc1a5632220435cec0ce446c00f0", null ],
+    [ "statement", "struct_capital_1_1result.html#af0708de2cbacaa6276e7b79f75b85d6a", null ],
+    [ "status", "struct_capital_1_1result.html#ae11c3f755b1773b655d2e320da5eb829", null ],
+    [ "total_amount", "struct_capital_1_1result.html#a7bf5bc88698ed6211230430967414f82", null ],
+    [ "username", "struct_capital_1_1result.html#a25649647976cb80a39eaf9c4f20b5484", null ]
+];

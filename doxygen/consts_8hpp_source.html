@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/consts.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('consts_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">consts.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="consts_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// /**</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// \defgroup public_contracts Контракты</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// \brief Контракты Кооперативной Экономики</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// *</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// * Группа содержит контракты, предназначенные для кооперативной экономики. Контракты описывают основные логические </span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// * единицы и функциональность для управления и взаимодействия в рамках кооперативной экосистемы. От регистрации </span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// * участников до обменных операций - все аспекты кооперативной деятельности регулируются этими контрактами.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// /**</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// \defgroup public_consts Константы</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// \brief Константы контрактов</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// *</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// * В этой группе представлены основные константы, используемые в контрактах кооперативной экономики. </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// * Константы обеспечивают стабильность и предсказуемость поведения контрактов, а также упрощают </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// * процесс чтения и понимания кода.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// */</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// /**</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// \defgroup public_actions Действия</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// \brief Методы действий контрактов</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// *</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// * Действия представляют собой методы, которые можно вызывать в контрактах. Они отвечают за </span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// * выполнение определенных задач, таких как создание аккаунта, обновление информации или </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// * осуществление транзакции. Эта группа описывает все доступные действия, которые предоставляют </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// * контракты кооперативной экономики.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">// */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// /**</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// \defgroup public_tables Таблицы</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// \brief Структуры таблиц контрактов</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// *</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// * Таблицы в контрактах EOSIO используются для хранения состояния контракта на блокчейне. В этой группе </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// * представлены основные структуры данных, которые используются в таблицах контрактов кооперативной экономики. </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// * От сведений о участниках до деталей транзакций - все это сохраняется в таблицах.</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// /**</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// \defgroup public_structures Структуры</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">// \brief Структуры контрактов</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">// *</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// * Структуры - это фундаментальные блоки данных, используемые для описания и хранения информации в контрактах. </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// * Эта группа содержит описание основных структур, используемых в контрактах кооперативной экономики. </span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// * Они обеспечивают четкую организацию данных и упрощают взаимодействие с контрактом.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">//registrator</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ace206e4d1676c54066a8ed734347d072">   53</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ace206e4d1676c54066a8ed734347d072">_regaccount_action</a> = <span class="stringliteral">&quot;joincoop&quot;</span>_n;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">//wallet</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a9a8ae96090f27543d172f8801022700a">   56</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a9a8ae96090f27543d172f8801022700a">_deposit_action</a> = <span class="stringliteral">&quot;deposit&quot;</span>_n;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a9e2440f7709ebcf63b4e0f7ca5c65fe5">   57</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a9e2440f7709ebcf63b4e0f7ca5c65fe5">_withdraw_action</a> = <span class="stringliteral">&quot;withdraw&quot;</span>_n;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">//funds</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3">   60</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3">_afund_withdraw_action</a> = <span class="stringliteral">&quot;subaccum&quot;</span>_n;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aa1a351c6a529206a55a33115bac447d3">   61</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#aa1a351c6a529206a55a33115bac447d3">_efund_withdraw_action</a> = <span class="stringliteral">&quot;subexp&quot;</span>_n;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">//freedecision</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ab27ed06dfe2790bc04843a0a9ee7e766">   64</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ab27ed06dfe2790bc04843a0a9ee7e766">_free_decision_action</a> = <span class="stringliteral">&quot;freedecision&quot;</span>_n;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// marketplace linked actions</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a4815e0ccce32e816ccd173a076751310">   67</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a4815e0ccce32e816ccd173a076751310">_change_action</a> = <span class="stringliteral">&quot;change&quot;</span>_n;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ad83abcace3f0bc51e4a2e3761ae1ec19">   68</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ad83abcace3f0bc51e4a2e3761ae1ec19">_product_contribution_action</a> = <span class="stringliteral">&quot;productcntr&quot;</span>_n;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a582339576ca3f9240da595e1cc0720d3">   69</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a582339576ca3f9240da595e1cc0720d3">_product_return_action</a> = <span class="stringliteral">&quot;productrtrn&quot;</span>_n;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// capitalization linked actions</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">//capital::debts</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a643cfb8cb374e7433aaecc210874bc4b">   76</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a643cfb8cb374e7433aaecc210874bc4b">_result_action</a> = <span class="stringliteral">&quot;result&quot;</span>_n;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//program_types</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">   79</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a> = <span class="stringliteral">&quot;wallet&quot;</span>_n; </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">   80</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">_marketplace_program</a> = <span class="stringliteral">&quot;marketplace&quot;</span>_n; </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">   82</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">_source_program</a> = <span class="stringliteral">&quot;source&quot;</span>_n; </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">   83</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a> = <span class="stringliteral">&quot;capital&quot;</span>_n; </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="};">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">   86</a></span><span class="keyword">static</span> <span class="keyword">const</span> std::set&lt;eosio::name&gt; <a class="code hl_variable" href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">soviet_actions</a> = {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="stringliteral">&quot;joincoop&quot;</span>_n, <span class="comment">//регистрация пайщика</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">//MEET</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="stringliteral">&quot;creategm&quot;</span>_n,<span class="comment">//предложение повестки планового общего собрание</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="stringliteral">&quot;completegm&quot;</span>_n, <span class="comment">//решение общего собрания пайщиков</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="stringliteral">&quot;ballot&quot;</span>_n, <span class="comment">//бюллетень участника общего собрания пайщиков</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="stringliteral">&quot;gmnotify&quot;</span>_n, <span class="comment">//уведомление участника общего собрания пайщиков</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">//CAPITAL</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="stringliteral">&quot;capitalinvst&quot;</span>_n, <span class="comment">//заявление на инвестиции по договору УХД</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="stringliteral">&quot;createresult&quot;</span>_n, <span class="comment">//клайм прироста капитализации из задания</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="stringliteral">&quot;createdebt&quot;</span>_n, <span class="comment">//взять ссуду под залог будущего задания</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="stringliteral">&quot;capresexpns&quot;</span>_n, <span class="comment">//произвести выплату по расходам задания</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="stringliteral">&quot;capwthdrprog&quot;</span>_n, <span class="comment">//произвести возврат накопленных членских взносов по программе на капиталиста</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="stringliteral">&quot;capwthdrproj&quot;</span>_n, <span class="comment">//произвести возврат накопленных членских взносов по проекту на актора</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="stringliteral">&quot;capwthdrres&quot;</span>_n, <span class="comment">//произвести возврат из задания</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">//WALLET</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="stringliteral">&quot;createwthd&quot;</span>_n, <span class="comment">//создать заявление на возврат паевого взноса</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">//LEDGER</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="stringliteral">&quot;ledgerwthd&quot;</span>_n, <span class="comment">//заявление на списание со счета через ledger</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">//MARKETPLACE</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="stringliteral">&quot;authoffs2c&quot;</span>_n, <span class="comment">//заявление на взнос имуществом</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="stringliteral">&quot;authoffc2r&quot;</span>_n, <span class="comment">//заявление на возврат паевого взноса имуществом</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment">//program_ids</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a352f520a4bd7b6fb5e7b2687eba65684">  115</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a352f520a4bd7b6fb5e7b2687eba65684">_wallet_program_id</a> = 1;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a9861a2d150dc964f83f640f2b6e9096d">  116</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a9861a2d150dc964f83f640f2b6e9096d">_marketplace_program_id</a> = 2;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ab68249b6bea4ffcec73391bf7ae2b741">  117</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#ab68249b6bea4ffcec73391bf7ae2b741">_source_program_id</a> = 3;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a7e8a974646ccb637b2c8e6fe8baf5c5b">  118</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a7e8a974646ccb637b2c8e6fe8baf5c5b">_capital_program_id</a> = 4;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a8dca202ba0e066e3375d5314f0191389">  122</a></span><span class="preprocessor">#define HUNDR_PERCENTS 1000000</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aa9f63b1425189a885d45283038d46e7a">  123</a></span><span class="preprocessor">#define ONE_PERCENT 10000</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">// Дефайны для основной сети</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a53678aa3958110e34fce3501d7da1bdf">  127</a></span><span class="preprocessor">#define ANO &quot;ano&quot;</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a861181f1d81b4ccb482b33c7bffad5d1">  128</a></span><span class="preprocessor">#define GATEWAY &quot;gateway&quot;</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a190d95586c2d20966655dbb2e51295d1">  129</a></span><span class="preprocessor">#define DRAFT &quot;draft&quot;</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a49f9e6e30c4b39068965aa387ae6bf1f">  130</a></span><span class="preprocessor">#define MARKETPLACE &quot;marketplace&quot;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a37a9762fc7553d1d410dc6e5c9c61e76">  131</a></span><span class="preprocessor">#define SOVIET &quot;soviet&quot;</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ae4acce2da4b2736a1fedfa921d84e32b">  132</a></span><span class="preprocessor">#define REGISTRATOR &quot;registrator&quot;</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a21b97df85e65556468b28a576311271c">  133</a></span><span class="preprocessor">#define SYSTEM &quot;eosio&quot;</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a0d37aec7ee39964f2e44caa6ad8ef88e">  134</a></span><span class="preprocessor">#define FUND &quot;fund&quot;</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a5652aaf0ba5376a02bef5d911095a582">  135</a></span><span class="preprocessor">#define BRANCH &quot;branch&quot;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a9e86bb407a3bf01b7ce8bc9745cca8a8">  136</a></span><span class="preprocessor">#define CAPITAL &quot;capital&quot;</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a4f21c007e776bfa480a281c068ccec84">  137</a></span><span class="preprocessor">#define WALLET &quot;wallet&quot;</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="consts_8hpp.html#afd25b38f9757bfaba4247a6c81ea48f1">  138</a></span><span class="preprocessor">#define LOAN &quot;loan&quot;</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5">  139</a></span><span class="preprocessor">#define LEDGER &quot;ledger&quot;</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a9af8717485817233e79a6039c170e7fe">  140</a></span><span class="preprocessor">#define MEET &quot;meet&quot;</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="preprocessor">#define LEDGER &quot;ledger&quot;</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a1ff8113eaea18bd553df59b9ad7df01a">  147</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a1ff8113eaea18bd553df59b9ad7df01a">_provider</a> = <span class="stringliteral">&quot;voskhod&quot;</span>_n;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a42013fa54096a8d11445a6006eaa0771">  148</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a42013fa54096a8d11445a6006eaa0771">_provider_chairman</a> = <span class="stringliteral">&quot;ant&quot;</span>_n;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">  150</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a> = <span class="stringliteral">&quot;capital&quot;</span>_n;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a341b71e63284ca16c8b1561cb0cb0da4">  151</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a341b71e63284ca16c8b1561cb0cb0da4">_ano</a> = <span class="stringliteral">&quot;ano&quot;</span>_n;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a55ba70333702ff882cdb79c9c1fcb9e6">  152</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a55ba70333702ff882cdb79c9c1fcb9e6">_gateway</a> = <span class="stringliteral">&quot;gateway&quot;</span>_n;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a6bf96b63b136a53e53e817b74af2691e">  153</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a6bf96b63b136a53e53e817b74af2691e">_wallet</a> = <span class="stringliteral">&quot;wallet&quot;</span>_n;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">  154</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a> = <span class="stringliteral">&quot;draft&quot;</span>_n;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">  155</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">_marketplace</a> = <span class="stringliteral">&quot;marketplace&quot;</span>_n;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">  156</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a> = <span class="stringliteral">&quot;soviet&quot;</span>_n;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">  157</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a> = <span class="stringliteral">&quot;registrator&quot;</span>_n;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a52724c95f23545d7efc4db16f3fe42ce">  158</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a52724c95f23545d7efc4db16f3fe42ce">_system</a> = <span class="stringliteral">&quot;eosio&quot;</span>_n;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a4538cae0be703aafb0a4e4ec9d2e3b53">  159</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a4538cae0be703aafb0a4e4ec9d2e3b53">_fund</a> = <span class="stringliteral">&quot;fund&quot;</span>_n;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">  160</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a> = <span class="stringliteral">&quot;branch&quot;</span>_n;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aaaec43ca6b154688f53c660c7519590c">  161</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#aaaec43ca6b154688f53c660c7519590c">_loan</a> = <span class="stringliteral">&quot;loan&quot;</span>_n;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aef7e2a1a07c6daf943acf7717224ee4d">  162</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#aef7e2a1a07c6daf943acf7717224ee4d">_meet</a> = <span class="stringliteral">&quot;meet&quot;</span>_n;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ac879096c6b02dc92c04f61b60c037395">  163</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ac879096c6b02dc92c04f61b60c037395">_ledger</a> = <span class="stringliteral">&quot;ledger&quot;</span>_n;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a98383cb202d2d3d56f7796a53a7f3d03">  164</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a98383cb202d2d3d56f7796a53a7f3d03">_power_account</a> = <span class="stringliteral">&quot;eosio.power&quot;</span>_n;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ad32963d71641affbcefb02212f3166f3">  165</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#ad32963d71641affbcefb02212f3166f3">_saving_account</a> = <span class="stringliteral">&quot;eosio.saving&quot;</span>_n;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    </div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="};">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a5a01bac354ffb617c620091722ac5469">  169</a></span>    <span class="keyword">static</span> std::vector&lt;name&gt; <a class="code hl_variable" href="consts_8hpp.html#a5a01bac354ffb617c620091722ac5469">contracts_whitelist</a> = {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="stringliteral">&quot;ano&quot;</span>_n,</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="stringliteral">&quot;gateway&quot;</span>_n,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="stringliteral">&quot;draft&quot;</span>_n,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="stringliteral">&quot;marketplace&quot;</span>_n,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="stringliteral">&quot;soviet&quot;</span>_n,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="stringliteral">&quot;registrator&quot;</span>_n,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="stringliteral">&quot;eosio&quot;</span>_n,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="stringliteral">&quot;fund&quot;</span>_n,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="stringliteral">&quot;branch&quot;</span>_n,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="stringliteral">&quot;capital&quot;</span>_n,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="stringliteral">&quot;wallet&quot;</span>_n,</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="stringliteral">&quot;meet&quot;</span>_n,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="stringliteral">&quot;loan&quot;</span>_n,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="stringliteral">&quot;test&quot;</span>_n,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="stringliteral">&quot;contributor&quot;</span>_n,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="stringliteral">&quot;eosio.token&quot;</span>_n,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="stringliteral">&quot;eosio.msig&quot;</span>_n,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="stringliteral">&quot;eosio.wrap&quot;</span>_n,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="stringliteral">&quot;eosio.power&quot;</span>_n,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="stringliteral">&quot;eosio.saving&quot;</span>_n,</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="stringliteral">&quot;ledger&quot;</span>_n</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="comment">// Добавьте остальные стандартные или пользовательские контракты по необходимости</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      };</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="};">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="consts_8hpp.html#af042516f92d25052ae67d9224b34bea6">  194</a></span>    <span class="keyword">static</span> std::vector&lt;name&gt; <a class="code hl_variable" href="consts_8hpp.html#af042516f92d25052ae67d9224b34bea6">token_whitelist</a> = {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="stringliteral">&quot;eosio&quot;</span>_n,</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="stringliteral">&quot;eosio.vpay&quot;</span>_n,</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="stringliteral">&quot;eosio.saving&quot;</span>_n,</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="stringliteral">&quot;eosio.bpay&quot;</span>_n,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="stringliteral">&quot;eosio.saving&quot;</span>_n,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="stringliteral">&quot;eosio.power&quot;</span>_n,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="stringliteral">&quot;eosio.ram&quot;</span>_n,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="stringliteral">&quot;eosio.stake&quot;</span>_n,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_variable" href="consts_8hpp.html#a1ff8113eaea18bd553df59b9ad7df01a">_provider</a></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">// Добавьте другие аккаунты в список по мере необходимости</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>      };    </div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a6b01540b618a86e6bd5303db76e3b45f">  208</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::symbol <a class="code hl_variable" href="consts_8hpp.html#a6b01540b618a86e6bd5303db76e3b45f">_root_symbol</a> = eosio::symbol(eosio::symbol_code(<span class="stringliteral">&quot;AXON&quot;</span>), 4); </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">  209</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::symbol <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a> = eosio::symbol(eosio::symbol_code(<span class="stringliteral">&quot;RUB&quot;</span>), 4); </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a3a2b682d2d7616aee19abf3001792595">  210</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> eosio::asset <a class="code hl_variable" href="consts_8hpp.html#a3a2b682d2d7616aee19abf3001792595">_provider_initial</a> = eosio::asset(1000000, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="consts_8hpp.html#acf903cac90cfb816da7c0498d6ba77db">  211</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> eosio::asset <a class="code hl_variable" href="consts_8hpp.html#acf903cac90cfb816da7c0498d6ba77db">_provider_minimum</a> = eosio::asset(3000000, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ab17a40fe9229dfa6f28be4de7f739feb">  213</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> eosio::asset <a class="code hl_variable" href="consts_8hpp.html#ab17a40fe9229dfa6f28be4de7f739feb">_provider_org_initial</a> = eosio::asset(10000000, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a03d73e3110b452143134592d7af9b672">  214</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> eosio::asset <a class="code hl_variable" href="consts_8hpp.html#a03d73e3110b452143134592d7af9b672">_provider_org_minimum</a> = eosio::asset(30000000, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a905130dd4c8fc18bfffe9eec68f9061c">  216</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="consts_8hpp.html#a905130dd4c8fc18bfffe9eec68f9061c">_root_contract</a> = <span class="stringliteral">&quot;eosio.token&quot;</span>_n; </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a53c8b80330465342487f78d14fad4ce7">  217</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::symbol <a class="code hl_variable" href="consts_8hpp.html#a53c8b80330465342487f78d14fad4ce7">RAM_symbol</a>{<span class="stringliteral">&quot;RAM&quot;</span>, 0}; </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a4977cb29c847a5a4fce4cce4b753c914">  218</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> eosio::symbol <a class="code hl_variable" href="consts_8hpp.html#a4977cb29c847a5a4fce4cce4b753c914">_ramcore_symbol</a> = eosio::symbol(eosio::symbol_code(<span class="stringliteral">&quot;RAMCORE&quot;</span>),4); </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="consts_8hpp.html#ae0aa0d721b6159491c68d947cd7dc8be">  219</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#ae0aa0d721b6159491c68d947cd7dc8be">_ram_price_per_byte</a> = 1; </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="consts_8hpp.html#af525e3bc464504ee975a366f5f1cc4fc">  221</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#af525e3bc464504ee975a366f5f1cc4fc">_register_amount</a> = 10000; </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a3c1178761f963d8c1b074a29b7d7732d">  223</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a3c1178761f963d8c1b074a29b7d7732d">_signature_expiration</a> = 86400 * 365 * 2;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a7907328ea2e6a0c7528a5116b1b837c1">  224</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a7907328ea2e6a0c7528a5116b1b837c1">_auction_name_length_limit</a> = 12;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="consts_8hpp.html#aad53f3329a5e977fbcf8ebc0b9670d7d">  226</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#aad53f3329a5e977fbcf8ebc0b9670d7d">_deposit_expiration_seconds</a> = 3600;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a483a3602cc61b81b5c45376f12d303ee">  228</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a483a3602cc61b81b5c45376f12d303ee">_decision_expiration</a> = 3 * 86400;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a37aa40ea0f7329fa18e7e9be9d1d52ba">  230</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a37aa40ea0f7329fa18e7e9be9d1d52ba">_producers_percent</a> = 900000; <span class="comment">// 90%</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="consts_8hpp.html#a6d8fd359800ecc9d5a1e2adff5e55b29">  231</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="consts_8hpp.html#a6d8fd359800ecc9d5a1e2adff5e55b29">_fund_percent</a> = 100000; <span class="comment">// 10%</span></div>
+<div class="ttc" id="aconsts_8hpp_html_a03d73e3110b452143134592d7af9b672"><div class="ttname"><a href="consts_8hpp.html#a03d73e3110b452143134592d7af9b672">_provider_org_minimum</a></div><div class="ttdeci">static const eosio::asset _provider_org_minimum</div><div class="ttdef"><b>Definition</b> consts.hpp:214</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a1969de36d0715731eeed6eb81951c87f"><div class="ttname"><a href="consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f">soviet_actions</a></div><div class="ttdeci">static const std::set&lt; eosio::name &gt; soviet_actions</div><div class="ttdef"><b>Definition</b> consts.hpp:86</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a1ff8113eaea18bd553df59b9ad7df01a"><div class="ttname"><a href="consts_8hpp.html#a1ff8113eaea18bd553df59b9ad7df01a">_provider</a></div><div class="ttdeci">static constexpr eosio::name _provider</div><div class="ttdef"><b>Definition</b> consts.hpp:147</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a341b71e63284ca16c8b1561cb0cb0da4"><div class="ttname"><a href="consts_8hpp.html#a341b71e63284ca16c8b1561cb0cb0da4">_ano</a></div><div class="ttdeci">static constexpr eosio::name _ano</div><div class="ttdef"><b>Definition</b> consts.hpp:151</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a352f520a4bd7b6fb5e7b2687eba65684"><div class="ttname"><a href="consts_8hpp.html#a352f520a4bd7b6fb5e7b2687eba65684">_wallet_program_id</a></div><div class="ttdeci">static constexpr uint64_t _wallet_program_id</div><div class="ttdef"><b>Definition</b> consts.hpp:115</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a37aa40ea0f7329fa18e7e9be9d1d52ba"><div class="ttname"><a href="consts_8hpp.html#a37aa40ea0f7329fa18e7e9be9d1d52ba">_producers_percent</a></div><div class="ttdeci">static constexpr uint64_t _producers_percent</div><div class="ttdef"><b>Definition</b> consts.hpp:230</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a3a2b682d2d7616aee19abf3001792595"><div class="ttname"><a href="consts_8hpp.html#a3a2b682d2d7616aee19abf3001792595">_provider_initial</a></div><div class="ttdeci">static const eosio::asset _provider_initial</div><div class="ttdef"><b>Definition</b> consts.hpp:210</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a3c1178761f963d8c1b074a29b7d7732d"><div class="ttname"><a href="consts_8hpp.html#a3c1178761f963d8c1b074a29b7d7732d">_signature_expiration</a></div><div class="ttdeci">static constexpr uint64_t _signature_expiration</div><div class="ttdef"><b>Definition</b> consts.hpp:223</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a42013fa54096a8d11445a6006eaa0771"><div class="ttname"><a href="consts_8hpp.html#a42013fa54096a8d11445a6006eaa0771">_provider_chairman</a></div><div class="ttdeci">static constexpr eosio::name _provider_chairman</div><div class="ttdef"><b>Definition</b> consts.hpp:148</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a4538cae0be703aafb0a4e4ec9d2e3b53"><div class="ttname"><a href="consts_8hpp.html#a4538cae0be703aafb0a4e4ec9d2e3b53">_fund</a></div><div class="ttdeci">static constexpr eosio::name _fund</div><div class="ttdef"><b>Definition</b> consts.hpp:159</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a4815e0ccce32e816ccd173a076751310"><div class="ttname"><a href="consts_8hpp.html#a4815e0ccce32e816ccd173a076751310">_change_action</a></div><div class="ttdeci">static constexpr eosio::name _change_action</div><div class="ttdef"><b>Definition</b> consts.hpp:67</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a483a3602cc61b81b5c45376f12d303ee"><div class="ttname"><a href="consts_8hpp.html#a483a3602cc61b81b5c45376f12d303ee">_decision_expiration</a></div><div class="ttdeci">static constexpr uint64_t _decision_expiration</div><div class="ttdef"><b>Definition</b> consts.hpp:228</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a4977cb29c847a5a4fce4cce4b753c914"><div class="ttname"><a href="consts_8hpp.html#a4977cb29c847a5a4fce4cce4b753c914">_ramcore_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _ramcore_symbol</div><div class="ttdef"><b>Definition</b> consts.hpp:218</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a4c69e9dd2bcc07568bc73bcc74772b01"><div class="ttname"><a href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a></div><div class="ttdeci">static constexpr eosio::name _wallet_program</div><div class="ttdoc">Главный Кошелёк</div><div class="ttdef"><b>Definition</b> consts.hpp:79</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a523079edf0da499462828993f69a920c"><div class="ttname"><a href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></div><div class="ttdeci">static constexpr eosio::name _capital</div><div class="ttdef"><b>Definition</b> consts.hpp:150</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a52724c95f23545d7efc4db16f3fe42ce"><div class="ttname"><a href="consts_8hpp.html#a52724c95f23545d7efc4db16f3fe42ce">_system</a></div><div class="ttdeci">static constexpr eosio::name _system</div><div class="ttdef"><b>Definition</b> consts.hpp:158</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a53c8b80330465342487f78d14fad4ce7"><div class="ttname"><a href="consts_8hpp.html#a53c8b80330465342487f78d14fad4ce7">RAM_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol RAM_symbol</div><div class="ttdef"><b>Definition</b> consts.hpp:217</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a55ba70333702ff882cdb79c9c1fcb9e6"><div class="ttname"><a href="consts_8hpp.html#a55ba70333702ff882cdb79c9c1fcb9e6">_gateway</a></div><div class="ttdeci">static constexpr eosio::name _gateway</div><div class="ttdef"><b>Definition</b> consts.hpp:152</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a582339576ca3f9240da595e1cc0720d3"><div class="ttname"><a href="consts_8hpp.html#a582339576ca3f9240da595e1cc0720d3">_product_return_action</a></div><div class="ttdeci">static constexpr eosio::name _product_return_action</div><div class="ttdef"><b>Definition</b> consts.hpp:69</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a5a01bac354ffb617c620091722ac5469"><div class="ttname"><a href="consts_8hpp.html#a5a01bac354ffb617c620091722ac5469">contracts_whitelist</a></div><div class="ttdeci">static std::vector&lt; name &gt; contracts_whitelist</div><div class="ttdef"><b>Definition</b> consts.hpp:169</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a5c15ddd21a87c0b286a24580936dc4b7"><div class="ttname"><a href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_govern_symbol</div><div class="ttdef"><b>Definition</b> consts.hpp:209</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a643cfb8cb374e7433aaecc210874bc4b"><div class="ttname"><a href="consts_8hpp.html#a643cfb8cb374e7433aaecc210874bc4b">_result_action</a></div><div class="ttdeci">static constexpr eosio::name _result_action</div><div class="ttdef"><b>Definition</b> consts.hpp:76</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a6b01540b618a86e6bd5303db76e3b45f"><div class="ttname"><a href="consts_8hpp.html#a6b01540b618a86e6bd5303db76e3b45f">_root_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_symbol</div><div class="ttdef"><b>Definition</b> consts.hpp:208</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a6bf96b63b136a53e53e817b74af2691e"><div class="ttname"><a href="consts_8hpp.html#a6bf96b63b136a53e53e817b74af2691e">_wallet</a></div><div class="ttdeci">static constexpr eosio::name _wallet</div><div class="ttdef"><b>Definition</b> consts.hpp:153</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a6d8fd359800ecc9d5a1e2adff5e55b29"><div class="ttname"><a href="consts_8hpp.html#a6d8fd359800ecc9d5a1e2adff5e55b29">_fund_percent</a></div><div class="ttdeci">static constexpr uint64_t _fund_percent</div><div class="ttdef"><b>Definition</b> consts.hpp:231</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a7230ac26306849d2edfa46e4feab091a"><div class="ttname"><a href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">_source_program</a></div><div class="ttdeci">static constexpr eosio::name _source_program</div><div class="ttdoc">Кошелёк для генерации по договору УХД</div><div class="ttdef"><b>Definition</b> consts.hpp:82</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a774dd561cf17ec65e59129b5ad8690d6"><div class="ttname"><a href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a></div><div class="ttdeci">static constexpr eosio::name _draft</div><div class="ttdef"><b>Definition</b> consts.hpp:154</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a7907328ea2e6a0c7528a5116b1b837c1"><div class="ttname"><a href="consts_8hpp.html#a7907328ea2e6a0c7528a5116b1b837c1">_auction_name_length_limit</a></div><div class="ttdeci">static constexpr uint64_t _auction_name_length_limit</div><div class="ttdef"><b>Definition</b> consts.hpp:224</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a7e8a974646ccb637b2c8e6fe8baf5c5b"><div class="ttname"><a href="consts_8hpp.html#a7e8a974646ccb637b2c8e6fe8baf5c5b">_capital_program_id</a></div><div class="ttdeci">static constexpr uint64_t _capital_program_id</div><div class="ttdef"><b>Definition</b> consts.hpp:118</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a857d225f367d67114f7ab9a1c7714a20"><div class="ttname"><a href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a></div><div class="ttdeci">static constexpr eosio::name _capital_program</div><div class="ttdoc">Кошелёк программы &quot;Капитализация&quot;.</div><div class="ttdef"><b>Definition</b> consts.hpp:83</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a905130dd4c8fc18bfffe9eec68f9061c"><div class="ttname"><a href="consts_8hpp.html#a905130dd4c8fc18bfffe9eec68f9061c">_root_contract</a></div><div class="ttdeci">static constexpr eosio::name _root_contract</div><div class="ttdef"><b>Definition</b> consts.hpp:216</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a98383cb202d2d3d56f7796a53a7f3d03"><div class="ttname"><a href="consts_8hpp.html#a98383cb202d2d3d56f7796a53a7f3d03">_power_account</a></div><div class="ttdeci">static constexpr eosio::name _power_account</div><div class="ttdef"><b>Definition</b> consts.hpp:164</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a9861a2d150dc964f83f640f2b6e9096d"><div class="ttname"><a href="consts_8hpp.html#a9861a2d150dc964f83f640f2b6e9096d">_marketplace_program_id</a></div><div class="ttdeci">static constexpr uint64_t _marketplace_program_id</div><div class="ttdef"><b>Definition</b> consts.hpp:116</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a9a8ae96090f27543d172f8801022700a"><div class="ttname"><a href="consts_8hpp.html#a9a8ae96090f27543d172f8801022700a">_deposit_action</a></div><div class="ttdeci">static constexpr eosio::name _deposit_action</div><div class="ttdef"><b>Definition</b> consts.hpp:56</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a9e2440f7709ebcf63b4e0f7ca5c65fe5"><div class="ttname"><a href="consts_8hpp.html#a9e2440f7709ebcf63b4e0f7ca5c65fe5">_withdraw_action</a></div><div class="ttdeci">static constexpr eosio::name _withdraw_action</div><div class="ttdef"><b>Definition</b> consts.hpp:57</div></div>
+<div class="ttc" id="aconsts_8hpp_html_aa1a351c6a529206a55a33115bac447d3"><div class="ttname"><a href="consts_8hpp.html#aa1a351c6a529206a55a33115bac447d3">_efund_withdraw_action</a></div><div class="ttdeci">static constexpr eosio::name _efund_withdraw_action</div><div class="ttdef"><b>Definition</b> consts.hpp:61</div></div>
+<div class="ttc" id="aconsts_8hpp_html_aaaec43ca6b154688f53c660c7519590c"><div class="ttname"><a href="consts_8hpp.html#aaaec43ca6b154688f53c660c7519590c">_loan</a></div><div class="ttdeci">static constexpr eosio::name _loan</div><div class="ttdef"><b>Definition</b> consts.hpp:161</div></div>
+<div class="ttc" id="aconsts_8hpp_html_aad53f3329a5e977fbcf8ebc0b9670d7d"><div class="ttname"><a href="consts_8hpp.html#aad53f3329a5e977fbcf8ebc0b9670d7d">_deposit_expiration_seconds</a></div><div class="ttdeci">static constexpr uint64_t _deposit_expiration_seconds</div><div class="ttdef"><b>Definition</b> consts.hpp:226</div></div>
+<div class="ttc" id="aconsts_8hpp_html_aade67ec2b2b2a1d544e6260962dd24dd"><div class="ttname"><a href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">_marketplace_program</a></div><div class="ttdeci">static constexpr eosio::name _marketplace_program</div><div class="ttdoc">Кошелёк программы &quot;Маркетплейс&quot;.</div><div class="ttdef"><b>Definition</b> consts.hpp:80</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ab17a40fe9229dfa6f28be4de7f739feb"><div class="ttname"><a href="consts_8hpp.html#ab17a40fe9229dfa6f28be4de7f739feb">_provider_org_initial</a></div><div class="ttdeci">static const eosio::asset _provider_org_initial</div><div class="ttdef"><b>Definition</b> consts.hpp:213</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ab27ed06dfe2790bc04843a0a9ee7e766"><div class="ttname"><a href="consts_8hpp.html#ab27ed06dfe2790bc04843a0a9ee7e766">_free_decision_action</a></div><div class="ttdeci">static constexpr eosio::name _free_decision_action</div><div class="ttdef"><b>Definition</b> consts.hpp:64</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ab68249b6bea4ffcec73391bf7ae2b741"><div class="ttname"><a href="consts_8hpp.html#ab68249b6bea4ffcec73391bf7ae2b741">_source_program_id</a></div><div class="ttdeci">static constexpr uint64_t _source_program_id</div><div class="ttdef"><b>Definition</b> consts.hpp:117</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ac879096c6b02dc92c04f61b60c037395"><div class="ttname"><a href="consts_8hpp.html#ac879096c6b02dc92c04f61b60c037395">_ledger</a></div><div class="ttdeci">static constexpr eosio::name _ledger</div><div class="ttdef"><b>Definition</b> consts.hpp:163</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ace206e4d1676c54066a8ed734347d072"><div class="ttname"><a href="consts_8hpp.html#ace206e4d1676c54066a8ed734347d072">_regaccount_action</a></div><div class="ttdeci">static constexpr eosio::name _regaccount_action</div><div class="ttdef"><b>Definition</b> consts.hpp:53</div></div>
+<div class="ttc" id="aconsts_8hpp_html_acf903cac90cfb816da7c0498d6ba77db"><div class="ttname"><a href="consts_8hpp.html#acf903cac90cfb816da7c0498d6ba77db">_provider_minimum</a></div><div class="ttdeci">static const eosio::asset _provider_minimum</div><div class="ttdef"><b>Definition</b> consts.hpp:211</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ad32963d71641affbcefb02212f3166f3"><div class="ttname"><a href="consts_8hpp.html#ad32963d71641affbcefb02212f3166f3">_saving_account</a></div><div class="ttdeci">static constexpr eosio::name _saving_account</div><div class="ttdef"><b>Definition</b> consts.hpp:165</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ad83abcace3f0bc51e4a2e3761ae1ec19"><div class="ttname"><a href="consts_8hpp.html#ad83abcace3f0bc51e4a2e3761ae1ec19">_product_contribution_action</a></div><div class="ttdeci">static constexpr eosio::name _product_contribution_action</div><div class="ttdef"><b>Definition</b> consts.hpp:68</div></div>
+<div class="ttc" id="aconsts_8hpp_html_adc98edb1ff07b01925c99c424e7fa7e3"><div class="ttname"><a href="consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3">_afund_withdraw_action</a></div><div class="ttdeci">static constexpr eosio::name _afund_withdraw_action</div><div class="ttdef"><b>Definition</b> consts.hpp:60</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ae0aa0d721b6159491c68d947cd7dc8be"><div class="ttname"><a href="consts_8hpp.html#ae0aa0d721b6159491c68d947cd7dc8be">_ram_price_per_byte</a></div><div class="ttdeci">static constexpr uint64_t _ram_price_per_byte</div><div class="ttdef"><b>Definition</b> consts.hpp:219</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ae36fefc5b4aa30cf32d3ae22b64fb348"><div class="ttname"><a href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a></div><div class="ttdeci">static constexpr eosio::name _branch</div><div class="ttdef"><b>Definition</b> consts.hpp:160</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ae4d59ec28af0642e3072dd36dd0a537b"><div class="ttname"><a href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a></div><div class="ttdeci">static constexpr eosio::name _registrator</div><div class="ttdef"><b>Definition</b> consts.hpp:157</div></div>
+<div class="ttc" id="aconsts_8hpp_html_aef7e2a1a07c6daf943acf7717224ee4d"><div class="ttname"><a href="consts_8hpp.html#aef7e2a1a07c6daf943acf7717224ee4d">_meet</a></div><div class="ttdeci">static constexpr eosio::name _meet</div><div class="ttdef"><b>Definition</b> consts.hpp:162</div></div>
+<div class="ttc" id="aconsts_8hpp_html_af042516f92d25052ae67d9224b34bea6"><div class="ttname"><a href="consts_8hpp.html#af042516f92d25052ae67d9224b34bea6">token_whitelist</a></div><div class="ttdeci">static std::vector&lt; name &gt; token_whitelist</div><div class="ttdef"><b>Definition</b> consts.hpp:194</div></div>
+<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition</b> consts.hpp:156</div></div>
+<div class="ttc" id="aconsts_8hpp_html_af525e3bc464504ee975a366f5f1cc4fc"><div class="ttname"><a href="consts_8hpp.html#af525e3bc464504ee975a366f5f1cc4fc">_register_amount</a></div><div class="ttdeci">static constexpr uint64_t _register_amount</div><div class="ttdef"><b>Definition</b> consts.hpp:221</div></div>
+<div class="ttc" id="aconsts_8hpp_html_afeb0e2ab01520072c8305917005018a1"><div class="ttname"><a href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">_marketplace</a></div><div class="ttdeci">static constexpr eosio::name _marketplace</div><div class="ttdef"><b>Definition</b> consts.hpp:155</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition</b> eosio.msig.hpp:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="consts_8hpp.html">consts.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

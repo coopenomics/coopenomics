@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/capital/domain/entities/program_properties.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('program__properties_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл program_properties.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+<code>#include &lt;eosio/asset.hpp&gt;</code><br />
+</div>
+<p><a href="program__properties_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">Capital::ProgramProperties::program_property</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программных имущественных взносов хранит данные о предложениях по имущественным взносам в программу капитализации.  <a href="struct_capital_1_1_program_properties_1_1program__property.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_capital" id="r_namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_capital_1_1_program_properties" id="r_namespace_capital_1_1_program_properties"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html">Capital::ProgramProperties</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_capital_1_1_program_properties_1_1_status" id="r_namespace_capital_1_1_program_properties_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html">Capital::ProgramProperties::Status</a></td></tr>
+<tr class="memdesc:namespace_capital_1_1_program_properties_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы статусов программных имущественных взносов <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a50de3847257a257ae28cb32c679caba8" id="r_a50de3847257a257ae28cb32c679caba8"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;pgproperties&quot;_n, <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html#adbe54c91c3822d78c612ecf4309d24cc">program_property::by_username</a> &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html#a5ca897f6d9c3e629482fafd71de99b07">program_property::by_property_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a50de3847257a257ae28cb32c679caba8">Capital::ProgramProperties::program_property_index</a></td></tr>
+<tr class="separator:a50de3847257a257ae28cb32c679caba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a13430dc29f76a36f6205bcfd054b3bbc" id="r_a13430dc29f76a36f6205bcfd054b3bbc"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a13430dc29f76a36f6205bcfd054b3bbc">Capital::ProgramProperties::get_program_property</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a13430dc29f76a36f6205bcfd054b3bbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает программное предложение по хэшу.  <br /></td></tr>
+<tr class="separator:a13430dc29f76a36f6205bcfd054b3bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351f831f14f307ce833d3d1c5d2d442b" id="r_a351f831f14f307ce833d3d1c5d2d442b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b">Capital::ProgramProperties::get_program_property_or_fail</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a351f831f14f307ce833d3d1c5d2d442b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает программное предложение по хэшу или падает с ошибкой.  <br /></td></tr>
+<tr class="separator:a351f831f14f307ce833d3d1c5d2d442b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7fe2c192294ac99b6fbb11b9da1cb8" id="r_acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#acf7fe2c192294ac99b6fbb11b9da1cb8">Capital::ProgramProperties::delete_program_property</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет программное предложение по хэшу.  <br /></td></tr>
+<tr class="separator:acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2214ac81cfa9363bcafbe23fe1dfa132" id="r_a2214ac81cfa9363bcafbe23fe1dfa132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a2214ac81cfa9363bcafbe23fe1dfa132">Capital::ProgramProperties::create_program_property_with_approve</a> (eosio::name coopname, eosio::name username, checksum256 property_hash, const eosio::asset &amp;property_amount, const std::string &amp;property_description, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
+<tr class="memdesc:a2214ac81cfa9363bcafbe23fe1dfa132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает предложение по программному имущественному взносу и отправляет его на утверждение.  <br /></td></tr>
+<tr class="separator:a2214ac81cfa9363bcafbe23fe1dfa132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a65969273d8023867a1dfb432e714be" id="r_a1a65969273d8023867a1dfb432e714be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a1a65969273d8023867a1dfb432e714be">Capital::ProgramProperties::update_program_property_status</a> (eosio::name coopname, const checksum256 &amp;property_hash, eosio::name new_status)</td></tr>
+<tr class="memdesc:a1a65969273d8023867a1dfb432e714be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус программного предложения  <br /></td></tr>
+<tr class="separator:a1a65969273d8023867a1dfb432e714be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a96498018a38059f27f16e1c3983484" id="r_a6a96498018a38059f27f16e1c3983484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a6a96498018a38059f27f16e1c3983484">Capital::ProgramProperties::set_program_property_approved_statement</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
+<tr class="memdesc:a6a96498018a38059f27f16e1c3983484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает одобренное заявление  <br /></td></tr>
+<tr class="separator:a6a96498018a38059f27f16e1c3983484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e98197691b87967c9f1b82dcfbec533" id="r_a4e98197691b87967c9f1b82dcfbec533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a4e98197691b87967c9f1b82dcfbec533">Capital::ProgramProperties::set_program_property_authorization</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
+<tr class="memdesc:a4e98197691b87967c9f1b82dcfbec533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает решение совета  <br /></td></tr>
+<tr class="separator:a4e98197691b87967c9f1b82dcfbec533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00170a677e1015c704742e66326a19e9" id="r_a00170a677e1015c704742e66326a19e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a00170a677e1015c704742e66326a19e9">Capital::ProgramProperties::set_program_property_act1</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;act1)</td></tr>
+<tr class="memdesc:a00170a677e1015c704742e66326a19e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает первый акт  <br /></td></tr>
+<tr class="separator:a00170a677e1015c704742e66326a19e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a6b94432de862a268bc3b93ea1a43c" id="r_a00a6b94432de862a268bc3b93ea1a43c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a00a6b94432de862a268bc3b93ea1a43c">Capital::ProgramProperties::set_program_property_act2</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;act2)</td></tr>
+<tr class="memdesc:a00a6b94432de862a268bc3b93ea1a43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает второй акт  <br /></td></tr>
+<tr class="separator:a00a6b94432de862a268bc3b93ea1a43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ad5b1a4de6d89bc3fb93933ec63251523" id="r_ad5b1a4de6d89bc3fb93933ec63251523"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html#ad5b1a4de6d89bc3fb93933ec63251523">Capital::ProgramProperties::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
+<tr class="memdesc:ad5b1a4de6d89bc3fb93933ec63251523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Программный имущественный взнос создан  <br /></td></tr>
+<tr class="separator:ad5b1a4de6d89bc3fb93933ec63251523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11ae54499b0642486f02d9f1af9d44e" id="r_ae11ae54499b0642486f02d9f1af9d44e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html#ae11ae54499b0642486f02d9f1af9d44e">Capital::ProgramProperties::Status::APPROVED</a> = &quot;approved&quot;_n</td></tr>
+<tr class="memdesc:ae11ae54499b0642486f02d9f1af9d44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Программный имущественный взнос одобрен  <br /></td></tr>
+<tr class="separator:ae11ae54499b0642486f02d9f1af9d44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0566894f982a7b6c1d73b8b183aeeb5e" id="r_a0566894f982a7b6c1d73b8b183aeeb5e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html#a0566894f982a7b6c1d73b8b183aeeb5e">Capital::ProgramProperties::Status::AUTHORIZED</a> = &quot;authorized&quot;_n</td></tr>
+<tr class="memdesc:a0566894f982a7b6c1d73b8b183aeeb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Программный имущественный взнос авторизован  <br /></td></tr>
+<tr class="separator:a0566894f982a7b6c1d73b8b183aeeb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3f1ff57cb537d9e5022910a3b88e0b" id="r_aed3f1ff57cb537d9e5022910a3b88e0b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html#aed3f1ff57cb537d9e5022910a3b88e0b">Capital::ProgramProperties::Status::ACT1</a> = &quot;act1&quot;_n</td></tr>
+<tr class="memdesc:aed3f1ff57cb537d9e5022910a3b88e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первый акт подписан  <br /></td></tr>
+<tr class="separator:aed3f1ff57cb537d9e5022910a3b88e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183fe91fba63e90ea1e82969bde6c67f" id="r_a183fe91fba63e90ea1e82969bde6c67f"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties_1_1_status.html#a183fe91fba63e90ea1e82969bde6c67f">Capital::ProgramProperties::Status::ACT2</a> = &quot;act2&quot;_n</td></tr>
+<tr class="memdesc:a183fe91fba63e90ea1e82969bde6c67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Второй акт подписан  <br /></td></tr>
+<tr class="separator:a183fe91fba63e90ea1e82969bde6c67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="program__properties_8hpp.html">program_properties.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
