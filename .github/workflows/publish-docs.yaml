@@ -1,0 +1,90 @@
+name: Publish Coopenomics Website
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-publish-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Clone mono repository
+        run: |
+          git clone -b capital https://github.com/coopenomics/mono.git mono-repo
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Doxygen
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Python requirements
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install mkdocs-material mkdocs-macros-plugin mkdocs-section-index pymdown-extensions
+        
+      - name: Install Node.js dependencies
+        run: pnpm install
+
+      - name: Generate contracts documentation with Doxygen
+        run: |
+          cd mono-repo/components/contracts
+          doxygen
+
+      - name: Generate SDK documentation
+        run: |
+          cd mono-repo/components/sdk
+          pnpm install
+          pnpm run docs
+
+      - name: Generate cooptypes docs
+        run: |
+          cd mono-repo/components/cooptypes
+          pnpm install
+          pnpm run docs
+
+      - name: Copy contracts documentation
+        run: |
+          mkdir -p docs/doxygen
+          cp -r mono-repo/components/contracts/docs/html/* docs/doxygen/
+
+      - name: Copy SDK documentation
+        run: |
+          mkdir -p docs/sdk
+          cp -r mono-repo/components/sdk/docs/* docs/sdk/
+
+      - name: Copy cooptypes documentation
+        run: |
+          mkdir -p docs/cooptypes
+          cp -r mono-repo/components/cooptypes/docs/* docs/cooptypes/
+
+      - name: Build docs (mkdocs)
+        run: |
+          source venv/bin/activate
+          mkdocs build
+
+      - name: Publish to GitHub Pages
+        run: npx gh-pages --nojekyll -d site --repo https://x-access-token:${GITHUB_TOKEN}@github.com/coopenomics/coopenomics.git
+        env:
+          GIT_AUTHOR_NAME: github-actions
+          GIT_AUTHOR_EMAIL: github-actions@github.com
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: github-actions@github.com
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

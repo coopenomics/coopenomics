@@ -67,7 +67,7 @@ extra:
   #   - icon: fontawesome/brands/telegram
   #     link: https://twitter.com/your-profile
   
-copyright: АНО «КООПЕРАТИВНАЯ ЭКОНОМИКА» &copy; 2024
+copyright: АНО «КООПЕРАТИВНАЯ ЭКОНОМИКА» &copy; 2025
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -128,18 +128,12 @@ nav:
       - Протоколы: documentation/blockchain/protocols.md
       - Делегаты и консенсус: documentation/blockchain/witnesses.md 
       - Параметры конфигурации: documentation/blockchain/configuration.md
-      - Инструкции:
-        - Быстрый старт: documentation/blockchain/install.md
-        # - Полный старт: documentation/blockchain/install.md
-        # - Командный кошелёк: https://google.com
-        # - Синхронизация: documentation/blockchain/sync.md
-        # - API: https://developers.eos.io/welcome/latest/reference/index
-    
-    - Смарт-контракты: 
-      - Введение: documentation/blockchain/contracts.md
-      - Системные контракты: documentation/coopcontracts/system.md
-      - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
       
+    - Контракты: 
+      - Введение: documentation/contracts/index.md
+      # - Системные контракты: documentation/coopcontracts/system.md
+      # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
+      # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
     - Фабрика документов: 
       - Введение: documentation/fabric/intro.md
     - Словарь: vocabulary.md    
@@ -147,7 +141,13 @@ nav:
   
   - Блог: https://blog.coopenomics.world
   - Подключение: providers.md
-
+  # - Инструкции:
+  #       - Быстрый старт: documentation/blockchain/install.md
+  #       # - Полный старт: documentation/blockchain/install.md
+  #       # - Командный кошелёк: https://google.com
+  #       # - Синхронизация: documentation/blockchain/sync.md
+  #       # - API: https://developers.eos.io/welcome/latest/reference/index
+    
   # - Вопрос-ответ: faq.md
   - Контакты: contacts.md
   
