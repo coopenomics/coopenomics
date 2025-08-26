@@ -66,7 +66,7 @@ jobs:
       - name: Copy contracts documentation
         run: |
           mkdir -p docs/doxygen
-          cp -r mono-repo/components/contracts/docs/html/* docs/doxygen/
+          cp -r mono-repo/components/contracts/docs/html/* docs/contracts/
 
       - name: Copy SDK documentation
         run: |
