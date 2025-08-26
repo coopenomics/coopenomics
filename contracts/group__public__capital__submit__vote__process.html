@@ -6,15 +6,15 @@
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!-- BEGIN opengraph metadata -->
-<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:title" content="COOPENOMICS" />
 <meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:description" content="Документация на смарт-контракты платформы Кооперативной Экономики на языке C/C++" />
 <meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
 <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
-<meta name="twitter:title" content="Doxygen Awesome" />
-<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация на смарт-контракты платформы Кооперативной Экономики на языке C/C++" />
 <!-- END twitter metadata -->
 <title>COOPENOMICS: Голосование по методу Водянова</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('group__public__capital__submit__vote__
 </div><!--header-->
 <div class="contents">
 <p >Процесс распределения голосующей суммы вкладчиком между другими вкладчиками проекта по методу Водянова и сохранения результатов голосования в системе.</p>
-<h2><a class="anchor" id="autotoc_md280"></a>
+<h2><a class="anchor" id="autotoc_md279"></a>
 Назначение процесса</h2>
 <p >Подача голоса по методу Водянова обеспечивает:</p><ul>
 <li>Распределение голосующей суммы вкладчика между другими вкладчиками проекта</li>
@@ -167,14 +167,14 @@ sequenceDiagram
     end
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md281"></a>
+<h2><a class="anchor" id="autotoc_md280"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md282"></a>
+<h3><a class="anchor" id="autotoc_md281"></a>
 Шаг 1: Инициация подачи голоса</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gad8c8f0ebd471b3d8e55aec914c6d14a4">Подача голоса по методу Водянова</a></p>
 <p >Вкладчик распределяет свою голосующую сумму между другими вкладчиками проекта в рамках голосования по методу Водянова.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка авторизации кооператива</dd></dl>
-<h3><a class="anchor" id="autotoc_md283"></a>
+<h3><a class="anchor" id="autotoc_md282"></a>
 Шаг 2: Проверка статуса проекта и срока голосования</h3>
 <p ><b>Действие:</b> Валидация состояния проекта</p>
 <p >Система проверяет, что:</p><ul>
@@ -184,7 +184,7 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Подтвержден статус проекта как "голосование" </dd>
 <dd>
 Подтверждено, что срок голосования не истек</dd></dl>
-<h3><a class="anchor" id="autotoc_md284"></a>
+<h3><a class="anchor" id="autotoc_md283"></a>
 Шаг 3: Валидация вкладчика голосования</h3>
 <p ><b>Действие:</b> Проверка прав вкладчика</p>
 <p >Система проверяет, что:</p><ul>
@@ -194,7 +194,7 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Подтверждено участие пользователя в голосовании </dd>
 <dd>
 Подтверждено, что пользователь еще не голосовал</dd></dl>
-<h3><a class="anchor" id="autotoc_md285"></a>
+<h3><a class="anchor" id="autotoc_md284"></a>
 Шаг 4: Проверка корректности голосов</h3>
 <p ><b>Действие:</b> Валидация распределения голосов</p>
 <p >Система проверяет корректность распределения голосов:</p><ul>
@@ -207,17 +207,17 @@ sequenceDiagram
 <li>Сумма голосов плюс равная не голосующая сумма равна общей сумме на распределении</li>
 </ul>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка корректности всех параметров голосования</dd></dl>
-<h3><a class="anchor" id="autotoc_md286"></a>
+<h3><a class="anchor" id="autotoc_md285"></a>
 Шаг 5: Сохранение голосов</h3>
 <p ><b>Действие:</b> Фиксация голосов в системе</p>
 <p >Система сохраняет каждый голос в таблице голосов, связывая голосующего с получателем голоса и суммой голоса.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Голоса сохранены в системе</dd></dl>
-<h3><a class="anchor" id="autotoc_md287"></a>
+<h3><a class="anchor" id="autotoc_md286"></a>
 Шаг 6: Обновление счетчика полученных голосов</h3>
 <p ><b>Действие:</b> Учет голоса в статистике</p>
 <p >Система обновляет счетчик полученных голосов для проекта, увеличивая его на единицу для отслеживания завершения голосования.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Счетчик полученных голосов увеличен</dd></dl>
-<h2><a class="anchor" id="autotoc_md288"></a>
+<h2><a class="anchor" id="autotoc_md287"></a>
 Условия для подачи голоса</h2>
 <p ><b>Обязательные требования:</b></p><ul>
 <li>Проект должен быть в статусе голосования</li>
@@ -226,14 +226,14 @@ sequenceDiagram
 <li>Вкладчик еще не голосовал по данному проекту</li>
 <li>Распределение голосов должно соответствовать правилам метода Водянова</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md289"></a>
+<h2><a class="anchor" id="autotoc_md288"></a>
 Результат процесса</h2>
 <p >post"
 1. Голоса вкладчика сохранены в системе
 2. Счетчик полученных голосов обновлен
 3. Вкладчик больше не может голосовать по данному проекту
 
-@subsection autotoc_md290 Связанные процессы
+@subsection autotoc_md289 Связанные процессы
 
 - @ref public_capital_voting_start_process "Начало голосования" - предшествующий этап
 - @ref public_capital_calculate_votes_process "Подсчет голосов" - следующий этап

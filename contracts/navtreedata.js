@@ -25,39 +25,39 @@
 var NAVTREE =
 [
   [ "COOPENOMICS", "index.html", [
-    [ "Обзор", "index.html#autotoc_md350", [
-      [ "Основные контракты", "index.html#autotoc_md352", [
-        [ "Архитектура системы", "index.html#autotoc_md351", null ],
-        [ "Управление участниками и регистрация", "index.html#autotoc_md353", [
-          [ "Контракт REGISTRATOR", "index.html#autotoc_md354", null ],
-          [ "Контракт BRANCH", "index.html#autotoc_md355", null ]
+    [ "Обзор", "index.html#autotoc_md349", [
+      [ "Основные контракты", "index.html#autotoc_md351", [
+        [ "Архитектура системы", "index.html#autotoc_md350", null ],
+        [ "Управление участниками и регистрация", "index.html#autotoc_md352", [
+          [ "Контракт REGISTRATOR", "index.html#autotoc_md353", null ],
+          [ "Контракт BRANCH", "index.html#autotoc_md354", null ]
         ] ],
-        [ "Управление и принятие решений", "index.html#autotoc_md356", [
-          [ "Контракт SOVIET", "index.html#autotoc_md357", null ],
-          [ "Контракт MEET", "index.html#autotoc_md358", null ]
+        [ "Управление и принятие решений", "index.html#autotoc_md355", [
+          [ "Контракт SOVIET", "index.html#autotoc_md356", null ],
+          [ "Контракт MEET", "index.html#autotoc_md357", null ]
         ] ],
-        [ "Финансовое управление", "index.html#autotoc_md359", [
-          [ "Контракт CAPITAL", "index.html#autotoc_md360", null ],
-          [ "Контракт FUND", "index.html#autotoc_md361", null ],
-          [ "Контракт WALLET", "index.html#autotoc_md362", null ],
-          [ "Контракт LEDGER", "index.html#autotoc_md363", null ],
-          [ "Контракт LOAN", "index.html#autotoc_md364", null ]
+        [ "Финансовое управление", "index.html#autotoc_md358", [
+          [ "Контракт CAPITAL", "index.html#autotoc_md359", null ],
+          [ "Контракт FUND", "index.html#autotoc_md360", null ],
+          [ "Контракт WALLET", "index.html#autotoc_md361", null ],
+          [ "Контракт LEDGER", "index.html#autotoc_md362", null ],
+          [ "Контракт LOAN", "index.html#autotoc_md363", null ]
         ] ],
-        [ "Экономическая деятельность", "index.html#autotoc_md365", [
-          [ "Контракт MARKETPLACE", "index.html#autotoc_md366", null ],
-          [ "Контракт GATEWAY", "index.html#autotoc_md367", null ]
+        [ "Экономическая деятельность", "index.html#autotoc_md364", [
+          [ "Контракт MARKETPLACE", "index.html#autotoc_md365", null ],
+          [ "Контракт GATEWAY", "index.html#autotoc_md366", null ]
         ] ],
-        [ "Вспомогательные системы", "index.html#autotoc_md368", [
-          [ "Контракт DRAFT", "index.html#autotoc_md369", null ]
+        [ "Вспомогательные системы", "index.html#autotoc_md367", [
+          [ "Контракт DRAFT", "index.html#autotoc_md368", null ]
         ] ],
-        [ "Системные контракты", "index.html#autotoc_md370", null ]
+        [ "Системные контракты", "index.html#autotoc_md369", null ]
       ] ],
-      [ "Принципы работы системы", "index.html#autotoc_md371", [
-        [ "Жизненный цикл участника", "index.html#autotoc_md372", null ],
-        [ "Финансовые потоки", "index.html#autotoc_md373", null ],
-        [ "Управление и контроль", "index.html#autotoc_md374", null ]
+      [ "Принципы работы системы", "index.html#autotoc_md370", [
+        [ "Жизненный цикл участника", "index.html#autotoc_md371", null ],
+        [ "Финансовые потоки", "index.html#autotoc_md372", null ],
+        [ "Управление и контроль", "index.html#autotoc_md373", null ]
       ] ],
-      [ "Технологический стек", "index.html#autotoc_md375", null ]
+      [ "Технологический стек", "index.html#autotoc_md374", null ]
     ] ],
     [ "Группы", "modules.html", "modules" ],
     [ "Классы", "annotated.html", [
