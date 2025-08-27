@@ -20,6 +20,10 @@ jobs:
           cd mono-repo
           git checkout capital
 
+      - name: Clone coopos repository
+        run: |
+          git clone https://github.com/coopenomics/coopos.git coopos-repo
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -39,6 +43,9 @@ jobs:
 
       - name: Install pnpm
         run: npm install -g pnpm
+
+      - name: Install redocly
+        run: npm install -g @redocly/cli
 
       - name: Install Python requirements
         run: |
@@ -67,6 +74,12 @@ jobs:
           pnpm install
           pnpm run build
           pnpm run docs
+
+      - name: Generate Chain API documentation
+        run: |
+          mkdir -p docs/api/chain
+          cd coopos-repo/plugins/chain_api_plugin
+          redocly build-docs chain.swagger.yaml --output ../../../docs/api/chain/index.html
 
       - name: Copy contracts documentation
         run: |
