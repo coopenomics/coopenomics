@@ -81,6 +81,30 @@ jobs:
           cd coopos-repo/plugins/chain_api_plugin
           redocly build-docs chain.swagger.yaml --output ../../../docs/api/chain/index.html
 
+      - name: Generate DB Size API documentation
+        run: |
+          mkdir -p docs/api/db_size
+          cd coopos-repo/plugins/db_size_api_plugin
+          redocly build-docs db_size.swagger.yaml --output ../../../docs/api/db_size/index.html
+
+      - name: Generate Net API documentation
+        run: |
+          mkdir -p docs/api/net
+          cd coopos-repo/plugins/net_api_plugin
+          redocly build-docs net.swagger.yaml --output ../../../docs/api/net/index.html
+
+      - name: Generate Trace API documentation
+        run: |
+          mkdir -p docs/api/trace
+          cd coopos-repo/plugins/trace_api_plugin
+          redocly build-docs trace_api.swagger.yaml --output ../../../docs/api/trace/index.html
+
+      - name: Generate Producer API documentation
+        run: |
+          mkdir -p docs/api/producer
+          cd coopos-repo/plugins/producer_api_plugin
+          redocly build-docs producer.swagger.yaml --output ../../../docs/api/producer/index.html
+
       - name: Copy contracts documentation
         run: |
           mkdir -p docs/contracts
