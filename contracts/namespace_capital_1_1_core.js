@@ -30,7 +30,7 @@ var namespace_capital_1_1_core =
     [ "deallocate_program_investment_from_project", "namespace_capital_1_1_core.html#a781d4d919d7827a1460aff275ac49221", null ],
     [ "distribute_program_membership_funds", "namespace_capital_1_1_core.html#a45794cf8e1ea49f6297e648e5d4c9e81", null ],
     [ "get_capital_program_share_balance", "namespace_capital_1_1_core.html#ab8a53aebd4c22547bd164229906855b7", null ],
-    [ "get_capital_user_share_balance", "namespace_capital_1_1_core.html#a6a32921a37fa63c4feba3dd1d2ac8feb", null ],
+    [ "get_capital_program_user_share_balance", "namespace_capital_1_1_core.html#a91ec5e5da3c973200c56de75595b82f2", null ],
     [ "increment_authors_crps_in_project", "namespace_capital_1_1_core.html#a3ae9e2db55028fbcb67f02554a6dd2cc", null ],
     [ "process_contributor_program_withdrawal", "namespace_capital_1_1_core.html#a3d8c7d829554407c0f9b10e8e752b61d", null ],
     [ "refresh_author_segment", "namespace_capital_1_1_core.html#a30f341d3570da8d10990bbc1f71499c0", null ],

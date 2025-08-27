@@ -39,12 +39,12 @@ var searchData=
   ['updaterex_36',['updaterex',['../classeosio__system_1_1eosio__system__tester.html#aed0dc358ed43d15be3a778d80c55410f',1,'eosio_system::eosio_system_tester']]],
   ['updtrevision_37',['updtrevision',['../group__public__system__actions.html#ga0af4a55018801131ae7dc7a923bead0b',1,'eosiosystem::system_contract']]],
   ['upsert_5fauthor_5fsegment_38',['upsert_author_segment',['../namespace_capital_1_1_core.html#afe89547f71d1b8a2f6edd73d25889cb7',1,'Capital::Core::upsert_author_segment(eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)'],['../namespace_capital_1_1_core.html#a3e100b77a23f243c050206560f374036',1,'Capital::Core::upsert_author_segment(eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, uint64_t shares)']]],
-  ['upsert_5fcapital_5fwallet_39',['upsert_capital_wallet',['../namespace_capital_1_1_wallet.html#ab9222128ba3458deed8b7e5e0816f778',1,'Capital::Wallet']]],
+  ['upsert_5fcapital_5fwallet_39',['upsert_capital_wallet',['../namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b',1,'Capital::Wallets']]],
   ['upsert_5fcontributor_5fsegment_40',['upsert_contributor_segment',['../namespace_capital_1_1_core.html#a5f697986bdbe2f81163502abca852c95',1,'Capital::Core']]],
   ['upsert_5fcoordinator_5fsegment_41',['upsert_coordinator_segment',['../namespace_capital_1_1_core.html#af3d55ed450dea2cb4f138b50606b4c95',1,'Capital::Core']]],
   ['upsert_5fcreator_5fsegment_42',['upsert_creator_segment',['../namespace_capital_1_1_core.html#a7a86022b19dc131e86d830d88d3d3bfb',1,'Capital::Core']]],
   ['upsert_5finvestor_5fsegment_43',['upsert_investor_segment',['../namespace_capital_1_1_core.html#abdec5d69e19de3b2f808ccb31135da75',1,'Capital::Core']]],
-  ['upsert_5fproject_5fwallet_44',['upsert_project_wallet',['../namespace_capital_1_1_wallet.html#a097c02026f8e6c5bbad7619743f452e9',1,'Capital::Wallet']]],
+  ['upsert_5fproject_5fwallet_44',['upsert_project_wallet',['../namespace_capital_1_1_wallets.html#ac76b956b177f3835b662c0d058a7db91',1,'Capital::Wallets']]],
   ['upsert_5fpropertor_5fsegment_45',['upsert_propertor_segment',['../namespace_capital_1_1_core.html#a4ef1218ab556e5526544d4fa37fdf15e',1,'Capital::Core']]],
   ['upversion_46',['upversion',['../group__public__draft__actions.html#ga75e67368eaf7276546b34c0718359195',1,'draft']]]
 ];

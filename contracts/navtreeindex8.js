@@ -1,9 +1,5 @@
 var NAVTREEINDEX8 =
 {
-"group__public__loan__actions.html#gac4f37de708f710a03b3f462b0f6ecdc2":[1,6,1,1],
-"group__public__loan__actions.html#gacc8b14ae84e64e5b33d1de18a979d690":[1,6,1,0],
-"group__public__loan__consts.html":[1,6,3],
-"group__public__loan__consts.html#ga737ac51e2ba8e17c9b0a37eec8527072":[1,6,3,0],
 "group__public__loan__processes.html":[1,6,0],
 "group__public__loan__tables.html":[1,6,2],
 "group__public__meet.html":[1,7],
@@ -249,5 +245,9 @@ var NAVTREEINDEX8 =
 "lib_2balances_8hpp_source.html":[4,0,0,7,4],
 "lib_2branch_8hpp.html":[4,0,0,7,5],
 "lib_2branch_8hpp.html#a16146d9a07155666111bdc8c7b8e2a58":[4,0,0,7,5,1],
-"lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf":[4,0,0,7,5,2]
+"lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf":[4,0,0,7,5,2],
+"lib_2branch_8hpp.html#a6ff81a6a4e3a37181ec3f6d67aa0d42b":[4,0,0,7,5,0],
+"lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44":[4,0,0,7,5,3],
+"lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962":[4,0,0,7,5,4],
+"lib_2branch_8hpp_source.html":[4,0,0,7,5]
 };

@@ -18,6 +18,7 @@ var memo_8hpp =
     [ "get_program_property_memo", "memo_8hpp.html#af9c4811593f28292e235e49e1df0376b", null ],
     [ "get_program_withdraw_memo", "memo_8hpp.html#a810c02ee4e65f9ae3a1bfee56df2e3bf", null ],
     [ "get_project_withdraw_memo", "memo_8hpp.html#a8f2e94a0563adece55f899215ae7e616", null ],
+    [ "get_push_result_memo", "memo_8hpp.html#a1208ed47bf08bc1f6b3f0662145702c5", null ],
     [ "get_result_memo", "memo_8hpp.html#ae808e4458d95d1c8300f97d78503f190", null ],
     [ "get_result_withdraw_memo", "memo_8hpp.html#a5c7177388253db7ad1fa3a3711ae552f", null ],
     [ "get_return_unused_investments_memo", "memo_8hpp.html#a56a1dcb67972b284cb1c7d92389fad93", null ]

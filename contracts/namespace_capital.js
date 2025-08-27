@@ -26,6 +26,7 @@ var namespace_capital =
       [ "get_program_property_memo", "namespace_capital_1_1_memo.html#af9c4811593f28292e235e49e1df0376b", null ],
       [ "get_program_withdraw_memo", "namespace_capital_1_1_memo.html#a810c02ee4e65f9ae3a1bfee56df2e3bf", null ],
       [ "get_project_withdraw_memo", "namespace_capital_1_1_memo.html#a8f2e94a0563adece55f899215ae7e616", null ],
+      [ "get_push_result_memo", "namespace_capital_1_1_memo.html#a1208ed47bf08bc1f6b3f0662145702c5", null ],
       [ "get_result_memo", "namespace_capital_1_1_memo.html#ae808e4458d95d1c8300f97d78503f190", null ],
       [ "get_result_withdraw_memo", "namespace_capital_1_1_memo.html#a5c7177388253db7ad1fa3a3711ae552f", null ],
       [ "get_return_unused_investments_memo", "namespace_capital_1_1_memo.html#a56a1dcb67972b284cb1c7d92389fad93", null ]
@@ -43,14 +44,14 @@ var namespace_capital =
       [ "get_votes_for_recipient", "namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23", null ],
       [ "has_user_voted", "namespace_capital_1_1_votes.html#aba88996b0321ddd75ca3fc4d746986b2", null ]
     ] ],
-    [ "Wallet", "namespace_capital_1_1_wallet.html", [
-      [ "get_capital_wallet", "namespace_capital_1_1_wallet.html#acad0ebbaf80b162101e23b67c9b2aa16", null ],
-      [ "get_capital_wallet_by_username", "namespace_capital_1_1_wallet.html#a841ed8a96c61a35eded6550e90055118", null ],
-      [ "get_capital_wallet_or_fail", "namespace_capital_1_1_wallet.html#a30314a42ab8c997647842e5fd6f8701c", null ],
-      [ "get_project_wallet", "namespace_capital_1_1_wallet.html#a70fe231d2707373d9bd3a6e30cbefc66", null ],
-      [ "get_project_wallet_or_fail", "namespace_capital_1_1_wallet.html#a45dba503577d466a620964792b9ac91f", null ],
-      [ "upsert_capital_wallet", "namespace_capital_1_1_wallet.html#ab9222128ba3458deed8b7e5e0816f778", null ],
-      [ "upsert_project_wallet", "namespace_capital_1_1_wallet.html#a097c02026f8e6c5bbad7619743f452e9", null ]
+    [ "Wallets", "namespace_capital_1_1_wallets.html", [
+      [ "get_capital_wallet_by_username", "namespace_capital_1_1_wallets.html#aadd9de8aec7067d27059b380561123f2", null ],
+      [ "get_capital_wallet_or_fail", "namespace_capital_1_1_wallets.html#aaba7c93b97799f39c993c7ebca3af6d1", null ],
+      [ "get_program_capital_wallet", "namespace_capital_1_1_wallets.html#a7219cc7677bc65a9794207603ad6e26a", null ],
+      [ "get_project_wallet", "namespace_capital_1_1_wallets.html#a94929368dc749448e47388f27480065a", null ],
+      [ "get_project_wallet_or_fail", "namespace_capital_1_1_wallets.html#a8f304aa36944bec20ec024a5ebbbd58e", null ],
+      [ "upsert_capital_wallet", "namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b", null ],
+      [ "upsert_project_wallet", "namespace_capital_1_1_wallets.html#ac76b956b177f3835b662c0d058a7db91", null ]
     ] ],
     [ "appendix", "struct_capital_1_1appendix.html", "struct_capital_1_1appendix" ],
     [ "capital_wallet", "struct_capital_1_1capital__wallet.html", "struct_capital_1_1capital__wallet" ],
@@ -86,11 +87,9 @@ var namespace_capital =
     [ "project_withdraws_index", "namespace_capital.html#ab7894e59d1f9f585f85217916f771e0d", null ],
     [ "result_index", "namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4", null ],
     [ "votes_index", "namespace_capital.html#a477f1081fcd9c5bb1af0d117ac7805c0", null ],
-    [ "get_capital_program_or_fail", "namespace_capital.html#aa23b59f5d79fc12397bc3a8185647e22", null ],
     [ "get_expense", "namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38", null ],
     [ "get_global_state", "namespace_capital.html#ad4e470a04c6012d5b10efaf87399dda1", null ],
     [ "get_program_withdraw", "namespace_capital.html#ac9b611f36123e8dcb07121850b719eb5", null ],
     [ "get_project_withdraw", "namespace_capital.html#ac3e81b37cfb7bc46734cbc049bd929be", null ],
-    [ "get_source_program_or_fail", "namespace_capital.html#ac6241e395295206269ca7a4c825f040c", null ],
     [ "update_global_state", "namespace_capital.html#ad4e3a2b5ec37a2d29f71d5fe2954f82d", null ]
 ];

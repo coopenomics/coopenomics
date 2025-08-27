@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="COOPENOMICS" />
 <meta name="twitter:description" content="Документация на смарт-контракты платформы Кооперативной Экономики на языке C/C++" />
 <!-- END twitter metadata -->
-<title>COOPENOMICS: Пространство имен Capital::Wallet</title>
+<title>COOPENOMICS: Пространство имен Capital::Wallets</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -115,7 +115,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('namespace_capital_1_1_wallets.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -136,36 +136,36 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 <div class="header">
   <div class="summary">
 <a href="#func-members">Функции</a>  </div>
-  <div class="headertitle"><div class="title">Пространство имен Capital::Wallet</div></div>
+  <div class="headertitle"><div class="title">Пространство имен Capital::Wallets</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:acad0ebbaf80b162101e23b67c9b2aa16"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#acad0ebbaf80b162101e23b67c9b2aa16">get_capital_wallet</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="separator:acad0ebbaf80b162101e23b67c9b2aa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a841ed8a96c61a35eded6550e90055118"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#a841ed8a96c61a35eded6550e90055118">get_capital_wallet_by_username</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="memdesc:a841ed8a96c61a35eded6550e90055118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек капитализации по имени пользователя  <a href="namespace_capital_1_1_wallet.html#a841ed8a96c61a35eded6550e90055118">Подробнее...</a><br /></td></tr>
-<tr class="separator:a841ed8a96c61a35eded6550e90055118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30314a42ab8c997647842e5fd6f8701c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#a30314a42ab8c997647842e5fd6f8701c">get_capital_wallet_or_fail</a> (eosio::name coopname, eosio::name username, const char *msg=&quot;Кошелек капитализации не найден&quot;)</td></tr>
-<tr class="memdesc:a30314a42ab8c997647842e5fd6f8701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек капитализации или падает с ошибкой  <a href="namespace_capital_1_1_wallet.html#a30314a42ab8c997647842e5fd6f8701c">Подробнее...</a><br /></td></tr>
-<tr class="separator:a30314a42ab8c997647842e5fd6f8701c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9222128ba3458deed8b7e5e0816f778"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#ab9222128ba3458deed8b7e5e0816f778">upsert_capital_wallet</a> (eosio::name coopname, eosio::name username, int64_t last_program_crps=0, const eosio::asset &amp;capital_available=asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>), eosio::name payer=<a class="el" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>)</td></tr>
-<tr class="memdesc:ab9222128ba3458deed8b7e5e0816f778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет кошелек капитализации  <a href="namespace_capital_1_1_wallet.html#ab9222128ba3458deed8b7e5e0816f778">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab9222128ba3458deed8b7e5e0816f778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70fe231d2707373d9bd3a6e30cbefc66"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#a70fe231d2707373d9bd3a6e30cbefc66">get_project_wallet</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:a70fe231d2707373d9bd3a6e30cbefc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек проекта по хэшу проекта и имени пользователя  <a href="namespace_capital_1_1_wallet.html#a70fe231d2707373d9bd3a6e30cbefc66">Подробнее...</a><br /></td></tr>
-<tr class="separator:a70fe231d2707373d9bd3a6e30cbefc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45dba503577d466a620964792b9ac91f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#a45dba503577d466a620964792b9ac91f">get_project_wallet_or_fail</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const char *msg=&quot;Кошелек <a class="el" href="project-creation-docs_8dox.html#af728985a405f8de1229ad5244f7c18bd">проекта</a> не найден&quot;)</td></tr>
-<tr class="memdesc:a45dba503577d466a620964792b9ac91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек проекта или падает с ошибкой  <a href="namespace_capital_1_1_wallet.html#a45dba503577d466a620964792b9ac91f">Подробнее...</a><br /></td></tr>
-<tr class="separator:a45dba503577d466a620964792b9ac91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097c02026f8e6c5bbad7619743f452e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html#a097c02026f8e6c5bbad7619743f452e9">upsert_project_wallet</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const eosio::asset &amp;shares, eosio::name payer=<a class="el" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>)</td></tr>
-<tr class="memdesc:a097c02026f8e6c5bbad7619743f452e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет кошелек проекта, добавляя доли к существующим  <a href="namespace_capital_1_1_wallet.html#a097c02026f8e6c5bbad7619743f452e9">Подробнее...</a><br /></td></tr>
-<tr class="separator:a097c02026f8e6c5bbad7619743f452e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7219cc7677bc65a9794207603ad6e26a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#a7219cc7677bc65a9794207603ad6e26a">get_program_capital_wallet</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="separator:a7219cc7677bc65a9794207603ad6e26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd9de8aec7067d27059b380561123f2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#aadd9de8aec7067d27059b380561123f2">get_capital_wallet_by_username</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:aadd9de8aec7067d27059b380561123f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек капитализации по имени пользователя  <a href="namespace_capital_1_1_wallets.html#aadd9de8aec7067d27059b380561123f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aadd9de8aec7067d27059b380561123f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba7c93b97799f39c993c7ebca3af6d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#aaba7c93b97799f39c993c7ebca3af6d1">get_capital_wallet_or_fail</a> (eosio::name coopname, eosio::name username, const char *msg=&quot;Кошелек капитализации не найден&quot;)</td></tr>
+<tr class="memdesc:aaba7c93b97799f39c993c7ebca3af6d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек капитализации или падает с ошибкой  <a href="namespace_capital_1_1_wallets.html#aaba7c93b97799f39c993c7ebca3af6d1">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaba7c93b97799f39c993c7ebca3af6d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2842ea5e7103a7b575a91693b0552b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b">upsert_capital_wallet</a> (eosio::name coopname, eosio::name username, int64_t last_program_crps, eosio::asset capital_available)</td></tr>
+<tr class="memdesc:a3c2842ea5e7103a7b575a91693b0552b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет кошелек капитализации  <a href="namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3c2842ea5e7103a7b575a91693b0552b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94929368dc749448e47388f27480065a"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#a94929368dc749448e47388f27480065a">get_project_wallet</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memdesc:a94929368dc749448e47388f27480065a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек проекта по хэшу проекта и имени пользователя  <a href="namespace_capital_1_1_wallets.html#a94929368dc749448e47388f27480065a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a94929368dc749448e47388f27480065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f304aa36944bec20ec024a5ebbbd58e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#a8f304aa36944bec20ec024a5ebbbd58e">get_project_wallet_or_fail</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const char *msg=&quot;Кошелек <a class="el" href="project-creation-docs_8dox.html#af728985a405f8de1229ad5244f7c18bd">проекта</a> не найден&quot;)</td></tr>
+<tr class="memdesc:a8f304aa36944bec20ec024a5ebbbd58e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает кошелек проекта или падает с ошибкой  <a href="namespace_capital_1_1_wallets.html#a8f304aa36944bec20ec024a5ebbbd58e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8f304aa36944bec20ec024a5ebbbd58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac76b956b177f3835b662c0d058a7db91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html#ac76b956b177f3835b662c0d058a7db91">upsert_project_wallet</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const eosio::asset &amp;shares, eosio::name payer=<a class="el" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>)</td></tr>
+<tr class="memdesc:ac76b956b177f3835b662c0d058a7db91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет кошелек проекта, добавляя доли к существующим  <a href="namespace_capital_1_1_wallets.html#ac76b956b177f3835b662c0d058a7db91">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac76b956b177f3835b662c0d058a7db91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="acad0ebbaf80b162101e23b67c9b2aa16" name="acad0ebbaf80b162101e23b67c9b2aa16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acad0ebbaf80b162101e23b67c9b2aa16">&#9670;&nbsp;</a></span>get_capital_wallet()</h2>
+<a id="aadd9de8aec7067d27059b380561123f2" name="aadd9de8aec7067d27059b380561123f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd9de8aec7067d27059b380561123f2">&#9670;&nbsp;</a></span>get_capital_wallet_by_username()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,43 +174,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt; Capital::Wallet::get_capital_wallet </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>username</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a841ed8a96c61a35eded6550e90055118" name="a841ed8a96c61a35eded6550e90055118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a841ed8a96c61a35eded6550e90055118">&#9670;&nbsp;</a></span>get_capital_wallet_by_username()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> &gt; Capital::Wallet::get_capital_wallet_by_username </td>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> &gt; Capital::Wallets::get_capital_wallet_by_username </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -238,8 +202,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 
 </div>
 </div>
-<a id="a30314a42ab8c997647842e5fd6f8701c" name="a30314a42ab8c997647842e5fd6f8701c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30314a42ab8c997647842e5fd6f8701c">&#9670;&nbsp;</a></span>get_capital_wallet_or_fail()</h2>
+<a id="aaba7c93b97799f39c993c7ebca3af6d1" name="aaba7c93b97799f39c993c7ebca3af6d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba7c93b97799f39c993c7ebca3af6d1">&#9670;&nbsp;</a></span>get_capital_wallet_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +212,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> Capital::Wallet::get_capital_wallet_or_fail </td>
+          <td class="memname"><a class="el" href="struct_capital_1_1capital__wallet.html">capital_wallet</a> Capital::Wallets::get_capital_wallet_or_fail </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -282,8 +246,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 
 </div>
 </div>
-<a id="a70fe231d2707373d9bd3a6e30cbefc66" name="a70fe231d2707373d9bd3a6e30cbefc66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70fe231d2707373d9bd3a6e30cbefc66">&#9670;&nbsp;</a></span>get_project_wallet()</h2>
+<a id="a7219cc7677bc65a9794207603ad6e26a" name="a7219cc7677bc65a9794207603ad6e26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7219cc7677bc65a9794207603ad6e26a">&#9670;&nbsp;</a></span>get_program_capital_wallet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +256,43 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::optional&lt; <a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> &gt; Capital::Wallet::get_project_wallet </td>
+          <td class="memname">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt; Capital::Wallets::get_program_capital_wallet </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94929368dc749448e47388f27480065a" name="a94929368dc749448e47388f27480065a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94929368dc749448e47388f27480065a">&#9670;&nbsp;</a></span>get_project_wallet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> &gt; Capital::Wallets::get_project_wallet </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -326,8 +326,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 
 </div>
 </div>
-<a id="a45dba503577d466a620964792b9ac91f" name="a45dba503577d466a620964792b9ac91f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45dba503577d466a620964792b9ac91f">&#9670;&nbsp;</a></span>get_project_wallet_or_fail()</h2>
+<a id="a8f304aa36944bec20ec024a5ebbbd58e" name="a8f304aa36944bec20ec024a5ebbbd58e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f304aa36944bec20ec024a5ebbbd58e">&#9670;&nbsp;</a></span>get_project_wallet_or_fail()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,7 +336,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> Capital::Wallet::get_project_wallet_or_fail </td>
+          <td class="memname"><a class="el" href="struct_capital_1_1project__wallet.html">project_wallet</a> Capital::Wallets::get_project_wallet_or_fail </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -376,8 +376,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 
 </div>
 </div>
-<a id="ab9222128ba3458deed8b7e5e0816f778" name="ab9222128ba3458deed8b7e5e0816f778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9222128ba3458deed8b7e5e0816f778">&#9670;&nbsp;</a></span>upsert_capital_wallet()</h2>
+<a id="a3c2842ea5e7103a7b575a91693b0552b" name="a3c2842ea5e7103a7b575a91693b0552b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2842ea5e7103a7b575a91693b0552b">&#9670;&nbsp;</a></span>upsert_capital_wallet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,7 +386,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Capital::Wallet::upsert_capital_wallet </td>
+          <td class="memname">void Capital::Wallets::upsert_capital_wallet </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -401,19 +401,13 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int64_t&#160;</td>
-          <td class="paramname"><em>last_program_crps</em> = <code>0</code>, </td>
+          <td class="paramname"><em>last_program_crps</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>capital_available</em> = <code>asset(0,&#160;<a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>payer</em> = <code><a class="el" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></code>&#160;</td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>capital_available</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -432,8 +426,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 
 </div>
 </div>
-<a id="a097c02026f8e6c5bbad7619743f452e9" name="a097c02026f8e6c5bbad7619743f452e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a097c02026f8e6c5bbad7619743f452e9">&#9670;&nbsp;</a></span>upsert_project_wallet()</h2>
+<a id="ac76b956b177f3835b662c0d058a7db91" name="ac76b956b177f3835b662c0d058a7db91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76b956b177f3835b662c0d058a7db91">&#9670;&nbsp;</a></span>upsert_project_wallet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,7 +436,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Capital::Wallet::upsert_project_wallet </td>
+          <td class="memname">void Capital::Wallets::upsert_project_wallet </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -494,7 +488,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_wallet.html','')
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespace_capital.html">Capital</a></li><li class="navelem"><a class="el" href="namespace_capital_1_1_wallet.html">Wallet</a></li>
+    <li class="navelem"><a class="el" href="namespace_capital.html">Capital</a></li><li class="navelem"><a class="el" href="namespace_capital_1_1_wallets.html">Wallets</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

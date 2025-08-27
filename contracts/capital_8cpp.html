@@ -138,86 +138,85 @@ $(document).ready(function(){initNavTree('capital_8cpp.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="capital_8hpp_source.html">capital.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="generation_8cpp.html">domain/core/generation/generation.cpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="crps_8cpp.html">domain/core/crps/crps.cpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="program__investment_8cpp.html">domain/core/program_investment.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="balances_8cpp.html">domain/core/balances/balances.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="crps_8cpp.html">domain/core/crps/crps.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="generation_8cpp.html">domain/core/generation/generation.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="program__investment_8cpp.html">domain/core/program_investment.cpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="capital_2domain_2core_2voting_2voting_8cpp.html">domain/core/voting/voting.cpp</a>&quot;</code><br />
-<code>#include &quot;app/register_contributor/approvereg.cpp&quot;</code><br />
-<code>#include &quot;app/register_contributor/declinereg.cpp&quot;</code><br />
-<code>#include &quot;app/managment/setconfig.cpp&quot;</code><br />
-<code>#include &quot;app/managment/setmaster.cpp&quot;</code><br />
-<code>#include &quot;app/managment/createproj.cpp&quot;</code><br />
-<code>#include &quot;app/managment/openproject.cpp&quot;</code><br />
-<code>#include &quot;app/managment/startproject.cpp&quot;</code><br />
-<code>#include &quot;app/managment/closeproject.cpp&quot;</code><br />
-<code>#include &quot;app/managment/delproject.cpp&quot;</code><br />
-<code>#include &quot;app/plan_project/addauthor.cpp&quot;</code><br />
-<code>#include &quot;app/plan_project/setplan.cpp&quot;</code><br />
-<code>#include &quot;app/plan_project/expandexpnss.cpp&quot;</code><br />
-<code>#include &quot;app/project_distribution/join_project/signappndx.cpp&quot;</code><br />
-<code>#include &quot;app/project_distribution/join_project/apprvappndx.cpp&quot;</code><br />
-<code>#include &quot;app/project_distribution/join_project/dclineappndx.cpp&quot;</code><br />
-<code>#include &quot;app/project_distribution/join_project/regcontrib.cpp&quot;</code><br />
-<code>#include &quot;app/crps/rfrshsegment.cpp&quot;</code><br />
-<code>#include &quot;app/crps/addcontrib.cpp&quot;</code><br />
-<code>#include &quot;app/project_investment/createinvest.cpp&quot;</code><br />
-<code>#include &quot;app/project_investment/approveinvst.cpp&quot;</code><br />
-<code>#include &quot;app/project_investment/declineinvst.cpp&quot;</code><br />
-<code>#include &quot;app/return_unused/returnunused.cpp&quot;</code><br />
-<code>#include &quot;app/program_investment/createpinv.cpp&quot;</code><br />
-<code>#include &quot;app/program_investment/apprvpinv.cpp&quot;</code><br />
-<code>#include &quot;app/program_investment/declpinv.cpp&quot;</code><br />
-<code>#include &quot;app/program_investment/allocate.cpp&quot;</code><br />
-<code>#include &quot;app/program_investment/diallocate.cpp&quot;</code><br />
-<code>#include &quot;app/commit/createcmmt.cpp&quot;</code><br />
-<code>#include &quot;app/commit/approvecmmt.cpp&quot;</code><br />
-<code>#include &quot;app/commit/declinecmmt.cpp&quot;</code><br />
-<code>#include &quot;app/project_property/createpjprp.cpp&quot;</code><br />
-<code>#include &quot;app/project_property/approvepjprp.cpp&quot;</code><br />
-<code>#include &quot;app/project_property/declinepjprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/createpgprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/approvepgprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/declinepgprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/authpgprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/act1pgprp.cpp&quot;</code><br />
-<code>#include &quot;app/program_property/act2pgprp.cpp&quot;</code><br />
-<code>#include &quot;app/debt_managment/createdebt.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/approvedebt.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/debtauthcnfr.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/debtpaycnfrm.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/debtpaydcln.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/declinedebt.cpp&quot;</code><br />
-<code>#include &quot;app/debt_management/settledebt.cpp&quot;</code><br />
-<code>#include &quot;app/voting/calcvotes.cpp&quot;</code><br />
-<code>#include &quot;app/voting/submitvote.cpp&quot;</code><br />
-<code>#include &quot;app/voting/cmpltvoting.cpp&quot;</code><br />
-<code>#include &quot;app/voting/startvoting.cpp&quot;</code><br />
-<code>#include &quot;app/result/approverslt.cpp&quot;</code><br />
-<code>#include &quot;app/result/authrslt.cpp&quot;</code><br />
-<code>#include &quot;app/result/declineapprv.cpp&quot;</code><br />
-<code>#include &quot;app/result/declrslt.cpp&quot;</code><br />
-<code>#include &quot;app/result/pushrslt.cpp&quot;</code><br />
-<code>#include &quot;app/result/signact1.cpp&quot;</code><br />
-<code>#include &quot;app/result/signact2.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_project/createwthd2.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_project/capauthwthd2.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_project/approvewthd2.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_project/capdeclwthd2.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_program/createwthd3.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_program/capauthwthd3.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_program/approvewthd3.cpp&quot;</code><br />
-<code>#include &quot;app/withdraw_from_program/capdeclwthd3.cpp&quot;</code><br />
-<code>#include &quot;app/convert/convertsegm.cpp&quot;</code><br />
-<code>#include &quot;app/expense/approveexpns.cpp&quot;</code><br />
-<code>#include &quot;app/expense/capauthexpns.cpp&quot;</code><br />
-<code>#include &quot;app/expense/capdeclexpns.cpp&quot;</code><br />
-<code>#include &quot;app/expense/createexpnse.cpp&quot;</code><br />
-<code>#include &quot;app/expense/exppaycnfrm.cpp&quot;</code><br />
-<code>#include &quot;app/fundproj/fundproj.cpp&quot;</code><br />
-<code>#include &quot;app/fundproj/refreshproj.cpp&quot;</code><br />
-<code>#include &quot;app/fundprog/fundprog.cpp&quot;</code><br />
-<code>#include &quot;app/fundprog/refreshprog.cpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="setconfig_8cpp.html">app/contract_managment/set_config/setconfig.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvereg_8cpp.html">app/participation_management/register_contributor/approvereg.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capital_2app_2participation__management_2register__contributor_2declinereg_8cpp.html">app/participation_management/register_contributor/declinereg.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="regcontrib_8cpp.html">app/participation_management/register_contributor/regcontrib.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="apprvappndx_8cpp.html">app/participation_management/register_appendix/apprvappndx.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dclineappndx_8cpp.html">app/participation_management/register_appendix/dclineappndx.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signappndx_8cpp.html">app/participation_management/register_appendix/signappndx.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="addauthor_8cpp.html">app/project_managment/add_author/addauthor.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cmpltvoting_8cpp.html">app/project_managment/complete_voting/cmpltvoting.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createproj_8cpp.html">app/project_managment/create_project/createproj.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="delproject_8cpp.html">app/project_managment/delete_project/delproject.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="openproject_8cpp.html">app/project_managment/open_project/openproject.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="setmaster_8cpp.html">app/project_managment/set_master/setmaster.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="setplan_8cpp.html">app/project_managment/set_plan/setplan.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="startproject_8cpp.html">app/project_managment/start_project/startproject.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="startvoting_8cpp.html">app/project_managment/start_voting/startvoting.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approveinvst_8cpp.html">app/invests_managment/invest_in_project/invest_to_project/approveinvst.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createinvest_8cpp.html">app/invests_managment/invest_in_project/invest_to_project/createinvest.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declineinvst_8cpp.html">app/invests_managment/invest_in_project/invest_to_project/declineinvst.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="returnunused_8cpp.html">app/invests_managment/invest_in_project/return_unused/returnunused.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="allocate_8cpp.html">app/invests_managment/invest_in_program/allocate/allocate.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="diallocate_8cpp.html">app/invests_managment/invest_in_program/diallocate/diallocate.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="apprvpinv_8cpp.html">app/invests_managment/invest_in_program/invest_to_program/apprvpinv.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createpinv_8cpp.html">app/invests_managment/invest_in_program/invest_to_program/createpinv.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declpinv_8cpp.html">app/invests_managment/invest_in_program/invest_to_program/declpinv.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvepjprp_8cpp.html">app/property_management/contribute_property_in_project/approvepjprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createpjprp_8cpp.html">app/property_management/contribute_property_in_project/createpjprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declinepjprp_8cpp.html">app/property_management/contribute_property_in_project/declinepjprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="act1pgprp_8cpp.html">app/property_management/contribute_property_in_program/act1pgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="act2pgprp_8cpp.html">app/property_management/contribute_property_in_program/act2pgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvepgprp_8cpp.html">app/property_management/contribute_property_in_program/approvepgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="authpgprp_8cpp.html">app/property_management/contribute_property_in_program/authpgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createpgprp_8cpp.html">app/property_management/contribute_property_in_program/createpgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declinepgprp_8cpp.html">app/property_management/contribute_property_in_program/declinepgprp.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvedebt_8cpp.html">app/debt_managment/create_debt/approvedebt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capital_2app_2debt__managment_2create__debt_2createdebt_8cpp.html">app/debt_managment/create_debt/createdebt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="debtauthcnfr_8cpp.html">app/debt_managment/create_debt/debtauthcnfr.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="debtpaycnfrm_8cpp.html">app/debt_managment/create_debt/debtpaycnfrm.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="debtpaydcln_8cpp.html">app/debt_managment/create_debt/debtpaydcln.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declinedebt_8cpp.html">app/debt_managment/create_debt/declinedebt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capital_2app_2debt__managment_2settle__debt_2settledebt_8cpp.html">app/debt_managment/settle_debt/settledebt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approveexpns_8cpp.html">app/expense_managment/create_expense/approveexpns.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capauthexpns_8cpp.html">app/expense_managment/create_expense/capauthexpns.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capdeclexpns_8cpp.html">app/expense_managment/create_expense/capdeclexpns.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createexpnse_8cpp.html">app/expense_managment/create_expense/createexpnse.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="exppaycnfrm_8cpp.html">app/expense_managment/create_expense/exppaycnfrm.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="expandexpnss_8cpp.html">app/expense_managment/expand_expenses/expandexpnss.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvecmmt_8cpp.html">app/generation/create_commit/approvecmmt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createcmmt_8cpp.html">app/generation/create_commit/createcmmt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declinecmmt_8cpp.html">app/generation/create_commit/declinecmmt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="rfrshsegment_8cpp.html">app/generation/refresh_segment/rfrshsegment.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="addcontrib_8cpp.html">app/generation/share_register/addcontrib.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="calcvotes_8cpp.html">app/voting/calculcate_votes/calcvotes.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="submitvote_8cpp.html">app/voting/submit_vote/submitvote.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="convertsegm_8cpp.html">app/result_submission/convert_segment/convertsegm.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approverslt_8cpp.html">app/result_submission/push_result/approverslt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="authrslt_8cpp.html">app/result_submission/push_result/authrslt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capital_2app_2result__submission_2push__result_2declineapprv_8cpp.html">app/result_submission/push_result/declineapprv.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="declrslt_8cpp.html">app/result_submission/push_result/declrslt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pushrslt_8cpp.html">app/result_submission/push_result/pushrslt.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signact1_8cpp.html">app/result_submission/push_result/signact1.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="signact2_8cpp.html">app/result_submission/push_result/signact2.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fundproj_8cpp.html">app/distribution_managment/distribution_in_project/fund_project/fundproj.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="refreshproj_8cpp.html">app/distribution_managment/distribution_in_project/refresh_project_wallet/refreshproj.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvewthd2_8cpp.html">app/distribution_managment/distribution_in_project/withdraw_from_project/approvewthd2.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capauthwthd2_8cpp.html">app/distribution_managment/distribution_in_project/withdraw_from_project/capauthwthd2.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capdeclwthd2_8cpp.html">app/distribution_managment/distribution_in_project/withdraw_from_project/capdeclwthd2.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createwthd2_8cpp.html">app/distribution_managment/distribution_in_project/withdraw_from_project/createwthd2.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fundprog_8cpp.html">app/distribution_managment/distribution_in_program/fund_program/fundprog.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="refreshprog_8cpp.html">app/distribution_managment/distribution_in_program/refresh_program_wallet/refreshprog.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="approvewthd3_8cpp.html">app/distribution_managment/distribution_in_program/withdraw_from_program/approvewthd3.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capauthwthd3_8cpp.html">app/distribution_managment/distribution_in_program/withdraw_from_program/capauthwthd3.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="capdeclwthd3_8cpp.html">app/distribution_managment/distribution_in_program/withdraw_from_program/capdeclwthd3.cpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="createwthd3_8cpp.html">app/distribution_managment/distribution_in_program/withdraw_from_program/createwthd3.cpp</a>&quot;</code><br />
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

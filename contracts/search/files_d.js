@@ -13,7 +13,7 @@ var searchData=
   ['program_5finvests_2ehpp_10',['program_invests.hpp',['../program__invests_8hpp.html',1,'']]],
   ['program_5fproperties_2ehpp_11',['program_properties.hpp',['../program__properties_8hpp.html',1,'']]],
   ['program_5fwithdraw_2ehpp_12',['program_withdraw.hpp',['../program__withdraw_8hpp.html',1,'']]],
-  ['programs_2ehpp_13',['programs.hpp',['../lib_2programs_8hpp.html',1,'(Глобальное пространство имён)'],['../capital_2domain_2entities_2programs_8hpp.html',1,'(Глобальное пространство имён)']]],
+  ['programs_2ehpp_13',['programs.hpp',['../programs_8hpp.html',1,'']]],
   ['prohibit_2ecpp_14',['prohibit.cpp',['../prohibit_8cpp.html',1,'']]],
   ['project_2dcreation_2ddocs_2edox_15',['project-creation-docs.dox',['../project-creation-docs_8dox.html',1,'']]],
   ['project_2dcreation_2dprocess_2edox_16',['project-creation-process.dox',['../project-creation-process_8dox.html',1,'']]],

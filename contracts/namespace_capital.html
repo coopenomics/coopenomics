@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('namespace_capital.html',''); initResiz
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_capital_1_1_votes"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_votes.html">Votes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_wallet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallet.html">Wallet</a></td></tr>
+<tr class="memitem:namespace_capital_1_1_wallets"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_wallets.html">Wallets</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -294,10 +294,6 @@ $(document).ready(function(){initNavTree('namespace_capital.html',''); initResiz
 <tr class="separator:ad4e470a04c6012d5b10efaf87399dda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9b611f36123e8dcb07121850b719eb5"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1program__withdraw.html">program_withdraw</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#ac9b611f36123e8dcb07121850b719eb5">get_program_withdraw</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="separator:ac9b611f36123e8dcb07121850b719eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa23b59f5d79fc12397bc3a8185647e22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprogram.html">program</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#aa23b59f5d79fc12397bc3a8185647e22">get_capital_program_or_fail</a> (eosio::name coopname)</td></tr>
-<tr class="separator:aa23b59f5d79fc12397bc3a8185647e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6241e395295206269ca7a4c825f040c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprogram.html">program</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#ac6241e395295206269ca7a4c825f040c">get_source_program_or_fail</a> (eosio::name coopname)</td></tr>
-<tr class="separator:ac6241e395295206269ca7a4c825f040c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3e81b37cfb7bc46734cbc049bd929be"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1project__withdraw.html">project_withdraw</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#ac3e81b37cfb7bc46734cbc049bd929be">get_project_withdraw</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="memdesc:ac3e81b37cfb7bc46734cbc049bd929be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает запрос на возврат из проекта по хэшу.  <a href="namespace_capital.html#ac3e81b37cfb7bc46734cbc049bd929be">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac3e81b37cfb7bc46734cbc049bd929be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -494,32 +490,6 @@ $(document).ready(function(){initNavTree('namespace_capital.html',''); initResiz
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
-<a id="aa23b59f5d79fc12397bc3a8185647e22" name="aa23b59f5d79fc12397bc3a8185647e22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa23b59f5d79fc12397bc3a8185647e22">&#9670;&nbsp;</a></span>get_capital_program_or_fail()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structprogram.html">program</a> Capital::get_capital_program_or_fail </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a39477bc4ec8ee57ee4fc2e32b2d9db38" name="a39477bc4ec8ee57ee4fc2e32b2d9db38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a39477bc4ec8ee57ee4fc2e32b2d9db38">&#9670;&nbsp;</a></span>get_expense()</h2>
 
@@ -674,32 +644,6 @@ $(document).ready(function(){initNavTree('namespace_capital.html',''); initResiz
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>Найденный запрос на возврат или nullopt, если запрос не найден. </dd></dl>
-
-</div>
-</div>
-<a id="ac6241e395295206269ca7a4c825f040c" name="ac6241e395295206269ca7a4c825f040c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6241e395295206269ca7a4c825f040c">&#9670;&nbsp;</a></span>get_source_program_or_fail()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structprogram.html">program</a> Capital::get_source_program_or_fail </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>

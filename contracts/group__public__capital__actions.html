@@ -220,9 +220,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga23de9b53501a19b48e0a45ab1a1d4938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938">capital::expandexpnss</a> (name coopname, checksum256 project_hash, asset additional_expenses)</td></tr>
 <tr class="memdesc:ga23de9b53501a19b48e0a45ab1a1d4938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расширяет пул расходов проекта Увеличивает целевой размер пула расходов для активного проекта:  <a href="group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga23de9b53501a19b48e0a45ab1a1d4938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab77f09423c9801615aa799fab29be17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gab77f09423c9801615aa799fab29be17f">capital::approvecmmt</a> (eosio::name coopname, eosio::name master, checksum256 commit_hash, <a class="el" href="structdocument2.html">document2</a> empty_document)</td></tr>
-<tr class="memdesc:gab77f09423c9801615aa799fab29be17f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет коммит в проект Одобряет коммит от мастера проекта и обрабатывает все связанные операции:  <a href="group__public__capital__actions.html#gab77f09423c9801615aa799fab29be17f">Подробнее...</a><br /></td></tr>
-<tr class="separator:gab77f09423c9801615aa799fab29be17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea">capital::approvecmmt</a> (eosio::name coopname, eosio::name master, checksum256 commit_hash)</td></tr>
+<tr class="memdesc:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет коммит в проект Одобряет коммит от мастера проекта и обрабатывает все связанные операции:  <a href="group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga6f9fa5aa5b9c8441881b922dd401da44">capital::createcmmt</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, uint64_t creator_hours)</td></tr>
 <tr class="memdesc:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит в проект Создает коммит с затраченным временем создателя и отправляет на одобрение:  <a href="group__public__capital__actions.html#ga6f9fa5aa5b9c8441881b922dd401da44">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -639,8 +639,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
-<a id="gab77f09423c9801615aa799fab29be17f" name="gab77f09423c9801615aa799fab29be17f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab77f09423c9801615aa799fab29be17f">&#9670;&nbsp;</a></span>approvecmmt()</h2>
+<a id="gaeaa1ded33dc53f186ceb512d043fbcea" name="gaeaa1ded33dc53f186ceb512d043fbcea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeaa1ded33dc53f186ceb512d043fbcea">&#9670;&nbsp;</a></span>approvecmmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,13 +661,7 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">checksum256&#160;</td>
-          <td class="paramname"><em>commit_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>empty_document</em>&#160;</td>
+          <td class="paramname"><em>commit_hash</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -688,8 +682,7 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
     <tr><td class="paramname">master</td><td>Мастер проекта, одобряющий коммит </td></tr>
-    <tr><td class="paramname">commit_hash</td><td>Хеш коммита для одобрения </td></tr>
-    <tr><td class="paramname">empty_document</td><td>Пустой документ (не используется)</td></tr>
+    <tr><td class="paramname">commit_hash</td><td>Хеш коммита для одобрения</td></tr>
   </table>
   </dd>
 </dl>

@@ -1,9 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"generation_8hpp.html#a349d9e3b1bffd65ce1a2643151db88eb":[4,0,0,1,2,0,2,1,1],
-"generation_8hpp.html#a3d69e0e65c718859291c72a9431dda66":[4,0,0,1,2,0,2,1,4],
-"generation_8hpp.html#a4c05887fc952cc1e031ccda789397e4e":[4,0,0,1,2,0,2,1,5],
-"generation_8hpp.html#a6a3bcadffefc698c95b8443e5d09300e":[4,0,0,1,2,0,2,1,9],
 "generation_8hpp.html#a7fe92a3609d53d8867d0d3a201339dc4":[4,0,0,1,2,0,2,1,0],
 "generation_8hpp.html#a99c1f76b907abf751951b5b0ee89928e":[4,0,0,1,2,0,2,1,6],
 "generation_8hpp.html#aa934c77a78e71be8a4ad99700ed1342e":[4,0,0,1,2,0,2,1,2],
@@ -121,7 +117,6 @@ var NAVTREEINDEX7 =
 "group__public__capital__actions.html#gab1d5710505db08fb7e4db27ce6540b4e":[1,1,1,26],
 "group__public__capital__actions.html#gab4554a4b90423a604bc4602c28f4853a":[1,1,1,72],
 "group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea":[1,1,1,59],
-"group__public__capital__actions.html#gab77f09423c9801615aa799fab29be17f":[1,1,1,5],
 "group__public__capital__actions.html#gab8cc642e3435500e729f3e77792223b3":[1,1,1,67],
 "group__public__capital__actions.html#gabb079fd6f390904bec8a282a98ff227f":[1,1,1,12],
 "group__public__capital__actions.html#gabeaddba1c68203abc84a93ab21ae5073":[1,1,1,18],
@@ -140,6 +135,7 @@ var NAVTREEINDEX7 =
 "group__public__capital__actions.html#gad8c8f0ebd471b3d8e55aec914c6d14a4":[1,1,1,73],
 "group__public__capital__actions.html#gae2650cc81987dde6a4b6132e1e2985fc":[1,1,1,25],
 "group__public__capital__actions.html#gae6e9af483e87009ac918c6167ba87ca8":[1,1,1,58],
+"group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea":[1,1,1,5],
 "group__public__capital__actions.html#gaf6956910ee3531eb7b4b15d68e3b3c8e":[1,1,1,47],
 "group__public__capital__actions.html#gaf78065ea65de0b214acb68cd13c3451f":[1,1,1,48],
 "group__public__capital__add__author__process.html":[1,1,0,20],
@@ -249,5 +245,9 @@ var NAVTREEINDEX7 =
 "group__public__ledger__tables.html":[1,5,2],
 "group__public__loan.html":[1,6],
 "group__public__loan__actions.html":[1,6,1],
-"group__public__loan__actions.html#ga589ecf21ad7ddc5f6c5db1d58d1aa49c":[1,6,1,2]
+"group__public__loan__actions.html#ga589ecf21ad7ddc5f6c5db1d58d1aa49c":[1,6,1,2],
+"group__public__loan__actions.html#gac4f37de708f710a03b3f462b0f6ecdc2":[1,6,1,1],
+"group__public__loan__actions.html#gacc8b14ae84e64e5b33d1de18a979d690":[1,6,1,0],
+"group__public__loan__consts.html":[1,6,3],
+"group__public__loan__consts.html#ga737ac51e2ba8e17c9b0a37eec8527072":[1,6,3,0]
 };

@@ -5,7 +5,7 @@ var group__public__capital__actions =
     [ "capital::addauthor", "group__public__capital__actions.html#ga8131eaf17b194ab8b1d2b60f62b6605e", null ],
     [ "capital::addcontrib", "group__public__capital__actions.html#ga73ee2d8a890bf6f60b990aeb2b2666bf", null ],
     [ "capital::allocate", "group__public__capital__actions.html#ga863e1743ec6e7abb603e40217a4520c5", null ],
-    [ "capital::approvecmmt", "group__public__capital__actions.html#gab77f09423c9801615aa799fab29be17f", null ],
+    [ "capital::approvecmmt", "group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea", null ],
     [ "capital::approvedebt", "group__public__capital__actions.html#ga7a667965f9770a7fe938f39fa9db03e9", null ],
     [ "capital::approveexpns", "group__public__capital__actions.html#gaaeab2531035884c1f0198ad1deee177a", null ],
     [ "capital::approveinvst", "group__public__capital__actions.html#gaac28780a192c0775fe6f18a8470ce162", null ],

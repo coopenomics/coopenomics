@@ -19,7 +19,7 @@ var dir_7a58a101592a95cebbfd07e6a75340e1 =
       [ "wait_weight", "structwait__weight.html", "structwait__weight" ],
       [ "authority", "structauthority.html", "structauthority" ]
     ] ],
-    [ "programs.hpp", "lib_2programs_8hpp.html", "lib_2programs_8hpp" ],
+    [ "programs.hpp", "programs_8hpp.html", "programs_8hpp" ],
     [ "rammarket.hpp", "rammarket_8hpp.html", "rammarket_8hpp" ],
     [ "registry.hpp", "registry_8hpp.html", "registry_8hpp" ],
     [ "shared_actions.hpp", "shared__actions_8hpp.html", "shared__actions_8hpp" ],
