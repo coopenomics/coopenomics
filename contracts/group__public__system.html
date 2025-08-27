@@ -324,14 +324,14 @@ COOPOS как ядро бизнес-логики кооперативов</h3>
 <h3><a class="anchor" id="autotoc_md401"></a>
 Формула эмиссии</h3>
 <p >Система использует единую формулу для расчета дополнительной эмиссии:</p>
-<div class="fragment"><div class="line">new_emission = (1 + emission_factor) tact_fees - current_supply</div>
+<div class="fragment"><div class="line">new_emission = (1 + emission_factor) * tact_fees - current_supply</div>
 </div><!-- fragment --><p >где:</p><ul>
 <li><code>emission_factor</code> = 0.618 (обратное значение золотого сечения)</li>
 <li><code>tact_fees</code> - общая сумма комиссий, собранных за текущий такт</li>
 <li><code>current_supply</code> - текущее предложение токенов в системе</li>
 </ul>
 <p >Эта формула реализует принцип: "новая эмиссия создается только тогда, когда
-экономическая активность (измеряемая через комиссии) превышает определенный
+экономическая активность (измеряемая через аренды квот) превышает определенный
 порог относительно существующей денежной массы".</p>
 <h3><a class="anchor" id="autotoc_md402"></a>
 Условия активации эмиссии</h3>
@@ -339,7 +339,7 @@ COOPOS как ядро бизнес-логики кооперативов</h3>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span> (state.tact_fees &gt; state.emission_start)</div>
 </div><!-- fragment --><p >где <code>emission_start</code> представляет собой динамически пересчитываемый порог:</p>
 <div class="fragment"><div class="line">emission_start = current_supply / (1 + emission_factor)</div>
-</div><!-- fragment --><p >Это означает, что эмиссия активируется только когда комиссии за такт превышают примерно 61.8% от текущего предложения токенов.</p>
+</div><!-- fragment --><p >Это означает, что эмиссия активируется только когда комиссии за такт превышают примерно 61.8% от текущего предложения токенов. Где один такт - это окно времени, в течение которого производится накопление статистики (обычно - 365 дней).</p>
 <h2><a class="anchor" id="autotoc_md403"></a>
 Математическая модель эмиссии</h2>
 <h3><a class="anchor" id="autotoc_md404"></a>
