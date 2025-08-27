@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"namespace_capital_1_1_program_properties_1_1_status.html#a183fe91fba63e90ea1e82969bde6c67f":[3,0,6,9,0,1],
+"namespace_capital_1_1_program_properties_1_1_status.html#ad5b1a4de6d89bc3fb93933ec63251523":[3,0,6,9,0,4],
+"namespace_capital_1_1_program_properties_1_1_status.html#ae11ae54499b0642486f02d9f1af9d44e":[3,0,6,9,0,2],
 "namespace_capital_1_1_program_properties_1_1_status.html#aed3f1ff57cb537d9e5022910a3b88e0b":[3,0,6,9,0,0],
 "namespace_capital_1_1_program_withdraw.html":[3,0,6,10],
 "namespace_capital_1_1_program_withdraw_1_1_status.html":[1,1,3,8],
@@ -100,7 +103,6 @@ var NAVTREEINDEX10 =
 "namespace_capital_1_1_segments.html#af8702b17d38a2d69e48d79c55ef7bfa7":[3,0,6,15,3],
 "namespace_capital_1_1_segments_1_1_status.html":[1,1,3,13],
 "namespace_capital_1_1_segments_1_1_status.html#a283eb4d95521210da808756fb1fa88d4":[3,0,6,15,0,0],
-"namespace_capital_1_1_segments_1_1_status.html#a35d2dee2ca9443c95c18e69683a19b92":[3,0,6,15,0,4],
 "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981":[3,0,6,15,0,3],
 "namespace_capital_1_1_segments_1_1_status.html#ab06a9c389084888250863953cd39a8c6":[3,0,6,15,0,1],
 "namespace_capital_1_1_segments_1_1_status.html#ae294ba5d424d2b326816a91912c25172":[3,0,6,15,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3":[3,0,20,2],
 "namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad":[3,0,20,5],
 "namespace_soviet.html":[3,0,21],
-"namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff":[3,0,21,0],
-"namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd":[3,0,21,1],
-"namespaceanonymous__namespace_02block__info_8cpp_03.html":[3,0,1]
+"namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff":[3,0,21,0]
 };

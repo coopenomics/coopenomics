@@ -2,6 +2,7 @@ var contributors_8hpp =
 [
     [ "contributor_index", "contributors_8hpp.html#af59823e8070504b3a5283d910d77d8db", null ],
     [ "create_contributor", "contributors_8hpp.html#a7a483b02d3fb07e313785a8e16c0c01c", null ],
+    [ "decrease_debt_amount", "contributors_8hpp.html#a2af0fd2486691e58df617cbc6822e491", null ],
     [ "get_active_contributor_or_fail", "contributors_8hpp.html#aa62caaeac458155572e7e8fe9de17d38", null ],
     [ "get_active_contributor_with_appendix_or_fail", "contributors_8hpp.html#a3290427125419e6245bb5df26a5c95a6", null ],
     [ "get_contributor", "contributors_8hpp.html#a952e793bd70394e9a59d5bb8048b8b3b", null ],

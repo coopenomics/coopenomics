@@ -4,8 +4,7 @@ var namespace_capital_1_1_segments =
       [ "ACCEPTED", "namespace_capital_1_1_segments_1_1_status.html#a283eb4d95521210da808756fb1fa88d4", null ],
       [ "COMPLETED", "namespace_capital_1_1_segments_1_1_status.html#ab06a9c389084888250863953cd39a8c6", null ],
       [ "CONTRIBUTED", "namespace_capital_1_1_segments_1_1_status.html#ae294ba5d424d2b326816a91912c25172", null ],
-      [ "GENERATION", "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981", null ],
-      [ "READY", "namespace_capital_1_1_segments_1_1_status.html#a35d2dee2ca9443c95c18e69683a19b92", null ]
+      [ "GENERATION", "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981", null ]
     ] ],
     [ "segment", "struct_capital_1_1_segments_1_1segment.html", "struct_capital_1_1_segments_1_1segment" ],
     [ "segments_index", "namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1", null ],

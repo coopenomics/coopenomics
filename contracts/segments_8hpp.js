@@ -25,6 +25,5 @@ var segments_8hpp =
     [ "ACCEPTED", "segments_8hpp.html#a283eb4d95521210da808756fb1fa88d4", null ],
     [ "COMPLETED", "segments_8hpp.html#ab06a9c389084888250863953cd39a8c6", null ],
     [ "CONTRIBUTED", "segments_8hpp.html#ae294ba5d424d2b326816a91912c25172", null ],
-    [ "GENERATION", "segments_8hpp.html#a867fba07ca72bf54a40157fa03369981", null ],
-    [ "READY", "segments_8hpp.html#a35d2dee2ca9443c95c18e69683a19b92", null ]
+    [ "GENERATION", "segments_8hpp.html#a867fba07ca72bf54a40157fa03369981", null ]
 ];

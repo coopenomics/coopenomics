@@ -172,12 +172,12 @@ $(document).ready(function(){initNavTree('group__public__capital__result__proces
               Note over C: Готовность к конвертации
           else Отклонение до совета
               S->>C: 8. declineapprv(отклонение)
-              Note over C: Возврат к статусу READY
+              Note over C: Возврат к статусу GENERATION
           end
           
       else Отклонение советом
           S->>C: 6. declrslt(отклонение советом)
-          Note over C: Возврат к статусу READY
+          Note over C: Возврат к статусу GENERATION
       end
   </div>
   </p>
@@ -190,7 +190,7 @@ $(document).ready(function(){initNavTree('group__public__capital__result__proces
 <p ><b>Входящий документ:</b> Заявление на паевой взнос результатом (подписано вкладчиком)</p>
 <p ><b>Предварительные условия:</b></p><ul>
 <li>Проект в статусе <code>completed</code> (голосование завершено)</li>
-<li>Сегмент вкладчика в статусе <code>READY</code></li>
+<li>Сегмент вкладчика в статусе <code>GENERATION</code></li>
 <li>Сегмент обновлён (выполнен rfrshsegment)</li>
 </ul>
 <p ><b>Входящие суммы должны соответствовать расчётам:</b></p><ul>
@@ -254,7 +254,7 @@ $(document).ready(function(){initNavTree('group__public__capital__result__proces
 <ul>
 <li>Заявление отклоняется до передачи в совет</li>
 <li>Временный объект <code>results</code> удаляется</li>
-<li>Статус сегмента возвращается к <code>READY</code></li>
+<li>Статус сегмента возвращается к <code>GENERATION</code></li>
 <li>Вкладчик может подать исправленное заявление</li>
 </ul>
 <h4><a class="anchor" id="autotoc_md258"></a>
@@ -263,7 +263,7 @@ $(document).ready(function(){initNavTree('group__public__capital__result__proces
 <li>Совет не принимает результат</li>
 <li>Временный объект <code>results</code> удаляется <br  />
 </li>
-<li>Статус сегмента возвращается к <code>READY</code></li>
+<li>Статус сегмента возвращается к <code>GENERATION</code></li>
 <li>Требуется доработка результата или условий</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md259"></a>

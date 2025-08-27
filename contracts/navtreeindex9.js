@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962":[4,0,0,7,5,4],
+"lib_2branch_8hpp_source.html":[4,0,0,7,5],
 "lib_2counts_8hpp.html":[4,0,0,7,10],
 "lib_2counts_8hpp.html#a5af27e8af61127ac08bf8af64f4e4766":[4,0,0,7,10,1],
 "lib_2counts_8hpp.html#ac5a56feb4e32856beed484ddddf4a3b8":[4,0,0,7,10,4],
@@ -107,15 +109,16 @@ var NAVTREEINDEX9 =
 "namespace_capital_1_1_commits_1_1_status.html":[1,1,3,1],
 "namespace_capital_1_1_commits_1_1_status.html#ae93c336c1aae3946e18bed503066ef6f":[3,0,6,1,0,0],
 "namespace_capital_1_1_contributors.html":[3,0,6,2],
-"namespace_capital_1_1_contributors.html#a05600ee84eb4f00dd863fa9ae533232a":[3,0,6,2,9],
-"namespace_capital_1_1_contributors.html#a3290427125419e6245bb5df26a5c95a6":[3,0,6,2,3],
-"namespace_capital_1_1_contributors.html#a58019a5aabe6cc4f6c672af7b54b6f08":[3,0,6,2,6],
-"namespace_capital_1_1_contributors.html#a59465c807f0b4ef8b5f8041cea9f051a":[3,0,6,2,5],
+"namespace_capital_1_1_contributors.html#a05600ee84eb4f00dd863fa9ae533232a":[3,0,6,2,10],
+"namespace_capital_1_1_contributors.html#a2af0fd2486691e58df617cbc6822e491":[3,0,6,2,2],
+"namespace_capital_1_1_contributors.html#a3290427125419e6245bb5df26a5c95a6":[3,0,6,2,4],
+"namespace_capital_1_1_contributors.html#a58019a5aabe6cc4f6c672af7b54b6f08":[3,0,6,2,7],
+"namespace_capital_1_1_contributors.html#a59465c807f0b4ef8b5f8041cea9f051a":[3,0,6,2,6],
 "namespace_capital_1_1_contributors.html#a7a483b02d3fb07e313785a8e16c0c01c":[3,0,6,2,1],
-"namespace_capital_1_1_contributors.html#a952e793bd70394e9a59d5bb8048b8b3b":[3,0,6,2,4],
-"namespace_capital_1_1_contributors.html#aa62caaeac458155572e7e8fe9de17d38":[3,0,6,2,2],
-"namespace_capital_1_1_contributors.html#aad4dec71e669ec6b61d6a41a053cd9ca":[3,0,6,2,7],
-"namespace_capital_1_1_contributors.html#ae798f44145edd445f7540c767b9e4a5a":[3,0,6,2,8],
+"namespace_capital_1_1_contributors.html#a952e793bd70394e9a59d5bb8048b8b3b":[3,0,6,2,5],
+"namespace_capital_1_1_contributors.html#aa62caaeac458155572e7e8fe9de17d38":[3,0,6,2,3],
+"namespace_capital_1_1_contributors.html#aad4dec71e669ec6b61d6a41a053cd9ca":[3,0,6,2,8],
+"namespace_capital_1_1_contributors.html#ae798f44145edd445f7540c767b9e4a5a":[3,0,6,2,9],
 "namespace_capital_1_1_contributors_1_1_status.html":[1,1,3,2],
 "namespace_capital_1_1_contributors_1_1_status.html#a21b7d83a8de87ec2a19f87b96fecadfe":[3,0,6,2,0,0],
 "namespace_capital_1_1_contributors_1_1_status.html#aa33f59a3dd2ba33c7cbe68926ad1c1e1":[3,0,6,2,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX9 =
 "namespace_capital_1_1_program_properties.html#a6a96498018a38059f27f16e1c3983484":[3,0,6,9,9],
 "namespace_capital_1_1_program_properties.html#acf7fe2c192294ac99b6fbb11b9da1cb8":[3,0,6,9,4],
 "namespace_capital_1_1_program_properties_1_1_status.html":[1,1,3,7],
-"namespace_capital_1_1_program_properties_1_1_status.html#a0566894f982a7b6c1d73b8b183aeeb5e":[3,0,6,9,0,3],
-"namespace_capital_1_1_program_properties_1_1_status.html#a183fe91fba63e90ea1e82969bde6c67f":[3,0,6,9,0,1],
-"namespace_capital_1_1_program_properties_1_1_status.html#ad5b1a4de6d89bc3fb93933ec63251523":[3,0,6,9,0,4],
-"namespace_capital_1_1_program_properties_1_1_status.html#ae11ae54499b0642486f02d9f1af9d44e":[3,0,6,9,0,2]
+"namespace_capital_1_1_program_properties_1_1_status.html#a0566894f982a7b6c1d73b8b183aeeb5e":[3,0,6,9,0,3]
 };

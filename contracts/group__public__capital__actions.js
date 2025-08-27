@@ -58,7 +58,7 @@ var group__public__capital__actions =
     [ "capital::fundprog", "group__public__capital__actions.html#gac22a03f3514eaec03ebf553aed554e07", null ],
     [ "capital::fundproj", "group__public__capital__actions.html#gad84dcef4eda679c3857abfce40d25315", null ],
     [ "capital::openproject", "group__public__capital__actions.html#ga509604228af7d1590786d8722356ba62", null ],
-    [ "capital::pushrslt", "group__public__capital__actions.html#gae6e9af483e87009ac918c6167ba87ca8", null ],
+    [ "capital::pushrslt", "group__public__capital__actions.html#ga795dba8d41f9e264aba77095b46de8ac", null ],
     [ "capital::refreshprog", "group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea", null ],
     [ "capital::refreshproj", "group__public__capital__actions.html#ga2bb09bdb729959ca1a3aca87c2ce9065", null ],
     [ "capital::regcontrib", "group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5", null ],

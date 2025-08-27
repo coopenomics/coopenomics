@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memdesc:ga80722d2ef17b482640419bbc095a4484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизует долг в проекте советом Авторизует долг в проекте советом и создает исходящий платеж:  <a href="group__public__capital__actions.html#ga80722d2ef17b482640419bbc095a4484">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga80722d2ef17b482640419bbc095a4484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93ccd53ea98eb829e8d4621c8bfb1bfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga93ccd53ea98eb829e8d4621c8bfb1bfe">capital::debtpaycnfrm</a> (name coopname, checksum256 debt_hash)</td></tr>
-<tr class="memdesc:ga93ccd53ea98eb829e8d4621c8bfb1bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждает оплату выданной ссуды. Подтверждает оплату выданной ссуды и создает объект в контракте loan:  <a href="group__public__capital__actions.html#ga93ccd53ea98eb829e8d4621c8bfb1bfe">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:ga93ccd53ea98eb829e8d4621c8bfb1bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждает оплату выданной ссуды. Подтверждает оплату выданной ссуды и переводит долг в статус PAID:  <a href="group__public__capital__actions.html#ga93ccd53ea98eb829e8d4621c8bfb1bfe">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga93ccd53ea98eb829e8d4621c8bfb1bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga65065dc6d83f5263d273c066183c3373"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga65065dc6d83f5263d273c066183c3373">capital::debtpaydcln</a> (name coopname, checksum256 debt_hash, std::string reason)</td></tr>
 <tr class="memdesc:ga65065dc6d83f5263d273c066183c3373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклоняет оплату долга Отклоняет оплату долга и удаляет его из базы данных:  <a href="group__public__capital__actions.html#ga65065dc6d83f5263d273c066183c3373">Подробнее...</a><br /></td></tr>
@@ -349,9 +349,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga920c1d001573f1bf855a1c348bd247c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga920c1d001573f1bf855a1c348bd247c7">capital::declrslt</a> (eosio::name coopname, checksum256 result_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdecision.html">decision</a>)</td></tr>
 <tr class="memdesc:ga920c1d001573f1bf855a1c348bd247c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклоняет результат участника советом Отклоняет результат участника советом и возвращает статус сегмента:  <a href="group__public__capital__actions.html#ga920c1d001573f1bf855a1c348bd247c7">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga920c1d001573f1bf855a1c348bd247c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae6e9af483e87009ac918c6167ba87ca8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gae6e9af483e87009ac918c6167ba87ca8">capital::pushrslt</a> (name coopname, name username, checksum256 project_hash, checksum256 result_hash, eosio::asset contribution_amount, eosio::asset debt_amount, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
-<tr class="memdesc:gae6e9af483e87009ac918c6167ba87ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вносит результат участника в проект Вносит результат участника в завершенный проект с обработкой долгов и обновлением долей:  <a href="group__public__capital__actions.html#gae6e9af483e87009ac918c6167ba87ca8">Подробнее...</a><br /></td></tr>
-<tr class="separator:gae6e9af483e87009ac918c6167ba87ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga795dba8d41f9e264aba77095b46de8ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga795dba8d41f9e264aba77095b46de8ac">capital::pushrslt</a> (name coopname, name username, checksum256 project_hash, checksum256 result_hash, eosio::asset contribution_amount, eosio::asset debt_amount, <a class="el" href="structdocument2.html">document2</a> statement, std::vector&lt; checksum256 &gt; debt_hashes)</td></tr>
+<tr class="memdesc:ga795dba8d41f9e264aba77095b46de8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вносит результат участника в проект Вносит результат участника в завершенный проект с обработкой долгов и обновлением долей:  <a href="group__public__capital__actions.html#ga795dba8d41f9e264aba77095b46de8ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga795dba8d41f9e264aba77095b46de8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga60839e6939b1d8f826e3ba6f1b12940e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga60839e6939b1d8f826e3ba6f1b12940e">capital::signact1</a> (eosio::name coopname, eosio::name username, checksum256 result_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
 <tr class="memdesc:ga60839e6939b1d8f826e3ba6f1b12940e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписывает акт 1 по результату участника Подписывает первый акт по результату участника:  <a href="group__public__capital__actions.html#ga60839e6939b1d8f826e3ba6f1b12940e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga60839e6939b1d8f826e3ba6f1b12940e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2728,7 +2728,7 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
       </table>
 </div><div class="memdoc">
 
-<p>Подтверждает оплату выданной ссуды. Подтверждает оплату выданной ссуды и создает объект в контракте loan: </p>
+<p>Подтверждает оплату выданной ссуды. Подтверждает оплату выданной ссуды и переводит долг в статус PAID: </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
@@ -3577,8 +3577,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
-<a id="gae6e9af483e87009ac918c6167ba87ca8" name="gae6e9af483e87009ac918c6167ba87ca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae6e9af483e87009ac918c6167ba87ca8">&#9670;&nbsp;</a></span>pushrslt()</h2>
+<a id="ga795dba8d41f9e264aba77095b46de8ac" name="ga795dba8d41f9e264aba77095b46de8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga795dba8d41f9e264aba77095b46de8ac">&#9670;&nbsp;</a></span>pushrslt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3623,7 +3623,13 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>statement</em>&#160;</td>
+          <td class="paramname"><em>statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>debt_hashes</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3650,7 +3656,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
     <tr><td class="paramname">result_hash</td><td>Хеш результата </td></tr>
     <tr><td class="paramname">contribution_amount</td><td>Сумма взноса в результат </td></tr>
     <tr><td class="paramname">debt_amount</td><td>Сумма долга для погашения </td></tr>
-    <tr><td class="paramname">statement</td><td>Заявление о результате</td></tr>
+    <tr><td class="paramname">statement</td><td>Заявление о результате </td></tr>
+    <tr><td class="paramname">debt_hashes</td><td>Вектор хэшей долгов для погашения (опционально)</td></tr>
   </table>
   </dd>
 </dl>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd":[3,0,21,1],
+"namespaceanonymous__namespace_02block__info_8cpp_03.html":[3,0,1],
 "namespaceanonymous__namespace_02block__info_8cpp_03.html#ad7f95fa3a1a2f6fa1c2ab0646270e17b":[3,0,1,0],
 "namespaceanonymous__namespace_02blockinfo__tester_8cpp_03.html":[3,0,2],
 "namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html":[3,0,3],
@@ -53,8 +55,8 @@ var NAVTREEINDEX11 =
 "namespacemembers_d.html":[3,1,0,3],
 "namespacemembers_e.html":[3,1,0,4],
 "namespacemembers_f.html":[3,1,0,5],
-"namespacemembers_func.html":[3,1,1],
 "namespacemembers_func.html":[3,1,1,0],
+"namespacemembers_func.html":[3,1,1],
 "namespacemembers_func_b.html":[3,1,1,1],
 "namespacemembers_func_c.html":[3,1,1,2],
 "namespacemembers_func_d.html":[3,1,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "rammarket_8hpp.html":[4,0,0,7,15],
 "rammarket_8hpp.html#a084bb74fe483e49001e674d5e66001de":[4,0,0,7,15,2],
 "rammarket_8hpp.html#a44b4ba2cc0f25ec73138308d16cb792f":[4,0,0,7,15,3],
-"rammarket_8hpp.html#a554d168bb3ecdd68b09cabaabe5a90a5":[4,0,0,7,15,4],
-"rammarket_8hpp_source.html":[4,0,0,7,15],
-"receive_8cpp.html":[4,0,0,9,0,0,9]
+"rammarket_8hpp.html#a554d168bb3ecdd68b09cabaabe5a90a5":[4,0,0,7,15,4]
 };
