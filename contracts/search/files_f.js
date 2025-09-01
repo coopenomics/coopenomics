@@ -20,13 +20,14 @@ var searchData=
   ['registrator_2ecpp_17',['registrator.cpp',['../registrator_8cpp.html',1,'']]],
   ['registrator_2ehpp_18',['registrator.hpp',['../registrator_8hpp.html',1,'']]],
   ['registry_2ehpp_19',['registry.hpp',['../registry_8hpp.html',1,'']]],
-  ['reguser_2ecpp_20',['reguser.cpp',['../reguser_8cpp.html',1,'']]],
-  ['restartmeet_2ecpp_21',['restartmeet.cpp',['../restartmeet_8cpp.html',1,'']]],
-  ['result_2dsubmission_2ddocs_2edox_22',['result-submission-docs.dox',['../result-submission-docs_8dox.html',1,'']]],
-  ['result_2dsubmission_2dprocess_2edox_23',['result-submission-process.dox',['../result-submission-process_8dox.html',1,'']]],
-  ['results_2ehpp_24',['results.hpp',['../results_8hpp.html',1,'']]],
-  ['retransport_2ecpp_25',['retransport.cpp',['../retransport_8cpp.html',1,'']]],
-  ['returnunused_2ecpp_26',['returnunused.cpp',['../returnunused_8cpp.html',1,'']]],
-  ['rfrshsegment_2ecpp_27',['rfrshsegment.cpp',['../rfrshsegment_8cpp.html',1,'']]],
-  ['rmstaff_2ecpp_28',['rmstaff.cpp',['../rmstaff_8cpp.html',1,'']]]
+  ['regshare_2ecpp_20',['regshare.cpp',['../regshare_8cpp.html',1,'']]],
+  ['reguser_2ecpp_21',['reguser.cpp',['../reguser_8cpp.html',1,'']]],
+  ['restartmeet_2ecpp_22',['restartmeet.cpp',['../restartmeet_8cpp.html',1,'']]],
+  ['result_2dsubmission_2ddocs_2edox_23',['result-submission-docs.dox',['../result-submission-docs_8dox.html',1,'']]],
+  ['result_2dsubmission_2dprocess_2edox_24',['result-submission-process.dox',['../result-submission-process_8dox.html',1,'']]],
+  ['results_2ehpp_25',['results.hpp',['../results_8hpp.html',1,'']]],
+  ['retransport_2ecpp_26',['retransport.cpp',['../retransport_8cpp.html',1,'']]],
+  ['returnunused_2ecpp_27',['returnunused.cpp',['../returnunused_8cpp.html',1,'']]],
+  ['rfrshsegment_2ecpp_28',['rfrshsegment.cpp',['../rfrshsegment_8cpp.html',1,'']]],
+  ['rmstaff_2ecpp_29',['rmstaff.cpp',['../rmstaff_8cpp.html',1,'']]]
 ];

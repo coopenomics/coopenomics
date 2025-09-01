@@ -232,9 +232,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga6437bbfd716a4d0b5fa4f55960a974b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga6437bbfd716a4d0b5fa4f55960a974b2">capital::rfrshsegment</a> (name coopname, checksum256 project_hash, name username)</td></tr>
 <tr class="memdesc:ga6437bbfd716a4d0b5fa4f55960a974b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет сегмент участника через CRPS систему Обновляет сегмент участника проекта через систему CRPS:  <a href="group__public__capital__actions.html#ga6437bbfd716a4d0b5fa4f55960a974b2">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6437bbfd716a4d0b5fa4f55960a974b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga73ee2d8a890bf6f60b990aeb2b2666bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga73ee2d8a890bf6f60b990aeb2b2666bf">capital::addcontrib</a> (name coopname, checksum256 project_hash, name username)</td></tr>
-<tr class="memdesc:ga73ee2d8a890bf6f60b990aeb2b2666bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет вкладчика в проект через CRPS систему Добавляет вкладчика в проект через систему CRPS с автоматическими проверками:  <a href="group__public__capital__actions.html#ga73ee2d8a890bf6f60b990aeb2b2666bf">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga73ee2d8a890bf6f60b990aeb2b2666bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c8f7166b382a28b057fc3777a082ee5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga5c8f7166b382a28b057fc3777a082ee5">capital::regshare</a> (name coopname, checksum256 project_hash, name username)</td></tr>
+<tr class="memdesc:ga5c8f7166b382a28b057fc3777a082ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет вкладчика в проект через CRPS систему Добавляет вкладчика в проект через систему CRPS с автоматическими проверками:  <a href="group__public__capital__actions.html#ga5c8f7166b382a28b057fc3777a082ee5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5c8f7166b382a28b057fc3777a082ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga863e1743ec6e7abb603e40217a4520c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga863e1743ec6e7abb603e40217a4520c5">capital::allocate</a> (eosio::name coopname, checksum256 project_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
 <tr class="memdesc:ga863e1743ec6e7abb603e40217a4520c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Аллоцирует программные инвестиции в проект Аллоцирует средства из глобального пула программных инвестиций в проект:  <a href="group__public__capital__actions.html#ga863e1743ec6e7abb603e40217a4520c5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga863e1743ec6e7abb603e40217a4520c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,18 +262,18 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga2ecb2c2825a0646684a29fc279b41298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">capital::returnunused</a> (name coopname, checksum256 project_hash, name username)</td></tr>
 <tr class="memdesc:ga2ecb2c2825a0646684a29fc279b41298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает неиспользованные инвестиции Возвращает неиспользованные инвестиции инвестора из закрытого проекта:  <a href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2ecb2c2825a0646684a29fc279b41298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">capital::importcontrib</a> (eosio::name coopname, eosio::name username, checksum256 contributor_hash, eosio::asset contribution_amount, std::string memo)</td></tr>
-<tr class="memdesc:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Импорт внешнего вкладчика с автоматическим созданием записи и внесением взносов Создает запись вкладчика в системе капитализации для внешних участников кооператива:  <a href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">capital::apprvappndx</a> (eosio::name coopname, checksum256 appendix_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
 <tr class="memdesc:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет приложение к договору УХД Одобряет приложение к договору УХД и добавляет проект к пайщику:  <a href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6fa75502cfb8512799e98167aa08540d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga6fa75502cfb8512799e98167aa08540d">capital::dclineappndx</a> (eosio::name coopname, checksum256 appendix_hash, std::string reason)</td></tr>
 <tr class="memdesc:ga6fa75502cfb8512799e98167aa08540d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклоняет приложение к договору УХД Отклоняет приложение к договору УХД и удаляет его из базы:  <a href="group__public__capital__actions.html#ga6fa75502cfb8512799e98167aa08540d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6fa75502cfb8512799e98167aa08540d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga69186c013e6162fae90339c4d6641793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga69186c013e6162fae90339c4d6641793">capital::signappndx</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 appendix_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
-<tr class="memdesc:ga69186c013e6162fae90339c4d6641793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписывает приложение к договору УХД для участия в проекте Создает приложение к договору УХД для участия пайщика в проекте:  <a href="group__public__capital__actions.html#ga69186c013e6162fae90339c4d6641793">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga69186c013e6162fae90339c4d6641793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb6841458fb337ae80d9359b9bd50616"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaeb6841458fb337ae80d9359b9bd50616">capital::getclearance</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 appendix_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:gaeb6841458fb337ae80d9359b9bd50616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписывает приложение к договору УХД для участия в проекте Создает приложение к договору УХД для участия пайщика в проекте:  <a href="group__public__capital__actions.html#gaeb6841458fb337ae80d9359b9bd50616">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaeb6841458fb337ae80d9359b9bd50616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">capital::importcontrib</a> (eosio::name coopname, eosio::name username, checksum256 contributor_hash, eosio::asset contribution_amount, std::string memo)</td></tr>
+<tr class="memdesc:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Импорт внешнего вкладчика с автоматическим созданием записи и внесением взносов Создает запись вкладчика в системе капитализации для внешних участников кооператива:  <a href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8b1f14b9d27bd7d0aa64a356c30029cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb0a95136b45f47f05d5878f325fefe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gacb0a95136b45f47f05d5878f325fefe7">capital::approvereg</a> (eosio::name coopname, checksum256 contributor_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>)</td></tr>
 <tr class="memdesc:gacb0a95136b45f47f05d5878f325fefe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принимает принятый председателем договор УХД и активирует вкладчика по нему Активирует пайщика в системе кооператива после одобрения договора УХД:  <a href="group__public__capital__actions.html#gacb0a95136b45f47f05d5878f325fefe7">Подробнее...</a><br /></td></tr>
 <tr class="separator:gacb0a95136b45f47f05d5878f325fefe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -534,56 +534,6 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
-</li>
-</ul>
-
-</div>
-</div>
-<a id="ga73ee2d8a890bf6f60b990aeb2b2666bf" name="ga73ee2d8a890bf6f60b990aeb2b2666bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73ee2d8a890bf6f60b990aeb2b2666bf">&#9670;&nbsp;</a></span>addcontrib()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void capital::addcontrib </td>
-          <td>(</td>
-          <td class="paramtype">name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">checksum256&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">name&#160;</td>
-          <td class="paramname"><em>username</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Добавляет вкладчика в проект через CRPS систему Добавляет вкладчика в проект через систему CRPS с автоматическими проверками: </p>
-<ul>
-<li>Проверяет существование проекта</li>
-<li>Выполняет проверки через CRPS систему (активный договор УХД, приложение к проекту, положительный баланс)</li>
-<li>Добавляет вкладчика через CRPS систему <dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хеш проекта </td></tr>
-    <tr><td class="paramname">username</td><td>Наименование пользователя-вкладчика</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
 </li>
 </ul>
 
@@ -3486,6 +3436,72 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
+<a id="gaeb6841458fb337ae80d9359b9bd50616" name="gaeb6841458fb337ae80d9359b9bd50616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb6841458fb337ae80d9359b9bd50616">&#9670;&nbsp;</a></span>getclearance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void capital::getclearance </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>project_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>appendix_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подписывает приложение к договору УХД для участия в проекте Создает приложение к договору УХД для участия пайщика в проекте: </p>
+<ul>
+<li>Проверяет что пользователь подписал основной договор УХД</li>
+<li>Валидирует уникальность приложения по хешу</li>
+<li>Проверяет отсутствие существующего приложения для проекта</li>
+<li>Создает приложение к договору УХД</li>
+<li>Отправляет на одобрение председателю <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя-пайщика </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хеш проекта для участия </td></tr>
+    <tr><td class="paramname">appendix_hash</td><td>Хеш приложения к договору </td></tr>
+    <tr><td class="paramname">document</td><td>Документ приложения к договору</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
 <a id="ga8b1f14b9d27bd7d0aa64a356c30029cf" name="ga8b1f14b9d27bd7d0aa64a356c30029cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8b1f14b9d27bd7d0aa64a356c30029cf">&#9670;&nbsp;</a></span>importcontrib()</h2>
 
@@ -3849,6 +3865,56 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="ga5c8f7166b382a28b057fc3777a082ee5" name="ga5c8f7166b382a28b057fc3777a082ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c8f7166b382a28b057fc3777a082ee5">&#9670;&nbsp;</a></span>regshare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void capital::regshare </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>project_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет вкладчика в проект через CRPS систему Добавляет вкладчика в проект через систему CRPS с автоматическими проверками: </p>
+<ul>
+<li>Проверяет существование проекта</li>
+<li>Выполняет проверки через CRPS систему (активный договор УХД, приложение к проекту, положительный баланс)</li>
+<li>Добавляет вкладчика через CRPS систему <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хеш проекта </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя-вкладчика</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
 </li>
 </ul>
 
@@ -4290,72 +4356,6 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
     <tr><td class="paramname">username</td><td>Наименование пользователя-председателя </td></tr>
     <tr><td class="paramname">result_hash</td><td>Хеш результата </td></tr>
     <tr><td class="paramname">act</td><td>Документ акта 2</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
-</li>
-</ul>
-
-</div>
-</div>
-<a id="ga69186c013e6162fae90339c4d6641793" name="ga69186c013e6162fae90339c4d6641793"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga69186c013e6162fae90339c4d6641793">&#9670;&nbsp;</a></span>signappndx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void capital::signappndx </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>username</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">checksum256&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">checksum256&#160;</td>
-          <td class="paramname"><em>appendix_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>document</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Подписывает приложение к договору УХД для участия в проекте Создает приложение к договору УХД для участия пайщика в проекте: </p>
-<ul>
-<li>Проверяет что пользователь подписал основной договор УХД</li>
-<li>Валидирует уникальность приложения по хешу</li>
-<li>Проверяет отсутствие существующего приложения для проекта</li>
-<li>Создает приложение к договору УХД</li>
-<li>Отправляет на одобрение председателю <dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
-    <tr><td class="paramname">username</td><td>Наименование пользователя-пайщика </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хеш проекта для участия </td></tr>
-    <tr><td class="paramname">appendix_hash</td><td>Хеш приложения к договору </td></tr>
-    <tr><td class="paramname">document</td><td>Документ приложения к договору</td></tr>
   </table>
   </dd>
 </dl>

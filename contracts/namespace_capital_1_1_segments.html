@@ -202,9 +202,6 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 <tr class="memitem:ae1cfabce18e496abe88bdab2bea1c48d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#ae1cfabce18e496abe88bdab2bea1c48d">update_segment_total_cost</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
 <tr class="memdesc:ae1cfabce18e496abe88bdab2bea1c48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет все стоимости сегмента (базовые, бонусные и общую)  <a href="namespace_capital_1_1_segments.html#ae1cfabce18e496abe88bdab2bea1c48d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ae1cfabce18e496abe88bdab2bea1c48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae714fa520150b08e33553e0f6ab484fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#ae714fa520150b08e33553e0f6ab484fc">update_segment_conversion</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, const eosio::asset &amp;wallet_amount, const eosio::asset &amp;capital_amount, const eosio::asset &amp;project_amount)</td></tr>
-<tr class="memdesc:ae714fa520150b08e33553e0f6ab484fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет сегмент после конвертации  <a href="namespace_capital_1_1_segments.html#ae714fa520150b08e33553e0f6ab484fc">Подробнее...</a><br /></td></tr>
-<tr class="separator:ae714fa520150b08e33553e0f6ab484fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac695acdec0c36b318a8f9b9424d0035f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f">update_segment_status</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::name new_status)</td></tr>
 <tr class="memdesc:ac695acdec0c36b318a8f9b9424d0035f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус результата в сегменте  <a href="namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac695acdec0c36b318a8f9b9424d0035f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1118,68 +1115,6 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 </div><div class="memdoc">
 
 <p>Объединенная функция: обновляет сегмент после принятия результата и пересчитывает доли участника Оптимизированная версия для избежания двойного обновления одной записи </p>
-
-</div>
-</div>
-<a id="ae714fa520150b08e33553e0f6ab484fc" name="ae714fa520150b08e33553e0f6ab484fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae714fa520150b08e33553e0f6ab484fc">&#9670;&nbsp;</a></span>update_segment_conversion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Segments::update_segment_conversion </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>username</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>wallet_amount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>capital_amount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>project_amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Обновляет сегмент после конвертации </p>
 
 </div>
 </div>

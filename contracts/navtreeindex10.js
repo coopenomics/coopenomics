@@ -102,12 +102,11 @@ var NAVTREEINDEX10 =
 "namespace_capital_1_1_segments.html#ab70140e62f0d6b5ec4151202993d17de":[3,0,6,15,16],
 "namespace_capital_1_1_segments.html#ac40a7014b2f2110478db132efc0f82d1":[3,0,6,15,9],
 "namespace_capital_1_1_segments.html#ac54f74af7b1a20c8bb5177e9883a1f40":[3,0,6,15,6],
-"namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f":[3,0,6,15,23],
-"namespace_capital_1_1_segments.html#acb3e1afeba167fc1e02d8be5b7d216ab":[3,0,6,15,25],
+"namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f":[3,0,6,15,22],
+"namespace_capital_1_1_segments.html#acb3e1afeba167fc1e02d8be5b7d216ab":[3,0,6,15,24],
 "namespace_capital_1_1_segments.html#ad7b9c3dd395e437b39ca0c9408749455":[3,0,6,15,20],
-"namespace_capital_1_1_segments.html#ae1cfabce18e496abe88bdab2bea1c48d":[3,0,6,15,24],
+"namespace_capital_1_1_segments.html#ae1cfabce18e496abe88bdab2bea1c48d":[3,0,6,15,23],
 "namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1":[3,0,6,15,2],
-"namespace_capital_1_1_segments.html#ae714fa520150b08e33553e0f6ab484fc":[3,0,6,15,22],
 "namespace_capital_1_1_segments.html#aee1a60e183f09fd2f7df5a0933479ce8":[3,0,6,15,17],
 "namespace_capital_1_1_segments.html#aef0b7d21054798d1b0effc559451edd4":[3,0,6,15,19],
 "namespace_capital_1_1_segments.html#af8702b17d38a2d69e48d79c55ef7bfa7":[3,0,6,15,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX10 =
 "namespace_names_1_1_loan.html":[3,0,19,3],
 "namespace_names_1_1_loan.html#a3a62310abedf21b03a976d6ee46cd452":[3,0,19,3,0],
 "namespace_names_1_1_loan.html#ad8cb003e6a6a282454208d143c32f4c6":[3,0,19,3,1],
-"namespace_names_1_1_soviet_actions.html":[3,0,19,4]
+"namespace_names_1_1_soviet_actions.html":[3,0,19,4],
+"namespace_names_1_1_soviet_actions.html#a0eaacfd92aff89e88d0ced3467b7a8ec":[3,0,19,4,2]
 };

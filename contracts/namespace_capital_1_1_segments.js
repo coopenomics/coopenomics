@@ -27,7 +27,6 @@ var namespace_capital_1_1_segments =
     [ "remove_segment", "namespace_capital_1_1_segments.html#aef0b7d21054798d1b0effc559451edd4", null ],
     [ "set_investor_base_amount_on_return_unused", "namespace_capital_1_1_segments.html#ad7b9c3dd395e437b39ca0c9408749455", null ],
     [ "update_segment_after_result_contribution", "namespace_capital_1_1_segments.html#aa4a47c8c0cba17df143e99aa730441d0", null ],
-    [ "update_segment_conversion", "namespace_capital_1_1_segments.html#ae714fa520150b08e33553e0f6ab484fc", null ],
     [ "update_segment_status", "namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f", null ],
     [ "update_segment_total_cost", "namespace_capital_1_1_segments.html#ae1cfabce18e496abe88bdab2bea1c48d", null ],
     [ "update_segment_voting_results", "namespace_capital_1_1_segments.html#acb3e1afeba167fc1e02d8be5b7d216ab", null ]

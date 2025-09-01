@@ -1,6 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"namespace_names_1_1_soviet_actions.html#a0eaacfd92aff89e88d0ced3467b7a8ec":[3,0,19,4,2],
 "namespace_names_1_1_soviet_actions.html#a2f46679fc94ddc85d952475b201f5e76":[3,0,19,4,1],
 "namespace_names_1_1_soviet_actions.html#a5f27103025148331294221e513065840":[3,0,19,4,3],
 "namespace_names_1_1_soviet_actions.html#aae074da3e8e2c80b5bd3b241a3e32434":[3,0,19,4,4],
@@ -60,8 +59,8 @@ var NAVTREEINDEX11 =
 "namespaceeosiosystem_1_1block__info.html#a2874613dc8993ab1cc70301c121823c6":[3,0,13,0,4],
 "namespaceeosiosystem_1_1block__info.html#ae5a5c96dd81824619747c6ed5de30d92":[3,0,13,0,5],
 "namespaceeosiosystem_1_1block__info.html#afeae846ac56f9c10cd082d960f2b0fc2":[3,0,13,0,3],
-"namespacemembers.html":[3,1,0],
 "namespacemembers.html":[3,1,0,0],
+"namespacemembers.html":[3,1,0],
 "namespacemembers_b.html":[3,1,0,1],
 "namespacemembers_c.html":[3,1,0,2],
 "namespacemembers_d.html":[3,1,0,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX11 =
 "projects_8hpp.html#af60047f88f96da1ad06aa9f9dfaf2011":[4,0,0,1,2,1,20,17],
 "projects_8hpp.html#af7e4f9166dd63947601364400b7f9fc3":[4,0,0,1,2,1,20,18],
 "projects_8hpp.html#af83d8e495d8e080e2b004e38f57a795f":[4,0,0,1,2,1,20,1],
-"projects_8hpp_source.html":[4,0,0,1,2,1,20]
+"projects_8hpp_source.html":[4,0,0,1,2,1,20],
+"propertor__segment_8cpp.html":[4,0,0,1,2,0,1,7]
 };

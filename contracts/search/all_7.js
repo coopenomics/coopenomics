@@ -1,8 +1,8 @@
 var searchData=
 [
   ['gateway_0',['gateway',['../classgateway.html',1,'gateway'],['../classgateway.html#a61f6973ac320eea0ad63680cfe3317ae',1,'gateway::gateway()']]],
-  ['gateway_1',['GATEWAY',['../consts_8hpp.html#a861181f1d81b4ccb482b33c7bffad5d1',1,'consts.hpp']]],
-  ['gateway_2',['Gateway',['../namespace_gateway.html',1,'']]],
+  ['gateway_1',['Gateway',['../namespace_gateway.html',1,'']]],
+  ['gateway_2',['GATEWAY',['../consts_8hpp.html#a861181f1d81b4ccb482b33c7bffad5d1',1,'consts.hpp']]],
   ['gateway_2ecpp_3',['gateway.cpp',['../gateway_8cpp.html',1,'']]],
   ['gateway_2ehpp_4',['gateway.hpp',['../gateway_8hpp.html',1,'']]],
   ['gateway_5fabi_5fser_5',['gateway_abi_ser',['../classeosio__system_1_1eosio__system__tester.html#ab3a820fb86213e4f092097589f77c73b',1,'eosio_system::eosio_system_tester']]],
@@ -82,7 +82,7 @@ var searchData=
   ['get_5fglobal_5ffree_5fram_79',['get_global_free_ram',['../structpowerup__tester.html#aa3e39e1b3ed9db890a8334529f655fc2',1,'powerup_tester']]],
   ['get_5fglobal_5fid_80',['get_global_id',['../lib_2counts_8hpp.html#aeb06beaf4402f0222167ef9d12eacd5c',1,'counts.hpp']]],
   ['get_5fglobal_5fid_5fin_5fscope_81',['get_global_id_in_scope',['../lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0',1,'counts.hpp']]],
-  ['get_5fglobal_5fstate_82',['get_global_state',['../classcontributor.html#a4b816c4c19d90e38f048c9b337b2544e',1,'contributor::get_global_state()'],['../classeosio__system_1_1eosio__system__tester.html#a0fd6e250611cdb6a1c77fd3bf9dbd430',1,'eosio_system::eosio_system_tester::get_global_state()'],['../namespace_capital.html#ad4e470a04c6012d5b10efaf87399dda1',1,'Capital::get_global_state()']]],
+  ['get_5fglobal_5fstate_82',['get_global_state',['../namespace_capital.html#ad4e470a04c6012d5b10efaf87399dda1',1,'Capital::get_global_state()'],['../classcontributor.html#a4b816c4c19d90e38f048c9b337b2544e',1,'contributor::get_global_state()'],['../classeosio__system_1_1eosio__system__tester.html#a0fd6e250611cdb6a1c77fd3bf9dbd430',1,'eosio_system::eosio_system_tester::get_global_state()']]],
   ['get_5fglobal_5fstate2_83',['get_global_state2',['../classeosio__system_1_1eosio__system__tester.html#aa9c99ba30baea1a26f7c66cfc49ab0ad',1,'eosio_system::eosio_system_tester']]],
   ['get_5fglobal_5fstate3_84',['get_global_state3',['../classeosio__system_1_1eosio__system__tester.html#a0814dde23aecedb7ad38800784951b13',1,'eosio_system::eosio_system_tester']]],
   ['get_5fglobal_5fused_5fram_85',['get_global_used_ram',['../structpowerup__tester.html#ad5f65a53c30580c21a28918187e27d31',1,'powerup_tester']]],
@@ -187,11 +187,13 @@ var searchData=
   ['get_5fvotes_5ffor_5frecipient_184',['get_votes_for_recipient',['../namespace_capital_1_1_votes.html#a430609f2b750c0a8f57b6a280ace5a23',1,'Capital::Votes']]],
   ['get_5fwithdraw_185',['get_withdraw',['../class_wallet.html#a5b73e8bd1ea7fc25bfc234a5068be1aa',1,'Wallet']]],
   ['get_5fwriteoff_5fby_5fhash_186',['get_writeoff_by_hash',['../class_ledger.html#a93bfcc278c6b0c660618c85d7e7745c5',1,'Ledger']]],
-  ['global_5favailable_5finvest_5fpool_187',['global_available_invest_pool',['../struct_capital_1_1global__state.html#a4bd8b3095fce7a2f9e0454dfc60a6f0a',1,'Capital::global_state']]],
-  ['global_5fstate_188',['global_state',['../struct_capital_1_1global__state.html',1,'Capital::global_state'],['../structcontributor_1_1global__state.html',1,'contributor::global_state']]],
-  ['global_5fstate_2ehpp_189',['global_state.hpp',['../global__state_8hpp.html',1,'']]],
-  ['global_5fstate_5fsingleton_190',['global_state_singleton',['../namespaceeosiosystem.html#a2757bc4c835154772dce0d5891c93b58',1,'eosiosystem']]],
-  ['global_5fstate_5ftable_191',['global_state_table',['../classcontributor.html#aba2113a68888984738151cd0966f8a72',1,'contributor::global_state_table()'],['../namespace_capital.html#a927158096490fceaac1ddadc58844760',1,'Capital::global_state_table()']]],
-  ['gmnotify_192',['gmnotify',['../group__public__meet__actions.html#ga4bd55fac9019a20c157327afae289e6f',1,'meet']]],
-  ['gmnotify_2ecpp_193',['gmnotify.cpp',['../gmnotify_8cpp.html',1,'']]]
+  ['getclearance_187',['getclearance',['../group__public__capital__actions.html#gaeb6841458fb337ae80d9359b9bd50616',1,'capital']]],
+  ['getclearance_2ecpp_188',['getclearance.cpp',['../getclearance_8cpp.html',1,'']]],
+  ['global_5favailable_5finvest_5fpool_189',['global_available_invest_pool',['../struct_capital_1_1global__state.html#a4bd8b3095fce7a2f9e0454dfc60a6f0a',1,'Capital::global_state']]],
+  ['global_5fstate_190',['global_state',['../struct_capital_1_1global__state.html',1,'Capital::global_state'],['../structcontributor_1_1global__state.html',1,'contributor::global_state']]],
+  ['global_5fstate_2ehpp_191',['global_state.hpp',['../global__state_8hpp.html',1,'']]],
+  ['global_5fstate_5fsingleton_192',['global_state_singleton',['../namespaceeosiosystem.html#a2757bc4c835154772dce0d5891c93b58',1,'eosiosystem']]],
+  ['global_5fstate_5ftable_193',['global_state_table',['../classcontributor.html#aba2113a68888984738151cd0966f8a72',1,'contributor::global_state_table()'],['../namespace_capital.html#a927158096490fceaac1ddadc58844760',1,'Capital::global_state_table()']]],
+  ['gmnotify_194',['gmnotify',['../group__public__meet__actions.html#ga4bd55fac9019a20c157327afae289e6f',1,'meet']]],
+  ['gmnotify_2ecpp_195',['gmnotify.cpp',['../gmnotify_8cpp.html',1,'']]]
 ];
