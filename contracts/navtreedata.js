@@ -25,39 +25,39 @@
 var NAVTREE =
 [
   [ "COOPENOMICS", "index.html", [
-    [ "Обзор", "index.html#autotoc_md349", [
-      [ "Основные контракты", "index.html#autotoc_md351", [
-        [ "Архитектура системы", "index.html#autotoc_md350", null ],
-        [ "Управление участниками и регистрация", "index.html#autotoc_md352", [
-          [ "Контракт REGISTRATOR", "index.html#autotoc_md353", null ],
-          [ "Контракт BRANCH", "index.html#autotoc_md354", null ]
+    [ "Обзор", "index.html#autotoc_md357", [
+      [ "Основные контракты", "index.html#autotoc_md359", [
+        [ "Архитектура системы", "index.html#autotoc_md358", null ],
+        [ "Управление участниками и регистрация", "index.html#autotoc_md360", [
+          [ "Контракт REGISTRATOR", "index.html#autotoc_md361", null ],
+          [ "Контракт BRANCH", "index.html#autotoc_md362", null ]
         ] ],
-        [ "Управление и принятие решений", "index.html#autotoc_md355", [
-          [ "Контракт SOVIET", "index.html#autotoc_md356", null ],
-          [ "Контракт MEET", "index.html#autotoc_md357", null ]
+        [ "Управление и принятие решений", "index.html#autotoc_md363", [
+          [ "Контракт SOVIET", "index.html#autotoc_md364", null ],
+          [ "Контракт MEET", "index.html#autotoc_md365", null ]
         ] ],
-        [ "Финансовое управление", "index.html#autotoc_md358", [
-          [ "Контракт CAPITAL", "index.html#autotoc_md359", null ],
-          [ "Контракт FUND", "index.html#autotoc_md360", null ],
-          [ "Контракт WALLET", "index.html#autotoc_md361", null ],
-          [ "Контракт LEDGER", "index.html#autotoc_md362", null ],
-          [ "Контракт LOAN", "index.html#autotoc_md363", null ]
+        [ "Финансовое управление", "index.html#autotoc_md366", [
+          [ "Контракт CAPITAL", "index.html#autotoc_md367", null ],
+          [ "Контракт FUND", "index.html#autotoc_md368", null ],
+          [ "Контракт WALLET", "index.html#autotoc_md369", null ],
+          [ "Контракт LEDGER", "index.html#autotoc_md370", null ],
+          [ "Контракт LOAN", "index.html#autotoc_md371", null ]
         ] ],
-        [ "Экономическая деятельность", "index.html#autotoc_md364", [
-          [ "Контракт MARKETPLACE", "index.html#autotoc_md365", null ],
-          [ "Контракт GATEWAY", "index.html#autotoc_md366", null ]
+        [ "Экономическая деятельность", "index.html#autotoc_md372", [
+          [ "Контракт MARKETPLACE", "index.html#autotoc_md373", null ],
+          [ "Контракт GATEWAY", "index.html#autotoc_md374", null ]
         ] ],
-        [ "Вспомогательные системы", "index.html#autotoc_md367", [
-          [ "Контракт DRAFT", "index.html#autotoc_md368", null ]
+        [ "Вспомогательные системы", "index.html#autotoc_md375", [
+          [ "Контракт DRAFT", "index.html#autotoc_md376", null ]
         ] ],
-        [ "Системные контракты", "index.html#autotoc_md369", null ]
+        [ "Системные контракты", "index.html#autotoc_md377", null ]
       ] ],
-      [ "Принципы работы системы", "index.html#autotoc_md370", [
-        [ "Жизненный цикл участника", "index.html#autotoc_md371", null ],
-        [ "Финансовые потоки", "index.html#autotoc_md372", null ],
-        [ "Управление и контроль", "index.html#autotoc_md373", null ]
+      [ "Принципы работы системы", "index.html#autotoc_md378", [
+        [ "Жизненный цикл участника", "index.html#autotoc_md379", null ],
+        [ "Финансовые потоки", "index.html#autotoc_md380", null ],
+        [ "Управление и контроль", "index.html#autotoc_md381", null ]
       ] ],
-      [ "Технологический стек", "index.html#autotoc_md374", null ]
+      [ "Технологический стек", "index.html#autotoc_md382", null ]
     ] ],
     [ "Группы", "modules.html", "modules" ],
     [ "Классы", "annotated.html", [
@@ -100,26 +100,26 @@ var NAVTREEINDEX =
 [
 "accept_8cpp.html",
 "classeosio_1_1wrap.html#ab6b98aea95fa979a2740a617251c613e",
-"classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35ab0ae66dc60269e0359a086f8e9edb0ad",
-"classeosiosystem_1_1system__contract.html#a6317a93cd512ff0fc3b6a802bd5aa229",
-"consts_8hpp.html#afeb0e2ab01520072c8305917005018a1",
-"dir_aea269d5cab013e74f1fa4b11f84847d.html",
-"eosio_8system__tester_8hpp.html#a43ce4f6f5c1aa46e6a7d6c3fbc401e78",
-"generation_8hpp.html#a6a3bcadffefc698c95b8443e5d09300e",
-"group__public__loan__consts.html#ga737ac51e2ba8e17c9b0a37eec8527072",
-"lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962",
-"namespace_capital_1_1_program_properties_1_1_status.html#a183fe91fba63e90ea1e82969bde6c67f",
-"namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd",
-"rammarket_8hpp_source.html",
-"shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249",
-"struct_capital_1_1crps__data.html#a196a2f35f5fe1af361b1abcd363def9f",
-"struct_capital_1_1result.html#ae11c3f755b1773b655d2e320da5eb829",
-"struct_marketplace_1_1request.html#aeeb733544efe1babbc55f7cffcf363e5",
-"structaddress__data.html#a403717a4fba75af0ce7a79f66489d529",
-"structdebt.html#aa054d7013f78c0308ffab37ecda36e21",
-"structeosiosystem_1_1emission__state.html",
-"structmembership__crps.html",
-"utils_8hpp.html#ab7a22a1903f5bfdad00a096b273691c1"
+"classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35adc43e863c176e9b9f2a0b6054b24bd1a",
+"classeosiosystem_1_1system__contract.html#a668decff73ee059f8e89cd885e85f3ce",
+"consts_8hpp_source.html",
+"dir_ac454b74eb0014ad9059681cf1e420eb.html",
+"eosio_8system__tester_8hpp.html#a35fc6bba07a8091fdc5a3748d0534d2c",
+"generation_8hpp.html#a4c05887fc952cc1e031ccda789397e4e",
+"group__public__loan__actions.html#gacc8b14ae84e64e5b33d1de18a979d690",
+"lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf",
+"namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b",
+"namespace_names_1_1_soviet_actions.html#a0eaacfd92aff89e88d0ced3467b7a8ec",
+"propertor__segment_8cpp.html",
+"shared__registrator_8hpp.html",
+"struct_capital_1_1contributor.html#a8d110aeb66c7915977d34512464154b8",
+"struct_capital_1_1result.html#a3c3aba786a5340d4998a1cd3bae41e43",
+"struct_marketplace_1_1request.html#ac2099f569979b5a477c8403f2ef4cee0",
+"structaccount.html#ae83306a3d2a29ab942504ebb68e42d71",
+"structcounts__data.html#a2f3d0b303108deed1914d63b46b62fd3",
+"structeosiosystem_1_1block__info_1_1latest__block__batch__info__result.html#aae67f275b3852dbc62dcfbc8be6e7e8caecb8e0c9f69837caaec46f55744e9f01",
+"structlimitauth__tester.html#a3943a870f12d4b04dc52dc2ae33c3556",
+"unblockbal_8cpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

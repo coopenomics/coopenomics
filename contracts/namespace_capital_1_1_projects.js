@@ -15,6 +15,7 @@ var namespace_capital_1_1_projects =
     [ "add_property_base", "namespace_capital_1_1_projects.html#adea40618079d31f05029cab6507cce8a", null ],
     [ "complete_expense", "namespace_capital_1_1_projects.html#aa828b18938a299ccea7d303e41d9b515", null ],
     [ "create_project", "namespace_capital_1_1_projects.html#a6ff3a2525069e205a57e915d93f6109e", null ],
+    [ "delete_project", "namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1", null ],
     [ "distribute_membership_funds", "namespace_capital_1_1_projects.html#aef440092d068493d76d594963134e50d", null ],
     [ "expand_expense_pool", "namespace_capital_1_1_projects.html#acfaa29fac646d2c080c82d98ff4c0361", null ],
     [ "get_project", "namespace_capital_1_1_projects.html#a150840dacd380d92c57ea912609f3800", null ],

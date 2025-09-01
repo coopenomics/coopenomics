@@ -9,6 +9,7 @@ var projects_8hpp =
     [ "add_property_base", "projects_8hpp.html#adea40618079d31f05029cab6507cce8a", null ],
     [ "complete_expense", "projects_8hpp.html#aa828b18938a299ccea7d303e41d9b515", null ],
     [ "create_project", "projects_8hpp.html#a6ff3a2525069e205a57e915d93f6109e", null ],
+    [ "delete_project", "projects_8hpp.html#af50cad66a6d02e6263abec89f0d0d9d1", null ],
     [ "distribute_membership_funds", "projects_8hpp.html#aef440092d068493d76d594963134e50d", null ],
     [ "expand_expense_pool", "projects_8hpp.html#acfaa29fac646d2c080c82d98ff4c0361", null ],
     [ "get_project", "projects_8hpp.html#a150840dacd380d92c57ea912609f3800", null ],

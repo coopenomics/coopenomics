@@ -45,7 +45,7 @@ var searchData=
   ['authcontrib_2ecpp_42',['authcontrib.cpp',['../authcontrib_8cpp.html',1,'']]],
   ['authmeet_2ecpp_43',['authmeet.cpp',['../authmeet_8cpp.html',1,'']]],
   ['author_5fcrps_2ecpp_44',['author_crps.cpp',['../author__crps_8cpp.html',1,'']]],
-  ['authorize_2ecpp_45',['authorize.cpp',['../fund_2src_2authorize_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2decision_2authorize_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2authorize_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['authorize_2ecpp_45',['authorize.cpp',['../fund_2src_2authorize_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2authorize_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2decision_2authorize_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['authpgprp_2ecpp_46',['authpgprp.cpp',['../authpgprp_8cpp.html',1,'']]],
   ['authreturn_2ecpp_47',['authreturn.cpp',['../authreturn_8cpp.html',1,'']]],
   ['authrslt_2ecpp_48',['authrslt.cpp',['../authrslt_8cpp.html',1,'']]],

@@ -208,9 +208,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 <tr class="memitem:ac695acdec0c36b318a8f9b9424d0035f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f">update_segment_status</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::name new_status)</td></tr>
 <tr class="memdesc:ac695acdec0c36b318a8f9b9424d0035f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус результата в сегменте  <a href="namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac695acdec0c36b318a8f9b9424d0035f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b08b8af9fb2b19c4e9e000376cee6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aa7b08b8af9fb2b19c4e9e000376cee6c">update_segment_after_result_contribution_with_shares</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::asset debt_settled_amount=asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>))</td></tr>
-<tr class="memdesc:aa7b08b8af9fb2b19c4e9e000376cee6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объединенная функция: обновляет сегмент после принятия результата и пересчитывает доли участника Оптимизированная версия для избежания двойного обновления одной записи  <a href="namespace_capital_1_1_segments.html#aa7b08b8af9fb2b19c4e9e000376cee6c">Подробнее...</a><br /></td></tr>
-<tr class="separator:aa7b08b8af9fb2b19c4e9e000376cee6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a47c8c0cba17df143e99aa730441d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aa4a47c8c0cba17df143e99aa730441d0">update_segment_after_result_contribution</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::asset debt_settled_amount=asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>))</td></tr>
+<tr class="memdesc:aa4a47c8c0cba17df143e99aa730441d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объединенная функция: обновляет сегмент после принятия результата и пересчитывает доли участника Оптимизированная версия для избежания двойного обновления одной записи  <a href="namespace_capital_1_1_segments.html#aa4a47c8c0cba17df143e99aa730441d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4a47c8c0cba17df143e99aa730441d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3e1afeba167fc1e02d8be5b7d216ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#acb3e1afeba167fc1e02d8be5b7d216ab">update_segment_voting_results</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::asset voting_amount, eosio::asset equal_author_amount, eosio::asset direct_creator_amount)</td></tr>
 <tr class="memdesc:acb3e1afeba167fc1e02d8be5b7d216ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет сегмент участника результатами голосования и премиями  <a href="namespace_capital_1_1_segments.html#acb3e1afeba167fc1e02d8be5b7d216ab">Подробнее...</a><br /></td></tr>
 <tr class="separator:acb3e1afeba167fc1e02d8be5b7d216ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -220,6 +220,12 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 <tr class="separator:ab70140e62f0d6b5ec4151202993d17de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61df29c36c7654bd85f5c330506895c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#a61df29c36c7654bd85f5c330506895c3">decrease_debt_amount</a> (eosio::name coopname, uint64_t segment_id, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
 <tr class="separator:a61df29c36c7654bd85f5c330506895c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0b7d21054798d1b0effc559451edd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aef0b7d21054798d1b0effc559451edd4">remove_segment</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
+<tr class="memdesc:aef0b7d21054798d1b0effc559451edd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет сегмент участника  <a href="namespace_capital_1_1_segments.html#aef0b7d21054798d1b0effc559451edd4">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef0b7d21054798d1b0effc559451edd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa50f612a371458c42fded8be290bec8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aaa50f612a371458c42fded8be290bec8">has_project_segments</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
+<tr class="memdesc:aaa50f612a371458c42fded8be290bec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет наличие сегментов в проекте  <a href="namespace_capital_1_1_segments.html#aaa50f612a371458c42fded8be290bec8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa50f612a371458c42fded8be290bec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="ae5b019f0c4d232e315ed2e327477e7b1" name="ae5b019f0c4d232e315ed2e327477e7b1"></a>
@@ -776,6 +782,52 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 
 </div>
 </div>
+<a id="aaa50f612a371458c42fded8be290bec8" name="aaa50f612a371458c42fded8be290bec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa50f612a371458c42fded8be290bec8">&#9670;&nbsp;</a></span>has_project_segments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Capital::Segments::has_project_segments </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет наличие сегментов в проекте </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если есть сегменты, false если нет </dd></dl>
+
+</div>
+</div>
 <a id="ab70140e62f0d6b5ec4151202993d17de" name="ab70140e62f0d6b5ec4151202993d17de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab70140e62f0d6b5ec4151202993d17de">&#9670;&nbsp;</a></span>increase_debt_amount()</h2>
 
@@ -925,6 +977,58 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 
 </div>
 </div>
+<a id="aef0b7d21054798d1b0effc559451edd4" name="aef0b7d21054798d1b0effc559451edd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0b7d21054798d1b0effc559451edd4">&#9670;&nbsp;</a></span>remove_segment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Segments::remove_segment </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет сегмент участника </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad7b9c3dd395e437b39ca0c9408749455" name="ad7b9c3dd395e437b39ca0c9408749455"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7b9c3dd395e437b39ca0c9408749455">&#9670;&nbsp;</a></span>set_investor_base_amount_on_return_unused()</h2>
 
@@ -967,8 +1071,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 
 </div>
 </div>
-<a id="aa7b08b8af9fb2b19c4e9e000376cee6c" name="aa7b08b8af9fb2b19c4e9e000376cee6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7b08b8af9fb2b19c4e9e000376cee6c">&#9670;&nbsp;</a></span>update_segment_after_result_contribution_with_shares()</h2>
+<a id="aa4a47c8c0cba17df143e99aa730441d0" name="aa4a47c8c0cba17df143e99aa730441d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a47c8c0cba17df143e99aa730441d0">&#9670;&nbsp;</a></span>update_segment_after_result_contribution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -977,7 +1081,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Capital::Segments::update_segment_after_result_contribution_with_shares </td>
+          <td class="memname">void Capital::Segments::update_segment_after_result_contribution </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>

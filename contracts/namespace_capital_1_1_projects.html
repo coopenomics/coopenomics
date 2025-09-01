@@ -240,6 +240,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <tr class="separator:a0f3dcc8537d7bae1fab4641e189557d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf16dd03f83d0a8acf60b8670e9a3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aabf16dd03f83d0a8acf60b8670e9a3b2">increase_total_returned_investments</a> (eosio::name coopname, const uint64_t &amp;project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
 <tr class="separator:aabf16dd03f83d0a8acf60b8670e9a3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50cad66a6d02e6263abec89f0d0d9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1">delete_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
+<tr class="memdesc:af50cad66a6d02e6263abec89f0d0d9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет проект  <a href="namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1">Подробнее...</a><br /></td></tr>
+<tr class="separator:af50cad66a6d02e6263abec89f0d0d9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
 <a id="af83d8e495d8e080e2b004e38f57a795f" name="af83d8e495d8e080e2b004e38f57a795f"></a>
@@ -681,6 +684,51 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
     <tr><td class="paramname">description</td><td>Описание проекта </td></tr>
     <tr><td class="paramname">meta</td><td>Метаданные проекта </td></tr>
     <tr><td class="paramname">can_convert_to_project</td><td>Разрешена ли конвертация в кошелек проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af50cad66a6d02e6263abec89f0d0d9d1" name="af50cad66a6d02e6263abec89f0d0d9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af50cad66a6d02e6263abec89f0d0d9d1">&#9670;&nbsp;</a></span>delete_project()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::delete_project </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет проект </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
   </table>
   </dd>
 </dl>

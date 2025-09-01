@@ -2,7 +2,7 @@ var searchData=
 [
   ['calculate_2dvotes_2dprocess_2edox_0',['calculate-votes-process.dox',['../calculate-votes-process_8dox.html',1,'']]],
   ['calcvotes_2ecpp_1',['calcvotes.cpp',['../calcvotes_8cpp.html',1,'']]],
-  ['cancel_2ecpp_2',['cancel.cpp',['../cancel_8cpp.html',1,'(Глобальное пространство имён)'],['../deliver__on__offer_2cancel_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['cancel_2ecpp_2',['cancel.cpp',['../deliver__on__offer_2cancel_8cpp.html',1,'(Глобальное пространство имён)'],['../cancel_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['cancelexprd_2ecpp_3',['cancelexprd.cpp',['../cancelexprd_8cpp.html',1,'']]],
   ['cancelreg_2ecpp_4',['cancelreg.cpp',['../cancelreg_8cpp.html',1,'']]],
   ['cancelvote_2ecpp_5',['cancelvote.cpp',['../cancelvote_8cpp.html',1,'']]],
@@ -15,14 +15,14 @@ var searchData=
   ['capital_2doverview_2edox_12',['capital-overview.dox',['../capital-overview_8dox.html',1,'']]],
   ['capital_2ecpp_13',['capital.cpp',['../capital_8cpp.html',1,'']]],
   ['capital_2ehpp_14',['capital.hpp',['../capital_8hpp.html',1,'']]],
-  ['change_2ecpp_15',['change.cpp',['../marketplace_2src_2change_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2marketplace_2change_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['change_2ecpp_15',['change.cpp',['../soviet_2src_2marketplace_2change_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2change_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['changekey_2ecpp_16',['changekey.cpp',['../changekey_8cpp.html',1,'']]],
   ['changes_2ehpp_17',['changes.hpp',['../changes_8hpp.html',1,'']]],
   ['cmpltvoting_2ecpp_18',['cmpltvoting.cpp',['../cmpltvoting_8cpp.html',1,'']]],
   ['commit_2dcreation_2dprocess_2edox_19',['commit-creation-process.dox',['../commit-creation-process_8dox.html',1,'']]],
   ['commits_2ehpp_20',['commits.hpp',['../commits_8hpp.html',1,'']]],
   ['common_2ehpp_21',['common.hpp',['../common_8hpp.html',1,'']]],
-  ['complete_2ecpp_22',['complete.cpp',['../fund_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger_2src_2writeoff_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2deliver__on__offer_2complete_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['complete_2ecpp_22',['complete.cpp',['../marketplace_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2deliver__on__offer_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../fund_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger_2src_2writeoff_2complete_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['completedpst_2ecpp_23',['completedpst.cpp',['../completedpst_8cpp.html',1,'']]],
   ['completewthd_2ecpp_24',['completewthd.cpp',['../completewthd_8cpp.html',1,'']]],
   ['configuration_2dprocess_2edox_25',['configuration-process.dox',['../configuration-process_8dox.html',1,'']]],
@@ -78,5 +78,5 @@ var searchData=
   ['creator_5fcrps_2ecpp_75',['creator_crps.cpp',['../creator__crps_8cpp.html',1,'']]],
   ['crps_2dalgorithm_2edox_76',['crps-algorithm.dox',['../crps-algorithm_8dox.html',1,'']]],
   ['crps_2ecpp_77',['crps.cpp',['../crps_8cpp.html',1,'']]],
-  ['crps_2ehpp_78',['crps.hpp',['../entities_2crps_8hpp.html',1,'(Глобальное пространство имён)'],['../core_2crps_2crps_8hpp.html',1,'(Глобальное пространство имён)']]]
+  ['crps_2ehpp_78',['crps.hpp',['../core_2crps_2crps_8hpp.html',1,'(Глобальное пространство имён)'],['../entities_2crps_8hpp.html',1,'(Глобальное пространство имён)']]]
 ];

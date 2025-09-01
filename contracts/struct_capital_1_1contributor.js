@@ -25,6 +25,7 @@ var struct_capital_1_1contributor =
     [ "debt_amount", "struct_capital_1_1contributor.html#ad9653a9c595b5e16a000ae130411866d", null ],
     [ "id", "struct_capital_1_1contributor.html#a265012a7196b81b19669760a1984f96b", null ],
     [ "is_external_contract", "struct_capital_1_1contributor.html#a13c453f816ae2fe02c9fcece1fe0e9f1", null ],
+    [ "memo", "struct_capital_1_1contributor.html#a183e8655f193eb32a5d735fc5bd59f2a", null ],
     [ "rate_per_hour", "struct_capital_1_1contributor.html#a84f7e53ab79c391b6ba3fb79a493975d", null ],
     [ "reward_per_share_last", "struct_capital_1_1contributor.html#a5cbe0f08a3118c4effd646cfafa15b60", null ],
     [ "status", "struct_capital_1_1contributor.html#a7415d2fcc5b1ca604bc55173bf494e9f", null ],

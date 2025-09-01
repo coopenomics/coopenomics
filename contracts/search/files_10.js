@@ -10,7 +10,7 @@ var searchData=
   ['setmaster_2ecpp_7',['setmaster.cpp',['../setmaster_8cpp.html',1,'']]],
   ['setplan_2ecpp_8',['setplan.cpp',['../setplan_8cpp.html',1,'']]],
   ['setrights_2ecpp_9',['setrights.cpp',['../setrights_8cpp.html',1,'']]],
-  ['settledebt_2ecpp_10',['settledebt.cpp',['../loan_2src_2settledebt_8cpp.html',1,'(Глобальное пространство имён)'],['../capital_2app_2debt__managment_2settle__debt_2settledebt_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['settledebt_2ecpp_10',['settledebt.cpp',['../capital_2app_2debt__managment_2settle__debt_2settledebt_8cpp.html',1,'(Глобальное пространство имён)'],['../loan_2src_2settledebt_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['share_2dregistration_2dprocess_2edox_11',['share-registration-process.dox',['../share-registration-process_8dox.html',1,'']]],
   ['shared_5factions_2ehpp_12',['shared_actions.hpp',['../shared__actions_8hpp.html',1,'']]],
   ['shared_5fapprover_2ehpp_13',['shared_approver.hpp',['../shared__approver_8hpp.html',1,'']]],

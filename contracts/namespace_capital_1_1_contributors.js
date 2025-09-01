@@ -10,6 +10,7 @@ var namespace_capital_1_1_contributors =
     [ "get_active_contributor_with_appendix_or_fail", "namespace_capital_1_1_contributors.html#a3290427125419e6245bb5df26a5c95a6", null ],
     [ "get_contributor", "namespace_capital_1_1_contributors.html#a952e793bd70394e9a59d5bb8048b8b3b", null ],
     [ "get_contributor_by_hash", "namespace_capital_1_1_contributors.html#a59465c807f0b4ef8b5f8041cea9f051a", null ],
+    [ "import_contributor", "namespace_capital_1_1_contributors.html#a54eb73212d77e50a245bda99d4a79959", null ],
     [ "increase_debt_amount", "namespace_capital_1_1_contributors.html#a58019a5aabe6cc4f6c672af7b54b6f08", null ],
     [ "is_contributor_has_appendix_in_project", "namespace_capital_1_1_contributors.html#aad4dec71e669ec6b61d6a41a053cd9ca", null ],
     [ "push_appendix_to_contributor", "namespace_capital_1_1_contributors.html#ae798f44145edd445f7540c767b9e4a5a", null ],
