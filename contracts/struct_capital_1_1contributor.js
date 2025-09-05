@@ -11,7 +11,6 @@ var struct_capital_1_1contributor =
     [ "by_username", "struct_capital_1_1contributor.html#a8d110aeb66c7915977d34512464154b8", null ],
     [ "primary_key", "struct_capital_1_1contributor.html#a367ec49a88c98e3b6eb09f4d55478701", null ],
     [ "appendixes", "struct_capital_1_1contributor.html#ad26c79fda0df4cccb7f3a58396d11098", null ],
-    [ "capital_available", "struct_capital_1_1contributor.html#ab9b13983c75e56fe670c7e0d2ff0adf3", null ],
     [ "contract", "struct_capital_1_1contributor.html#a7cf0680a122dc7be39fab499c651d85e", null ],
     [ "contributed_as_author", "struct_capital_1_1contributor.html#a2da24d18fcb18d994cd009242d0675af", null ],
     [ "contributed_as_contributor", "struct_capital_1_1contributor.html#a2167746efd4d11de38790638b34eca0d", null ],
@@ -27,7 +26,6 @@ var struct_capital_1_1contributor =
     [ "is_external_contract", "struct_capital_1_1contributor.html#a13c453f816ae2fe02c9fcece1fe0e9f1", null ],
     [ "memo", "struct_capital_1_1contributor.html#a183e8655f193eb32a5d735fc5bd59f2a", null ],
     [ "rate_per_hour", "struct_capital_1_1contributor.html#a84f7e53ab79c391b6ba3fb79a493975d", null ],
-    [ "reward_per_share_last", "struct_capital_1_1contributor.html#a5cbe0f08a3118c4effd646cfafa15b60", null ],
     [ "status", "struct_capital_1_1contributor.html#a7415d2fcc5b1ca604bc55173bf494e9f", null ],
     [ "username", "struct_capital_1_1contributor.html#ac598914c8a0a3a76aa63169bb433ccdd", null ]
 ];

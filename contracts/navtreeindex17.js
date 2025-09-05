@@ -1,7 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"structaddress__data.html":[2,0,19],
-"structaddress__data.html#a07d136135a3430d45cdf65f0712fa283":[2,0,19,3],
 "structaddress__data.html#a106cb3b84ce9123528df437a6cfc4a0f":[2,0,19,14],
 "structaddress__data.html#a1c7176a66b84b6b819059b4363780d61":[2,0,19,5],
 "structaddress__data.html#a27ce0d16ed3d0ca2d0e7e22ace29c6aa":[2,0,19,2],
@@ -51,14 +49,14 @@ var NAVTREEINDEX17 =
 "structagreement2.html#ae0abc045a93c6cc88d322047f2f7138c":[1,9,2,2,3],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html":[3,0,3,0],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html":[2,0,0,0],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602":[3,0,3,0,3],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602":[2,0,0,0,3],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364":[2,0,0,0,2],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602":[3,0,3,0,3],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364":[3,0,3,0,2],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5":[2,0,0,0,1],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364":[2,0,0,0,2],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5":[3,0,3,0,1],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[2,0,0,0,0],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5":[2,0,0,0,1],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[3,0,3,0,0],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[2,0,0,0,0],
 "structauthority.html":[2,0,22],
 "structauthority.html#a0929cd72740ad0953b59fdc1df188b60":[2,0,22,0],
 "structauthority.html#a7538d1edffef8dd8ebe41758fbc4fdd8":[2,0,22,1],
@@ -249,5 +247,7 @@ var NAVTREEINDEX17 =
 "structcounts__data.html#a44756f898f509dfaedb138f65e456d6b":[2,0,43,3],
 "structcounts__data.html#a5a9204942c998642666e44ec8916f114":[2,0,43,0],
 "structcounts__data.html#aef55d1b6db72cfb584d23d71482c73c4":[2,0,43,5],
-"structdebt.html":[2,0,44]
+"structdebt.html":[2,0,44],
+"structdebt.html#a360a1b107aad380e9f5445e1e2c337c8":[2,0,44,1],
+"structdebt.html#a38941a038a3ff21e25e2d57c71a33a70":[2,0,44,2]
 };

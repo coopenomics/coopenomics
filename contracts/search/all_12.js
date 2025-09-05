@@ -128,7 +128,7 @@ var searchData=
   ['returnunused_125',['returnunused',['../group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298',1,'capital']]],
   ['returnunused_2ecpp_126',['returnunused.cpp',['../returnunused_8cpp.html',1,'']]],
   ['revision_127',['revision',['../structeosiosystem_1_1eosio__global__state.html#ad601f06231d93d8fa9097cdf8cc7a462',1,'eosiosystem::eosio_global_state']]],
-  ['reward_5fper_5fshare_5flast_128',['reward_per_share_last',['../struct_capital_1_1contributor.html#a5cbe0f08a3118c4effd646cfafa15b60',1,'Capital::contributor::reward_per_share_last()'],['../structcontributor_1_1participant.html#ab2b290c68d782360fa27030fc6865c55',1,'contributor::participant::reward_per_share_last()']]],
+  ['reward_5fper_5fshare_5flast_128',['reward_per_share_last',['../structcontributor_1_1participant.html#ab2b290c68d782360fa27030fc6865c55',1,'contributor::participant']]],
   ['rexexec_129',['rexexec',['../classeosio__system_1_1eosio__system__tester.html#a39bf21779fbf0d6e860a583f8df64649',1,'eosio_system::eosio_system_tester']]],
   ['rfrshsegment_130',['rfrshsegment',['../group__public__capital__actions.html#ga6437bbfd716a4d0b5fa4f55960a974b2',1,'capital']]],
   ['rfrshsegment_2ecpp_131',['rfrshsegment.cpp',['../rfrshsegment_8cpp.html',1,'']]],
