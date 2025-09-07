@@ -113,13 +113,13 @@ var NAVTREEINDEX =
 "propertor__segment_8cpp.html#a4ef1218ab556e5526544d4fa37fdf15e",
 "shared__registrator_8hpp.html#a165e72a766426e1399f38888fd948190",
 "struct_capital_1_1contributor.html#ac598914c8a0a3a76aa63169bb433ccdd",
-"struct_capital_1_1result.html#aa95c5d48c02aa51444aa308025ffd9dd",
-"struct_marketplace_1_1request.html#ad4e5e9dac9c3ba529cfe2481633c29f3",
-"structaddress__data.html#a106cb3b84ce9123528df437a6cfc4a0f",
-"structdebt.html#a513bcce09755375233ec8508464bd7b9",
-"structeosiosystem_1_1delegated__bandwidth.html#a390e64c81acb62584280ecdf77e67882",
-"structmarketplace_1_1balances.html",
-"utils_8hpp.html#a36967481836d936c693f124a9ce33735"
+"struct_capital_1_1result.html#af0708de2cbacaa6276e7b79f75b85d6a",
+"struct_marketplace_1_1request.html#af4e6a095cdba2fb86f44f2189100e82b",
+"structaddress__data.html#a8f21b5f6425f610ee9420328cf312a1a",
+"structdebt.html#ad2d10f0afe328d85736db51ec682c540",
+"structeosiosystem_1_1emission__state.html#a1baf62f98563e7c24c38d655f4f8a315",
+"structmembership__crps.html#a36547a790ca67343fc06d9728a985aa3",
+"utils_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
