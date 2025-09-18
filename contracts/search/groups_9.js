@@ -1,9 +1,0 @@
-var searchData=
-[
-  ['планирование_20проекта_0',['Планирование проекта',['../group__public__capital__planning__process.html',1,'']]],
-  ['подсчет_20голосов_20по_20методу_20водянова_1',['Подсчет голосов по методу Водянова',['../group__public__capital__calculate__votes__process.html',1,'']]],
-  ['приём_20имущественных_20взносов_20в_20программу_2',['Приём имущественных взносов в программу',['../group__public__capital__program__property__process.html',1,'']]],
-  ['приём_20имущественных_20взносов_20в_20проект_3',['Приём имущественных взносов в проект',['../group__public__capital__project__property__process.html',1,'']]],
-  ['проводки_20по_20процессам_4',['Проводки по процессам',['../group__entries__overview.html',1,'']]],
-  ['процессы_5',['Процессы',['../group__public__branch__processes.html',1,'(Глобальное пространство имён)'],['../group__public__capital__processes.html',1,'(Глобальное пространство имён)'],['../group__public__draft__processes.html',1,'(Глобальное пространство имён)'],['../group__public__fund__processes.html',1,'(Глобальное пространство имён)'],['../group__public__gateway__processes.html',1,'(Глобальное пространство имён)'],['../group__public__ledger__processes.html',1,'(Глобальное пространство имён)'],['../group__public__loan__processes.html',1,'(Глобальное пространство имён)'],['../group__public__meet__processes.html',1,'(Глобальное пространство имён)'],['../group__public__msig__processes.html',1,'(Глобальное пространство имён)'],['../group__public__registrator__processes.html',1,'(Глобальное пространство имён)'],['../group__public__soviet__processes.html',1,'(Глобальное пространство имён)'],['../group__public__system__processes.html',1,'(Глобальное пространство имён)'],['../group__public__token__processes.html',1,'(Глобальное пространство имён)'],['../group__public__wrap__processes.html',1,'(Глобальное пространство имён)']]]
-];
