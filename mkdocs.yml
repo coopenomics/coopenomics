@@ -129,8 +129,8 @@ nav:
       - Делегаты и консенсус: documentation/blockchain/witnesses.md 
       - Параметры конфигурации: documentation/blockchain/configuration.md
       
-    - Контракты: 
-      - Введение: documentation/contracts/index.md
+    - Контракты: https://coopenomics.world/contracts
+      # - Введение: documentation/contracts/index.md
       # - Системные контракты: documentation/coopcontracts/system.md
       # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
       # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
