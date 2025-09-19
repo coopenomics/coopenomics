@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['validated_0',['validated',['../structdecision.html#a09bb1322795b6253c0b731f666ca2bb0',1,'decision']]],
+  ['value_1',['value',['../structcounts__base.html#a7e8ded653625d24a13ae3b651c42dd5a',1,'counts_base::value()'],['../structtest_1_1testrecord.html#a6e53e6e324444a1fc31dd1469a1338bd',1,'test::testrecord::value()']]],
+  ['verifications_2',['verifications',['../structaccount.html#ae7df3e4e5504129a4e0275b4a7264614',1,'account']]],
+  ['verificator_3',['verificator',['../structverification.html#a7fb3c0fd447a28ad0919859e3ccb5aa7',1,'verification']]],
+  ['version_4',['version',['../structagreement.html#a89d5fb7b100c32b5a45d6ea735f675a0',1,'agreement::version()'],['../structagreement2.html#a19e4dfcb0a541e8790b0dfd5c4659b5e',1,'agreement2::version()'],['../structdocument2.html#aa83b078866e2b2d237d7e95af852d9b7',1,'document2::version()'],['../structonedraft.html#a32e4777a8617210181260229c4d872af',1,'onedraft::version()'],['../structeosio_1_1multisig_1_1approvals__info.html#a7067d083de3933cab8fa1b961e1d810d',1,'eosio::multisig::approvals_info::version()'],['../structeosiosystem_1_1block__info_1_1block__info__record.html#a9561691091de21a997db569d84d53a0d',1,'eosiosystem::block_info::block_info_record::version()'],['../structeosiosystem_1_1powerup__order.html#a5add3b2a59588f2a986ab8533b6ef07e',1,'eosiosystem::powerup_order::version()'],['../structeosiosystem_1_1limit__auth__change.html#ac9ee9788288b853d89f9bbe7ab73ccac',1,'eosiosystem::limit_auth_change::version()'],['../structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602',1,'anonymous_namespace{eosio.system_blockinfo_tests.cpp}::block_info_record::version()']]],
+  ['vote_5',['vote',['../structvote__point.html#a0d90a8dd0eb3386d232bc7ddff5143ec',1,'vote_point']]],
+  ['voted_5fat_6',['voted_at',['../struct_capital_1_1vote.html#a189f4709aa12dfb82c18d9d08ac74533',1,'Capital::vote']]],
+  ['voter_7',['voter',['../struct_capital_1_1vote.html#a1463ab79ba84f4fa8c0910359f993f89',1,'Capital::vote']]],
+  ['voters_5fabstained_8',['voters_abstained',['../struct_meet_1_1question.html#ad9bda11d243c1b733dfc4120396caf1a',1,'Meet::question']]],
+  ['voters_5fagainst_9',['voters_against',['../struct_meet_1_1question.html#aad427bae5bc2faa78fa0bd6922f92d21',1,'Meet::question']]],
+  ['voters_5ffor_10',['voters_for',['../struct_meet_1_1question.html#a914d4cb4fb4460be1a0e755acee9e5db',1,'Meet::question']]],
+  ['votes_5fabstained_11',['votes_abstained',['../structquestion__result.html#a929499b833dcc5581f184b3e90a2317e',1,'question_result']]],
+  ['votes_5fagainst_12',['votes_against',['../structdecision.html#a684d6c4cd9033cd2656f68c1e58b4e3e',1,'decision::votes_against()'],['../structquestion__result.html#a3394991ba7903492ad0995f4cc97b9ef',1,'question_result::votes_against()']]],
+  ['votes_5ffor_13',['votes_for',['../structdecision.html#ab4dd0cf2e35bbea166ea7a60f7713c69',1,'decision::votes_for()'],['../structquestion__result.html#a2cfd4eb371fe813208a5ea5724465923',1,'question_result::votes_for()']]],
+  ['votes_5freceived_14',['votes_received',['../struct_capital_1_1voting__data.html#a67839875f533c03606f01a81f20a82f6',1,'Capital::voting_data']]],
+  ['voting_15',['voting',['../struct_capital_1_1project.html#a821a5e12320ecfdaa00c98d9d2d96b4a',1,'Capital::project']]],
+  ['voting_16',['VOTING',['../namespace_capital_1_1_projects_1_1_status.html#a727d9ba7741df12c660122456ea1bf89',1,'Capital::Projects::Status']]],
+  ['voting_5fbonus_17',['voting_bonus',['../struct_capital_1_1_segments_1_1segment.html#a83f733978ce5f619eadd414204e1c27f',1,'Capital::Segments::segment']]],
+  ['voting_5fdeadline_18',['voting_deadline',['../struct_capital_1_1voting__data.html#adebb4835faa3ea0d96cb6860afa6772d',1,'Capital::voting_data']]],
+  ['voting_5fperiod_5fin_5fdays_19',['voting_period_in_days',['../struct_capital_1_1config.html#a53458a23becb0b4ed83327e944271afd',1,'Capital::config']]],
+  ['vpay_5faccount_20',['vpay_account',['../classeosiosystem_1_1system__contract.html#a3b108816fa9ae2ad0c89aae2ec31585b',1,'eosiosystem::system_contract']]]
+];

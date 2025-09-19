@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен Capital::Commits</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен Capital::Commits</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_capital_1_1_commits_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits_1_1_status.html">Status</a></td></tr>
+<tr class="memdesc:namespace_capital_1_1_commits_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы статусов коммитов <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица коммитов хранит данные о выполненных операциях в проекте.  <a href="struct_capital_1_1_commits_1_1commit.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a381c26e19c5ef04ef673eb5fb1b0bf30"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;commits&quot;_n, <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#abb42bbf0b8819cdccd83c98ce526a169">commit::by_username</a> &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#a08d8708ad0fda0173ba1434928480214">commit::by_commit_hash</a> &gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#ae2a541e3062fb35186c073dcc0664db6">commit::by_project_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a381c26e19c5ef04ef673eb5fb1b0bf30">commit_index</a></td></tr>
+<tr class="separator:a381c26e19c5ef04ef673eb5fb1b0bf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:acd515fccf3c002b9c2343bcb6570d6cf"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#acd515fccf3c002b9c2343bcb6570d6cf">get_commit</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:acd515fccf3c002b9c2343bcb6570d6cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает действие по хэшу действия.  <a href="namespace_capital_1_1_commits.html#acd515fccf3c002b9c2343bcb6570d6cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:acd515fccf3c002b9c2343bcb6570d6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa85b9f3e3bb6d653b776a350049cf609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#aa85b9f3e3bb6d653b776a350049cf609">get_commit_or_fail</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:aa85b9f3e3bb6d653b776a350049cf609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает действие по хэшу действия.  <a href="namespace_capital_1_1_commits.html#aa85b9f3e3bb6d653b776a350049cf609">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa85b9f3e3bb6d653b776a350049cf609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6374fe31b9c0e2f8470908740db81320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">delete_commit</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a6374fe31b9c0e2f8470908740db81320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет коммит по хэшу действия.  <a href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6374fe31b9c0e2f8470908740db81320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21a636bc77072e07e8eac074f11f8b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a21a636bc77072e07e8eac074f11f8b5b">create_commit</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;calculated_fact)</td></tr>
+<tr class="memdesc:a21a636bc77072e07e8eac074f11f8b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит без отправки на утверждение.  <a href="namespace_capital_1_1_commits.html#a21a636bc77072e07e8eac074f11f8b5b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21a636bc77072e07e8eac074f11f8b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a381c26e19c5ef04ef673eb5fb1b0bf30" name="a381c26e19c5ef04ef673eb5fb1b0bf30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381c26e19c5ef04ef673eb5fb1b0bf30">&#9670;&nbsp;</a></span>commit_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;commits&quot;_n, <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt;<a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, uint64_t, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#abb42bbf0b8819cdccd83c98ce526a169">commit::by_username</a>&gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#a08d8708ad0fda0173ba1434928480214">commit::by_commit_hash</a>&gt; &gt;, indexed_by&lt;&quot;byprojhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>, checksum256, &amp;<a class="el" href="struct_capital_1_1_commits_1_1commit.html#ae2a541e3062fb35186c073dcc0664db6">commit::by_project_hash</a>&gt; &gt;&gt; <a class="el" href="namespace_capital_1_1_commits.html#a381c26e19c5ef04ef673eb5fb1b0bf30">Capital::Commits::commit_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a21a636bc77072e07e8eac074f11f8b5b" name="a21a636bc77072e07e8eac074f11f8b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21a636bc77072e07e8eac074f11f8b5b">&#9670;&nbsp;</a></span>create_commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Commits::create_commit </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>project_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>commit_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;&#160;</td>
+          <td class="paramname"><em>calculated_fact</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Создает коммит без отправки на утверждение. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива. </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">commit_hash</td><td>Хэш коммита. </td></tr>
+    <tr><td class="paramname">calculated_fact</td><td>Рассчитанные показатели генерации. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6374fe31b9c0e2f8470908740db81320" name="a6374fe31b9c0e2f8470908740db81320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6374fe31b9c0e2f8470908740db81320">&#9670;&nbsp;</a></span>delete_commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Commits::delete_commit </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удаляет коммит по хэшу действия. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш действия. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acd515fccf3c002b9c2343bcb6570d6cf" name="acd515fccf3c002b9c2343bcb6570d6cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd515fccf3c002b9c2343bcb6570d6cf">&#9670;&nbsp;</a></span>get_commit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a> &gt; Capital::Commits::get_commit </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получает действие по хэшу действия. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш действия. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><code>std::optional&lt;commit&gt;</code> - найденное действие или <code>std::nullopt</code>, если его нет. </dd></dl>
+
+</div>
+</div>
+<a id="aa85b9f3e3bb6d653b776a350049cf609" name="aa85b9f3e3bb6d653b776a350049cf609"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa85b9f3e3bb6d653b776a350049cf609">&#9670;&nbsp;</a></span>get_commit_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a> Capital::Commits::get_commit_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получает действие по хэшу действия. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш действия. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><code>commit</code> - найденное действие. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_capital.html">Capital</a></li><li class="navelem"><a class="el" href="namespace_capital_1_1_commits.html">Commits</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

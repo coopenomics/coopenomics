@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['деаллокации_20программных_20инвестиций_0',['Деаллокации программных инвестиций',['../group__public__capital__diallocate__process.html',1,'']]],
+  ['действия_1',['Действия',['../group__public__branch__actions.html',1,'(Глобальное пространство имён)'],['../group__public__capital__actions.html',1,'(Глобальное пространство имён)'],['../group__public__draft__actions.html',1,'(Глобальное пространство имён)'],['../group__public__fund__actions.html',1,'(Глобальное пространство имён)'],['../group__public__gateway__actions.html',1,'(Глобальное пространство имён)'],['../group__public__ledger__actions.html',1,'(Глобальное пространство имён)'],['../group__public__loan__actions.html',1,'(Глобальное пространство имён)'],['../group__public__meet__actions.html',1,'(Глобальное пространство имён)'],['../group__public__msig__actions.html',1,'(Глобальное пространство имён)'],['../group__public__registrator__actions.html',1,'(Глобальное пространство имён)'],['../group__public__soviet__actions.html',1,'(Глобальное пространство имён)'],['../group__public__system__actions.html',1,'(Глобальное пространство имён)'],['../group__public__token__actions.html',1,'(Глобальное пространство имён)'],['../group__public__wrap__actions.html',1,'(Глобальное пространство имён)']]],
+  ['добавления_20соавтора_20проекта_2',['Добавления соавтора проекта',['../group__public__capital__add__author__process.html',1,'']]],
+  ['документы_20по_20процессам_3',['Документы по процессам',['../group__docs__overview.html',1,'']]],
+  ['допуск_20к_20проекту_4',['Допуск к проекту',['../group__public__capital__joining__process.html',1,'']]]
+];

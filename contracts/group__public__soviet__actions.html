@@ -1,0 +1,3137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Действия</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__public__soviet__actions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Действия<div class="ingroups"><a class="el" href="group__public__soviet.html">Контракт SOVIET</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gab6d338d7362d3874d44277ec3e3a0aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab6d338d7362d3874d44277ec3e3a0aa0">soviet::creaddress</a> (eosio::name coopname, eosio::name chairman, eosio::name braname, <a class="el" href="structaddress__data.html">address_data</a> data)</td></tr>
+<tr class="memdesc:gab6d338d7362d3874d44277ec3e3a0aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового адреса кооператива Создает новый адрес в системе кооператива с указанными данными. Адрес может быть привязан к конкретному филиалу или быть общим для кооператива.  <a href="group__public__soviet__actions.html#gab6d338d7362d3874d44277ec3e3a0aa0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab6d338d7362d3874d44277ec3e3a0aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab294d7ecdfdb12636d28e7dc65524e68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab294d7ecdfdb12636d28e7dc65524e68">soviet::deladdress</a> (eosio::name coopname, eosio::name chairman, uint64_t address_id)</td></tr>
+<tr class="memdesc:gab294d7ecdfdb12636d28e7dc65524e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление адреса кооператива Удаляет существующий адрес из системы кооператива по его идентификатору.  <a href="group__public__soviet__actions.html#gab294d7ecdfdb12636d28e7dc65524e68">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab294d7ecdfdb12636d28e7dc65524e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f4b8c38b31645b63c94b008ce2ffa06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga7f4b8c38b31645b63c94b008ce2ffa06">soviet::editaddress</a> (eosio::name coopname, eosio::name chairman, eosio::name braname, uint64_t address_id, <a class="el" href="structaddress__data.html">address_data</a> data)</td></tr>
+<tr class="memdesc:ga7f4b8c38b31645b63c94b008ce2ffa06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование адреса кооператива Изменяет данные существующего адреса в системе кооператива. Позволяет обновить привязку к филиалу и данные адреса.  <a href="group__public__soviet__actions.html#ga7f4b8c38b31645b63c94b008ce2ffa06">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7f4b8c38b31645b63c94b008ce2ffa06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed705497ce78823553360af42f1e0dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaed705497ce78823553360af42f1e0dc6">soviet::addstaff</a> (eosio::name coopname, eosio::name chairman, eosio::name username, std::vector&lt; <a class="el" href="structright.html">right</a> &gt; rights, std::string position_title)</td></tr>
+<tr class="memdesc:gaed705497ce78823553360af42f1e0dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление персонала кооператива Добавляет нового члена персонала в кооператив с указанием определенных прав на выполнение методов действий вместо совета.  <a href="group__public__soviet__actions.html#gaed705497ce78823553360af42f1e0dc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaed705497ce78823553360af42f1e0dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2a5baad145e14f45937617b98d7c73c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab2a5baad145e14f45937617b98d7c73c">soviet::rmstaff</a> (eosio::name coopname, eosio::name chairman, eosio::name username)</td></tr>
+<tr class="memdesc:gab2a5baad145e14f45937617b98d7c73c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление персонала из кооператива Удаляет члена персонала из кооператива, лишая его всех прав и доступа к системе.  <a href="group__public__soviet__actions.html#gab2a5baad145e14f45937617b98d7c73c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab2a5baad145e14f45937617b98d7c73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff82a212963ad56c994fca0d30548802"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaff82a212963ad56c994fca0d30548802">soviet::setrights</a> (eosio::name coopname, eosio::name chairman, eosio::name username, std::vector&lt; <a class="el" href="structright.html">right</a> &gt; rights)</td></tr>
+<tr class="memdesc:gaff82a212963ad56c994fca0d30548802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка прав для персонала кооператива Устанавливает конкретные права для члена персонала в кооперативе. Позволяет изменить список разрешенных действий для указанного сотрудника.  <a href="group__public__soviet__actions.html#gaff82a212963ad56c994fca0d30548802">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaff82a212963ad56c994fca0d30548802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c3e9ad00f9266432144774c17eb4b43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga2c3e9ad00f9266432144774c17eb4b43">soviet::validate</a> (eosio::name coopname, eosio::name username, uint64_t decision_id)</td></tr>
+<tr class="memdesc:ga2c3e9ad00f9266432144774c17eb4b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Предварительная валидация решения совета персоналом Позволяет персоналу подтвердить поступление оплаты или провести другую форму валидации перед принятием советом какого-либо решения.  <a href="group__public__soviet__actions.html#ga2c3e9ad00f9266432144774c17eb4b43">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2c3e9ad00f9266432144774c17eb4b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">soviet::createagenda</a> (<a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по различным вопросам кооператива. Инициирует процесс принятия решения с указанными параметрами и обратными вызовами.  <a href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaebb26700c3dca525c3884a04d299e21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaaebb26700c3dca525c3884a04d299e21">soviet::confirmagree</a> (eosio::name coopname, eosio::name administrator, eosio::name username, uint64_t agreement_id)</td></tr>
+<tr class="memdesc:gaaebb26700c3dca525c3884a04d299e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение соглашения участником Подтверждает соглашение участником целевой программы кооператива. Изменяет статус соглашения на "подтверждено" после проверки соответствия пользователя.  <a href="group__public__soviet__actions.html#gaaebb26700c3dca525c3884a04d299e21">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaebb26700c3dca525c3884a04d299e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16d32cbf46cee76dfd03a68eb7a22845"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga16d32cbf46cee76dfd03a68eb7a22845">soviet::declineagree</a> (eosio::name coopname, eosio::name administrator, eosio::name username, uint64_t agreement_id, std::string comment)</td></tr>
+<tr class="memdesc:ga16d32cbf46cee76dfd03a68eb7a22845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение соглашения участником Отклоняет соглашение участником целевой программы кооператива. Изменяет статус соглашения на "отклонено" и отправляет уведомление об отклонении.  <a href="group__public__soviet__actions.html#ga16d32cbf46cee76dfd03a68eb7a22845">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga16d32cbf46cee76dfd03a68eb7a22845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf7eb07dc47fc6800d8b0c51ce5badcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaaf7eb07dc47fc6800d8b0c51ce5badcc">soviet::migrateagree</a> (eosio::name coopname, uint64_t agreement_id)</td></tr>
+<tr class="memdesc:gaaf7eb07dc47fc6800d8b0c51ce5badcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция соглашения из старой таблицы в новую Переносит запись соглашения из таблицы agreements в agreements2 с обновленной структурой документа. Используется для обновления формата хранения соглашений в системе.  <a href="group__public__soviet__actions.html#gaaf7eb07dc47fc6800d8b0c51ce5badcc">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaf7eb07dc47fc6800d8b0c51ce5badcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d7611714492af685ed8479cb9cc90f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6d7611714492af685ed8479cb9cc90f1">soviet::sndagreement</a> (eosio::name coopname, eosio::name administrator, eosio::name username, eosio::name agreement_type, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:ga6d7611714492af685ed8479cb9cc90f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка соглашения участнику Отправляет соглашение участнику кооператива для подписания. Создает новое соглашение или обновляет существующее, привязывая его к целевой программе.  <a href="group__public__soviet__actions.html#ga6d7611714492af685ed8479cb9cc90f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6d7611714492af685ed8479cb9cc90f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8812627956a7743bd2051587bbfd4455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455">soviet::confirmapprv</a> (eosio::name coopname, checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:ga8812627956a7743bd2051587bbfd4455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения.  <a href="group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8812627956a7743bd2051587bbfd4455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a98748faaedc6baab83f91faa45dd90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">soviet::createapprv</a> (<a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ga6a98748faaedc6baab83f91faa45dd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание одобрения документа Создает новое одобрение документа с указанными параметрами и обратными вызовами. Используется для инициации процесса одобрения документов в системе.  <a href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6a98748faaedc6baab83f91faa45dd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab77d1202723cbac3fe6fb5d46c0a899a">soviet::declineapprv</a> (eosio::name coopname, checksum256 approval_hash, std::string reason)</td></tr>
+<tr class="memdesc:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после отклонения.  <a href="group__public__soviet__actions.html#gab77d1202723cbac3fe6fb5d46c0a899a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd08501eb19d2733f9640cae3ae229f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gacd08501eb19d2733f9640cae3ae229f0">soviet::automate</a> (eosio::name coopname, uint64_t board_id, eosio::name member, eosio::name action_type, eosio::name provider, std::string encrypted_private_key)</td></tr>
+<tr class="memdesc:gacd08501eb19d2733f9640cae3ae229f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Настройка автоматизации подписи на решениях Позволяет члену совета настроить автоматическую подпись на решениях по определенным типам вопросов. Создает запись об автоматизации с зашифрованным приватным ключом.  <a href="group__public__soviet__actions.html#gacd08501eb19d2733f9640cae3ae229f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacd08501eb19d2733f9640cae3ae229f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1c59a4f419370fbe9eeedde1b315ad7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa1c59a4f419370fbe9eeedde1b315ad7">soviet::disautomate</a> (eosio::name coopname, uint64_t board_id, eosio::name member, uint64_t automation_id)</td></tr>
+<tr class="memdesc:gaa1c59a4f419370fbe9eeedde1b315ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отключение автоматизации подписи на решениях Позволяет члену совета удалить настройку автоматической подписи на решениях по определенным типам вопросов.  <a href="group__public__soviet__actions.html#gaa1c59a4f419370fbe9eeedde1b315ad7">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa1c59a4f419370fbe9eeedde1b315ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68">soviet::createboard</a> (eosio::name coopname, eosio::name username, eosio::name type, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
+<tr class="memdesc:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового совета кооператива Создает новый совет с указанными членами и параметрами. При создании совета кооператива автоматически создаются базовые соглашения и адрес.  <a href="group__public__soviet__actions.html#ga0db771eea6f6eaa31f4d5e7eaf321c68">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0db771eea6f6eaa31f4d5e7eaf321c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga797ca85c49a4a160412a91d55891d63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga797ca85c49a4a160412a91d55891d63c">soviet::updateboard</a> (eosio::name coopname, eosio::name username, uint64_t board_id, std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt; members, std::string name, std::string description)</td></tr>
+<tr class="memdesc:ga797ca85c49a4a160412a91d55891d63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновление совета или комиссии Обновляет состав и параметры существующего совета кооператива. Позволяет изменить список членов, название и описание совета.  <a href="group__public__soviet__actions.html#ga797ca85c49a4a160412a91d55891d63c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga797ca85c49a4a160412a91d55891d63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga150f34fbb806443797ec4ccfba23135a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga150f34fbb806443797ec4ccfba23135a">soviet::deletebranch</a> (eosio::name coopname, eosio::name braname)</td></tr>
+<tr class="memdesc:ga150f34fbb806443797ec4ccfba23135a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление кооперативного участка Отключает всех участников от удаляемого кооперативного участка. Сбрасывает привязку участников к филиалу при его удалении.  <a href="group__public__soviet__actions.html#ga150f34fbb806443797ec4ccfba23135a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga150f34fbb806443797ec4ccfba23135a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab07923aa68de9ab8ce06e8eb11d7128e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab07923aa68de9ab8ce06e8eb11d7128e">soviet::authorize</a> (eosio::name coopname, eosio::name chairman, uint64_t decision_id, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:gab07923aa68de9ab8ce06e8eb11d7128e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация принятого решения советом Позволяет председателю совета утвердить принятое решение совета. Изменяет статус решения на авторизованное и добавляет документ авторизации.  <a href="group__public__soviet__actions.html#gab07923aa68de9ab8ce06e8eb11d7128e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab07923aa68de9ab8ce06e8eb11d7128e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec30e87d23bbd581029d7358d96376e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaec30e87d23bbd581029d7358d96376e0">soviet::cancelexprd</a> (eosio::name coopname, uint64_t decision_id)</td></tr>
+<tr class="memdesc:gaec30e87d23bbd581029d7358d96376e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена истекшего решения Отменяет решение совета по истечении срока его действия. Отправляет обратный вызов об отклонении и удаляет решение из системы.  <a href="group__public__soviet__actions.html#gaec30e87d23bbd581029d7358d96376e0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaec30e87d23bbd581029d7358d96376e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">soviet::exec</a> (eosio::name executer, eosio::name coopname, uint64_t decision_id)</td></tr>
+<tr class="memdesc:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исполнение решения совета  <a href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74165ae4eeb1dc840ba0f0b0d5ce3ffb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga74165ae4eeb1dc840ba0f0b0d5ce3ffb">soviet::freedecision</a> (eosio::name coopname, eosio::name username, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>, std::string meta)</td></tr>
+<tr class="memdesc:ga74165ae4eeb1dc840ba0f0b0d5ce3ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание свободного решения совета Создает свободное решение совета без привязки к конкретному типу действия. Позволяет инициировать голосование по произвольному вопросу.  <a href="group__public__soviet__actions.html#ga74165ae4eeb1dc840ba0f0b0d5ce3ffb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga74165ae4eeb1dc840ba0f0b0d5ce3ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad81461be6e6c35e4f60ff81aa7f59276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gad81461be6e6c35e4f60ff81aa7f59276">soviet::declinedoc</a> (eosio::name coopname, eosio::name username, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:gad81461be6e6c35e4f60ff81aa7f59276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение документа Отклоняет документ и отправляет уведомление об отклонении. Используется для информирования о непринятии документа в системе.  <a href="group__public__soviet__actions.html#gad81461be6e6c35e4f60ff81aa7f59276">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad81461be6e6c35e4f60ff81aa7f59276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1a6ad2edfd8582d9b755fe2a5ec2df29">soviet::newact</a> (<a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового акта Создает новый акт в системе кооператива. Используется для документирования действий и событий.  <a href="group__public__soviet__actions.html#ga1a6ad2edfd8582d9b755fe2a5ec2df29">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga254917b633f530b839b5d3f21f383c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga254917b633f530b839b5d3f21f383c59">soviet::newagreement</a> (<a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ga254917b633f530b839b5d3f21f383c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом соглашении Отправляет уведомление о новом соглашении, созданном в системе. Используется для информирования о новых соглашениях.  <a href="group__public__soviet__actions.html#ga254917b633f530b839b5d3f21f383c59">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga254917b633f530b839b5d3f21f383c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa07eb6414754e6cd55dfb557edb144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafa07eb6414754e6cd55dfb557edb144d">soviet::newdecision</a> (<a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:gafa07eb6414754e6cd55dfb557edb144d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом решении Отправляет уведомление о новом решении, принятом в системе. Используется для информирования о принятых решениях совета.  <a href="group__public__soviet__actions.html#gafa07eb6414754e6cd55dfb557edb144d">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafa07eb6414754e6cd55dfb557edb144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa11c3294cd04b3a34c618abd459abc28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa11c3294cd04b3a34c618abd459abc28">soviet::newdeclined</a> (<a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:gaa11c3294cd04b3a34c618abd459abc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление об отклоненном документе Отправляет уведомление о документе, который был отклонен в системе. Используется для информирования об отклонении документов.  <a href="group__public__soviet__actions.html#gaa11c3294cd04b3a34c618abd459abc28">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa11c3294cd04b3a34c618abd459abc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9982e72cefe252e6e223b981db0f8933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga9982e72cefe252e6e223b981db0f8933">soviet::newlink</a> (<a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ga9982e72cefe252e6e223b981db0f8933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание новой ссылки Создает новую ссылку в системе кооператива. Используется для связывания документов и объектов.  <a href="group__public__soviet__actions.html#ga9982e72cefe252e6e223b981db0f8933">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9982e72cefe252e6e223b981db0f8933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb68ecae35b076a0780709612f78bed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafb68ecae35b076a0780709612f78bed0">soviet::newpackage</a> (<a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:gafb68ecae35b076a0780709612f78bed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом пакете документов Отправляет уведомление о новом пакете документов, созданном в системе. Используется для информирования о пакетах документов.  <a href="group__public__soviet__actions.html#gafb68ecae35b076a0780709612f78bed0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafb68ecae35b076a0780709612f78bed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5743e671d13f6c9cfe0935e7ca233626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga5743e671d13f6c9cfe0935e7ca233626">soviet::newresolved</a> (<a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:ga5743e671d13f6c9cfe0935e7ca233626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о решенном документе Отправляет уведомление о документе, который был решен в системе. Используется для информирования о завершении обработки документов.  <a href="group__public__soviet__actions.html#ga5743e671d13f6c9cfe0935e7ca233626">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga5743e671d13f6c9cfe0935e7ca233626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa29071426fd7e6907411ae99fc1375ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa29071426fd7e6907411ae99fc1375ad">soviet::newsubmitted</a> (<a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>)</td></tr>
+<tr class="memdesc:gaa29071426fd7e6907411ae99fc1375ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом представленном документе Отправляет уведомление о новом документе, представленном в систему. Используется для информирования о поступлении документов.  <a href="group__public__soviet__actions.html#gaa29071426fd7e6907411ae99fc1375ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa29071426fd7e6907411ae99fc1375ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b5a802c4bfbde38362bdcd87754358f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga3b5a802c4bfbde38362bdcd87754358f">soviet::fundwithdraw</a> (eosio::name coopname, eosio::name username, eosio::name type, uint64_t withdraw_id, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:ga3b5a802c4bfbde38362bdcd87754358f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание решения о выводе средств из фонда Создает решение совета о выводе средств из фонда кооператива. Инициирует процесс голосования по выводу средств.  <a href="group__public__soviet__actions.html#ga3b5a802c4bfbde38362bdcd87754358f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3b5a802c4bfbde38362bdcd87754358f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c954d8bb10dd8ad9396456113c1a3c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1c954d8bb10dd8ad9396456113c1a3c6">soviet::addpartcpnt</a> (eosio::name coopname, eosio::name username, eosio::name braname, eosio::name type, eosio::time_point_sec created_at, eosio::asset initial, eosio::asset minimum, bool spread_initial)</td></tr>
+<tr class="memdesc:ga1c954d8bb10dd8ad9396456113c1a3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление пайщика в кооператив Добавляет действующего пайщика в систему, пропуская этап подписания заявления на вступление. Позволяет установить дату регистрации и распределить взносы по фондам.  <a href="group__public__soviet__actions.html#ga1c954d8bb10dd8ad9396456113c1a3c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1c954d8bb10dd8ad9396456113c1a3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d95b42c5dabc145800eadbe73e33799"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga3d95b42c5dabc145800eadbe73e33799">soviet::block</a> (eosio::name coopname, eosio::name <a class="el" href="eosio_8limitauth__tests_8cpp.html#a9ce601efdf60929be15c98a3f8ae514a">admin</a>, eosio::name username, std::string message)</td></tr>
+<tr class="memdesc:ga3d95b42c5dabc145800eadbe73e33799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка участника кооператива Блокирует участника кооператива, лишая его права голоса и активного статуса. Уменьшает счетчик активных пайщиков при блокировке активного участника.  <a href="group__public__soviet__actions.html#ga3d95b42c5dabc145800eadbe73e33799">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3d95b42c5dabc145800eadbe73e33799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e337dfb68432a15f5f72db6ac09afa6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga7e337dfb68432a15f5f72db6ac09afa6">soviet::cancelreg</a> (eosio::name coopname, eosio::name username, std::string message)</td></tr>
+<tr class="memdesc:ga7e337dfb68432a15f5f72db6ac09afa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена регистрации участника Отменяет регистрацию участника в кооперативе, обнуляя его взносы и блокируя аккаунт. Используется при отмене регистрации до принятия решения советом.  <a href="group__public__soviet__actions.html#ga7e337dfb68432a15f5f72db6ac09afa6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7e337dfb68432a15f5f72db6ac09afa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad057cf491652e6a07e1f9d757c99565e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gad057cf491652e6a07e1f9d757c99565e">soviet::selectbranch</a> (eosio::name coopname, eosio::name username, eosio::name braname, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:gad057cf491652e6a07e1f9d757c99565e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор филиала участником Позволяет участнику выбрать филиал кооператива для привязки. Отправляет уведомления о выборе филиала в систему документооборота.  <a href="group__public__soviet__actions.html#gad057cf491652e6a07e1f9d757c99565e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad057cf491652e6a07e1f9d757c99565e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca4313cc120a12ff6dd71c0a221d457c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaca4313cc120a12ff6dd71c0a221d457c">soviet::unblock</a> (eosio::name coopname, eosio::name <a class="el" href="eosio_8limitauth__tests_8cpp.html#a9ce601efdf60929be15c98a3f8ae514a">admin</a>, eosio::name username, bool is_registration, std::string message)</td></tr>
+<tr class="memdesc:gaca4313cc120a12ff6dd71c0a221d457c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка участника кооператива Разблокирует участника кооператива, восстанавливая его права и статус. Устанавливает участника как активного с правом голоса и взносами.  <a href="group__public__soviet__actions.html#gaca4313cc120a12ff6dd71c0a221d457c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaca4313cc120a12ff6dd71c0a221d457c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11d2b60e00bb7e71702a3422d74c0dab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga11d2b60e00bb7e71702a3422d74c0dab">soviet::createprog</a> (eosio::name coopname, eosio::name username, eosio::name type, std::string title, std::string announce, std::string description, std::string preview, std::string images, eosio::name calculation_type, eosio::asset fixed_membership_contribution, uint64_t membership_percent_fee, bool is_can_coop_spend_share_contributions, std::string meta)</td></tr>
+<tr class="memdesc:ga11d2b60e00bb7e71702a3422d74c0dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание целевой программы Создает новую целевую программу в кооперативе с указанными параметрами. Автоматически создает соответствующее соглашение для программы.  <a href="group__public__soviet__actions.html#ga11d2b60e00bb7e71702a3422d74c0dab">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga11d2b60e00bb7e71702a3422d74c0dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga188d7481810cdd5837126664b7f28854"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga188d7481810cdd5837126664b7f28854">soviet::disableprog</a> (eosio::name coopname, uint64_t program_id)</td></tr>
+<tr class="memdesc:ga188d7481810cdd5837126664b7f28854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отключение целевой программы Отключает существующую целевую программу, устанавливая поле is_active в false. Программа остается в системе, но становится неактивной.  <a href="group__public__soviet__actions.html#ga188d7481810cdd5837126664b7f28854">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga188d7481810cdd5837126664b7f28854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeb52fb6a74619c8130a79c2af552681c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaeb52fb6a74619c8130a79c2af552681c">soviet::editprog</a> (eosio::name coopname, eosio::name username, uint64_t program_id, uint64_t draft_id, std::string title, std::string announce, std::string description, std::string preview, std::string images, std::string meta)</td></tr>
+<tr class="memdesc:gaeb52fb6a74619c8130a79c2af552681c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование целевой программы Модифицирует существующую целевую программу в кооперативе. Позволяет изменить основные параметры программы.  <a href="group__public__soviet__actions.html#gaeb52fb6a74619c8130a79c2af552681c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaeb52fb6a74619c8130a79c2af552681c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cbffb11d43c698868e90f0c20d59eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga3cbffb11d43c698868e90f0c20d59eaf">soviet::init</a> ()</td></tr>
+<tr class="memdesc:ga3cbffb11d43c698868e90f0c20d59eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация контракта совета  <a href="group__public__soviet__actions.html#ga3cbffb11d43c698868e90f0c20d59eaf">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3cbffb11d43c698868e90f0c20d59eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f4c12ffe2187919adbbe21710fa251c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1f4c12ffe2187919adbbe21710fa251c">soviet::migrate</a> ()</td></tr>
+<tr class="memdesc:ga1f4c12ffe2187919adbbe21710fa251c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция данных системы Выполняет миграцию данных системы при обновлении контракта. Вызывается автоматически в CI/CD при каждом деплое.  <a href="group__public__soviet__actions.html#ga1f4c12ffe2187919adbbe21710fa251c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1f4c12ffe2187919adbbe21710fa251c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga826e017b52f0b323a3339da457ecfa43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga826e017b52f0b323a3339da457ecfa43">soviet::cancelvote</a> (eosio::name coopname, eosio::name member, uint64_t decision_id)</td></tr>
+<tr class="memdesc:ga826e017b52f0b323a3339da457ecfa43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена голосования членом совета Позволяет члену совета отменить свой голос, поданный ранее, по конкретному решению. В настоящее время отмена голоса запрещена (функция возвращает ошибку).  <a href="group__public__soviet__actions.html#ga826e017b52f0b323a3339da457ecfa43">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga826e017b52f0b323a3339da457ecfa43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabbae331a03878970e215d96e825f7879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gabbae331a03878970e215d96e825f7879">soviet::voteagainst</a> (std::string version, eosio::name coopname, eosio::name username, uint64_t decision_id, eosio::time_point_sec signed_at, checksum256 signed_hash, eosio::signature signature, eosio::public_key public_key)</td></tr>
+<tr class="memdesc:gabbae331a03878970e215d96e825f7879"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосование против решения совета Позволяет члену совета голосовать против конкретного решения. Проверяет права голоса и предотвращает повторное голосование.  <a href="group__public__soviet__actions.html#gabbae331a03878970e215d96e825f7879">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabbae331a03878970e215d96e825f7879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e0d2caadb056c12bea02dcab9ac8924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga9e0d2caadb056c12bea02dcab9ac8924">soviet::votefor</a> (std::string version, eosio::name coopname, eosio::name username, uint64_t decision_id, eosio::time_point_sec signed_at, checksum256 signed_hash, eosio::signature signature, eosio::public_key public_key)</td></tr>
+<tr class="memdesc:ga9e0d2caadb056c12bea02dcab9ac8924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосование за решение совета Позволяет члену совета голосовать за конкретное решение. После голосования рассчитывается, превысило ли количество голосов "за" заданный процент консенсуса.  <a href="group__public__soviet__actions.html#ga9e0d2caadb056c12bea02dcab9ac8924">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9e0d2caadb056c12bea02dcab9ac8924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb73f5e20f55b7fc79b2d15bce950af4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafb73f5e20f55b7fc79b2d15bce950af4">soviet::addbal</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, std::string memo)</td></tr>
+<tr class="memdesc:gafb73f5e20f55b7fc79b2d15bce950af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление баланса в кошелек программы Добавляет средства в кошелек участника по конкретной программе. Обновляет доступный баланс участника и агрегированные показатели программы.  <a href="group__public__soviet__actions.html#gafb73f5e20f55b7fc79b2d15bce950af4">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafb73f5e20f55b7fc79b2d15bce950af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedca5ce466483eaba6aef2117e31e5a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaedca5ce466483eaba6aef2117e31e5a5">soviet::addmemberfee</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, std::string memo)</td></tr>
+<tr class="memdesc:gaedca5ce466483eaba6aef2117e31e5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление членского взноса в кошелек программы Добавляет членский взнос в кошелек участника по конкретной программе. Обновляет членские взносы участника и агрегированные показатели программы.  <a href="group__public__soviet__actions.html#gaedca5ce466483eaba6aef2117e31e5a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaedca5ce466483eaba6aef2117e31e5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaca5f02c17323b0188c6257024e39448"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaaca5f02c17323b0188c6257024e39448">soviet::blockbal</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, std::string memo)</td></tr>
+<tr class="memdesc:gaaca5f02c17323b0188c6257024e39448"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка баланса в кошельке программы Блокирует средства в кошельке участника по конкретной программе. Переводит средства из доступных в заблокированные.  <a href="group__public__soviet__actions.html#gaaca5f02c17323b0188c6257024e39448">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaca5f02c17323b0188c6257024e39448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf98c65eaa585da91969ef08fd81a1bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaaf98c65eaa585da91969ef08fd81a1bc">soviet::openprogwall</a> (name coopname, name username, name program_type, uint64_t agreement_id)</td></tr>
+<tr class="memdesc:gaaf98c65eaa585da91969ef08fd81a1bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие кошелька программы для участника Создает кошелек программы для участника, если он еще не существует. Инициализирует кошелек с нулевыми балансами.  <a href="group__public__soviet__actions.html#gaaf98c65eaa585da91969ef08fd81a1bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaf98c65eaa585da91969ef08fd81a1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b4f0a1c27dfad0857eff10d92bb9e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga9b4f0a1c27dfad0857eff10d92bb9e96">soviet::subbal</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, bool skip_available_check, std::string memo)</td></tr>
+<tr class="memdesc:ga9b4f0a1c27dfad0857eff10d92bb9e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание баланса из кошелька программы Списывает средства из кошелька участника по конкретной программе. Обновляет доступный баланс участника и агрегированные показатели программы.  <a href="group__public__soviet__actions.html#ga9b4f0a1c27dfad0857eff10d92bb9e96">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9b4f0a1c27dfad0857eff10d92bb9e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24842834e133fdf5dc1049757d30d70a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga24842834e133fdf5dc1049757d30d70a">soviet::submemberfee</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, std::string memo)</td></tr>
+<tr class="memdesc:ga24842834e133fdf5dc1049757d30d70a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание членского взноса из кошелька программы Списывает членский взнос из кошелька участника по конкретной программе. Обновляет членские взносы участника и агрегированные показатели программы.  <a href="group__public__soviet__actions.html#ga24842834e133fdf5dc1049757d30d70a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga24842834e133fdf5dc1049757d30d70a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga255679ef538e05218d10d04b0a7ba404"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga255679ef538e05218d10d04b0a7ba404">soviet::unblockbal</a> (eosio::name coopname, eosio::name username, uint64_t program_id, eosio::asset quantity, std::string memo)</td></tr>
+<tr class="memdesc:ga255679ef538e05218d10d04b0a7ba404"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка баланса в кошельке программы Разблокирует средства в кошельке участника по конкретной программе. Переводит средства из заблокированных в доступные.  <a href="group__public__soviet__actions.html#ga255679ef538e05218d10d04b0a7ba404">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga255679ef538e05218d10d04b0a7ba404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga722484f515076d09aa0440badd6c968d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga722484f515076d09aa0440badd6c968d">soviet::withdraw</a> (eosio::name coopname, eosio::name username, uint64_t withdraw_id, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:ga722484f515076d09aa0440badd6c968d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание решения о выводе средств Создает решение совета о выводе средств участника из кооператива. Инициирует процесс голосования по выводу средств.  <a href="group__public__soviet__actions.html#ga722484f515076d09aa0440badd6c968d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga722484f515076d09aa0440badd6c968d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="gafb73f5e20f55b7fc79b2d15bce950af4" name="gafb73f5e20f55b7fc79b2d15bce950af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb73f5e20f55b7fc79b2d15bce950af4">&#9670;&nbsp;</a></span>addbal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::addbal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление баланса в кошелек программы Добавляет средства в кошелек участника по конкретной программе. Обновляет доступный баланс участника и агрегированные показатели программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для добавления </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaedca5ce466483eaba6aef2117e31e5a5" name="gaedca5ce466483eaba6aef2117e31e5a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedca5ce466483eaba6aef2117e31e5a5">&#9670;&nbsp;</a></span>addmemberfee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::addmemberfee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление членского взноса в кошелек программы Добавляет членский взнос в кошелек участника по конкретной программе. Обновляет членские взносы участника и агрегированные показатели программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для добавления </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga1c954d8bb10dd8ad9396456113c1a3c6" name="ga1c954d8bb10dd8ad9396456113c1a3c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c954d8bb10dd8ad9396456113c1a3c6">&#9670;&nbsp;</a></span>addpartcpnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::addpartcpnt </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>created_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>initial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>minimum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>spread_initial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление пайщика в кооператив Добавляет действующего пайщика в систему, пропуская этап подписания заявления на вступление. Позволяет установить дату регистрации и распределить взносы по фондам. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование филиала </td></tr>
+    <tr><td class="paramname">type</td><td>Тип участника </td></tr>
+    <tr><td class="paramname">created_at</td><td>Дата создания </td></tr>
+    <tr><td class="paramname">initial</td><td>Сумма вступительного взноса </td></tr>
+    <tr><td class="paramname">minimum</td><td>Сумма минимального взноса </td></tr>
+    <tr><td class="paramname">spread_initial</td><td>Флаг распределения вступительного взноса</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaed705497ce78823553360af42f1e0dc6" name="gaed705497ce78823553360af42f1e0dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed705497ce78823553360af42f1e0dc6">&#9670;&nbsp;</a></span>addstaff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::addstaff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structright.html">right</a> &gt;&#160;</td>
+          <td class="paramname"><em>rights</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>position_title</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление персонала кооператива Добавляет нового члена персонала в кооператив с указанием определенных прав на выполнение методов действий вместо совета. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование нового члена персонала </td></tr>
+    <tr><td class="paramname">rights</td><td>Список прав, разрешенных для выполнения указанным членом персонала </td></tr>
+    <tr><td class="paramname">position_title</td><td>Название должности нового члена персонала</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="gab07923aa68de9ab8ce06e8eb11d7128e" name="gab07923aa68de9ab8ce06e8eb11d7128e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab07923aa68de9ab8ce06e8eb11d7128e">&#9670;&nbsp;</a></span>authorize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::authorize </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизация принятого решения советом Позволяет председателю совета утвердить принятое решение совета. Изменяет статус решения на авторизованное и добавляет документ авторизации. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета кооператива </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения для авторизации </td></tr>
+    <tr><td class="paramname">document</td><td>Документ авторизации решения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="gacd08501eb19d2733f9640cae3ae229f0" name="gacd08501eb19d2733f9640cae3ae229f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd08501eb19d2733f9640cae3ae229f0">&#9670;&nbsp;</a></span>automate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::automate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>board_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>action_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>permission_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>encrypted_private_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Настройка автоматизации подписи на решениях Позволяет члену совета настроить автоматическую подпись на решениях по определенным типам вопросов. Создает запись об автоматизации с зашифрованным приватным ключом. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">board_id</td><td>Идентификатор совета кооператива </td></tr>
+    <tr><td class="paramname">member</td><td>Наименование члена совета, который настраивает автоматизацию </td></tr>
+    <tr><td class="paramname">action_type</td><td>Тип действия для автоматизации </td></tr>
+    <tr><td class="paramname">permission_name</td><td>Наименование разрешения для использования в автоматизированном действии </td></tr>
+    <tr><td class="paramname">encrypted_private_key</td><td>Зашифрованный приватный ключ для автоматизации</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>member</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga3d95b42c5dabc145800eadbe73e33799" name="ga3d95b42c5dabc145800eadbe73e33799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d95b42c5dabc145800eadbe73e33799">&#9670;&nbsp;</a></span>block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::block </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>admin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Блокировка участника кооператива Блокирует участника кооператива, лишая его права голоса и активного статуса. Уменьшает счетчик активных пайщиков при блокировке активного участника. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">admin</td><td>Наименование администратора </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование блокируемого участника </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение о причине блокировки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> или <code>admin</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaaca5f02c17323b0188c6257024e39448" name="gaaca5f02c17323b0188c6257024e39448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaca5f02c17323b0188c6257024e39448">&#9670;&nbsp;</a></span>blockbal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::blockbal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Блокировка баланса в кошельке программы Блокирует средства в кошельке участника по конкретной программе. Переводит средства из доступных в заблокированные. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для блокировки </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaec30e87d23bbd581029d7358d96376e0" name="gaec30e87d23bbd581029d7358d96376e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec30e87d23bbd581029d7358d96376e0">&#9670;&nbsp;</a></span>cancelexprd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::cancelexprd </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отмена истекшего решения Отменяет решение совета по истечении срока его действия. Отправляет обратный вызов об отклонении и удаляет решение из системы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения для отмены</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga7e337dfb68432a15f5f72db6ac09afa6" name="ga7e337dfb68432a15f5f72db6ac09afa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e337dfb68432a15f5f72db6ac09afa6">&#9670;&nbsp;</a></span>cancelreg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::cancelreg </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отмена регистрации участника Отменяет регистрацию участника в кооперативе, обнуляя его взносы и блокируя аккаунт. Используется при отмене регистрации до принятия решения советом. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование участника для отмены регистрации </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение о причине отмены регистрации</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_gateway</code> </dd></dl>
+<p >Если отмена регистрации происходит до принятия решения советом - том отменять нам здесь нечего, и мы просто игнорируем код ниже.</p>
+
+</div>
+</div>
+<a id="ga826e017b52f0b323a3339da457ecfa43" name="ga826e017b52f0b323a3339da457ecfa43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga826e017b52f0b323a3339da457ecfa43">&#9670;&nbsp;</a></span>cancelvote()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::cancelvote </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отмена голосования членом совета Позволяет члену совета отменить свой голос, поданный ранее, по конкретному решению. В настоящее время отмена голоса запрещена (функция возвращает ошибку). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">member</td><td>Наименование члена совета, отменяющего свое голосование </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения, по которому голосование было проведено</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>member</code> или <code>permission_level{member</code>, "provide"_n} </dd></dl>
+
+</div>
+</div>
+<a id="gaaebb26700c3dca525c3884a04d299e21" name="gaaebb26700c3dca525c3884a04d299e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaebb26700c3dca525c3884a04d299e21">&#9670;&nbsp;</a></span>confirmagree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::confirmagree </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>administrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>agreement_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение соглашения участником Подтверждает соглашение участником целевой программы кооператива. Изменяет статус соглашения на "подтверждено" после проверки соответствия пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">administrator</td><td>Наименование администратора </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, подтверждающего соглашение </td></tr>
+    <tr><td class="paramname">agreement_id</td><td>Идентификатор соглашения для подтверждения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>administrator</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga8812627956a7743bd2051587bbfd4455" name="ga8812627956a7743bd2051587bbfd4455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8812627956a7743bd2051587bbfd4455">&#9670;&nbsp;</a></span>confirmapprv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::confirmapprv </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>approved_document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Хеш одобрения для подтверждения </td></tr>
+    <tr><td class="paramname">approved_document</td><td>Подтвержденный документ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gab6d338d7362d3874d44277ec3e3a0aa0" name="gab6d338d7362d3874d44277ec3e3a0aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6d338d7362d3874d44277ec3e3a0aa0">&#9670;&nbsp;</a></span>creaddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::creaddress </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structaddress__data.html">address_data</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание нового адреса кооператива Создает новый адрес в системе кооператива с указанными данными. Адрес может быть привязан к конкретному филиалу или быть общим для кооператива. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование филиала (может быть пустым для общего адреса) </td></tr>
+    <tr><td class="paramname">data</td><td>Данные адреса (структура <a class="el" href="structaddress__data.html">address_data</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaea9cdcb4feb799f9f982f1490e5f589d" name="gaea9cdcb4feb799f9f982f1490e5f589d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea9cdcb4feb799f9f982f1490e5f589d">&#9670;&nbsp;</a></span>createagenda()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::createagenda </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по различным вопросам кооператива. Инициирует процесс принятия решения с указанными параметрами и обратными вызовами. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, создающего повестку </td></tr>
+    <tr><td class="paramname">type</td><td>Тип повестки/решения </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш документа или объекта для решения </td></tr>
+    <tr><td class="paramname">callback_contract</td><td>Контракт для обратного вызова </td></tr>
+    <tr><td class="paramname">confirm_callback</td><td>Действие подтверждения </td></tr>
+    <tr><td class="paramname">decline_callback</td><td>Действие отклонения </td></tr>
+    <tr><td class="paramname">statement</td><td>Документ с описанием повестки </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga6a98748faaedc6baab83f91faa45dd90" name="ga6a98748faaedc6baab83f91faa45dd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a98748faaedc6baab83f91faa45dd90">&#9670;&nbsp;</a></span>createapprv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::createapprv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание одобрения документа Создает новое одобрение документа с указанными параметрами и обратными вызовами. Используется для инициации процесса одобрения документов в системе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, создающего одобрение </td></tr>
+    <tr><td class="paramname">document</td><td>Документ для одобрения </td></tr>
+    <tr><td class="paramname">type</td><td>Тип одобрения </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Хеш одобрения </td></tr>
+    <tr><td class="paramname">callback_contract</td><td>Контракт для обратного вызова </td></tr>
+    <tr><td class="paramname">callback_action_approve</td><td>Действие подтверждения </td></tr>
+    <tr><td class="paramname">callback_action_decline</td><td>Действие отклонения </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga0db771eea6f6eaa31f4d5e7eaf321c68" name="ga0db771eea6f6eaa31f4d5e7eaf321c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0db771eea6f6eaa31f4d5e7eaf321c68">&#9670;&nbsp;</a></span>createboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::createboard </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt;&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание нового совета кооператива Создает новый совет с указанными членами и параметрами. При создании совета кооператива автоматически создаются базовые соглашения и адрес. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование председателя кооператива </td></tr>
+    <tr><td class="paramname">type</td><td>Тип совета (soviet, executive, audit, other) </td></tr>
+    <tr><td class="paramname">members</td><td>Список членов совета </td></tr>
+    <tr><td class="paramname">name</td><td>Название совета </td></tr>
+    <tr><td class="paramname">description</td><td>Описание совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga11d2b60e00bb7e71702a3422d74c0dab" name="ga11d2b60e00bb7e71702a3422d74c0dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11d2b60e00bb7e71702a3422d74c0dab">&#9670;&nbsp;</a></span>createprog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::createprog </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>announce</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>preview</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>calculation_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>fixed_membership_contribution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>membership_percent_fee</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_can_coop_spend_share_contributions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание целевой программы Создает новую целевую программу в кооперативе с указанными параметрами. Автоматически создает соответствующее соглашение для программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, создающего программу </td></tr>
+    <tr><td class="paramname">type</td><td>Тип программы </td></tr>
+    <tr><td class="paramname">title</td><td>Название программы </td></tr>
+    <tr><td class="paramname">announce</td><td>Объявление о программе </td></tr>
+    <tr><td class="paramname">description</td><td>Описание программы </td></tr>
+    <tr><td class="paramname">preview</td><td>Предварительный просмотр </td></tr>
+    <tr><td class="paramname">images</td><td>Изображения для программы </td></tr>
+    <tr><td class="paramname">calculation_type</td><td>Тип расчета взносов (free, absolute, relative) </td></tr>
+    <tr><td class="paramname">fixed_membership_contribution</td><td>Фиксированный членский взнос </td></tr>
+    <tr><td class="paramname">membership_percent_fee</td><td>Процент членского взноса </td></tr>
+    <tr><td class="paramname">is_can_coop_spend_share_contributions</td><td>Флаг возможности трат кооперативом </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga16d32cbf46cee76dfd03a68eb7a22845" name="ga16d32cbf46cee76dfd03a68eb7a22845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga16d32cbf46cee76dfd03a68eb7a22845">&#9670;&nbsp;</a></span>declineagree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::declineagree </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>administrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>agreement_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение соглашения участником Отклоняет соглашение участником целевой программы кооператива. Изменяет статус соглашения на "отклонено" и отправляет уведомление об отклонении. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">administrator</td><td>Наименование администратора </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, отклоняющего соглашение </td></tr>
+    <tr><td class="paramname">agreement_id</td><td>Идентификатор соглашения для отклонения </td></tr>
+    <tr><td class="paramname">comment</td><td>Комментарий к отклонению</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>administrator</code> </dd></dl>
+
+</div>
+</div>
+<a id="gab77d1202723cbac3fe6fb5d46c0a899a" name="gab77d1202723cbac3fe6fb5d46c0a899a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab77d1202723cbac3fe6fb5d46c0a899a">&#9670;&nbsp;</a></span>declineapprv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::declineapprv </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после отклонения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Хеш одобрения для отклонения </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения одобрения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gad81461be6e6c35e4f60ff81aa7f59276" name="gad81461be6e6c35e4f60ff81aa7f59276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad81461be6e6c35e4f60ff81aa7f59276">&#9670;&nbsp;</a></span>declinedoc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::declinedoc </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение документа Отклоняет документ и отправляет уведомление об отклонении. Используется для информирования о непринятии документа в системе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, отклоняющего документ </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш документа для отклонения </td></tr>
+    <tr><td class="paramname">document</td><td>Документ для отклонения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="gab294d7ecdfdb12636d28e7dc65524e68" name="gab294d7ecdfdb12636d28e7dc65524e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab294d7ecdfdb12636d28e7dc65524e68">&#9670;&nbsp;</a></span>deladdress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::deladdress </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>address_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление адреса кооператива Удаляет существующий адрес из системы кооператива по его идентификатору. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">address_id</td><td>Идентификатор адреса для удаления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga150f34fbb806443797ec4ccfba23135a" name="ga150f34fbb806443797ec4ccfba23135a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga150f34fbb806443797ec4ccfba23135a">&#9670;&nbsp;</a></span>deletebranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::deletebranch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление кооперативного участка Отключает всех участников от удаляемого кооперативного участка. Сбрасывает привязку участников к филиалу при его удалении. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_branch</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga188d7481810cdd5837126664b7f28854" name="ga188d7481810cdd5837126664b7f28854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga188d7481810cdd5837126664b7f28854">&#9670;&nbsp;</a></span>disableprog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::disableprog </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отключение целевой программы Отключает существующую целевую программу, устанавливая поле is_active в false. Программа остается в системе, но становится неактивной. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы для отключения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaa1c59a4f419370fbe9eeedde1b315ad7" name="gaa1c59a4f419370fbe9eeedde1b315ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1c59a4f419370fbe9eeedde1b315ad7">&#9670;&nbsp;</a></span>disautomate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::disautomate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>board_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>member</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>automation_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отключение автоматизации подписи на решениях Позволяет члену совета удалить настройку автоматической подписи на решениях по определенным типам вопросов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">board_id</td><td>Идентификатор совета кооператива </td></tr>
+    <tr><td class="paramname">member</td><td>Наименование члена совета, который удаляет автоматизацию </td></tr>
+    <tr><td class="paramname">automation_id</td><td>Идентификатор автоматизации для удаления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>member</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga7f4b8c38b31645b63c94b008ce2ffa06" name="ga7f4b8c38b31645b63c94b008ce2ffa06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7f4b8c38b31645b63c94b008ce2ffa06">&#9670;&nbsp;</a></span>editaddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::editaddress </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>address_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structaddress__data.html">address_data</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Редактирование адреса кооператива Изменяет данные существующего адреса в системе кооператива. Позволяет обновить привязку к филиалу и данные адреса. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование филиала (может быть пустым для общего адреса) </td></tr>
+    <tr><td class="paramname">address_id</td><td>Идентификатор адреса для редактирования </td></tr>
+    <tr><td class="paramname">data</td><td>Новые данные адреса (структура <a class="el" href="structaddress__data.html">address_data</a>)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaeb52fb6a74619c8130a79c2af552681c" name="gaeb52fb6a74619c8130a79c2af552681c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeb52fb6a74619c8130a79c2af552681c">&#9670;&nbsp;</a></span>editprog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::editprog </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>draft_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>announce</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>preview</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Редактирование целевой программы Модифицирует существующую целевую программу в кооперативе. Позволяет изменить основные параметры программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, редактирующего программу </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы для редактирования </td></tr>
+    <tr><td class="paramname">draft_id</td><td>Идентификатор шаблона </td></tr>
+    <tr><td class="paramname">title</td><td>Название программы </td></tr>
+    <tr><td class="paramname">announce</td><td>Объявление о программе </td></tr>
+    <tr><td class="paramname">description</td><td>Описание программы </td></tr>
+    <tr><td class="paramname">preview</td><td>Предварительный просмотр </td></tr>
+    <tr><td class="paramname">images</td><td>Изображения для программы </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga2df3ffc1ac9da194963f3be0aadc4139" name="ga2df3ffc1ac9da194963f3be0aadc4139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2df3ffc1ac9da194963f3be0aadc4139">&#9670;&nbsp;</a></span>exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::exec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>executer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Исполнение решения совета </p>
+<p >Этот метод позволяет исполнить решение совета. Исполнение решения включает в себя проверку, что решение существует, что оно было авторизовано, и что оно еще не было выполнено. В зависимости от типа решения, вызывается соответствующая функция для его реализации.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">executer</td><td>Имя аккаунта, который исполняет решение </td></tr>
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения для исполнения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>executer</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga74165ae4eeb1dc840ba0f0b0d5ce3ffb" name="ga74165ae4eeb1dc840ba0f0b0d5ce3ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74165ae4eeb1dc840ba0f0b0d5ce3ffb">&#9670;&nbsp;</a></span>freedecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::freedecision </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание свободного решения совета Создает свободное решение совета без привязки к конкретному типу действия. Позволяет инициировать голосование по произвольному вопросу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, создающего решение </td></tr>
+    <tr><td class="paramname">document</td><td>Документ с описанием решения </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga3b5a802c4bfbde38362bdcd87754358f" name="ga3b5a802c4bfbde38362bdcd87754358f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b5a802c4bfbde38362bdcd87754358f">&#9670;&nbsp;</a></span>fundwithdraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::fundwithdraw </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>withdraw_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание решения о выводе средств из фонда Создает решение совета о выводе средств из фонда кооператива. Инициирует процесс голосования по выводу средств. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип вывода средств </td></tr>
+    <tr><td class="paramname">withdraw_id</td><td>Идентификатор вывода средств </td></tr>
+    <tr><td class="paramname">document</td><td>Документ с описанием вывода средств</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_fund</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga3cbffb11d43c698868e90f0c20d59eaf" name="ga3cbffb11d43c698868e90f0c20d59eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3cbffb11d43c698868e90f0c20d59eaf">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация контракта совета </p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_system</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga1f4c12ffe2187919adbbe21710fa251c" name="ga1f4c12ffe2187919adbbe21710fa251c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f4c12ffe2187919adbbe21710fa251c">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Миграция данных системы Выполняет миграцию данных системы при обновлении контракта. Вызывается автоматически в CI/CD при каждом деплое. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaaf7eb07dc47fc6800d8b0c51ce5badcc" name="gaaf7eb07dc47fc6800d8b0c51ce5badcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf7eb07dc47fc6800d8b0c51ce5badcc">&#9670;&nbsp;</a></span>migrateagree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::migrateagree </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>agreement_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Миграция соглашения из старой таблицы в новую Переносит запись соглашения из таблицы agreements в agreements2 с обновленной структурой документа. Используется для обновления формата хранения соглашений в системе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">agreement_id</td><td>Идентификатор соглашения для миграции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga1a6ad2edfd8582d9b755fe2a5ec2df29" name="ga1a6ad2edfd8582d9b755fe2a5ec2df29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a6ad2edfd8582d9b755fe2a5ec2df29">&#9670;&nbsp;</a></span>newact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newact </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание нового акта Создает новый акт в системе кооператива. Используется для документирования действий и событий. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш акта </td></tr>
+    <tr><td class="paramname">document</td><td>Документ акта</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga254917b633f530b839b5d3f21f383c59" name="ga254917b633f530b839b5d3f21f383c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga254917b633f530b839b5d3f21f383c59">&#9670;&nbsp;</a></span>newagreement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newagreement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление о новом соглашении Отправляет уведомление о новом соглашении, созданном в системе. Используется для информирования о новых соглашениях. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип соглашения </td></tr>
+    <tr><td class="paramname">document</td><td>Документ соглашения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gafa07eb6414754e6cd55dfb557edb144d" name="gafa07eb6414754e6cd55dfb557edb144d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa07eb6414754e6cd55dfb557edb144d">&#9670;&nbsp;</a></span>newdecision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newdecision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление о новом решении Отправляет уведомление о новом решении, принятом в системе. Используется для информирования о принятых решениях совета. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип решения </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш решения </td></tr>
+    <tr><td class="paramname">authorization</td><td>Документ авторизации</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaa11c3294cd04b3a34c618abd459abc28" name="gaa11c3294cd04b3a34c618abd459abc28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa11c3294cd04b3a34c618abd459abc28">&#9670;&nbsp;</a></span>newdeclined()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newdeclined </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление об отклоненном документе Отправляет уведомление о документе, который был отклонен в системе. Используется для информирования об отклонении документов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш документа </td></tr>
+    <tr><td class="paramname">document</td><td>Документ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga9982e72cefe252e6e223b981db0f8933" name="ga9982e72cefe252e6e223b981db0f8933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9982e72cefe252e6e223b981db0f8933">&#9670;&nbsp;</a></span>newlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newlink </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание новой ссылки Создает новую ссылку в системе кооператива. Используется для связывания документов и объектов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш ссылки </td></tr>
+    <tr><td class="paramname">document</td><td>Документ ссылки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gafb68ecae35b076a0780709612f78bed0" name="gafb68ecae35b076a0780709612f78bed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb68ecae35b076a0780709612f78bed0">&#9670;&nbsp;</a></span>newpackage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newpackage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление о новом пакете документов Отправляет уведомление о новом пакете документов, созданном в системе. Используется для информирования о пакетах документов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип пакета </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш пакета </td></tr>
+    <tr><td class="paramname">document</td><td>Документ пакета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga5743e671d13f6c9cfe0935e7ca233626" name="ga5743e671d13f6c9cfe0935e7ca233626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5743e671d13f6c9cfe0935e7ca233626">&#9670;&nbsp;</a></span>newresolved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newresolved </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление о решенном документе Отправляет уведомление о документе, который был решен в системе. Используется для информирования о завершении обработки документов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип документа </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш документа </td></tr>
+    <tr><td class="paramname">document</td><td>Документ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaa29071426fd7e6907411ae99fc1375ad" name="gaa29071426fd7e6907411ae99fc1375ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa29071426fd7e6907411ae99fc1375ad">&#9670;&nbsp;</a></span>newsubmitted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::newsubmitted </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уведомление о новом представленном документе Отправляет уведомление о новом документе, представленном в систему. Используется для информирования о поступлении документов. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">type</td><td>Тип документа </td></tr>
+    <tr><td class="paramname">hash</td><td>Хеш документа </td></tr>
+    <tr><td class="paramname">document</td><td>Документ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaaf98c65eaa585da91969ef08fd81a1bc" name="gaaf98c65eaa585da91969ef08fd81a1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf98c65eaa585da91969ef08fd81a1bc">&#9670;&nbsp;</a></span>openprogwall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::openprogwall </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>program_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>agreement_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открытие кошелька программы для участника Создает кошелек программы для участника, если он еще не существует. Инициализирует кошелек с нулевыми балансами. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_type</td><td>Тип программы </td></tr>
+    <tr><td class="paramname">agreement_id</td><td>Идентификатор соглашения (может быть 0)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gab2a5baad145e14f45937617b98d7c73c" name="gab2a5baad145e14f45937617b98d7c73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2a5baad145e14f45937617b98d7c73c">&#9670;&nbsp;</a></span>rmstaff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::rmstaff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление персонала из кооператива Удаляет члена персонала из кооператива, лишая его всех прав и доступа к системе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование удаляемого члена персонала</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="gad057cf491652e6a07e1f9d757c99565e" name="gad057cf491652e6a07e1f9d757c99565e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad057cf491652e6a07e1f9d757c99565e">&#9670;&nbsp;</a></span>selectbranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::selectbranch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Выбор филиала участником Позволяет участнику выбрать филиал кооператива для привязки. Отправляет уведомления о выборе филиала в систему документооборота. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование участника </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование выбранного филиала </td></tr>
+    <tr><td class="paramname">document</td><td>Документ с подтверждением выбора филиала</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaff82a212963ad56c994fca0d30548802" name="gaff82a212963ad56c994fca0d30548802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff82a212963ad56c994fca0d30548802">&#9670;&nbsp;</a></span>setrights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::setrights </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structright.html">right</a> &gt;&#160;</td>
+          <td class="paramname"><em>rights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка прав для персонала кооператива Устанавливает конкретные права для члена персонала в кооперативе. Позволяет изменить список разрешенных действий для указанного сотрудника. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">chairman</td><td>Наименование председателя совета </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование члена персонала, для которого устанавливаются права </td></tr>
+    <tr><td class="paramname">rights</td><td>Вектор прав, которые будут установлены для указанного члена персонала</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>chairman</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga6d7611714492af685ed8479cb9cc90f1" name="ga6d7611714492af685ed8479cb9cc90f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d7611714492af685ed8479cb9cc90f1">&#9670;&nbsp;</a></span>sndagreement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::sndagreement </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>administrator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>agreement_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправка соглашения участнику Отправляет соглашение участнику кооператива для подписания. Создает новое соглашение или обновляет существующее, привязывая его к целевой программе. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">administrator</td><td>Наименование администратора </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, которому отправляется соглашение </td></tr>
+    <tr><td class="paramname">agreement_type</td><td>Тип соглашения </td></tr>
+    <tr><td class="paramname">document</td><td>Документ соглашения для подписания</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> или <code>administrator</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga9b4f0a1c27dfad0857eff10d92bb9e96" name="ga9b4f0a1c27dfad0857eff10d92bb9e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b4f0a1c27dfad0857eff10d92bb9e96">&#9670;&nbsp;</a></span>subbal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::subbal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_available_check</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Списание баланса из кошелька программы Списывает средства из кошелька участника по конкретной программе. Обновляет доступный баланс участника и агрегированные показатели программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для списания </td></tr>
+    <tr><td class="paramname">skip_available_check</td><td>Флаг пропуска проверки достаточности средств </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga24842834e133fdf5dc1049757d30d70a" name="ga24842834e133fdf5dc1049757d30d70a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24842834e133fdf5dc1049757d30d70a">&#9670;&nbsp;</a></span>submemberfee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::submemberfee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Списание членского взноса из кошелька программы Списывает членский взнос из кошелька участника по конкретной программе. Обновляет членские взносы участника и агрегированные показатели программы. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для списания </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="gaca4313cc120a12ff6dd71c0a221d457c" name="gaca4313cc120a12ff6dd71c0a221d457c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca4313cc120a12ff6dd71c0a221d457c">&#9670;&nbsp;</a></span>unblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::unblock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>admin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_registration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разблокировка участника кооператива Разблокирует участника кооператива, восстанавливая его права и статус. Устанавливает участника как активного с правом голоса и взносами. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">admin</td><td>Наименование администратора </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование разблокируемого участника </td></tr>
+    <tr><td class="paramname">is_registration</td><td>Флаг регистрации (не используется) </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение о причине разблокировки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> или <code>admin</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga255679ef538e05218d10d04b0a7ba404" name="ga255679ef538e05218d10d04b0a7ba404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga255679ef538e05218d10d04b0a7ba404">&#9670;&nbsp;</a></span>unblockbal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::unblockbal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разблокировка баланса в кошельке программы Разблокирует средства в кошельке участника по конкретной программе. Переводит средства из заблокированных в доступные. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">program_id</td><td>Идентификатор программы </td></tr>
+    <tr><td class="paramname">quantity</td><td>Количество средств для разблокировки </td></tr>
+    <tr><td class="paramname">memo</td><td>Примечание к операции</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта в белом списке контрактов </dd></dl>
+
+</div>
+</div>
+<a id="ga797ca85c49a4a160412a91d55891d63c" name="ga797ca85c49a4a160412a91d55891d63c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga797ca85c49a4a160412a91d55891d63c">&#9670;&nbsp;</a></span>updateboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::updateboard </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>board_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structboard__member.html">board_member</a> &gt;&#160;</td>
+          <td class="paramname"><em>members</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновление совета или комиссии Обновляет состав и параметры существующего совета кооператива. Позволяет изменить список членов, название и описание совета. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование председателя кооператива </td></tr>
+    <tr><td class="paramname">board_id</td><td>Идентификатор совета для обновления </td></tr>
+    <tr><td class="paramname">members</td><td>Список членов совета </td></tr>
+    <tr><td class="paramname">name</td><td>Название совета </td></tr>
+    <tr><td class="paramname">description</td><td>Описание совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga2c3e9ad00f9266432144774c17eb4b43" name="ga2c3e9ad00f9266432144774c17eb4b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c3e9ad00f9266432144774c17eb4b43">&#9670;&nbsp;</a></span>validate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::validate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Предварительная валидация решения совета персоналом Позволяет персоналу подтвердить поступление оплаты или провести другую форму валидации перед принятием советом какого-либо решения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование члена персонала, проводящего валидацию </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения, которое подлежит валидации</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+
+</div>
+</div>
+<a id="gabbae331a03878970e215d96e825f7879" name="gabbae331a03878970e215d96e825f7879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbae331a03878970e215d96e825f7879">&#9670;&nbsp;</a></span>voteagainst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::voteagainst </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>signed_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>signed_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::signature&#160;</td>
+          <td class="paramname"><em>signature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::public_key&#160;</td>
+          <td class="paramname"><em>public_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Голосование против решения совета Позволяет члену совета голосовать против конкретного решения. Проверяет права голоса и предотвращает повторное голосование. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">version</td><td>Версия протокола </td></tr>
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование члена совета, голосующего против решения </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения для голосования </td></tr>
+    <tr><td class="paramname">signed_at</td><td>Время подписи </td></tr>
+    <tr><td class="paramname">signed_hash</td><td>Подписанный хеш </td></tr>
+    <tr><td class="paramname">signature</td><td>Подпись </td></tr>
+    <tr><td class="paramname">public_key</td><td>Публичный ключ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> или <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga9e0d2caadb056c12bea02dcab9ac8924" name="ga9e0d2caadb056c12bea02dcab9ac8924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e0d2caadb056c12bea02dcab9ac8924">&#9670;&nbsp;</a></span>votefor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::votefor </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>decision_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>signed_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>signed_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::signature&#160;</td>
+          <td class="paramname"><em>signature</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::public_key&#160;</td>
+          <td class="paramname"><em>public_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Голосование за решение совета Позволяет члену совета голосовать за конкретное решение. После голосования рассчитывается, превысило ли количество голосов "за" заданный процент консенсуса. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">version</td><td>Версия протокола </td></tr>
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование члена совета, голосующего за решение </td></tr>
+    <tr><td class="paramname">decision_id</td><td>Идентификатор решения для голосования </td></tr>
+    <tr><td class="paramname">signed_at</td><td>Время подписи </td></tr>
+    <tr><td class="paramname">signed_hash</td><td>Подписанный хеш </td></tr>
+    <tr><td class="paramname">signature</td><td>Подпись </td></tr>
+    <tr><td class="paramname">public_key</td><td>Публичный ключ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> или <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga722484f515076d09aa0440badd6c968d" name="ga722484f515076d09aa0440badd6c968d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga722484f515076d09aa0440badd6c968d">&#9670;&nbsp;</a></span>withdraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::withdraw </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>withdraw_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание решения о выводе средств Создает решение совета о выводе средств участника из кооператива. Инициирует процесс голосования по выводу средств. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя </td></tr>
+    <tr><td class="paramname">withdraw_id</td><td>Идентификатор вывода средств </td></tr>
+    <tr><td class="paramname">statement</td><td>Документ с описанием вывода средств</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_gateway</code> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

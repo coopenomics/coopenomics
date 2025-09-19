@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Список членов всех файлов</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('globals_func.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
+<li>action()&#160;:&#160;<a class="el" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">regcomplete.cpp</a></li>
+<li>add_branch_count()&#160;:&#160;<a class="el" href="lib_2branch_8hpp.html#a367a281392e1d478e40e1c86e83becaf">branch.hpp</a></li>
+<li>add_to_expected_table()&#160;:&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ad6e8251cfab108de26bcbfe67caea153">eosio.system_blockinfo_tests.cpp</a></li>
+<li>add_vote_against()&#160;:&#160;<a class="el" href="voteagainst_8cpp.html#afbc862754ea1cbbd9328b66412d528d0">voteagainst.cpp</a></li>
+<li>add_vote_for()&#160;:&#160;<a class="el" href="votefor_8cpp.html#a2e27b7646ed9a8b8666e763c2dfdfb8c">votefor.cpp</a></li>
+<li>alice()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a46472b13ff45b33e4d3dca09c41a212d">eosio.msig_tests.cpp</a></li>
+<li>apply()&#160;:&#160;<a class="el" href="blockinfo__tester_8cpp.html#a979735e53c71ba52bb8515d2c4437059">blockinfo_tester.cpp</a></li>
+<li>approve()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#a84898fa09d41586e4d9e4654a708801f">eosio.wrap_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
+<li>BOOST_AUTO_TEST_CASE()&#160;:&#160;<a class="el" href="eosio_8powerup__tests_8cpp.html#a530d2c9bc2c763953817fd683520a598">eosio.powerup_tests.cpp</a></li>
+<li>BOOST_CHECK()&#160;:&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a2495b4e23b5fcc416a80f6aea86bda2a">eosio.system_blockinfo_tests.cpp</a></li>
+<li>BOOST_CHECK_EXCEPTION()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#a370f5e618a9eb0a9f4d8a40786599368">eosio.token_tests.cpp</a></li>
+<li>BOOST_FIXTURE_TEST_CASE()&#160;:&#160;<a class="el" href="eosio_8limitauth__tests_8cpp.html#a84426e8e0449c2423a13c25eba026b63">eosio.limitauth_tests.cpp</a>, <a class="el" href="fund_8tests_8cpp.html#a9f60eb43217bec8654c397691e7a8cdc">fund.tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#a2e65df94faff8c29f877ab179f19f91c">eosio.wrap_tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#a22ac78b4a13caada70ea38e67eea0e6c">eosio.token_tests.cpp</a>, <a class="el" href="eosio_8powerup__tests_8cpp.html#a5a2b8674e443b97a868a914aa6ac840b">eosio.powerup_tests.cpp</a>, <a class="el" href="eosio_8msig__tests_8cpp.html#affc7d0d657930d056f5a10aa73656c79">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8limitauth__tests_8cpp.html#a9fe6f7b4063310d5a5bad61b2e7c4385">eosio.limitauth_tests.cpp</a></li>
+<li>BOOST_REQUIRE()&#160;:&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a471c6cb052d56a242d74b9e9d0fa9375">eosio.system_blockinfo_tests.cpp</a></li>
+<li>BOOST_REQUIRE_EQUAL()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#a5de0d126b87c0b7e708587751bde3b74">eosio.token_tests.cpp</a>, <a class="el" href="fund_8tests_8cpp.html#a5e4ae1515d8571dfcff1cee507ff9028">fund.tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#afcdb9ead271d07032461194c9f4bef42">eosio.token_tests.cpp</a>, <a class="el" href="eosio_8msig__tests_8cpp.html#aaf2833c9a5715e915885ca9b3f1d95e5">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#a33ea5666e328012a7aab703d950837d1">eosio.token_tests.cpp</a></li>
+<li>BOOST_REQUIRE_EXCEPTION()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#ae2769fc43413630418d86ae9d0bfc792">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#a0feac2e6d7980da3b237e77826ecf3aa">eosio.wrap_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>carol()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#a84f3ef531d0454450811683adcd27d01">eosio.wrap_tests.cpp</a></li>
+<li>CERO()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#a557af8169ceb02745b361bc7ede1d732">eosio.token_tests.cpp</a></li>
+<li>check_auth_and_get_payer()&#160;:&#160;<a class="el" href="accounts_8hpp.html#a279540c4f50bc8192950720c2061ba0a">accounts.hpp</a></li>
+<li>check_auth_and_get_payer_or_fail()&#160;:&#160;<a class="el" href="accounts_8hpp.html#a5bb4e9c219f0aec3e512687cb1e0bdf9">accounts.hpp</a></li>
+<li>check_auth_or_fail()&#160;:&#160;<a class="el" href="admins_8hpp.html#a1ae7be5fe4aa86080b1ac566ba9f7669">admins.hpp</a></li>
+<li>check_for_exist_board_by_type()&#160;:&#160;<a class="el" href="coops_8hpp.html#a7071d280b47702321a02ac12afe8f74b">coops.hpp</a></li>
+<li>check_traces()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a01c8b9f1c81f2cb3bb55a14e9e354af7">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#afe9f4ddeb5ea957f9f05f6770adcbb8e">eosio.wrap_tests.cpp</a></li>
+<li>check_valid_program()&#160;:&#160;<a class="el" href="programs_8hpp.html#abecd59b9df08fbfab10a35b78ba7c83c">programs.hpp</a></li>
+<li>checksum256_to_hex()&#160;:&#160;<a class="el" href="utils_8hpp.html#a566da1d3a8d4e7c6c29afcf13fae249a">utils.hpp</a></li>
+<li>combine_checksum_ids()&#160;:&#160;<a class="el" href="utils_8hpp.html#a5dc7f20f695363268de62e5415a51946">utils.hpp</a></li>
+<li>combine_ids()&#160;:&#160;<a class="el" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">utils.hpp</a></li>
+<li>create_account_with_resources()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a791a80df1bef25c60fe34353c84ed5bc">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#ad6a515ee9857a59bd933ac9a613c3897">eosio.system_blockinfo_tests.cpp</a></li>
+<li>create_accounts()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a67926f84ff8b458db07f5aaddf296176">eosio.msig_tests.cpp</a></li>
+<li>create_currency()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#adc8f56b9d54bae4273769d6bdbea3606">eosio.msig_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>eosio()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#ab38bf180fbf7dbec7e687ff4d97a989f">eosio.msig_tests.cpp</a></li>
+<li>eosio_assert_message_is()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#ae53689a88727b2583f9317c0b61ff4fd">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#ae53689a88727b2583f9317c0b61ff4fd">eosio.wrap_tests.cpp</a></li>
+<li>erase()&#160;:&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a94549b8e5cd43ffaf0c3f07ab82b401b">eosio.system_blockinfo_tests.cpp</a></li>
+<li>extract_registry_id_from_meta()&#160;:&#160;<a class="el" href="utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99">utils.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>FC_LOG_AND_RETHROW()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a669274b5451894bbce51c457655f0768">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#af5bf52e9919e348118ed7570478adaac">eosio.token_tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#a57b9f3fe8c9902c50c6f8f628bad2360">eosio.wrap_tests.cpp</a>, <a class="el" href="fund_8tests_8cpp.html#ab327ed628a68ca905f4ac37a52a02248">fund.tests.cpp</a></li>
+<li>FC_REFLECT()&#160;:&#160;<a class="el" href="eosio_8powerup__tests_8cpp.html#ac54c2c31cec9f571adb5f82176460e0b">eosio.powerup_tests.cpp</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a476f5ce4da004fbf486836a28856f1cd">eosio.system_blockinfo_tests.cpp</a>, <a class="el" href="eosio_8system__tests_8cpp.html#a7a73befe9466adfba835a09c92995a76">eosio.system_tests.cpp</a></li>
+<li>for()&#160;:&#160;<a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a33208b97b72a5c9529da7213df41fb6a">eosio.system_blockinfo_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>generate()&#160;:&#160;<a class="el" href="utils_8hpp.html#a36967481836d936c693f124a9ce33735">utils.hpp</a></li>
+<li>generate_random_name()&#160;:&#160;<a class="el" href="utils_8hpp.html#a64d2f38da75830fc3ccd9826391cfdc8">utils.hpp</a></li>
+<li>get_account_or_fail()&#160;:&#160;<a class="el" href="accounts_8hpp.html#a1bde62c65a797e9ca1dac96c5194f915">accounts.hpp</a></li>
+<li>get_board_by_id()&#160;:&#160;<a class="el" href="coops_8hpp.html#a3541ce0c65865661aeb7230f280abf3f">coops.hpp</a></li>
+<li>get_board_by_type_or_fail()&#160;:&#160;<a class="el" href="coops_8hpp.html#a5975688eadd5a074161c268985282581">coops.hpp</a></li>
+<li>get_branch_or_fail()&#160;:&#160;<a class="el" href="lib_2branch_8hpp.html#a95889df16c361ff1b2f72d95f4019a44">branch.hpp</a></li>
+<li>get_coagreement_or_fail()&#160;:&#160;<a class="el" href="agreements_8hpp.html#a5ecb7c5b155972dc3bfbc2b78e96ea4d">agreements.hpp</a></li>
+<li>get_cooperative_or_fail()&#160;:&#160;<a class="el" href="accounts_8hpp.html#a66254c3afd684e0cf93702b7b64a90ce">accounts.hpp</a></li>
+<li>get_draft_id()&#160;:&#160;<a class="el" href="programs_8hpp.html#a5480d0ee4bda1f1fe5854cf115ae3a4b">programs.hpp</a></li>
+<li>get_global_id()&#160;:&#160;<a class="el" href="lib_2counts_8hpp.html#aeb06beaf4402f0222167ef9d12eacd5c">counts.hpp</a></li>
+<li>get_global_id_in_scope()&#160;:&#160;<a class="el" href="lib_2counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">counts.hpp</a></li>
+<li>get_id()&#160;:&#160;<a class="el" href="lib_2counts_8hpp.html#ac5a56feb4e32856beed484ddddf4a3b8">counts.hpp</a></li>
+<li>get_participant_or_fail()&#160;:&#160;<a class="el" href="coops_8hpp.html#a32f674661ddff60e573e83fa952d16dd">coops.hpp</a></li>
+<li>get_program_id()&#160;:&#160;<a class="el" href="programs_8hpp.html#acc1e7ef6047a61edfc0a4f00917d2770">programs.hpp</a></li>
+<li>get_program_or_fail()&#160;:&#160;<a class="el" href="programs_8hpp.html#a8c6258fd9e9d3d1a34b1e2dd4788e52e">programs.hpp</a></li>
+<li>get_program_wallet()&#160;:&#160;<a class="el" href="programs_8hpp.html#aa9f495bc694886a526fb7d7f3d67f4c8">programs.hpp</a></li>
+<li>get_scoped_draft_by_registry_or_fail()&#160;:&#160;<a class="el" href="drafts_8hpp.html#af3cfefc61617bfa74ee31aafd9cb1058">drafts.hpp</a></li>
+<li>get_total_participants()&#160;:&#160;<a class="el" href="vote_8cpp.html#ac8b616ddb6c4d9fac02174be376c2adb">vote.cpp</a></li>
+<li>get_user_program_wallet_or_fail()&#160;:&#160;<a class="el" href="lib_2balances_8hpp.html#a2b13d77eb0cf762f057be96b5bd23f1f">balances.hpp</a></li>
+<li>get_valid_soviet_action()&#160;:&#160;<a class="el" href="registry_8hpp.html#a4ca0aa4e49403b592d5452fd66376b17">registry.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>hash64()&#160;:&#160;<a class="el" href="utils_8hpp.html#ada508335b1eaf3038f9f3a69d2f584a5">utils.hpp</a></li>
+<li>hashit()&#160;:&#160;<a class="el" href="utils_8hpp.html#a13e31620411de1a426d18d70a2e86b17">utils.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>init_unit_test_suite()&#160;:&#160;<a class="el" href="main_8cpp.html#ad532ca1153e3e97547f6017ea7213e02">main.cpp</a></li>
+<li>is_empty_document()&#160;:&#160;<a class="el" href="drafts_8hpp.html#a25ab1953ae48f98a413a2e3d3a2d9210">drafts.hpp</a></li>
+<li>is_participant_of_cpp_by_program_id()&#160;:&#160;<a class="el" href="programs_8hpp.html#a9a9ba1ac07ea31f8bdbc6f357ef25868">programs.hpp</a></li>
+<li>is_valid_action_for_automation()&#160;:&#160;<a class="el" href="automate_8cpp.html#a82586925eb779ff4a1b69ca59c017489">automate.cpp</a></li>
+<li>is_valid_participant()&#160;:&#160;<a class="el" href="coops_8hpp.html#a81e11846bc1e7b947af3af2d5363a524">coops.hpp</a></li>
+<li>is_valid_participant_of_program_by_type()&#160;:&#160;<a class="el" href="programs_8hpp.html#a483bb697e0ed17799d2044e0a2e5ab39">programs.hpp</a></li>
+<li>issue()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a89b2240503cfe6af46a61f4cc59e72fa">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#af379481fd03c660605334d2eeac609dc">eosio.token_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>max()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#a92759dbaf055ca451db93a2d11393122">eosio.token_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
+<li>near()&#160;:&#160;<a class="el" href="eosio_8powerup__tests_8cpp.html#a544da45dac8345bba6c5faf57b021d58">eosio.powerup_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>produce_block()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#abd47bbc7b84947d84c8f8cf805c916b8">eosio.wrap_tests.cpp</a></li>
+<li>produce_blocks()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#adefc7199951e45337d8c056d7803f62c">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a95fdc8cfd66a090d82b4c0b12470bce9">eosio.system_blockinfo_tests.cpp</a>, <a class="el" href="eosio_8token__tests_8cpp.html#a95fdc8cfd66a090d82b4c0b12470bce9">eosio.token_tests.cpp</a></li>
+<li>propose()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#aa95225721099067970875bff95a0d4a6">eosio.wrap_tests.cpp</a></li>
+<li>push_action()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a0a4c6f926e5c8b4f845b15a3269c6745">eosio.msig_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>set_abi()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a8a77e98251d23bebd48d6cf91446d3b8">eosio.msig_tests.cpp</a></li>
+<li>set_code()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#af4f93295a7ab104772c663b0dbb1ccf8">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8system__blockinfo__tests_8cpp.html#a21d5e40c00e07c83846725fb72d668cc">eosio.system_blockinfo_tests.cpp</a></li>
+<li>set_producers()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a5b2597f51d19f031905d5e387b656434">eosio.msig_tests.cpp</a>, <a class="el" href="eosio_8wrap__tests_8cpp.html#aa8a24bdd630af0aa17f02c9802a75134">eosio.wrap_tests.cpp</a></li>
+<li>sub_branch_count()&#160;:&#160;<a class="el" href="lib_2branch_8hpp.html#ac191cfacbeffffdd521a232b31a1b962">branch.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>TKN()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#ad0e6fb7a3e85c7795816da82d2af313c">eosio.token_tests.cpp</a></li>
+<li>transfer()&#160;:&#160;<a class="el" href="eosio_8token__tests_8cpp.html#a842c5467344efbabdf1da5f8aee477e1">eosio.token_tests.cpp</a></li>
+<li>translate_fc_exception()&#160;:&#160;<a class="el" href="main_8cpp.html#ad2e05cc0620ceb8e2cec377f55858a49">main.cpp</a></li>
+<li>trx()&#160;:&#160;<a class="el" href="eosio_8msig__tests_8cpp.html#a25b4856cb0002d35fd95904362951aab">eosio.msig_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
+<li>unapprove()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#aded4b3d8eebe870ef53b78ea95a1cef6">eosio.wrap_tests.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>verify_document_or_fail()&#160;:&#160;<a class="el" href="drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de">drafts.hpp</a></li>
+</ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>while()&#160;:&#160;<a class="el" href="eosio_8wrap__tests_8cpp.html#aa5ff1cefa027f180e6788b1c45695a4c">eosio.wrap_tests.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

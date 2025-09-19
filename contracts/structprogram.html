@@ -1,0 +1,690 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура program</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structprogram.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structprogram-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура program<div class="ingroups"><a class="el" href="group__public__soviet.html">Контракт SOVIET</a> &raquo; <a class="el" href="group__public__soviet__tables.html">Таблицы</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Таблица программ кооператива  
+ <a href="structprogram.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="programs_8hpp_source.html">programs.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad4d9b6afeca865e65da012164e0356b2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ad4d9b6afeca865e65da012164e0356b2">primary_key</a> () const</td></tr>
+<tr class="separator:ad4d9b6afeca865e65da012164e0356b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec4054a69df9337167d3c83bcd51d3b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">by_program_type</a> () const</td></tr>
+<tr class="separator:a4ec4054a69df9337167d3c83bcd51d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf63e798470130772fb9f75f9155c59d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">by_draft</a> () const</td></tr>
+<tr class="separator:aaf63e798470130772fb9f75f9155c59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ab6d3d430b2aa998ae899b5feba62ab48"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">id</a></td></tr>
+<tr class="memdesc:ab6d3d430b2aa998ae899b5feba62ab48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уникальный идентификатор программы  <a href="structprogram.html#ab6d3d430b2aa998ae899b5feba62ab48">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6d3d430b2aa998ae899b5feba62ab48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d5e635de3166a8751151423c9c5819"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">draft_id</a></td></tr>
+<tr class="memdesc:ab0d5e635de3166a8751151423c9c5819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ссылка на шаблон условий  <a href="structprogram.html#ab0d5e635de3166a8751151423c9c5819">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0d5e635de3166a8751151423c9c5819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a490f302a1518eecca0ca052303cb7480"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a490f302a1518eecca0ca052303cb7480">program_type</a></td></tr>
+<tr class="memdesc:a490f302a1518eecca0ca052303cb7480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип кооперативной программы (wallet | market | capital)  <a href="structprogram.html#a490f302a1518eecca0ca052303cb7480">Подробнее...</a><br /></td></tr>
+<tr class="separator:a490f302a1518eecca0ca052303cb7480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0be4e2c99c0d9b4d30eb933110e5f5"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">coopname</a></td></tr>
+<tr class="memdesc:a3a0be4e2c99c0d9b4d30eb933110e5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта кооператива  <a href="structprogram.html#a3a0be4e2c99c0d9b4d30eb933110e5f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3a0be4e2c99c0d9b4d30eb933110e5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9d4d29f4ab65ee95761ca27c6b02eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb">is_active</a></td></tr>
+<tr class="memdesc:a5e9d4d29f4ab65ee95761ca27c6b02eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Флаг активности программы  <a href="structprogram.html#a5e9d4d29f4ab65ee95761ca27c6b02eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5e9d4d29f4ab65ee95761ca27c6b02eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64f5cecc3b7e8623aae6a4e665ad12be"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be">title</a></td></tr>
+<tr class="memdesc:a64f5cecc3b7e8623aae6a4e665ad12be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Название программы  <a href="structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be">Подробнее...</a><br /></td></tr>
+<tr class="separator:a64f5cecc3b7e8623aae6a4e665ad12be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3746a5b6fb8b58ed84d797099a2f7d7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7">announce</a></td></tr>
+<tr class="memdesc:ad3746a5b6fb8b58ed84d797099a2f7d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Анонс программы  <a href="structprogram.html#ad3746a5b6fb8b58ed84d797099a2f7d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad3746a5b6fb8b58ed84d797099a2f7d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54531f601484c26dcfba6a202a8deb8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#aa54531f601484c26dcfba6a202a8deb8">description</a></td></tr>
+<tr class="memdesc:aa54531f601484c26dcfba6a202a8deb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Описание программы  <a href="structprogram.html#aa54531f601484c26dcfba6a202a8deb8">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa54531f601484c26dcfba6a202a8deb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174f4d1517f840c98bcf8a5e922c66a2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2">preview</a></td></tr>
+<tr class="memdesc:a174f4d1517f840c98bcf8a5e922c66a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Предварительный просмотр  <a href="structprogram.html#a174f4d1517f840c98bcf8a5e922c66a2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a174f4d1517f840c98bcf8a5e922c66a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae531950400bdf0018d061bb7f148a995"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ae531950400bdf0018d061bb7f148a995">images</a></td></tr>
+<tr class="memdesc:ae531950400bdf0018d061bb7f148a995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изображения программы  <a href="structprogram.html#ae531950400bdf0018d061bb7f148a995">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae531950400bdf0018d061bb7f148a995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b6b15e2ed7a541dfbc96ac430225f97"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97">meta</a></td></tr>
+<tr class="memdesc:a7b6b15e2ed7a541dfbc96ac430225f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метаданные программы  <a href="structprogram.html#a7b6b15e2ed7a541dfbc96ac430225f97">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7b6b15e2ed7a541dfbc96ac430225f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ba9b6a4419e6ad7248bacd38d964f6"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6">calculation_type</a></td></tr>
+<tr class="memdesc:af3ba9b6a4419e6ad7248bacd38d964f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LEGACY тип настройки платежей по программе ( absolute | relative | free )  <a href="structprogram.html#af3ba9b6a4419e6ad7248bacd38d964f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:af3ba9b6a4419e6ad7248bacd38d964f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef512fdd2885e6a26c40b3a4c49979d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#adef512fdd2885e6a26c40b3a4c49979d">membership_percent_fee</a></td></tr>
+<tr class="memdesc:adef512fdd2885e6a26c40b3a4c49979d"><td class="mdescLeft">&#160;</td><td class="mdescRight">LEGACY процент комиссии со взноса  <a href="structprogram.html#adef512fdd2885e6a26c40b3a4c49979d">Подробнее...</a><br /></td></tr>
+<tr class="separator:adef512fdd2885e6a26c40b3a4c49979d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ef71f31d28e722d42c752911c1cc4c"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a32ef71f31d28e722d42c752911c1cc4c">fixed_membership_contribution</a></td></tr>
+<tr class="memdesc:a32ef71f31d28e722d42c752911c1cc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LEGACY Членский взнос  <a href="structprogram.html#a32ef71f31d28e722d42c752911c1cc4c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a32ef71f31d28e722d42c752911c1cc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab247970586f2c364e5cc4941820bdd"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">start_at</a></td></tr>
+<tr class="memdesc:a4ab247970586f2c364e5cc4941820bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время открытия программы  <a href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ab247970586f2c364e5cc4941820bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5de523da67f8b19a1ff113503d068a4"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ab5de523da67f8b19a1ff113503d068a4">expired_at</a></td></tr>
+<tr class="memdesc:ab5de523da67f8b19a1ff113503d068a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время истечения программы  <a href="structprogram.html#ab5de523da67f8b19a1ff113503d068a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab5de523da67f8b19a1ff113503d068a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2c1cc8679a0e1375ff70dd8dcfdbe89"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; eosio::asset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#aa2c1cc8679a0e1375ff70dd8dcfdbe89">available</a></td></tr>
+<tr class="memdesc:aa2c1cc8679a0e1375ff70dd8dcfdbe89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступные паевые взносы для расходов по ЦПП  <a href="structprogram.html#aa2c1cc8679a0e1375ff70dd8dcfdbe89">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa2c1cc8679a0e1375ff70dd8dcfdbe89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b196cba0f664d8bd7d5621eb83f5aa3"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; eosio::asset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a0b196cba0f664d8bd7d5621eb83f5aa3">spendeded</a></td></tr>
+<tr class="memdesc:a0b196cba0f664d8bd7d5621eb83f5aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расходы из числа паевых взносов ЦПП  <a href="structprogram.html#a0b196cba0f664d8bd7d5621eb83f5aa3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0b196cba0f664d8bd7d5621eb83f5aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77ddc1785fa618b649488e8ccf4cc71"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; eosio::asset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ad77ddc1785fa618b649488e8ccf4cc71">blocked</a></td></tr>
+<tr class="memdesc:ad77ddc1785fa618b649488e8ccf4cc71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Недоступные средства из числа паевых взносов для расходов по ЦПП  <a href="structprogram.html#ad77ddc1785fa618b649488e8ccf4cc71">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad77ddc1785fa618b649488e8ccf4cc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72b16a1662b3fa1287c67e79d8b8f8e"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#ad72b16a1662b3fa1287c67e79d8b8f8e">is_can_coop_spend_share_contributions</a></td></tr>
+<tr class="memdesc:ad72b16a1662b3fa1287c67e79d8b8f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Может ли кооператив использовать паевые взносы программы на расходы  <a href="structprogram.html#ad72b16a1662b3fa1287c67e79d8b8f8e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad72b16a1662b3fa1287c67e79d8b8f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e98b66b843d1b80f17abe60bb316316"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; eosio::asset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a3e98b66b843d1b80f17abe60bb316316">share_contributions</a></td></tr>
+<tr class="memdesc:a3e98b66b843d1b80f17abe60bb316316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Паевые взносы ///&lt; собранные паевые взносы  <a href="structprogram.html#a3e98b66b843d1b80f17abe60bb316316">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e98b66b843d1b80f17abe60bb316316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e31154a730f0837910d3b0abf5ad29f"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; eosio::asset &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html#a1e31154a730f0837910d3b0abf5ad29f">membership_contributions</a></td></tr>
+<tr class="memdesc:a1e31154a730f0837910d3b0abf5ad29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">собранные членские взносы  <a href="structprogram.html#a1e31154a730f0837910d3b0abf5ad29f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1e31154a730f0837910d3b0abf5ad29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Таблица программ кооператива </p>
+<p >Таблица содержит информацию о кооперативных программах (кошелёк, маркетплейс, капитал).</p>
+<dl class="section note"><dt>Заметки</dt><dd>Таблица хранится в области памяти с именем аккаунта: <code>_soviet</code> и скоупом: <code>coopname</code> </dd></dl>
+<dl class="section user"><dt>Имя таблицы (table): programs</dt><dd></dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aaf63e798470130772fb9f75f9155c59d" name="aaf63e798470130772fb9f75f9155c59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf63e798470130772fb9f75f9155c59d">&#9670;&nbsp;</a></span>by_draft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::by_draft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ec4054a69df9337167d3c83bcd51d3b" name="a4ec4054a69df9337167d3c83bcd51d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec4054a69df9337167d3c83bcd51d3b">&#9670;&nbsp;</a></span>by_program_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::by_program_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return program_type - secondary_key </p>
+
+</div>
+</div>
+<a id="ad4d9b6afeca865e65da012164e0356b2" name="ad4d9b6afeca865e65da012164e0356b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d9b6afeca865e65da012164e0356b2">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >return id - primary_key </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ad3746a5b6fb8b58ed84d797099a2f7d7" name="ad3746a5b6fb8b58ed84d797099a2f7d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3746a5b6fb8b58ed84d797099a2f7d7">&#9670;&nbsp;</a></span>announce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::announce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Анонс программы </p>
+
+</div>
+</div>
+<a id="aa2c1cc8679a0e1375ff70dd8dcfdbe89" name="aa2c1cc8679a0e1375ff70dd8dcfdbe89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2c1cc8679a0e1375ff70dd8dcfdbe89">&#9670;&nbsp;</a></span>available</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;eosio::asset&gt; program::available</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доступные паевые взносы для расходов по ЦПП </p>
+
+</div>
+</div>
+<a id="ad77ddc1785fa618b649488e8ccf4cc71" name="ad77ddc1785fa618b649488e8ccf4cc71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77ddc1785fa618b649488e8ccf4cc71">&#9670;&nbsp;</a></span>blocked</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;eosio::asset&gt; program::blocked</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Недоступные средства из числа паевых взносов для расходов по ЦПП </p>
+
+</div>
+</div>
+<a id="af3ba9b6a4419e6ad7248bacd38d964f6" name="af3ba9b6a4419e6ad7248bacd38d964f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ba9b6a4419e6ad7248bacd38d964f6">&#9670;&nbsp;</a></span>calculation_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name program::calculation_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LEGACY тип настройки платежей по программе ( absolute | relative | free ) </p>
+
+</div>
+</div>
+<a id="a3a0be4e2c99c0d9b4d30eb933110e5f5" name="a3a0be4e2c99c0d9b4d30eb933110e5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0be4e2c99c0d9b4d30eb933110e5f5">&#9670;&nbsp;</a></span>coopname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name program::coopname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Имя аккаунта кооператива </p>
+
+</div>
+</div>
+<a id="aa54531f601484c26dcfba6a202a8deb8" name="aa54531f601484c26dcfba6a202a8deb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54531f601484c26dcfba6a202a8deb8">&#9670;&nbsp;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::description</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Описание программы </p>
+
+</div>
+</div>
+<a id="ab0d5e635de3166a8751151423c9c5819" name="ab0d5e635de3166a8751151423c9c5819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0d5e635de3166a8751151423c9c5819">&#9670;&nbsp;</a></span>draft_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::draft_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ссылка на шаблон условий </p>
+
+</div>
+</div>
+<a id="ab5de523da67f8b19a1ff113503d068a4" name="ab5de523da67f8b19a1ff113503d068a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5de523da67f8b19a1ff113503d068a4">&#9670;&nbsp;</a></span>expired_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec program::expired_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Время истечения программы </p>
+
+</div>
+</div>
+<a id="a32ef71f31d28e722d42c752911c1cc4c" name="a32ef71f31d28e722d42c752911c1cc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ef71f31d28e722d42c752911c1cc4c">&#9670;&nbsp;</a></span>fixed_membership_contribution</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset program::fixed_membership_contribution</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LEGACY Членский взнос </p>
+
+</div>
+</div>
+<a id="ab6d3d430b2aa998ae899b5feba62ab48" name="ab6d3d430b2aa998ae899b5feba62ab48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d3d430b2aa998ae899b5feba62ab48">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уникальный идентификатор программы </p>
+
+</div>
+</div>
+<a id="ae531950400bdf0018d061bb7f148a995" name="ae531950400bdf0018d061bb7f148a995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae531950400bdf0018d061bb7f148a995">&#9670;&nbsp;</a></span>images</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::images</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Изображения программы </p>
+
+</div>
+</div>
+<a id="a5e9d4d29f4ab65ee95761ca27c6b02eb" name="a5e9d4d29f4ab65ee95761ca27c6b02eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e9d4d29f4ab65ee95761ca27c6b02eb">&#9670;&nbsp;</a></span>is_active</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool program::is_active</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Флаг активности программы </p>
+
+</div>
+</div>
+<a id="ad72b16a1662b3fa1287c67e79d8b8f8e" name="ad72b16a1662b3fa1287c67e79d8b8f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72b16a1662b3fa1287c67e79d8b8f8e">&#9670;&nbsp;</a></span>is_can_coop_spend_share_contributions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;bool&gt; program::is_can_coop_spend_share_contributions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Может ли кооператив использовать паевые взносы программы на расходы </p>
+
+</div>
+</div>
+<a id="a1e31154a730f0837910d3b0abf5ad29f" name="a1e31154a730f0837910d3b0abf5ad29f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e31154a730f0837910d3b0abf5ad29f">&#9670;&nbsp;</a></span>membership_contributions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;eosio::asset&gt; program::membership_contributions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>собранные членские взносы </p>
+
+</div>
+</div>
+<a id="adef512fdd2885e6a26c40b3a4c49979d" name="adef512fdd2885e6a26c40b3a4c49979d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef512fdd2885e6a26c40b3a4c49979d">&#9670;&nbsp;</a></span>membership_percent_fee</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t program::membership_percent_fee</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LEGACY процент комиссии со взноса </p>
+
+</div>
+</div>
+<a id="a7b6b15e2ed7a541dfbc96ac430225f97" name="a7b6b15e2ed7a541dfbc96ac430225f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6b15e2ed7a541dfbc96ac430225f97">&#9670;&nbsp;</a></span>meta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::meta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метаданные программы </p>
+
+</div>
+</div>
+<a id="a174f4d1517f840c98bcf8a5e922c66a2" name="a174f4d1517f840c98bcf8a5e922c66a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174f4d1517f840c98bcf8a5e922c66a2">&#9670;&nbsp;</a></span>preview</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::preview</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Предварительный просмотр </p>
+
+</div>
+</div>
+<a id="a490f302a1518eecca0ca052303cb7480" name="a490f302a1518eecca0ca052303cb7480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a490f302a1518eecca0ca052303cb7480">&#9670;&nbsp;</a></span>program_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name program::program_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Тип кооперативной программы (wallet | market | capital) </p>
+
+</div>
+</div>
+<a id="a3e98b66b843d1b80f17abe60bb316316" name="a3e98b66b843d1b80f17abe60bb316316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e98b66b843d1b80f17abe60bb316316">&#9670;&nbsp;</a></span>share_contributions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;eosio::asset&gt; program::share_contributions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Паевые взносы ///&lt; собранные паевые взносы </p>
+
+</div>
+</div>
+<a id="a0b196cba0f664d8bd7d5621eb83f5aa3" name="a0b196cba0f664d8bd7d5621eb83f5aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b196cba0f664d8bd7d5621eb83f5aa3">&#9670;&nbsp;</a></span>spendeded</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;eosio::asset&gt; program::spendeded</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расходы из числа паевых взносов ЦПП </p>
+
+</div>
+</div>
+<a id="a4ab247970586f2c364e5cc4941820bdd" name="a4ab247970586f2c364e5cc4941820bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab247970586f2c364e5cc4941820bdd">&#9670;&nbsp;</a></span>start_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec program::start_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Время открытия программы </p>
+
+</div>
+</div>
+<a id="a64f5cecc3b7e8623aae6a4e665ad12be" name="a64f5cecc3b7e8623aae6a4e665ad12be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64f5cecc3b7e8623aae6a4e665ad12be">&#9670;&nbsp;</a></span>title</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string program::title</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Название программы </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/<a class="el" href="programs_8hpp_source.html">programs.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structprogram.html">program</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

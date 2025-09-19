@@ -1,0 +1,1849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Класс marketplace</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmarketplace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="classmarketplace-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс marketplace</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс <code>marketplace</code> предоставляет функционал кооперативного маркетплейса, позволяя пользователям создавать, обновлять, принимать и отменять заявки на обмен товаров и услуг. Этот контракт служит центральной точкой для всех операций обмена в рамках кооперативной экосистемы.  
+ <a href="classmarketplace.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="marketplace_8hpp_source.html">marketplace.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:marketplace:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classmarketplace.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmarketplace_1_1balances.html">balances</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmarketplace_1_1counts.html">counts</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa7c0193de8af681a5e36bdc3fb75d595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aa7c0193de8af681a5e36bdc3fb75d595">marketplace</a> (eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td></tr>
+<tr class="separator:aa7c0193de8af681a5e36bdc3fb75d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1a5d78b2606e4883239fc79afdfb40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a4a1a5d78b2606e4883239fc79afdfb40">apply</a> (uint64_t receiver, uint64_t code, uint64_t <a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
+<tr class="separator:a4a1a5d78b2606e4883239fc79afdfb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a4e1c2dfb1deae979d8d3a4c2d3400058">migrate</a> ()</td></tr>
+<tr class="separator:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc49bca6b4288da5d71f9bb748053bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aafc49bca6b4288da5d71f9bb748053bf">orderoffer</a> (eosio::name coopname, eosio::name receiver_braname, eosio::name username, checksum256 hash, uint64_t units, eosio::asset unit_cost, uint32_t product_lifecycle_secs, uint32_t warranty_period_secs, eosio::asset membership_fee_amount, eosio::asset cancellation_fee_amount, <a class="el" href="structdocument2.html">document2</a> product_return_statement, <a class="el" href="structdocument2.html">document2</a> convert_in, std::string meta)</td></tr>
+<tr class="memdesc:aafc49bca6b4288da5d71f9bb748053bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать заявку orderoffer - заказчик создает заявку на поставку товара от поставщика.  <a href="classmarketplace.html#aafc49bca6b4288da5d71f9bb748053bf">Подробнее...</a><br /></td></tr>
+<tr class="separator:aafc49bca6b4288da5d71f9bb748053bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a41a8b8d31d4bd48d0d18a74f16ccbd4f">accept</a> (eosio::name coopname, eosio::name supplier_braname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> convert_out, <a class="el" href="structdocument2.html">document2</a> return_document)</td></tr>
+<tr class="memdesc:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение готовности выполнить заявку.  <a href="classmarketplace.html#a41a8b8d31d4bd48d0d18a74f16ccbd4f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a234ce76e8cc85271378ac87fb67f8c2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a234ce76e8cc85271378ac87fb67f8c2d">authcontrib</a> (eosio::name coopname, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:a234ce76e8cc85271378ac87fb67f8c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация заявления на имущественный паевой взнос советом кооператива.  <a href="classmarketplace.html#a234ce76e8cc85271378ac87fb67f8c2d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a234ce76e8cc85271378ac87fb67f8c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ab7ccf66cd8ebacf82dda6afc37ded77c">authreturn</a> (eosio::name coopname, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация заявления на возврат имущества советом кооператива.  <a href="classmarketplace.html#ab7ccf66cd8ebacf82dda6afc37ded77c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59224c663e25a6829babaf1749379007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a59224c663e25a6829babaf1749379007">declineacc</a> (eosio::name coopname, checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:a59224c663e25a6829babaf1749379007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение принятия заявки советом (declineacc).  <a href="classmarketplace.html#a59224c663e25a6829babaf1749379007">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59224c663e25a6829babaf1749379007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500e3f1d43f3b95ac0ea68752bc88379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a500e3f1d43f3b95ac0ea68752bc88379">supply</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a500e3f1d43f3b95ac0ea68752bc88379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставка имущества в кооператив.  <a href="classmarketplace.html#a500e3f1d43f3b95ac0ea68752bc88379">Подробнее...</a><br /></td></tr>
+<tr class="separator:a500e3f1d43f3b95ac0ea68752bc88379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ba78939ee3005f95437710b670f96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ac92ba78939ee3005f95437710b670f96">supplcnf</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:ac92ba78939ee3005f95437710b670f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение поставки председателем КУ.  <a href="classmarketplace.html#ac92ba78939ee3005f95437710b670f96">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac92ba78939ee3005f95437710b670f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101e4aabe8ad0057c8ea69fe1b2d60a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a101e4aabe8ad0057c8ea69fe1b2d60a1">createship</a> (eosio::name coopname, checksum256 hash, eosio::name driver_username, eosio::name source_braname, eosio::name destination_braname, std::vector&lt; checksum256 &gt; request_hashes, <a class="el" href="structdocument2.html">document2</a> transport_act_sender)</td></tr>
+<tr class="memdesc:a101e4aabe8ad0057c8ea69fe1b2d60a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание новой перевозки с массивом заявок.  <a href="classmarketplace.html#a101e4aabe8ad0057c8ea69fe1b2d60a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a101e4aabe8ad0057c8ea69fe1b2d60a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6fad02612a1298847b8487d124c21bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#af6fad02612a1298847b8487d124c21bc">signbydriver</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> transport_act_driver)</td></tr>
+<tr class="memdesc:af6fad02612a1298847b8487d124c21bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подпись акта приёма-передачи водителем.  <a href="classmarketplace.html#af6fad02612a1298847b8487d124c21bc">Подробнее...</a><br /></td></tr>
+<tr class="separator:af6fad02612a1298847b8487d124c21bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0ed5cff2e9e16b970f36d02c1eae279"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aa0ed5cff2e9e16b970f36d02c1eae279">arrived</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> transport_act_delivery)</td></tr>
+<tr class="memdesc:aa0ed5cff2e9e16b970f36d02c1eae279"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевозка прибыла в место назначения.  <a href="classmarketplace.html#aa0ed5cff2e9e16b970f36d02c1eae279">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa0ed5cff2e9e16b970f36d02c1eae279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbc9ebcb3a24cfcc61c3d216aa63101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#abbbc9ebcb3a24cfcc61c3d216aa63101">receiveshipm</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> warehouse_receipt_act)</td></tr>
+<tr class="memdesc:abbbc9ebcb3a24cfcc61c3d216aa63101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём имущества на склад по накладной.  <a href="classmarketplace.html#abbbc9ebcb3a24cfcc61c3d216aa63101">Подробнее...</a><br /></td></tr>
+<tr class="separator:abbbc9ebcb3a24cfcc61c3d216aa63101"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70c37b845bb813013e75a569c9a1492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ae70c37b845bb813013e75a569c9a1492">retransport</a> (eosio::name coopname, checksum256 completed_hash, eosio::name new_driver_username, eosio::name source_braname, eosio::name new_destination_braname, std::vector&lt; checksum256 &gt; request_hashes, <a class="el" href="structdocument2.html">document2</a> transport_act_sender)</td></tr>
+<tr class="memdesc:ae70c37b845bb813013e75a569c9a1492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Промежуточная передача товаров между складами.  <a href="classmarketplace.html#ae70c37b845bb813013e75a569c9a1492">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae70c37b845bb813013e75a569c9a1492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3044eb189b1019f7602524f3cd88bfc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a3044eb189b1019f7602524f3cd88bfc6">delivered</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
+<tr class="memdesc:a3044eb189b1019f7602524f3cd88bfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод заявки в статус готово к выдаче.  <a href="classmarketplace.html#a3044eb189b1019f7602524f3cd88bfc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3044eb189b1019f7602524f3cd88bfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6bf1c71df2f7e8aa5eee464f1aa4398"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aa6bf1c71df2f7e8aa5eee464f1aa4398">receive</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:aa6bf1c71df2f7e8aa5eee464f1aa4398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение товара заказчиком.  <a href="classmarketplace.html#aa6bf1c71df2f7e8aa5eee464f1aa4398">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa6bf1c71df2f7e8aa5eee464f1aa4398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd60fe1e63b63cb1e614cda336427df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#accd60fe1e63b63cb1e614cda336427df">receivecnf</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:accd60fe1e63b63cb1e614cda336427df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение получения заказчиком.  <a href="classmarketplace.html#accd60fe1e63b63cb1e614cda336427df">Подробнее...</a><br /></td></tr>
+<tr class="separator:accd60fe1e63b63cb1e614cda336427df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7671a47e4ce812a9b821ce25da304205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a7671a47e4ce812a9b821ce25da304205">complete</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
+<tr class="memdesc:a7671a47e4ce812a9b821ce25da304205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписание акта о приёме-передаче имущества.  <a href="classmarketplace.html#a7671a47e4ce812a9b821ce25da304205">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7671a47e4ce812a9b821ce25da304205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5873ca82bf32d3e252d46cce59b4c2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#af5873ca82bf32d3e252d46cce59b4c2a">decline</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, std::string meta)</td></tr>
+<tr class="memdesc:af5873ca82bf32d3e252d46cce59b4c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отказ от предложения.  <a href="classmarketplace.html#af5873ca82bf32d3e252d46cce59b4c2a">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5873ca82bf32d3e252d46cce59b4c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ad3da724e8d1ddcdb6bc07a05a42c2aa5">cancel</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
+<tr class="memdesc:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена заявки и возврат токенов.  <a href="classmarketplace.html#ad3da724e8d1ddcdb6bc07a05a42c2aa5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333bf818338573c2d92e988b561e4b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a333bf818338573c2d92e988b561e4b14">dispute</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:a333bf818338573c2d92e988b561e4b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие гарантийного спора по заявке.  <a href="classmarketplace.html#a333bf818338573c2d92e988b561e4b14">Подробнее...</a><br /></td></tr>
+<tr class="separator:a333bf818338573c2d92e988b561e4b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cae474c0ae51448f2f4cf2ab501216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#af7cae474c0ae51448f2f4cf2ab501216">wauthorize</a> (eosio::name coopname, checksum256 request_hash, uint64_t wreturn_decision_id, <a class="el" href="structdocument2.html">document2</a> wreturn_authorization, uint64_t wsupply_decision_id, <a class="el" href="structdocument2.html">document2</a> wsupply_authorization)</td></tr>
+<tr class="memdesc:af7cae474c0ae51448f2f4cf2ab501216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация гарантийного возврата советом  <a href="classmarketplace.html#af7cae474c0ae51448f2f4cf2ab501216">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7cae474c0ae51448f2f4cf2ab501216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c20ced38b67e9fa6b11f75871e9d5be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a2c20ced38b67e9fa6b11f75871e9d5be">wreturn</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:a2c20ced38b67e9fa6b11f75871e9d5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат товара от заказчика в кооператив  <a href="classmarketplace.html#a2c20ced38b67e9fa6b11f75871e9d5be">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2c20ced38b67e9fa6b11f75871e9d5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0457578658f1454e99aebb157200126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#af0457578658f1454e99aebb157200126">woffer</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:af0457578658f1454e99aebb157200126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Предложение товара поставщику в рамках гарантийного возврата  <a href="classmarketplace.html#af0457578658f1454e99aebb157200126">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0457578658f1454e99aebb157200126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e5fa9961f2eea3baf0b34fa89b03a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a52e5fa9961f2eea3baf0b34fa89b03a1">waccept</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, bool <a class="el" href="classmarketplace.html#a41a8b8d31d4bd48d0d18a74f16ccbd4f">accept</a>, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:a52e5fa9961f2eea3baf0b34fa89b03a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принятие или отказ поставщика от товара в рамках гарантийного возврата  <a href="classmarketplace.html#a52e5fa9961f2eea3baf0b34fa89b03a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a52e5fa9961f2eea3baf0b34fa89b03a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a913dbb4576d735f51d883bdd1df78913"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a913dbb4576d735f51d883bdd1df78913">cancel_request</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
+<tr class="separator:a913dbb4576d735f51d883bdd1df78913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bff858756828b19d999cd64b675d67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ac9bff858756828b19d999cd64b675d67">decline_request</a> (eosio::name coopname, const request &amp;change)</td></tr>
+<tr class="memdesc:ac9bff858756828b19d999cd64b675d67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статический метод для отклонения заявки (используется советом)  <a href="classmarketplace.html#ac9bff858756828b19d999cd64b675d67">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac9bff858756828b19d999cd64b675d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс <code>marketplace</code> предоставляет функционал кооперативного маркетплейса, позволяя пользователям создавать, обновлять, принимать и отменять заявки на обмен товаров и услуг. Этот контракт служит центральной точкой для всех операций обмена в рамках кооперативной экосистемы. </p>
+<p >Основные функции класса:</p><ul>
+<li>Создание и управление заявками типа orderoffer (заказчик → поставщик).</li>
+<li>Операции обновления, принятия, отказа и завершения обменных операций.</li>
+<li>Модерация и управление публикацией заявок на обмен.</li>
+<li>Административные функции, такие как создание идентификаторов и авторизация операций.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md386"></a>
+Процесс поставки orderoffer:</h2>
+<ol type="1">
+<li><b>orderoffer</b> - заказчик создает заявку с документами на возврат и конвертацию, средства блокируются</li>
+<li><b>accept</b> - поставщик принимает заявку и предоставляет документы на взнос и конвертацию</li>
+<li><b>authcontrib/authreturn</b> - совет авторизует оба заявления раздельно</li>
+<li><b>supply</b> → <b>supplcnf</b> - поставка товара и подтверждение председателем КУ</li>
+<li><b>deliver1</b> → <b>deliver2</b> → <b>deliver3</b> → <b>deliver4</b> - этапы транспортировки</li>
+<li><b>receive</b> → <b>receivecnf</b> - получение товара заказчиком</li>
+<li><b>complete</b> - завершение поставки после гарантийного периода</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md387"></a>
+Документооборот:</h2>
+<p >Все документы сохраняются в векторе <code>std::vector&lt;<a class="el" href="structdocument2.html">document2</a>&gt; documents</code> в заявке. Каждый этап процесса добавляет необходимые документы в этот вектор.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Контракт маркетплейса является центральной точкой экономической активности на платформе. </dd>
+<dd>
+Система упрощена для работы с одной заявкой вместо двух встречных. </dd></dl>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa7c0193de8af681a5e36bdc3fb75d595" name="aa7c0193de8af681a5e36bdc3fb75d595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c0193de8af681a5e36bdc3fb75d595">&#9670;&nbsp;</a></span>marketplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">marketplace::marketplace </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::datastream&lt; const char * &gt;&#160;</td>
+          <td class="paramname"><em>ds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a41a8b8d31d4bd48d0d18a74f16ccbd4f" name="a41a8b8d31d4bd48d0d18a74f16ccbd4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a8b8d31d4bd48d0d18a74f16ccbd4f">&#9670;&nbsp;</a></span>accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::accept </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>supplier_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>product_contribution_statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение готовности выполнить заявку. </p>
+<p >Принятие заявки поставщиком.</p>
+<p >Данный метод позволяет пользователю, который получил предложение по своей заявке, подтвердить свою готовность его принять и выполнить. При этом формируется пакет документов, который отправляется в совет на утверждение.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя, подтверждающего готовность выполнить предложение. </td></tr>
+    <tr><td class="paramname">exchange_id</td><td>ID предложения, которое следует подтвердить.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+<p>Поставщик принимает заявку orderoffer на поставку имущества и предоставляет необходимые документы.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">supplier_braname</td><td>Имя кооперативного участка поставщика </td></tr>
+    <tr><td class="paramname">username</td><td>Имя поставщика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">convert_out</td><td>Заявление на конвертацию </td></tr>
+    <tr><td class="paramname">product_contribution_statement</td><td>Заявление на имущественный паевой взнос</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a4a1a5d78b2606e4883239fc79afdfb40" name="a4a1a5d78b2606e4883239fc79afdfb40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1a5d78b2606e4883239fc79afdfb40">&#9670;&nbsp;</a></span>apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::apply </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0ed5cff2e9e16b970f36d02c1eae279" name="aa0ed5cff2e9e16b970f36d02c1eae279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0ed5cff2e9e16b970f36d02c1eae279">&#9670;&nbsp;</a></span>arrived()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::arrived </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>transport_act_delivery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевозка прибыла в место назначения. </p>
+<p >Перевозка переходит в статус arrived и ожидает подписи получателя.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Идентификатор перевозки </td></tr>
+    <tr><td class="paramname">transport_act_delivery</td><td>Акт доставки подписанный водителем</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a234ce76e8cc85271378ac87fb67f8c2d" name="a234ce76e8cc85271378ac87fb67f8c2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234ce76e8cc85271378ac87fb67f8c2d">&#9670;&nbsp;</a></span>authcontrib()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::authcontrib </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизация заявления на имущественный паевой взнос советом кооператива. </p>
+<p >Совет кооператива авторизует заявление на имущественный паевой взнос.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">authorization</td><td>Документ авторизации от совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ab7ccf66cd8ebacf82dda6afc37ded77c" name="ab7ccf66cd8ebacf82dda6afc37ded77c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7ccf66cd8ebacf82dda6afc37ded77c">&#9670;&nbsp;</a></span>authreturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::authreturn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизация заявления на возврат имущества советом кооператива. </p>
+<p >Совет кооператива авторизует заявление на возврат имущества.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">authorization</td><td>Документ авторизации от совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ad3da724e8d1ddcdb6bc07a05a42c2aa5" name="ad3da724e8d1ddcdb6bc07a05a42c2aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3da724e8d1ddcdb6bc07a05a42c2aa5">&#9670;&nbsp;</a></span>cancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::cancel </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отмена заявки и возврат токенов. </p>
+<p >Отмена заявки пользователем.</p>
+<p >Позволяет пользователю отменить родительскую или дочернюю заявку, а также обеспечивает возврат токенов владельцу (если применимо). При отмене проверяется наличие заявки и её текущий статус.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя, инициировавшего отмену. </td></tr>
+    <tr><td class="paramname">exchange_id</td><td>Идентификатор заявки для отмены.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+<p>Пользователь может отменить свою заявку с учетом комиссии за отмену.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a913dbb4576d735f51d883bdd1df78913" name="a913dbb4576d735f51d883bdd1df78913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a913dbb4576d735f51d883bdd1df78913">&#9670;&nbsp;</a></span>cancel_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void marketplace::cancel_request </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7671a47e4ce812a9b821ce25da304205" name="a7671a47e4ce812a9b821ce25da304205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7671a47e4ce812a9b821ce25da304205">&#9670;&nbsp;</a></span>complete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::complete </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подписание акта о приёме-передаче имущества. </p>
+<p >Завершение поставки.</p>
+<p >После успешного получения товара, получатель подписывает акт о приёме-передаче, что свидетельствует о юридическом завершении сделки. Этот акт делает пакет документов по данной сделке полным. После проведения ряда проверок, обновляются статусы и количество объектов в основной заявке и предложении. Если все объекты основной заявки обработаны, заявка удаляется из публикации. В зависимости от типа предложения, может осуществляться перевод токенов.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя-получателя товара. </td></tr>
+    <tr><td class="paramname">exchange_id</td><td>ID предложения, под которым следует подписать акт.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+<p>После истечения гарантийной задержки происходит завершение поставки.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a101e4aabe8ad0057c8ea69fe1b2d60a1" name="a101e4aabe8ad0057c8ea69fe1b2d60a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a101e4aabe8ad0057c8ea69fe1b2d60a1">&#9670;&nbsp;</a></span>createship()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::createship </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>driver_username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>destination_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>request_hashes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>transport_act_sender</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание новой перевозки с массивом заявок. </p>
+<p >Создает новую перевозку от одного КУ к другому с указанием водителя и массива заявок. Представитель КУ отправления подписывает первый акт приёма-передачи. Заявки остаются на складе до получения подписи от водителя.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Внешний идентификатор перевозки </td></tr>
+    <tr><td class="paramname">driver_username</td><td>Имя водителя-пайщика </td></tr>
+    <tr><td class="paramname">source_braname</td><td>КУ отправителя </td></tr>
+    <tr><td class="paramname">destination_braname</td><td>КУ назначения </td></tr>
+    <tr><td class="paramname">request_hashes</td><td>Массив хэшей заявок для перевозки </td></tr>
+    <tr><td class="paramname">transport_act_sender</td><td>Акт приёма-передачи от представителя КУ отправления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="af5873ca82bf32d3e252d46cce59b4c2a" name="af5873ca82bf32d3e252d46cce59b4c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5873ca82bf32d3e252d46cce59b4c2a">&#9670;&nbsp;</a></span>decline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::decline </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отказ от предложения. </p>
+<p >Отклонение заявки.</p>
+<p >Этот метод позволяет пользователю отклонить предложение, представленное к его заявке. Выполняются следующие проверки:</p><ul>
+<li>Существование предложения с указанным ID.</li>
+<li>Существование основной заявки.</li>
+<li>Предложение находится в статусе "ожидание".</li>
+</ul>
+<p >Если отклонено предложение к заявке типа "order", осуществляется возврат токенов пользователю, которому были заблокированы токены при создании предложения.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя, отклоняющего предложение. </td></tr>
+    <tr><td class="paramname">exchange_id</td><td>ID предложения, которое следует отклонить. </td></tr>
+    <tr><td class="paramname">meta</td><td>Дополнительные метаданные, связанные с отказом.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
+<p>Отклонение заявки с указанием причины.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">meta</td><td>Причина отклонения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ac9bff858756828b19d999cd64b675d67" name="ac9bff858756828b19d999cd64b675d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bff858756828b19d999cd64b675d67">&#9670;&nbsp;</a></span>decline_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::decline_request </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const request &amp;&#160;</td>
+          <td class="paramname"><em>change</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Статический метод для отклонения заявки (используется советом) </p>
+
+</div>
+</div>
+<a id="a59224c663e25a6829babaf1749379007" name="a59224c663e25a6829babaf1749379007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59224c663e25a6829babaf1749379007">&#9670;&nbsp;</a></span>declineacc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::declineacc </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение принятия заявки советом (declineacc). </p>
+<p >Данный метод вызывается советом когда заявление на конвертацию, возврат или взнос отклоняется. После рефакторинга работаем только с одной заявкой orderoffer.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки, которая должна быть отменена </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="a3044eb189b1019f7602524f3cd88bfc6" name="a3044eb189b1019f7602524f3cd88bfc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3044eb189b1019f7602524f3cd88bfc6">&#9670;&nbsp;</a></span>delivered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::delivered </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевод заявки в статус готово к выдаче. </p>
+<p >Председатель КУ переводит заявку в статус delivered независимо от транспортировки. Используется когда транспортировка между КУ не нужна или имущество уже находится на складе. Просто перевод статуса без дополнительных документов.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя (может быть поставщиком или заказчиком) </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a333bf818338573c2d92e988b561e4b14" name="a333bf818338573c2d92e988b561e4b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333bf818338573c2d92e988b561e4b14">&#9670;&nbsp;</a></span>dispute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::dispute </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открытие гарантийного спора по заявке. </p>
+<p >Заказчик может открыть спор после получения товара, если есть проблемы с качеством или соответствием. Создается претензия, которая сохраняется в документах заявки.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика, открывающего спор </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки, по которой открывается спор </td></tr>
+    <tr><td class="paramname">document</td><td>Документ с описанием претензии</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a4e1c2dfb1deae979d8d3a4c2d3400058" name="a4e1c2dfb1deae979d8d3a4c2d3400058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c2dfb1deae979d8d3a4c2d3400058">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafc49bca6b4288da5d71f9bb748053bf" name="aafc49bca6b4288da5d71f9bb748053bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc49bca6b4288da5d71f9bb748053bf">&#9670;&nbsp;</a></span>orderoffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::orderoffer </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>units</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>unit_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>product_lifecycle_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>warranty_period_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>membership_fee_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>cancellation_fee_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>product_return_statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создать заявку orderoffer - заказчик создает заявку на поставку товара от поставщика. </p>
+<p >Данный метод позволяет заказчику создать заявку на поставку товара от поставщика. Заявка содержит всю информацию о товаре, стоимости, документах и сразу блокирует средства заказчика.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">receiver_braname</td><td>Имя кооперативного участка заказчика для получения товара </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш заявки (уникальный идентификатор) </td></tr>
+    <tr><td class="paramname">units</td><td>Количество единиц товара </td></tr>
+    <tr><td class="paramname">unit_cost</td><td>Цена за единицу товара </td></tr>
+    <tr><td class="paramname">product_lifecycle_secs</td><td>Время жизни продукта </td></tr>
+    <tr><td class="paramname">warranty_period_secs</td><td>Гарантийный срок в секундах </td></tr>
+    <tr><td class="paramname">membership_fee_amount</td><td>Сумма членского взноса </td></tr>
+    <tr><td class="paramname">cancellation_fee_amount</td><td>Сумма комиссии за отмену заявки </td></tr>
+    <tr><td class="paramname">product_return_statement</td><td>Заявление на возврат паевого взноса имуществом </td></tr>
+    <tr><td class="paramname">convert_in</td><td>Заявление на конвертацию из кошелька в маркетплейс </td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные о заявке</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="aa6bf1c71df2f7e8aa5eee464f1aa4398" name="aa6bf1c71df2f7e8aa5eee464f1aa4398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bf1c71df2f7e8aa5eee464f1aa4398">&#9670;&nbsp;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::receive </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение товара заказчиком. </p>
+<p >Заказчик приходит на КУ для получения имущества. Председатель КУ подписывает акт и передаёт имущество заказчику.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">document</td><td>Акт получения имущества</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="accd60fe1e63b63cb1e614cda336427df" name="accd60fe1e63b63cb1e614cda336427df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accd60fe1e63b63cb1e614cda336427df">&#9670;&nbsp;</a></span>receivecnf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::receivecnf </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение получения заказчиком. </p>
+<p >Заказчик подтверждает факт получения имущества второй подписью акта приёма-передачи.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">document</td><td>Акт подтверждения получения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="abbbc9ebcb3a24cfcc61c3d216aa63101" name="abbbc9ebcb3a24cfcc61c3d216aa63101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbc9ebcb3a24cfcc61c3d216aa63101">&#9670;&nbsp;</a></span>receiveshipm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::receiveshipm </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>warehouse_receipt_act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Приём имущества на склад по накладной. </p>
+<p >Представитель КУ получения принимает имущество на склад по накладной. Все заявки из перевозки переходят в статус delivered и ставятся на склад КУ получения. Объект перевозки удаляется.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Идентификатор перевозки </td></tr>
+    <tr><td class="paramname">warehouse_receipt_act</td><td>Акт приёма на склад подписанный получателем</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ae70c37b845bb813013e75a569c9a1492" name="ae70c37b845bb813013e75a569c9a1492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70c37b845bb813013e75a569c9a1492">&#9670;&nbsp;</a></span>retransport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::retransport </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>completed_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>new_driver_username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>new_destination_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>request_hashes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>transport_act_sender</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Промежуточная передача товаров между складами. </p>
+<p >Создает новую перевозку для доставленных заявок, позволяя передать все товары из текущего склада в другое место назначения с новым водителем.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">completed_hash</td><td>Внешний идентификатор новой перевозки </td></tr>
+    <tr><td class="paramname">new_driver_username</td><td>Имя нового водителя-пайщика </td></tr>
+    <tr><td class="paramname">source_braname</td><td>КУ с которого забираем товары </td></tr>
+    <tr><td class="paramname">new_destination_braname</td><td>Новый КУ назначения </td></tr>
+    <tr><td class="paramname">request_hashes</td><td>Массив хэшей заявок для переотправки </td></tr>
+    <tr><td class="paramname">transport_act_sender</td><td>Акт передачи от текущего склада</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="af6fad02612a1298847b8487d124c21bc" name="af6fad02612a1298847b8487d124c21bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fad02612a1298847b8487d124c21bc">&#9670;&nbsp;</a></span>signbydriver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::signbydriver </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>transport_act_driver</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подпись акта приёма-передачи водителем. </p>
+<p >Водитель подписывает акт приёма имущества на транспортировку. Все заявки снимаются со склада отправления. Перевозка переходит в статус transit.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Идентификатор перевозки </td></tr>
+    <tr><td class="paramname">transport_act_driver</td><td>Акт приёма-передачи подписанный водителем</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ac92ba78939ee3005f95437710b670f96" name="ac92ba78939ee3005f95437710b670f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92ba78939ee3005f95437710b670f96">&#9670;&nbsp;</a></span>supplcnf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::supplcnf </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение поставки председателем КУ. </p>
+<p >Председатель кооперативного участка или доверенное им лицо подтверждает факт поставки имущества.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя представителя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">act</td><td>Акт подтверждения поставки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a500e3f1d43f3b95ac0ea68752bc88379" name="a500e3f1d43f3b95ac0ea68752bc88379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500e3f1d43f3b95ac0ea68752bc88379">&#9670;&nbsp;</a></span>supply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::supply </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поставка имущества в кооператив. </p>
+<p >Поставщик поставляет имущество на указанный кооперативный участок и предоставляет подписанный акт приёма-передачи.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя поставщика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">act</td><td>Акт поставки имущества</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a52e5fa9961f2eea3baf0b34fa89b03a1" name="a52e5fa9961f2eea3baf0b34fa89b03a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e5fa9961f2eea3baf0b34fa89b03a1">&#9670;&nbsp;</a></span>waccept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::waccept </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Принятие или отказ поставщика от товара в рамках гарантийного возврата </p>
+<p >Поставщик может принять товар (accept=true) или отказаться от него (accept=false). При принятии товар передается поставщику и диспут завершается. При отказе товар остается у кооператива и диспут завершается.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя поставщика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки с диспутом </td></tr>
+    <tr><td class="paramname">accept</td><td>Принимает ли поставщик товар (true/false) </td></tr>
+    <tr><td class="paramname">document</td><td>Документ с решением поставщика</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="af7cae474c0ae51448f2f4cf2ab501216" name="af7cae474c0ae51448f2f4cf2ab501216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7cae474c0ae51448f2f4cf2ab501216">&#9670;&nbsp;</a></span>wauthorize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::wauthorize </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>wreturn_decision_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>wreturn_authorization</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>wsupply_decision_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>wsupply_authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизация гарантийного возврата советом </p>
+<p >Совет авторизует принятие товара от заказчика и его последующую выдачу поставщику</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки с диспутом </td></tr>
+    <tr><td class="paramname">wreturn_decision_id</td><td>Идентификатор решения по принятию товара </td></tr>
+    <tr><td class="paramname">wreturn_authorization</td><td>Документ авторизации принятия товара </td></tr>
+    <tr><td class="paramname">wsupply_decision_id</td><td>Идентификатор решения по выдаче товара поставщику </td></tr>
+    <tr><td class="paramname">wsupply_authorization</td><td>Документ авторизации выдачи товара</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="af0457578658f1454e99aebb157200126" name="af0457578658f1454e99aebb157200126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0457578658f1454e99aebb157200126">&#9670;&nbsp;</a></span>woffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::woffer </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Предложение товара поставщику в рамках гарантийного возврата </p>
+<p >Кооператив предлагает поставщику забрать товар, возвращенный заказчиком. Создается предложение с актом передачи.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя председателя, предлагающего товар </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки с диспутом </td></tr>
+    <tr><td class="paramname">document</td><td>Акт передачи товара поставщику</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a2c20ced38b67e9fa6b11f75871e9d5be" name="a2c20ced38b67e9fa6b11f75871e9d5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c20ced38b67e9fa6b11f75871e9d5be">&#9670;&nbsp;</a></span>wreturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::wreturn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат товара от заказчика в кооператив </p>
+<p >Заказчик возвращает товар в кооператив в рамках гарантийного возврата. Председатель принимает товар и подписывает акт приёма.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя председателя, принимающего товар </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки с диспутом </td></tr>
+    <tr><td class="paramname">document</td><td>Акт приёма товара от заказчика</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>cpp/marketplace/<a class="el" href="marketplace_8hpp_source.html">marketplace.hpp</a></li>
+<li>cpp/marketplace/<a class="el" href="marketplace_8cpp.html">marketplace.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="accept_8cpp.html">accept.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="cancel_8cpp.html">cancel.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="marketplace_2src_2complete_8cpp.html">complete.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="marketplace_2src_2decline_8cpp.html">decline.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2accept_8cpp.html">accept.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="authcontrib_8cpp.html">authcontrib.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="authreturn_8cpp.html">authreturn.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2cancel_8cpp.html">cancel.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="marketplace_2src_2deliver__on__offer_2complete_8cpp.html">complete.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="marketplace_2src_2deliver__on__offer_2decline_8cpp.html">decline.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="declineacc_8cpp.html">declineacc.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2delivered_8cpp.html">delivered.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="orderoffer_8cpp.html">orderoffer.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="receive_8cpp.html">receive.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="receivecnf_8cpp.html">receivecnf.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="supplcnf_8cpp.html">supplcnf.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2supply_8cpp.html">supply.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="delivered_8cpp.html">delivered.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="dispute_8cpp.html">dispute.cpp</a></li>
+<li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="dispute__on__offer_2dispute_8cpp.html">dispute.cpp</a></li>
+<li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="waccept_8cpp.html">waccept.cpp</a></li>
+<li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="wauthorize_8cpp.html">wauthorize.cpp</a></li>
+<li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="woffer_8cpp.html">woffer.cpp</a></li>
+<li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="wreturn_8cpp.html">wreturn.cpp</a></li>
+<li>cpp/marketplace/src/shipment/<a class="el" href="arrived_8cpp.html">arrived.cpp</a></li>
+<li>cpp/marketplace/src/shipment/<a class="el" href="createship_8cpp.html">createship.cpp</a></li>
+<li>cpp/marketplace/src/shipment/<a class="el" href="receiveshipm_8cpp.html">receiveshipm.cpp</a></li>
+<li>cpp/marketplace/src/shipment/<a class="el" href="retransport_8cpp.html">retransport.cpp</a></li>
+<li>cpp/marketplace/src/shipment/<a class="el" href="signbydriver_8cpp.html">signbydriver.cpp</a></li>
+<li>cpp/marketplace/src/<a class="el" href="supply_8cpp.html">supply.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classmarketplace.html">marketplace</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

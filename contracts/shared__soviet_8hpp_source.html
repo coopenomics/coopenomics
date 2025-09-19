@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/shared_soviet.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('shared__soviet_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">shared_soviet.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="shared__soviet_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">    7</a></span><span class="preprocessor">#define CREATEAGENDA_SIGNATURE name coopname, name username, name type, checksum256 hash, name callback_contract, name confirm_callback, name decline_callback, document2 statement, std::string meta</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d">    8</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d">createagenda_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">   10</a></span><span class="preprocessor">#define CREATEAPPRV_SIGNATURE name coopname, name username, document2 document, name type, checksum256 approval_hash, name callback_contract, name callback_action_approve, name callback_action_decline, std::string meta</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249">   11</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249">createapprv_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Определение сигнатуры для коллбэка отклонения</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">   14</a></span><span class="preprocessor">#define DECLINE_CALLBACK_SIGNATURE name coopname, checksum256 hash, std::string reason</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#ac071a9a6ce438b190e29e408ed4b8241">   15</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#ac071a9a6ce438b190e29e408ed4b8241">decline_callback_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">DECLINE_CALLBACK_SIGNATURE</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Новые сигнатуры действий для registry</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">   18</a></span><span class="preprocessor">#define NEWSUBMITTED_SIGNATURE name coopname, name username, name action, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#ab2152571aed7fcaaa5a3f9c4b4843f06">   19</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#ab2152571aed7fcaaa5a3f9c4b4843f06">newsubmitted_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">   21</a></span><span class="preprocessor">#define NEWRESOLVED_SIGNATURE name coopname, name username, name action, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a461bfb688f2a0b8b1509b576dfaae866">   22</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a461bfb688f2a0b8b1509b576dfaae866">newresolved_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">   24</a></span><span class="preprocessor">#define NEWDECISION_SIGNATURE name coopname, name username, name action, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a69bbcacb08452549f6d5918538a0c1c2">   25</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a69bbcacb08452549f6d5918538a0c1c2">newdecision_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">   27</a></span><span class="preprocessor">#define NEWDECLINED_SIGNATURE name coopname, name username, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a71c8d28c327ee0ef52e0b3ad8363c70b">   28</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a71c8d28c327ee0ef52e0b3ad8363c70b">newdeclined_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">   30</a></span><span class="preprocessor">#define NEWACT_SIGNATURE name coopname, name username, name action, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a3194772d5ea5c670bd3346bd9092c329">   31</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a3194772d5ea5c670bd3346bd9092c329">newact_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">   33</a></span><span class="preprocessor">#define NEWLINK_SIGNATURE name coopname, name username, name action, checksum256 package, document2 document</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a697ba71d248bbff1151aee923658a010">   34</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a697ba71d248bbff1151aee923658a010">newlink_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">   36</a></span><span class="preprocessor">#define NEWAGREEMENT_SIGNATURE name coopname, name username, name type, document2 document</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5">   37</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5">newagreement_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">   39</a></span><span class="preprocessor">#define NEWPACKAGE_SIGNATURE name coopname, name username, name action, checksum256 package</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#abdb626b1f08524bd2a859b083247527f">   40</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#abdb626b1f08524bd2a859b083247527f">newpackage_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">   42</a></span><span class="preprocessor">#define OPENPROGWALL_SIGNATURE name coopname, name username, name program_type, uint64_t agreement_id  </span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="shared__soviet_8hpp.html#aece1205460ace8f2cb031fd226906752">   43</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="shared__soviet_8hpp.html#aece1205460ace8f2cb031fd226906752">openprogwall_interface</a> = void(<a class="code hl_define" href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">OPENPROGWALL_SIGNATURE</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_soviet.html">   45</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_soviet.html">Soviet</a> {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff">   50</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff">create_agenda</a>(</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  name calling_contract,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_define" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  Action::send&lt;createagenda_interface&gt;(</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_variable" href="namespace_names_1_1_external.html#ad806e473f0175005c9f48e4898506e54">Names::External::CREATE_AGENDA</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    calling_contract,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    coopname,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    username,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    type,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    hash,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    callback_contract,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    confirm_callback,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    decline_callback,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    statement,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    meta</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">   73</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">create_approval</a>(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  name calling_contract,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  Action::send&lt;createapprv_interface&gt;(</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_variable" href="namespace_names_1_1_external.html#a0450461c16b950ebaa94815dc59075e9">Names::External::CREATE_APPROVAL</a>,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    calling_contract,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    coopname,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    username,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_struct" href="structdocument.html">document</a>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    type,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    approval_hash,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    callback_contract,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    callback_action_approve,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    callback_action_decline,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    meta</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  );</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace Soviet</span></div>
+<div class="ttc" id="aconsts_8hpp_html_af3f1171b99c198fbeb3ab6a3d8c091d9"><div class="ttname"><a href="consts_8hpp.html#af3f1171b99c198fbeb3ab6a3d8c091d9">_soviet</a></div><div class="ttdeci">static constexpr eosio::name _soviet</div><div class="ttdef"><b>Definition:</b> consts.hpp:156</div></div>
+<div class="ttc" id="anamespace_names_1_1_external_html_a0450461c16b950ebaa94815dc59075e9"><div class="ttname"><a href="namespace_names_1_1_external.html#a0450461c16b950ebaa94815dc59075e9">Names::External::CREATE_APPROVAL</a></div><div class="ttdeci">constexpr eosio::name CREATE_APPROVAL</div><div class="ttdef"><b>Definition:</b> shared_names.hpp:83</div></div>
+<div class="ttc" id="anamespace_names_1_1_external_html_ad806e473f0175005c9f48e4898506e54"><div class="ttname"><a href="namespace_names_1_1_external.html#ad806e473f0175005c9f48e4898506e54">Names::External::CREATE_AGENDA</a></div><div class="ttdeci">constexpr eosio::name CREATE_AGENDA</div><div class="ttdef"><b>Definition:</b> shared_names.hpp:84</div></div>
+<div class="ttc" id="anamespace_soviet_html"><div class="ttname"><a href="namespace_soviet.html">Soviet</a></div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:45</div></div>
+<div class="ttc" id="anamespace_soviet_html_a62507a32e3b1f484f8af7dc3606795ff"><div class="ttname"><a href="namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff">Soviet::create_agenda</a></div><div class="ttdeci">void create_agenda(name calling_contract, CREATEAGENDA_SIGNATURE)</div><div class="ttdoc">Создаёт агенду в совете</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:50</div></div>
+<div class="ttc" id="anamespace_soviet_html_ac2a7d429ce980f07d8fe02c278b037bd"><div class="ttname"><a href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></div><div class="ttdeci">void create_approval(name calling_contract, CREATEAPPRV_SIGNATURE)</div><div class="ttdoc">Создаёт аппрув в совете</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:73</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a039a246ed508cb98eadd3c61320218e7"><div class="ttname"><a href="shared__soviet_8hpp.html#a039a246ed508cb98eadd3c61320218e7">OPENPROGWALL_SIGNATURE</a></div><div class="ttdeci">#define OPENPROGWALL_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:42</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a206e28cd6d6191f48b32d42fdeb878ec"><div class="ttname"><a href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a></div><div class="ttdeci">#define NEWSUBMITTED_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:18</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a3194772d5ea5c670bd3346bd9092c329"><div class="ttname"><a href="shared__soviet_8hpp.html#a3194772d5ea5c670bd3346bd9092c329">newact_interface</a></div><div class="ttdeci">void(NEWACT_SIGNATURE) newact_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:31</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a3b063cf349aa2bf79d619ae244da2556"><div class="ttname"><a href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a></div><div class="ttdeci">#define NEWAGREEMENT_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:36</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a3f971a5eeabcc60de262be21d56a17bf"><div class="ttname"><a href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a></div><div class="ttdeci">#define NEWLINK_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:33</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a461bfb688f2a0b8b1509b576dfaae866"><div class="ttname"><a href="shared__soviet_8hpp.html#a461bfb688f2a0b8b1509b576dfaae866">newresolved_interface</a></div><div class="ttdeci">void(NEWRESOLVED_SIGNATURE) newresolved_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:22</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a469c0e6f099986808454e29e331a89b5"><div class="ttname"><a href="shared__soviet_8hpp.html#a469c0e6f099986808454e29e331a89b5">newagreement_interface</a></div><div class="ttdeci">void(NEWAGREEMENT_SIGNATURE) newagreement_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:37</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a4ec64d3b68504b000f68b0a31de4bdd5"><div class="ttname"><a href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a></div><div class="ttdeci">#define NEWDECISION_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:24</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a693e4deeebe24d80d511f5d8517d6249"><div class="ttname"><a href="shared__soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249">createapprv_interface</a></div><div class="ttdeci">void(CREATEAPPRV_SIGNATURE) createapprv_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:11</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a697ba71d248bbff1151aee923658a010"><div class="ttname"><a href="shared__soviet_8hpp.html#a697ba71d248bbff1151aee923658a010">newlink_interface</a></div><div class="ttdeci">void(NEWLINK_SIGNATURE) newlink_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:34</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a69bbcacb08452549f6d5918538a0c1c2"><div class="ttname"><a href="shared__soviet_8hpp.html#a69bbcacb08452549f6d5918538a0c1c2">newdecision_interface</a></div><div class="ttdeci">void(NEWDECISION_SIGNATURE) newdecision_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:25</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a71c8d28c327ee0ef52e0b3ad8363c70b"><div class="ttname"><a href="shared__soviet_8hpp.html#a71c8d28c327ee0ef52e0b3ad8363c70b">newdeclined_interface</a></div><div class="ttdeci">void(NEWDECLINED_SIGNATURE) newdeclined_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:28</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a779972998ecf7ea47fdbea1960aefce9"><div class="ttname"><a href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a></div><div class="ttdeci">#define NEWRESOLVED_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:21</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a8fce21808c492f33adb4f9fc844660a5"><div class="ttname"><a href="shared__soviet_8hpp.html#a8fce21808c492f33adb4f9fc844660a5">DECLINE_CALLBACK_SIGNATURE</a></div><div class="ttdeci">#define DECLINE_CALLBACK_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:14</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_a9b54c7e95e7a4553628d76257816514d"><div class="ttname"><a href="shared__soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d">createagenda_interface</a></div><div class="ttdeci">void(CREATEAGENDA_SIGNATURE) createagenda_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:8</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_ab2152571aed7fcaaa5a3f9c4b4843f06"><div class="ttname"><a href="shared__soviet_8hpp.html#ab2152571aed7fcaaa5a3f9c4b4843f06">newsubmitted_interface</a></div><div class="ttdeci">void(NEWSUBMITTED_SIGNATURE) newsubmitted_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:19</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_ab93d9710591738a183988beb6084d441"><div class="ttname"><a href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a></div><div class="ttdeci">#define NEWACT_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:30</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_abdb626b1f08524bd2a859b083247527f"><div class="ttname"><a href="shared__soviet_8hpp.html#abdb626b1f08524bd2a859b083247527f">newpackage_interface</a></div><div class="ttdeci">void(NEWPACKAGE_SIGNATURE) newpackage_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:40</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_ac071a9a6ce438b190e29e408ed4b8241"><div class="ttname"><a href="shared__soviet_8hpp.html#ac071a9a6ce438b190e29e408ed4b8241">decline_callback_interface</a></div><div class="ttdeci">void(DECLINE_CALLBACK_SIGNATURE) decline_callback_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:15</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_ac5da0c75ff2772d5af152463845b1830"><div class="ttname"><a href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a></div><div class="ttdeci">#define NEWDECLINED_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:27</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_ad60091c12735c92b09cb8157f2585a6b"><div class="ttname"><a href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a></div><div class="ttdeci">#define CREATEAGENDA_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:7</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_aece1205460ace8f2cb031fd226906752"><div class="ttname"><a href="shared__soviet_8hpp.html#aece1205460ace8f2cb031fd226906752">openprogwall_interface</a></div><div class="ttdeci">void(OPENPROGWALL_SIGNATURE) openprogwall_interface</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:43</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_aee8ec7d6489adcb3f0708e303e66f74b"><div class="ttname"><a href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a></div><div class="ttdeci">#define NEWPACKAGE_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:39</div></div>
+<div class="ttc" id="ashared__soviet_8hpp_html_af1b9238650968640df3f667e9ab89178"><div class="ttname"><a href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a></div><div class="ttdeci">#define CREATEAPPRV_SIGNATURE</div><div class="ttdef"><b>Definition:</b> shared_soviet.hpp:10</div></div>
+<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__soviet_8hpp.html">shared_soviet.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

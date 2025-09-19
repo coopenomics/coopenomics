@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Члены классов - Переменные</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('functions_vars_s.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
+<li>SALARY&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#a652764fcdf4ddd386dcd542d9a44edd6">Ledger::accounts</a></li>
+<li>schedule_version&#160;:&#160;<a class="el" href="structeosiobios_1_1block__header.html#af34fd0dd085bf489c10b02be5f4dd209">eosiobios::block_header</a>, <a class="el" href="structeosiosystem_1_1block__header.html#a5a58fc892253b39a20815926440e0637">eosiosystem::block_header</a></li>
+<li>secondary_key&#160;:&#160;<a class="el" href="structcounts__base.html#a54989b6bb7004b9dce497350707fce21">counts_base</a></li>
+<li>secretary&#160;:&#160;<a class="el" href="struct_meet_1_1meet.html#a1326e84142db6ebe7f7cab0519c8b045">Meet::meet</a></li>
+<li>SECURITIES&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#a8e45d83997920085225ddacea86620ec">Ledger::accounts</a></li>
+<li>share_balance&#160;:&#160;<a class="el" href="structcontributor_1_1participant.html#aee726d8f5f10a900aea107c4f25a84dd">contributor::participant</a></li>
+<li>share_contributions&#160;:&#160;<a class="el" href="structprogram.html#a3e98b66b843d1b80f17abe60bb316316">program</a></li>
+<li>SHARE_FUND&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#a43f0550ee3c97dd93a383bbb821445b8">Ledger::accounts</a></li>
+<li>shares&#160;:&#160;<a class="el" href="struct_capital_1_1project__wallet.html#a001aace6c4ee6f9a83451ca85b07671a">Capital::project_wallet</a></li>
+<li>SHARES_AND_STAKES&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#aecdec592471110e6668ac84ffabadd1b">Ledger::accounts</a></li>
+<li>signature&#160;:&#160;<a class="el" href="structdocument.html#a9fd2739490e87378f466df2a0c65bd58">document</a>, <a class="el" href="structsignature__info.html#aedca8baa0c5fe22be2df7c0ea6b3bd33">signature_info</a></li>
+<li>signatures&#160;:&#160;<a class="el" href="structdocument2.html#a705586bc66618edeab4bff430c32cba5">document2</a></li>
+<li>signed_at&#160;:&#160;<a class="el" href="structsignature__info.html#ab63ff4056d6d636f7057ecea80c776d3">signature_info</a></li>
+<li>signed_ballots&#160;:&#160;<a class="el" href="struct_meet_1_1meet.html#a5abcfa3f6937d3b781281723bd3358c5">Meet::meet</a></li>
+<li>signed_hash&#160;:&#160;<a class="el" href="structsignature__info.html#a0e53d0c301759138d438b300ccec6237">signature_info</a></li>
+<li>signer&#160;:&#160;<a class="el" href="structsignature__info.html#a33effc71ea076cc707d27f82e0e4b0b1">signature_info</a></li>
+<li>SOCIAL_INSURANCE&#160;:&#160;<a class="el" href="struct_ledger_1_1accounts.html#accca5ba0cd686cf038a385ac3c310725">Ledger::accounts</a></li>
+<li>source_braname&#160;:&#160;<a class="el" href="struct_marketplace_1_1shipment.html#a1b7febc7333409b16e93cf78114d1655">Marketplace::shipment</a></li>
+<li>soviet_abi_ser&#160;:&#160;<a class="el" href="classeosio__system_1_1eosio__system__tester.html#acfc36e82fca5bcc4e51b7a5ff878af04">eosio_system::eosio_system_tester</a></li>
+<li>spended_at&#160;:&#160;<a class="el" href="struct_capital_1_1expense.html#a04a1e1d81d7100787ec969b0d6f52d52">Capital::expense</a></li>
+<li>spendeded&#160;:&#160;<a class="el" href="structprogram.html#a0b196cba0f664d8bd7d5621eb83f5aa3">program</a></li>
+<li>stake_account&#160;:&#160;<a class="el" href="classeosiosystem_1_1system__contract.html#a5cde7e6a57d453cc63d509c6657355e2">eosiosystem::system_contract</a></li>
+<li>staked&#160;:&#160;<a class="el" href="structeosiosystem_1_1voter__info.html#a3f1a76120b906f5f304c0c4604d4bf37">eosiosystem::voter_info</a></li>
+<li>start_at&#160;:&#160;<a class="el" href="structprogram.html#a4ab247970586f2c364e5cc4941820bdd">program</a></li>
+<li>state&#160;:&#160;<a class="el" href="structaddress__data.html#a3b4b232ef3ababb1da9962fc9f2eee35">address_data</a></li>
+<li>statement&#160;:&#160;<a class="el" href="struct_capital_1_1_debts_1_1debt.html#ac00e6ef72ec3fccc90e17c1fefde8d9f">Capital::Debts::debt</a>, <a class="el" href="struct_capital_1_1invest.html#a63f66294e288dc6cf3031d865aa45b2d">Capital::invest</a>, <a class="el" href="struct_capital_1_1program__invest.html#a08a99a3478b9dedce67d255e163ab81f">Capital::program_invest</a>, <a class="el" href="struct_capital_1_1program__withdraw.html#aa923bc00a8d7e8da77b39b88944e8fa6">Capital::program_withdraw</a>, <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html#a351bdf9b9851f168cc56ba0dc842fd1c">Capital::ProgramProperties::program_property</a>, <a class="el" href="struct_capital_1_1project__withdraw.html#a65b8dbc000d8226083c14c1fb8f040d2">Capital::project_withdraw</a>, <a class="el" href="struct_capital_1_1result.html#af0708de2cbacaa6276e7b79f75b85d6a">Capital::result</a>, <a class="el" href="structdebt.html#ad9f16ff9ff585dcff6ea7ee6629d8b3c">debt</a>, <a class="el" href="structdecision.html#aa80153dff7f01b0ac33a425dd39c5164">decision</a>, <a class="el" href="struct_marketplace_1_1segment.html#a747f55a2d350c12808ef2d164eb5043f">Marketplace::segment</a>, <a class="el" href="struct_registrator_1_1candidate.html#a79bc79f7084ffe6f834ec15653d6fbaa">Registrator::candidate</a>, <a class="el" href="struct_registrator_1_1candidate__legacy.html#a43b25479a7d883f62da5e7777c6ffef5">Registrator::candidate_legacy</a>, <a class="el" href="struct_wallet_1_1withdraw.html#a36f399b5c0560ae559497ba2e481e65b">Wallet::withdraw</a></li>
+<li>status&#160;:&#160;<a class="el" href="structaccount.html#a8a3bb008be845158f23da8984f32d1b4">account</a>, <a class="el" href="structagreement2.html#a713ef9a920e732c8737b1987ae9fafd5">agreement2</a>, <a class="el" href="structagreement.html#a9aef074cd311ba41213b0b72d1bd7241">agreement</a>, <a class="el" href="struct_capital_1_1appendix.html#a7bd625c01c4c5269e4e4108107031e78">Capital::appendix</a>, <a class="el" href="struct_capital_1_1_commits_1_1commit.html#af8ee5aab755d1c79e87768b164049318">Capital::Commits::commit</a>, <a class="el" href="struct_capital_1_1contributor.html#a7415d2fcc5b1ca604bc55173bf494e9f">Capital::contributor</a>, <a class="el" href="struct_capital_1_1_debts_1_1debt.html#a07d44bc69d1012faab909f2f01442d66">Capital::Debts::debt</a>, <a class="el" href="struct_capital_1_1expense.html#ad3ea5bfad32920e7d2b5f234542dbc4d">Capital::expense</a>, <a class="el" href="struct_capital_1_1invest.html#ace6eba727ca3d5a02f74f6724cca7168">Capital::invest</a>, <a class="el" href="struct_capital_1_1program__invest.html#a1a2b6235a198b42d7dcf9d028c698a13">Capital::program_invest</a>, <a class="el" href="struct_capital_1_1program__withdraw.html#aa57259ef22e9754b48109687f4566bda">Capital::program_withdraw</a>, <a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html#ab3a53bab1d15805bc7c0cef94cfd70a5">Capital::ProgramProperties::program_property</a>, <a class="el" href="struct_capital_1_1project.html#a3748c71e309672ab32b1b66e035f6e18">Capital::project</a>, <a class="el" href="struct_capital_1_1project__withdraw.html#ab69e1c0d27e7fbf7b50119e59ac897c7">Capital::project_withdraw</a>, <a class="el" href="struct_capital_1_1_project_properties_1_1property.html#a2c8c93fbf7fe6a56232ae8b8d0ddd3b4">Capital::ProjectProperties::property</a>, <a class="el" href="struct_capital_1_1result.html#ae11c3f755b1773b655d2e320da5eb829">Capital::result</a>, <a class="el" href="struct_capital_1_1_segments_1_1segment.html#a16e98843f3fa79481a6a39dc06b07338">Capital::Segments::segment</a>, <a class="el" href="structcooperative2.html#a4180d891ca2a82a3b962fcb0d0169eaa">cooperative2</a>, <a class="el" href="structcooperative.html#ad0ecbe38c4dd9147263056860f6b1b03">cooperative</a>, <a class="el" href="structdebt.html#ab57fddf702a174d9332236e58d2bdc5c">debt</a>, <a class="el" href="structfwithdraw.html#a0e922872fbfd419e3039853e3671b9fd">fwithdraw</a>, <a class="el" href="struct_gateway_1_1income.html#a77b8936f5611fb1aac8f807602ccd7fe">Gateway::income</a>, <a class="el" href="struct_gateway_1_1outcome.html#a069571292993fbcca477e2b013b53f1e">Gateway::outcome</a>, <a class="el" href="struct_marketplace_1_1request.html#a16483c4f884e91d70890dc09abbacaef">Marketplace::request</a>, <a class="el" href="struct_marketplace_1_1segment.html#acc41e888b0ababf92d092af6bc183de8">Marketplace::segment</a>, <a class="el" href="struct_marketplace_1_1shipment.html#ab589ce5aa6c8758bcd78c79289d043ab">Marketplace::shipment</a>, <a class="el" href="struct_meet_1_1meet.html#ab4b0eab1d1412d714377ac2fb78b67e7">Meet::meet</a>, <a class="el" href="structparticipant.html#a9855988bfe1c23094656925325665756">participant</a>, <a class="el" href="struct_registrator_1_1candidate.html#afdf48ab125522dd43c2195a0a39a7c28">Registrator::candidate</a>, <a class="el" href="struct_registrator_1_1candidate__legacy.html#a116ca8ea2f29ad8dd86e976701c9c242">Registrator::candidate_legacy</a>, <a class="el" href="structtest_1_1testrecord.html#afb90236719c8c98fb537c3848c072995">test::testrecord</a>, <a class="el" href="struct_wallet_1_1deposit.html#ae203120455459371ad684e7c642759d5">Wallet::deposit</a>, <a class="el" href="struct_wallet_1_1withdraw.html#ab18822fcb90fe5b43b90fca5e68e5695">Wallet::withdraw</a>, <a class="el" href="structwriteoff__op.html#a299f403b61e384a5d69d070add6721d0">writeoff_op</a></li>
+<li>storages&#160;:&#160;<a class="el" href="structaccount.html#a95185a9eeb41425a3174b21042d5cec6">account</a></li>
+<li>street&#160;:&#160;<a class="el" href="structaddress__data.html#a106cb3b84ce9123528df437a6cfc4a0f">address_data</a></li>
+<li>supplied_at&#160;:&#160;<a class="el" href="struct_marketplace_1_1request.html#a436a9a523c44623331c4287a850b2be8">Marketplace::request</a></li>
+<li>supplier_braname&#160;:&#160;<a class="el" href="struct_marketplace_1_1request.html#a460ca73cb38307e283064166a5d4ee8a">Marketplace::request</a></li>
+<li>supply&#160;:&#160;<a class="el" href="structeosio_1_1token_1_1currency__stats.html#ab24e3519d9ea9063b80d74a64ec1fd73">eosio::token::currency_stats</a>, <a class="el" href="structeosiosystem_1_1exchange__state.html#a46dd436b7c53a2cc5fb718f18176f55f">eosiosystem::exchange_state</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

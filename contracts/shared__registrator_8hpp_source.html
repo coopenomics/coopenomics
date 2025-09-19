@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/shared_registrator.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('shared__registrator_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">shared_registrator.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="shared__registrator_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespace_core.html">    1</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_core_1_1_registrator.html">Core::Registrator</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespace_core_1_1_registrator.html#ac45a6e784e2438615c65460beebaf9a8">    8</a></span>    <span class="keyword">inline</span> <a class="code hl_struct" href="structaccount.html">account</a> <a class="code hl_function" href="namespace_core_1_1_registrator.html#ac45a6e784e2438615c65460beebaf9a8">get_account_or_fail</a>(eosio::name username) {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>      <a class="code hl_typedef" href="accounts_8hpp.html#a8d9239816b55cd7718da56b79346de74">accounts_index</a> accounts(<a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a>, <a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a>.value);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>      <span class="keyword">auto</span> account_itr = accounts.find(username.value);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>      eosio::check(account_itr != accounts.end(), <span class="stringliteral">&quot;Аккаунт не найден&quot;</span>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>      <span class="keywordflow">return</span> *account_itr;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>} <span class="comment">// namespace Core::Registrator</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespace_registrator.html">   16</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_registrator.html">Registrator</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html">   26</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(REGISTRATOR)]] <a class="code hl_struct" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a2a669edae6d416bed267a40de2b648cd">   27</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a2a669edae6d416bed267a40de2b648cd">username</a>; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#aec50e2a6c388cb100dd988dcfb74e937">   28</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#aec50e2a6c388cb100dd988dcfb74e937">coopname</a>; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a0340efbdbc0bf3fd5caa664ee6b9bced">   29</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a0340efbdbc0bf3fd5caa664ee6b9bced">braname</a>;  </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a116ca8ea2f29ad8dd86e976701c9c242">   30</a></span>    name <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a116ca8ea2f29ad8dd86e976701c9c242">status</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a7636c3c6f9ecc4300e3b32f51c69391c">   31</a></span>    eosio::time_point_sec <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a7636c3c6f9ecc4300e3b32f51c69391c">created_at</a>; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a43b25479a7d883f62da5e7777c6ffef5">   32</a></span>    <a class="code hl_struct" href="structdocument.html">document</a> <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a43b25479a7d883f62da5e7777c6ffef5">statement</a>; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a112a1853a4bb3df08108cd6a604fe317">   33</a></span>    checksum256 <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a112a1853a4bb3df08108cd6a604fe317">registration_hash</a>; </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#ac7d99d7baf11a56eb4b7f256800f2baf">   34</a></span>    eosio::asset <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#ac7d99d7baf11a56eb4b7f256800f2baf">initial</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a60b945dccf9c5f9bcfe4a0a0c21bb5ba">   35</a></span>    eosio::asset <a class="code hl_variable" href="struct_registrator_1_1candidate__legacy.html#a60b945dccf9c5f9bcfe4a0a0c21bb5ba">minimum</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a18ed5cd275b92878587912f5cb4f28e0">   37</a></span>    uint64_t <a class="code hl_function" href="struct_registrator_1_1candidate__legacy.html#a18ed5cd275b92878587912f5cb4f28e0">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">   38</a></span>    checksum256 <a class="code hl_function" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> registration_hash; } </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  };</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;candidates&quot;</span>_n, candidate_legacy, </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n, eosio::const_mem_fun&lt;candidate_legacy, checksum256, &amp;candidate_legacy::by_hash&gt;&gt;  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806">   43</a></span>  &gt; <a class="code hl_typedef" href="namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806">candidates_legacy_index</a>; </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html">   54</a></span>  <span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(REGISTRATOR)]] <a class="code hl_struct" href="struct_registrator_1_1candidate.html">candidate</a> {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#ac810115b8425e14b62ba9bbd072f66d5">   55</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate.html#ac810115b8425e14b62ba9bbd072f66d5">username</a>; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a32d73f5cf1fba9938b95baf91515139c">   56</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate.html#a32d73f5cf1fba9938b95baf91515139c">coopname</a>; </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#ac4a7fb69afe63a6ea12de8ae8c0977e7">   57</a></span>    eosio::name <a class="code hl_variable" href="struct_registrator_1_1candidate.html#ac4a7fb69afe63a6ea12de8ae8c0977e7">braname</a>;  </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#afdf48ab125522dd43c2195a0a39a7c28">   58</a></span>    name <a class="code hl_variable" href="struct_registrator_1_1candidate.html#afdf48ab125522dd43c2195a0a39a7c28">status</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a35405204e23aadb1e9907402330e2379">   59</a></span>    eosio::time_point_sec <a class="code hl_variable" href="struct_registrator_1_1candidate.html#a35405204e23aadb1e9907402330e2379">created_at</a>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a79bc79f7084ffe6f834ec15653d6fbaa">   60</a></span>    <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_registrator_1_1candidate.html#a79bc79f7084ffe6f834ec15653d6fbaa">statement</a>; </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a8e8a87158f9ea29af562bc6efb47e693">   61</a></span>    checksum256 <a class="code hl_variable" href="struct_registrator_1_1candidate.html#a8e8a87158f9ea29af562bc6efb47e693">registration_hash</a>; </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a77b41ec7f523df2b82644775088f48ea">   62</a></span>    eosio::asset <a class="code hl_variable" href="struct_registrator_1_1candidate.html#a77b41ec7f523df2b82644775088f48ea">initial</a>; </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#af90475b7a9fe62d69adff6b3b3f195fd">   63</a></span>    eosio::asset <a class="code hl_variable" href="struct_registrator_1_1candidate.html#af90475b7a9fe62d69adff6b3b3f195fd">minimum</a>; </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a0d3ceeeaaeee38a2bd908c24188683ee">   65</a></span>    uint64_t <a class="code hl_function" href="struct_registrator_1_1candidate.html#a0d3ceeeaaeee38a2bd908c24188683ee">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; } </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">   66</a></span>    checksum256 <a class="code hl_function" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> registration_hash; } </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  };</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keyword">typedef</span> eosio::multi_index&lt;<span class="stringliteral">&quot;candidates2&quot;</span>_n, candidate, </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n, eosio::const_mem_fun&lt;candidate, checksum256, &amp;candidate::by_hash&gt;&gt;  </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">   71</a></span>  &gt; <a class="code hl_typedef" href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">candidates_index</a>; </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">   80</a></span>  <span class="keyword">inline</span> std::optional&lt;candidate&gt; <a class="code hl_function" href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">get_candidate_by_hash</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;hash) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_typedef" href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">candidates_index</a> primary_index(<a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a>, coopname.value);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">auto</span> secondary_index = primary_index.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">auto</span> itr = secondary_index.find(hash);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">if</span> (itr == secondary_index.end()) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> *itr;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}  </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">   98</a></span>  <span class="keyword">inline</span> uint64_t <a class="code hl_function" href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">get_active_participants_count</a>(eosio::name coopname) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// Получаем информацию о кооперативе</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_typedef" href="accounts_8hpp.html#a966e5c440f90a3a382eacc290817c2fb">cooperatives2_index</a> cooperatives(<a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a>, <a class="code hl_variable" href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a>.value);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">auto</span> coop_itr = cooperatives.find(coopname.value);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> (coop_itr == cooperatives.end() || !coop_itr-&gt;is_cooperative || !coop_itr-&gt;active_participants_count.has_value()) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      eosio::check(<span class="keyword">false</span>, <span class="stringliteral">&quot;Счетчик пайщиков кооператива не найден&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> coop_itr-&gt;active_participants_count.value();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="ttc" id="aaccounts_8hpp_html_a8d9239816b55cd7718da56b79346de74"><div class="ttname"><a href="accounts_8hpp.html#a8d9239816b55cd7718da56b79346de74">accounts_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;accounts&quot;_n, account, eosio::indexed_by&lt; &quot;byreferer&quot;_n, eosio::const_mem_fun&lt; account, uint64_t, &amp;account::by_referer &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; account, uint64_t, &amp;account::by_type &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; account, uint64_t, &amp;account::by_status &gt; &gt;, eosio::indexed_by&lt;&quot;byregistr&quot;_n, eosio::const_mem_fun&lt; account, uint64_t, &amp;account::by_registr &gt; &gt;, eosio::indexed_by&lt;&quot;byregistred&quot;_n, eosio::const_mem_fun&lt; account, uint64_t, &amp;account::by_registered_at &gt; &gt;, eosio::indexed_by&lt;&quot;byverif&quot;_n, eosio::const_mem_fun&lt; account, uint64_t,&amp;account::is_verified_index &gt; &gt; &gt; accounts_index</div><div class="ttdef"><b>Definition:</b> accounts.hpp:150</div></div>
+<div class="ttc" id="aaccounts_8hpp_html_a966e5c440f90a3a382eacc290817c2fb"><div class="ttname"><a href="accounts_8hpp.html#a966e5c440f90a3a382eacc290817c2fb">cooperatives2_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;coops&quot;_n, cooperative2, eosio::indexed_by&lt;&quot;iscoop&quot;_n, eosio::const_mem_fun&lt; cooperative2, uint64_t, &amp;cooperative2::is_coop_index &gt; &gt;, eosio::indexed_by&lt;&quot;byparent&quot;_n, eosio::const_mem_fun&lt; cooperative2, uint64_t, &amp;cooperative2::by_parent &gt; &gt;, eosio::indexed_by&lt;&quot;bycoopchilds&quot;_n, eosio::const_mem_fun&lt; cooperative2, uint128_t, &amp;cooperative2::by_coop_childs &gt; &gt;, eosio::indexed_by&lt;&quot;bycooptype&quot;_n, eosio::const_mem_fun&lt; cooperative2, uint64_t, &amp;cooperative2::bycooptype &gt; &gt; &gt; cooperatives2_index</div><div class="ttdef"><b>Definition:</b> accounts.hpp:391</div></div>
+<div class="ttc" id="aconsts_8hpp_html_ae4d59ec28af0642e3072dd36dd0a537b"><div class="ttname"><a href="consts_8hpp.html#ae4d59ec28af0642e3072dd36dd0a537b">_registrator</a></div><div class="ttdeci">static constexpr eosio::name _registrator</div><div class="ttdef"><b>Definition:</b> consts.hpp:157</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespace_core_1_1_registrator_html"><div class="ttname"><a href="namespace_core_1_1_registrator.html">Core::Registrator</a></div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:1</div></div>
+<div class="ttc" id="anamespace_core_1_1_registrator_html_ac45a6e784e2438615c65460beebaf9a8"><div class="ttname"><a href="namespace_core_1_1_registrator.html#ac45a6e784e2438615c65460beebaf9a8">Core::Registrator::get_account_or_fail</a></div><div class="ttdeci">account get_account_or_fail(eosio::name username)</div><div class="ttdoc">Получает аккаунт по имени пользователя</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:8</div></div>
+<div class="ttc" id="anamespace_registrator_html"><div class="ttname"><a href="namespace_registrator.html">Registrator</a></div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:16</div></div>
+<div class="ttc" id="anamespace_registrator_html_a165e72a766426e1399f38888fd948190"><div class="ttname"><a href="namespace_registrator.html#a165e72a766426e1399f38888fd948190">Registrator::get_active_participants_count</a></div><div class="ttdeci">uint64_t get_active_participants_count(eosio::name coopname)</div><div class="ttdoc">Получает количество активных пайщиков кооператива.</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:98</div></div>
+<div class="ttc" id="anamespace_registrator_html_a3b6083ab1ad701b4b7e35b4891fd7806"><div class="ttname"><a href="namespace_registrator.html#a3b6083ab1ad701b4b7e35b4891fd7806">Registrator::candidates_legacy_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;candidates&quot;_n, candidate_legacy, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; candidate_legacy, checksum256, &amp;candidate_legacy::by_hash &gt; &gt; &gt; candidates_legacy_index</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:43</div></div>
+<div class="ttc" id="anamespace_registrator_html_a6257257542818d58b281ff1dbf6af1f3"><div class="ttname"><a href="namespace_registrator.html#a6257257542818d58b281ff1dbf6af1f3">Registrator::candidates_index</a></div><div class="ttdeci">eosio::multi_index&lt;&quot;candidates2&quot;_n, candidate, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; candidate, checksum256, &amp;candidate::by_hash &gt; &gt; &gt; candidates_index</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:71</div></div>
+<div class="ttc" id="anamespace_registrator_html_acddd176ac46ca054d4d6d54cf48c9bad"><div class="ttname"><a href="namespace_registrator.html#acddd176ac46ca054d4d6d54cf48c9bad">Registrator::get_candidate_by_hash</a></div><div class="ttdeci">std::optional&lt; candidate &gt; get_candidate_by_hash(eosio::name coopname, const checksum256 &amp;hash)</div><div class="ttdoc">Получает кандидата по хэшу регистрации.</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:80</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html">Registrator::candidate_legacy</a></div><div class="ttdoc">Структура кандидата на вступление (устаревшая версия).</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:26</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a0340efbdbc0bf3fd5caa664ee6b9bced"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a0340efbdbc0bf3fd5caa664ee6b9bced">Registrator::candidate_legacy::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">Имя филиала</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:29</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a112a1853a4bb3df08108cd6a604fe317"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a112a1853a4bb3df08108cd6a604fe317">Registrator::candidate_legacy::registration_hash</a></div><div class="ttdeci">checksum256 registration_hash</div><div class="ttdoc">Идентификатор платежа регистрационного взноса</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:33</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a116ca8ea2f29ad8dd86e976701c9c242"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a116ca8ea2f29ad8dd86e976701c9c242">Registrator::candidate_legacy::status</a></div><div class="ttdeci">name status</div><div class="ttdoc">Статус: created | payed.</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:30</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a18ed5cd275b92878587912f5cb4f28e0"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a18ed5cd275b92878587912f5cb4f28e0">Registrator::candidate_legacy::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:37</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a24a39d178549ce8797e771f8a3e1fb60"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">Registrator::candidate_legacy::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу платежа</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:38</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a2a669edae6d416bed267a40de2b648cd"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a2a669edae6d416bed267a40de2b648cd">Registrator::candidate_legacy::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя аккаунта пайщика</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:27</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a43b25479a7d883f62da5e7777c6ffef5"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a43b25479a7d883f62da5e7777c6ffef5">Registrator::candidate_legacy::statement</a></div><div class="ttdeci">document statement</div><div class="ttdoc">Заявление на вступление</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:32</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a60b945dccf9c5f9bcfe4a0a0c21bb5ba"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a60b945dccf9c5f9bcfe4a0a0c21bb5ba">Registrator::candidate_legacy::minimum</a></div><div class="ttdeci">eosio::asset minimum</div><div class="ttdoc">Минимальный взнос</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:35</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_a7636c3c6f9ecc4300e3b32f51c69391c"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#a7636c3c6f9ecc4300e3b32f51c69391c">Registrator::candidate_legacy::created_at</a></div><div class="ttdeci">eosio::time_point_sec created_at</div><div class="ttdoc">Время регистрации аккаунта</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:31</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_ac7d99d7baf11a56eb4b7f256800f2baf"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#ac7d99d7baf11a56eb4b7f256800f2baf">Registrator::candidate_legacy::initial</a></div><div class="ttdeci">eosio::asset initial</div><div class="ttdoc">Начальный взнос</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:34</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate__legacy_html_aec50e2a6c388cb100dd988dcfb74e937"><div class="ttname"><a href="struct_registrator_1_1candidate__legacy.html#aec50e2a6c388cb100dd988dcfb74e937">Registrator::candidate_legacy::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:28</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html"><div class="ttname"><a href="struct_registrator_1_1candidate.html">Registrator::candidate</a></div><div class="ttdoc">Структура кандидата на вступление.</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:54</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a0d3ceeeaaeee38a2bd908c24188683ee"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a0d3ceeeaaeee38a2bd908c24188683ee">Registrator::candidate::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:65</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a32d73f5cf1fba9938b95baf91515139c"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a32d73f5cf1fba9938b95baf91515139c">Registrator::candidate::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:56</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a35405204e23aadb1e9907402330e2379"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a35405204e23aadb1e9907402330e2379">Registrator::candidate::created_at</a></div><div class="ttdeci">eosio::time_point_sec created_at</div><div class="ttdoc">Время регистрации аккаунта</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:59</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a77b41ec7f523df2b82644775088f48ea"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a77b41ec7f523df2b82644775088f48ea">Registrator::candidate::initial</a></div><div class="ttdeci">eosio::asset initial</div><div class="ttdoc">Начальный взнос</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:62</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a79bc79f7084ffe6f834ec15653d6fbaa"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a79bc79f7084ffe6f834ec15653d6fbaa">Registrator::candidate::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdoc">Заявление на вступление</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:60</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a8e8a87158f9ea29af562bc6efb47e693"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a8e8a87158f9ea29af562bc6efb47e693">Registrator::candidate::registration_hash</a></div><div class="ttdeci">checksum256 registration_hash</div><div class="ttdoc">Идентификатор платежа регистрационного взноса</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:61</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_a9a4629dc2b756fffccbe76a59875e303"><div class="ttname"><a href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">Registrator::candidate::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdoc">Индекс по хэшу платежа</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:66</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_ac4a7fb69afe63a6ea12de8ae8c0977e7"><div class="ttname"><a href="struct_registrator_1_1candidate.html#ac4a7fb69afe63a6ea12de8ae8c0977e7">Registrator::candidate::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">Имя филиала</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:57</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_ac810115b8425e14b62ba9bbd072f66d5"><div class="ttname"><a href="struct_registrator_1_1candidate.html#ac810115b8425e14b62ba9bbd072f66d5">Registrator::candidate::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Имя аккаунта пайщика</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:55</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_af90475b7a9fe62d69adff6b3b3f195fd"><div class="ttname"><a href="struct_registrator_1_1candidate.html#af90475b7a9fe62d69adff6b3b3f195fd">Registrator::candidate::minimum</a></div><div class="ttdeci">eosio::asset minimum</div><div class="ttdoc">Минимальный взнос</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:63</div></div>
+<div class="ttc" id="astruct_registrator_1_1candidate_html_afdf48ab125522dd43c2195a0a39a7c28"><div class="ttname"><a href="struct_registrator_1_1candidate.html#afdf48ab125522dd43c2195a0a39a7c28">Registrator::candidate::status</a></div><div class="ttdeci">name status</div><div class="ttdoc">Статус: created | payed.</div><div class="ttdef"><b>Definition:</b> shared_registrator.hpp:58</div></div>
+<div class="ttc" id="astructaccount_html"><div class="ttname"><a href="structaccount.html">account</a></div><div class="ttdoc">Структура, представляющая учетные записи аккаунтов.</div><div class="ttdef"><b>Definition:</b> accounts.hpp:60</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:28</div></div>
+<div class="ttc" id="astructdocument_html"><div class="ttname"><a href="structdocument.html">document</a></div><div class="ttdef"><b>Definition:</b> drafts.hpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="shared__registrator_8hpp.html">shared_registrator.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
