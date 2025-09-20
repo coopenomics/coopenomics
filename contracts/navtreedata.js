@@ -112,14 +112,14 @@ var NAVTREEINDEX =
 "namespace_names_1_1_ledger.html",
 "projects_8hpp.html#adea40618079d31f05029cab6507cce8a",
 "shared__names_8hpp.html#aebaa89558ace5a9517d9fb1b819f808e",
-"struct_capital_1_1contributor.html#a80514f83677c37e739e2f1d008e7ce9b",
-"struct_capital_1_1result.html#a5ca4836a4d4f2369e47339c586c42e4b",
-"struct_marketplace_1_1request.html#ad203327be1c6131f89413da1335e71ab",
-"structaddress.html#af748837166c7a3e26168697f31499d8d",
-"structdebt.html",
-"structeosiosystem_1_1block__info_1_1latest__block__batch__info__result.html#ae64b5eb7efe7ddafb9aa3e260dc4fa8e",
-"structlimitauth__tester.html#a9f9b15b3aef2d2f91fdd7ec62d3fb191",
-"upversion_8cpp.html"
+"struct_capital_1_1contributor.html#a7415d2fcc5b1ca604bc55173bf494e9f",
+"struct_capital_1_1result.html#a37a4bade83a9dfce317509508e78c79f",
+"struct_marketplace_1_1request.html#acfaf0ee938d42a667a2c9d5c21796736",
+"structaddress.html#ac17670d77124e31915f628941594b4dd",
+"structcounts__data.html#a5a9204942c998642666e44ec8916f114",
+"structeosiosystem_1_1block__info_1_1latest__block__batch__info__result.html#ad6bb99259a46f73549ee37819affcc1a",
+"structlimitauth__tester.html#a64730dbef72a36ac6059b3100d0844a1",
+"updateboard_8cpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

@@ -223,9 +223,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea">capital::approvecmmt</a> (eosio::name coopname, eosio::name master, checksum256 commit_hash)</td></tr>
 <tr class="memdesc:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет коммит в проект Одобряет коммит от мастера проекта и обрабатывает все связанные операции:  <a href="group__public__capital__actions.html#gaeaa1ded33dc53f186ceb512d043fbcea">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaeaa1ded33dc53f186ceb512d043fbcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga6f9fa5aa5b9c8441881b922dd401da44">capital::createcmmt</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, uint64_t creator_hours)</td></tr>
-<tr class="memdesc:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит в проект Создает коммит с затраченным временем создателя и отправляет на одобрение:  <a href="group__public__capital__actions.html#ga6f9fa5aa5b9c8441881b922dd401da44">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga6f9fa5aa5b9c8441881b922dd401da44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3ab7cdd11c372735fc18b4d03f51dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gae3ab7cdd11c372735fc18b4d03f51dc9">capital::createcmmt</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, uint64_t creator_hours, std::string description, std::string meta)</td></tr>
+<tr class="memdesc:gae3ab7cdd11c372735fc18b4d03f51dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит в проект Создает коммит с затраченным временем создателя и отправляет на одобрение:  <a href="group__public__capital__actions.html#gae3ab7cdd11c372735fc18b4d03f51dc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae3ab7cdd11c372735fc18b4d03f51dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga621d303425e284540472958c8017b91b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga621d303425e284540472958c8017b91b">capital::declinecmmt</a> (eosio::name coopname, eosio::name master, checksum256 commit_hash, std::string reason)</td></tr>
 <tr class="memdesc:ga621d303425e284540472958c8017b91b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклоняет коммит в проект Отклоняет коммит от мастера проекта и удаляет его из базы данных:  <a href="group__public__capital__actions.html#ga621d303425e284540472958c8017b91b">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga621d303425e284540472958c8017b91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1814,8 +1814,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
-<a id="ga6f9fa5aa5b9c8441881b922dd401da44" name="ga6f9fa5aa5b9c8441881b922dd401da44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6f9fa5aa5b9c8441881b922dd401da44">&#9670;&nbsp;</a></span>createcmmt()</h2>
+<a id="gae3ab7cdd11c372735fc18b4d03f51dc9" name="gae3ab7cdd11c372735fc18b4d03f51dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3ab7cdd11c372735fc18b4d03f51dc9">&#9670;&nbsp;</a></span>createcmmt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1848,7 +1848,19 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>creator_hours</em>&#160;</td>
+          <td class="paramname"><em>creator_hours</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1873,7 +1885,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
     <tr><td class="paramname">username</td><td>Наименование пользователя-создателя </td></tr>
     <tr><td class="paramname">project_hash</td><td>Хеш проекта </td></tr>
     <tr><td class="paramname">commit_hash</td><td>Хеш коммита </td></tr>
-    <tr><td class="paramname">creator_hours</td><td>Количество часов создателя</td></tr>
+    <tr><td class="paramname">creator_hours</td><td>Количество часов создателя </td></tr>
+    <tr><td class="paramname">description</td><td>Описание коммита </td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные коммита</td></tr>
   </table>
   </dd>
 </dl>

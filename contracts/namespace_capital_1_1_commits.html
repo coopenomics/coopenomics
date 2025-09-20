@@ -171,9 +171,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
 <tr class="memitem:a6374fe31b9c0e2f8470908740db81320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">delete_commit</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="memdesc:a6374fe31b9c0e2f8470908740db81320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет коммит по хэшу действия.  <a href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6374fe31b9c0e2f8470908740db81320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a636bc77072e07e8eac074f11f8b5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a21a636bc77072e07e8eac074f11f8b5b">create_commit</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;calculated_fact)</td></tr>
-<tr class="memdesc:a21a636bc77072e07e8eac074f11f8b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит без отправки на утверждение.  <a href="namespace_capital_1_1_commits.html#a21a636bc77072e07e8eac074f11f8b5b">Подробнее...</a><br /></td></tr>
-<tr class="separator:a21a636bc77072e07e8eac074f11f8b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6975f9091f21a205cc5443a9eba9c591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a6975f9091f21a205cc5443a9eba9c591">create_commit</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, std::string description, std::string meta, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;calculated_fact)</td></tr>
+<tr class="memdesc:a6975f9091f21a205cc5443a9eba9c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит без отправки на утверждение.  <a href="namespace_capital_1_1_commits.html#a6975f9091f21a205cc5443a9eba9c591">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6975f9091f21a205cc5443a9eba9c591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a381c26e19c5ef04ef673eb5fb1b0bf30" name="a381c26e19c5ef04ef673eb5fb1b0bf30"></a>
@@ -191,8 +191,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
-<a id="a21a636bc77072e07e8eac074f11f8b5b" name="a21a636bc77072e07e8eac074f11f8b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a21a636bc77072e07e8eac074f11f8b5b">&#9670;&nbsp;</a></span>create_commit()</h2>
+<a id="a6975f9091f21a205cc5443a9eba9c591" name="a6975f9091f21a205cc5443a9eba9c591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6975f9091f21a205cc5443a9eba9c591">&#9670;&nbsp;</a></span>create_commit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,6 +223,18 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
           <td></td>
           <td class="paramtype">checksum256&#160;</td>
           <td class="paramname"><em>commit_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

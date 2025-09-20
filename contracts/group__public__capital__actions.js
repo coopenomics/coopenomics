@@ -27,7 +27,7 @@ var group__public__capital__actions =
     [ "capital::capdeclwthd3", "group__public__capital__actions.html#gae2650cc81987dde6a4b6132e1e2985fc", null ],
     [ "capital::cmpltvoting", "group__public__capital__actions.html#gab1d5710505db08fb7e4db27ce6540b4e", null ],
     [ "capital::convertsegm", "group__public__capital__actions.html#ga29c7a61482ce25e80e08327b972d67f6", null ],
-    [ "capital::createcmmt", "group__public__capital__actions.html#ga6f9fa5aa5b9c8441881b922dd401da44", null ],
+    [ "capital::createcmmt", "group__public__capital__actions.html#gae3ab7cdd11c372735fc18b4d03f51dc9", null ],
     [ "capital::createdebt", "group__public__capital__actions.html#ga088830db9f7aaed6367743f25c959a03", null ],
     [ "capital::createexpnse", "group__public__capital__actions.html#gacf3a843bbf35be64fceccc1191fcdcf5", null ],
     [ "capital::createinvest", "group__public__capital__actions.html#ga6b15689c68f18b5e64ef3d27309298b9", null ],
