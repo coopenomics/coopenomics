@@ -51,6 +51,7 @@ var classcapital =
     [ "declrslt", "group__public__capital__actions.html#gaa6a2f057cec31e270be172698997191c", null ],
     [ "delproject", "group__public__capital__actions.html#gac41509ae63cb6a2591fa42724ac9adb9", null ],
     [ "diallocate", "group__public__capital__actions.html#gacd8a287d951f8477460a79048e4d1500", null ],
+    [ "editcontrib", "group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537", null ],
     [ "editproj", "group__public__capital__actions.html#ga819b1040f25720c4e17814859f1578b2", null ],
     [ "expandexpnss", "group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938", null ],
     [ "exppaycnfrm", "group__public__capital__actions.html#ga9eaa4019848cfdb62530349fd282219d", null ],

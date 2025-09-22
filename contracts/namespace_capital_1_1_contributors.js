@@ -6,6 +6,7 @@ var namespace_capital_1_1_contributors =
     ] ],
     [ "create_contributor", "namespace_capital_1_1_contributors.html#a7a483b02d3fb07e313785a8e16c0c01c", null ],
     [ "decrease_debt_amount", "namespace_capital_1_1_contributors.html#a2af0fd2486691e58df617cbc6822e491", null ],
+    [ "edit_contributor", "namespace_capital_1_1_contributors.html#aed6abbd60d18bf55ec28721f98567dd5", null ],
     [ "get_active_contributor_or_fail", "namespace_capital_1_1_contributors.html#aa62caaeac458155572e7e8fe9de17d38", null ],
     [ "get_active_contributor_with_appendix_or_fail", "namespace_capital_1_1_contributors.html#a3290427125419e6245bb5df26a5c95a6", null ],
     [ "get_contributor", "namespace_capital_1_1_contributors.html#a952e793bd70394e9a59d5bb8048b8b3b", null ],

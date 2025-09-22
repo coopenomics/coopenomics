@@ -157,9 +157,9 @@ sequenceDiagram
     Note over С: Блокировка средств в программе капитализации
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md153"></a>
+<h2><a class="anchor" id="autotoc_md158"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md154"></a>
+<h3><a class="anchor" id="autotoc_md159"></a>
 Шаг 1: Импорт вкладчика с взносами</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">импорт вкладчика</a></p>
 <p >Администратор кооператива инициирует импорт внешнего вкладчика с указанием суммы первоначальных взносов. Система проверяет, что кооператив еще не имеет установленной конфигурации, валидирует сумму взносов и проверяет уникальность вкладчика по имени и хешу.</p>
@@ -168,7 +168,7 @@ sequenceDiagram
 Валидируется сумма взносов </dd>
 <dd>
 Проверяется уникальность вкладчика</dd></dl>
-<h3><a class="anchor" id="autotoc_md155"></a>
+<h3><a class="anchor" id="autotoc_md160"></a>
 Шаг 2: Создание записи вкладчика</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">создание записи вкладчика</a></p>
 <p >Система создает запись вкладчика со статусом ACTIVE, помечая его как импортированного с внешним договором УХД и фиксированной почасовой ставкой.</p>
@@ -177,14 +177,14 @@ sequenceDiagram
 Устанавливается флаг внешнего договора УХД </dd>
 <dd>
 Фиксируется почасовая ставка для импортированного вкладчика</dd></dl>
-<h3><a class="anchor" id="autotoc_md156"></a>
+<h3><a class="anchor" id="autotoc_md161"></a>
 Шаг 3: Открытие программного кошелька</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__soviet__actions.html#gaaf98c65eaa585da91969ef08fd81a1bc">открытие кошелька программы</a></p>
 <p >Система открывает программный кошелек вкладчика в программе капитализации для учета его членских взносов и участия в распределении доходов.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Создается программный кошелек в программе капитализации </dd>
 <dd>
 Инициализируется кошелек с нулевыми балансами</dd></dl>
-<h3><a class="anchor" id="autotoc_md157"></a>
+<h3><a class="anchor" id="autotoc_md162"></a>
 Шаг 4: Зачисление первоначальных взносов</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga8b1f14b9d27bd7d0aa64a356c30029cf">зачисление взносов</a></p>
 <p >Система зачисляет указанную сумму первоначальных взносов в программный кошелек вкладчика, блокируя средства для участия в программе капитализации.</p>
@@ -193,19 +193,19 @@ sequenceDiagram
 Средства блокируются в программе капитализации </dd>
 <dd>
 Создается запись о зачислении с комментарием</dd></dl>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md163"></a>
 Результат процесса</h2>
 <p >После успешного завершения:</p><ol type="1">
 <li>Внешний вкладчик становится полноценным участником системы капитализации</li>
 <li>Открыт программный кошелек для участии в программе капитализации</li>
 <li>Внесены первоначальные взносы в программу капитализации</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md159"></a>
+<h2><a class="anchor" id="autotoc_md164"></a>
 Эффекты процесса</h2>
 <p >➕🏛️ <a class="el" href="class_ledger.html#ab49534dd0e92c5ba0cd31a1d22265506" title="Добавить средства на счёт кооператива">Ledger::add</a> на счёт <a class="el" href="struct_ledger_1_1accounts.html#a43f0550ee3c97dd93a383bbb821445b8" title="Паевой фонд (складочный капитал)">Ledger::accounts::SHARE_FUND</a> на сумму паевого взноса<br  />
 ➕🔒 <a class="el" href="class_wallet.html#a52270ac18ff80063d910dec0a29e83f9" title="Добавляет заблокированные средства в баланс кошелька пользователя">Wallet::add_blocked_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a> на сумму паевого взноса<br  />
 </p>
-<h2><a class="anchor" id="autotoc_md160"></a>
+<h2><a class="anchor" id="autotoc_md165"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__registration__process.html">Регистрация новых вкладчиков</a></li>

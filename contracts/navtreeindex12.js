@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"projects_8hpp.html#aadae1d005b8acd1bf9bf9273d2408fe7":[4,0,0,1,2,1,20,20],
+"projects_8hpp.html#ab0f59ec9ccd8f93fd6fe1240e82f520a":[4,0,0,1,2,1,20,32],
+"projects_8hpp.html#ac05a8e93fc45598a203be6555545f782":[4,0,0,1,2,1,20,31],
+"projects_8hpp.html#acfaa29fac646d2c080c82d98ff4c0361":[4,0,0,1,2,1,20,12],
+"projects_8hpp.html#ad139f2fcffef5471a7c6fa4f27ec3817":[4,0,0,1,2,1,20,30],
+"projects_8hpp.html#ad41b6f24a338f8470b2a64873efff014":[4,0,0,1,2,1,20,33],
 "projects_8hpp.html#adea40618079d31f05029cab6507cce8a":[4,0,0,1,2,1,20,6],
 "projects_8hpp.html#aec7f2500928caeea7ae36916383123eb":[4,0,0,1,2,1,20,24],
 "projects_8hpp.html#aef440092d068493d76d594963134e50d":[4,0,0,1,2,1,20,10],
@@ -36,7 +42,7 @@ var NAVTREEINDEX12 =
 "regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578":[4,0,0,11,0,6,0],
 "regcomplete_8cpp.html#abd3ca01bf0783577b5fb086326fa47ba":[4,0,0,11,0,6,2],
 "regcomplete_8cpp.html#ae9f2a6c3b5ac7f2fdcfecbc1058721d9":[4,0,0,11,0,6,3],
-"regcontrib_8cpp.html":[4,0,0,1,0,6,2,2],
+"regcontrib_8cpp.html":[4,0,0,1,0,6,3,2],
 "regcoop_8cpp.html":[4,0,0,11,0,1,4],
 "registrator_2src_2account_2createbranch_8cpp.html":[4,0,0,11,0,0,1],
 "registrator_2src_2system_2init_8cpp.html":[4,0,0,11,0,2,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX12 =
 "shared__names_8hpp.html#ab8419b92be441c0d18ba17a467ee516f":[4,0,0,7,27,39],
 "shared__names_8hpp.html#ac31cfae0a4ff8e4a89965eee6bb4d55f":[4,0,0,7,27,28],
 "shared__names_8hpp.html#ac585c7eca1ede884a505ebacfa2a61ef":[4,0,0,7,27,2],
-"shared__names_8hpp.html#acae0a36089dfe04f1af95ba237bd2e3e":[4,0,0,7,27,8],
-"shared__names_8hpp.html#acbc1f3a8e689514614f1af5343c0fc38":[4,0,0,7,27,40],
-"shared__names_8hpp.html#aceb20d4dffc2e5a95a4b6cc6d7efd69a":[4,0,0,7,27,21],
-"shared__names_8hpp.html#ad806e473f0175005c9f48e4898506e54":[4,0,0,7,27,20],
-"shared__names_8hpp.html#ad8cb003e6a6a282454208d143c32f4c6":[4,0,0,7,27,53],
-"shared__names_8hpp.html#adce6954bdfc4288bce0bd249530fb2ce":[4,0,0,7,27,37],
-"shared__names_8hpp.html#adddcf5ee8515a2349a74d2f1122a317c":[4,0,0,7,27,36]
+"shared__names_8hpp.html#acae0a36089dfe04f1af95ba237bd2e3e":[4,0,0,7,27,8]
 };

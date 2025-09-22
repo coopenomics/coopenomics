@@ -262,6 +262,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga2ecb2c2825a0646684a29fc279b41298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">capital::returnunused</a> (name coopname, checksum256 project_hash, name username)</td></tr>
 <tr class="memdesc:ga2ecb2c2825a0646684a29fc279b41298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает неиспользованные инвестиции Возвращает неиспользованные инвестиции инвестора из закрытого проекта:  <a href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2ecb2c2825a0646684a29fc279b41298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537">capital::editcontrib</a> (eosio::name coopname, eosio::name username, uint64_t hours_per_day)</td></tr>
+<tr class="memdesc:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование параметров вкладчика Обновляет поля hours_per_day и about для существующего вкладчика  <a href="group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">capital::apprvappndx</a> (eosio::name coopname, checksum256 appendix_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
 <tr class="memdesc:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет приложение к договору УХД Одобряет приложение к договору УХД и добавляет проект к пайщику:  <a href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3262,6 +3265,52 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
 </li>
 </ul>
+
+</div>
+</div>
+<a id="gaf959f52d9cc34f2d3be1fa95737e0537" name="gaf959f52d9cc34f2d3be1fa95737e0537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf959f52d9cc34f2d3be1fa95737e0537">&#9670;&nbsp;</a></span>editcontrib()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void capital::editcontrib </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>hours_per_day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Редактирование параметров вкладчика Обновляет поля hours_per_day и about для существующего вкладчика </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя-вкладчика </td></tr>
+    <tr><td class="paramname">hours_per_day</td><td>Количество часов в день </td></tr>
+    <tr><td class="paramname">about</td><td>Информация о себе</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
 
 </div>
 </div>
