@@ -14,7 +14,7 @@ var searchData=
   ['refreshprog_11',['refreshprog',['../group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea',1,'capital']]],
   ['refreshproj_12',['refreshproj',['../group__public__capital__actions.html#ga2bb09bdb729959ca1a3aca87c2ce9065',1,'capital']]],
   ['refund_13',['refund',['../group__public__system__actions.html#ga10a63e006f9869caeaf2592bdfbccc42',1,'eosiosystem::system_contract']]],
-  ['regcontrib_14',['regcontrib',['../group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5',1,'capital']]],
+  ['regcontrib_14',['regcontrib',['../group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598',1,'capital']]],
   ['regcoop_15',['regcoop',['../group__public__registrator__actions.html#gafaf94b337ccff4b9b8ba93b1c934bdd2',1,'registrator']]],
   ['register_5fproducer_16',['register_producer',['../classeosiosystem_1_1system__contract.html#a0709db97aa347d697fb4cbf3f67f2a96',1,'eosiosystem::system_contract']]],
   ['registrator_17',['registrator',['../classregistrator.html#a5031045fe1736a84cd445be212673c0b',1,'registrator']]],

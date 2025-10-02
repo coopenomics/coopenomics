@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['edit_5fcontributor_0',['edit_contributor',['../namespace_capital_1_1_contributors.html#aed6abbd60d18bf55ec28721f98567dd5',1,'Capital::Contributors']]],
+  ['edit_5fcontributor_0',['edit_contributor',['../namespace_capital_1_1_contributors.html#ae6bce53afc38cd60f9c05c9cb510be44',1,'Capital::Contributors']]],
   ['edit_5fproject_1',['edit_project',['../namespace_capital_1_1_projects.html#a939fd8aac24dd10e39c1fe425c4cd6ba',1,'Capital::Projects']]],
   ['editaddress_2',['editaddress',['../group__public__soviet__actions.html#ga7f4b8c38b31645b63c94b008ce2ffa06',1,'soviet']]],
   ['editbranch_3',['editbranch',['../group__public__branch__actions.html#ga0b216f390aabd065940383de3be71a15',1,'branch']]],
-  ['editcontrib_4',['editcontrib',['../group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537',1,'capital']]],
+  ['editcontrib_4',['editcontrib',['../group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2',1,'capital']]],
   ['editdraft_5',['editdraft',['../group__public__draft__actions.html#ga271bfc838fb9224ee99389a2892b1a6c',1,'draft']]],
   ['editfund_6',['editfund',['../classfund.html#a5bfea0aa805494588e426ea63980d31b',1,'fund']]],
   ['editprog_7',['editprog',['../group__public__soviet__actions.html#gaeb52fb6a74619c8130a79c2af552681c',1,'soviet']]],

@@ -55,7 +55,7 @@ var searchData=
   ['refunds_5ftable_52',['refunds_table',['../namespaceeosiosystem.html#aa3f5a7875c9a421bed214a88d78d7750',1,'eosiosystem']]],
   ['regcancel_2ecpp_53',['regcancel.cpp',['../regcancel_8cpp.html',1,'']]],
   ['regcomplete_2ecpp_54',['regcomplete.cpp',['../regcomplete_8cpp.html',1,'']]],
-  ['regcontrib_55',['regcontrib',['../group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5',1,'capital']]],
+  ['regcontrib_55',['regcontrib',['../group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598',1,'capital']]],
   ['regcontrib_2ecpp_56',['regcontrib.cpp',['../regcontrib_8cpp.html',1,'']]],
   ['regcoop_57',['regcoop',['../group__public__registrator__actions.html#gafaf94b337ccff4b9b8ba93b1c934bdd2',1,'registrator']]],
   ['regcoop_2ecpp_58',['regcoop.cpp',['../regcoop_8cpp.html',1,'']]],

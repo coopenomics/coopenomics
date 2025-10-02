@@ -188,6 +188,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <tr class="memitem:a7417e986568446c4e0490ec3c5fedf40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a7417e986568446c4e0490ec3c5fedf40">open_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
 <tr class="memdesc:a7417e986568446c4e0490ec3c5fedf40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает проект для инвестиций, копируя плановые показатели расходов в фактические.  <a href="namespace_capital_1_1_projects.html#a7417e986568446c4e0490ec3c5fedf40">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7417e986568446c4e0490ec3c5fedf40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad990dbacfa396ccac79afee746dbfc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad990dbacfa396ccac79afee746dbfc32">close_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
+<tr class="memdesc:ad990dbacfa396ccac79afee746dbfc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает проект от инвестиций, устанавливая флаг is_opened = false.  <a href="namespace_capital_1_1_projects.html#ad990dbacfa396ccac79afee746dbfc32">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad990dbacfa396ccac79afee746dbfc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a673c5ab8fddd5215fce3bdbd115c046e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a673c5ab8fddd5215fce3bdbd115c046e">reserve_expense_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
 <tr class="memdesc:a673c5ab8fddd5215fce3bdbd115c046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резервирует средства для расхода, уменьшая accumulated_expense_pool.  <a href="namespace_capital_1_1_projects.html#a673c5ab8fddd5215fce3bdbd115c046e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a673c5ab8fddd5215fce3bdbd115c046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -554,6 +557,51 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
     <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
     <tr><td class="paramname">property_amount</td><td>Стоимость имущественного взноса. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad990dbacfa396ccac79afee746dbfc32" name="ad990dbacfa396ccac79afee746dbfc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad990dbacfa396ccac79afee746dbfc32">&#9670;&nbsp;</a></span>close_project()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::close_project </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Закрывает проект от инвестиций, устанавливая флаг is_opened = false. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
   </table>
   </dd>
 </dl>

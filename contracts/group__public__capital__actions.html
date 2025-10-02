@@ -262,9 +262,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:ga2ecb2c2825a0646684a29fc279b41298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">capital::returnunused</a> (name coopname, checksum256 project_hash, name username)</td></tr>
 <tr class="memdesc:ga2ecb2c2825a0646684a29fc279b41298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает неиспользованные инвестиции Возвращает неиспользованные инвестиции инвестора из закрытого проекта:  <a href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2ecb2c2825a0646684a29fc279b41298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537">capital::editcontrib</a> (eosio::name coopname, eosio::name username, uint64_t hours_per_day)</td></tr>
-<tr class="memdesc:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование параметров вкладчика Обновляет поля hours_per_day и about для существующего вкладчика  <a href="group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537">Подробнее...</a><br /></td></tr>
-<tr class="separator:gaf959f52d9cc34f2d3be1fa95737e0537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga353769a38a7cc07735014825b8409ba2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">capital::editcontrib</a> (eosio::name coopname, eosio::name username, eosio::asset rate_per_hour, uint64_t hours_per_day)</td></tr>
+<tr class="memdesc:ga353769a38a7cc07735014825b8409ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование параметров вкладчика Обновляет поля hours_per_day и about для существующего вкладчика  <a href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga353769a38a7cc07735014825b8409ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">capital::apprvappndx</a> (eosio::name coopname, checksum256 appendix_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
 <tr class="memdesc:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобряет приложение к договору УХД Одобряет приложение к договору УХД и добавляет проект к пайщику:  <a href="group__public__capital__actions.html#ga0ad018453a0049b7ba72e1d70a3fb8dc">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga0ad018453a0049b7ba72e1d70a3fb8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,12 +283,15 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:gaf78065ea65de0b214acb68cd13c3451f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gaf78065ea65de0b214acb68cd13c3451f">capital::declinereg</a> (eosio::name coopname, checksum256 contributor_hash, std::string reason)</td></tr>
 <tr class="memdesc:gaf78065ea65de0b214acb68cd13c3451f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклоняет председателем договор УХД и удаляет вкладчика из базы Отклоняет регистрацию вкладчика и удаляет его из системы кооператива:  <a href="group__public__capital__actions.html#gaf78065ea65de0b214acb68cd13c3451f">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaf78065ea65de0b214acb68cd13c3451f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf9716287aaae47cd6ace769190663f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5">capital::regcontrib</a> (eosio::name coopname, eosio::name username, checksum256 contributor_hash, eosio::asset rate_per_hour, bool is_external_contract, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>)</td></tr>
-<tr class="memdesc:gacf9716287aaae47cd6ace769190663f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация пайщика в контракте и получение договора УХД от него Создает нового пайщика в системе кооператива с указанными параметрами:  <a href="group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5">Подробнее...</a><br /></td></tr>
-<tr class="separator:gacf9716287aaae47cd6ace769190663f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dcd8444242334149b0d4e63e5bbb598"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598">capital::regcontrib</a> (eosio::name coopname, eosio::name username, checksum256 contributor_hash, eosio::asset rate_per_hour, uint64_t hours_per_day, bool is_external_contract, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>)</td></tr>
+<tr class="memdesc:ga4dcd8444242334149b0d4e63e5bbb598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрация пайщика в контракте и получение договора УХД от него Создает нового пайщика в системе кооператива с указанными параметрами:  <a href="group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4dcd8444242334149b0d4e63e5bbb598"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8131eaf17b194ab8b1d2b60f62b6605e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga8131eaf17b194ab8b1d2b60f62b6605e">capital::addauthor</a> (name coopname, checksum256 project_hash, name author)</td></tr>
 <tr class="memdesc:ga8131eaf17b194ab8b1d2b60f62b6605e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет автора проекта Добавляет нового автора к проекту с авторскими долями:  <a href="group__public__capital__actions.html#ga8131eaf17b194ab8b1d2b60f62b6605e">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga8131eaf17b194ab8b1d2b60f62b6605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68856ff0a01129dc2754f3470855a35b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga68856ff0a01129dc2754f3470855a35b">capital::closeproject</a> (name coopname, checksum256 project_hash)</td></tr>
+<tr class="memdesc:ga68856ff0a01129dc2754f3470855a35b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает проект от приёма инвестиций Переводит проект в статус закрытого для приема инвестиций:  <a href="group__public__capital__actions.html#ga68856ff0a01129dc2754f3470855a35b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga68856ff0a01129dc2754f3470855a35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab1d5710505db08fb7e4db27ce6540b4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gab1d5710505db08fb7e4db27ce6540b4e">capital::cmpltvoting</a> (name coopname, checksum256 project_hash)</td></tr>
 <tr class="memdesc:gab1d5710505db08fb7e4db27ce6540b4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает голосование Завершает процесс голосования и переводит проект в завершенный статус:  <a href="group__public__capital__actions.html#gab1d5710505db08fb7e4db27ce6540b4e">Подробнее...</a><br /></td></tr>
 <tr class="separator:gab1d5710505db08fb7e4db27ce6540b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,6 +319,9 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 <tr class="memitem:gab4554a4b90423a604bc4602c28f4853a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#gab4554a4b90423a604bc4602c28f4853a">capital::startvoting</a> (name coopname, checksum256 project_hash)</td></tr>
 <tr class="memdesc:gab4554a4b90423a604bc4602c28f4853a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает проект и начинает голосование Переводит проект в статус голосования и инициализирует процесс:  <a href="group__public__capital__actions.html#gab4554a4b90423a604bc4602c28f4853a">Подробнее...</a><br /></td></tr>
 <tr class="separator:gab4554a4b90423a604bc4602c28f4853a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0332b0ed696c12a3b098fa8f48645f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga0332b0ed696c12a3b098fa8f48645f88">capital::stopproject</a> (name coopname, checksum256 project_hash)</td></tr>
+<tr class="memdesc:ga0332b0ed696c12a3b098fa8f48645f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Останавливает проект Переводит проект из активного статуса обратно в статус ожидания:  <a href="group__public__capital__actions.html#ga0332b0ed696c12a3b098fa8f48645f88">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0332b0ed696c12a3b098fa8f48645f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9617808280212120f928aa189edad6ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__capital__actions.html#ga9617808280212120f928aa189edad6ee">capital::act1pgprp</a> (eosio::name coopname, eosio::name username, checksum256 property_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
 <tr class="memdesc:ga9617808280212120f928aa189edad6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписывает акт 1 по программному имущественному взносу Подписывает первый акт по программному имущественному взносу участником:  <a href="group__public__capital__actions.html#ga9617808280212120f928aa189edad6ee">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga9617808280212120f928aa189edad6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1679,6 +1685,49 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_soviet</code> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="ga68856ff0a01129dc2754f3470855a35b" name="ga68856ff0a01129dc2754f3470855a35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68856ff0a01129dc2754f3470855a35b">&#9670;&nbsp;</a></span>closeproject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void capital::closeproject </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрывает проект от приёма инвестиций Переводит проект в статус закрытого для приема инвестиций: </p>
+<ul>
+<li>Проверяет существование проекта</li>
+<li>Валидирует что проект открыт для инвестиций</li>
+<li>Закрывает проект через доменную логику <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хеш проекта для закрытия</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
 </li>
 </ul>
 
@@ -3268,8 +3317,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
-<a id="gaf959f52d9cc34f2d3be1fa95737e0537" name="gaf959f52d9cc34f2d3be1fa95737e0537"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf959f52d9cc34f2d3be1fa95737e0537">&#9670;&nbsp;</a></span>editcontrib()</h2>
+<a id="ga353769a38a7cc07735014825b8409ba2" name="ga353769a38a7cc07735014825b8409ba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga353769a38a7cc07735014825b8409ba2">&#9670;&nbsp;</a></span>editcontrib()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3285,6 +3334,12 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
           <td></td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>rate_per_hour</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3963,8 +4018,8 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
 
 </div>
 </div>
-<a id="gacf9716287aaae47cd6ace769190663f5" name="gacf9716287aaae47cd6ace769190663f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacf9716287aaae47cd6ace769190663f5">&#9670;&nbsp;</a></span>regcontrib()</h2>
+<a id="ga4dcd8444242334149b0d4e63e5bbb598" name="ga4dcd8444242334149b0d4e63e5bbb598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4dcd8444242334149b0d4e63e5bbb598">&#9670;&nbsp;</a></span>regcontrib()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3992,6 +4047,12 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
           <td></td>
           <td class="paramtype">eosio::asset&#160;</td>
           <td class="paramname"><em>rate_per_hour</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>hours_per_day</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4608,6 +4669,49 @@ $(document).ready(function(){initNavTree('group__public__capital__actions.html',
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
     <tr><td class="paramname">project_hash</td><td>Хеш проекта для начала голосования</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="ga0332b0ed696c12a3b098fa8f48645f88" name="ga0332b0ed696c12a3b098fa8f48645f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0332b0ed696c12a3b098fa8f48645f88">&#9670;&nbsp;</a></span>stopproject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void capital::stopproject </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Останавливает проект Переводит проект из активного статуса обратно в статус ожидания: </p>
+<ul>
+<li>Проверяет существование проекта</li>
+<li>Валидирует что проект в статусе active</li>
+<li>Обновляет статус проекта на pending <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хеш проекта для остановки</td></tr>
   </table>
   </dd>
 </dl>

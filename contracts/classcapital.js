@@ -25,6 +25,7 @@ var classcapital =
     [ "capdeclexpns", "group__public__capital__actions.html#ga596b5b4170b937e3ab22334b6d795c98", null ],
     [ "capdeclwthd2", "group__public__capital__actions.html#ga43fa433367898cdad4ed7289914d3a08", null ],
     [ "capdeclwthd3", "group__public__capital__actions.html#gae2650cc81987dde6a4b6132e1e2985fc", null ],
+    [ "closeproject", "group__public__capital__actions.html#ga68856ff0a01129dc2754f3470855a35b", null ],
     [ "cmpltvoting", "group__public__capital__actions.html#gab1d5710505db08fb7e4db27ce6540b4e", null ],
     [ "convertsegm", "group__public__capital__actions.html#ga29c7a61482ce25e80e08327b972d67f6", null ],
     [ "createcmmt", "group__public__capital__actions.html#gae3ab7cdd11c372735fc18b4d03f51dc9", null ],
@@ -51,7 +52,7 @@ var classcapital =
     [ "declrslt", "group__public__capital__actions.html#gaa6a2f057cec31e270be172698997191c", null ],
     [ "delproject", "group__public__capital__actions.html#gac41509ae63cb6a2591fa42724ac9adb9", null ],
     [ "diallocate", "group__public__capital__actions.html#gacd8a287d951f8477460a79048e4d1500", null ],
-    [ "editcontrib", "group__public__capital__actions.html#gaf959f52d9cc34f2d3be1fa95737e0537", null ],
+    [ "editcontrib", "group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2", null ],
     [ "editproj", "group__public__capital__actions.html#ga819b1040f25720c4e17814859f1578b2", null ],
     [ "expandexpnss", "group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938", null ],
     [ "exppaycnfrm", "group__public__capital__actions.html#ga9eaa4019848cfdb62530349fd282219d", null ],
@@ -63,7 +64,7 @@ var classcapital =
     [ "pushrslt", "group__public__capital__actions.html#ga795dba8d41f9e264aba77095b46de8ac", null ],
     [ "refreshprog", "group__public__capital__actions.html#gab5fa23cd0f52728695355ec33ef57eea", null ],
     [ "refreshproj", "group__public__capital__actions.html#ga2bb09bdb729959ca1a3aca87c2ce9065", null ],
-    [ "regcontrib", "group__public__capital__actions.html#gacf9716287aaae47cd6ace769190663f5", null ],
+    [ "regcontrib", "group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598", null ],
     [ "regshare", "group__public__capital__actions.html#ga5c8f7166b382a28b057fc3777a082ee5", null ],
     [ "returnunused", "group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298", null ],
     [ "rfrshsegment", "group__public__capital__actions.html#ga6437bbfd716a4d0b5fa4f55960a974b2", null ],
@@ -75,5 +76,6 @@ var classcapital =
     [ "signact2", "group__public__capital__actions.html#ga98372655899da20e5a2dcb178cb2c4ef", null ],
     [ "startproject", "group__public__capital__actions.html#gaaa0c1072930fcf593e261c505fe72534", null ],
     [ "startvoting", "group__public__capital__actions.html#gab4554a4b90423a604bc4602c28f4853a", null ],
+    [ "stopproject", "group__public__capital__actions.html#ga0332b0ed696c12a3b098fa8f48645f88", null ],
     [ "submitvote", "group__public__capital__actions.html#gad8c8f0ebd471b3d8e55aec914c6d14a4", null ]
 ];

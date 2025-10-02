@@ -13,6 +13,7 @@ var namespace_capital_1_1_projects =
     [ "add_project_converted_funds", "namespace_capital_1_1_projects.html#a071bb6224f16c7a614a30efcd8113208", null ],
     [ "add_project_membership_shares", "namespace_capital_1_1_projects.html#a3b83bc410ef3d80facaa2768900d6b71", null ],
     [ "add_property_base", "namespace_capital_1_1_projects.html#adea40618079d31f05029cab6507cce8a", null ],
+    [ "close_project", "namespace_capital_1_1_projects.html#ad990dbacfa396ccac79afee746dbfc32", null ],
     [ "complete_expense", "namespace_capital_1_1_projects.html#aa828b18938a299ccea7d303e41d9b515", null ],
     [ "create_project", "namespace_capital_1_1_projects.html#a83fa826a0da413a3561ea2420a09e79f", null ],
     [ "delete_project", "namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1", null ],

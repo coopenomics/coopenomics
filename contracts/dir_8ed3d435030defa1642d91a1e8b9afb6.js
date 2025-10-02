@@ -1,6 +1,7 @@
 var dir_8ed3d435030defa1642d91a1e8b9afb6 =
 [
     [ "add_author", "dir_475e82ae88bf000eecf687a2b23d9b0c.html", "dir_475e82ae88bf000eecf687a2b23d9b0c" ],
+    [ "close_project", "dir_f821233c3192b37d4d072c78a1ebfe94.html", "dir_f821233c3192b37d4d072c78a1ebfe94" ],
     [ "complete_voting", "dir_c63153959e7c9c2183deee12afbf2e3c.html", "dir_c63153959e7c9c2183deee12afbf2e3c" ],
     [ "create_project", "dir_6a996b01c0a1b1c211116cc04d1bca7b.html", "dir_6a996b01c0a1b1c211116cc04d1bca7b" ],
     [ "delete_project", "dir_f367c27fc50d14a54f52209eaeae5dc8.html", "dir_f367c27fc50d14a54f52209eaeae5dc8" ],
@@ -9,5 +10,6 @@ var dir_8ed3d435030defa1642d91a1e8b9afb6 =
     [ "set_master", "dir_d912d216560bfb7b041656bab98cb8fa.html", "dir_d912d216560bfb7b041656bab98cb8fa" ],
     [ "set_plan", "dir_54b98929349bb3935cf90acff2cd99f9.html", "dir_54b98929349bb3935cf90acff2cd99f9" ],
     [ "start_project", "dir_6ba0f326aa37cf0e40338559bfb512bd.html", "dir_6ba0f326aa37cf0e40338559bfb512bd" ],
-    [ "start_voting", "dir_6705d0de2d0d3ce6ab775642ac0aecd7.html", "dir_6705d0de2d0d3ce6ab775642ac0aecd7" ]
+    [ "start_voting", "dir_6705d0de2d0d3ce6ab775642ac0aecd7.html", "dir_6705d0de2d0d3ce6ab775642ac0aecd7" ],
+    [ "stop_project", "dir_583525133d72e6e166c9b4639d28fc12.html", "dir_583525133d72e6e166c9b4639d28fc12" ]
 ];
