@@ -113,13 +113,13 @@ var NAVTREEINDEX =
 "projects_8hpp.html#a83fa826a0da413a3561ea2420a09e79f",
 "shared__names_8hpp.html#aa4e030c7db57a2d82013975060217d4b",
 "struct_capital_1_1config.html#ab4c3fc2552ae1e5cf7215d50d9e67edf",
-"struct_capital_1_1project__wallet.html#adcc43410a9b2f071b8b7d6c611b49c6d",
+"struct_capital_1_1project__wallet.html#adf2b54944d749abb9a2ffc94eaa9524d",
 "struct_marketplace_1_1request.html#a98418888ecf9e50f19625c4c6fccc987",
-"structaccount.html#a2e46c559f699df03e1820bf710e778fd",
-"structcoopwallet.html#a5ce2818f6c403b1fbc3df7634dc3428f",
+"structaccount.html#a32c91ba498b674bee1658b1c5eaf0dc9",
+"structcoopwallet.html#a9b783eefb605ce7ab78d64d05e73d60e",
 "structeosiosystem_1_1block__info_1_1block__info__record.html#a7e0b0f4b78c5dcdff23495596e7cb488",
-"structkey__weight.html",
-"supplycnfrm_8cpp.html"
+"structkey__weight.html#a1c32ddbfc4c0d307c1f25503dfccd796",
+"system_2contracts_2eosio_8system_2src_2voting_8cpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

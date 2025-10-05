@@ -1,6 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"structaccount.html#a2e46c559f699df03e1820bf710e778fd":[2,0,17,15],
 "structaccount.html#a32c91ba498b674bee1658b1c5eaf0dc9":[2,0,17,11],
 "structaccount.html#a3d7a160d5b2d34e3e5273fd1dda9cba7":[2,0,17,5],
 "structaccount.html#a688414885704233ae57b4093f7c60dd5":[2,0,17,1],
@@ -72,16 +71,16 @@ var NAVTREEINDEX17 =
 "structagreement2.html#ac3737238c8def720f08a98e92e4d7140":[1,9,2,2,2],
 "structagreement2.html#ace27f95804af0e40b50366588e8a662a":[1,9,2,2,6],
 "structagreement2.html#ae0abc045a93c6cc88d322047f2f7138c":[1,9,2,2,3],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html":[3,0,3,0],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html":[2,0,0,0],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html":[3,0,3,0],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602":[3,0,3,0,3],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#a9b175e30fcaf561319e39ee48d014602":[2,0,0,0,3],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364":[3,0,3,0,2],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#aac121c92ab118a1eeae949d180eda364":[2,0,0,0,2],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5":[3,0,3,0,1],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#ab1c2e57742392fbba0afae1d1331dcc5":[2,0,0,0,1],
-"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[2,0,0,0,0],
 "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[3,0,3,0,0],
+"structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html#adb04b069252f816fa9149cbfae813730":[2,0,0,0,0],
 "structauthority.html":[2,0,22],
 "structauthority.html#a0929cd72740ad0953b59fdc1df188b60":[2,0,22,0],
 "structauthority.html#a7538d1edffef8dd8ebe41758fbc4fdd8":[2,0,22,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX17 =
 "structcoopwallet.html":[1,3,2,1],
 "structcoopwallet.html#a2ff52d4728bc26a555c81bc1ebbb1d49":[1,3,2,1,3],
 "structcoopwallet.html#a47842b36c0575fc8fb4ac2182282766e":[1,3,2,1,0],
-"structcoopwallet.html#a55ba31c29e280a95f459d51f6b528a59":[1,3,2,1,2]
+"structcoopwallet.html#a55ba31c29e280a95f459d51f6b528a59":[1,3,2,1,2],
+"structcoopwallet.html#a5ce2818f6c403b1fbc3df7634dc3428f":[1,3,2,1,1]
 };

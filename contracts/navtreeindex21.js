@@ -1,6 +1,5 @@
 var NAVTREEINDEX21 =
 {
-"supplycnfrm_8cpp.html":[4,0,0,9,0,20],
 "system_2contracts_2eosio_8system_2src_2voting_8cpp.html":[4,0,0,14,0,3,1,9],
 "system_2contracts_2eosio_8system_2src_2voting_8cpp.html#a3e036636d2cc92c741db234dd33870db":[4,0,0,14,0,3,1,9,0],
 "tables_8hpp.html":[4,0,0,10,0,1,2],

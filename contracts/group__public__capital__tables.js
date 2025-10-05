@@ -42,7 +42,6 @@ var group__public__capital__tables =
       [ "by_rating", "struct_capital_1_1contributor.html#a453fc5932d1394ac6eba4454024c1845", null ],
       [ "by_username", "struct_capital_1_1contributor.html#a8d110aeb66c7915977d34512464154b8", null ],
       [ "primary_key", "struct_capital_1_1contributor.html#a367ec49a88c98e3b6eb09f4d55478701", null ],
-      [ "about", "struct_capital_1_1contributor.html#aae380f3bb6a3fe6312edbe25824d8cc8", null ],
       [ "appendixes", "struct_capital_1_1contributor.html#ad26c79fda0df4cccb7f3a58396d11098", null ],
       [ "contract", "struct_capital_1_1contributor.html#a7cf0680a122dc7be39fab499c651d85e", null ],
       [ "contributed_as_author", "struct_capital_1_1contributor.html#a2da24d18fcb18d994cd009242d0675af", null ],
