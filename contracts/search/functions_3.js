@@ -65,7 +65,7 @@ var searchData=
   ['completewthd_62',['completewthd',['../classwallet.html#aa3b7a1efdfa587334fbd4438bbbe9b59',1,'wallet']]],
   ['configbw_63',['configbw',['../structpowerup__tester.html#ac8ebf6926b91d8dd32755741563dd2ab',1,'powerup_tester']]],
   ['confirmagree_64',['confirmagree',['../group__public__soviet__actions.html#gaaebb26700c3dca525c3884a04d299e21',1,'soviet']]],
-  ['confirmapprv_65',['confirmapprv',['../group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455',1,'soviet']]],
+  ['confirmapprv_65',['confirmapprv',['../group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070',1,'soviet']]],
   ['confirmpay_66',['confirmpay',['../group__public__registrator__actions.html#ga24482a8d65da16a4bf492a53875adf6b',1,'registrator']]],
   ['confirmreg_67',['confirmreg',['../group__public__registrator__actions.html#ga7705130fbcfb023dc37c50878a1afd3c',1,'registrator']]],
   ['consolidate_68',['consolidate',['../classeosio__system_1_1eosio__system__tester.html#a1bf1c4522b527bb365e808fc4c6aab9e',1,'eosio_system::eosio_system_tester']]],

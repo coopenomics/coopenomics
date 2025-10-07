@@ -178,15 +178,15 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
 <tr class="memitem:ga6d7611714492af685ed8479cb9cc90f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6d7611714492af685ed8479cb9cc90f1">soviet::sndagreement</a> (eosio::name coopname, eosio::name administrator, eosio::name username, eosio::name agreement_type, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:ga6d7611714492af685ed8479cb9cc90f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка соглашения участнику Отправляет соглашение участнику кооператива для подписания. Создает новое соглашение или обновляет существующее, привязывая его к целевой программе.  <a href="group__public__soviet__actions.html#ga6d7611714492af685ed8479cb9cc90f1">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6d7611714492af685ed8479cb9cc90f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8812627956a7743bd2051587bbfd4455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455">soviet::confirmapprv</a> (eosio::name coopname, checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
-<tr class="memdesc:ga8812627956a7743bd2051587bbfd4455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения.  <a href="group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga8812627956a7743bd2051587bbfd4455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070">soviet::confirmapprv</a> (eosio::name coopname, eosio::name username, checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения.  <a href="group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a98748faaedc6baab83f91faa45dd90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">soviet::createapprv</a> (<a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga6a98748faaedc6baab83f91faa45dd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание одобрения документа Создает новое одобрение документа с указанными параметрами и обратными вызовами. Используется для инициации процесса одобрения документов в системе.  <a href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6a98748faaedc6baab83f91faa45dd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab77d1202723cbac3fe6fb5d46c0a899a">soviet::declineapprv</a> (eosio::name coopname, checksum256 approval_hash, std::string reason)</td></tr>
-<tr class="memdesc:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после отклонения.  <a href="group__public__soviet__actions.html#gab77d1202723cbac3fe6fb5d46c0a899a">Подробнее...</a><br /></td></tr>
-<tr class="separator:gab77d1202723cbac3fe6fb5d46c0a899a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce">soviet::declineapprv</a> (eosio::name coopname, eosio::name username, checksum256 approval_hash, std::string reason)</td></tr>
+<tr class="memdesc:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после отклонения.  <a href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacd08501eb19d2733f9640cae3ae229f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gacd08501eb19d2733f9640cae3ae229f0">soviet::automate</a> (eosio::name coopname, uint64_t board_id, eosio::name member, eosio::name action_type, eosio::name provider, std::string encrypted_private_key)</td></tr>
 <tr class="memdesc:gacd08501eb19d2733f9640cae3ae229f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Настройка автоматизации подписи на решениях Позволяет члену совета настроить автоматическую подпись на решениях по определенным типам вопросов. Создает запись об автоматизации с зашифрованным приватным ключом.  <a href="group__public__soviet__actions.html#gacd08501eb19d2733f9640cae3ae229f0">Подробнее...</a><br /></td></tr>
 <tr class="separator:gacd08501eb19d2733f9640cae3ae229f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -977,8 +977,8 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
 
 </div>
 </div>
-<a id="ga8812627956a7743bd2051587bbfd4455" name="ga8812627956a7743bd2051587bbfd4455"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8812627956a7743bd2051587bbfd4455">&#9670;&nbsp;</a></span>confirmapprv()</h2>
+<a id="gab5ba4dbf6c4d43fbcaeffd5b5c614070" name="gab5ba4dbf6c4d43fbcaeffd5b5c614070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5ba4dbf6c4d43fbcaeffd5b5c614070">&#9670;&nbsp;</a></span>confirmapprv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -988,6 +988,12 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1013,12 +1019,13 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, подтверждающего одобрение </td></tr>
     <tr><td class="paramname">approval_hash</td><td>Хеш одобрения для подтверждения </td></tr>
     <tr><td class="paramname">approved_document</td><td>Подтвержденный документ</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
 
 </div>
 </div>
@@ -1384,8 +1391,8 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
 
 </div>
 </div>
-<a id="gab77d1202723cbac3fe6fb5d46c0a899a" name="gab77d1202723cbac3fe6fb5d46c0a899a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab77d1202723cbac3fe6fb5d46c0a899a">&#9670;&nbsp;</a></span>declineapprv()</h2>
+<a id="ga96368e8655e0c6b72c6664a5fcdd08ce" name="ga96368e8655e0c6b72c6664a5fcdd08ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96368e8655e0c6b72c6664a5fcdd08ce">&#9670;&nbsp;</a></span>declineapprv()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1395,6 +1402,12 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1420,12 +1433,13 @@ $(document).ready(function(){initNavTree('group__public__soviet__actions.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Наименование пользователя, отклоняющего одобрение </td></tr>
     <tr><td class="paramname">approval_hash</td><td>Хеш одобрения для отклонения </td></tr>
     <tr><td class="paramname">reason</td><td>Причина отклонения одобрения</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
 
 </div>
 </div>

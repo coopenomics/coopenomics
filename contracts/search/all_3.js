@@ -141,7 +141,7 @@ var searchData=
   ['confirm_5fexpense_5fpayment_138',['CONFIRM_EXPENSE_PAYMENT',['../namespace_names_1_1_capital.html#a2521d190ac8970b06e11d5e54294d4ab',1,'Names::Capital']]],
   ['confirmagree_139',['confirmagree',['../group__public__soviet__actions.html#gaaebb26700c3dca525c3884a04d299e21',1,'soviet']]],
   ['confirmagree_2ecpp_140',['confirmagree.cpp',['../confirmagree_8cpp.html',1,'']]],
-  ['confirmapprv_141',['confirmapprv',['../group__public__soviet__actions.html#ga8812627956a7743bd2051587bbfd4455',1,'soviet']]],
+  ['confirmapprv_141',['confirmapprv',['../group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070',1,'soviet']]],
   ['confirmapprv_2ecpp_142',['confirmapprv.cpp',['../confirmapprv_8cpp.html',1,'']]],
   ['confirmed_143',['confirmed',['../structeosiosystem_1_1block__header.html#a4982fd9b60cbc7a50b5b533af097c373',1,'eosiosystem::block_header::confirmed()'],['../structeosiobios_1_1block__header.html#ad0e00f2357c447a2001b9192849aa839',1,'eosiobios::block_header::confirmed()']]],
   ['confirmpay_144',['confirmpay',['../group__public__registrator__actions.html#ga24482a8d65da16a4bf492a53875adf6b',1,'registrator']]],
