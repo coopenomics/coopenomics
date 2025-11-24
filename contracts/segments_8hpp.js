@@ -1,6 +1,7 @@
 var segments_8hpp =
 [
     [ "segments_index", "segments_8hpp.html#ae5b019f0c4d232e315ed2e327477e7b1", null ],
+    [ "calculate_non_investor_contribution", "segments_8hpp.html#a98d5799db0a96482be3ac45d47bf6507", null ],
     [ "calculate_segment_base_cost", "segments_8hpp.html#af8702b17d38a2d69e48d79c55ef7bfa7", null ],
     [ "calculate_segment_bonus_cost", "segments_8hpp.html#a035b7174021132ed66fcfb9e774b1fa8", null ],
     [ "calculate_total_segment_cost", "segments_8hpp.html#a7adc715bc940d6db8cd4081b94835ce9", null ],
@@ -13,8 +14,10 @@ var segments_8hpp =
     [ "get_project_investors", "segments_8hpp.html#a4582884090f6441bb5f15dd849e2f6ad", null ],
     [ "get_segment", "segments_8hpp.html#a28c440ae4f13d4e39dd5705aeb705fc9", null ],
     [ "get_segment_or_fail", "segments_8hpp.html#a0304b44fb97648f0d44fe7d53b146886", null ],
+    [ "has_intellectual_contribution_roles", "segments_8hpp.html#ac7f98231412f710b11d280fbc33d88eb", null ],
     [ "has_project_segments", "segments_8hpp.html#aaa50f612a371458c42fded8be290bec8", null ],
     [ "increase_debt_amount", "segments_8hpp.html#ab70140e62f0d6b5ec4151202993d17de", null ],
+    [ "is_pure_investor", "segments_8hpp.html#aff79537bcfc65b5c4c7b1b555b1aa02f", null ],
     [ "is_segment_updated", "segments_8hpp.html#aee1a60e183f09fd2f7df5a0933479ce8", null ],
     [ "is_voting_participant", "segments_8hpp.html#a35d6d130341e42b348049d51e3c9ddfb", null ],
     [ "remove_segment", "segments_8hpp.html#aef0b7d21054798d1b0effc559451edd4", null ],
@@ -23,8 +26,11 @@ var segments_8hpp =
     [ "update_segment_status", "segments_8hpp.html#ac695acdec0c36b318a8f9b9424d0035f", null ],
     [ "update_segment_total_cost", "segments_8hpp.html#ae1cfabce18e496abe88bdab2bea1c48d", null ],
     [ "update_segment_voting_results", "segments_8hpp.html#acb3e1afeba167fc1e02d8be5b7d216ab", null ],
-    [ "ACCEPTED", "segments_8hpp.html#a283eb4d95521210da808756fb1fa88d4", null ],
-    [ "COMPLETED", "segments_8hpp.html#ab06a9c389084888250863953cd39a8c6", null ],
+    [ "ACT1", "segments_8hpp.html#af962bd165bed947df3d7415177acb815", null ],
+    [ "APPROVED", "segments_8hpp.html#ab36bbfaf3fbf2660e4f94e32e85195f2", null ],
+    [ "AUTHORIZED", "segments_8hpp.html#ad24d4981df8e662854a1d7ff27412685", null ],
     [ "CONTRIBUTED", "segments_8hpp.html#ae294ba5d424d2b326816a91912c25172", null ],
-    [ "GENERATION", "segments_8hpp.html#a867fba07ca72bf54a40157fa03369981", null ]
+    [ "GENERATION", "segments_8hpp.html#a867fba07ca72bf54a40157fa03369981", null ],
+    [ "READY", "segments_8hpp.html#a35d2dee2ca9443c95c18e69683a19b92", null ],
+    [ "STATEMENT", "segments_8hpp.html#a04d7979cea2929e0ad4e656255a9aa57", null ]
 ];

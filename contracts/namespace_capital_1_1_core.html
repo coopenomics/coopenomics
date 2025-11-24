@@ -166,13 +166,13 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core.html',''); 
 <tr class="memdesc:a3ae9e2db55028fbcb67f02554a6dd2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет CRPS поля в проекте для авторов при добавлении наград  <a href="namespace_capital_1_1_core.html#a3ae9e2db55028fbcb67f02554a6dd2cc">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3ae9e2db55028fbcb67f02554a6dd2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a1f6c1333113da9add9085f188ab541"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core.html#a6a1f6c1333113da9add9085f188ab541">increment_contributors_crps_in_project</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;reward_amount)</td></tr>
-<tr class="memdesc:a6a1f6c1333113da9add9085f188ab541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет CRPS поля в проекте для вкладчиков при добавлении наград  <a href="namespace_capital_1_1_core.html#a6a1f6c1333113da9add9085f188ab541">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a6a1f6c1333113da9add9085f188ab541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет CRPS поля в проекте для участников при добавлении наград  <a href="namespace_capital_1_1_core.html#a6a1f6c1333113da9add9085f188ab541">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6a1f6c1333113da9add9085f188ab541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f697986bdbe2f81163502abca852c95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core.html#a5f697986bdbe2f81163502abca852c95">upsert_contributor_segment</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:a5f697986bdbe2f81163502abca852c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет запись вкладчика в таблице segments.  <a href="namespace_capital_1_1_core.html#a5f697986bdbe2f81163502abca852c95">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a5f697986bdbe2f81163502abca852c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает или обновляет запись участника в таблице segments.  <a href="namespace_capital_1_1_core.html#a5f697986bdbe2f81163502abca852c95">Подробнее...</a><br /></td></tr>
 <tr class="separator:a5f697986bdbe2f81163502abca852c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a030a10367faa4aee3fa2ad8169abc855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core.html#a030a10367faa4aee3fa2ad8169abc855">refresh_contributor_segment</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:a030a10367faa4aee3fa2ad8169abc855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет награды вкладчика в сегменте  <a href="namespace_capital_1_1_core.html#a030a10367faa4aee3fa2ad8169abc855">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a030a10367faa4aee3fa2ad8169abc855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет награды участника в сегменте  <a href="namespace_capital_1_1_core.html#a030a10367faa4aee3fa2ad8169abc855">Подробнее...</a><br /></td></tr>
 <tr class="separator:a030a10367faa4aee3fa2ad8169abc855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde79bea840107264dc9e58d887cdc06"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core.html#afde79bea840107264dc9e58d887cdc06">calculate_coordinator_direct_reward</a> (const eosio::asset &amp;coordinator_investments, double referal_percent)</td></tr>
 <tr class="memdesc:afde79bea840107264dc9e58d887cdc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает координаторскую премию как процент от привлеченных им средств  <a href="namespace_capital_1_1_core.html#afde79bea840107264dc9e58d887cdc06">Подробнее...</a><br /></td></tr>
@@ -547,7 +547,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core.html',''); 
       </table>
 </div><div class="memdoc">
 
-<p>Обновляет CRPS поля в проекте для вкладчиков при добавлении наград </p>
+<p>Обновляет CRPS поля в проекте для участников при добавлении наград </p>
 
 </div>
 </div>
@@ -692,7 +692,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core.html',''); 
       </table>
 </div><div class="memdoc">
 
-<p>Обновляет награды вкладчика в сегменте </p>
+<p>Обновляет награды участника в сегменте </p>
 
 </div>
 </div>
@@ -1007,12 +1007,12 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core.html',''); 
       </table>
 </div><div class="memdoc">
 
-<p>Создает или обновляет запись вкладчика в таблице segments. </p>
+<p>Создает или обновляет запись участника в таблице segments. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
     <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
-    <tr><td class="paramname">username</td><td>Имя пользователя вкладчика. </td></tr>
+    <tr><td class="paramname">username</td><td>Имя пользователя участника. </td></tr>
   </table>
   </dd>
 </dl>

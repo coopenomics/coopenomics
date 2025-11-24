@@ -207,7 +207,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <tr class="memdesc:a0ceb355ad7182a708ccc8115b9d3a32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество инвесторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a0ceb355ad7182a708ccc8115b9d3a32c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0ceb355ad7182a708ccc8115b9d3a32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60047f88f96da1ad06aa9f9dfaf2011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af60047f88f96da1ad06aa9f9dfaf2011">increment_total_contributors</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:af60047f88f96da1ad06aa9f9dfaf2011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество зарегистрированных вкладчиков в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af60047f88f96da1ad06aa9f9dfaf2011">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:af60047f88f96da1ad06aa9f9dfaf2011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество зарегистрированных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af60047f88f96da1ad06aa9f9dfaf2011">Подробнее...</a><br /></td></tr>
 <tr class="separator:af60047f88f96da1ad06aa9f9dfaf2011"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a041dda9dff90fcb4e6a316019e8280b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a041dda9dff90fcb4e6a316019e8280b0">increment_total_contributor_shares</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::asset shares)</td></tr>
 <tr class="memdesc:a041dda9dff90fcb4e6a316019e8280b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество вкладчических долей в проекте на указанное количество  <a href="namespace_capital_1_1_projects.html#a041dda9dff90fcb4e6a316019e8280b0">Подробнее...</a><br /></td></tr>
@@ -221,6 +221,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <tr class="memitem:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aadae1d005b8acd1bf9bf9273d2408fe7">increment_total_creators</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
 <tr class="memdesc:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество создателей в проекте на 1.  <a href="namespace_capital_1_1_projects.html#aadae1d005b8acd1bf9bf9273d2408fe7">Подробнее...</a><br /></td></tr>
 <tr class="separator:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af1f8ee3bfe18205ae248f8b321db6a8e">increment_total_unique_participants</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
+<tr class="memdesc:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество уникальных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af1f8ee3bfe18205ae248f8b321db6a8e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec7f2500928caeea7ae36916383123eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aec7f2500928caeea7ae36916383123eb">increment_votes_received</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
 <tr class="memdesc:aec7f2500928caeea7ae36916383123eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает счетчик полученных голосов в проекте  <a href="namespace_capital_1_1_projects.html#aec7f2500928caeea7ae36916383123eb">Подробнее...</a><br /></td></tr>
 <tr class="separator:aec7f2500928caeea7ae36916383123eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1230,7 +1233,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 </table>
 </div><div class="memdoc">
 
-<p>Увеличивает количество зарегистрированных вкладчиков в проекте на 1. </p>
+<p>Увеличивает количество зарегистрированных участников в проекте на 1. </p>
 
 </div>
 </div>
@@ -1383,6 +1386,44 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 </div><div class="memdoc">
 
 <p>Увеличивает количество проперторов в проекте на 1. </p>
+
+</div>
+</div>
+<a id="af1f8ee3bfe18205ae248f8b321db6a8e" name="af1f8ee3bfe18205ae248f8b321db6a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1f8ee3bfe18205ae248f8b321db6a8e">&#9670;&nbsp;</a></span>increment_total_unique_participants()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::increment_total_unique_participants </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Увеличивает количество уникальных участников в проекте на 1. </p>
 
 </div>
 </div>

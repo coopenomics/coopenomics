@@ -5,6 +5,7 @@ var struct_capital_1_1vote =
     [ "by_project_voter", "struct_capital_1_1vote.html#a3e9eb6a4593256f93968cbefc676463e", null ],
     [ "primary_key", "struct_capital_1_1vote.html#a6dc95b0fb9c0495a772eee472a811112", null ],
     [ "amount", "struct_capital_1_1vote.html#ab1f835adebae5ad8780e8b0c067913e5", null ],
+    [ "coopname", "struct_capital_1_1vote.html#a0416e1d03077b633ba6272cc0d843ee7", null ],
     [ "id", "struct_capital_1_1vote.html#a91d062affd7dde1319685e05600b5403", null ],
     [ "project_hash", "struct_capital_1_1vote.html#a44071c42e6fb18d25dafc4124c5a701e", null ],
     [ "recipient", "struct_capital_1_1vote.html#ab45282a1917379796b428ee654bc7ed4", null ],

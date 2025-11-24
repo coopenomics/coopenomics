@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="COOPENOMICS" />
 <meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
 <!-- END twitter metadata -->
-<title>COOPENOMICS: Регистрация вкладчиков</title>
+<title>COOPENOMICS: Регистрация участников</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -134,10 +134,10 @@ $(document).ready(function(){initNavTree('group__public__capital__registration__
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Регистрация вкладчиков<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
+  <div class="headertitle"><div class="title">Регистрация участников<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p >Процесс приёма договора УХД от пайщика, смены его статуса с кандидата в вкладчики на активного вкладчика и обеспечения технической возможности участвовать в проектах и программе капитализации.</p>
+<p >Процесс приёма договора УХД от пайщика, смены его статуса с кандидата в участники на активного участника и обеспечения технической возможности участвовать в проектах и программе капитализации.</p>
 <p > 
 <div class="mermaid">
 sequenceDiagram
@@ -148,11 +148,11 @@ sequenceDiagram
     П->>К: 1. Подача договора УХД
     Note over К: Проверка уникальности кандидата
     Note over К: Валидация договора УХД
-    К->>К: 2. Создание записи кандидата в вкладчики
+    К->>К: 2. Создание записи кандидата в участники
     К->>С: 3. Направление на одобрение
     alt Одобрение
         С->>К: 4. Авторизация регистрации
-        Note over К: Смена статуса: кандидат → вкладчик
+        Note over К: Смена статуса: кандидат → участник
         Note over К: Создание программного кошелька
     else Отклонение
         С->>К: 4. Отклонение регистрации
@@ -160,53 +160,53 @@ sequenceDiagram
     end
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md166"></a>
+<h2><a class="anchor" id="autotoc_md184"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md167"></a>
+<h3><a class="anchor" id="autotoc_md185"></a>
 Шаг 1: Подача договора УХД</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598">подача заявки на регистрацию</a></p>
 <p >Пайщик подает договор управления хозяйственной деятельностью с указанием почасовой ставки. Система проверяет уникальность кандидата и хеша контрибьютора, валидирует договор УХД.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Передан договор УХД </dd>
 <dd>
-Создается запись кандидата в вкладчики </dd>
+Создается запись кандидата в участники </dd>
 <dd>
 Создается заявка на одобрение</dd></dl>
-<h3><a class="anchor" id="autotoc_md168"></a>
-Шаг 2: Создание записи кандидата в вкладчики</h3>
+<h3><a class="anchor" id="autotoc_md186"></a>
+Шаг 2: Создание записи кандидата в участники</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga4dcd8444242334149b0d4e63e5bbb598">создание записи кандидата</a></p>
-<p >Система создает запись кандидата в вкладчики со статусом PENDING с зафиксированными параметрами: почасовой ставкой, договором УХД и уникальным хешем.</p>
-<dl class="section post"><dt>Постусловие</dt><dd>Создается запись кандидата в вкладчики со статусом PENDING</dd></dl>
-<h3><a class="anchor" id="autotoc_md169"></a>
+<p >Система создает запись кандидата в участники со статусом PENDING с зафиксированными параметрами: почасовой ставкой, договором УХД и уникальным хешем.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Создается запись кандидата в участники со статусом PENDING</dd></dl>
+<h3><a class="anchor" id="autotoc_md187"></a>
 Шаг 3: Направление на одобрение</h3>
 <p ><b>Действие:</b> <a class="el" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">направление заявки на рассмотрение</a></p>
 <p >Система направляет заявку на одобрение председателю кооператива с приложенным договором УХД и всеми необходимыми данными для принятия решения.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Создается заявка на одобрение</dd></dl>
-<h3><a class="anchor" id="autotoc_md170"></a>
+<h3><a class="anchor" id="autotoc_md188"></a>
 Шаг 4: Авторизация регистрации</h3>
-<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga432a84ae6b016b9ab775560976bbcbb9">одобрение регистрации вкладчика</a></p>
-<p >Председатель одобряет регистрацию вкладчика. Система меняет статус кандидата с PENDING на ACTIVE, превращая его в полноправного вкладчика, и создает программный кошелек для участия в проектах.</p>
-<dl class="section post"><dt>Постусловие</dt><dd>Изменяется статус кандидата на ACTIVE (кандидат становится вкладчиком) </dd>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga432a84ae6b016b9ab775560976bbcbb9">одобрение регистрации участника</a></p>
+<p >Председатель одобряет регистрацию участника. Система меняет статус кандидата с PENDING на ACTIVE, превращая его в полноправного участника, и создает программный кошелек для участия в проектах.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Изменяется статус кандидата на ACTIVE (кандидат становится участником) </dd>
 <dd>
-Создается программный кошелек для вкладчика</dd></dl>
+Создается программный кошелек для участника</dd></dl>
 <p><b>Альтернатива:</b> <a class="el" href="group__public__capital__actions.html#gab57c7fb9824160c3ac59709c00483a8d">отклонение регистрации</a></p>
-<p >При отклонении система удаляет запись кандидата в вкладчики из базы данных с указанием причины отказа.</p>
-<dl class="section post"><dt>Постусловие</dt><dd>Удаляется запись кандидата в вкладчики</dd></dl>
-<h2><a class="anchor" id="autotoc_md171"></a>
+<p >При отклонении система удаляет запись кандидата в участники из базы данных с указанием причины отказа.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Удаляется запись кандидата в участники</dd></dl>
+<h2><a class="anchor" id="autotoc_md189"></a>
 Результат процесса</h2>
 <p >После успешного завершения:</p><ol type="1">
-<li>Пайщик-кандидат становится полноправным вкладчиком со статусом ACTIVE</li>
+<li>Пайщик-кандидат становится полноправным участником со статусом ACTIVE</li>
 <li>Зафиксированы условия оценки трудового вклада</li>
 <li>Создана правовая основа для участия в проектах через договор УХД</li>
 <li>Открыт программный кошелек для операций по проектам</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md172"></a>
+<h2><a class="anchor" id="autotoc_md190"></a>
 Документы процесса</h2>
 <p ><ul>
 <li>📄 Договор УХД</li>
 <li>📄 Визирующая подпись председателя на договоре УХД </li>
 </ul>
 </p>
-<h2><a class="anchor" id="autotoc_md173"></a>
+<h2><a class="anchor" id="autotoc_md191"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__joining__process.html">Получение допуска к проекту</a> </li>

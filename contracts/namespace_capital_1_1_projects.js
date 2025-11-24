@@ -2,9 +2,9 @@ var namespace_capital_1_1_projects =
 [
     [ "Status", "namespace_capital_1_1_projects_1_1_status.html", [
       [ "ACTIVE", "namespace_capital_1_1_projects_1_1_status.html#aa8c8ba915b0fb94c1615694c2603408a", null ],
-      [ "CLOSED", "namespace_capital_1_1_projects_1_1_status.html#a8fe2f904e80fa0caf401ba9e8d809e72", null ],
-      [ "COMPLETED", "namespace_capital_1_1_projects_1_1_status.html#a59b5b1458897629a85436df7518babb6", null ],
+      [ "CANCELLED", "namespace_capital_1_1_projects_1_1_status.html#a73503bd5d919d5d0102591c3a20fbc02", null ],
       [ "PENDING", "namespace_capital_1_1_projects_1_1_status.html#a65b4c620fe5589e02828da8cad85b429", null ],
+      [ "RESULT", "namespace_capital_1_1_projects_1_1_status.html#a246b20ed4dc7eecb6f4cd9eefef74750", null ],
       [ "VOTING", "namespace_capital_1_1_projects_1_1_status.html#a727d9ba7741df12c660122456ea1bf89", null ]
     ] ],
     [ "add_commit", "namespace_capital_1_1_projects.html#af83d8e495d8e080e2b004e38f57a795f", null ],
@@ -30,6 +30,7 @@ var namespace_capital_1_1_projects =
     [ "increment_total_creators", "namespace_capital_1_1_projects.html#aadae1d005b8acd1bf9bf9273d2408fe7", null ],
     [ "increment_total_investors", "namespace_capital_1_1_projects.html#a0ceb355ad7182a708ccc8115b9d3a32c", null ],
     [ "increment_total_propertors", "namespace_capital_1_1_projects.html#a8ac4970a4f6789cd49d57386275c0a47", null ],
+    [ "increment_total_unique_participants", "namespace_capital_1_1_projects.html#af1f8ee3bfe18205ae248f8b321db6a8e", null ],
     [ "increment_total_voters", "namespace_capital_1_1_projects.html#a159098825912570bd0c27c06fb4fb350", null ],
     [ "increment_votes_received", "namespace_capital_1_1_projects.html#aec7f2500928caeea7ae36916383123eb", null ],
     [ "open_project", "namespace_capital_1_1_projects.html#a7417e986568446c4e0490ec3c5fedf40", null ],

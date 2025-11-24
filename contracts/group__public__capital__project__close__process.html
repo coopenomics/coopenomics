@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('group__public__capital__project__close
 </div><!--header-->
 <div class="contents">
 <p >Процесс перевода открытого проекта в статус закрытого для прекращения привлечения инвестиций от участников кооператива.</p>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md193"></a>
 Назначение процесса</h2>
 <p >Закрытие проекта от инвестиций обеспечивает:</p><ul>
 <li>Прекращение фазы привлечения средств</li>
@@ -165,13 +165,13 @@ sequenceDiagram
     end
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md176"></a>
+<h2><a class="anchor" id="autotoc_md194"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md177"></a>
+<h3><a class="anchor" id="autotoc_md195"></a>
 Шаг 1: Инициация закрытия проекта</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga68856ff0a01129dc2754f3470855a35b">Закрытие проекта</a></p>
 <p >Кооператив инициирует закрытие проекта от инвестиций после достижения необходимого уровня финансирования или по другим организационным причинам.</p>
-<h3><a class="anchor" id="autotoc_md178"></a>
+<h3><a class="anchor" id="autotoc_md196"></a>
 Шаг 2: Проверка возможности закрытия</h3>
 <p ><b>Действие:</b> Валидация предварительных условий</p>
 <p >Система проверяет возможность закрытия проекта:</p><ul>
@@ -179,7 +179,7 @@ sequenceDiagram
 <li>Проект должен существовать</li>
 </ul>
 <dl class="section post"><dt>Постусловие</dt><dd>Подтвержден статус открытого проекта</dd></dl>
-<h3><a class="anchor" id="autotoc_md179"></a>
+<h3><a class="anchor" id="autotoc_md197"></a>
 Шаг 3: Закрытие проекта</h3>
 <p ><b>Действие:</b> Деактивация инвестиционной фазы</p>
 <p >Система переводит проект в статус закрытого для инвестиций:</p><ul>
@@ -190,7 +190,7 @@ sequenceDiagram
 <dl class="section post"><dt>Постусловие</dt><dd>Проект закрыт для приема инвестиций </dd>
 <dd>
 Флаг is_opened установлен в false</dd></dl>
-<h2><a class="anchor" id="autotoc_md180"></a>
+<h2><a class="anchor" id="autotoc_md198"></a>
 Условия для закрытия</h2>
 <p ><b>Обязательные требования:</b></p><ul>
 <li>Проект должен быть открыт для инвестиций (is_opened = true)</li>
@@ -200,7 +200,7 @@ sequenceDiagram
 <li>Блокируются операции инвестирования</li>
 <li>Сохраняются все ранее привлеченные инвестиции</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md199"></a>
 Результат процесса</h2>
 <p >После завершения процесса:</p><ol type="1">
 <li>Проект переведен в статус закрытого для инвестиций</li>
@@ -208,7 +208,7 @@ sequenceDiagram
 <li>Сохранена финансовая основа проекта</li>
 <li>Подготовлен переход к следующим этапам жизненного цикла</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md182"></a>
+<h2><a class="anchor" id="autotoc_md200"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__project__opening__process.html">Открытие проекта для инвестиций</a> - обратная операция</li>

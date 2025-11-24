@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="COOPENOMICS" />
 <meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
 <!-- END twitter metadata -->
-<title>COOPENOMICS: Редактирование параметров вкладчика</title>
+<title>COOPENOMICS: Редактирование параметров участника</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -134,10 +134,10 @@ $(document).ready(function(){initNavTree('group__public__capital__edit__contribu
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Редактирование параметров вкладчика<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
+  <div class="headertitle"><div class="title">Редактирование параметров участника<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p >Процесс обновления параметров существующего вкладчика кооператива. Позволяет изменить количество рабочих часов в день.</p>
+<p >Процесс обновления параметров существующего участника кооператива. Позволяет изменить количество рабочих часов в день.</p>
 <p > 
 <div class="mermaid">
 sequenceDiagram
@@ -145,9 +145,9 @@ sequenceDiagram
     participant Capital as Capital Contract
 
     К->>Capital: 1. Запрос на редактирование параметров
-    Note over Capital: Проверка существования вкладчика
+    Note over Capital: Проверка существования участника
     Note over Capital: Проверка статуса ACTIVE
-    Capital->>Capital: 2. Обновление параметров вкладчика
+    Capital->>Capital: 2. Обновление параметров участника
     Note over Capital: hours_per_day обновлен
 </div>
 </p>
@@ -155,24 +155,24 @@ sequenceDiagram
 Пошаговое описание процесса</h2>
 <h3><a class="anchor" id="autotoc_md150"></a>
 Шаг 1: Запрос на редактирование</h3>
-<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">редактирование параметров вкладчика</a></p>
-<p >Кооператив отправляет запрос на обновление параметров вкладчика с новыми значениями hours_per_day. Система проверяет существование вкладчика и его активный статус.</p>
-<dl class="section post"><dt>Постусловие</dt><dd>Проверено существование активного вкладчика</dd></dl>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">редактирование параметров участника</a></p>
+<p >Кооператив отправляет запрос на обновление параметров участника с новыми значениями hours_per_day. Система проверяет существование участника и его активный статус.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Проверено существование активного участника</dd></dl>
 <h3><a class="anchor" id="autotoc_md151"></a>
 Шаг 2: Обновление параметров</h3>
-<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">обновление записи вкладчика</a></p>
-<p >Система обновляет поле hours_per_day в записи вкладчика новым значением.</p>
-<dl class="section post"><dt>Постусловие</dt><dd>Обновлен параметр hours_per_day вкладчика</dd></dl>
+<p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2">обновление записи участника</a></p>
+<p >Система обновляет поле hours_per_day в записи участника новым значением.</p>
+<dl class="section post"><dt>Постусловие</dt><dd>Обновлен параметр hours_per_day участника</dd></dl>
 <h2><a class="anchor" id="autotoc_md152"></a>
 Результат процесса</h2>
 <p >После успешного завершения:</p><ol type="1">
-<li>Обновлен параметр hours_per_day вкладчика</li>
-<li>Вкладчик может продолжать участие в проектах с новыми параметрами</li>
+<li>Обновлен параметр hours_per_day участника</li>
+<li>Участник может продолжать участие в проектах с новыми параметрами</li>
 </ol>
 <h2><a class="anchor" id="autotoc_md153"></a>
 Связанные процессы</h2>
 <ul>
-<li><a class="el" href="group__public__capital__registration__process.html">Регистрация вкладчиков</a></li>
+<li><a class="el" href="group__public__capital__registration__process.html">Регистрация участников</a></li>
 <li><a class="el" href="group__public__capital__joining__process.html">Получение допуска к проекту</a> </li>
 </ul>
 </div><!-- contents -->

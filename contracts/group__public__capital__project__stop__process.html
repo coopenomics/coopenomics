@@ -157,27 +157,27 @@ sequenceDiagram
     end
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md249"></a>
+<h2><a class="anchor" id="autotoc_md267"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md250"></a>
+<h3><a class="anchor" id="autotoc_md268"></a>
 Шаг 1: Инициация остановки проекта</h3>
 <p ><b>Действие:</b> Приостановка проекта</p>
 <p >Кооператив инициирует остановку проекта в случае необходимости временного прекращения работ по проекту для решения организационных вопросов, перераспределения ресурсов или других причин.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Проверка авторизации кооператива</dd></dl>
-<h3><a class="anchor" id="autotoc_md251"></a>
+<h3><a class="anchor" id="autotoc_md269"></a>
 Шаг 2: Проверка возможности остановки</h3>
 <p ><b>Действие:</b> Валидация предварительных условий</p>
 <p >Система проверяет возможность остановки проекта, подтверждая что проект находится в статусе ACTIVE и может быть переведен обратно в подготовительную фазу.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Подтвержден статус ACTIVE проекта</dd></dl>
-<h3><a class="anchor" id="autotoc_md252"></a>
+<h3><a class="anchor" id="autotoc_md270"></a>
 Шаг 3: Перевод в статус ожидания</h3>
 <p ><b>Действие:</b> Деактивация рабочей фазы</p>
 <p >Система переводит проект в статус PENDING, что временно запрещает создание коммитов участниками, приостанавливает операции генерации результата, блокирует выдачу ссуд авторам/создателям/координаторам и ограничивает доступ к операционным функциям.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>Статус проекта изменен на PENDING</dd></dl>
-<h2><a class="anchor" id="autotoc_md253"></a>
+<h2><a class="anchor" id="autotoc_md271"></a>
 Особенности остановки проекта</h2>
 <p >Приостановка проекта может быть использована для временного прекращения работ без потери накопленных результатов и данных. После возобновления работы все ранее созданные коммиты, инвестиции и другие данные остаются доступными.</p>
-<h2><a class="anchor" id="autotoc_md254"></a>
+<h2><a class="anchor" id="autotoc_md272"></a>
 Операции, недоступные после остановки</h2>
 <p >После перевода в статус PENDING становятся недоступными:</p><ul>
 <li><a class="el" href="group__public__capital__commit__creation__process.html">Создание коммитов</a></li>
@@ -185,10 +185,10 @@ sequenceDiagram
 <li><a class="el" href="group__public__capital__create__expense__process.html">Создание расходов</a></li>
 <li><a class="el" href="group__public__capital__project__property__process.html">Имущественные взносы</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md255"></a>
+<h2><a class="anchor" id="autotoc_md273"></a>
 Возобновление работы</h2>
 <p >Для возобновления работы над проектом необходимо выполнить действие <a class="el" href="group__public__capital__project__start__process.html">запуска проекта</a>, которое вернет проект в активный статус.</p>
-<h2><a class="anchor" id="autotoc_md256"></a>
+<h2><a class="anchor" id="autotoc_md274"></a>
 Критерии возобновления работы</h2>
 <p >Работа над проектом может быть возобновлена когда устранены причины остановки, ресурсы перераспределены и команда готова к продолжению работ.</p>
 <dl class="section post"><dt>Постусловие</dt><dd><ol type="1">
@@ -197,7 +197,7 @@ sequenceDiagram
 <li>Деактивированы основные операции генерации</li>
 </ol>
 </dd></dl>
-<h2><a class="anchor" id="autotoc_md257"></a>
+<h2><a class="anchor" id="autotoc_md275"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__project__start__process.html">Запуск проекта</a> - возобновление работы</li>

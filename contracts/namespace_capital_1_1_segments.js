@@ -1,13 +1,17 @@
 var namespace_capital_1_1_segments =
 [
     [ "Status", "namespace_capital_1_1_segments_1_1_status.html", [
-      [ "ACCEPTED", "namespace_capital_1_1_segments_1_1_status.html#a283eb4d95521210da808756fb1fa88d4", null ],
-      [ "COMPLETED", "namespace_capital_1_1_segments_1_1_status.html#ab06a9c389084888250863953cd39a8c6", null ],
+      [ "ACT1", "namespace_capital_1_1_segments_1_1_status.html#af962bd165bed947df3d7415177acb815", null ],
+      [ "APPROVED", "namespace_capital_1_1_segments_1_1_status.html#ab36bbfaf3fbf2660e4f94e32e85195f2", null ],
+      [ "AUTHORIZED", "namespace_capital_1_1_segments_1_1_status.html#ad24d4981df8e662854a1d7ff27412685", null ],
       [ "CONTRIBUTED", "namespace_capital_1_1_segments_1_1_status.html#ae294ba5d424d2b326816a91912c25172", null ],
-      [ "GENERATION", "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981", null ]
+      [ "GENERATION", "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981", null ],
+      [ "READY", "namespace_capital_1_1_segments_1_1_status.html#a35d2dee2ca9443c95c18e69683a19b92", null ],
+      [ "STATEMENT", "namespace_capital_1_1_segments_1_1_status.html#a04d7979cea2929e0ad4e656255a9aa57", null ]
     ] ],
     [ "segment", "struct_capital_1_1_segments_1_1segment.html", "struct_capital_1_1_segments_1_1segment" ],
     [ "segments_index", "namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1", null ],
+    [ "calculate_non_investor_contribution", "namespace_capital_1_1_segments.html#a98d5799db0a96482be3ac45d47bf6507", null ],
     [ "calculate_segment_base_cost", "namespace_capital_1_1_segments.html#af8702b17d38a2d69e48d79c55ef7bfa7", null ],
     [ "calculate_segment_bonus_cost", "namespace_capital_1_1_segments.html#a035b7174021132ed66fcfb9e774b1fa8", null ],
     [ "calculate_total_segment_cost", "namespace_capital_1_1_segments.html#a7adc715bc940d6db8cd4081b94835ce9", null ],
@@ -20,8 +24,10 @@ var namespace_capital_1_1_segments =
     [ "get_project_investors", "namespace_capital_1_1_segments.html#a4582884090f6441bb5f15dd849e2f6ad", null ],
     [ "get_segment", "namespace_capital_1_1_segments.html#a28c440ae4f13d4e39dd5705aeb705fc9", null ],
     [ "get_segment_or_fail", "namespace_capital_1_1_segments.html#a0304b44fb97648f0d44fe7d53b146886", null ],
+    [ "has_intellectual_contribution_roles", "namespace_capital_1_1_segments.html#ac7f98231412f710b11d280fbc33d88eb", null ],
     [ "has_project_segments", "namespace_capital_1_1_segments.html#aaa50f612a371458c42fded8be290bec8", null ],
     [ "increase_debt_amount", "namespace_capital_1_1_segments.html#ab70140e62f0d6b5ec4151202993d17de", null ],
+    [ "is_pure_investor", "namespace_capital_1_1_segments.html#aff79537bcfc65b5c4c7b1b555b1aa02f", null ],
     [ "is_segment_updated", "namespace_capital_1_1_segments.html#aee1a60e183f09fd2f7df5a0933479ce8", null ],
     [ "is_voting_participant", "namespace_capital_1_1_segments.html#a35d6d130341e42b348049d51e3c9ddfb", null ],
     [ "remove_segment", "namespace_capital_1_1_segments.html#aef0b7d21054798d1b0effc559451edd4", null ],

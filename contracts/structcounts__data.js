@@ -6,5 +6,6 @@ var structcounts__data =
     [ "total_coordinators", "structcounts__data.html#a44756f898f509dfaedb138f65e456d6b", null ],
     [ "total_creators", "structcounts__data.html#a2f3d0b303108deed1914d63b46b62fd3", null ],
     [ "total_investors", "structcounts__data.html#aef55d1b6db72cfb584d23d71482c73c4", null ],
-    [ "total_propertors", "structcounts__data.html#a0bc0d9c5cc55be2e5490f191c1f02250", null ]
+    [ "total_propertors", "structcounts__data.html#a0bc0d9c5cc55be2e5490f191c1f02250", null ],
+    [ "total_unique_participants", "structcounts__data.html#a122f8294d3df03a97882f8fe08ddea40", null ]
 ];

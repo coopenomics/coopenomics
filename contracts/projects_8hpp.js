@@ -24,6 +24,7 @@ var projects_8hpp =
     [ "increment_total_creators", "projects_8hpp.html#aadae1d005b8acd1bf9bf9273d2408fe7", null ],
     [ "increment_total_investors", "projects_8hpp.html#a0ceb355ad7182a708ccc8115b9d3a32c", null ],
     [ "increment_total_propertors", "projects_8hpp.html#a8ac4970a4f6789cd49d57386275c0a47", null ],
+    [ "increment_total_unique_participants", "projects_8hpp.html#af1f8ee3bfe18205ae248f8b321db6a8e", null ],
     [ "increment_total_voters", "projects_8hpp.html#a159098825912570bd0c27c06fb4fb350", null ],
     [ "increment_votes_received", "projects_8hpp.html#aec7f2500928caeea7ae36916383123eb", null ],
     [ "open_project", "projects_8hpp.html#a7417e986568446c4e0490ec3c5fedf40", null ],
@@ -36,8 +37,8 @@ var projects_8hpp =
     [ "update_status", "projects_8hpp.html#ab0f59ec9ccd8f93fd6fe1240e82f520a", null ],
     [ "validate_parent_hash", "projects_8hpp.html#ad41b6f24a338f8470b2a64873efff014", null ],
     [ "ACTIVE", "projects_8hpp.html#aa8c8ba915b0fb94c1615694c2603408a", null ],
-    [ "CLOSED", "projects_8hpp.html#a8fe2f904e80fa0caf401ba9e8d809e72", null ],
-    [ "COMPLETED", "projects_8hpp.html#a59b5b1458897629a85436df7518babb6", null ],
+    [ "CANCELLED", "projects_8hpp.html#a73503bd5d919d5d0102591c3a20fbc02", null ],
     [ "PENDING", "projects_8hpp.html#a65b4c620fe5589e02828da8cad85b429", null ],
+    [ "RESULT", "projects_8hpp.html#a246b20ed4dc7eecb6f4cd9eefef74750", null ],
     [ "VOTING", "projects_8hpp.html#a727d9ba7741df12c660122456ea1bf89", null ]
 ];

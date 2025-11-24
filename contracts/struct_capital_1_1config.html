@@ -166,6 +166,18 @@ $(document).ready(function(){initNavTree('struct_capital_1_1config.html',''); in
 <tr class="memitem:a658f6a331678fbbc5594b93ece34113e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1config.html#a658f6a331678fbbc5594b93ece34113e">creators_voting_percent</a> = 38.2</td></tr>
 <tr class="memdesc:a658f6a331678fbbc5594b93ece34113e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процент премий создателей для голосования (по умолчанию)  <a href="struct_capital_1_1config.html#a658f6a331678fbbc5594b93ece34113e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a658f6a331678fbbc5594b93ece34113e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a61c131da7c90ac1dce571dabb7a3c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1config.html#a2a61c131da7c90ac1dce571dabb7a3c0">energy_decay_rate_per_day</a> = 1.11</td></tr>
+<tr class="memdesc:a2a61c131da7c90ac1dce571dabb7a3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Скорость уменьшения энергии в день (по умолчанию 1.11% для снижения за 90 дней)  <a href="struct_capital_1_1config.html#a2a61c131da7c90ac1dce571dabb7a3c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a61c131da7c90ac1dce571dabb7a3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5ddaee96b0e87a70d11261b119a889e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1config.html#ad5ddaee96b0e87a70d11261b119a889e">level_depth_base</a> = 10000000000</td></tr>
+<tr class="memdesc:ad5ddaee96b0e87a70d11261b119a889e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Базовая сумма вкладов для уровня 1 (по умолчанию 10000 RUB = 10000000000 микротокенов)  <a href="struct_capital_1_1config.html#ad5ddaee96b0e87a70d11261b119a889e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad5ddaee96b0e87a70d11261b119a889e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e438dc2fa3b430e5e07810376ea557"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1config.html#ad7e438dc2fa3b430e5e07810376ea557">level_growth_coefficient</a> = 1.5</td></tr>
+<tr class="memdesc:ad7e438dc2fa3b430e5e07810376ea557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коэффициент роста требований для следующих уровней (по умолчанию 1.5)  <a href="struct_capital_1_1config.html#ad7e438dc2fa3b430e5e07810376ea557">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad7e438dc2fa3b430e5e07810376ea557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85b85d1a2b570278c4eca6d9ce5b0a7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1config.html#ab85b85d1a2b570278c4eca6d9ce5b0a7">energy_gain_coefficient</a> = 10.0</td></tr>
+<tr class="memdesc:ab85b85d1a2b570278c4eca6d9ce5b0a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коэффициент прироста энергии от вкладов (по умолчанию 10.0)  <a href="struct_capital_1_1config.html#ab85b85d1a2b570278c4eca6d9ce5b0a7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab85b85d1a2b570278c4eca6d9ce5b0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Конфигурация контракта, управляемая пользователем. </p>
@@ -234,6 +246,38 @@ $(document).ready(function(){initNavTree('struct_capital_1_1config.html',''); in
 
 </div>
 </div>
+<a id="a2a61c131da7c90ac1dce571dabb7a3c0" name="a2a61c131da7c90ac1dce571dabb7a3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a61c131da7c90ac1dce571dabb7a3c0">&#9670;&nbsp;</a></span>energy_decay_rate_per_day</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Capital::config::energy_decay_rate_per_day = 1.11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Скорость уменьшения энергии в день (по умолчанию 1.11% для снижения за 90 дней) </p>
+
+</div>
+</div>
+<a id="ab85b85d1a2b570278c4eca6d9ce5b0a7" name="ab85b85d1a2b570278c4eca6d9ce5b0a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85b85d1a2b570278c4eca6d9ce5b0a7">&#9670;&nbsp;</a></span>energy_gain_coefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Capital::config::energy_gain_coefficient = 10.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Коэффициент прироста энергии от вкладов (по умолчанию 10.0) </p>
+
+</div>
+</div>
 <a id="ab4c3fc2552ae1e5cf7215d50d9e67edf" name="ab4c3fc2552ae1e5cf7215d50d9e67edf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4c3fc2552ae1e5cf7215d50d9e67edf">&#9670;&nbsp;</a></span>expense_pool_percent</h2>
 
@@ -247,6 +291,38 @@ $(document).ready(function(){initNavTree('struct_capital_1_1config.html',''); in
 </div><div class="memdoc">
 
 <p>Процент инвестиций в пул расходов (по умолчанию 1.0) </p>
+
+</div>
+</div>
+<a id="ad5ddaee96b0e87a70d11261b119a889e" name="ad5ddaee96b0e87a70d11261b119a889e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5ddaee96b0e87a70d11261b119a889e">&#9670;&nbsp;</a></span>level_depth_base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Capital::config::level_depth_base = 10000000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Базовая сумма вкладов для уровня 1 (по умолчанию 10000 RUB = 10000000000 микротокенов) </p>
+
+</div>
+</div>
+<a id="ad7e438dc2fa3b430e5e07810376ea557" name="ad7e438dc2fa3b430e5e07810376ea557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e438dc2fa3b430e5e07810376ea557">&#9670;&nbsp;</a></span>level_growth_coefficient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Capital::config::level_growth_coefficient = 1.5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Коэффициент роста требований для следующих уровней (по умолчанию 1.5) </p>
 
 </div>
 </div>

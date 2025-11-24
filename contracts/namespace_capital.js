@@ -6,6 +6,13 @@ var namespace_capital =
     [ "Core", "namespace_capital_1_1_core.html", "namespace_capital_1_1_core" ],
     [ "Debts", "namespace_capital_1_1_debts.html", "namespace_capital_1_1_debts" ],
     [ "Expenses", "namespace_capital_1_1_expenses.html", "namespace_capital_1_1_expenses" ],
+    [ "Gamification", "namespace_capital_1_1_gamification.html", [
+      [ "add_energy_and_check_levelup", "namespace_capital_1_1_gamification.html#abdf37f65e1fea20f6958f94970cc6aff", null ],
+      [ "calculate_energy_gain", "namespace_capital_1_1_gamification.html#a1c744a36fd524f111ddffff45d6f0719", null ],
+      [ "calculate_level_requirement", "namespace_capital_1_1_gamification.html#af85b4dead42afb5d53737cd28db7f068", null ],
+      [ "update_energy_with_decay", "namespace_capital_1_1_gamification.html#a7834e63161fb7f752a43f7e9442b157a", null ],
+      [ "update_gamification_from_segment", "namespace_capital_1_1_gamification.html#a76d8bdc97985b4f4b4f227a8a035f0b9", null ]
+    ] ],
     [ "Invests", "namespace_capital_1_1_invests.html", "namespace_capital_1_1_invests" ],
     [ "Memo", "namespace_capital_1_1_memo.html", [
       [ "get_approve_convert_memo", "namespace_capital_1_1_memo.html#aa61ea4df7a870d52611b02aef03eef25", null ],

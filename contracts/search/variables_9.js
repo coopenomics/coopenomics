@@ -22,7 +22,7 @@ var searchData=
   ['is_5fbranched_19',['is_branched',['../structcooperative.html#ac75f0a78989d3eb7ca79e88e0abb01d4',1,'cooperative::is_branched()'],['../structcooperative2.html#ac68abf7e8598d6304fb1217efc7aa245',1,'cooperative2::is_branched()']]],
   ['is_5fcan_5fcoop_5fspend_5fshare_5fcontributions_20',['is_can_coop_spend_share_contributions',['../structprogram.html#ad72b16a1662b3fa1287c67e79d8b8f8e',1,'program']]],
   ['is_5fcontributor_21',['is_contributor',['../struct_capital_1_1_segments_1_1segment.html#aaf96570f0c1e381897bbde09a5e77fd0',1,'Capital::Segments::segment']]],
-  ['is_5fcooperative_22',['is_cooperative',['../structcooperative2.html#a0005ae7367eec8f3e121958bbb701c9f',1,'cooperative2::is_cooperative()'],['../structcooperative.html#a744786f71268846d241a351d3a5b7acd',1,'cooperative::is_cooperative()'],['../structorg__data.html#a73a9e2d8573545f8852ff0dda1c860e5',1,'org_data::is_cooperative()']]],
+  ['is_5fcooperative_22',['is_cooperative',['../structcooperative2.html#a0005ae7367eec8f3e121958bbb701c9f',1,'cooperative2::is_cooperative()'],['../structorg__data.html#a73a9e2d8573545f8852ff0dda1c860e5',1,'org_data::is_cooperative()'],['../structcooperative.html#a744786f71268846d241a351d3a5b7acd',1,'cooperative::is_cooperative()']]],
   ['is_5fcoordinator_23',['is_coordinator',['../struct_capital_1_1_segments_1_1segment.html#a140f6a480a3db127a9b01c99dea15a65',1,'Capital::Segments::segment']]],
   ['is_5fcreator_24',['is_creator',['../struct_capital_1_1_segments_1_1segment.html#a8f93ab9d38cfefb84778146b8fee3394',1,'Capital::Segments::segment']]],
   ['is_5fenrolled_25',['is_enrolled',['../structcooperative.html#ad0b15a1ce03e04b357ed9b93117e327d',1,'cooperative::is_enrolled()'],['../structcooperative2.html#a2c0989045d89b49eda8937fba63ad12d',1,'cooperative2::is_enrolled()']]],
@@ -36,7 +36,8 @@ var searchData=
   ['is_5fpropertor_33',['is_propertor',['../struct_capital_1_1_segments_1_1segment.html#aae106c1149c58377bf082d60abaab0af',1,'Capital::Segments::segment']]],
   ['is_5fproxy_34',['is_proxy',['../structeosiosystem_1_1voter__info.html#aee50442b79d5561a967486e6b7a61e65',1,'eosiosystem::voter_info']]],
   ['is_5fverified_35',['is_verified',['../structverification.html#aeb6702bd4b7903963252735d6f760c50',1,'verification']]],
-  ['is_5fvoting_36',['is_voting',['../structboard__member.html#a20b8902343fc67a6f8a0665a4e40b330',1,'board_member']]],
-  ['is_5fwarranty_5freturn_37',['is_warranty_return',['../struct_marketplace_1_1request.html#ad203327be1c6131f89413da1335e71ab',1,'Marketplace::request']]],
-  ['issuer_38',['issuer',['../structeosio_1_1token_1_1currency__stats.html#a98c87418ed2e156ca2bd94a8e51a0b9f',1,'eosio::token::currency_stats']]]
+  ['is_5fvotes_5fcalculated_36',['is_votes_calculated',['../struct_capital_1_1_segments_1_1segment.html#afbe4ef0fd0b957e7df2fcd33442ce5c5',1,'Capital::Segments::segment']]],
+  ['is_5fvoting_37',['is_voting',['../structboard__member.html#a20b8902343fc67a6f8a0665a4e40b330',1,'board_member']]],
+  ['is_5fwarranty_5freturn_38',['is_warranty_return',['../struct_marketplace_1_1request.html#ad203327be1c6131f89413da1335e71ab',1,'Marketplace::request']]],
+  ['issuer_39',['issuer',['../structeosio_1_1token_1_1currency__stats.html#a98c87418ed2e156ca2bd94a8e51a0b9f',1,'eosio::token::currency_stats']]]
 ];

@@ -26,6 +26,7 @@ var struct_capital_1_1_segments_1_1segment =
     [ "is_creator", "struct_capital_1_1_segments_1_1segment.html#a8f93ab9d38cfefb84778146b8fee3394", null ],
     [ "is_investor", "struct_capital_1_1_segments_1_1segment.html#a074a27fd61de555bc590ad8b4210670e", null ],
     [ "is_propertor", "struct_capital_1_1_segments_1_1segment.html#aae106c1149c58377bf082d60abaab0af", null ],
+    [ "is_votes_calculated", "struct_capital_1_1_segments_1_1segment.html#afbe4ef0fd0b957e7df2fcd33442ce5c5", null ],
     [ "last_author_base_reward_per_share", "struct_capital_1_1_segments_1_1segment.html#a02bcba81f1f4c510f2a45be20baf423b", null ],
     [ "last_author_bonus_reward_per_share", "struct_capital_1_1_segments_1_1segment.html#a0e62198087d6eec7f17faeaf4c2e1c7d", null ],
     [ "last_contributor_reward_per_share", "struct_capital_1_1_segments_1_1segment.html#afa53c4089602537fd00f2897abfa1d45", null ],

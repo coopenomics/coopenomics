@@ -184,6 +184,15 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 <tr class="memitem:a35d6d130341e42b348049d51e3c9ddfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#a35d6d130341e42b348049d51e3c9ddfb">is_voting_participant</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
 <tr class="memdesc:a35d6d130341e42b348049d51e3c9ddfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет является ли пользователь участником голосования  <a href="namespace_capital_1_1_segments.html#a35d6d130341e42b348049d51e3c9ddfb">Подробнее...</a><br /></td></tr>
 <tr class="separator:a35d6d130341e42b348049d51e3c9ddfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff79537bcfc65b5c4c7b1b555b1aa02f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aff79537bcfc65b5c4c7b1b555b1aa02f">is_pure_investor</a> (const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;seg)</td></tr>
+<tr class="memdesc:aff79537bcfc65b5c4c7b1b555b1aa02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет является ли участник чистым инвестором (только инвестор, без других интеллектуальных ролей)  <a href="namespace_capital_1_1_segments.html#aff79537bcfc65b5c4c7b1b555b1aa02f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aff79537bcfc65b5c4c7b1b555b1aa02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7f98231412f710b11d280fbc33d88eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#ac7f98231412f710b11d280fbc33d88eb">has_intellectual_contribution_roles</a> (const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;seg)</td></tr>
+<tr class="memdesc:ac7f98231412f710b11d280fbc33d88eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет имеет ли участник роли, требующие внесения интеллектуального результата  <a href="namespace_capital_1_1_segments.html#ac7f98231412f710b11d280fbc33d88eb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac7f98231412f710b11d280fbc33d88eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d5799db0a96482be3ac45d47bf6507"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#a98d5799db0a96482be3ac45d47bf6507">calculate_non_investor_contribution</a> (const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;seg)</td></tr>
+<tr class="memdesc:a98d5799db0a96482be3ac45d47bf6507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает сумму неинвестиционных вкладов сегмента (для внесения результата)  <a href="namespace_capital_1_1_segments.html#a98d5799db0a96482be3ac45d47bf6507">Подробнее...</a><br /></td></tr>
+<tr class="separator:a98d5799db0a96482be3ac45d47bf6507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1a60e183f09fd2f7df5a0933479ce8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_segments.html#aee1a60e183f09fd2f7df5a0933479ce8">is_segment_updated</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
 <tr class="memdesc:aee1a60e183f09fd2f7df5a0933479ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет является ли сегмент обновленным (CRPS актуален и инвестиции синхронизированы)  <a href="namespace_capital_1_1_segments.html#aee1a60e183f09fd2f7df5a0933479ce8">Подробнее...</a><br /></td></tr>
 <tr class="separator:aee1a60e183f09fd2f7df5a0933479ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,6 +249,41 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
+<a id="a98d5799db0a96482be3ac45d47bf6507" name="a98d5799db0a96482be3ac45d47bf6507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d5799db0a96482be3ac45d47bf6507">&#9670;&nbsp;</a></span>calculate_non_investor_contribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::Segments::calculate_non_investor_contribution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;&#160;</td>
+          <td class="paramname"><em>seg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рассчитывает сумму неинвестиционных вкладов сегмента (для внесения результата) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment</td><td>Сегмент участника </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Сумма вкладов, которую нужно внести как результат (без инвестиционной части) </dd></dl>
+
+</div>
+</div>
 <a id="af8702b17d38a2d69e48d79c55ef7bfa7" name="af8702b17d38a2d69e48d79c55ef7bfa7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8702b17d38a2d69e48d79c55ef7bfa7">&#9670;&nbsp;</a></span>calculate_segment_base_cost()</h2>
 
@@ -779,6 +823,41 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
 
 </div>
 </div>
+<a id="ac7f98231412f710b11d280fbc33d88eb" name="ac7f98231412f710b11d280fbc33d88eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7f98231412f710b11d280fbc33d88eb">&#9670;&nbsp;</a></span>has_intellectual_contribution_roles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Capital::Segments::has_intellectual_contribution_roles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;&#160;</td>
+          <td class="paramname"><em>seg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет имеет ли участник роли, требующие внесения интеллектуального результата </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment</td><td>Сегмент участника </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если у участника есть интеллектуальные роли </dd></dl>
+
+</div>
+</div>
 <a id="aaa50f612a371458c42fded8be290bec8" name="aaa50f612a371458c42fded8be290bec8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa50f612a371458c42fded8be290bec8">&#9670;&nbsp;</a></span>has_project_segments()</h2>
 
@@ -864,6 +943,41 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_segments.html','
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff79537bcfc65b5c4c7b1b555b1aa02f" name="aff79537bcfc65b5c4c7b1b555b1aa02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff79537bcfc65b5c4c7b1b555b1aa02f">&#9670;&nbsp;</a></span>is_pure_investor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Capital::Segments::is_pure_investor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">segment</a> &amp;&#160;</td>
+          <td class="paramname"><em>seg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет является ли участник чистым инвестором (только инвестор, без других интеллектуальных ролей) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">segment</td><td>Сегмент участника </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если участник только инвестор </dd></dl>
 
 </div>
 </div>

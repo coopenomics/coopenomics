@@ -225,7 +225,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1contributor.html',''
 <tr class="memdesc:a52c1b8a47d8c969a1cf2642211005db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма, вложенная в проект как инвестор  <a href="struct_capital_1_1contributor.html#a52c1b8a47d8c969a1cf2642211005db9">Подробнее...</a><br /></td></tr>
 <tr class="separator:a52c1b8a47d8c969a1cf2642211005db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85e19f23f1dd0a88f8c18abe28d93728"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#a85e19f23f1dd0a88f8c18abe28d93728">contributed_as_creator</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
-<tr class="memdesc:a85e19f23f1dd0a88f8c18abe28d93728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма, вложенная в проект как создатель  <a href="struct_capital_1_1contributor.html#a85e19f23f1dd0a88f8c18abe28d93728">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a85e19f23f1dd0a88f8c18abe28d93728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма, вложенная в проект как исполнитель  <a href="struct_capital_1_1contributor.html#a85e19f23f1dd0a88f8c18abe28d93728">Подробнее...</a><br /></td></tr>
 <tr class="separator:a85e19f23f1dd0a88f8c18abe28d93728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da24d18fcb18d994cd009242d0675af"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#a2da24d18fcb18d994cd009242d0675af">contributed_as_author</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
 <tr class="memdesc:a2da24d18fcb18d994cd009242d0675af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма, вложенная в проект как автор  <a href="struct_capital_1_1contributor.html#a2da24d18fcb18d994cd009242d0675af">Подробнее...</a><br /></td></tr>
@@ -239,6 +239,15 @@ $(document).ready(function(){initNavTree('struct_capital_1_1contributor.html',''
 <tr class="memitem:a626abcc4efa68e5b971f809ca09c9d08"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#a626abcc4efa68e5b971f809ca09c9d08">contributed_as_propertor</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
 <tr class="memdesc:a626abcc4efa68e5b971f809ca09c9d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма, вложенная в проект как пропертор  <a href="struct_capital_1_1contributor.html#a626abcc4efa68e5b971f809ca09c9d08">Подробнее...</a><br /></td></tr>
 <tr class="separator:a626abcc4efa68e5b971f809ca09c9d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae11c92696e4a46ad4b80d03766bb7f1f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#ae11c92696e4a46ad4b80d03766bb7f1f">level</a> = 1</td></tr>
+<tr class="memdesc:ae11c92696e4a46ad4b80d03766bb7f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уровень участника (от 1 и выше, только растет)  <a href="struct_capital_1_1contributor.html#ae11c92696e4a46ad4b80d03766bb7f1f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae11c92696e4a46ad4b80d03766bb7f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1e415608525fd1a95ce62adb9ca30d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#a9b1e415608525fd1a95ce62adb9ca30d">energy</a> = 99.9999999999</td></tr>
+<tr class="memdesc:a9b1e415608525fd1a95ce62adb9ca30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущая энергия участника (0.0 - 100.0)  <a href="struct_capital_1_1contributor.html#a9b1e415608525fd1a95ce62adb9ca30d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b1e415608525fd1a95ce62adb9ca30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a174cca5fb6fa381303afec27e70f2331"><td class="memItemLeft" align="right" valign="top">time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1contributor.html#a174cca5fb6fa381303afec27e70f2331">last_energy_update</a></td></tr>
+<tr class="memdesc:a174cca5fb6fa381303afec27e70f2331"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время последнего обновления энергии  <a href="struct_capital_1_1contributor.html#a174cca5fb6fa381303afec27e70f2331">Подробнее...</a><br /></td></tr>
+<tr class="separator:a174cca5fb6fa381303afec27e70f2331"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Таблица участников хранит данные индивидуального участника кооператива. </p>
@@ -608,7 +617,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1contributor.html',''
       </table>
 </div><div class="memdoc">
 
-<p>Сумма, вложенная в проект как создатель </p>
+<p>Сумма, вложенная в проект как исполнитель </p>
 
 </div>
 </div>
@@ -708,6 +717,22 @@ $(document).ready(function(){initNavTree('struct_capital_1_1contributor.html',''
 
 </div>
 </div>
+<a id="a9b1e415608525fd1a95ce62adb9ca30d" name="a9b1e415608525fd1a95ce62adb9ca30d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1e415608525fd1a95ce62adb9ca30d">&#9670;&nbsp;</a></span>energy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Capital::contributor::energy = 99.9999999999</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущая энергия участника (0.0 - 100.0) </p>
+
+</div>
+</div>
 <a id="a8b5b4b4131d25a01b625ad58bfc2409a" name="a8b5b4b4131d25a01b625ad58bfc2409a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b5b4b4131d25a01b625ad58bfc2409a">&#9670;&nbsp;</a></span>hours_per_day</h2>
 
@@ -753,6 +778,38 @@ $(document).ready(function(){initNavTree('struct_capital_1_1contributor.html',''
 </div><div class="memdoc">
 
 <p>Флаг, указывающий на внешний контракт </p>
+
+</div>
+</div>
+<a id="a174cca5fb6fa381303afec27e70f2331" name="a174cca5fb6fa381303afec27e70f2331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a174cca5fb6fa381303afec27e70f2331">&#9670;&nbsp;</a></span>last_energy_update</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_point_sec Capital::contributor::last_energy_update</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Время последнего обновления энергии </p>
+
+</div>
+</div>
+<a id="ae11c92696e4a46ad4b80d03766bb7f1f" name="ae11c92696e4a46ad4b80d03766bb7f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae11c92696e4a46ad4b80d03766bb7f1f">&#9670;&nbsp;</a></span>level</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Capital::contributor::level = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уровень участника (от 1 и выше, только растет) </p>
 
 </div>
 </div>
