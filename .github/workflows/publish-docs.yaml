@@ -113,7 +113,7 @@ jobs:
       - name: Copy SDK documentation
         run: |
           mkdir -p docs/sdk
-          cp -r mono-repo/components/sdk/docs/* docs/sdk/
+          rsync -av --exclude='typedoc.json' mono-repo/components/sdk/docs/ docs/sdk/
 
       - name: Copy cooptypes documentation
         run: |
