@@ -1,5 +1,5 @@
 site_name: Кооперативная Экономика
-
+site_url: https://coopenomics.world
 extra_javascript:
   - js/metrika.js
 
@@ -14,11 +14,11 @@ theme:
     - announce.dismiss   # позволяет закрывать баннер
     - navigation.tracking
     # - navigation.path
-    - navigation.tabs
+    # - navigation.tabs
     # - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    # - navigation.expand
+    - navigation.expand
     # - toc.follow
     - toc.integrate
     - search.share
@@ -110,37 +110,36 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Манифест: index.md
+  # - Манифест: index.md
   # - Идеократия: 
     # - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
     # - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
-  - Документация: 
-    - Введение: documentation/intro.md
-    - Обзор: documentation/overview.md
-    # - Карта пайщика: documentation/cardcoop.md 
-    - Блокчейн:
-      - Введение: documentation/blockchain/intro.md
-      - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
-      - Действия и транзакции: documentation/blockchain/transactions.md
-      - Ноды и синхронизация истории: documentation/blockchain/nodes.md
-      - База данных: documentation/blockchain/state.md
-      - Компоненты: documentation/blockchain/components.md
-      - Протоколы: documentation/blockchain/protocols.md
-      - Делегаты и консенсус: documentation/blockchain/witnesses.md 
-      - Параметры конфигурации: documentation/blockchain/configuration.md
-      
-    - Контракты: https://coopenomics.world/contracts
-      # - Введение: documentation/contracts/index.md
-      # - Системные контракты: documentation/coopcontracts/system.md
-      # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
-      # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
-    - Фабрика документов: 
-      - Введение: documentation/fabric/intro.md
-    - Словарь: vocabulary.md    
-      
-  
-  - Блог: https://blog.coopenomics.world
-  - Подключение: providers.md
+
+  - Введение: index.md
+  - Обзор: documentation/overview.md
+  # - Карта пайщика: documentation/cardcoop.md 
+  - Блокчейн:
+    - Введение: documentation/blockchain/intro.md
+    - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
+    - Действия и транзакции: documentation/blockchain/transactions.md
+    - Ноды и синхронизация истории: documentation/blockchain/nodes.md
+    - База данных: documentation/blockchain/state.md
+    - Компоненты: documentation/blockchain/components.md
+    - Протоколы: documentation/blockchain/protocols.md
+    - Делегаты и консенсус: documentation/blockchain/witnesses.md 
+    - Параметры конфигурации: documentation/blockchain/configuration.md
+    
+  - Контракты: https://coopenomics.world/contracts
+    # - Введение: documentation/contracts/index.md
+    # - Системные контракты: documentation/coopcontracts/system.md
+    # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
+    # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
+  - Фабрика документов: 
+    - Введение: documentation/fabric/intro.md
+  # - Словарь: vocabulary.md    
+    
+
+  # - Подключение: providers.md
   # - Инструкции:
   #       - Быстрый старт: documentation/blockchain/install.md
   #       # - Полный старт: documentation/blockchain/install.md
@@ -149,7 +148,7 @@ nav:
   #       # - API: https://developers.eos.io/welcome/latest/reference/index
     
   # - Вопрос-ответ: faq.md
-  - Контакты: contacts.md
+  # - Контакты: contacts.md
   
   # - Программные Модули: modules.md
       
