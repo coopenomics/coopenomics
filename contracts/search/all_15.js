@@ -3,7 +3,7 @@ var searchData=
   ['unapprove_0',['unapprove',['../eosio_8wrap__tests_8cpp.html#aded4b3d8eebe870ef53b78ea95a1cef6',1,'unapprove():&#160;eosio.wrap_tests.cpp'],['../classeosio__wrap__tester.html#a640df1c8559085b577c7350a38cb171b',1,'eosio_wrap_tester::unapprove()'],['../group__public__msig__actions.html#ga7d6e568f96c6697728e316557a9bcf1e',1,'eosio::multisig::unapprove(name proposer, name proposal_name, permission_level level)']]],
   ['unapprove_5faction_1',['unapprove_action',['../classeosio_1_1multisig.html#a36509e236e810ab65fa9f0d4d4819a44',1,'eosio::multisig']]],
   ['unblock_2',['unblock',['../group__public__soviet__actions.html#gaca4313cc120a12ff6dd71c0a221d457c',1,'soviet::unblock()'],['../class_ledger.html#adaffce1fc0f71e7e8345f95cdd31ba37',1,'Ledger::unblock()'],['../group__public__ledger__actions.html#gac7d659eb8528c75307e07b1bf3797715',1,'ledger::unblock()']]],
-  ['unblock_2ecpp_3',['unblock.cpp',['../soviet_2src_2participant_2unblock_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger_2src_2common_2unblock_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['unblock_2ecpp_3',['unblock.cpp',['../ledger_2src_2common_2unblock_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2participant_2unblock_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['unblock_5ffunds_4',['unblock_funds',['../class_wallet.html#a6134260718099b642acd2394457c25bd',1,'Wallet']]],
   ['unblock_5fmembership_5ffee_5',['unblock_membership_fee',['../class_ledger.html#a06377850f112edcd802948a142bb1cf7',1,'Ledger']]],
   ['unblockbal_6',['unblockbal',['../group__public__soviet__actions.html#ga255679ef538e05218d10d04b0a7ba404',1,'soviet']]],
