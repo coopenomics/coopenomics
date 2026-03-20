@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: API цепи COOPOS
-  description: Спецификация Chain API узла COOPOS (nodeos, совместимый с EOSIO/Antelope). Подробности — в документации разработчика на https://coopenomics.world.
+  description: Спецификация Chain API узла COOPOS (nodeos). Подробности — в документации на https://coopenomics.world.
   version: 1.0.0
   license:
     name: MIT
@@ -25,6 +25,7 @@ components:
 paths:
   /get_account:
     post:
+      summary: Сведения об учётной записи
       description: Возвращает объект с подробностями об указанной учётной записи в блокчейне.
       operationId: get_account
       requestBody:
@@ -47,6 +48,7 @@ paths:
                 $ref: "schemas/Account.yaml"
   /get_block:
     post:
+      summary: Получить блок
       description: Возвращает объект с подробностями об указанном блоке блокчейна.
       operationId: get_block
       requestBody:
@@ -69,6 +71,7 @@ paths:
                 $ref: "schemas/Block.yaml"
   /get_block_info:
     post:
+      summary: Краткие сведения о блоке
       description: Аналогично `get_block`, но возвращает фиксированный урезанный набор данных блока меньшего размера.
       operationId: get_block_info
       requestBody:
@@ -91,6 +94,7 @@ paths:
                 $ref: "schemas/BlockInfo.yaml"
   /get_info:
     post:
+      summary: Общие сведения о цепи
       description: Возвращает объект с общими сведениями о блокчейне.
       operationId: get_info
       security: []
@@ -104,6 +108,7 @@ paths:
 
   /push_transaction:
     post:
+      summary: Применить транзакцию (push)
       description: Ожидает транзакцию в формате JSON и пытается применить её к блокчейну.
       operationId: push_transaction
       requestBody:
@@ -136,6 +141,7 @@ paths:
 
   /send_transaction:
     post:
+      summary: Применить транзакцию (send)
       description: Ожидает транзакцию в формате JSON и пытается применить её к блокчейну.
       operationId: send_transaction
       requestBody:
@@ -169,6 +175,7 @@ paths:
 
   /push_transactions:
     post:
+      summary: Применить несколько транзакций
       description: Ожидает одну или несколько транзакций в формате JSON и пытается применить их к блокчейну.
       operationId: push_transactions
       requestBody:
@@ -188,6 +195,7 @@ paths:
 
   /get_block_header_state:
     post:
+      summary: Состояние заголовка блока
       description: Возвращает состояние заголовка блока.
       operationId: get_block_header_state
       requestBody:
@@ -212,6 +220,7 @@ paths:
 
   /get_abi:
     post:
+      summary: ABI контракта
       description: Возвращает ABI контракта по имени учётной записи.
       operationId: get_abi
       requestBody:
@@ -233,6 +242,7 @@ paths:
                 $ref: "schemas/Abi.yaml"
   /get_currency_balance:
     post:
+      summary: Баланс токена
       description: Возвращает текущий баланс токена.
       operationId: get_currency_balance
       requestBody:
@@ -264,6 +274,7 @@ paths:
 
   /get_currency_stats:
     post:
+      summary: Статистика токена
       description: Возвращает статистику по выпуску валюты (токена).
       operationId: get_currency_stats
       requestBody:
@@ -287,6 +298,7 @@ paths:
 
   /get_required_keys:
     post:
+      summary: Ключи для подписи транзакции
       description: Возвращает ключи, необходимые для подписи транзакции.
       operationId: get_required_keys
       requestBody:
@@ -315,6 +327,7 @@ paths:
 
   /get_producers:
     post:
+      summary: Список продюсеров
       description: Возвращает список продюсеров блокчейна.
       operationId: get_producers
       requestBody:
@@ -360,6 +373,7 @@ paths:
 
   /get_raw_code_and_abi:
     post:
+      summary: Сырой WASM и ABI
       description: Возвращает сырой WASM и ABI контракта по имени учётной записи.
       operationId: get_raw_code_and_abi
       requestBody:
@@ -392,6 +406,7 @@ paths:
 
   /get_scheduled_transactions:
     post:
+      summary: Запланированные транзакции
       description: Возвращает отложенные (запланированные) транзакции.
       operationId: get_scheduled_transactions
       requestBody:
@@ -424,6 +439,7 @@ paths:
 
   /get_table_by_scope:
     post:
+      summary: Области таблиц (scopes)
       description: Возвращает области (scopes) таблиц контракта.
       operationId: get_table_by_scope
       requestBody:
@@ -476,6 +492,7 @@ paths:
 
   /get_table_rows:
     post:
+      summary: Строки таблицы состояния
       description: Возвращает строки указанной таблицы состояния контракта.
       operationId: get_table_rows
       requestBody:
@@ -539,6 +556,7 @@ paths:
 
   /get_code:
     post:
+      summary: Код контракта (WASM)
       description: Возвращает объект с WASM-кодом смарт-контракта.
       operationId: get_code
       requestBody:
@@ -578,6 +596,7 @@ paths:
 
   /get_raw_abi:
     post:
+      summary: Сырой ABI контракта
       description: Возвращает объект с сырым ABI смарт-контракта.
       operationId: get_raw_abi
       requestBody:
@@ -611,6 +630,7 @@ paths:
 
   /get_activated_protocol_features:
     post:
+      summary: Активированные возможности протокола
       description: Возвращает активированные на узле продюсера протокольные возможности.
       operationId: get_activated_protocol_features
       requestBody:
@@ -655,6 +675,7 @@ paths:
                     description: "Если активированных возможностей больше, чем limit, здесь порядковый номер следующей не вошедшей в ответ; иначе 0."
   /get_accounts_by_authorizers:
     post:
+      summary: Учётные записи по авторизующим
       description: По набору имён учётных записей и публичных ключей находит разрешения (authorities), которые полностью или частично могут быть удовлетворены этими данными.
       operationId: get_accounts_by_authorizers
       requestBody:
@@ -715,6 +736,7 @@ paths:
                           description: Порог — сумма весов, которую нужно достичь или превысить
   /get_transaction_status:
     post:
+      summary: Статус транзакции (финальность)
       description: Возвращает состояние цепи и при наличии — информацию о транзакции по её идентификатору. Требуется включённая функция статуса финальности транзакций в плагине chain (параметр nodeos `--transaction-finality-status-max-storage-size-gb`).
       operationId: get_transaction_status
       requestBody:
@@ -738,6 +760,7 @@ paths:
 
   /send_transaction2:
     post:
+      summary: Применить транзакцию (send v2)
       description: |
         Пытается применить транзакцию в формате JSON к блокчейну. Поддерживает полную трассировку неудачной транзакции и повторные попытки через nodeos, если они включены на узле. При включённом повторе API-узел досылает транзакцию в P2P-сеть до истечения срока, включения в блок или необратимости.
         Внимание: по умолчанию вместо исключений возвращается полная трассировка ошибки. Не путайте наличие трассировки с успешным выполнением — проверяйте поля «receipt» и «except».
@@ -784,6 +807,7 @@ paths:
 
   /compute_transaction:
     post:
+      summary: Симуляция транзакции без записи
       description: |
         Выполняет указанную транзакцию, формирует трассировку (включая расход ресурсов), затем откатывает все изменения состояния; субъективный биллинг для аккаунта не увеличивается. Подписи, если есть, обрабатываются, ошибки подписи игнорируются. Неуспешные транзакции всё равно содержат трассировку сбоя.
         Внимание: на публичных узлах с включённым compute_transaction нужно ограничивать частоту запросов (защита от DoS).
@@ -818,6 +842,7 @@ paths:
 
   /get_code_hash:
     post:
+      summary: Хеш кода контракта
       description: Возвращает хеш кода смарт-контракта в блокчейне. Его можно сравнить с ожидаемым значением, чтобы убедиться, что код не менялся.
       operationId: get_code_hash
       requestBody:
@@ -846,6 +871,7 @@ paths:
 
   /get_transaction_id:
     post:
+      summary: Идентификатор транзакции
       description: Возвращает идентификатор транзакции (хеш транзакции) для переданной транзакции.
       operationId: get_transaction_id
       requestBody:
@@ -865,6 +891,7 @@ paths:
 
   /get_producer_schedule:
     post:
+      summary: Расписание продюсеров
       description: Возвращает текущее расписание продюсеров — активный список и порядок ротации.
       operationId: get_producer_schedule
       responses:
@@ -887,6 +914,7 @@ paths:
 
   /send_read_only_transaction:
     post:
+      summary: Транзакция только для чтения
       description: Отправляет транзакцию только для чтения в формате JSON; она не предназначена для включения в блокчейн. Если транзакция меняет состояние цепи, узел отклонит её.
       operationId: send_read_only_transaction
       requestBody:
@@ -917,6 +945,7 @@ paths:
 
   /push_block:
     post:
+      summary: Передать блок в цепь
       description: Передаёт блок в блокчейн (для специальных сценариев узла).
       operationId: push_block
       requestBody:

@@ -10,7 +10,7 @@ info:
     url: https://coopenomics.world
 tags:
   - name: Версия протокола 4.0
-    description: Тег релиза бинарников Leap совпадает с версией протокола
+    description: Тег релиза бинарников COOPOS совпадает с версией протокола
 servers:
   - url: "{protocol}://{host}:{port}/v1"
     variables:

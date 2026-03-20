@@ -17,10 +17,10 @@
 
     ---
 
-    Документация к блокчейн-протоколу EOSIO & ANTELOPE, который лежит в основе программного комплекса Цифрового Кошелька. 
+    Документация по стеку **COOPOS** — узлам, API и инструментам блокчейна кооперативной экономики.
 
-    [:octicons-arrow-right-24: Подробнее](https://developers.eos.io)
-    [:octicons-arrow-right-24: Репозиторий](https://github.com/blockchain)
+    [:octicons-arrow-right-24: Блокчейн](documentation/blockchain/intro.md)
+    [:octicons-arrow-right-24: Программы узла](documentation/blockchain/coopos/index.md)
 
 -   __Смарт-контракты__
 
@@ -189,7 +189,7 @@ docker run --name node -d -p 8888:8888 -p 8080:8080 \-v $HOME/blockchain/data:/m
 
 
 __Сборка из исходников__
-Инструкция сборки из исходного кода описана в [репозитории](https://github.com/coopenomics/blockchain). 
+Инструкция сборки из исходного кода описана в [репозитории COOPOS](https://github.com/coopenomics/coopos). 
 
 
 
@@ -260,11 +260,9 @@ const options = {
 const session = new Session(args, options)
 ```
 
-Теперь вы можете применять сформированную сессию для отправки транзакций в любые смарт-контракты системы. Для чтения же информации из таблиц блокчейна вам потребуется ApiClient: 
+Теперь вы можете применять сформированную сессию для отправки транзакций в любые смарт-контракты системы. Для чтения информации из таблиц блокчейна нужен клиент Chain API из [WharfKit](https://wharfkit.com) (класс `APIClient`, подключение по инструкции актуальной версии SDK):
 
 ```
-import { APIClient } from "@wharfkit/antelope"
-
 const client = new APIClient({
   url: "https://testnet.coopenomics.world",
 })

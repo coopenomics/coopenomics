@@ -18,7 +18,7 @@ theme:
     # - navigation.sections
     - navigation.instant
     - navigation.instant.prefetch
-    - navigation.expand
+    # - navigation.expand
     # - toc.follow
     # - toc.integrate
     - search.share
@@ -96,8 +96,8 @@ markdown_extensions:
 
       # custom_fences:
       #   - name: mermaid
-      #     class: mermaid
-      #     format: !!python/name:pymdownx.superfences.fence_code_format
+      #       class: mermaid
+      #       format: !!python/name:pymdownx.superfences.fence_code_format
 
 
   - attr_list
@@ -123,21 +123,138 @@ nav:
     - Аккаунты, ключи и подписи: documentation/blockchain/accounts.md
     - Действия и транзакции: documentation/blockchain/transactions.md
     - Ноды и синхронизация истории: documentation/blockchain/nodes.md
+      
     - База данных: documentation/blockchain/state.md
     - Компоненты: documentation/blockchain/components.md
     - Протоколы: documentation/blockchain/protocols.md
-    - Делегаты и консенсус: documentation/blockchain/witnesses.md 
-    - Параметры конфигурации: documentation/blockchain/configuration.md
-
-  - API:
-    - Producer API: https://docs.coopenomics.world/api/producer
-    - Chain API: https://docs.coopenomics.world/api/chain
-    - Net API: https://docs.coopenomics.world/api/net
-    - Trace API: https://docs.coopenomics.world/api/trace
-    - DB Size API: https://docs.coopenomics.world/api/db_size
-    - Cooptypes: https://docs.coopenomics.world/cooptypes
+    - Делегаты и консенсус: documentation/blockchain/witnesses.md
+    - Программы узла:
+      - Обзор: documentation/blockchain/coopos/index.md
+      - Установка:
+        - Обзор: documentation/blockchain/coopos/00_install/index.md
+        - Сборка из исходников: documentation/blockchain/coopos/00_install/01_build-from-source/index.md
+        - Прочие Unix (экспериментально): documentation/blockchain/coopos/00_install/01_build-from-source/00_build-unsupported-os.md
+      - nodeos:
+        - Обзор: documentation/blockchain/coopos/01_nodeos/index.md
+        - Использование:
+          - Обзор: documentation/blockchain/coopos/01_nodeos/02_usage/index.md
+          - Типы узлов:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/02_usage/02_node-setups/index.md
+            - Producing-нода: documentation/blockchain/coopos/01_nodeos/02_usage/02_node-setups/00_producing-node.md
+            - Non-producing-нода: documentation/blockchain/coopos/01_nodeos/02_usage/02_node-setups/01_non-producing-node.md
+          - Среда разработки:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/02_usage/03_development-environment/index.md
+            - Один локальный узел: documentation/blockchain/coopos/01_nodeos/02_usage/03_development-environment/00_local-single-node-testnet.md
+            - Несколько локальных узлов: documentation/blockchain/coopos/01_nodeos/02_usage/03_development-environment/01_local-multi-node-testnet.md
+        - Плагины:
+          - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/index.md
+          - chain_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/chain_plugin/index.md
+          - chain_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/chain_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/chain_api_plugin/api-reference/index.md
+          - db_size_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/db_size_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/db_size_api_plugin/api-reference/index.md
+          - http_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/http_plugin/index.md
+          - net_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/net_plugin/index.md
+          - net_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/net_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/net_api_plugin/api-reference/index.md
+          - producer_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/producer_plugin/index.md
+          - producer_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/producer_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/producer_api_plugin/api-reference/index.md
+          - resource_monitor_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/resource_monitor_plugin/index.md
+          - state_history_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/state_history_plugin/index.md
+          - test_control_plugin: documentation/blockchain/coopos/01_nodeos/03_plugins/test_control_plugin/index.md
+          - test_control_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/test_control_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/test_control_api_plugin/api-reference/index.md
+          - trace_api_plugin:
+            - Обзор: documentation/blockchain/coopos/01_nodeos/03_plugins/trace_api_plugin/index.md
+            - Справка API: documentation/blockchain/coopos/01_nodeos/03_plugins/trace_api_plugin/api-reference/index.md
+        - Реплеи: documentation/blockchain/coopos/01_nodeos/04_replays/index.md
+        - RPC (обзор): documentation/blockchain/coopos/01_nodeos/05_rpc_apis/index.md
+        - Логирование: documentation/blockchain/coopos/01_nodeos/06_logging/index.md
+        - Концепции:
+          - Обзор: documentation/blockchain/coopos/01_nodeos/07_concepts/index.md
+          - Context-free data: documentation/blockchain/coopos/01_nodeos/07_concepts/10_context-free-data/index.md
+        - Устранение неполадок: documentation/blockchain/coopos/01_nodeos/08_troubleshooting/index.md
+      - cleos:
+        - Обзор: documentation/blockchain/coopos/02_cleos/index.md
+        - Ресурсы сети, регистрация и контракты: documentation/blockchain/system-resources.md
+        - Ресурсы и powerup (примеры cleos): documentation/blockchain/coopos/resources-powerup-ru.md
+        - Руководства (how-to):
+          - Оглавление: documentation/blockchain/coopos/02_cleos/02_how-to-guides/index.md
+          - Подключение к сети: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-connect-a-specific-network.md
+          - Кошелёк: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-create-a-wallet.md
+          - Пара ключей: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-create-key-pairs.md
+          - Список ключей: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-list-all-key-pairs.md
+          - Импорт ключа: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-import-a-key.md
+          - Создание аккаунта: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-create-an-account.md
+          - Данные аккаунта: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-get-account-information.md
+          - Мультисиг: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-config-a-multisig-account.md
+          - Связать разрешение: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-link-permission.md
+          - Отвязать разрешение: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-unlink-permission.md
+          - Информация о блоке: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-get-block-information.md
+          - Информация о транзакции: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-get-transaction-information.md
+          - Таблицы: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-get-tables-information.md
+          - Отправка транзакции: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-submit-a-transaction.md
+          - Перевод токена: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-transfer-an-eosio.token-token.md
+          - Покупка RAM: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-buy-ram.md
+          - Делегирование NET: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-delegate-net-resource.md
+          - Делегирование CPU: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-delegate-CPU-resource.md
+          - Снятие делегирования NET: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-undelegate-NET.md
+          - Снятие делегирования CPU: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-undelegate-CPU.md
+          - Unstake NET: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-unstake-NET.md
+          - Unstake CPU: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-unstake-CPU.md
+          - Стейк ресурса: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-stake-resource.md
+          - Развёртывание контракта: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-deploy-a-smart-contract.md
+          - Голосование: documentation/blockchain/coopos/02_cleos/02_how-to-guides/how-to-vote.md
+        - FAQ: documentation/blockchain/coopos/02_cleos/05_FAQ.md
+        - Справка по командам:
+          - Обзор: documentation/blockchain/coopos/02_cleos/03_command-reference/index.md
+          - version: documentation/blockchain/coopos/02_cleos/03_command-reference/version/index.md
+          - create: documentation/blockchain/coopos/02_cleos/03_command-reference/create/index.md
+          - convert: documentation/blockchain/coopos/02_cleos/03_command-reference/convert/index.md
+          - get: documentation/blockchain/coopos/02_cleos/03_command-reference/get/index.md
+          - set: documentation/blockchain/coopos/02_cleos/03_command-reference/set/index.md
+          - transfer: documentation/blockchain/coopos/02_cleos/03_command-reference/transfer.md
+          - net: documentation/blockchain/coopos/02_cleos/03_command-reference/net/index.md
+          - wallet: documentation/blockchain/coopos/02_cleos/03_command-reference/wallet/index.md
+          - sign: documentation/blockchain/coopos/02_cleos/03_command-reference/sign.md
+          - push: documentation/blockchain/coopos/02_cleos/03_command-reference/push/index.md
+          - multisig: documentation/blockchain/coopos/02_cleos/03_command-reference/multisig/index.md
+          - system: documentation/blockchain/coopos/02_cleos/03_command-reference/system/index.md
+      - keosd:
+        - Обзор: documentation/blockchain/coopos/03_keosd/index.md
+        - Плагины:
+          - Обзор: documentation/blockchain/coopos/03_keosd/15_plugins/index.md
+          - wallet_plugin: documentation/blockchain/coopos/03_keosd/15_plugins/wallet_plugin/index.md
+          - wallet_api_plugin: documentation/blockchain/coopos/03_keosd/15_plugins/wallet_api_plugin/index.md
+      - Утилиты:
+        - Обзор: documentation/blockchain/coopos/10_utilities/index.md
+        - trace_api_util: documentation/blockchain/coopos/10_utilities/trace_api_util.md
+    - Конфигурация:
+      - Обзор: documentation/blockchain/configuration/index.md
+      - Параметры: documentation/blockchain/configuration/parameters.md
+      - Seed-нода: documentation/blockchain/configuration/seed-node.md
+      - Production-нода: documentation/blockchain/configuration/production-node.md
+      - API-нода: documentation/blockchain/configuration/api-node.md
+      - State-нода: documentation/blockchain/configuration/state-node.md
+      - Light-нода: documentation/blockchain/configuration/light-node.md
+    - API:
+      - Producer API: https://docs.coopenomics.world/api/producer
+      - Chain API: https://docs.coopenomics.world/api/chain
+      - Net API: https://docs.coopenomics.world/api/net
+      - Trace API: https://docs.coopenomics.world/api/trace
+      - State History: documentation/blockchain/state-history-ship.md
+      - DB Size API: https://docs.coopenomics.world/api/db_size
+    - Реактивный чтец SHiP: documentation/reactive-ship-reader.md
+    
+    
     # - SDK: https://docs.coopenomics.world/sdk //не относится к coopenomics
-
+  - Библиотека типов: https://docs.coopenomics.world/cooptypes
   - Контракты: https://coopenomics.world/contracts
     # - Введение: documentation/contracts/index.md
     # - Системные контракты: documentation/coopcontracts/system.md
