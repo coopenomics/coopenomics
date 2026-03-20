@@ -20,10 +20,6 @@ jobs:
           cd mono-repo
           git checkout capital
 
-      - name: Clone coopos repository
-        run: |
-          git clone https://github.com/coopenomics/coopos.git coopos-repo
-
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -78,32 +74,45 @@ jobs:
       - name: Generate Chain API documentation
         run: |
           mkdir -p docs/api/chain
-          cd coopos-repo/plugins/chain_api_plugin
-          redocly build-docs chain.swagger.yaml --output ../../../docs/api/chain/index.html
+          redocly build-docs coopos/chain.swagger.yaml --output docs/api/chain/index.html
 
       - name: Generate DB Size API documentation
         run: |
           mkdir -p docs/api/db_size
-          cd coopos-repo/plugins/db_size_api_plugin
-          redocly build-docs db_size.swagger.yaml --output ../../../docs/api/db_size/index.html
+          redocly build-docs coopos/db_size.swagger.yaml --output docs/api/db_size/index.html
 
       - name: Generate Net API documentation
         run: |
           mkdir -p docs/api/net
-          cd coopos-repo/plugins/net_api_plugin
-          redocly build-docs net.swagger.yaml --output ../../../docs/api/net/index.html
+          redocly build-docs coopos/net.swagger.yaml --output docs/api/net/index.html
 
       - name: Generate Trace API documentation
         run: |
           mkdir -p docs/api/trace
-          cd coopos-repo/plugins/trace_api_plugin
-          redocly build-docs trace_api.swagger.yaml --output ../../../docs/api/trace/index.html
+          redocly build-docs coopos/trace_api.swagger.yaml --output docs/api/trace/index.html
 
       - name: Generate Producer API documentation
         run: |
           mkdir -p docs/api/producer
-          cd coopos-repo/plugins/producer_api_plugin
-          redocly build-docs producer.swagger.yaml --output ../../../docs/api/producer/index.html
+          redocly build-docs coopos/producer.swagger.yaml --output docs/api/producer/index.html
+
+      # Redocly вшивает redoc.standalone.js с cdn.redocly.com — из РФ/части сетей CDN таймаутит.
+      # Кладём тот же артефакт рядом со страницами и подменяем src на относительный путь.
+      - name: Self-host Redoc bundle (replace CDN)
+        run: |
+          set -e
+          VER=$(grep -hoE 'cdn\.redocly\.com/redoc/[^/]+' docs/api/*/index.html 2>/dev/null | head -1 | sed 's|.*/||')
+          if [ -z "$VER" ]; then
+            if ls docs/api/*/index.html >/dev/null 2>&1; then
+              echo "ERROR: есть docs/api/*/index.html, но не найден cdn.redocly.com — формат вывода Redocly сменился."
+              exit 1
+            fi
+            exit 0
+          fi
+          curl -fsSL "https://cdn.jsdelivr.net/npm/redoc@${VER}/bundles/redoc.standalone.js" -o docs/api/redoc.standalone.js
+          for f in docs/api/*/index.html; do
+            sed -i 's|https://cdn\.redocly\.com/redoc/[^/]*/bundles/redoc\.standalone\.js|../redoc.standalone.js|g' "$f"
+          done
 
       - name: Copy contracts documentation
         run: |

@@ -20,7 +20,7 @@ theme:
     - navigation.instant.prefetch
     - navigation.expand
     # - toc.follow
-    - toc.integrate
+    # - toc.integrate
     - search.share
     - navigation.top
     - navigation.footer
@@ -134,8 +134,8 @@ nav:
     # - Системные контракты: documentation/coopcontracts/system.md
     # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
     # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
-  - Фабрика документов: 
-    - Введение: documentation/fabric/intro.md
+  # - Фабрика документов: 
+  #   - Введение: documentation/fabric/intro.md
   # - Словарь: vocabulary.md    
     
 
