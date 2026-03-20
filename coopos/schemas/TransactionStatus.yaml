@@ -1,0 +1,60 @@
+type: object
+additionalProperties: false
+minProperties: 8
+required:
+  - state
+  - head_number
+  - head_id
+  - head_timestamp
+  - irreversible_number
+  - irreversible_id
+  - irreversible_timestamp
+  - last_tracked_block_id
+properties:
+  state:
+    description: |
+      Состояние транзакции. Возможные значения:
+      LOCALLY_APPLIED, FORKED_OUT, IN_BLOCK, IRREVERSIBLE, FAILED, UNKNOWN.
+    type: string
+  block_number:
+    description: Номер блока, в который включена транзакция (если применимо).
+    type: integer
+  block_id:
+    description: Идентификатор блока с транзакцией.
+    allOf:
+      - $ref: Sha256.yaml
+  block_timestamp:
+    description: Метка времени блока с транзакцией.
+    allOf:
+      - $ref: DateTime.yaml
+  expiration:
+    description: Время истечения транзакции.
+    allOf:
+      - $ref: DateTimeSeconds.yaml
+  head_number:
+    description: Номер головного блока на момент запроса.
+    type: integer
+  head_id:
+    description: Идентификатор головного блока.
+    allOf:
+      - $ref: Sha256.yaml
+  head_timestamp:
+    description: Метка времени головного блока.
+    allOf:
+      - $ref: DateTime.yaml
+  irreversible_number:
+    description: Номер последнего необратимого блока.
+    type: integer
+  irreversible_id:
+    description: Идентификатор последнего необратимого блока.
+    allOf:
+      - $ref: Sha256.yaml
+  irreversible_timestamp:
+    description: Метка времени последнего необратимого блока.
+    allOf:
+      - $ref: DateTime.yaml
+  last_tracked_block_id:
+    description: Идентификатор последнего отслеживаемого блока для статуса.
+    allOf:
+      - $ref: Sha256.yaml
+title: Статус транзакции

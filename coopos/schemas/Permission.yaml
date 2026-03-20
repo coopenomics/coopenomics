@@ -1,0 +1,17 @@
+type: object
+additionalProperties: false
+required:
+  - perm_name
+  - parent
+  - required_auth
+properties:
+  perm_name:
+    description: Имя разрешения (например active, owner).
+    $ref: Name.yaml
+  parent:
+    description: Родительское разрешение.
+    $ref: Name.yaml
+  required_auth:
+    description: Требуемое полномочие для удовлетворения этого разрешения.
+    $ref: Authority.yaml
+title: Разрешение учётной записи

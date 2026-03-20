@@ -1,0 +1,17 @@
+type: object
+description: Квитанция о включении транзакции в блок.
+properties:
+  status:
+    type: string
+    description: Статус обработки транзакции в блоке.
+  cpu_usage_us:
+    type: integer
+    description: Использование CPU, микросекунды.
+  net_usage_words:
+    type: integer
+    description: Использование сети, в 64-битных словах.
+  trx:
+    description: Упакованная транзакция и связанные поля (формат зависит от версии узла).
+    type: object
+    additionalProperties: true
+title: Квитанция транзакции

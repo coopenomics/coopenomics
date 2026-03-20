@@ -1,0 +1,44 @@
+# Полномочие учётной записи (threshold / keys / accounts / waits).
+type: object
+additionalProperties: false
+required:
+  - threshold
+  - keys
+  - accounts
+  - waits
+properties:
+  threshold:
+    type: integer
+    description: Сумма весов, необходимая для удовлетворения полномочия.
+  keys:
+    type: array
+    description: Список ключей с весами.
+    items:
+      type: object
+      required:
+        - key
+        - weight
+      properties:
+        key:
+          $ref: PublicKey.yaml
+        weight:
+          type: integer
+  accounts:
+    type: array
+    description: Делегированные полномочия других аккаунтов.
+    items:
+      type: object
+      required:
+        - permission
+        - weight
+      properties:
+        permission:
+          $ref: PermissionLevel.yaml
+        weight:
+          type: integer
+  waits:
+    type: array
+    description: Задержки по времени (для мультиподписи со временем ожидания).
+    items:
+      $ref: WaitWeight.yaml
+title: Полномочие (authority)

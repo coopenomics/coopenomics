@@ -1,0 +1,27 @@
+type: object
+description: Трассировка одного действия (формат v0).
+additionalProperties: true
+properties:
+  receipt:
+    type: object
+    description: Квитанция выполнения действия.
+  act:
+    $ref: Action.yaml
+  elapsed:
+    type: integer
+    description: Время выполнения, микросекунды.
+  console:
+    type: string
+    description: Вывод из print контракта.
+  trx_id:
+    $ref: Sha256.yaml
+  block_num:
+    type: integer
+  block_time:
+    type: string
+  producer_block_id:
+    $ref: Sha256.yaml
+  except:
+    type: string
+    description: Сообщение об ошибке, если действие завершилось сбоем.
+title: Трассировка действия v0

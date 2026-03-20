@@ -1,0 +1,4 @@
+description: Полномочия продюсера (подпись блоков); структура совпадает с authority.
+allOf:
+  - $ref: Authority.yaml
+title: Полномочия продюсера

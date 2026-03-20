@@ -1,0 +1,12 @@
+type: object
+description: Сводка выделенных ресурсов.
+properties:
+  owner:
+    $ref: Name.yaml
+  ram_bytes:
+    $ref: WholeNumber.yaml
+  net_weight:
+    $ref: WholeNumber.yaml
+  cpu_weight:
+    $ref: WholeNumber.yaml
+title: Обзор ресурсов

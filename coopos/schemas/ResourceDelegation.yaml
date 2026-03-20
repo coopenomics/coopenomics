@@ -1,0 +1,12 @@
+type: object
+description: Самоделегирование полосы пропускания (NET/CPU).
+properties:
+  from:
+    $ref: Name.yaml
+  to:
+    $ref: Name.yaml
+  net_weight:
+    $ref: WholeNumber.yaml
+  cpu_weight:
+    $ref: WholeNumber.yaml
+title: Делегирование ресурсов

@@ -1,0 +1,13 @@
+type: object
+additionalProperties: false
+required:
+  - wait_sec
+  - weight
+properties:
+  wait_sec:
+    type: integer
+    description: Ожидание в секундах.
+  weight:
+    type: integer
+    description: Вес, применяемый после ожидания.
+title: Вес с задержкой

@@ -1,0 +1,13 @@
+# Уровень разрешения (actor + permission) — как в теле действия.
+type: object
+additionalProperties: false
+required:
+  - actor
+  - permission
+properties:
+  actor:
+    $ref: Name.yaml
+  permission:
+    $ref: Name.yaml
+title: Уровень разрешения
+description: Пара «аккаунт — имя разрешения» для авторизации действия.

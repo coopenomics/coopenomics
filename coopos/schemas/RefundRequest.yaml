@@ -1,0 +1,12 @@
+type: object
+nullable: true
+description: Запрос на возврат делегированных ресурсов (если есть).
+properties:
+  owner:
+    $ref: Name.yaml
+  request_time:
+    $ref: DateTimeSeconds.yaml
+  net_amount:
+    type: string
+    description: Сумма NET к возврату (строка актива).
+title: Запрос возврата

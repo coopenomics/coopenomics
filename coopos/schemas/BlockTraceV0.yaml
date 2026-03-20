@@ -1,0 +1,35 @@
+type: "object"
+additionalProperties: false
+minProperties: 7
+required:
+  - "id"
+  - "number"
+  - "previous_id"
+  - "status"
+  - "timestamp"
+  - "producer"
+  - "transactions"
+properties:
+  id:
+    $ref: "Sha256.yaml"
+  number:
+    description: Высота блока в цепи.
+    type: "integer"
+  previous_id:
+    $ref: "Sha256.yaml"
+  status:
+    description: Состояние блока — ожидает финализации или необратим.
+    type: "string"
+  timestamp:
+    $ref: "DateTimeSeconds.yaml"
+  producer:
+    oneOf:
+      - $ref: "EmptyString.yaml"
+      - $ref: "Name.yaml"
+  transactions:
+    description: Список трассировок транзакций из блока.
+    type: "array"
+    items:
+      $ref: "TransactionTraceV0.yaml"
+title: Трассировка блока (v0)
+

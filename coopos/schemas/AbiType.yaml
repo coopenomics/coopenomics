@@ -1,0 +1,13 @@
+type: object
+additionalProperties: false
+required:
+  - new_type_name
+  - type
+properties:
+  new_type_name:
+    type: string
+    description: Имя нового типа в ABI.
+  type:
+    type: string
+    description: Исходный тип или алиас.
+title: Тип ABI

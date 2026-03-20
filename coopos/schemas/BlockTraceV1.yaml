@@ -1,0 +1,45 @@
+type: "object"
+additionalProperties: false
+minProperties: 10
+required:
+  - "id"
+  - "number"
+  - "previous_id"
+  - "status"
+  - "timestamp"
+  - "producer"
+  - "transaction_mroot"
+  - "action_mroot"
+  - "schedule_version"
+  - "transactions"
+properties:
+  id:
+    $ref: "Sha256.yaml"
+  number:
+    description: Высота блока в цепи.
+    type: "integer"
+  previous_id:
+    $ref: "Sha256.yaml"
+  status:
+    description: Состояние блока — ожидает финализации или необратим.
+    type: "string"
+  timestamp:
+    $ref: "DateTimeSeconds.yaml"
+  producer:
+    oneOf:
+      - $ref: "EmptyString.yaml"
+      - $ref: "Name.yaml"
+  transaction_mroot:
+    $ref: "Sha256.yaml"
+  action_mroot:
+    $ref: "Sha256.yaml"
+  schedule_version:
+    description: Сколько раз расписание продюсеров менялось с генезиса.
+    type: "integer"
+  transactions:
+    description: Список трассировок транзакций из блока.
+    type: "array"
+    items:
+      $ref: "TransactionTraceV1.yaml"
+title: Трассировка блока (v1)
+

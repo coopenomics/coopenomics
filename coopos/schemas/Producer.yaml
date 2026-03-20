@@ -1,0 +1,18 @@
+type: object
+description: Сведения о продюсере блокчейна.
+properties:
+  owner:
+    type: string
+    description: Имя учётной записи продюсера.
+  producer_authority:
+    $ref: ProducerAuthorityList.yaml
+  url:
+    type: string
+    description: URL продюсера (сайт, метаданные).
+  total_votes:
+    type: string
+    description: Суммарный вес голосов за продюсера (строка с большим целым).
+  producer_key:
+    type: string
+    description: Зарегистрированный публичный ключ продюсера.
+title: Продюсер

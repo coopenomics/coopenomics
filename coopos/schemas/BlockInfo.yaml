@@ -1,0 +1,49 @@
+type: object
+additionalProperties: false
+minProperties: 12
+required:
+  - block_num
+  - ref_block_num
+  - id
+  - timestamp
+  - producer
+  - confirmed
+  - previous
+  - transaction_mroot
+  - action_mroot
+  - schedule_version
+  - producer_signature
+  - ref_block_prefix
+properties:
+  block_num:
+    description: Высота блока в цепи.
+    type: integer
+  ref_block_num:
+    description: Младшие 16 бит номера блока (ссылка на блок в транзакции).
+    type: integer
+  id:
+    $ref: Sha256.yaml
+  timestamp:
+    $ref: DateTimeSeconds.yaml
+  producer:
+    oneOf:
+      - $ref: EmptyString.yaml
+      - $ref: Name.yaml
+  confirmed:
+    description: Число предыдущих блоков, подтверждённых продюсером этого блока в текущем расписании.
+    type: integer
+  previous:
+    $ref: Sha256.yaml
+  transaction_mroot:
+    $ref: Sha256.yaml
+  action_mroot:
+    $ref: Sha256.yaml
+  schedule_version:
+    description: Сколько раз расписание продюсеров менялось с генезиса.
+    type: integer
+  producer_signature:
+    $ref: Signature.yaml
+  ref_block_prefix:
+    description: 32-битная часть идентификатора блока.
+    type: integer
+title: Краткие сведения о блоке

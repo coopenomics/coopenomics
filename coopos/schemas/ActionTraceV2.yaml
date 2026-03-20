@@ -1,0 +1,35 @@
+type: object
+description: Трассировка действия (формат v2), расширенные поля.
+additionalProperties: true
+properties:
+  action_ordinal:
+    type: integer
+    description: Порядковый номер действия в транзакции.
+  creator_action_ordinal:
+    type: integer
+  receipt:
+    type: object
+    description: Квитанция выполнения.
+  receiver:
+    type: string
+    description: Получатель действия (имя аккаунта).
+  act:
+    $ref: Action.yaml
+  context_free:
+    type: boolean
+  elapsed:
+    type: integer
+    description: Время выполнения, микросекунды.
+  console:
+    type: string
+  trx_id:
+    $ref: Sha256.yaml
+  block_num:
+    type: integer
+  block_time:
+    type: string
+  producer_block_id:
+    $ref: Sha256.yaml
+  except:
+    type: string
+title: Трассировка действия v2

@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: DB Size API
-  description: Nodeos DB Size API Specification. See developer documentation at https://docs.eosnetwork.com for information on enabling this plugin.
+  title: API размера БД COOPOS
+  description: Спецификация DB Size API узла COOPOS (nodeos). Включение плагина — в документации на https://coopenomics.world.
   version: 1.0.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
   contact:
-    url: https://eosnetwork.com
+    url: https://coopenomics.world
 servers:
   - url: '{protocol}://{host}:{port}/v1/'
     variables:
@@ -25,8 +25,8 @@ components:
 paths:
   /db_size/get:
     post:
-      summary: get
-      description: Retrieves database stats
+      summary: Получить статистику
+      description: Возвращает статистику по размеру и использованию базы данных узла.
       operationId: get
       parameters: []
       requestBody:
@@ -37,12 +37,12 @@ paths:
               properties: {}
       responses:
         '200':
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
-                description: Defines the database stats
+                description: Показатели базы данных
                 properties:
                   free_bytes:
                     type: integer

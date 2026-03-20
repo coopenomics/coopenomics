@@ -1,0 +1,9 @@
+type: object
+description: Корень Меркла для связанных блоков в состоянии заголовка.
+properties:
+  _active_nodes:
+    type: array
+    description: Активные узлы дерева Меркла (hex-строки).
+    items:
+      type: string
+title: Дерево Меркла корней блоков

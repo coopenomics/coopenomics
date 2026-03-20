@@ -1,0 +1,23 @@
+type: object
+description: Сведения об участии учётной записи в голосовании за продюсеров.
+additionalProperties: true
+properties:
+  owner:
+    $ref: Name.yaml
+  proxy:
+    description: Имя прокси голосования; пустое, если голосует самостоятельно.
+    type: string
+  producers:
+    type: array
+    description: Список имён продюсеров, за которых отданы голоса.
+    items:
+      $ref: Name.yaml
+  staked:
+    type: string
+    description: Застейканная сумма (строка).
+  last_vote_weight:
+    type: string
+  is_proxy:
+    type: integer
+    description: 1, если аккаунт является прокси.
+title: Информация голосующего

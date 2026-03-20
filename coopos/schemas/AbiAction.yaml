@@ -1,0 +1,17 @@
+type: object
+additionalProperties: false
+required:
+  - name
+  - type
+  - ricardian_contract
+properties:
+  name:
+    type: string
+    description: Имя действия.
+  type:
+    type: string
+    description: Имя структуры аргументов действия.
+  ricardian_contract:
+    type: string
+    description: Текст Ricardian-контракта (может быть пустым).
+title: Действие в ABI

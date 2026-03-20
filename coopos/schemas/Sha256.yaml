@@ -1,0 +1,4 @@
+type: string
+pattern: "^[0-9A-Fa-f]{64}$"
+description: 64-символьная шестнадцатеричная строка (хеш SHA-256).
+title: Хеш SHA-256

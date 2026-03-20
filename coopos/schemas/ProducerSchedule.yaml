@@ -1,0 +1,17 @@
+type: object
+description: Расписание продюсеров и его версия.
+properties:
+  version:
+    type: integer
+    description: Версия расписания (увеличивается при каждом изменении).
+  producers:
+    type: array
+    description: Список продюсеров.
+    items:
+      type: object
+      properties:
+        producer_name:
+          type: string
+          description: Имя продюсера.
+        authority:
+          $ref: ProducerAuthorityList.yaml

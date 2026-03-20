@@ -1,0 +1,65 @@
+type: object
+additionalProperties: false
+required:
+  - server_version
+  - chain_id
+  - head_block_num
+  - head_block_id
+  - head_block_time
+  - head_block_producer
+  - last_irreversible_block_num
+  - last_irreversible_block_id
+  - virtual_block_cpu_limit
+  - virtual_block_net_limit
+  - block_cpu_limit
+  - block_net_limit
+  - server_version_string
+  - fork_db_head_block_num
+  - fork_db_head_block_id
+properties:
+  server_version:
+    type: string
+    description: Хеш последнего коммита в помеченном релизе узла.
+  chain_id:
+    type: string
+    description: Идентификатор цепи (хеш).
+  head_block_num:
+    type: integer
+    description: Номер головного (последнего) блока в цепи.
+  head_block_id:
+    type: string
+    description: Идентификатор головного блока.
+  head_block_time:
+    type: string
+    description: Метка времени головного блока (Unix).
+  head_block_producer:
+    type: string
+    description: Продюсер, подписавший головной блок.
+  last_irreversible_block_num:
+    type: integer
+    description: Номер последнего необратимо применённого к состоянию блока.
+  last_irreversible_block_id:
+    type: string
+    description: Идентификатор последнего необратимого блока.
+  virtual_block_cpu_limit:
+    type: integer
+    description: Виртуальный лимит CPU после производства блока (порядка 1000× block_cpu_limit).
+  virtual_block_net_limit:
+    type: integer
+    description: Виртуальный лимит NET после производства блока (порядка 1000× block_net_limit).
+  block_cpu_limit:
+    type: integer
+    description: Фактический максимальный лимит CPU на блок.
+  block_net_limit:
+    type: integer
+    description: Фактический максимальный лимит NET на блок.
+  server_version_string:
+    type: string
+    description: Строка версии узла (формат «крупная.средняя.мелкая»; не строгий SEMVER).
+  fork_db_head_block_num:
+    type: integer
+    description: Номер лучшей известной головы в дереве базы форков.
+  fork_db_head_block_id:
+    type: string
+    description: Идентификатор лучшей известной головы в базе форков.
+title: Сведения о цепи и узле

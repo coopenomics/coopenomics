@@ -128,7 +128,16 @@ nav:
     - Протоколы: documentation/blockchain/protocols.md
     - Делегаты и консенсус: documentation/blockchain/witnesses.md 
     - Параметры конфигурации: documentation/blockchain/configuration.md
-    
+
+  - API:
+    - Producer API: https://docs.coopenomics.world/api/producer
+    - Chain API: https://docs.coopenomics.world/api/chain
+    - Net API: https://docs.coopenomics.world/api/net
+    - Trace API: https://docs.coopenomics.world/api/trace
+    - DB Size API: https://docs.coopenomics.world/api/db_size
+    - Cooptypes: https://docs.coopenomics.world/cooptypes
+    # - SDK: https://docs.coopenomics.world/sdk //не относится к coopenomics
+
   - Контракты: https://coopenomics.world/contracts
     # - Введение: documentation/contracts/index.md
     # - Системные контракты: documentation/coopcontracts/system.md

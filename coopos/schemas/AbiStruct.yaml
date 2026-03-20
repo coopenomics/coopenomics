@@ -1,0 +1,29 @@
+type: object
+additionalProperties: false
+required:
+  - name
+  - base
+  - fields
+properties:
+  name:
+    type: string
+    description: Имя структуры.
+  base:
+    type: string
+    description: Базовая структура (может быть пустой строкой).
+  fields:
+    type: array
+    description: Поля структуры.
+    items:
+      type: object
+      required:
+        - name
+        - type
+      properties:
+        name:
+          type: string
+          description: Имя поля.
+        type:
+          type: string
+          description: Тип поля в нотации ABI.
+title: Структура ABI

@@ -1,0 +1,27 @@
+type: object
+additionalProperties: false
+required:
+  - expiration
+  - ref_block_num
+  - ref_block_prefix
+  - max_net_usage_words
+  - max_cpu_usage_ms
+  - delay_sec
+properties:
+  expiration:
+    description: Время, до которого транзакция должна быть подтверждена.
+    $ref: DateTime.yaml
+  ref_block_num:
+    type: integer
+    description: Номер блока отсчёта (uint16-часть ссылки на блок).
+  ref_block_prefix:
+    type: integer
+    description: 32-битный префикс идентификатора блока.
+  max_net_usage_words:
+    $ref: WholeNumber.yaml
+  max_cpu_usage_ms:
+    $ref: WholeNumber.yaml
+  delay_sec:
+    type: integer
+    description: Отложенное выполнение, секунды.
+title: Заголовок транзакции

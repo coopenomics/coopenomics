@@ -1,0 +1,10 @@
+type: object
+description: Лимиты ресурса (NET или CPU) для учётной записи.
+properties:
+  used:
+    $ref: WholeNumber.yaml
+  available:
+    $ref: WholeNumber.yaml
+  max:
+    $ref: WholeNumber.yaml
+title: Лимиты ресурса

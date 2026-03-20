@@ -1,0 +1,23 @@
+type: object
+additionalProperties: false
+required:
+  - account
+  - name
+  - authorization
+  - data
+properties:
+  account:
+    description: Учётная запись контракта, которому принадлежит действие.
+    $ref: Name.yaml
+  name:
+    description: Имя действия (action).
+    $ref: Name.yaml
+  authorization:
+    description: Список уровней разрешения, авторизующих действие.
+    type: array
+    items:
+      $ref: PermissionLevel.yaml
+  data:
+    type: string
+    description: Аргументы действия в шестнадцатеричном виде.
+title: Действие (action)

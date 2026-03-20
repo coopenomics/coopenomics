@@ -1,0 +1,4 @@
+type: string
+description: Криптографическая подпись в Base58 (префикс SIG_ и тип ключа R1/K1/WA).
+pattern: "^SIG_([RK]1|WA)_[1-9A-HJ-NP-Za-km-z]+$"
+title: Подпись

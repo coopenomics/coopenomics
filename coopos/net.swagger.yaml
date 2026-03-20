@@ -1,13 +1,13 @@
 openapi: 3.0.0
 info:
-  title: Net API
-  description: Nodeos Net API Specification. See developer documentation at https://docs.eosnetwork.com for information on enabling this plugin.
+  title: API сети COOPOS
+  description: Спецификация Net API узла COOPOS (nodeos). Включение плагина — в документации на https://coopenomics.world.
   version: 1.0.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
   contact:
-    url: https://eosnetwork.com
+    url: https://coopenomics.world
 servers:
   - url: '{protocol}://{host}:{port}/v1/'
     variables:
@@ -25,8 +25,8 @@ components:
 paths:
   /net/connections:
     post:
-      summary: connections
-      description: Returns an array of all peer connection statuses.
+      summary: Соединения
+      description: Возвращает массив состояний всех пиринговых соединений.
       operationId: connections
       parameters: []
       requestBody:
@@ -37,7 +37,7 @@ paths:
               properties: {}
       responses:
         '200':
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -46,60 +46,60 @@ paths:
                   type: object
                   properties:
                     peer:
-                      description: The IP address or URL of the peer
+                      description: IP-адрес или URL пира
                       type: string
                     connecting:
-                      description: True if the peer is connecting, otherwise false
+                      description: true, если идёт установление соединения; иначе false
                       type: boolean
                     syncing:
-                      description: True if the peer is syncing, otherwise false
+                      description: true, если пир в процессе синхронизации; иначе false
                       type: boolean
                     last_handshake:
-                      description: Structure holding detailed information about the connection
+                      description: Структура с подробностями последнего рукопожатия
                       type: object
                       properties:
                         network_version:
-                          description: Incremental value above a computed base
+                          description: Инкрементальное значение относительно вычисленной базы
                           type: integer
                         chain_id:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                          $ref: 'schemas/Sha256.yaml'
                         node_id:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                          $ref: 'schemas/Sha256.yaml'
                         key:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/PublicKey.yaml'
+                          $ref: 'schemas/PublicKey.yaml'
                         time:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/DateTimeSeconds.yaml'
+                          $ref: 'schemas/DateTimeSeconds.yaml'
                         token:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                          $ref: 'schemas/Sha256.yaml'
                         sig:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml'
+                          $ref: 'schemas/Signature.yaml'
                         p2p_address:
-                          description: IP address or URL of the peer
+                          description: IP-адрес или URL пира
                           type: string
                         last_irreversible_block_num:
-                          description: Last irreversible block number
+                          description: Номер последнего необратимого блока
                           type: integer
                         last_irreversible_block_id:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                          $ref: 'schemas/Sha256.yaml'
                         head_num:
-                          description: Head number
+                          description: Номер головы цепи
                           type: integer
                         head_id:
-                          $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                          $ref: 'schemas/Sha256.yaml'
                         os:
-                          description: Operating system name
+                          description: Название операционной системы
                           type: string
                         agent:
-                          description: Agent name
+                          description: Имя агента (строка идентификации узла)
                           type: string
                         generation:
-                          description: Generation number
+                          description: Номер поколения
                           type: integer
 
   /net/connect:
     post:
-      summary: connect
-      description: Initiate a connection to a specified peer.
+      summary: Подключиться
+      description: Инициирует соединение с указанным пиром.
       operationId: connect
       parameters: []
       requestBody:
@@ -112,20 +112,21 @@ paths:
               properties:
                 endpoint:
                   type: string
-                  description: the endpoint to connect to expressed as either IP address or URL
+                  description: Конечная точка для подключения — IP-адрес или URL
 
       responses:
         '200':
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: string
-                description: '"already connected" or "added connection"'
+                description: '«already connected» или «added connection»'
+
   /net/disconnect:
     post:
-      summary: disconnect
-      description: Initiate disconnection from a specified peer.
+      summary: Отключиться
+      description: Инициирует разрыв соединения с указанным пиром.
       operationId: disconnect
       parameters: []
       requestBody:
@@ -138,20 +139,21 @@ paths:
               properties:
                 endpoint:
                   type: string
-                  description: the endpoint to disconnect from, expressed as either IP address or URL
+                  description: Конечная точка для отключения — IP-адрес или URL
 
       responses:
         '200':
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: string
-                description: '"connection removed" or "no known connection for host"'
+                description: '«connection removed» или «no known connection for host»'
+
   /net/status:
     post:
-      summary: status
-      description: Retrieves the connection status for a specified peer.
+      summary: Статус
+      description: Возвращает состояние соединения с указанным пиром.
       operationId: status
       parameters: []
       requestBody:
@@ -164,63 +166,63 @@ paths:
               properties:
                 endpoint:
                   type: string
-                  description: the endpoint to get the status for, to expressed as either IP address or URL
+                  description: Конечная точка, для которой запрашивается статус — IP-адрес или URL
 
       responses:
         '200':
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   peer:
-                    description: The IP address or URL of the peer
+                    description: IP-адрес или URL пира
                     type: string
                   connecting:
-                    description: True if the peer is connecting, otherwise false
+                    description: true, если идёт установление соединения; иначе false
                     type: boolean
                   syncing:
-                    description: True if the peer is syncing, otherwise false
+                    description: true, если пир в процессе синхронизации; иначе false
                     type: boolean
                   last_handshake:
-                    description: Structure holding detailed information about the connection
+                    description: Структура с подробностями последнего рукопожатия
                     type: object
                     properties:
                       network_version:
-                        description: Incremental value above a computed base
+                        description: Инкрементальное значение относительно вычисленной базы
                         type: integer
                       chain_id:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                        $ref: 'schemas/Sha256.yaml'
                       node_id:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                        $ref: 'schemas/Sha256.yaml'
                       key:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/PublicKey.yaml'
+                        $ref: 'schemas/PublicKey.yaml'
                       time:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/DateTimeSeconds.yaml'
+                        $ref: 'schemas/DateTimeSeconds.yaml'
                       token:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                        $ref: 'schemas/Sha256.yaml'
                       sig:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml'
+                        $ref: 'schemas/Signature.yaml'
                       p2p_address:
-                        description: IP address or URL of the peer
+                        description: IP-адрес или URL пира
                         type: string
                       last_irreversible_block_num:
-                        description: Last irreversible block number
+                        description: Номер последнего необратимого блока
                         type: integer
                       last_irreversible_block_id:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                        $ref: 'schemas/Sha256.yaml'
                       head_num:
-                        description: Head number
+                        description: Номер головы цепи
                         type: integer
                       head_id:
-                        $ref: 'https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml'
+                        $ref: 'schemas/Sha256.yaml'
                       os:
-                        description: Operating system name
+                        description: Название операционной системы
                         type: string
                       agent:
-                        description: Agent name
+                        description: Имя агента
                         type: string
                       generation:
-                        description: Generation number
+                        description: Номер поколения
                         type: integer

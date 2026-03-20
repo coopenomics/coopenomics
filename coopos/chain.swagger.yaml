@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Chain API
-  description: Спецификация Nodeos Chain API. Смотри документацию разработчика на сайте https://coopenomics.world для получения более подробной информации.
+  title: API цепи COOPOS
+  description: Спецификация Chain API узла COOPOS (nodeos, совместимый с EOSIO/Antelope). Подробности — в документации разработчика на https://coopenomics.world.
   version: 1.0.0
   license:
     name: MIT
@@ -25,10 +25,10 @@ components:
 paths:
   /get_account:
     post:
-      description: Returns an object containing various details about a specific account on the blockchain.
+      description: Возвращает объект с подробностями об указанной учётной записи в блокчейне.
       operationId: get_account
       requestBody:
-        description: JSON Object with single member "account_name"
+        description: JSON-объект с единственным полем «account_name»
         content:
           application/json:
             schema:
@@ -37,17 +37,17 @@ paths:
                 - account_name
               properties:
                 account_name:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Account.yaml"
+                $ref: "schemas/Account.yaml"
   /get_block:
     post:
-      description: Returns an object containing various details about a specific block on the blockchain.
+      description: Возвращает объект с подробностями об указанном блоке блокчейна.
       operationId: get_block
       requestBody:
         content:
@@ -59,17 +59,17 @@ paths:
               properties:
                 block_num_or_id:
                   type: string
-                  description: Provide a `block number` or a `block id`
+                  description: Укажите номер блока или идентификатор блока
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Block.yaml"
+                $ref: "schemas/Block.yaml"
   /get_block_info:
     post:
-      description: Similar to `get_block` but returns a fixed-size smaller subset of the block data.
+      description: Аналогично `get_block`, но возвращает фиксированный урезанный набор данных блока меньшего размера.
       operationId: get_block_info
       requestBody:
         content:
@@ -81,30 +81,30 @@ paths:
               properties:
                 block_num:
                   type: integer
-                  description: Provide a `block number`
+                  description: Укажите номер блока
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://eosio.github.io/schemata/v2.1/oas/BlockInfo.yaml"
+                $ref: "schemas/BlockInfo.yaml"
   /get_info:
     post:
-      description: Returns an object containing various details about the blockchain.
+      description: Возвращает объект с общими сведениями о блокчейне.
       operationId: get_info
       security: []
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Info.yaml"
+                $ref: "schemas/Info.yaml"
 
   /push_transaction:
     post:
-      description: This method expects a transaction in JSON format and will attempt to apply it to the blockchain.
+      description: Ожидает транзакцию в формате JSON и пытается применить её к блокчейну.
       operationId: push_transaction
       requestBody:
         content:
@@ -114,29 +114,29 @@ paths:
               properties:
                 signatures:
                   type: array
-                  description: array of signatures required to authorize transaction
+                  description: Массив подписей, необходимых для авторизации транзакции
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml"
+                    $ref: "schemas/Signature.yaml"
                 compression:
                   type: boolean
-                  description: Compression used, usually false
+                  description: Использование сжатия; обычно false
                 packed_context_free_data:
                   type: string
-                  description: JSON to hex
+                  description: JSON в шестнадцатеричном виде
                 packed_trx:
                   type: string
-                  description: Transaction object JSON to hex
+                  description: Объект транзакции (JSON) в шестнадцатеричном виде
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /send_transaction:
     post:
-      description: This method expects a transaction in JSON format and will attempt to apply it to the blockchain.
+      description: Ожидает транзакцию в формате JSON и пытается применить её к блокчейну.
       operationId: send_transaction
       requestBody:
         content:
@@ -146,30 +146,30 @@ paths:
               properties:
                 signatures:
                   type: array
-                  description: array of signatures required to authorize transaction
+                  description: Массив подписей, необходимых для авторизации транзакции
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml"
+                    $ref: "schemas/Signature.yaml"
                 compression:
                   type: boolean
-                  description: Compression used, usually false
+                  description: Использование сжатия; обычно false
                 packed_context_free_data:
                   type: string
-                  description: JSON to hex
+                  description: JSON в шестнадцатеричном виде
                 packed_trx:
                   type: string
-                  description: Transaction object JSON to hex
+                  description: Объект транзакции (JSON) в шестнадцатеричном виде
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /push_transactions:
     post:
-      description: This method expects a transaction in JSON format and will attempt to apply it to the blockchain.
+      description: Ожидает одну или несколько транзакций в формате JSON и пытается применить их к блокчейну.
       operationId: push_transactions
       requestBody:
         content:
@@ -177,18 +177,18 @@ paths:
             schema:
               type: array
               items:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Transaction.yaml"
+                $ref: "schemas/Transaction.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /get_block_header_state:
     post:
-      description: Retrieves the glock header state
+      description: Возвращает состояние заголовка блока.
       operationId: get_block_header_state
       requestBody:
         content:
@@ -200,19 +200,19 @@ paths:
               properties:
                 block_num_or_id:
                   type: string
-                  description: Provide a block_number or a block_id
+                  description: Укажите номер блока или идентификатор блока
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/BlockHeaderState.yaml"
+                $ref: "schemas/BlockHeaderState.yaml"
 
   /get_abi:
     post:
-      description: Retrieves the ABI for a contract based on its account name
+      description: Возвращает ABI контракта по имени учётной записи.
       operationId: get_abi
       requestBody:
         content:
@@ -223,17 +223,17 @@ paths:
                 - account_name
               properties:
                 account_name:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Abi.yaml"
+                $ref: "schemas/Abi.yaml"
   /get_currency_balance:
     post:
-      description: Retrieves the current balance
+      description: Возвращает текущий баланс токена.
       operationId: get_currency_balance
       requestBody:
         content:
@@ -246,25 +246,25 @@ paths:
                 - symbol
               properties:
                 code:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
                 account:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
                 symbol:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Symbol.yaml"
+                  $ref: "schemas/Symbol.yaml"
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Symbol.yaml"
+                  $ref: "schemas/Symbol.yaml"
 
   /get_currency_stats:
     post:
-      description: Retrieves currency stats
+      description: Возвращает статистику по выпуску валюты (токена).
       operationId: get_currency_stats
       requestBody:
         content:
@@ -273,21 +273,21 @@ paths:
               type: object
               properties:
                 code:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
                 symbol:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Symbol.yaml"
+                  $ref: "schemas/Symbol.yaml"
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: "Returns an object with one member labeled as the symbol you requested, the object has three members: supply (Symbol), max_supply (Symbol) and issuer (Name)"
+                description: "Объект с одним ключом — запрошенный символ; внутри поля: supply (Symbol), max_supply (Symbol), issuer (Name)"
 
   /get_required_keys:
     post:
-      description: Returns the required keys needed to sign a transaction.
+      description: Возвращает ключи, необходимые для подписи транзакции.
       operationId: get_required_keys
       requestBody:
         content:
@@ -299,15 +299,15 @@ paths:
                 - available_keys
               properties:
                 transaction:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Transaction.yaml"
+                  $ref: "schemas/Transaction.yaml"
                 available_keys:
                   type: array
-                  description: Provide the available keys
+                  description: Доступные публичные ключи
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/PublicKey.yaml"
+                    $ref: "schemas/PublicKey.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -315,7 +315,7 @@ paths:
 
   /get_producers:
     post:
-      description: Retrieves producers list
+      description: Возвращает список продюсеров блокчейна.
       operationId: get_producers
       requestBody:
         content:
@@ -329,17 +329,17 @@ paths:
               properties:
                 limit:
                   type: string
-                  description: total number of producers to retrieve
+                  description: Сколько продюсеров вернуть
                 lower_bound:
                   type: string
-                  description: In conjunction with limit can be used to paginate through the results. For example, limit=10 and lower_bound=10 would be page 2
+                  description: Вместе с limit задаёт постраничную выборку; например limit=10 и lower_bound=10 — вторая страница
                 json:
                   type: boolean
-                  description: return result in JSON format
+                  description: Вернуть результат в формате JSON
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -350,17 +350,17 @@ paths:
                     type: array
                     nullable: true
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Producer.yaml"
+                      $ref: "schemas/Producer.yaml"
                   total_producer_vote_weight: 
                     type: string
-                    description: The sum of all producer votes.
+                    description: Сумма весов голосов за всех продюсеров.
                   more:
                     type: string
-                    description: If not all producers were returned with the first request, more contains the lower bound to use for the next request.
+                    description: Если не все продюсеры поместились в ответ, здесь нижняя граница для следующего запроса.
 
   /get_raw_code_and_abi:
     post:
-      description: Retrieves raw code and ABI for a contract based on account name
+      description: Возвращает сырой WASM и ABI контракта по имени учётной записи.
       operationId: get_raw_code_and_abi
       requestBody:
         content:
@@ -371,28 +371,28 @@ paths:
                 - account_name
               properties:
                 account_name:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   account_name:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                   wasm:
                     type: string
-                    description: base64 encoded wasm
+                    description: WASM в кодировке base64
                   abi:
                     type: string
-                    description: base64 encoded ABI
+                    description: ABI в кодировке base64
 
   /get_scheduled_transactions:
     post:
-      description: Retrieves scheduled transactions
+      description: Возвращает отложенные (запланированные) транзакции.
       operationId: get_scheduled_transactions
       requestBody:
         content:
@@ -401,16 +401,16 @@ paths:
               type: object
               properties:
                 lower_bound:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/DateTimeSeconds.yaml"
+                  $ref: "schemas/DateTimeSeconds.yaml"
                 limit:
-                  description: The maximum number of transactions to return
+                  description: Максимальное число транзакций в ответе
                   type: integer
                 json:
-                  description: true/false whether the packed transaction is converted to json
+                  description: true — упакованная транзакция преобразуется в JSON
                   type: boolean
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -419,12 +419,12 @@ paths:
                   transactions:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Transaction.yaml"
+                      $ref: "schemas/Transaction.yaml"
 
 
   /get_table_by_scope:
     post:
-      description: Retrieves table scope
+      description: Возвращает области (scopes) таблиц контракта.
       operationId: get_table_by_scope
       requestBody:
         content:
@@ -436,32 +436,32 @@ paths:
               properties:
                 code:
                   type: string
-                  description: "`name` of the contract to return table data for"
+                  description: "Имя (`name`) контракта, для которого нужны данные таблиц"
                 table:
                   type: string
-                  description: Filter results by table
+                  description: Фильтр по имени таблицы
                 lower_bound:
                   type: string
-                  description: Filters results to return the first element that is not less than provided value in set
+                  description: Первый элемент не меньше указанного значения в упорядоченном наборе
                 upper_bound:
                   type: string
-                  description: Filters results to return the first element that is greater than provided value in set
+                  description: Первый элемент строго больше указанного значения в упорядоченном наборе
                 limit:
                   type: integer
-                  description: Limit number of results returned.
+                  description: Ограничение числа записей в ответе.
                   format: int32
                   default: 10
                 reverse:
                   type: boolean
-                  description: Reverse the order of returned results
+                  description: Обратить порядок строк
                   default: false
                 show_payer:
                   type: boolean
-                  description: Show RAM payer
+                  description: Показывать плательщика RAM
                   default: false
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -470,13 +470,13 @@ paths:
                   rows:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/TableScope.yaml"
+                      $ref: "schemas/TableScope.yaml"
                   more:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
 
   /get_table_rows:
     post:
-      description: Returns an object containing rows from the specified table.
+      description: Возвращает строки указанной таблицы состояния контракта.
       operationId: get_table_rows
       requestBody:
         content:
@@ -490,44 +490,44 @@ paths:
               properties:
                 code:
                   type: string
-                  description: The name of the smart contract that controls the provided table
+                  description: Имя смарт-контракта, которому принадлежит таблица
                 table:
                   type: string
-                  description: The name of the table to query
+                  description: Имя таблицы
                 scope:
                   type: string
-                  description: The account to which this data belongs
+                  description: Учётная запись-владелец данных (scope)
                 index_position:
                   type: string
-                  description: Position of the index used, accepted parameters `primary`, `secondary`, `tertiary`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth` , `tenth`
+                  description: Позиция индекса; допустимые значения `primary`, `secondary`, `tertiary`, `fourth`, `fifth`, `sixth`, `seventh`, `eighth`, `ninth`, `tenth`
                 key_type:
                   type: string
-                  description: Type of key specified by index_position (for example - `uint64_t` or `name`)
+                  description: Тип ключа для index_position (например `uint64_t` или `name`)
                 encode_type:
                   type: string
                 lower_bound:
                   type: string
-                  description: Filters results to return the first element that is not less than provided value in set
+                  description: Первый элемент не меньше указанного значения
                 upper_bound:
                   type: string
-                  description: Filters results to return the first element that is greater than provided value in set
+                  description: Первый элемент строго больше указанного значения
                 limit:
                   type: integer
-                  description: Limit number of results returned.
+                  description: Ограничение числа строк в ответе.
                   format: int32
                   default: 10
                 reverse:
                   type: boolean
-                  description: Reverse the order of returned results
+                  description: Обратить порядок строк
                   default: false
                 show_payer:
                   type: boolean
-                  description: Show RAM payer
+                  description: Показывать плательщика RAM
                   default: false
 
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -539,7 +539,7 @@ paths:
 
   /get_code:
     post:
-      description: Returns an object containing the smart contract WASM code.
+      description: Возвращает объект с WASM-кодом смарт-контракта.
       operationId: get_code
       requestBody:
         content:
@@ -551,14 +551,14 @@ paths:
                 - code_as_wasm
               properties:
                 account_name:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
                 code_as_wasm:
                   type: integer
                   default: 1
-                  description: This must be 1 (true)
+                  description: Должно быть 1 (истина)
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -566,19 +566,19 @@ paths:
                 title: GetCodeResponse.yaml
                 properties:
                   name:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                   code_hash:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
                   wast:
                     type: string
                   wasm:
                     type: string
                   abi:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Abi.yaml"
+                    $ref: "schemas/Abi.yaml"
 
   /get_raw_abi:
     post:
-      description: Returns an object containing the smart contract abi.
+      description: Возвращает объект с сырым ABI смарт-контракта.
       operationId: get_raw_abi
       requestBody:
         content:
@@ -589,29 +589,29 @@ paths:
                 - account_name
               properties:
                 account_name:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                  $ref: "schemas/Name.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   account_name:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                   code_hash:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
                   abi_hash:
                     allOf:
-                      - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                      - $ref: "schemas/Sha256.yaml"
                   abi:
                     type: string
 
 
   /get_activated_protocol_features:
     post:
-      description: Retreives the activated protocol features for producer node
+      description: Возвращает активированные на узле продюсера протокольные возможности.
       operationId: get_activated_protocol_features
       requestBody:
         content:
@@ -621,41 +621,41 @@ paths:
               properties:
                  lower_bound:
                    type: integer
-                   description: Lower bound
+                   description: Нижняя граница
                  upper_bound:
                    type: integer
-                   description: Upper bound
+                   description: Верхняя граница
                  limit:
                    type: integer
-                   description: The limit, default is 10
+                   description: Лимит записей; по умолчанию 10
                  search_by_block_num:
                    type: boolean
-                   description: Flag to indicate it is has to search by block number
+                   description: Искать по номеру блока
                  reverse:
                    type: boolean
-                   description: Flag to indicate it has to search in reverse
+                   description: Обратный порядок обхода
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
-                description: Returns activated protocol features
+                description: Активированные протокольные возможности
                 required:
                   - activated_protocol_features
                 properties:
                   activated_protocol_features:
                     type: array
-                    description: Variant type, an array of strings with the activated protocol features
+                    description: Массив идентификаторов активированных протокольных возможностей
                     items:
                       type: string
                   more:
                     type: integer
-                    description: "In case there's more activated protocol features than the input parameter `limit` requested, returns the ordinal of the next activated protocol feature which was not returned, otherwise zero."
+                    description: "Если активированных возможностей больше, чем limit, здесь порядковый номер следующей не вошедшей в ответ; иначе 0."
   /get_accounts_by_authorizers:
     post:
-      description: Given a set of account names and public keys, find all account permission authorities that are, in part or whole, satisfiable
+      description: По набору имён учётных записей и публичных ключей находит разрешения (authorities), которые полностью или частично могут быть удовлетворены этими данными.
       operationId: get_accounts_by_authorizers
       requestBody:
         content:
@@ -665,33 +665,33 @@ paths:
               properties:
                 accounts:
                   type: array
-                  description: List of authorizing accounts and/or actor/permissions
+                  description: Список учётных записей и/или пар actor/permission
                   items:
                     anyOf:
-                      - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
-                      - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Authority.yaml"
+                      - $ref: "schemas/Name.yaml"
+                      - $ref: "schemas/PermissionLevel.yaml"
                 keys:
                   type: array
-                  description: List of authorizing keys
+                  description: Список авторизующих ключей
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/PublicKey.yaml"
+                    $ref: "schemas/PublicKey.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
-                description: Result containing a list of accounts which are authorized, in whole or part, by the provided accounts and keys
+                description: Учётные записи, авторизация которых целиком или частично покрывается переданными аккаунтами и ключами
                 required:
                   - accounts
                 properties:
                   accounts:
                     type: array
-                    description: An array of each account,permission,authorizing-data triplet in the response
+                    description: Массив троек account, permission и данные авторизатора
                     items:
                       type: object
-                      description: the information for a single account,permission,authorizing-data triplet
+                      description: Одна тройка account — permission — авторизующие данные
                       required:
                         - account_name
                         - permission_name
@@ -700,22 +700,22 @@ paths:
                         - threshold
                       properties:
                         account_name:
-                          $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                          $ref: "schemas/Name.yaml"
                         permission_name:
-                          $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                          $ref: "schemas/Name.yaml"
                         authorizer:
                           oneOf:
-                            - $ref: "https://docs.eosnetwork.com/openapi/v2.0/PublicKey.yaml"
-                            - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Authority.yaml"
+                            - $ref: "schemas/PublicKey.yaml"
+                            - $ref: "schemas/Authority.yaml"
                         weight:
                           type: "integer"
-                          description: the weight that this authorizer adds to satisfy the permission
+                          description: Вклад этого авторизатора в удовлетворение разрешения
                         threshold:
                           type: "integer"
-                          description: the sum of weights that must be met or exceeded to satisfy the permission
+                          description: Порог — сумма весов, которую нужно достичь или превысить
   /get_transaction_status:
     post:
-      description: Attempts to get current blockchain state and, if available, transaction information given the transaction id. For query to work, the transaction finality status feature must be enabled by configuring the chain plugin with the config option '--transaction-finality-status-max-storage-size-gb' in nodeos.
+      description: Возвращает состояние цепи и при наличии — информацию о транзакции по её идентификатору. Требуется включённая функция статуса финальности транзакций в плагине chain (параметр nodeos `--transaction-finality-status-max-storage-size-gb`).
       operationId: get_transaction_status
       requestBody:
         content:
@@ -727,18 +727,20 @@ paths:
               properties:
                 id:
                   type: string
-                  description: The transaction ID of the transaction to retrieve the status for. 
+                  description: Идентификатор транзакции для запроса статуса.
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                $ref: "https://docs.eosnetwork.com/openapi/v2.0/TransactionStatus.yaml"
+                $ref: "schemas/TransactionStatus.yaml"
 
   /send_transaction2:
     post:
-      description: Attempts to apply a transaction to the blockchain specified in JSON format. It supports returning the full trace of a failed transaction and automatic nodeos-mediated retry if it is enabled on the node. When transaction retry is enabled on an API node, it will monitor incoming API transactions and ensure they are resubmitted additional times into the P2P network until they expire or are included in a block. Warning, full failure traces are now returned by default instead of exceptions. Be careful to not confuse a returned trace as an indication of speculative execution success. Verify 'receipt' and 'except' fields of the returned trace.
+      description: |
+        Пытается применить транзакцию в формате JSON к блокчейну. Поддерживает полную трассировку неудачной транзакции и повторные попытки через nodeos, если они включены на узле. При включённом повторе API-узел досылает транзакцию в P2P-сеть до истечения срока, включения в блок или необратимости.
+        Внимание: по умолчанию вместо исключений возвращается полная трассировка ошибки. Не путайте наличие трассировки с успешным выполнением — проверяйте поля «receipt» и «except».
       operationId: send_transaction2
       requestBody:
         content:
@@ -748,41 +750,43 @@ paths:
               properties:
                 return_failure_trace:
                   type: boolean
-                  description: If true, then embed transaction exceptions into the returned transaction trace.
+                  description: Если true — исключения транзакции вкладываются в возвращаемую трассировку.
                 retry_trx:
                   type: boolean
-                  description: If true, requests to retry transaction until gets in a block of given height, see retry_trx_num_blocks as well, or it is irreversible or expires.
+                  description: Если true — повторять отправку до блока заданной высоты (см. retry_trx_num_blocks), необратимости или истечения срока.
                 retry_trx_num_blocks:
                   type: integer
-                  description: If retry_trx is true, requests to retry transaction until in a block of given height, or lib if not specified.
+                  description: При retry_trx — повторять до блока с этой высотой; если не задано — до lib.
                 transaction:
                   type: object
                   properties:
                     signatures:
                       type: array
-                      description: array of signatures required to authorize transaction.
+                      description: Массив подписей для авторизации транзакции.
                       items:
-                        $ref: "https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml"
+                        $ref: "schemas/Signature.yaml"
                     compression:
                       type: boolean
-                      description: Compression used, usually false
+                      description: Сжатие; обычно false
                     packed_context_free_data:
                       type: string
-                      description: JSON to hex
+                      description: JSON в hex
                     packed_trx:
                       type: string
-                      description: Transaction object JSON to hex
+                      description: Транзакция (JSON) в hex
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /compute_transaction:
     post:
-      description: Executes specified transaction and creates a transaction trace, including resource usage, and then reverts all state changes but not contribute to the subjective billing for the account. If the transaction has signatures, they are processed, but any failures are ignored. Transactions which fail always include the transaction failure trace. Warning, users with exposed nodes who have enabled the compute_transaction endpoint should implement some throttling to protect from Denial of Service attacks.
+      description: |
+        Выполняет указанную транзакцию, формирует трассировку (включая расход ресурсов), затем откатывает все изменения состояния; субъективный биллинг для аккаунта не увеличивается. Подписи, если есть, обрабатываются, ошибки подписи игнорируются. Неуспешные транзакции всё равно содержат трассировку сбоя.
+        Внимание: на публичных узлах с включённым compute_transaction нужно ограничивать частоту запросов (защита от DoS).
       operationId: compute_transaction
       requestBody:
         content:
@@ -792,29 +796,29 @@ paths:
               properties:
                 signatures:
                   type: array
-                  description: array of signatures required to authorize transaction
+                  description: Массив подписей для авторизации транзакции
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Signature.yaml"
+                    $ref: "schemas/Signature.yaml"
                 compression:
                   type: boolean
-                  description: Compression used, usually false
+                  description: Сжатие; обычно false
                 packed_context_free_data:
                   type: string
-                  description: JSON to hex
+                  description: JSON в hex
                 packed_trx:
                   type: string
-                  description: Transaction object, JSON to hex
+                  description: Объект транзакции, JSON в hex
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /get_code_hash:
     post:
-      description: Retrieves the code hash for a smart contract deployed on the blockchain. Once you have the code hash of a contract, you can compare it with a known or expected value to ensure that the contract code has not been modified or tampered with.
+      description: Возвращает хеш кода смарт-контракта в блокчейне. Его можно сравнить с ожидаемым значением, чтобы убедиться, что код не менялся.
       operationId: get_code_hash
       requestBody:
         content:
@@ -823,68 +827,67 @@ paths:
               type: object
               properties:
                 account_name:
-                  description: The name of the account for which you want to retrieve the code hash. It represents the account that owns the smart contract code.
+                  description: Имя учётной записи владельца кода контракта.
                   type: string
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   account_name:
-                    description: The name of the account where the smart contract was deployed.
+                    description: Учётная запись, на которой развёрнут контракт.
                     type: string
                   code_hash:
                     type: string
-                    description: A string that represents the hash value of the specified account's smart contract code.
+                    description: Хеш WASM-кода контракта указанной учётной записи.
 
   /get_transaction_id:
     post:
-      description: Retrieves the transaction ID (also known as the transaction hash) of a specified transaction on the blockchain.
+      description: Возвращает идентификатор транзакции (хеш транзакции) для переданной транзакции.
       operationId: get_transaction_id
       requestBody:
+        description: Тело запроса — объект транзакции в формате JSON.
         content:
           application/json:
             schema:
-              type: object
-              description: The transaction in JSON format for which the ID should be retrieved.
-              $ref: "https://docs.eosnetwork.com/openapi/v2.0/Transaction.yaml"
+              $ref: "schemas/Transaction.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: string
-                description: The transaction ID.
+                description: Идентификатор транзакции.
 
   /get_producer_schedule:
     post:
-      description: Retrieves the current producer schedule from the blockchain, which includes the list of active producers and their respective rotation schedule.
+      description: Возвращает текущее расписание продюсеров — активный список и порядок ротации.
       operationId: get_producer_schedule
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   active:
-                    description: A JSON object that encapsulates the list of active producers schedule and its version.
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/ProducerSchedule.yaml"                              
+                    description: JSON-объект со списком активных продюсеров и версией расписания.
+                    $ref: "schemas/ProducerSchedule.yaml"                              
                   pending:
-                    description: A JSON object that encapsulates the list of pending producers schedule and its version.
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/ProducerSchedule.yaml"
+                    description: JSON-объект с ожидающим расписанием продюсеров и версией.
+                    $ref: "schemas/ProducerSchedule.yaml"
                   proposed:
-                    description: A JSON object that encapsulates the list of proposed producers schedule and its version.
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/ProducerSchedule.yaml"
+                    description: JSON-объект с предлагаемым расписанием продюсеров и версией.
+                    $ref: "schemas/ProducerSchedule.yaml"
 
   /send_read_only_transaction:
     post:
-      description: Sends a read-only transaction in JSON format to the blockchain. This transaction is not intended for inclusion in the blockchain. When a user sends a transaction, which modifies the blockchain state, the connected node will fail the transaction.
+      description: Отправляет транзакцию только для чтения в формате JSON; она не предназначена для включения в блокчейн. Если транзакция меняет состояние цепи, узел отклонит её.
       operationId: send_read_only_transaction
       requestBody:
         content:
@@ -897,34 +900,34 @@ paths:
                   properties:
                     compression:
                       type: boolean
-                      description: Compression used, usually false
+                      description: Сжатие; обычно false
                     packed_context_free_data:
                       type: string
-                      description: JSON to hex
+                      description: JSON в hex
                     packed_trx:
                       type: string
-                      description: Transaction object JSON to hex
+                      description: Транзакция (JSON) в hex
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое
 
   /push_block:
     post:
-      description: Sends a block to the blockchain.
+      description: Передаёт блок в блокчейн (для специальных сценариев узла).
       operationId: push_block
       requestBody:
         content:
           application/json:
             schema:
-              $ref: "https://docs.eosnetwork.com/openapi/v2.0/Block.yaml"
+              $ref: "schemas/Block.yaml"
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
-                description: Returns Nothing
+                description: Тело ответа пустое

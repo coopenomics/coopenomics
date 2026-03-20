@@ -1,16 +1,16 @@
 openapi: 3.0.0
 info:
-  title: Producer API
-  description: Nodeos Producer API Specification. See developer documentation at https://docs.eosnetwork.com for information on enabling this plugin.
+  title: API продюсера COOPOS
+  description: Спецификация Producer API узла COOPOS (nodeos). Включение плагина — в документации на https://coopenomics.world.
   version: 1.0.0
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
   contact:
-    url: https://antelope.io
+    url: https://coopenomics.world
 tags:
-  - name: Protocol Version 4.0
-    description: The release tag for Leap binaries is also the protocol version
+  - name: Версия протокола 4.0
+    description: Тег релиза бинарников Leap совпадает с версией протокола
 servers:
   - url: "{protocol}://{host}:{port}/v1"
     variables:
@@ -28,82 +28,82 @@ security:
 paths:
   /producer/pause:
     post:
-      summary: pause
-      description: Pause producer node. Takes no arguments and returns no values.
+      summary: Приостановить
+      description: Приостанавливает выпуск блоков узлом-продюсером. Без аргументов; тело ответа не задаётся.
       operationId: pause
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/resume:
     post:
-      summary: resume
-      description: Resume producer node. Takes no arguments and returns no values.
+      summary: Возобновить
+      description: Возобновляет выпуск блоков узлом-продюсером. Без аргументов; тело ответа не задаётся.
       operationId: resume
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/paused:
     post:
-      summary: paused
-      description: Retrieves paused status for producer node. Takes no arguments and returns no values.
+      summary: Статус паузы
+      description: Возвращает, приостановлен ли узел-продюсер. Без аргументов.
       operationId: paused
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             text/plain:
               schema:
-                description: true or false
+                description: Строка «true» или «false»
                 type: string
                 example: false
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_runtime_options:
     post:
-      summary: get_runtime_options
-      description: Retrieves runtime options for producer node.
+      summary: Параметры времени выполнения
+      description: Возвращает текущие параметры времени выполнения узла-продюсера.
       operationId: get_runtime_options
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Runtime_Options"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/update_runtime_options:
     post:
-      summary: update_runtime_options
-      description: Update runtime options for producer node. May post any of the runtime options in combination or alone.
+      summary: Обновить параметры времени выполнения
+      description: Обновляет параметры времени выполнения узла-продюсера. Можно передать любое подмножество полей.
       operationId: update_runtime_options
       requestBody:
         content:
@@ -112,25 +112,25 @@ paths:
               $ref: "#/components/schemas/Runtime_Options"
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_greylist:
     post:
-      summary: get_greylist
-      description: Retrieves the greylist for producer node.
+      summary: Список серой зоны
+      description: Возвращает серый список (greylist) узла-продюсера.
       operationId: get_greylist
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -138,19 +138,19 @@ paths:
                 properties:
                   accounts:
                     type: array
-                    description: Array of account names stored in the greylist
+                    description: Имена учётных записей в сером списке
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      $ref: "schemas/Name.yaml"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/add_greylist_accounts:
     post:
-      summary: add_greylist_accounts
-      description: Adds accounts to greylist for producer node. At least one account is required.
+      summary: Добавить в серый список
+      description: Добавляет учётные записи в серый список узла-продюсера. Нужна хотя бы одна запись.
       operationId: add_greylist_accounts
       requestBody:
         content:
@@ -160,26 +160,26 @@ paths:
               properties:
                 accounts:
                   type: array
-                  description: List of account names to add
+                  description: Имена учётных записей для добавления
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/remove_greylist_accounts:
     post:
-      summary: remove_greylist_accounts
-      description: Removes accounts from greylist for producer node. At least one account is required.
+      summary: Убрать из серого списка
+      description: Удаляет учётные записи из серого списка узла-продюсера. Нужна хотя бы одна запись.
       operationId: remove_greylist_accounts
       requestBody:
         content:
@@ -189,30 +189,30 @@ paths:
               properties:
                 accounts:
                   type: array
-                  description: List of account names to remove
+                  description: Имена учётных записей для удаления
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_whitelist_blacklist:
     post:
-      summary: get_whitelist_blacklist
-      description: Retrieves the whitelist and blacklist for producer node. A JSON object containing whitelist and blacklist information.
+      summary: Белые и чёрные списки
+      description: Возвращает белые и чёрные списки узла-продюсера в виде JSON-объекта.
       operationId: get_whitelist_blacklist
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -221,42 +221,42 @@ paths:
                   actor_whitelist:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      $ref: "schemas/Name.yaml"
                   actor_blacklist:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      $ref: "schemas/Name.yaml"
                   contract_whitelist:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      $ref: "schemas/Name.yaml"
                   contract_blacklist:
                     type: array
                     items:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      $ref: "schemas/Name.yaml"
                   action_blacklist:
                     type: array
                     items:
                       type: array
-                      description: Array of two string values, the account name as the first and action name as the second
+                      description: Два элемента — имя контракта и имя действия
                       items:
                         allOf:
-                          - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
-                          - $ref: "https://docs.eosnetwork.com/openapi/v2.0/CppSignature.yaml"
+                          - $ref: "schemas/Name.yaml"
+                          - $ref: "schemas/CppSignature.yaml"
                   key_blacklist:
                     type: array
                     items:
-                      - $ref: "https://docs.eosnetwork.com/openapi/v2.0/KeyType.yaml"
+                      - $ref: "schemas/KeyType.yaml"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/set_whitelist_blacklist:
     post:
-      summary: set_whitelist_blacklist
-      description: Defines the whitelist and blacklist for a producer node. Takes a JSON object containing whitelist and blacklist information.
+      summary: Задать белые и чёрные списки
+      description: Задаёт белые и чёрные списки узла-продюсера. Тело запроса — JSON с полями списков.
       operationId: set_whitelist_blacklist
       requestBody:
         content:
@@ -267,86 +267,86 @@ paths:
                 actor_whitelist:
                   type: array
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                 actor_blacklist:
                   type: array
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                 contract_whitelist:
                   type: array
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                 contract_blacklist:
                   type: array
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                    $ref: "schemas/Name.yaml"
                 action_blacklist:
                   type: array
                   items:
                     type: array
-                    description: Array of two string values, the account name as the first and action name as the second
+                    description: Два элемента — имя контракта и имя действия
                     items:
                       anyOf:
-                        - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
-                        - $ref: "https://docs.eosnetwork.com/openapi/v2.0/CppSignature.yaml"
+                        - $ref: "schemas/Name.yaml"
+                        - $ref: "schemas/CppSignature.yaml"
                 key_blacklist:
                   type: array
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/KeyType.yaml"
+                    $ref: "schemas/KeyType.yaml"
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/create_snapshot:
     post:
-      summary: create_snapshot
-      description: Creates a snapshot for producer node. Returns error when unable to create a snapshot.
+      summary: Создать снимок
+      description: Создаёт снимок состояния узла-продюсера. При ошибке возвращает ответ с ошибкой.
       operationId: create_snapshot
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
                 properties:
                   head_block_id:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
                   head_block_num:
                     type: integer
-                    description: Highest block number on the chain
+                    description: Номер головного блока цепи
                     example: 5102
                   head_block_time:
                     type: string
-                    description: Highest block unix timestamp
+                    description: Метка времени головного блока (Unix)
                     example: 2020-11-16T00:00:00.000
                   version:
                     type: integer
-                    description: version number
+                    description: Номер версии формата снимка
                     example: 6
                   snapshot_name:
                     type: string
-                    description: The path and file name of the snapshot
+                    description: Путь и имя файла снимка
                     example: /home/me/nodes/node-name/snapshots/snapshot-0000999f99999f9f999f99f99ff9999f999f9fff99ff99ffff9f9f9fff9f9999.bin
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/schedule_snapshot:
     post:
-      summary: schedule_snapshot
-      description: Submits a request to automatically generate snapshots according to a schedule specified with given parameters. If request body is empty, schedules immediate snapshot generation. Returns error when unable to accept schedule.
+      summary: Запланировать снимки
+      description: Запрашивает периодическое создание снимков по заданным параметрам. Пустое тело — немедленное создание снимка. При невозможности принять расписание — ошибка.
       operationId: schedule_snapshot
       requestBody:
         content:
@@ -356,23 +356,23 @@ paths:
               properties:
                 block_spacing:
                   type: integer
-                  description: Generate snapshot every block_spacing blocks
+                  description: Создавать снимок каждые block_spacing блоков
                 start_block_num:
                   type: integer
-                  description: Block number at which schedule starts
+                  description: Номер блока начала расписания
                   example: 5102
                 end_block_num:
                   type: integer
-                  description: Block number at which schedule ends
+                  description: Номер блока окончания расписания
                   example: 15102
                 snapshot_description:
                   type: string
-                  description: Description of the snapshot
+                  description: Описание снимка / задания
                   example: Daily snapshot
 
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -386,36 +386,36 @@ paths:
                 properties:
                   snapshot_request_id:
                     type: integer
-                    description: Unique id identifying current snapshot request
+                    description: Уникальный идентификатор запроса на снимки
                   block_spacing:
                     type: integer
-                    description: Generate snapshot every block_spacing blocks
+                    description: Создавать снимок каждые block_spacing блоков
                   start_block_num:
                     type: integer
-                    description: Block number at which schedule starts
+                    description: Номер блока начала расписания
                     example: 5102
                   end_block_num:
                     type: integer
-                    description: Block number at which schedule ends
+                    description: Номер блока окончания расписания
                     example: 15102
                   snapshot_description:
                     type: string
-                    description: Description of the snapshot
+                    description: Описание снимка / задания
                     example: Daily snapshot
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_snapshot_requests:
     post:
-      summary: get_snapshot_requests
-      description: Returns a list of scheduled snapshots.
+      summary: Список запланированных снимков
+      description: Возвращает список запросов на периодические снимки.
       operationId: get_snapshot_requests
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -423,7 +423,7 @@ paths:
                 properties:
                   snapshot_requests:
                     type: array
-                    description: An array of scheduled snapshot requests
+                    description: Запланированные запросы на снимки
                     items:
                       type: object
                       required:
@@ -436,25 +436,25 @@ paths:
                       properties:
                         snapshot_request_id:
                           type: integer
-                          description: Unique id identifying current snapshot request
+                          description: Уникальный идентификатор запроса на снимки
                         block_spacing:
                           type: integer
-                          description: Generate snapshot every block_spacing blocks
+                          description: Создавать снимок каждые block_spacing блоков
                         start_block_num:
                           type: integer
-                          description: Block number at which schedule starts
+                          description: Номер блока начала расписания
                           example: 5102
                         end_block_num:
                           type: integer
-                          description: Block number at which schedule ends
+                          description: Номер блока окончания расписания
                           example: 15102
                         snapshot_description:
                           type: string
-                          description: Description of the snapshot
+                          description: Описание снимка / задания
                           example: Daily snapshot
                         pending_snapshots:
                           type: array
-                          description: List of pending snapshots
+                          description: Ожидающие снимки
                           items:
                             type: object
                             required:
@@ -465,33 +465,33 @@ paths:
                                 - snapshot_name
                             properties:
                               head_block_id:
-                                $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                                $ref: "schemas/Sha256.yaml"
                               head_block_num:
                                 type: integer
-                                description: Highest block number on the chain
+                                description: Номер головного блока цепи
                                 example: 5102
                               head_block_time:
                                 type: string
-                                description: Highest block unix timestamp
+                                description: Метка времени головного блока (Unix)
                                 example: 2020-11-16T00:00:00.000
                               version:
                                 type: integer
-                                description: version number
+                                description: Номер версии формата снимка
                                 example: 6
                               snapshot_name:
                                 type: string
-                                description: The path and file name of the snapshot
+                                description: Путь и имя файла снимка
                                 example: /home/me/nodes/node-name/snapshots/snapshot-0000999f99999f9f999f99f99ff9999f999f9fff99ff99ffff9f9f9fff9f9999.bin
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/unschedule_snapshot:
     post:
-      summary: unschedule_snapshot
-      description: Removes snapshot request identified by id. Returns error if referenced snapshot request does not exist.
+      summary: Отменить расписание снимков
+      description: Удаляет запрос на снимки по идентификатору. Ошибка, если такого запроса нет.
       operationId: unschedule_snapshot
       requestBody:
         required: true
@@ -502,10 +502,10 @@ paths:
               properties:
                 snapshot_request_id:
                   type: integer
-                  description: snapshot id
+                  description: Идентификатор запроса на снимки
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -519,56 +519,56 @@ paths:
                 properties:
                   snapshot_request_id:
                     type: integer
-                    description: Unique id identifying current snapshot request
+                    description: Уникальный идентификатор запроса на снимки
                   block_spacing:
                     type: integer
-                    description: Generate snapshot every block_spacing blocks
+                    description: Создавать снимок каждые block_spacing блоков
                   start_block_num:
                     type: integer
-                    description: Block number at which schedule starts
+                    description: Номер блока начала расписания
                     example: 5102
                   end_block_num:
                     type: integer
-                    description: Block number at which schedule ends
+                    description: Номер блока окончания расписания
                     example: 15102
                   snapshot_description:
                     type: string
-                    description: Description of the snapshot
+                    description: Описание снимка / задания
                     example: Daily snapshot
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_integrity_hash:
     post:
-      summary: get_integrity_hash
-      description: Retrieves the integrity hash for producer node
+      summary: Хеш целостности
+      description: Возвращает хеш целостности состояния узла-продюсера.
       operationId: get_integrity_hash
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: object
-                description: Defines the integrity hash information details
+                description: Данные хеша целостности
                 properties:
                   head_block_id:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
                   integrity_hash:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/schedule_protocol_feature_activations:
     post:
-      summary: schedule_protocol_feature_activations
-      description: Schedule protocol feature activation for producer node. Note some features may require pre-activation. Will return error for duplicate requests or when feature required pre-activation.
+      summary: Запланировать активацию протокольных возможностей
+      description: Планирует активацию протокольных возможностей на узле-продюсере. Часть возможностей требует предварительной активации. Дубликаты и нарушение порядка предварительной активации дают ошибку.
       operationId: schedule_protocol_feature_activations
       requestBody:
         content:
@@ -578,26 +578,26 @@ paths:
               properties:
                 protocol_features_to_activate:
                   type: array
-                  description: List of protocol features to activate
+                  description: Список протокольных возможностей для активации
                   items:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/OK"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_supported_protocol_features:
     post:
-      summary: get_supported_protocol_features
-      description: Retrieves supported protocol features for producer node. Pass filters in as part of the request body.
+      summary: Поддерживаемые протокольные возможности
+      description: Возвращает поддерживаемые узлом протокольные возможности. Фильтры передаются в теле запроса.
       operationId: get_supported_protocol_features
       requestBody:
         content:
@@ -607,27 +607,27 @@ paths:
               properties:
                 exclude_disabled:
                   type: boolean
-                  description: Exclude disabled protocol features
+                  description: Исключить отключённые возможности
                   example: false
                   default: false
                 exclude_unactivatable:
                   type: boolean
-                  description: Exclude unactivatable protocol features
+                  description: Исключить возможности, которые нельзя активировать
                   default: false
                   example: false
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
                 type: array
-                description: Variant type, an array of strings with the supported protocol features
+                description: Массив объектов с описанием поддерживаемых протокольных возможностей
                 items:
                   type: object
                   properties:
                     feature_digest:
-                      $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                      $ref: "schemas/Sha256.yaml"
                     subjective_restrictions:
                       type: object
                       properties:
@@ -641,11 +641,11 @@ paths:
                           type: string
                           example: "1970-01-01T00:00:00.000"
                         description_digest:
-                          $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                          $ref: "schemas/Sha256.yaml"
                         dependencies:
                           type: array
                           items:
-                            $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                            $ref: "schemas/Sha256.yaml"
                         protocol_feature_type:
                           type: string
                           example: "builtin"
@@ -659,15 +659,15 @@ paths:
                               value:
                                 type: string
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_account_ram_corrections:
     post:
-      summary: get_account_ram_corrections
-      description: Retrieves accounts with ram corrections.
+      summary: Корректировки RAM по аккаунтам
+      description: Возвращает учётные записи с корректировками RAM.
       operationId: get_account_ram_corrections
       requestBody:
         content:
@@ -677,23 +677,23 @@ paths:
               properties:
                 lower_bound:
                   type: integer
-                  description: lowest account key
+                  description: Нижняя граница ключа аккаунта
                 upper_bound:
                   type: integer
-                  description: highest account key
+                  description: Верхняя граница ключа аккаунта
                 limit:
                   type: integer
-                  description: number of rows to scan
+                  description: Число строк для обхода
                   default: 10
                   example: 10
                 reverse:
                   type: boolean
-                  description: direction of search
+                  description: Направление обхода
                   example: false
                   default: false
       responses:
         "201":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -708,17 +708,17 @@ paths:
                   more:
                     type: array
                     items:
-                      - $ref: "https://docs.eosnetwork.com/openapi/v2.0/Name.yaml"
+                      - $ref: "schemas/Name.yaml"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
   /producer/get_unapplied_transactions:
     post:
-      summary: get_unapplied_transactions
-      description: Get Unapplied Transactions.
+      summary: Неприменённые транзакции
+      description: Возвращает транзакции, ожидающие применения (неприменённые).
       operationId: get_unapplied_transactions
       requestBody:
         content:
@@ -728,18 +728,19 @@ paths:
               properties:
                 limit:
                   type: integer
-                  description: limit number of transactions to return
+                  description: Максимальное число транзакций в ответе
                   default: 100
                   example: 100
                 lower_bound:
-                  $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                  $ref: "schemas/Sha256.yaml"
                 time_limit_ms:
                   type: integer
+                  description: Лимит времени ответа (мс); по умолчанию как у http-max-response-time-ms узла
                   default: http-max-response-time-ms
                   example: 10
       responses:
         "200":
-          description: OK
+          description: Успешно
           content:
             application/json:
               schema:
@@ -759,7 +760,7 @@ paths:
                       type: object
                       properties:
                         trx_id:
-                          $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                          $ref: "schemas/Sha256.yaml"
                         expiration:
                           type: string
                           example: "2022-09-17T16:30:16"
@@ -788,9 +789,9 @@ paths:
                           default: 0
                           example: 934
                   more:
-                    $ref: "https://docs.eosnetwork.com/openapi/v2.0/Sha256.yaml"
+                    $ref: "schemas/Sha256.yaml"
         "400":
-          description: client error
+          description: Ошибка клиента
           content:
             application/json:
               schema:
@@ -803,89 +804,89 @@ components:
       properties:
         code:
           type: integer
-          description: http return code
+          description: HTTP-код ответа
           example: 400
         message:
           type: string
-          description: summary of error
+          description: Краткое описание ошибки
           example: Invalid Request
         error:
           type: object
-          description: details on the error
+          description: Подробности ошибки
           properties:
             code:
               type: integer
-              description: internal error code
+              description: Внутренний код ошибки
               example: 3200006
             name:
               type: string
-              description: name of error
+              description: Имя ошибки
               example: invalid_http_request
             what:
               type: string
-              description: prettier version of error name
+              description: Человекочитаемое описание ошибки
               example: invalid http request
             details:
               type: array
-              description: list of additional information for debugging
+              description: Дополнительные сведения для отладки
               items:
                 type: object
                 properties:
                   message:
                     type: string
-                    description: debugging message
+                    description: Сообщение отладки
                     example: Unable to parse valid input from POST body
                   file:
                     type: string
-                    description: file where error was thrown
+                    description: Файл, в котором возникла ошибка
                     example: http_plugin.hpp
                   line_number:
                     type: integer
-                    description: line number in file where error was thrown
+                    description: Номер строки в файле
                     example: 246
                   method:
                     type: string
-                    description: function executed when error occurred
+                    description: Функция, при выполнении которой произошла ошибка
                     example: parse_params
     OK:
       type: object
       properties:
         result:
           type: string
-          description: status
+          description: Статус операции
           example: ok
     Runtime_Options:
       type: object
       properties:
         max_transaction_time:
           type: integer
-          description: Max transaction time
+          description: Максимальное время выполнения транзакции
           example: 100
         max_irreversible_block_age:
           type: integer
-          description: Max irreversible block age
+          description: Максимальный «возраст» необратимого блока
           example: -1
         produce_time_offset_us:
           type: integer
-          description: Time offset
+          description: Смещение времени производства (мкс)
           example: -100000
         last_block_time_offset_us:
           type: integer
-          description: Last block time offset
+          description: Смещение времени последнего блока (мкс)
           example: -200000
         max_scheduled_transaction_time_per_block_ms:
           type: integer
-          description: Max scheduled transaction time per block in ms
+          description: Максимальное время отложенных транзакций на блок (мс)
           example: 100
         subjective_cpu_leeway_us:
           type: integer
-          description: in micro seconds
+          description: Допуск субъективного CPU (мкс)
           example: 10
         incoming_defer_ratio:
           type: string
-          description: Incoming defer ratio, parsed to double
+          description: Доля входящих отложенных транзакций (строка, парсится в double)
           example: "1.00000000000000000"
         greylist_limit:
           type: integer
-          description: limit on number of Names supported by greylist
+          description: Лимит числа имён (Name) в сером списке
           example: 1000

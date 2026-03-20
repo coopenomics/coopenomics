@@ -1,0 +1,29 @@
+type: object
+additionalProperties: false
+required:
+  - name
+  - index_type
+  - key_names
+  - key_types
+  - type
+properties:
+  name:
+    type: string
+    description: Имя таблицы.
+  index_type:
+    type: string
+    description: Тип индекса (например primary).
+  key_names:
+    type: array
+    description: Имена ключей индекса.
+    items:
+      type: string
+  key_types:
+    type: array
+    description: Типы ключей.
+    items:
+      type: string
+  type:
+    type: string
+    description: Имя структуры строки таблицы.
+title: Таблица ABI

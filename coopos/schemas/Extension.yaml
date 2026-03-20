@@ -1,0 +1,13 @@
+type: object
+additionalProperties: false
+required:
+  - type
+  - data
+properties:
+  type:
+    type: integer
+    description: Числовой идентификатор типа расширения.
+  data:
+    type: string
+    description: Данные расширения (часто hex).
+title: Расширение (extension)
