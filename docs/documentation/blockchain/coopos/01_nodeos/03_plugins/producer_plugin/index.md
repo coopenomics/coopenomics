@@ -1,10 +1,12 @@
 
 ## Описание
 
-Плагин `producer_plugin` подключает функции, необходимые узлу для выпуска блоков.
+Плагин `producer_plugin` отвечает за планирование и подпись блоков от имени заданных продюсеров (`--producer-name`), поставку ключей подписи (`--signature-provider`) и субъективные лимиты при упаковке транзакций в блок. Без включённого производства узел только синхронизируется; фактический выпуск блоков включают настройкой и расписанием сети.
 
 !!! note
     Для выпуска блоков нужна дополнительная настройка: [Настройка производящего узла](../../02_usage/02_node-setups/00_producing-node.md).
+
+Пауза/возобновление выпуска и связанные вызовы по HTTP — в [`producer_api_plugin`](../producer_api_plugin/index.md) ([справочник API](https://docs.coopenomics.world/api/producer)).
 
 ## Использование
 
@@ -22,105 +24,69 @@ nodeos ... --plugin eosio::producer_plugin [options]
 Задаются в командной строке `nodeos` и в `config.ini`:
 
 ```console
-Config Options for eosio::producer_plugin:
-  -e [ --enable-stale-production ]      Enable block production, even if the
-                                        chain is stale.
-  -x [ --pause-on-startup ]             Start this node in a state where
-                                        production is paused
-  --max-transaction-time arg (=499)     Setting this value (in milliseconds)
-                                        will restrict the allowed transaction
-                                        execution time to a value potentially
-                                        lower than the on-chain consensus
-                                        max_transaction_cpu_usage value.
+Параметры конфигурации eosio::producer_plugin:
+  -e [ --enable-stale-production ]      выпускать блоки даже если цепь
+                                        «устарела» (stale)
+  -x [ --pause-on-startup ]             старт с приостановленным производством
+  --max-transaction-time arg (=499)     лимит времени выполнения trx в блоке
+                                        (мс), может быть ниже on-chain
+                                        max_transaction_cpu_usage
   --max-irreversible-block-age arg (=-1)
-                                        Limits the maximum age (in seconds) of
-                                        the DPOS Irreversible Block for a chain
-                                        this node will produce blocks on (use
-                                        negative value to indicate unlimited)
-  -p [ --producer-name ] arg            ID of producer controlled by this node
-                                        (e.g. inita; may specify multiple
-                                        times)
+                                        макс. возраст LIB (сек), при котором
+                                        узел ещё производит; отрицательное —
+                                        без ограничения
+  -p [ --producer-name ] arg            имя продюсера, которым подписывает
+                                        узел (можно несколько раз)
   --signature-provider arg (=EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV=KEY:5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3)
-                                        Key=Value pairs in the form
-                                        <public-key>=<provider-spec>
-                                        Where:
-                                           <public-key>    is a string form of
-                                                           a valid EOS public
-                                                           key
-
-                                           <provider-spec> is a string in the
-                                                           form <provider-type>
-                                                           :<data>
-
-                                           <provider-type> is KEY, KEOSD, or SE
-
-                                           KEY:<data>      is a string form of
-                                                           a valid EOS
-                                                           private key which
-                                                           maps to the provided
-                                                           public key
-
-                                           KEOSD:<data>    is the URL where
-                                                           keosd is available
-                                                           and the approptiate
-                                                           wallet(s) are
-                                                           unlocked
-  --greylist-account arg                account that can not access to extended
-                                        CPU/NET virtual resources
-  --greylist-limit arg (=1000)          Limit (between 1 and 1000) on the
-                                        multiple that CPU/NET virtual resources
-                                        can extend during low usage (only
-                                        enforced subjectively; use 1000 to not
-                                        enforce any limit)
-  --produce-block-offset-ms arg (=450)  The minimum time to reserve at the end
-                                        of a production round for blocks to 
-                                        propagate to the next block producer.
+                                        пары публичный_ключ=спецификация
+                                        провайдера подписи
+                                        спецификация: тип:данные
+                                        типы: KEY, KEOSD, SE
+                                        KEY: приватный ключ в строковом виде
+                                        KEOSD: URL keosd, кошельки разблокированы
+                                        SE: тип провайдера подписи (см. справку
+                                        `nodeos` для вашей сборки)
+  --greylist-account arg                аккаунт без расширенных виртуальных
+                                        CPU/NET при низкой загрузке сети
+  --greylist-limit arg (=1000)          множитель расширения CPU/NET (1–1000);
+                                        только субъективно; 1000 — не ограничивать
+  --produce-block-offset-ms arg (=450)  резерв времени (мс) в конце слота для
+                                        распространения блока к следующему
+                                        продюсеру
   --max-block-cpu-usage-threshold-us arg (=5000)
-                                        Threshold of CPU block production to
-                                        consider block full; when within
-                                        threshold of max-block-cpu-usage block
-                                        can be produced immediately
+                                        порог заполнения CPU блока (мкс); при
+                                        близости к лимиту блок можно отдать
+                                        раньше
   --max-block-net-usage-threshold-bytes arg (=1024)
-                                        Threshold of NET block production to
-                                        consider block full; when within
-                                        threshold of max-block-net-usage block
-                                        can be produced immediately
+                                        то же для NET (байты)
   --subjective-cpu-leeway-us arg (=31000)
-                                        Time in microseconds allowed for a
-                                        transaction that starts with
-                                        insufficient CPU quota to complete and
-                                        cover its CPU usage.
+                                        запас (мкс) для trx, стартующих с
+                                        нехваткой CPU по квоте
   --subjective-account-max-failures arg (=3)
-                                        Sets the maximum amount of failures
-                                        that are allowed for a given account
-                                        per block.
+                                        макс. число субъективных отказов trx
+                                        одного аккаунта на блок
   --subjective-account-decay-time-minutes arg (=1440)
-                                        Sets the time to return full subjective
-                                        cpu for accounts
+                                        через сколько минут «восстановить»
+                                        субъективный CPU для аккаунта
   --incoming-transaction-queue-size-mb arg (=1024)
-                                        Maximum size (in MiB) of the incoming
-                                        transaction queue. Exceeding this value
-                                        will subjectively drop transaction with
-                                        resource exhaustion.
+                                        размер очереди входящих trx (МиБ); при
+                                        переполнении — субъективный отброс
   --disable-subjective-account-billing arg
-                                        Account which is excluded from
-                                        subjective CPU billing
+                                        аккаунт без субъективного CPU-биллинга
   --disable-subjective-p2p-billing arg (=1)
-                                        Disable subjective CPU billing for P2P
-                                        transactions
+                                        отключить субъективный CPU-биллинг для
+                                        trx с P2P
   --disable-subjective-api-billing arg (=1)
-                                        Disable subjective CPU billing for API
-                                        transactions
-  --snapshots-dir arg (="snapshots")    the location of the snapshots directory
-                                        (absolute path or relative to
-                                        application data dir)
+                                        то же для trx, пришедших по API
+  --snapshots-dir arg (="snapshots")    каталог снимков состояния (абсолютный
+                                        путь или относительно data-dir)
 ```
 
-## Dependencies
+## Зависимости
 
 * [`chain_plugin`](../chain_plugin/index.md)
 
-### Load Dependency Examples
+### Примеры загрузки зависимостей
 
 ```console
 # config.ini

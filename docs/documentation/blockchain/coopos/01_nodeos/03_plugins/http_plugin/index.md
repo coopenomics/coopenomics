@@ -1,6 +1,6 @@
 ## Описание
 
-Плагин `http_plugin` поддерживается и `nodeos`, и `keosd`. Нужен для любой функциональности RPC API у экземпляра `nodeos` или `keosd`.
+Плагин `http_plugin` поддерживается и `nodeos`, и `keosd`. На `nodeos` он поднимает HTTP (и при настройке — Unix-socket) endpoint, через который работают API-плагины (`chain_api_plugin`, `net_api_plugin` и др.). Сами методы описаны в разделе **API** документации (см. [обзор RPC](../../05_rpc_apis/index.md)).
 
 ## Использование
 
@@ -21,50 +21,43 @@ keosd ... --plugin eosio::http_plugin [options]
 Задаются в командной строке и в `config.ini`:
 
 ```console
-Config Options for eosio::http_plugin:
-  --unix-socket-path arg                The filename (relative to data-dir) to
-                                        create a unix socket for HTTP RPC; set
-                                        blank to disable.
+Параметры конфигурации eosio::http_plugin:
+  --unix-socket-path arg                имя файла Unix-socket для HTTP RPC
+                                        (относительно data-dir); пусто —
+                                        отключить
   --http-server-address arg (=127.0.0.1:8888)
-                                        The local IP and port to listen for
-                                        incoming http connections; set blank to
-                                        disable.
-  --access-control-allow-origin arg     Specify the Access-Control-Allow-Origin
-                                        to be returned on each request
-  --access-control-allow-headers arg    Specify the Access-Control-Allow-Header
-                                        s to be returned on each request
-  --access-control-max-age arg          Specify the Access-Control-Max-Age to
-                                        be returned on each request.
-  --access-control-allow-credentials    Specify if Access-Control-Allow-Credent
-                                        ials: true should be returned on each
-                                        request.
-  --max-body-size arg (=2097152)        The maximum body size in bytes allowed
-                                        for incoming RPC requests
+                                        локальный IP и порт для входящих HTTP;
+                                        пусто — отключить
+  --access-control-allow-origin arg     значение Access-Control-Allow-Origin
+                                        в ответах
+  --access-control-allow-headers arg    значение Access-Control-Allow-Headers
+                                        в ответах
+  --access-control-max-age arg          значение Access-Control-Max-Age в
+                                        ответах
+  --access-control-allow-credentials    возвращать ли Access-Control-Allow-
+                                        Credentials: true в ответах
+  --max-body-size arg (=2097152)        максимальный размер тела запроса RPC
+                                        (байты)
   --http-max-bytes-in-flight-mb arg (=500)
-                                        Maximum size in megabytes http_plugin
-                                        should use for processing http
-                                        requests. -1 for unlimited. 429 error
-                                        response when exceeded.
+                                        лимит памяти (МиБ) на обработку HTTP-
+                                        запросов; -1 без лимита; при превышении
+                                        — ответ 429
   --http-max-in-flight-requests arg (=-1)
-                                        Maximum number of requests http_plugin
-                                        should use for processing http
-                                        requests. 429 error response when
-                                        exceeded.
-  --http-max-response-time-ms arg (=30) Maximum time for processing a request,
-                                        -1 for unlimited
-  --verbose-http-errors                 Append the error log to HTTP responses
-  --http-validate-host arg (=1)         If set to false, then any incoming
-                                        "Host" header is considered valid
-  --http-alias arg                      Additionaly acceptable values for the
-                                        "Host" header of incoming HTTP
-                                        requests, can be specified multiple
-                                        times.  Includes http/s_server_address
-                                        by default.
-  --http-threads arg (=2)               Number of worker threads in http thread
-                                        pool
-  --http-keep-alive arg (=1)            If set to false, do not keep HTTP
-                                        connections alive, even if client
-                                        requests.
+                                        лимит одновременных HTTP-запросов; -1
+                                        без лимита; при превышении — 429
+  --http-max-response-time-ms arg (=30) максимальное время обработки запроса
+                                        (мс); -1 без лимита
+  --verbose-http-errors                 добавлять текст ошибки из лога в HTTP-
+                                        ответы
+  --http-validate-host arg (=1)         при false любой заголовок Host считается
+                                        допустимым
+  --http-alias arg                      дополнительные допустимые значения Host;
+                                        можно задавать несколько раз; по
+                                        умолчанию учитывается http(s)-адрес
+                                        сервера
+  --http-threads arg (=2)               число рабочих потоков пула HTTP
+  --http-keep-alive arg (=1)            при false не держать соединения alive,
+                                        даже если клиент просит
 ```
 
 ## Зависимости

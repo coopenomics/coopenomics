@@ -1,6 +1,6 @@
 ## Описание
 
-Плагин `net_plugin` реализует аутентифицированный P2P-протокол для устойчивой синхронизации узлов.
+Плагин `net_plugin` реализует одноранговый обмен блоками и транзакциями с другими узлами COOPOS/EOSIO: исходящие и входящие соединения, синхронизация цепи, ретрансляция транзакций (если не отключена политикой узла или режимом чтения цепи). Управление соединениями по HTTP — у [`net_api_plugin`](../net_api_plugin/index.md).
 
 ## Использование
 
@@ -19,87 +19,70 @@ nodeos ... --plugin eosio::net_plugin [options]
 Задаются в командной строке `nodeos` и в `config.ini`:
 
 ```console
-Config Options for eosio::net_plugin:
+Параметры конфигурации eosio::net_plugin:
   --p2p-listen-endpoint arg (=0.0.0.0:9876)
-                                        The actual host:port used to listen for
-                                        incoming p2p connections.
-  --p2p-server-address arg              An externally accessible host:port for
-                                        identifying this node. Defaults to
-                                        p2p-listen-endpoint.
-  --p2p-peer-address arg                The public endpoint of a peer node to
-                                        connect to. Use multiple
-                                        p2p-peer-address options as needed to
-                                        compose a network.
-                                          Syntax: host:port[:<trx>|<blk>]
-                                          The optional 'trx' and 'blk'
-                                        indicates to node that only
-                                        transactions 'trx' or blocks 'blk'
-                                        should be sent.  Examples:
+                                        host:port для прослушивания входящих
+                                        P2P-подключений
+  --p2p-server-address arg              внешне видимый host:port узла (для
+                                        идентификации); по умолчанию как
+                                        p2p-listen-endpoint
+  --p2p-peer-address arg                адрес пира для исходящего подключения;
+                                        можно задавать несколько раз.
+                                        Синтаксис: host:port[:trx|blk]
+                                        суффиксы trx/blk — слать только
+                                        транзакции или только блоки.
+                                        Примеры:
                                             p2p.example.org:9876
                                             p2p.trx.example.org:9876:trx
                                             p2p.blk.example.org:9876:blk
 
-  --p2p-max-nodes-per-host arg (=1)     Maximum number of client nodes from any
-                                        single IP address
-  --p2p-accept-transactions arg (=1)    Allow transactions received over p2p
-                                        network to be evaluated and relayed if
-                                        valid.
-  --agent-name arg (=EOS Test Agent)    The name supplied to identify this node
-                                        amongst the peers.
-  --allowed-connection arg (=any)       Can be 'any' or 'producers' or
-                                        'specified' or 'none'. If 'specified',
-                                        peer-key must be specified at least
-                                        once. If only 'producers', peer-key is
-                                        not required. 'producers' and
-                                        'specified' may be combined.
-  --peer-key arg                        Optional public key of peer allowed to
-                                        connect.  May be used multiple times.
-  --peer-private-key arg                Tuple of [PublicKey, WIF private key]
-                                        (may specify multiple times)
-  --max-clients arg (=25)               Maximum number of clients from which
-                                        connections are accepted, use 0 for no
-                                        limit
-  --connection-cleanup-period arg (=30) number of seconds to wait before
-                                        cleaning up dead connections
-  --max-cleanup-time-msec arg (=10)     max connection cleanup time per cleanup
-                                        call in milliseconds
+  --p2p-max-nodes-per-host arg (=1)     макс. число клиентов с одного IP
+  --p2p-accept-transactions arg (=1)    принимать транзакции по P2P, проверять
+                                        и ретранслировать при валидности
+  --agent-name arg (=EOS Test Agent)    имя узла для отображения пирам
+  --allowed-connection arg (=any)       any | producers | specified | none.
+                                        Для specified нужен хотя бы один
+                                        peer-key. Варианты producers и
+                                        specified можно комбинировать.
+  --peer-key arg                        публичный ключ разрешённого пира;
+                                        можно несколько раз
+  --peer-private-key arg                пара [публичный ключ, приватный WIF];
+                                        можно несколько раз
+  --max-clients arg (=25)               макс. число входящих клиентов; 0 — без
+                                        лимита
+  --connection-cleanup-period arg (=30) пауза (сек) перед очисткой «мёртвых»
+                                        соединений
+  --max-cleanup-time-msec arg (=10)     лимит времени (мс) на одну итерацию
+                                        очистки соединений
   --p2p-dedup-cache-expire-time-sec arg (=10)
-                                        Maximum time to track transaction for
-                                        duplicate optimization
-  --net-threads arg (=2)                Number of worker threads in net_plugin
-                                        thread pool
-  --sync-fetch-span arg (=100)          number of blocks to retrieve in a chunk
-                                        from any individual peer during
-                                        synchronization
-  --use-socket-read-watermark arg (=0)  Enable experimental socket read
-                                        watermark optimization
+                                        как долго (сек) хранить id транзакций
+                                        для дедупликации
+  --net-threads arg (=2)                число рабочих потоков пула net_plugin
+  --sync-fetch-span arg (=100)          сколько блоков запрашивать за один раз
+                                        у пира при синхронизации
+  --use-socket-read-watermark arg (=0)  экспериментальная оптимизация чтения
+                                        сокета (watermark)
   --peer-log-format arg (=["${_name}" - ${_cid} ${_ip}:${_port}] )
-                                        The string used to format peers when
-                                        logging messages about them.  Variables
-                                        are escaped with ${<variable name>}.
-                                        Available Variables:
-                                           _name  self-reported name
+                                        шаблон строки для логов о пирах;
+                                        подстановки ${имя_переменной}.
+                                        Переменные:
+                                           _name  имя, сообщённое пиром
 
-                                           _cid   assigned connection id
+                                           _cid   внутренний id соединения
 
-                                           _id    self-reported ID (64 hex
-                                                  characters)
+                                           _id    id пира (64 hex)
 
-                                           _sid   first 8 characters of
-                                                  _peer.id
+                                           _sid   первые 8 символов _peer.id
 
-                                           _ip    remote IP address of peer
+                                           _ip    удалённый IP
 
-                                           _port  remote port number of peer
+                                           _port  удалённый порт
 
-                                           _lip   local IP address connected to
-                                                  peer
+                                           _lip   локальный IP к пиру
 
-                                           _lport local port number connected
-                                                  to peer
+                                           _lport локальный порт к пиру
   --p2p-keepalive-interval-ms arg (=10000)
-                                        peer heartbeat keepalive message
-                                        interval in milliseconds
+                                        интервал keepalive (мс)
 ```
 
 ## Зависимости

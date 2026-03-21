@@ -1,6 +1,10 @@
 ## Описание
 
-Плагин `chain_api_plugin` выставляет возможности [`chain_plugin`](../chain_plugin/index.md) через RPC API, которое обслуживает [`http_plugin`](../http_plugin/index.md).
+Плагин `chain_api_plugin` регистрирует на HTTP-сервере [`http_plugin`](../http_plugin/index.md) набор JSON-RPC методов поверх контроллера цепи из [`chain_plugin`](../chain_plugin/index.md): сведения о цепи и узле, чтение блоков и транзакций, отправка подписанных транзакций, запросы к таблицам состояния и связанные операции.
+
+## Справочник API
+
+Полный перечень методов и параметров: [Chain API](https://docs.coopenomics.world/api/chain).
 
 ## Использование
 

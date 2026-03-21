@@ -9,23 +9,19 @@ content_title: Опции nodeos
 Они нужны в основном для «хозяйственных» задач: каталог данных блокчейна, имя файла конфигурации `nodeos`, путь к конфигурации логирования и т.д. Ниже — фрагмент вывода `nodeos --help` со специфичными для `nodeos` опциями (опции плагинов для ясности опущены):
 
 ```console
-Application Config Options:
-  --plugin arg                          Plugin(s) to enable, may be specified 
-                                        multiple times
+Параметры конфигурации приложения:
+  --plugin arg                          включаемые плагины; можно несколько раз
 
-Application Command Line Options:
-  -h [ --help ]                         Print this help message and exit.
-  -v [ --version ]                      Print version information.
-  --full-version                        Print full version information.
-  --print-default-config                Print default configuration template
-  -d [ --data-dir ] arg                 Directory containing program runtime 
-                                        data
-  --config-dir arg                      Directory containing configuration 
-                                        files such as config.ini
-  -c [ --config ] arg (=config.ini)     Configuration file name relative to 
+Параметры командной строки приложения:
+  -h [ --help ]                         справка и выход
+  -v [ --version ]                      краткая версия
+  --full-version                        полная информация о версии
+  --print-default-config                шаблон конфигурации по умолчанию
+  -d [ --data-dir ] arg                 каталог данных узла (runtime)
+  --config-dir arg                      каталог с config.ini и др.
+  -c [ --config ] arg (=config.ini)     имя файла конфигурации относительно
                                         config-dir
-  -l [ --logconf ] arg (=logging.json)  Logging configuration file name/path 
-                                        for library users
+  -l [ --logconf ] arg (=logging.json)  файл настроек логирования (имя или путь)
 ```
 
 ## Опции плагинов

@@ -3,11 +3,13 @@ content_title: Cleos
 ---
 
 !!! note "Сеть COOPOS"
-    **cleos** — интерфейс командной строки к **nodeos** и **keosd**. Поведение ресурсов и **powerup**: [концепция](../system-resources.md), [примеры cleos](../resources-powerup-ru.md).
+    **cleos** — интерфейс командной строки к **nodeos** и **keosd**. Поведение ресурсов и **powerup**: [концепция](../../system-resources.md), [примеры cleos в руководстве (how-to)](02_how-to-guides/index.md#cleos-howto-powerup).
 
 ## Введение
 
 `cleos` — утилита командной строки для работы с REST API, который предоставляет `nodeos`. Через `cleos` можно разворачивать и проверять смарт-контракты COOPOS.
+
+Теория протокола (аккаунты, подписи, транзакции, слои сети): [концептуальная модель COOPOS](../../system-model.md), [ключи и подписи](../../keys-signatures.md), [сетевые слои и интерфейсы](../../protocols.md). Пошаговые команды: [руководство (how-to)](02_how-to-guides/index.md).
 
 ## Установка
 

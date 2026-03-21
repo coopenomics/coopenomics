@@ -9,8 +9,8 @@ nodeos --help
 ```
 ```console
 ...
-Application Command Line Options:
+Параметры командной строки приложения:
 ...
---config-dir arg                      Directory containing configuration files such as config.ini
--l [ --logconf ] arg (=logging.json)  Logging configuration file name/path for library users
+--config-dir arg                      каталог с config.ini и др.
+-l [ --logconf ] arg (=logging.json)  файл настроек логирования (имя или путь)
 ```

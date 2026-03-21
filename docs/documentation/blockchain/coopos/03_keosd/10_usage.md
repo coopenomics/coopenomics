@@ -35,73 +35,60 @@ keosd --help
 ```
 
 ```console
-Application Options:
+Параметры приложения:
 
-Config Options for eosio::http_plugin:
-  --unix-socket-path arg (=keosd.sock)  The filename (relative to data-dir) to
-                                        create a unix socket for HTTP RPC; set
-                                        blank to disable.
-  --http-server-address arg             The local IP and port to listen for
-                                        incoming http connections; leave blank
-                                        to disable.
-  --access-control-allow-origin arg     Specify the Access-Control-Allow-Origin
-                                        to be returned on each request.
-  --access-control-allow-headers arg    Specify the Access-Control-Allow-Header
-                                        s to be returned on each request.
-  --access-control-max-age arg          Specify the Access-Control-Max-Age to
-                                        be returned on each request.
-  --access-control-allow-credentials    Specify if Access-Control-Allow-Credent
-                                        ials: true should be returned on each
-                                        request.
-  --max-body-size arg (=1048576)        The maximum body size in bytes allowed
-                                        for incoming RPC requests
+Опции конфигурации eosio::http_plugin:
+  --unix-socket-path arg (=keosd.sock)  Имя файла (относительно data-dir) для
+                                        Unix-сокета HTTP RPC; пустое значение —
+                                        отключить.
+  --http-server-address arg             Локальный IP и порт для входящих HTTP;
+                                        пустое значение — отключить.
+  --access-control-allow-origin arg     Значение Access-Control-Allow-Origin в
+                                        ответе на каждый запрос.
+  --access-control-allow-headers arg    Значение Access-Control-Allow-Headers в
+                                        ответе на каждый запрос.
+  --access-control-max-age arg          Значение Access-Control-Max-Age в ответе
+                                        на каждый запрос.
+  --access-control-allow-credentials    Возвращать ли Access-Control-Allow-Credent
+                                        ials: true в ответе на каждый запрос.
+  --max-body-size arg (=1048576)        Максимальный размер тела входящих RPC-
+                                        запросов в байтах.
   --http-max-bytes-in-flight-mb arg (=500)
-                                        Maximum size in megabytes http_plugin
-                                        should use for processing http
-                                        requests. 503 error response when
-                                        exceeded.
-  --verbose-http-errors                 Append the error log to HTTP responses
-  --http-validate-host arg (=1)         If set to false, then any incoming
-                                        "Host" header is considered valid
-  --http-alias arg                      Additionaly acceptable values for the
-                                        "Host" header of incoming HTTP
-                                        requests, can be specified multiple
-                                        times.  Includes http/s_server_address
-                                        by default.
-  --http-threads arg (=2)               Number of worker threads in http thread
-                                        pool
+                                        Лимит памяти (МБ) http_plugin на обработку
+                                        HTTP-запросов; при превышении — ответ 503.
+  --verbose-http-errors                 Добавлять запись об ошибке в тело HTTP-
+                                        ответа.
+  --http-validate-host arg (=1)         Если false, заголовок Host входящих
+                                        запросов считается допустимым всегда.
+  --http-alias arg                      Дополнительные допустимые значения Host
+                                        для входящих HTTP-запросов; можно задать
+                                        несколько раз. По умолчанию включает
+                                        http/s_server_address.
+  --http-threads arg (=2)               Число рабочих потоков в пуле HTTP.
 
-Config Options for eosio::wallet_plugin:
-  --wallet-dir arg (=".")               The path of the wallet files (absolute
-                                        path or relative to application data
-                                        dir)
-  --unlock-timeout arg (=900)           Timeout for unlocked wallet in seconds
-                                        (default 900 (15 minutes)). Wallets
-                                        will automatically lock after specified
-                                        number of seconds of inactivity.
-                                        Activity is defined as any wallet
-                                        command e.g. list-wallets.
+Опции конфигурации eosio::wallet_plugin:
+  --wallet-dir arg (=".")               Каталог файлов кошельков (абсолютный путь
+                                        или относительно каталога данных
+                                        приложения).
+  --unlock-timeout arg (=900)           Таймаут разблокировки кошелька в секундах
+                                        (по умолчанию 900, т.е. 15 минут). Кошелёк
+                                        снова блокируется после указанного числа
+                                        секунд бездействия. Активность — любая
+                                        команда кошелька, например list-wallets.
 
-Application Config Options:
-  --plugin arg                          Plugin(s) to enable, may be specified
-                                        multiple times
+Параметры конфигурации приложения:
+  --plugin arg                          Включаемые плагины; можно указать
+                                        несколько раз.
 
-Application Command Line Options:
-  -h [ --help ]                         Print this help message and exit.
-  -v [ --version ]                      Print version information.
-  --print-default-config                Print default configuration template
-  -d [ --data-dir ] arg                 Directory containing program runtime
-                                        data
-  --config-dir arg                      Directory containing configuration
-                                        files such as config.ini
-  -c [ --config ] arg (=config.ini)     Configuration file name relative to
-                                        config-dir
-  -l [ --logconf ] arg (=logging.json)  Logging configuration file name/path
-                                        for library users
+Параметры командной строки приложения:
+  -h [ --help ]                         Вывести справку и выйти.
+  -v [ --version ]                      Вывести версию.
+  --print-default-config                Вывести шаблон конфигурации по умолчанию.
+  -d [ --data-dir ] arg                 Каталог рабочих данных программы.
+  --config-dir arg                      Каталог с файлами конфигурации
+                                        (например config.ini).
+  -c [ --config ] arg (=config.ini)     Имя файла конфигурации относительно
+                                        config-dir.
+  -l [ --logconf ] arg (=logging.json)  Файл или путь конфигурации логирования
+                                        для пользователей библиотеки.
 ```
-
-</think>
-Исправляю раздел про `unlock-timeout` в `10_usage.md`: в оригинале указано «always lock» — перевожу буквально.
-
-<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>
-StrReplace

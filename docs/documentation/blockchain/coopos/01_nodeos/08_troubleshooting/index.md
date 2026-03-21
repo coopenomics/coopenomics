@@ -11,17 +11,15 @@ content_title: Устранение неполадок nodeos
 При сообщении вроде `St9exception: content of memory does not match data expected by executable` попробуйте запустить `nodeos` с одной из опций (полный список — `nodeos --help`):
 
 ```
-Command Line Options for eosio::chain_plugin:
-    --force-all-checks                    do not skip any checks that can be
-                                          skipped while replaying irreversible
-                                          blocks
-    --replay-blockchain                   clear chain state database and replay
-                                          all blocks
-    --hard-replay-blockchain              clear chain state database, recover as
-                                          many blocks as possible from the block
-                                          log, and then replay those blocks
-    --delete-all-blocks                   clear chain state database and block
-                                          log
+Параметры командной строки для eosio::chain_plugin:
+    --force-all-checks                    не пропускать проверки, которые при
+                                          реплее необратимых блоков можно было
+                                          бы пропустить
+    --replay-blockchain                   очистить состояние цепи и реплеить
+                                          все блоки
+    --hard-replay-blockchain              очистить состояние, восстановить
+                                          блоки из журнала и реплеить
+    --delete-all-blocks                   очистить состояние и журнал блоков
 ```
 
 ### Ошибка «Could not grow database file to requested size.»

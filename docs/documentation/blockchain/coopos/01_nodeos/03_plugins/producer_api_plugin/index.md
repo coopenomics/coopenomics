@@ -1,6 +1,10 @@
 ## Описание
 
-Плагин `producer_api_plugin` выставляет ряд конечных точек [`producer_plugin`](../producer_plugin/index.md) через RPC API под управлением [`http_plugin`](../http_plugin/index.md).
+Плагин `producer_api_plugin` добавляет JSON-RPC-методы для управления режимом продюсера на лету: пауза/возобновление выпуска блоков, запрос состояния паузы, часть служебных вызовов для снимков и протокольных особенностей узла (набор методов зависит от версии узла). Транспорт — тот же HTTP, что настраивает [`http_plugin`](../http_plugin/index.md).
+
+## Справочник API
+
+[Producer API](https://docs.coopenomics.world/api/producer).
 
 ## Использование
 

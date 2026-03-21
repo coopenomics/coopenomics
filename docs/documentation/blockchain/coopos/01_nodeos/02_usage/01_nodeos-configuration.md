@@ -2,11 +2,16 @@
 content_title: Конфигурация nodeos
 ---
 
-Опции плагинов задаются через аргументы CLI или файл `config.ini`. Опции, специфичные для `nodeos`, — только из командной строки. Полный список опций CLI и `config.ini` даёт `nodeos --help`, как показано выше.
+Опции плагинов задаются аргументами CLI или файлом `config.ini`. Опции только для приложения `nodeos` — из командной строки. Полный перечень даёт `nodeos --help` (см. [Опции командной строки](00_nodeos-options.md)).
 
-У каждой опции в `config.ini` есть соответствие в CLI, но не наоборот: часть опций CLI в `config.ini` недоступна. Например, большинство опций плагинов, выполняющих действия при старте, в `config.ini` не задаются — в частности `--delete-state-history` у `state_history_plugin`.
+У каждой опции в `config.ini` обычно есть эквивалент в CLI, но не наоборот: часть опций (одноразовые действия при старте) в `config.ini` не задаётся — например `--delete-state-history` у `state_history_plugin`. Строка `plugin = eosio::chain_api_plugin` в `config.ini` соответствует `--plugin eosio::chain_api_plugin` в CLI.
 
-Например, `--plugin eosio::chain_api_plugin` эквивалентно строке `plugin = eosio::chain_api_plugin` в `config.ini`.
+## Связь с остальной документацией
+
+* **[Справочник параметров (config.ini)](../../00_install/configuration/parameters.md)** — подробные описания отдельных директив (та же страница, что в разделе **Конфигурация** при установке).
+* **[Конфигурация: обзор и роли узла](../../00_install/configuration/index.md)** — seed, production, API, state, light: зачем узел в сети и какие плагины типичны.
+* **[Режим producing / non-producing](02_node-setups/index.md)** — выпускает ли **этот** экземпляр `nodeos` блоки; ортогонально роли «API-нода», «seed» и т.д.
+* **[Плагины nodeos](../03_plugins/index.md)** — опции по каждому плагину и зависимости между ними.
 
 ## Расположение `config.ini`
 

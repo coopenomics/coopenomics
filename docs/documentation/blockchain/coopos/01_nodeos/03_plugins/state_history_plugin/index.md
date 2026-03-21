@@ -1,7 +1,7 @@
 
 ## Описание
 
-Плагин `state_history_plugin` сохраняет исторические данные о состоянии блокчейна. Получает данные от других узлов и кэширует их в файлах. Слушает сокет для подключения приложений и отдаёт данные согласно опциям, заданным при запуске `nodeos`.
+Плагин `state_history_plugin` (State History, SHiP) пишет на диск сериализованную историю цепи (при включённых флагах — трассы действий и/или дельты таблиц состояния) и принимает подключения клиентов по отдельному endpoint (TCP или Unix-socket). Протокол потоковый, не совпадает с HTTP JSON-RPC Chain/Trace API. Общее устройство и интеграция: [State History (SHiP)](../../../../state-history-ship.md).
 
 ## Использование
 
@@ -20,9 +20,9 @@ nodeos ... --plugin eosio::state_history_plugin [operations] [options]
 Только командная строка `nodeos`:
 
 ```console
-Command Line Options for eosio::state_history_plugin:
+Параметры командной строки для eosio::state_history_plugin:
 
-  --delete-state-history                clear state history files
+  --delete-state-history                удалить файлы state history
 ```
 
 ## Опции
@@ -30,25 +30,22 @@ Command Line Options for eosio::state_history_plugin:
 Командная строка `nodeos` и `config.ini`:
 
 ```console
-Config Options for eosio::state_history_plugin:
+Параметры конфигурации eosio::state_history_plugin:
   --state-history-dir arg (="state-history")
-                                        the location of the state-history
-                                        directory (absolute path or relative to
-                                        application data dir)
-  --trace-history                       enable trace history
-  --chain-state-history                 enable chain state history
+                                        каталог state-history (абсолютный путь
+                                        или относительно каталога данных узла)
+  --trace-history                       включить запись трасс (trace history)
+  --chain-state-history                 включить историю состояния цепи
   --state-history-endpoint arg (=127.0.0.1:8080)
-                                        the endpoint upon which to listen for
-                                        incoming connections. Caution: only
-                                        expose this port to your internal
-                                        network.
-  --state-history-unix-socket-path arg  the path (relative to data-dir) to
-                                        create a unix socket upon which to
-                                        listen for incoming connections.
-  --trace-history-debug-mode            enable debug mode for trace history
-  --state-history-log-retain-blocks arg if set, periodically prune the state
-                                        history files to store only configured
-                                        number of most recent blocks
+                                        адрес:порт для входящих подключений
+                                        клиентов SHiP. Внимание: не открывайте
+                                        порт в публичную сеть.
+  --state-history-unix-socket-path arg  путь Unix-socket (относительно
+                                        data-dir) для входящих подключений
+  --trace-history-debug-mode            режим отладки для trace history
+  --state-history-log-retain-blocks arg если задано, периодически обрезать
+                                        файлы state history, оставляя только
+                                        указанное число последних блоков
 ```
 
 ## Практические руководства

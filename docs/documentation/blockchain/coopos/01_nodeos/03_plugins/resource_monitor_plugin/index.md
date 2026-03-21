@@ -5,6 +5,8 @@
 
 `resource_monitor_plugin` всегда загружен.
 
+Детальную занятость базы состояния цепи (chain state) по API смотрите в [`db_size_api_plugin`](../db_size_api_plugin/index.md) — это дополняет, а не заменяет контроль свободного места на томах.
+
 ## Использование
 
 ```console
@@ -22,29 +24,24 @@ nodeos ... --plugin eosio::resource_monitor_plugin [options]
 Задаются в командной строке `nodeos` и в `config.ini`:
 
 ```console
-Config Options for eosio::resource_monitor_plugin:
+Параметры конфигурации eosio::resource_monitor_plugin:
   --resource-monitor-interval-seconds arg (=2)
-                                        Time in seconds between two consecutive
-                                        checks of resource usage. Should be
-                                        between 1 and 300
+                                        интервал между проверками диска (сек);
+                                        допустимо от 1 до 300
   --resource-monitor-space-threshold arg (=90)
-                                        Threshold in terms of percentage of
-                                        used space vs total space. If used
-                                        space is above (threshold - 5%), a
-                                        warning is generated.  Unless
-                                        resource-monitor-not-shutdown-on-thresh
-                                        old-exceeded is enabled, a graceful
-                                        shutdown is initiated if used space is
-                                        above the threshold. The value should
-                                        be between 6 and 99
+                                        порог заполнения тома (% занятого от
+                                        общего объёма). При занятости выше
+                                        (порог − 5%) — предупреждение. Если не
+                                        указан флаг not-shutdown-on-threshold-
+                                        exceeded, при превышении порога узел
+                                        завершается штатно. Значение от 6 до 99
   --resource-monitor-not-shutdown-on-threshold-exceeded
-                                        Used to indicate nodeos will not
-                                        shutdown when threshold is exceeded.
+                                        при превышении порога не завершать
+                                        nodeos, только предупреждать
   --resource-monitor-warning-interval arg (=30)
-                                        Number of resource monitor intervals
-                                        between two consecutive warnings when
-                                        the threshold is hit. Should be between
-                                        1 and 450
+                                        через сколько интервалов монитора
+                                        повторять предупреждение при превышении
+                                        порога; от 1 до 450
 ```
 
 ## Зависимости плагина

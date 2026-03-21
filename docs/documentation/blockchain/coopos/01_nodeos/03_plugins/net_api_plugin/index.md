@@ -1,14 +1,10 @@
 ## Описание
-Плагин `net_api_plugin` выставляет функции `net_plugin` через RPC API, которое ведёт `http_plugin`. Операторы узла могут управлять P2P-соединениями активного узла.
 
-У `net_api_plugin` четыре конечные точки RPC API:
+Плагин `net_api_plugin` регистрирует на HTTP-сервере [`http_plugin`](../http_plugin/index.md) JSON-RPC-методы для управления P2P-слоем [`net_plugin`](../net_plugin/index.md): подключение и отключение пиров, список соединений, статус сети.
 
-* connect
-* disconnect
-* connections
-* status
+## Справочник API
 
-См. [документацию Net API](https://docs.eosnetwork.com/coopos-plugins/latest/net.api/).
+[Net API](https://docs.coopenomics.world/api/net).
 
 !!! warning "Осторожно"
     Плагин открывает управление P2P-соединениями. Не рекомендуется включать его на публично доступном узле — возможна эксплуатация.
