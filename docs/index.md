@@ -25,4 +25,4 @@
 2. **[Блокчейн](documentation/blockchain/intro.md)** — устройство цепи COOPOS, узлы, транзакции, программы узла.
 3. **[Библиотека типов](https://docs.coopenomics.world/cooptypes)** и **[Кооперативные контракты](https://coopenomics.world/contracts)** — вне этого сайта; контракты задают экономику и прикладную логику на цепи.
 
-**CDT** (Contract Development Toolkit) и прочие инструменты сборки контрактов **появятся отдельным разделом** в оглавлении, когда материалы будут готовы; сейчас см. кратко [Программы (инструменты COOPOS)](documentation/blockchain/programs.md) в разделе блокчейна.
+**Инструменты разработчика (CDT)** — см. раздел **[Инструменты разработчика (CDT)](documentation/cdt/index.md)** в оглавлении; обзорный контекст узла и утилит — в [Программы (инструменты COOPOS)](documentation/blockchain/programs.md).

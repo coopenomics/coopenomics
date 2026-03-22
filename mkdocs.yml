@@ -223,8 +223,21 @@ nav:
     
     
     # - SDK: https://docs.coopenomics.world/sdk //не относится к coopenomics
-  - Кооперативные Контракты: https://coopenomics.world/contracts
-  - Библиотека типов: https://docs.coopenomics.world/cooptypes
+  - Инструменты разработчика (CDT):
+    - Введение: documentation/cdt/index.md
+    - Установка: documentation/cdt/installation.md
+    - Справочник команд компилятора: documentation/cdt/command-reference.md
+    - Сборка контрактов: documentation/cdt/building.md
+    - Таблицы состояния: documentation/cdt/tables.md
+    - Действия и авторизация: documentation/cdt/actions.md
+    - ABI контракта: documentation/cdt/abi.md
+    - Обновление схемы данных: documentation/cdt/schema-upgrades.md
+    - Рекомендации: documentation/cdt/best-practices.md
+    - Отладка и неполадки: documentation/cdt/debug-and-troubleshooting.md
+    - Практические руководства: documentation/cdt/how-to-guides.md
+    - Документация: /cdt
+  - Кооперативные Контракты: /contracts
+  - Библиотека типов: /cooptypes
   
     # - Введение: documentation/contracts/index.md
     # - Системные контракты: documentation/coopcontracts/system.md
