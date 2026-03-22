@@ -236,6 +236,14 @@ nav:
     - Отладка и неполадки: documentation/cdt/debug-and-troubleshooting.md
     - Практические руководства: documentation/cdt/how-to-guides.md
     - Документация: /cdt
+  
+  - Фабрика документов: 
+    - Введение: documentation/fabric/intro.md
+    - Архитектура и принципы: documentation/fabric/architecture.md
+    - API и использование: documentation/fabric/usage.md
+    - Шаблоны: documentation/fabric/templates.md
+    - Реестр документов: documentation/fabric/registry.md
+      
   - Кооперативные Контракты: /contracts
   - Библиотека типов: /cooptypes
   
@@ -243,8 +251,7 @@ nav:
     # - Системные контракты: documentation/coopcontracts/system.md
     # - Кооперативные контракты: documentation/coopcontracts/coopcontracts.md
     # - Контракт "Капитализация": documentation/coopcontracts/capital/index.md
-  # - Фабрика документов: 
-  #   - Введение: documentation/fabric/intro.md
+  
   # - Словарь: vocabulary.md    
     
 
