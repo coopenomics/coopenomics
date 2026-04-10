@@ -19,7 +19,7 @@ var searchData=
   ['declinepay_2ecpp_16',['declinepay.cpp',['../declinepay_8cpp.html',1,'']]],
   ['declinepgprp_2ecpp_17',['declinepgprp.cpp',['../declinepgprp_8cpp.html',1,'']]],
   ['declinepjprp_2ecpp_18',['declinepjprp.cpp',['../declinepjprp_8cpp.html',1,'']]],
-  ['declinereg_2ecpp_19',['declinereg.cpp',['../capital_2app_2participation__management_2register__contributor_2declinereg_8cpp.html',1,'(Глобальное пространство имён)'],['../registrator_2src_2user_2declinereg_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['declinereg_2ecpp_19',['declinereg.cpp',['../registrator_2src_2user_2declinereg_8cpp.html',1,'(Глобальное пространство имён)'],['../capital_2app_2participation__management_2register__contributor_2declinereg_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['declinewthd_2ecpp_20',['declinewthd.cpp',['../declinewthd_8cpp.html',1,'']]],
   ['declmeet_2ecpp_21',['declmeet.cpp',['../declmeet_8cpp.html',1,'']]],
   ['declpinv_2ecpp_22',['declpinv.cpp',['../declpinv_8cpp.html',1,'']]],
