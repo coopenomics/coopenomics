@@ -15,7 +15,7 @@ var searchData=
   ['capital_2doverview_2edox_12',['capital-overview.dox',['../capital-overview_8dox.html',1,'']]],
   ['capital_2ecpp_13',['capital.cpp',['../capital_8cpp.html',1,'']]],
   ['capital_2ehpp_14',['capital.hpp',['../capital_8hpp.html',1,'']]],
-  ['change_2ecpp_15',['change.cpp',['../soviet_2src_2marketplace_2change_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2change_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['change_2ecpp_15',['change.cpp',['../marketplace_2src_2change_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2marketplace_2change_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['changekey_2ecpp_16',['changekey.cpp',['../changekey_8cpp.html',1,'']]],
   ['changes_2ehpp_17',['changes.hpp',['../changes_8hpp.html',1,'']]],
   ['closeproject_2ecpp_18',['closeproject.cpp',['../closeproject_8cpp.html',1,'']]],
@@ -23,7 +23,7 @@ var searchData=
   ['commit_2dcreation_2dprocess_2edox_20',['commit-creation-process.dox',['../commit-creation-process_8dox.html',1,'']]],
   ['commits_2ehpp_21',['commits.hpp',['../commits_8hpp.html',1,'']]],
   ['common_2ehpp_22',['common.hpp',['../common_8hpp.html',1,'']]],
-  ['complete_2ecpp_23',['complete.cpp',['../marketplace_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2deliver__on__offer_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger_2src_2writeoff_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../fund_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['complete_2ecpp_23',['complete.cpp',['../marketplace_2src_2deliver__on__offer_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../marketplace_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger_2src_2writeoff_2complete_8cpp.html',1,'(Глобальное пространство имён)'],['../fund_2src_2complete_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['completedpst_2ecpp_24',['completedpst.cpp',['../completedpst_8cpp.html',1,'']]],
   ['completewthd_2ecpp_25',['completewthd.cpp',['../completewthd_8cpp.html',1,'']]],
   ['configuration_2dprocess_2edox_26',['configuration-process.dox',['../configuration-process_8dox.html',1,'']]],
@@ -42,7 +42,7 @@ var searchData=
   ['coopenomics_5ftester_2ehpp_39',['coopenomics_tester.hpp',['../coopenomics__tester_8hpp.html',1,'']]],
   ['coops_2ehpp_40',['coops.hpp',['../coops_8hpp.html',1,'']]],
   ['coordinator_5fshare_2ecpp_41',['coordinator_share.cpp',['../coordinator__share_8cpp.html',1,'']]],
-  ['counts_2ehpp_42',['counts.hpp',['../capital_2domain_2entities_2counts_8hpp.html',1,'(Глобальное пространство имён)'],['../lib_2counts_8hpp.html',1,'(Глобальное пространство имён)']]],
+  ['counts_2ehpp_42',['counts.hpp',['../lib_2counts_8hpp.html',1,'(Глобальное пространство имён)'],['../capital_2domain_2entities_2counts_8hpp.html',1,'(Глобальное пространство имён)']]],
   ['creaddress_2ecpp_43',['creaddress.cpp',['../creaddress_8cpp.html',1,'']]],
   ['create_2ddebt_2edox_44',['create-debt.dox',['../create-debt_8dox.html',1,'']]],
   ['create_2dexpense_2ddocs_2edox_45',['create-expense-docs.dox',['../create-expense-docs_8dox.html',1,'']]],
@@ -79,5 +79,5 @@ var searchData=
   ['creator_5fcrps_2ecpp_76',['creator_crps.cpp',['../creator__crps_8cpp.html',1,'']]],
   ['crps_2dalgorithm_2edox_77',['crps-algorithm.dox',['../crps-algorithm_8dox.html',1,'']]],
   ['crps_2ecpp_78',['crps.cpp',['../crps_8cpp.html',1,'']]],
-  ['crps_2ehpp_79',['crps.hpp',['../core_2crps_2crps_8hpp.html',1,'(Глобальное пространство имён)'],['../entities_2crps_8hpp.html',1,'(Глобальное пространство имён)']]]
+  ['crps_2ehpp_79',['crps.hpp',['../entities_2crps_8hpp.html',1,'(Глобальное пространство имён)'],['../core_2crps_2crps_8hpp.html',1,'(Глобальное пространство имён)']]]
 ];
