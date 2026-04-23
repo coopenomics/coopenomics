@@ -116,7 +116,6 @@ nav:
     # - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
 
   - Введение: index.md
-  - Реестр стандартов: https://docs.coopenomics.world/standards/
   - Обзор: documentation/overview.md
   # - Карта пайщика: documentation/cardcoop.md 
   - Блокчейн:
@@ -237,8 +236,8 @@ nav:
     - Отладка и неполадки: documentation/cdt/debug-and-troubleshooting.md
     - Практические руководства: documentation/cdt/how-to-guides.md
     - Документация: /cdt
-  
-  - Фабрика документов: 
+
+  - Фабрика документов:
     - Введение: documentation/fabric/intro.md
     - Архитектура и принципы: documentation/fabric/architecture.md
     - API и использование: documentation/fabric/usage.md
@@ -247,6 +246,7 @@ nav:
       
   - Кооперативные Контракты: /contracts
   - Библиотека типов: /cooptypes
+  - Реестр стандартов: /standards
   
     # - Введение: documentation/contracts/index.md
     # - Системные контракты: documentation/coopcontracts/system.md
