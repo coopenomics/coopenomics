@@ -7,6 +7,7 @@ var dir_df511e5bd85cec96854b39d5e1c27aa8 =
     [ "fund", "dir_cd3f38e1da40ad08992564e856c41315.html", "dir_cd3f38e1da40ad08992564e856c41315" ],
     [ "gateway", "dir_f39aeb94413f089077e2a563fef8691f.html", "dir_f39aeb94413f089077e2a563fef8691f" ],
     [ "ledger", "dir_dad98a9b8bfa7288b72574e35ed095e9.html", "dir_dad98a9b8bfa7288b72574e35ed095e9" ],
+    [ "ledger2", "dir_9d7e27a68bd6ed194dd88cd529c5a94e.html", "dir_9d7e27a68bd6ed194dd88cd529c5a94e" ],
     [ "lib", "dir_7a58a101592a95cebbfd07e6a75340e1.html", "dir_7a58a101592a95cebbfd07e6a75340e1" ],
     [ "loan", "dir_80b28085abc02304ccf8cc508dd5da39.html", "dir_80b28085abc02304ccf8cc508dd5da39" ],
     [ "marketplace", "dir_cc1f44b07d08e8372dd9f015facef6df.html", "dir_cc1f44b07d08e8372dd9f015facef6df" ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['segments_5findex_0',['segments_index',['../namespace_marketplace.html#a80d9e20aefd9d6e1235780f20dc6fd9f',1,'Marketplace::segments_index()'],['../namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1',1,'Capital::Segments::segments_index()']]],
+  ['segments_5findex_0',['segments_index',['../namespace_marketplace.html#ab99116b9ed5e77de3459741bd330d042',1,'Marketplace::segments_index()'],['../namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1',1,'Capital::Segments::segments_index()']]],
   ['setabi_5faction_1',['setabi_action',['../classeosioboot_1_1boot.html#af978a97907d8980d80a6db9a43de8790',1,'eosioboot::boot::setabi_action()'],['../classeosiosystem_1_1native.html#a5db33d8b5c93fb9b60f6216d62077802',1,'eosiosystem::native::setabi_action()'],['../classeosiobios_1_1bios.html#adec46384d14a191009d1821aea836c2e',1,'eosiobios::bios::setabi_action()']]],
   ['setacctcpu_5faction_2',['setacctcpu_action',['../classeosiosystem_1_1system__contract.html#a7a538179a1332d7f139e881cff0c04cc',1,'eosiosystem::system_contract']]],
   ['setacctnet_5faction_3',['setacctnet_action',['../classeosiosystem_1_1system__contract.html#add114cf85734d0c85edacb0eb7167883',1,'eosiosystem::system_contract']]],
@@ -12,9 +12,9 @@ var searchData=
   ['setprods_5faction_9',['setprods_action',['../classeosiobios_1_1bios.html#a6366d6a56bedac0269d795e5e1b52163',1,'eosiobios::bios']]],
   ['setram_5faction_10',['setram_action',['../classeosiosystem_1_1system__contract.html#a4caad060672784b32a36a2d634a5f3b3',1,'eosiosystem::system_contract']]],
   ['setramrate_5faction_11',['setramrate_action',['../classeosiosystem_1_1system__contract.html#aad4ad84241c38c3541a0438fbca0cc9b',1,'eosiosystem::system_contract']]],
-  ['settledebt_5finterface_12',['settledebt_interface',['../shared__loan_8hpp.html#a55ff17234028c6467f1c0906de3d6436',1,'shared_loan.hpp']]],
-  ['shipments_5findex_13',['shipments_index',['../namespace_marketplace.html#a82529b4763af9d80f01135a8fa44f592',1,'Marketplace']]],
-  ['staff_5findex_14',['staff_index',['../coops_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d',1,'coops.hpp']]],
+  ['settledebt_5finterface_12',['settledebt_interface',['../lib_2core_2loan_2loan_8hpp.html#a55ff17234028c6467f1c0906de3d6436',1,'loan.hpp']]],
+  ['shipments_5findex_13',['shipments_index',['../namespace_marketplace.html#a1cc8355ba4e8ece81c220689c22b58b2',1,'Marketplace']]],
+  ['staff_5findex_14',['staff_index',['../table__soviet__staff_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d',1,'table_soviet_staff.hpp']]],
   ['stats_15',['stats',['../classeosio_1_1token.html#ab30a2faa46a28a61ddfbe4241c550193',1,'eosio::token']]],
   ['summaries_5findex_16',['summaries_index',['../namespace_loan.html#a2b80e846ed42caa9e8e59d7f2a3f790d',1,'Loan']]]
 ];

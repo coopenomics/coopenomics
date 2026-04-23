@@ -155,107 +155,114 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <tr class="memitem:a6d32f88a10efefdda09553373ac6a70d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1project.html">project</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a6d32f88a10efefdda09553373ac6a70d">get_project_or_fail</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
 <tr class="memdesc:a6d32f88a10efefdda09553373ac6a70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает проект по хэшу, если проект не найден, выбрасывает исключение  <a href="namespace_capital_1_1_projects.html#a6d32f88a10efefdda09553373ac6a70d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6d32f88a10efefdda09553373ac6a70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a37cf28b1762ad277ed14c51bed36b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1project.html">project</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a85a37cf28b1762ad277ed14c51bed36b">get_project_by_id_or_fail</a> (eosio::name coopname, const uint64_t project_id)</td></tr>
+<tr class="memdesc:a85a37cf28b1762ad277ed14c51bed36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает проект по id.  <a href="namespace_capital_1_1_projects.html#a85a37cf28b1762ad277ed14c51bed36b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a85a37cf28b1762ad277ed14c51bed36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0701c7f085b886cee3ab4d01a1764af9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a0701c7f085b886cee3ab4d01a1764af9">has_component_projects</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
+<tr class="memdesc:a0701c7f085b886cee3ab4d01a1764af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Есть ли у проекта дочерние проекты-компоненты (их parent_hash совпадает с хэшем родителя)  <a href="namespace_capital_1_1_projects.html#a0701c7f085b886cee3ab4d01a1764af9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0701c7f085b886cee3ab4d01a1764af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad41b6f24a338f8470b2a64873efff014"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad41b6f24a338f8470b2a64873efff014">validate_parent_hash</a> (eosio::name coopname, const checksum256 &amp;parent_hash)</td></tr>
 <tr class="memdesc:ad41b6f24a338f8470b2a64873efff014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет валидность parent_hash согласно правилам проектов  <a href="namespace_capital_1_1_projects.html#ad41b6f24a338f8470b2a64873efff014">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad41b6f24a338f8470b2a64873efff014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83fa826a0da413a3561ea2420a09e79f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a83fa826a0da413a3561ea2420a09e79f">create_project</a> (eosio::name coopname, const checksum256 &amp;project_hash, const checksum256 &amp;parent_hash, const std::string &amp;title, const std::string &amp;description, const std::string &amp;invite, const std::string &amp;meta, const std::string &amp;data, bool can_convert_to_project)</td></tr>
-<tr class="memdesc:a83fa826a0da413a3561ea2420a09e79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает проект  <a href="namespace_capital_1_1_projects.html#a83fa826a0da413a3561ea2420a09e79f">Подробнее...</a><br /></td></tr>
-<tr class="separator:a83fa826a0da413a3561ea2420a09e79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a939fd8aac24dd10e39c1fe425c4cd6ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a939fd8aac24dd10e39c1fe425c4cd6ba">edit_project</a> (eosio::name coopname, const checksum256 &amp;project_hash, const std::string &amp;title, const std::string &amp;description, const std::string &amp;invite, const std::string &amp;meta, const std::string &amp;data, bool can_convert_to_project)</td></tr>
-<tr class="memdesc:a939fd8aac24dd10e39c1fe425c4cd6ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирует существующий проект  <a href="namespace_capital_1_1_projects.html#a939fd8aac24dd10e39c1fe425c4cd6ba">Подробнее...</a><br /></td></tr>
-<tr class="separator:a939fd8aac24dd10e39c1fe425c4cd6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adea40618079d31f05029cab6507cce8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#adea40618079d31f05029cab6507cce8a">add_property_base</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;property_amount)</td></tr>
-<tr class="memdesc:adea40618079d31f05029cab6507cce8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет имущественный взнос к проекту.  <a href="namespace_capital_1_1_projects.html#adea40618079d31f05029cab6507cce8a">Подробнее...</a><br /></td></tr>
-<tr class="separator:adea40618079d31f05029cab6507cce8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83d8e495d8e080e2b004e38f57a795f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af83d8e495d8e080e2b004e38f57a795f">add_commit</a> (eosio::name coopname, const checksum256 &amp;project_hash, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;delta)</td></tr>
-<tr class="memdesc:af83d8e495d8e080e2b004e38f57a795f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет коммит к проекту, обновляя фактические показатели и счетчик коммитов.  <a href="namespace_capital_1_1_projects.html#af83d8e495d8e080e2b004e38f57a795f">Подробнее...</a><br /></td></tr>
-<tr class="separator:af83d8e495d8e080e2b004e38f57a795f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a942d12be9046775991b8d77a3c46ce1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a942d12be9046775991b8d77a3c46ce1c">create_project</a> (eosio::name coopname, const checksum256 &amp;project_hash, const checksum256 &amp;parent_hash, const std::string &amp;title, const std::string &amp;description, const std::string &amp;invite, const std::string &amp;meta, const std::string &amp;data)</td></tr>
+<tr class="memdesc:a942d12be9046775991b8d77a3c46ce1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает проект  <a href="namespace_capital_1_1_projects.html#a942d12be9046775991b8d77a3c46ce1c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a942d12be9046775991b8d77a3c46ce1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7adc1c648926c436a877f6200e8c130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ab7adc1c648926c436a877f6200e8c130">edit_project</a> (eosio::name coopname, uint64_t project_id, const std::string &amp;title, const std::string &amp;description, const std::string &amp;invite, const std::string &amp;meta, const std::string &amp;data)</td></tr>
+<tr class="memdesc:ab7adc1c648926c436a877f6200e8c130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирует существующий проект  <a href="namespace_capital_1_1_projects.html#ab7adc1c648926c436a877f6200e8c130">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab7adc1c648926c436a877f6200e8c130"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6540f87145bc6dd987180b9d447a45c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a6540f87145bc6dd987180b9d447a45c2">add_property_base</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;property_amount)</td></tr>
+<tr class="memdesc:a6540f87145bc6dd987180b9d447a45c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет имущественный взнос к проекту.  <a href="namespace_capital_1_1_projects.html#a6540f87145bc6dd987180b9d447a45c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6540f87145bc6dd987180b9d447a45c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f80c8fbac288033c4fe70ae2ee6945f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a0f80c8fbac288033c4fe70ae2ee6945f">add_commit</a> (eosio::name coopname, uint64_t project_id, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;delta)</td></tr>
+<tr class="memdesc:a0f80c8fbac288033c4fe70ae2ee6945f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет коммит к проекту, обновляя фактические показатели и счетчик коммитов.  <a href="namespace_capital_1_1_projects.html#a0f80c8fbac288033c4fe70ae2ee6945f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0f80c8fbac288033c4fe70ae2ee6945f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e78ff08903b43e760e14dfd3bde8d64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a8e78ff08903b43e760e14dfd3bde8d64">set_master</a> (eosio::name coopname, uint64_t project_id, eosio::name master)</td></tr>
 <tr class="memdesc:a8e78ff08903b43e760e14dfd3bde8d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Назначает мастера проекта  <a href="namespace_capital_1_1_projects.html#a8e78ff08903b43e760e14dfd3bde8d64">Подробнее...</a><br /></td></tr>
 <tr class="separator:a8e78ff08903b43e760e14dfd3bde8d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0f59ec9ccd8f93fd6fe1240e82f520a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ab0f59ec9ccd8f93fd6fe1240e82f520a">update_status</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name new_status)</td></tr>
-<tr class="memdesc:ab0f59ec9ccd8f93fd6fe1240e82f520a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус проекта.  <a href="namespace_capital_1_1_projects.html#ab0f59ec9ccd8f93fd6fe1240e82f520a">Подробнее...</a><br /></td></tr>
-<tr class="separator:ab0f59ec9ccd8f93fd6fe1240e82f520a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a0a94ab44ea692146cc9238fcadb0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a55a0a94ab44ea692146cc9238fcadb0d">set_plan</a> (eosio::name coopname, const checksum256 &amp;project_hash, const <a class="el" href="struct_capital_1_1plan__pool.html">plan_pool</a> &amp;calculated_plan)</td></tr>
-<tr class="memdesc:a55a0a94ab44ea692146cc9238fcadb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает плановые показатели проекта.  <a href="namespace_capital_1_1_projects.html#a55a0a94ab44ea692146cc9238fcadb0d">Подробнее...</a><br /></td></tr>
-<tr class="separator:a55a0a94ab44ea692146cc9238fcadb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a24415923e4f25516feacc698f10460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a9a24415923e4f25516feacc698f10460">add_investments</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a9a24415923e4f25516feacc698f10460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет инвестицию к проекту.  <a href="namespace_capital_1_1_projects.html#a9a24415923e4f25516feacc698f10460">Подробнее...</a><br /></td></tr>
-<tr class="separator:a9a24415923e4f25516feacc698f10460"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfaa29fac646d2c080c82d98ff4c0361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#acfaa29fac646d2c080c82d98ff4c0361">expand_expense_pool</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;additional_amount)</td></tr>
-<tr class="memdesc:acfaa29fac646d2c080c82d98ff4c0361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает целевой размер пула расходов проекта.  <a href="namespace_capital_1_1_projects.html#acfaa29fac646d2c080c82d98ff4c0361">Подробнее...</a><br /></td></tr>
-<tr class="separator:acfaa29fac646d2c080c82d98ff4c0361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7417e986568446c4e0490ec3c5fedf40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a7417e986568446c4e0490ec3c5fedf40">open_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:a7417e986568446c4e0490ec3c5fedf40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает проект для инвестиций, копируя плановые показатели расходов в фактические.  <a href="namespace_capital_1_1_projects.html#a7417e986568446c4e0490ec3c5fedf40">Подробнее...</a><br /></td></tr>
-<tr class="separator:a7417e986568446c4e0490ec3c5fedf40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad990dbacfa396ccac79afee746dbfc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad990dbacfa396ccac79afee746dbfc32">close_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:ad990dbacfa396ccac79afee746dbfc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает проект от инвестиций, устанавливая флаг is_opened = false.  <a href="namespace_capital_1_1_projects.html#ad990dbacfa396ccac79afee746dbfc32">Подробнее...</a><br /></td></tr>
-<tr class="separator:ad990dbacfa396ccac79afee746dbfc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673c5ab8fddd5215fce3bdbd115c046e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a673c5ab8fddd5215fce3bdbd115c046e">reserve_expense_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a673c5ab8fddd5215fce3bdbd115c046e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резервирует средства для расхода, уменьшая accumulated_expense_pool.  <a href="namespace_capital_1_1_projects.html#a673c5ab8fddd5215fce3bdbd115c046e">Подробнее...</a><br /></td></tr>
-<tr class="separator:a673c5ab8fddd5215fce3bdbd115c046e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3062c9803905b6bec73d654683d3a760"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a3062c9803905b6bec73d654683d3a760">return_expense_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a3062c9803905b6bec73d654683d3a760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает зарезервированные средства в accumulated_expense_pool.  <a href="namespace_capital_1_1_projects.html#a3062c9803905b6bec73d654683d3a760">Подробнее...</a><br /></td></tr>
-<tr class="separator:a3062c9803905b6bec73d654683d3a760"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa828b18938a299ccea7d303e41d9b515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aa828b18938a299ccea7d303e41d9b515">complete_expense</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:aa828b18938a299ccea7d303e41d9b515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает расход, добавляя сумму в used_expense_pool.  <a href="namespace_capital_1_1_projects.html#aa828b18938a299ccea7d303e41d9b515">Подробнее...</a><br /></td></tr>
-<tr class="separator:aa828b18938a299ccea7d303e41d9b515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ac4970a4f6789cd49d57386275c0a47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a8ac4970a4f6789cd49d57386275c0a47">increment_total_propertors</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:a8ac4970a4f6789cd49d57386275c0a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество проперторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a8ac4970a4f6789cd49d57386275c0a47">Подробнее...</a><br /></td></tr>
-<tr class="separator:a8ac4970a4f6789cd49d57386275c0a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ceb355ad7182a708ccc8115b9d3a32c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a0ceb355ad7182a708ccc8115b9d3a32c">increment_total_investors</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:a0ceb355ad7182a708ccc8115b9d3a32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество инвесторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a0ceb355ad7182a708ccc8115b9d3a32c">Подробнее...</a><br /></td></tr>
-<tr class="separator:a0ceb355ad7182a708ccc8115b9d3a32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af60047f88f96da1ad06aa9f9dfaf2011"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af60047f88f96da1ad06aa9f9dfaf2011">increment_total_contributors</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:af60047f88f96da1ad06aa9f9dfaf2011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество зарегистрированных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af60047f88f96da1ad06aa9f9dfaf2011">Подробнее...</a><br /></td></tr>
-<tr class="separator:af60047f88f96da1ad06aa9f9dfaf2011"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041dda9dff90fcb4e6a316019e8280b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a041dda9dff90fcb4e6a316019e8280b0">increment_total_contributor_shares</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::asset shares)</td></tr>
-<tr class="memdesc:a041dda9dff90fcb4e6a316019e8280b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество вкладчических долей в проекте на указанное количество  <a href="namespace_capital_1_1_projects.html#a041dda9dff90fcb4e6a316019e8280b0">Подробнее...</a><br /></td></tr>
-<tr class="separator:a041dda9dff90fcb4e6a316019e8280b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b33bff31c6ad98b16aabd83f0b57d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aa7b33bff31c6ad98b16aabd83f0b57d2">increment_total_authors</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:aa7b33bff31c6ad98b16aabd83f0b57d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество авторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#aa7b33bff31c6ad98b16aabd83f0b57d2">Подробнее...</a><br /></td></tr>
-<tr class="separator:aa7b33bff31c6ad98b16aabd83f0b57d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7e4f9166dd63947601364400b7f9fc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af7e4f9166dd63947601364400b7f9fc3">increment_total_coordinators</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:af7e4f9166dd63947601364400b7f9fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество координаторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af7e4f9166dd63947601364400b7f9fc3">Подробнее...</a><br /></td></tr>
-<tr class="separator:af7e4f9166dd63947601364400b7f9fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aadae1d005b8acd1bf9bf9273d2408fe7">increment_total_creators</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество создателей в проекте на 1.  <a href="namespace_capital_1_1_projects.html#aadae1d005b8acd1bf9bf9273d2408fe7">Подробнее...</a><br /></td></tr>
-<tr class="separator:aadae1d005b8acd1bf9bf9273d2408fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af1f8ee3bfe18205ae248f8b321db6a8e">increment_total_unique_participants</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество уникальных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#af1f8ee3bfe18205ae248f8b321db6a8e">Подробнее...</a><br /></td></tr>
-<tr class="separator:af1f8ee3bfe18205ae248f8b321db6a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec7f2500928caeea7ae36916383123eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aec7f2500928caeea7ae36916383123eb">increment_votes_received</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:aec7f2500928caeea7ae36916383123eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает счетчик полученных голосов в проекте  <a href="namespace_capital_1_1_projects.html#aec7f2500928caeea7ae36916383123eb">Подробнее...</a><br /></td></tr>
-<tr class="separator:aec7f2500928caeea7ae36916383123eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a159098825912570bd0c27c06fb4fb350"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a159098825912570bd0c27c06fb4fb350">increment_total_voters</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:a159098825912570bd0c27c06fb4fb350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает счетчик общего количества участников голосования в проекте  <a href="namespace_capital_1_1_projects.html#a159098825912570bd0c27c06fb4fb350">Подробнее...</a><br /></td></tr>
-<tr class="separator:a159098825912570bd0c27c06fb4fb350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac05a8e93fc45598a203be6555545f782"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ac05a8e93fc45598a203be6555545f782">subtract_project_shares</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;shares_amount)</td></tr>
-<tr class="memdesc:ac05a8e93fc45598a203be6555545f782"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уменьшает доли от общего пула долей проекта  <a href="namespace_capital_1_1_projects.html#ac05a8e93fc45598a203be6555545f782">Подробнее...</a><br /></td></tr>
-<tr class="separator:ac05a8e93fc45598a203be6555545f782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b83bc410ef3d80facaa2768900d6b71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a3b83bc410ef3d80facaa2768900d6b71">add_project_membership_shares</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;shares_amount)</td></tr>
-<tr class="memdesc:a3b83bc410ef3d80facaa2768900d6b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет доли в общий пул долей проекта (только от конвертации в кошелек проекта)  <a href="namespace_capital_1_1_projects.html#a3b83bc410ef3d80facaa2768900d6b71">Подробнее...</a><br /></td></tr>
-<tr class="separator:a3b83bc410ef3d80facaa2768900d6b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a071bb6224f16c7a614a30efcd8113208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a071bb6224f16c7a614a30efcd8113208">add_project_converted_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;converted_amount)</td></tr>
-<tr class="memdesc:a071bb6224f16c7a614a30efcd8113208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет сконвертированные средства в проект  <a href="namespace_capital_1_1_projects.html#a071bb6224f16c7a614a30efcd8113208">Подробнее...</a><br /></td></tr>
-<tr class="separator:a071bb6224f16c7a614a30efcd8113208"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef440092d068493d76d594963134e50d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aef440092d068493d76d594963134e50d">distribute_membership_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="separator:aef440092d068493d76d594963134e50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad139f2fcffef5471a7c6fa4f27ec3817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad139f2fcffef5471a7c6fa4f27ec3817">subtract_membership_available</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:ad139f2fcffef5471a7c6fa4f27ec3817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычитает доступные членские средства из проекта  <a href="namespace_capital_1_1_projects.html#ad139f2fcffef5471a7c6fa4f27ec3817">Подробнее...</a><br /></td></tr>
-<tr class="separator:ad139f2fcffef5471a7c6fa4f27ec3817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f3dcc8537d7bae1fab4641e189557d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a0f3dcc8537d7bae1fab4641e189557d6">add_membership_available</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a0f3dcc8537d7bae1fab4641e189557d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет доступные членские средства в проект  <a href="namespace_capital_1_1_projects.html#a0f3dcc8537d7bae1fab4641e189557d6">Подробнее...</a><br /></td></tr>
-<tr class="separator:a0f3dcc8537d7bae1fab4641e189557d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8f1fa82474f5fe1c0cc2c0cf3caf26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a1d8f1fa82474f5fe1c0cc2c0cf3caf26">update_status</a> (eosio::name coopname, uint64_t project_id, eosio::name new_status)</td></tr>
+<tr class="memdesc:a1d8f1fa82474f5fe1c0cc2c0cf3caf26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус проекта.  <a href="namespace_capital_1_1_projects.html#a1d8f1fa82474f5fe1c0cc2c0cf3caf26">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1d8f1fa82474f5fe1c0cc2c0cf3caf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ef74add0d6e77b2362bfeb729934df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af3ef74add0d6e77b2362bfeb729934df">set_plan</a> (eosio::name coopname, uint64_t project_id, const <a class="el" href="struct_capital_1_1plan__pool.html">plan_pool</a> &amp;calculated_plan)</td></tr>
+<tr class="memdesc:af3ef74add0d6e77b2362bfeb729934df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает плановые показатели проекта.  <a href="namespace_capital_1_1_projects.html#af3ef74add0d6e77b2362bfeb729934df">Подробнее...</a><br /></td></tr>
+<tr class="separator:af3ef74add0d6e77b2362bfeb729934df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5666c6e05e035d4de46a6b802bee4ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a5666c6e05e035d4de46a6b802bee4ddf">add_investments</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:a5666c6e05e035d4de46a6b802bee4ddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет инвестицию к проекту.  <a href="namespace_capital_1_1_projects.html#a5666c6e05e035d4de46a6b802bee4ddf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5666c6e05e035d4de46a6b802bee4ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6869a406dbc91906834aac1cdfc22ade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a6869a406dbc91906834aac1cdfc22ade">expand_expense_pool</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;additional_amount)</td></tr>
+<tr class="memdesc:a6869a406dbc91906834aac1cdfc22ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает целевой размер пула расходов проекта.  <a href="namespace_capital_1_1_projects.html#a6869a406dbc91906834aac1cdfc22ade">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6869a406dbc91906834aac1cdfc22ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15cf579a3ddfd1b617e29ea8e828275b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a15cf579a3ddfd1b617e29ea8e828275b">open_project</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a15cf579a3ddfd1b617e29ea8e828275b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает проект для инвестиций, копируя плановые показатели расходов в фактические.  <a href="namespace_capital_1_1_projects.html#a15cf579a3ddfd1b617e29ea8e828275b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a15cf579a3ddfd1b617e29ea8e828275b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b6bc361ecb1f29f5bd4b7e181b3b2fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a9b6bc361ecb1f29f5bd4b7e181b3b2fa">close_project</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a9b6bc361ecb1f29f5bd4b7e181b3b2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает проект от инвестиций, устанавливая флаг is_opened = false.  <a href="namespace_capital_1_1_projects.html#a9b6bc361ecb1f29f5bd4b7e181b3b2fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b6bc361ecb1f29f5bd4b7e181b3b2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20192c46afa104c32292e1f0c54c1078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a20192c46afa104c32292e1f0c54c1078">reserve_expense_funds</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:a20192c46afa104c32292e1f0c54c1078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резервирует средства для расхода, уменьшая accumulated_expense_pool.  <a href="namespace_capital_1_1_projects.html#a20192c46afa104c32292e1f0c54c1078">Подробнее...</a><br /></td></tr>
+<tr class="separator:a20192c46afa104c32292e1f0c54c1078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1736b8a930494732fb5426a2a21a77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#adf1736b8a930494732fb5426a2a21a77">return_expense_funds</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:adf1736b8a930494732fb5426a2a21a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает зарезервированные средства в accumulated_expense_pool.  <a href="namespace_capital_1_1_projects.html#adf1736b8a930494732fb5426a2a21a77">Подробнее...</a><br /></td></tr>
+<tr class="separator:adf1736b8a930494732fb5426a2a21a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb0daf6818371e10b455eb849da81a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#abbb0daf6818371e10b455eb849da81a4">complete_expense</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:abbb0daf6818371e10b455eb849da81a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершает расход, добавляя сумму в used_expense_pool.  <a href="namespace_capital_1_1_projects.html#abbb0daf6818371e10b455eb849da81a4">Подробнее...</a><br /></td></tr>
+<tr class="separator:abbb0daf6818371e10b455eb849da81a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f3438a4fabfca6c0fee77bf7702dc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aa3f3438a4fabfca6c0fee77bf7702dc9">increment_total_propertors</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:aa3f3438a4fabfca6c0fee77bf7702dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество проперторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#aa3f3438a4fabfca6c0fee77bf7702dc9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa3f3438a4fabfca6c0fee77bf7702dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0b8583ed7ba01f8e7422a139a40eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a5a0b8583ed7ba01f8e7422a139a40eda">increment_total_investors</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a5a0b8583ed7ba01f8e7422a139a40eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество инвесторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a5a0b8583ed7ba01f8e7422a139a40eda">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5a0b8583ed7ba01f8e7422a139a40eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b506d29a5d7b965301e66afbf48743f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a6b506d29a5d7b965301e66afbf48743f">increment_total_contributors</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a6b506d29a5d7b965301e66afbf48743f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество зарегистрированных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a6b506d29a5d7b965301e66afbf48743f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6b506d29a5d7b965301e66afbf48743f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc549173a1637d5bfb6cc9310f9b995b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#adc549173a1637d5bfb6cc9310f9b995b">increment_total_contributor_shares</a> (eosio::name coopname, uint64_t project_id, eosio::asset shares)</td></tr>
+<tr class="memdesc:adc549173a1637d5bfb6cc9310f9b995b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество вкладчических долей в проекте на указанное количество  <a href="namespace_capital_1_1_projects.html#adc549173a1637d5bfb6cc9310f9b995b">Подробнее...</a><br /></td></tr>
+<tr class="separator:adc549173a1637d5bfb6cc9310f9b995b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3a55c47be2551e68d52084243e837a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad3a55c47be2551e68d52084243e837a8">increment_total_authors</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:ad3a55c47be2551e68d52084243e837a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество авторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#ad3a55c47be2551e68d52084243e837a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad3a55c47be2551e68d52084243e837a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71d12ac019160b3172e9ee8172f87a77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a71d12ac019160b3172e9ee8172f87a77">increment_total_coordinators</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a71d12ac019160b3172e9ee8172f87a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество координаторов в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a71d12ac019160b3172e9ee8172f87a77">Подробнее...</a><br /></td></tr>
+<tr class="separator:a71d12ac019160b3172e9ee8172f87a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbecc3c486769177ce581abfbd89e841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#adbecc3c486769177ce581abfbd89e841">increment_total_creators</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:adbecc3c486769177ce581abfbd89e841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество создателей в проекте на 1.  <a href="namespace_capital_1_1_projects.html#adbecc3c486769177ce581abfbd89e841">Подробнее...</a><br /></td></tr>
+<tr class="separator:adbecc3c486769177ce581abfbd89e841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63605df1fdfc7bb3d5cb7ba890e83cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a63605df1fdfc7bb3d5cb7ba890e83cbb">increment_total_unique_participants</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a63605df1fdfc7bb3d5cb7ba890e83cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает количество уникальных участников в проекте на 1.  <a href="namespace_capital_1_1_projects.html#a63605df1fdfc7bb3d5cb7ba890e83cbb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a63605df1fdfc7bb3d5cb7ba890e83cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e186fa15afa4dcf733677f89a810dae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a2e186fa15afa4dcf733677f89a810dae">increment_votes_received</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a2e186fa15afa4dcf733677f89a810dae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает счетчик полученных голосов в проекте  <a href="namespace_capital_1_1_projects.html#a2e186fa15afa4dcf733677f89a810dae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2e186fa15afa4dcf733677f89a810dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabf16dd03f83d0a8acf60b8670e9a3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#aabf16dd03f83d0a8acf60b8670e9a3b2">increase_total_returned_investments</a> (eosio::name coopname, const uint64_t &amp;project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
 <tr class="separator:aabf16dd03f83d0a8acf60b8670e9a3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af50cad66a6d02e6263abec89f0d0d9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1">delete_project</a> (eosio::name coopname, const checksum256 &amp;project_hash)</td></tr>
-<tr class="memdesc:af50cad66a6d02e6263abec89f0d0d9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет проект  <a href="namespace_capital_1_1_projects.html#af50cad66a6d02e6263abec89f0d0d9d1">Подробнее...</a><br /></td></tr>
-<tr class="separator:af50cad66a6d02e6263abec89f0d0d9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a941bb7afdc26b89170ad3154fa570973"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a941bb7afdc26b89170ad3154fa570973">add_used_for_compensation</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:a941bb7afdc26b89170ad3154fa570973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает сумму использованных для компенсации инвестиций  <a href="namespace_capital_1_1_projects.html#a941bb7afdc26b89170ad3154fa570973">Подробнее...</a><br /></td></tr>
+<tr class="separator:a941bb7afdc26b89170ad3154fa570973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a830e64e5bca70c621f76c2194d4bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ab3a830e64e5bca70c621f76c2194d4bb">subtract_used_for_compensation</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:ab3a830e64e5bca70c621f76c2194d4bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уменьшает сумму использованных для компенсации инвестиций  <a href="namespace_capital_1_1_projects.html#ab3a830e64e5bca70c621f76c2194d4bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab3a830e64e5bca70c621f76c2194d4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aabfd7e9a2b7431f67eac122edd9561"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a0aabfd7e9a2b7431f67eac122edd9561">increment_converted_segments</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a0aabfd7e9a2b7431f67eac122edd9561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инкрементирует счётчик сконвертированных сегментов  <a href="namespace_capital_1_1_projects.html#a0aabfd7e9a2b7431f67eac122edd9561">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0aabfd7e9a2b7431f67eac122edd9561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d855e221d4d182a7763c661eadf997"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ae3d855e221d4d182a7763c661eadf997">are_all_segments_converted</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:ae3d855e221d4d182a7763c661eadf997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет завершили ли все участники конвертацию сегментов  <a href="namespace_capital_1_1_projects.html#ae3d855e221d4d182a7763c661eadf997">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae3d855e221d4d182a7763c661eadf997"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45922ad96b427069abbcc9cfbbfac2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a45922ad96b427069abbcc9cfbbfac2c2">delete_project</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a45922ad96b427069abbcc9cfbbfac2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет проект  <a href="namespace_capital_1_1_projects.html#a45922ad96b427069abbcc9cfbbfac2c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45922ad96b427069abbcc9cfbbfac2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb3318dee5fbc9e2e93270815bf5500"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a6cb3318dee5fbc9e2e93270815bf5500">authorize_project</a> (eosio::name coopname, uint64_t project_id, const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="structdecision.html">decision</a>)</td></tr>
+<tr class="memdesc:a6cb3318dee5fbc9e2e93270815bf5500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает авторизацию проекта советом  <a href="namespace_capital_1_1_projects.html#a6cb3318dee5fbc9e2e93270815bf5500">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6cb3318dee5fbc9e2e93270815bf5500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1995b21ae34d4ca784caf836597d6c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#ad1995b21ae34d4ca784caf836597d6c5">revoke_authorization</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:ad1995b21ae34d4ca784caf836597d6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сбрасывает авторизацию проекта Устанавливает флаг авторизации в false и очищает документ авторизации  <a href="namespace_capital_1_1_projects.html#ad1995b21ae34d4ca784caf836597d6c5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad1995b21ae34d4ca784caf836597d6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a047c2f0c9e7b5194c0b23d93cd2e1109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_projects.html#a047c2f0c9e7b5194c0b23d93cd2e1109">increment_total_voters</a> (eosio::name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a047c2f0c9e7b5194c0b23d93cd2e1109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Увеличивает счетчик общего количества участников голосования в проекте  <a href="namespace_capital_1_1_projects.html#a047c2f0c9e7b5194c0b23d93cd2e1109">Подробнее...</a><br /></td></tr>
+<tr class="separator:a047c2f0c9e7b5194c0b23d93cd2e1109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="af83d8e495d8e080e2b004e38f57a795f" name="af83d8e495d8e080e2b004e38f57a795f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af83d8e495d8e080e2b004e38f57a795f">&#9670;&nbsp;</a></span>add_commit()</h2>
+<a id="a0f80c8fbac288033c4fe70ae2ee6945f" name="a0f80c8fbac288033c4fe70ae2ee6945f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f80c8fbac288033c4fe70ae2ee6945f">&#9670;&nbsp;</a></span>add_commit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,8 +279,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -298,7 +305,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">delta</td><td>Фактические показатели взноса в проект. </td></tr>
   </table>
   </dd>
@@ -306,8 +313,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a9a24415923e4f25516feacc698f10460" name="a9a24415923e4f25516feacc698f10460"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a24415923e4f25516feacc698f10460">&#9670;&nbsp;</a></span>add_investments()</h2>
+<a id="a5666c6e05e035d4de46a6b802bee4ddf" name="a5666c6e05e035d4de46a6b802bee4ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5666c6e05e035d4de46a6b802bee4ddf">&#9670;&nbsp;</a></span>add_investments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,8 +331,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -350,7 +357,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма инвестиции для добавления. </td></tr>
   </table>
   </dd>
@@ -358,164 +365,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a0f3dcc8537d7bae1fab4641e189557d6" name="a0f3dcc8537d7bae1fab4641e189557d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f3dcc8537d7bae1fab4641e189557d6">&#9670;&nbsp;</a></span>add_membership_available()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Projects::add_membership_available </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Добавляет доступные членские средства в проект </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
-    <tr><td class="paramname">amount</td><td>Сумма для добавления </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a071bb6224f16c7a614a30efcd8113208" name="a071bb6224f16c7a614a30efcd8113208"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a071bb6224f16c7a614a30efcd8113208">&#9670;&nbsp;</a></span>add_project_converted_funds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Projects::add_project_converted_funds </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>converted_amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Добавляет сконвертированные средства в проект </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
-    <tr><td class="paramname">converted_amount</td><td>Сумма сконвертированных средств </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a3b83bc410ef3d80facaa2768900d6b71" name="a3b83bc410ef3d80facaa2768900d6b71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b83bc410ef3d80facaa2768900d6b71">&#9670;&nbsp;</a></span>add_project_membership_shares()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Projects::add_project_membership_shares </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>shares_amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Добавляет доли в общий пул долей проекта (только от конвертации в кошелек проекта) </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
-    <tr><td class="paramname">shares_amount</td><td>Сумма долей для добавления </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="adea40618079d31f05029cab6507cce8a" name="adea40618079d31f05029cab6507cce8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adea40618079d31f05029cab6507cce8a">&#9670;&nbsp;</a></span>add_property_base()</h2>
+<a id="a6540f87145bc6dd987180b9d447a45c2" name="a6540f87145bc6dd987180b9d447a45c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6540f87145bc6dd987180b9d447a45c2">&#9670;&nbsp;</a></span>add_property_base()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,8 +383,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -558,7 +409,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">property_amount</td><td>Стоимость имущественного взноса. </td></tr>
   </table>
   </dd>
@@ -566,8 +417,150 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="ad990dbacfa396ccac79afee746dbfc32" name="ad990dbacfa396ccac79afee746dbfc32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad990dbacfa396ccac79afee746dbfc32">&#9670;&nbsp;</a></span>close_project()</h2>
+<a id="a941bb7afdc26b89170ad3154fa570973" name="a941bb7afdc26b89170ad3154fa570973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a941bb7afdc26b89170ad3154fa570973">&#9670;&nbsp;</a></span>add_used_for_compensation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::add_used_for_compensation </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Увеличивает сумму использованных для компенсации инвестиций </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
+    <tr><td class="paramname">amount</td><td>Сумма использованных инвестиций </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae3d855e221d4d182a7763c661eadf997" name="ae3d855e221d4d182a7763c661eadf997"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d855e221d4d182a7763c661eadf997">&#9670;&nbsp;</a></span>are_all_segments_converted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Capital::Projects::are_all_segments_converted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет завершили ли все участники конвертацию сегментов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если все участники сконвертировали сегменты </dd></dl>
+
+</div>
+</div>
+<a id="a6cb3318dee5fbc9e2e93270815bf5500" name="a6cb3318dee5fbc9e2e93270815bf5500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb3318dee5fbc9e2e93270815bf5500">&#9670;&nbsp;</a></span>authorize_project()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::authorize_project </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdocument2.html">document2</a> &amp;&#160;</td>
+          <td class="paramname"><em>decision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Устанавливает авторизацию проекта советом </p>
+
+</div>
+</div>
+<a id="a9b6bc361ecb1f29f5bd4b7e181b3b2fa" name="a9b6bc361ecb1f29f5bd4b7e181b3b2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6bc361ecb1f29f5bd4b7e181b3b2fa">&#9670;&nbsp;</a></span>close_project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,8 +577,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -604,15 +597,15 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aa828b18938a299ccea7d303e41d9b515" name="aa828b18938a299ccea7d303e41d9b515"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa828b18938a299ccea7d303e41d9b515">&#9670;&nbsp;</a></span>complete_expense()</h2>
+<a id="abbb0daf6818371e10b455eb849da81a4" name="abbb0daf6818371e10b455eb849da81a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbb0daf6818371e10b455eb849da81a4">&#9670;&nbsp;</a></span>complete_expense()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,8 +622,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -655,7 +648,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива. </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма расхода. </td></tr>
   </table>
   </dd>
@@ -663,8 +656,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a83fa826a0da413a3561ea2420a09e79f" name="a83fa826a0da413a3561ea2420a09e79f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83fa826a0da413a3561ea2420a09e79f">&#9670;&nbsp;</a></span>create_project()</h2>
+<a id="a942d12be9046775991b8d77a3c46ce1c" name="a942d12be9046775991b8d77a3c46ce1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a942d12be9046775991b8d77a3c46ce1c">&#9670;&nbsp;</a></span>create_project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -718,13 +711,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>can_convert_to_project</em>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -750,15 +737,14 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
     <tr><td class="paramname">invite</td><td>Приглашение к проекту </td></tr>
     <tr><td class="paramname">meta</td><td>Метаданные проекта </td></tr>
     <tr><td class="paramname">data</td><td>Шаблон/данные проекта </td></tr>
-    <tr><td class="paramname">can_convert_to_project</td><td>Разрешена ли конвертация в кошелек проекта </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="af50cad66a6d02e6263abec89f0d0d9d1" name="af50cad66a6d02e6263abec89f0d0d9d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af50cad66a6d02e6263abec89f0d0d9d1">&#9670;&nbsp;</a></span>delete_project()</h2>
+<a id="a45922ad96b427069abbcc9cfbbfac2c2" name="a45922ad96b427069abbcc9cfbbfac2c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45922ad96b427069abbcc9cfbbfac2c2">&#9670;&nbsp;</a></span>delete_project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -775,8 +761,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -795,57 +781,15 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aef440092d068493d76d594963134e50d" name="aef440092d068493d76d594963134e50d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef440092d068493d76d594963134e50d">&#9670;&nbsp;</a></span>distribute_membership_funds()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Projects::distribute_membership_funds </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a939fd8aac24dd10e39c1fe425c4cd6ba" name="a939fd8aac24dd10e39c1fe425c4cd6ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a939fd8aac24dd10e39c1fe425c4cd6ba">&#9670;&nbsp;</a></span>edit_project()</h2>
+<a id="ab7adc1c648926c436a877f6200e8c130" name="ab7adc1c648926c436a877f6200e8c130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7adc1c648926c436a877f6200e8c130">&#9670;&nbsp;</a></span>edit_project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,8 +806,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -893,13 +837,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>can_convert_to_project</em>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -918,21 +856,20 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта для редактирования </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта для редактирования </td></tr>
     <tr><td class="paramname">title</td><td>Новое название проекта </td></tr>
     <tr><td class="paramname">description</td><td>Новое описание проекта </td></tr>
     <tr><td class="paramname">invite</td><td>Новое приглашение к проекту </td></tr>
     <tr><td class="paramname">meta</td><td>Новые метаданные проекта </td></tr>
     <tr><td class="paramname">data</td><td>Новые данные/шаблон проекта </td></tr>
-    <tr><td class="paramname">can_convert_to_project</td><td>Разрешена ли конвертация в кошелек данного проекта (nullopt если не изменять) </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="acfaa29fac646d2c080c82d98ff4c0361" name="acfaa29fac646d2c080c82d98ff4c0361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfaa29fac646d2c080c82d98ff4c0361">&#9670;&nbsp;</a></span>expand_expense_pool()</h2>
+<a id="a6869a406dbc91906834aac1cdfc22ade" name="a6869a406dbc91906834aac1cdfc22ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6869a406dbc91906834aac1cdfc22ade">&#9670;&nbsp;</a></span>expand_expense_pool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -949,8 +886,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -975,7 +912,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">additional_amount</td><td>Дополнительная сумма для увеличения цели расходов. </td></tr>
   </table>
   </dd>
@@ -1029,6 +966,52 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
+<a id="a85a37cf28b1762ad277ed14c51bed36b" name="a85a37cf28b1762ad277ed14c51bed36b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a37cf28b1762ad277ed14c51bed36b">&#9670;&nbsp;</a></span>get_project_by_id_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_capital_1_1project.html">project</a> Capital::Projects::get_project_by_id_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получает проект по id. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>Проект </dd></dl>
+
+</div>
+</div>
 <a id="a6d32f88a10efefdda09553373ac6a70d" name="a6d32f88a10efefdda09553373ac6a70d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d32f88a10efefdda09553373ac6a70d">&#9670;&nbsp;</a></span>get_project_or_fail()</h2>
 
@@ -1075,6 +1058,51 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
+<a id="a0701c7f085b886cee3ab4d01a1764af9" name="a0701c7f085b886cee3ab4d01a1764af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0701c7f085b886cee3ab4d01a1764af9">&#9670;&nbsp;</a></span>has_component_projects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Capital::Projects::has_component_projects </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>project_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Есть ли у проекта дочерние проекты-компоненты (их parent_hash совпадает с хэшем родителя) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_hash</td><td>Хэш родительского проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aabf16dd03f83d0a8acf60b8670e9a3b2" name="aabf16dd03f83d0a8acf60b8670e9a3b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabf16dd03f83d0a8acf60b8670e9a3b2">&#9670;&nbsp;</a></span>increase_total_returned_investments()</h2>
 
@@ -1117,8 +1145,53 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="aa7b33bff31c6ad98b16aabd83f0b57d2" name="aa7b33bff31c6ad98b16aabd83f0b57d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7b33bff31c6ad98b16aabd83f0b57d2">&#9670;&nbsp;</a></span>increment_total_authors()</h2>
+<a id="a0aabfd7e9a2b7431f67eac122edd9561" name="a0aabfd7e9a2b7431f67eac122edd9561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aabfd7e9a2b7431f67eac122edd9561">&#9670;&nbsp;</a></span>increment_converted_segments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::increment_converted_segments </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Инкрементирует счётчик сконвертированных сегментов </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3a55c47be2551e68d52084243e837a8" name="ad3a55c47be2551e68d52084243e837a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a55c47be2551e68d52084243e837a8">&#9670;&nbsp;</a></span>increment_total_authors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1135,8 +1208,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1155,8 +1228,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a041dda9dff90fcb4e6a316019e8280b0" name="a041dda9dff90fcb4e6a316019e8280b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041dda9dff90fcb4e6a316019e8280b0">&#9670;&nbsp;</a></span>increment_total_contributor_shares()</h2>
+<a id="adc549173a1637d5bfb6cc9310f9b995b" name="adc549173a1637d5bfb6cc9310f9b995b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc549173a1637d5bfb6cc9310f9b995b">&#9670;&nbsp;</a></span>increment_total_contributor_shares()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1173,8 +1246,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1199,8 +1272,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="af60047f88f96da1ad06aa9f9dfaf2011" name="af60047f88f96da1ad06aa9f9dfaf2011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af60047f88f96da1ad06aa9f9dfaf2011">&#9670;&nbsp;</a></span>increment_total_contributors()</h2>
+<a id="a6b506d29a5d7b965301e66afbf48743f" name="a6b506d29a5d7b965301e66afbf48743f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b506d29a5d7b965301e66afbf48743f">&#9670;&nbsp;</a></span>increment_total_contributors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1217,8 +1290,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1237,8 +1310,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="af7e4f9166dd63947601364400b7f9fc3" name="af7e4f9166dd63947601364400b7f9fc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7e4f9166dd63947601364400b7f9fc3">&#9670;&nbsp;</a></span>increment_total_coordinators()</h2>
+<a id="a71d12ac019160b3172e9ee8172f87a77" name="a71d12ac019160b3172e9ee8172f87a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d12ac019160b3172e9ee8172f87a77">&#9670;&nbsp;</a></span>increment_total_coordinators()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1255,8 +1328,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1275,8 +1348,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="aadae1d005b8acd1bf9bf9273d2408fe7" name="aadae1d005b8acd1bf9bf9273d2408fe7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadae1d005b8acd1bf9bf9273d2408fe7">&#9670;&nbsp;</a></span>increment_total_creators()</h2>
+<a id="adbecc3c486769177ce581abfbd89e841" name="adbecc3c486769177ce581abfbd89e841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbecc3c486769177ce581abfbd89e841">&#9670;&nbsp;</a></span>increment_total_creators()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1293,8 +1366,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1313,8 +1386,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a0ceb355ad7182a708ccc8115b9d3a32c" name="a0ceb355ad7182a708ccc8115b9d3a32c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ceb355ad7182a708ccc8115b9d3a32c">&#9670;&nbsp;</a></span>increment_total_investors()</h2>
+<a id="a5a0b8583ed7ba01f8e7422a139a40eda" name="a5a0b8583ed7ba01f8e7422a139a40eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0b8583ed7ba01f8e7422a139a40eda">&#9670;&nbsp;</a></span>increment_total_investors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1331,8 +1404,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1351,8 +1424,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a8ac4970a4f6789cd49d57386275c0a47" name="a8ac4970a4f6789cd49d57386275c0a47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ac4970a4f6789cd49d57386275c0a47">&#9670;&nbsp;</a></span>increment_total_propertors()</h2>
+<a id="aa3f3438a4fabfca6c0fee77bf7702dc9" name="aa3f3438a4fabfca6c0fee77bf7702dc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f3438a4fabfca6c0fee77bf7702dc9">&#9670;&nbsp;</a></span>increment_total_propertors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1369,8 +1442,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1389,8 +1462,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="af1f8ee3bfe18205ae248f8b321db6a8e" name="af1f8ee3bfe18205ae248f8b321db6a8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1f8ee3bfe18205ae248f8b321db6a8e">&#9670;&nbsp;</a></span>increment_total_unique_participants()</h2>
+<a id="a63605df1fdfc7bb3d5cb7ba890e83cbb" name="a63605df1fdfc7bb3d5cb7ba890e83cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63605df1fdfc7bb3d5cb7ba890e83cbb">&#9670;&nbsp;</a></span>increment_total_unique_participants()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1407,8 +1480,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1427,8 +1500,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a159098825912570bd0c27c06fb4fb350" name="a159098825912570bd0c27c06fb4fb350"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a159098825912570bd0c27c06fb4fb350">&#9670;&nbsp;</a></span>increment_total_voters()</h2>
+<a id="a047c2f0c9e7b5194c0b23d93cd2e1109" name="a047c2f0c9e7b5194c0b23d93cd2e1109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a047c2f0c9e7b5194c0b23d93cd2e1109">&#9670;&nbsp;</a></span>increment_total_voters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1445,8 +1518,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1465,8 +1538,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="aec7f2500928caeea7ae36916383123eb" name="aec7f2500928caeea7ae36916383123eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec7f2500928caeea7ae36916383123eb">&#9670;&nbsp;</a></span>increment_votes_received()</h2>
+<a id="a2e186fa15afa4dcf733677f89a810dae" name="a2e186fa15afa4dcf733677f89a810dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e186fa15afa4dcf733677f89a810dae">&#9670;&nbsp;</a></span>increment_votes_received()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1483,8 +1556,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1503,8 +1576,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a7417e986568446c4e0490ec3c5fedf40" name="a7417e986568446c4e0490ec3c5fedf40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7417e986568446c4e0490ec3c5fedf40">&#9670;&nbsp;</a></span>open_project()</h2>
+<a id="a15cf579a3ddfd1b617e29ea8e828275b" name="a15cf579a3ddfd1b617e29ea8e828275b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15cf579a3ddfd1b617e29ea8e828275b">&#9670;&nbsp;</a></span>open_project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1521,8 +1594,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1541,15 +1614,15 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a673c5ab8fddd5215fce3bdbd115c046e" name="a673c5ab8fddd5215fce3bdbd115c046e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a673c5ab8fddd5215fce3bdbd115c046e">&#9670;&nbsp;</a></span>reserve_expense_funds()</h2>
+<a id="a20192c46afa104c32292e1f0c54c1078" name="a20192c46afa104c32292e1f0c54c1078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20192c46afa104c32292e1f0c54c1078">&#9670;&nbsp;</a></span>reserve_expense_funds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1566,8 +1639,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1592,7 +1665,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива. </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма для резервирования. </td></tr>
   </table>
   </dd>
@@ -1600,8 +1673,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a3062c9803905b6bec73d654683d3a760" name="a3062c9803905b6bec73d654683d3a760"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3062c9803905b6bec73d654683d3a760">&#9670;&nbsp;</a></span>return_expense_funds()</h2>
+<a id="adf1736b8a930494732fb5426a2a21a77" name="adf1736b8a930494732fb5426a2a21a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1736b8a930494732fb5426a2a21a77">&#9670;&nbsp;</a></span>return_expense_funds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1618,8 +1691,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1644,8 +1717,53 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива. </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма для возврата. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad1995b21ae34d4ca784caf836597d6c5" name="ad1995b21ae34d4ca784caf836597d6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1995b21ae34d4ca784caf836597d6c5">&#9670;&nbsp;</a></span>revoke_authorization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Capital::Projects::revoke_authorization </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сбрасывает авторизацию проекта Устанавливает флаг авторизации в false и очищает документ авторизации </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
   </table>
   </dd>
 </dl>
@@ -1704,8 +1822,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="a55a0a94ab44ea692146cc9238fcadb0d" name="a55a0a94ab44ea692146cc9238fcadb0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55a0a94ab44ea692146cc9238fcadb0d">&#9670;&nbsp;</a></span>set_plan()</h2>
+<a id="af3ef74add0d6e77b2362bfeb729934df" name="af3ef74add0d6e77b2362bfeb729934df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ef74add0d6e77b2362bfeb729934df">&#9670;&nbsp;</a></span>set_plan()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1722,8 +1840,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1748,7 +1866,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта. </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта. </td></tr>
     <tr><td class="paramname">calculated_plan</td><td>Рассчитанные плановые показатели. </td></tr>
   </table>
   </dd>
@@ -1756,8 +1874,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 
 </div>
 </div>
-<a id="ad139f2fcffef5471a7c6fa4f27ec3817" name="ad139f2fcffef5471a7c6fa4f27ec3817"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad139f2fcffef5471a7c6fa4f27ec3817">&#9670;&nbsp;</a></span>subtract_membership_available()</h2>
+<a id="ab3a830e64e5bca70c621f76c2194d4bb" name="ab3a830e64e5bca70c621f76c2194d4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a830e64e5bca70c621f76c2194d4bb">&#9670;&nbsp;</a></span>subtract_used_for_compensation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1766,7 +1884,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Capital::Projects::subtract_membership_available </td>
+          <td class="memname">void Capital::Projects::subtract_used_for_compensation </td>
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
@@ -1774,8 +1892,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1796,72 +1914,20 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
 </table>
 </div><div class="memdoc">
 
-<p>Вычитает доступные членские средства из проекта </p>
+<p>Уменьшает сумму использованных для компенсации инвестиций </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
-    <tr><td class="paramname">amount</td><td>Сумма для вычитания </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
+    <tr><td class="paramname">amount</td><td>Сумма использованных инвестиций </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac05a8e93fc45598a203be6555545f782" name="ac05a8e93fc45598a203be6555545f782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac05a8e93fc45598a203be6555545f782">&#9670;&nbsp;</a></span>subtract_project_shares()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Projects::subtract_project_shares </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const eosio::asset &amp;&#160;</td>
-          <td class="paramname"><em>shares_amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Уменьшает доли от общего пула долей проекта </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хэш проекта </td></tr>
-    <tr><td class="paramname">shares_amount</td><td>Сумма долей для вычитания </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab0f59ec9ccd8f93fd6fe1240e82f520a" name="ab0f59ec9ccd8f93fd6fe1240e82f520a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0f59ec9ccd8f93fd6fe1240e82f520a">&#9670;&nbsp;</a></span>update_status()</h2>
+<a id="a1d8f1fa82474f5fe1c0cc2c0cf3caf26" name="a1d8f1fa82474f5fe1c0cc2c0cf3caf26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8f1fa82474f5fe1c0cc2c0cf3caf26">&#9670;&nbsp;</a></span>update_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1878,8 +1944,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_projects.html','
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

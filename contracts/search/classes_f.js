@@ -16,8 +16,6 @@ var searchData=
   ['programinfo_13',['ProgramInfo',['../struct_program_info.html',1,'']]],
   ['progwallet_14',['progwallet',['../structprogwallet.html',1,'']]],
   ['project_15',['project',['../struct_capital_1_1project.html',1,'Capital']]],
-  ['project_5fwallet_16',['project_wallet',['../struct_capital_1_1project__wallet.html',1,'Capital']]],
-  ['project_5fwithdraw_17',['project_withdraw',['../struct_capital_1_1project__withdraw.html',1,'Capital']]],
-  ['property_18',['property',['../struct_capital_1_1_project_properties_1_1property.html',1,'Capital::ProjectProperties']]],
-  ['proposal_19',['proposal',['../structeosio_1_1multisig_1_1proposal.html',1,'eosio::multisig']]]
+  ['property_16',['property',['../struct_capital_1_1_project_properties_1_1property.html',1,'Capital::ProjectProperties']]],
+  ['proposal_17',['proposal',['../structeosio_1_1multisig_1_1proposal.html',1,'eosio::multisig']]]
 ];

@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('classledger.html',''); initResizable()
 <p>Контракт ledger для управления бухгалтерской книгой кооператива  
  <a href="classledger.html#details">Подробнее...</a></p>
 
-<p><code>#include &lt;<a class="el" href="ledger_8hpp_source.html">ledger.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ledger_2ledger_8hpp_source.html">ledger.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:ledger:</div>
 <div class="dyncontent">
@@ -159,26 +159,26 @@ $(document).ready(function(){initNavTree('classledger.html',''); initResizable()
 <tr class="memitem:a708c6e83111e5a327b354c4ceb84025d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a708c6e83111e5a327b354c4ceb84025d">apply</a> (uint64_t receiver, uint64_t code, uint64_t <a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
 <tr class="separator:a708c6e83111e5a327b354c4ceb84025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad7c09de7dd1c04dff02ebf1de7d40caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gad7c09de7dd1c04dff02ebf1de7d40caa">migrate</a> ()</td></tr>
-<tr class="memdesc:gad7c09de7dd1c04dff02ebf1de7d40caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция данных контракта Переносит данные из контракта fund в счета ledger.  <a href="group__public__ledger__actions.html#gad7c09de7dd1c04dff02ebf1de7d40caa">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:gad7c09de7dd1c04dff02ebf1de7d40caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция данных контракта Инициализирует расчетный счет по сумме паевых и вступительных взносов  <a href="group__public__ledger__actions.html#gad7c09de7dd1c04dff02ebf1de7d40caa">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad7c09de7dd1c04dff02ebf1de7d40caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09d24cae61104365b5c446bbb4e9a212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga09d24cae61104365b5c446bbb4e9a212">add</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:ga09d24cae61104365b5c446bbb4e9a212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пополнение счета (дебетовая операция). Увеличивает доступные средства на указанном счете. Счет создается автоматически при первом пополнении.  <a href="group__public__ledger__actions.html#ga09d24cae61104365b5c446bbb4e9a212">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga09d24cae61104365b5c446bbb4e9a212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga36bd274433c3865885f6e096df8a3867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga36bd274433c3865885f6e096df8a3867">sub</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:ga36bd274433c3865885f6e096df8a3867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание со счета (кредитовая операция). Уменьшает доступные средства на указанном счете. Счет удаляется при обнулении всех балансов.  <a href="group__public__ledger__actions.html#ga36bd274433c3865885f6e096df8a3867">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga36bd274433c3865885f6e096df8a3867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9d1f02710c4025abf94daefad1f3a923"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga9d1f02710c4025abf94daefad1f3a923">block</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:ga9d1f02710c4025abf94daefad1f3a923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка средств на счете. Переводит средства из доступных в заблокированные  <a href="group__public__ledger__actions.html#ga9d1f02710c4025abf94daefad1f3a923">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga9d1f02710c4025abf94daefad1f3a923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac7d659eb8528c75307e07b1bf3797715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gac7d659eb8528c75307e07b1bf3797715">unblock</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:gac7d659eb8528c75307e07b1bf3797715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка средств на счете. Переводит средства из заблокированных в доступные  <a href="group__public__ledger__actions.html#gac7d659eb8528c75307e07b1bf3797715">Подробнее...</a><br /></td></tr>
-<tr class="separator:gac7d659eb8528c75307e07b1bf3797715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae42cde4ebc022b9b5f316ce607e8436d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gae42cde4ebc022b9b5f316ce607e8436d">writeoff</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:gae42cde4ebc022b9b5f316ce607e8436d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарное списание средств со счета. Списывает средства в категорию списанных без возможности возврата  <a href="group__public__ledger__actions.html#gae42cde4ebc022b9b5f316ce607e8436d">Подробнее...</a><br /></td></tr>
-<tr class="separator:gae42cde4ebc022b9b5f316ce607e8436d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga47d664aa1b4247ac514339fd9757429d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga47d664aa1b4247ac514339fd9757429d">writeoffcnsl</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment)</td></tr>
-<tr class="memdesc:ga47d664aa1b4247ac514339fd9757429d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарная отмена списания средств Возвращает средства из категории списанных в доступные  <a href="group__public__ledger__actions.html#ga47d664aa1b4247ac514339fd9757429d">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga47d664aa1b4247ac514339fd9757429d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa142f25741e0373a3a088105175c7908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gaa142f25741e0373a3a088105175c7908">add</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:gaa142f25741e0373a3a088105175c7908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пополнение счета (дебетовая операция). Увеличивает доступные средства на указанном счете. Счет создается автоматически при первом пополнении.  <a href="group__public__ledger__actions.html#gaa142f25741e0373a3a088105175c7908">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa142f25741e0373a3a088105175c7908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4b04679302d4a6d815999ccd7e12560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gaa4b04679302d4a6d815999ccd7e12560">sub</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:gaa4b04679302d4a6d815999ccd7e12560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание со счета (кредитовая операция). Уменьшает доступные средства на указанном счете. Счет удаляется при обнулении всех балансов.  <a href="group__public__ledger__actions.html#gaa4b04679302d4a6d815999ccd7e12560">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa4b04679302d4a6d815999ccd7e12560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b0337474c6a0ca07ef5748a7b826e66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga4b0337474c6a0ca07ef5748a7b826e66">block</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:ga4b0337474c6a0ca07ef5748a7b826e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка средств на счете. Переводит средства из доступных в заблокированные  <a href="group__public__ledger__actions.html#ga4b0337474c6a0ca07ef5748a7b826e66">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4b0337474c6a0ca07ef5748a7b826e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad12411f63fbb70c3e2d0fba8ef22894e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gad12411f63fbb70c3e2d0fba8ef22894e">unblock</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:gad12411f63fbb70c3e2d0fba8ef22894e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка средств на счете. Переводит средства из заблокированных в доступные  <a href="group__public__ledger__actions.html#gad12411f63fbb70c3e2d0fba8ef22894e">Подробнее...</a><br /></td></tr>
+<tr class="separator:gad12411f63fbb70c3e2d0fba8ef22894e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga43057f8c21fd96c6a3a5f6d421fa51f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#ga43057f8c21fd96c6a3a5f6d421fa51f7">writeoff</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:ga43057f8c21fd96c6a3a5f6d421fa51f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарное списание средств со счета. Списывает средства в категорию списанных без возможности возврата  <a href="group__public__ledger__actions.html#ga43057f8c21fd96c6a3a5f6d421fa51f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga43057f8c21fd96c6a3a5f6d421fa51f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf91cf2b71c3245356c0d702732fb888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888">writeoffcnsl</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:gaaf91cf2b71c3245356c0d702732fb888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Атомарная отмена списания средств Возвращает средства из категории списанных в доступные  <a href="group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaaf91cf2b71c3245356c0d702732fb888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae8748f71d0b84e6516c1a792437578e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gae8748f71d0b84e6516c1a792437578e1">create</a> (eosio::name coopname, eosio::name username, uint64_t account_id, eosio::asset quantity, std::string reason, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>, checksum256 writeoff_hash)</td></tr>
 <tr class="memdesc:gae8748f71d0b84e6516c1a792437578e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание заявления на списание средств через совет. Создает операцию списания, требующую одобрения советом  <a href="group__public__ledger__actions.html#gae8748f71d0b84e6516c1a792437578e1">Подробнее...</a><br /></td></tr>
 <tr class="separator:gae8748f71d0b84e6516c1a792437578e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,13 +191,81 @@ $(document).ready(function(){initNavTree('classledger.html',''); initResizable()
 <tr class="memitem:gae6f61434651b708fdb0fcca32cff454e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__ledger__actions.html#gae6f61434651b708fdb0fcca32cff454e">decline</a> (eosio::name coopname, checksum256 writeoff_hash, std::string reason)</td></tr>
 <tr class="memdesc:gae6f61434651b708fdb0fcca32cff454e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение операции списания от gateway Коллбэк от gateway при отклонении операции  <a href="group__public__ledger__actions.html#gae6f61434651b708fdb0fcca32cff454e">Подробнее...</a><br /></td></tr>
 <tr class="separator:gae6f61434651b708fdb0fcca32cff454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acef25d9c43198f5a63bd12bdf2df9f17"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#acef25d9c43198f5a63bd12bdf2df9f17">ledger</a> (eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td></tr>
+<tr class="separator:acef25d9c43198f5a63bd12bdf2df9f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708c6e83111e5a327b354c4ceb84025d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a708c6e83111e5a327b354c4ceb84025d">apply</a> (uint64_t receiver, uint64_t code, uint64_t <a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
+<tr class="separator:a708c6e83111e5a327b354c4ceb84025d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7c09de7dd1c04dff02ebf1de7d40caa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#ad7c09de7dd1c04dff02ebf1de7d40caa">migrate</a> ()</td></tr>
+<tr class="separator:ad7c09de7dd1c04dff02ebf1de7d40caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa142f25741e0373a3a088105175c7908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#aa142f25741e0373a3a088105175c7908">add</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:aa142f25741e0373a3a088105175c7908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4b04679302d4a6d815999ccd7e12560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#aa4b04679302d4a6d815999ccd7e12560">sub</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:aa4b04679302d4a6d815999ccd7e12560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0337474c6a0ca07ef5748a7b826e66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a4b0337474c6a0ca07ef5748a7b826e66">block</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:a4b0337474c6a0ca07ef5748a7b826e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12411f63fbb70c3e2d0fba8ef22894e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#ad12411f63fbb70c3e2d0fba8ef22894e">unblock</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:ad12411f63fbb70c3e2d0fba8ef22894e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43057f8c21fd96c6a3a5f6d421fa51f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a43057f8c21fd96c6a3a5f6d421fa51f7">writeoff</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:a43057f8c21fd96c6a3a5f6d421fa51f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf91cf2b71c3245356c0d702732fb888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#aaf91cf2b71c3245356c0d702732fb888">writeoffcnsl</a> (eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)</td></tr>
+<tr class="separator:aaf91cf2b71c3245356c0d702732fb888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8748f71d0b84e6516c1a792437578e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#ae8748f71d0b84e6516c1a792437578e1">create</a> (eosio::name coopname, eosio::name username, uint64_t account_id, eosio::asset quantity, std::string reason, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>, checksum256 writeoff_hash)</td></tr>
+<tr class="separator:ae8748f71d0b84e6516c1a792437578e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062a0f127e7d1e308dfa14446297c23f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a062a0f127e7d1e308dfa14446297c23f">auth</a> (eosio::name coopname, checksum256 writeoff_hash)</td></tr>
+<tr class="separator:a062a0f127e7d1e308dfa14446297c23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971d74e015d6453b8843ec8e47ec1818"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#a971d74e015d6453b8843ec8e47ec1818">complete</a> (eosio::name coopname, checksum256 writeoff_hash)</td></tr>
+<tr class="separator:a971d74e015d6453b8843ec8e47ec1818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f61434651b708fdb0fcca32cff454e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classledger.html#ae6f61434651b708fdb0fcca32cff454e">decline</a> (eosio::name coopname, checksum256 writeoff_hash, std::string reason)</td></tr>
+<tr class="separator:ae6f61434651b708fdb0fcca32cff454e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Контракт ledger для управления бухгалтерской книгой кооператива </p>
 <p >Обеспечивает ведение счетов согласно стандартам кооперативной отчетности Счета создаются автоматически при первом пополнении и удаляются при обнулении всех балансов </p>
 </div><h2 class="groupheader">Конструктор(ы)</h2>
 <a id="acef25d9c43198f5a63bd12bdf2df9f17" name="acef25d9c43198f5a63bd12bdf2df9f17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acef25d9c43198f5a63bd12bdf2df9f17">&#9670;&nbsp;</a></span>ledger()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acef25d9c43198f5a63bd12bdf2df9f17">&#9670;&nbsp;</a></span>ledger() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ledger::ledger </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::datastream&lt; const char * &gt;&#160;</td>
+          <td class="paramname"><em>ds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acef25d9c43198f5a63bd12bdf2df9f17" name="acef25d9c43198f5a63bd12bdf2df9f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acef25d9c43198f5a63bd12bdf2df9f17">&#9670;&nbsp;</a></span>ledger() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,8 +307,60 @@ $(document).ready(function(){initNavTree('classledger.html',''); initResizable()
 </div>
 </div>
 <h2 class="groupheader">Методы</h2>
+<a id="aa142f25741e0373a3a088105175c7908" name="aa142f25741e0373a3a088105175c7908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa142f25741e0373a3a088105175c7908">&#9670;&nbsp;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::add </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a708c6e83111e5a327b354c4ceb84025d" name="a708c6e83111e5a327b354c4ceb84025d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a708c6e83111e5a327b354c4ceb84025d">&#9670;&nbsp;</a></span>apply()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a708c6e83111e5a327b354c4ceb84025d">&#9670;&nbsp;</a></span>apply() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,19 +393,490 @@ $(document).ready(function(){initNavTree('classledger.html',''); initResizable()
 
 </div>
 </div>
+<a id="a708c6e83111e5a327b354c4ceb84025d" name="a708c6e83111e5a327b354c4ceb84025d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708c6e83111e5a327b354c4ceb84025d">&#9670;&nbsp;</a></span>apply() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::apply </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a062a0f127e7d1e308dfa14446297c23f" name="a062a0f127e7d1e308dfa14446297c23f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062a0f127e7d1e308dfa14446297c23f">&#9670;&nbsp;</a></span>auth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::auth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>writeoff_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b0337474c6a0ca07ef5748a7b826e66" name="a4b0337474c6a0ca07ef5748a7b826e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b0337474c6a0ca07ef5748a7b826e66">&#9670;&nbsp;</a></span>block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::block </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a971d74e015d6453b8843ec8e47ec1818" name="a971d74e015d6453b8843ec8e47ec1818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971d74e015d6453b8843ec8e47ec1818">&#9670;&nbsp;</a></span>complete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::complete </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>writeoff_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8748f71d0b84e6516c1a792437578e1" name="ae8748f71d0b84e6516c1a792437578e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8748f71d0b84e6516c1a792437578e1">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::create </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>document</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>writeoff_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6f61434651b708fdb0fcca32cff454e" name="ae6f61434651b708fdb0fcca32cff454e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f61434651b708fdb0fcca32cff454e">&#9670;&nbsp;</a></span>decline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::decline </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>writeoff_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7c09de7dd1c04dff02ebf1de7d40caa" name="ad7c09de7dd1c04dff02ebf1de7d40caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7c09de7dd1c04dff02ebf1de7d40caa">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4b04679302d4a6d815999ccd7e12560" name="aa4b04679302d4a6d815999ccd7e12560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4b04679302d4a6d815999ccd7e12560">&#9670;&nbsp;</a></span>sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::sub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad12411f63fbb70c3e2d0fba8ef22894e" name="ad12411f63fbb70c3e2d0fba8ef22894e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12411f63fbb70c3e2d0fba8ef22894e">&#9670;&nbsp;</a></span>unblock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::unblock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43057f8c21fd96c6a3a5f6d421fa51f7" name="a43057f8c21fd96c6a3a5f6d421fa51f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43057f8c21fd96c6a3a5f6d421fa51f7">&#9670;&nbsp;</a></span>writeoff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::writeoff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf91cf2b71c3245356c0d702732fb888" name="aaf91cf2b71c3245356c0d702732fb888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf91cf2b71c3245356c0d702732fb888">&#9670;&nbsp;</a></span>writeoffcnsl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ledger::writeoffcnsl </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>account_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>comment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li>cpp/ledger/<a class="el" href="ledger_8hpp_source.html">ledger.hpp</a></li>
-<li>cpp/ledger/src/common/<a class="el" href="add_8cpp.html">add.cpp</a></li>
+<li>cpp/ledger/<a class="el" href="ledger_2ledger_8hpp_source.html">ledger.hpp</a></li>
+<li>cpp/ledger2/<a class="el" href="ledger2_2ledger_8hpp_source.html">ledger.hpp</a></li>
+<li>cpp/ledger/src/common/<a class="el" href="src_2common_2add_8cpp.html">add.cpp</a></li>
 <li>cpp/ledger/src/common/<a class="el" href="ledger_2src_2common_2block_8cpp.html">block.cpp</a></li>
-<li>cpp/ledger/src/common/<a class="el" href="sub_8cpp.html">sub.cpp</a></li>
+<li>cpp/ledger/src/common/<a class="el" href="src_2common_2sub_8cpp.html">sub.cpp</a></li>
 <li>cpp/ledger/src/common/<a class="el" href="ledger_2src_2common_2unblock_8cpp.html">unblock.cpp</a></li>
-<li>cpp/ledger/src/common/<a class="el" href="writeoff_8cpp.html">writeoff.cpp</a></li>
-<li>cpp/ledger/src/common/<a class="el" href="writeoffcnsl_8cpp.html">writeoffcnsl.cpp</a></li>
+<li>cpp/ledger/src/common/<a class="el" href="src_2common_2writeoff_8cpp.html">writeoff.cpp</a></li>
+<li>cpp/ledger/src/common/<a class="el" href="src_2common_2writeoffcnsl_8cpp.html">writeoffcnsl.cpp</a></li>
 <li>cpp/ledger/src/migrate/<a class="el" href="ledger_2src_2migrate_2migrate_8cpp.html">migrate.cpp</a></li>
-<li>cpp/ledger/src/writeoff/<a class="el" href="auth_8cpp.html">auth.cpp</a></li>
+<li>cpp/ledger/src/writeoff/<a class="el" href="src_2writeoff_2auth_8cpp.html">auth.cpp</a></li>
 <li>cpp/ledger/src/writeoff/<a class="el" href="ledger_2src_2writeoff_2complete_8cpp.html">complete.cpp</a></li>
-<li>cpp/ledger/src/writeoff/<a class="el" href="create_8cpp.html">create.cpp</a></li>
+<li>cpp/ledger/src/writeoff/<a class="el" href="src_2writeoff_2create_8cpp.html">create.cpp</a></li>
 <li>cpp/ledger/src/writeoff/<a class="el" href="ledger_2src_2writeoff_2decline_8cpp.html">decline.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="_2src_2common_2add_8cpp.html">add.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="ledger2_2src_2common_2block_8cpp.html">block.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="_2src_2common_2sub_8cpp.html">sub.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="ledger2_2src_2common_2unblock_8cpp.html">unblock.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="_2src_2common_2writeoff_8cpp.html">writeoff.cpp</a></li>
+<li>cpp/ledger2/src/common/<a class="el" href="_2src_2common_2writeoffcnsl_8cpp.html">writeoffcnsl.cpp</a></li>
+<li>cpp/ledger2/src/migrate/<a class="el" href="ledger2_2src_2migrate_2migrate_8cpp.html">migrate.cpp</a></li>
+<li>cpp/ledger2/src/writeoff/<a class="el" href="_2src_2writeoff_2auth_8cpp.html">auth.cpp</a></li>
+<li>cpp/ledger2/src/writeoff/<a class="el" href="ledger2_2src_2writeoff_2complete_8cpp.html">complete.cpp</a></li>
+<li>cpp/ledger2/src/writeoff/<a class="el" href="_2src_2writeoff_2create_8cpp.html">create.cpp</a></li>
+<li>cpp/ledger2/src/writeoff/<a class="el" href="ledger2_2src_2writeoff_2decline_8cpp.html">decline.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

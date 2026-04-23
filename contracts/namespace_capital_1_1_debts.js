@@ -11,8 +11,8 @@ var namespace_capital_1_1_debts =
     [ "create_debt", "namespace_capital_1_1_debts.html#a8cc687d46479e31b5b92e4a8f81d9a3c", null ],
     [ "create_debt_agenda", "namespace_capital_1_1_debts.html#a0e4fc930ace484676de2087729cb6928", null ],
     [ "create_debt_approval", "namespace_capital_1_1_debts.html#adaaccd3abb718042faed762649c5beca", null ],
-    [ "delete_debt", "namespace_capital_1_1_debts.html#a8c26c12f2b4c36c3c20a55a15924e7db", null ],
+    [ "delete_debt", "namespace_capital_1_1_debts.html#ad397b596b1a51edeaaec37b9708b8a64", null ],
     [ "get_debt", "namespace_capital_1_1_debts.html#a106e7b2730e725427169b2392719e770", null ],
     [ "get_debt_or_fail", "namespace_capital_1_1_debts.html#a9228a15413a54f29f8ba1babfdb297fb", null ],
-    [ "update_debt_status", "namespace_capital_1_1_debts.html#ae1b7d9f6f3373aa7fa091a7ac3f8ddb3", null ]
+    [ "update_debt_status", "namespace_capital_1_1_debts.html#a5d37500aef4e7794b5ccecc201577601", null ]
 ];

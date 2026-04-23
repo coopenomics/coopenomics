@@ -7,11 +7,11 @@ var namespace_capital =
     [ "Debts", "namespace_capital_1_1_debts.html", "namespace_capital_1_1_debts" ],
     [ "Expenses", "namespace_capital_1_1_expenses.html", "namespace_capital_1_1_expenses" ],
     [ "Gamification", "namespace_capital_1_1_gamification.html", [
-      [ "add_energy_and_check_levelup", "namespace_capital_1_1_gamification.html#abdf37f65e1fea20f6958f94970cc6aff", null ],
+      [ "add_energy_and_check_levelup", "namespace_capital_1_1_gamification.html#a193d5617b1853983b02773751191c1cc", null ],
       [ "calculate_energy_gain", "namespace_capital_1_1_gamification.html#a1c744a36fd524f111ddffff45d6f0719", null ],
       [ "calculate_level_requirement", "namespace_capital_1_1_gamification.html#af85b4dead42afb5d53737cd28db7f068", null ],
-      [ "update_energy_with_decay", "namespace_capital_1_1_gamification.html#a7834e63161fb7f752a43f7e9442b157a", null ],
-      [ "update_gamification_from_segment", "namespace_capital_1_1_gamification.html#a76d8bdc97985b4f4b4f227a8a035f0b9", null ]
+      [ "update_energy_with_decay", "namespace_capital_1_1_gamification.html#a1c8744ce640b717fd1408495b5d0f6d0", null ],
+      [ "update_gamification_from_segment", "namespace_capital_1_1_gamification.html#a554f352dd460632bf790cab8b5cf6932", null ]
     ] ],
     [ "Invests", "namespace_capital_1_1_invests.html", "namespace_capital_1_1_invests" ],
     [ "Memo", "namespace_capital_1_1_memo.html", [
@@ -19,7 +19,6 @@ var namespace_capital =
       [ "get_approve_invest_memo", "namespace_capital_1_1_memo.html#ac332203ba24eae5cb77bf6395e959a55", null ],
       [ "get_approve_program_invest_memo", "namespace_capital_1_1_memo.html#ac27806e789ef8be1a59f17855d1aa301", null ],
       [ "get_convert_segment_to_capital_memo", "namespace_capital_1_1_memo.html#a505f94a1fcd6d0c847d48cc2c3324372", null ],
-      [ "get_convert_segment_to_project_wallet_memo", "namespace_capital_1_1_memo.html#a3dde2fac36961125c1792db17859b0d2", null ],
       [ "get_convert_segment_to_wallet_memo", "namespace_capital_1_1_memo.html#a80bdc0524b8d12dde449bbaff68f8c84", null ],
       [ "get_convert_to_blagorost_memo", "namespace_capital_1_1_memo.html#ad2cb7f9a881333c4fc0743113b53a7f0", null ],
       [ "get_convert_to_wallet_memo", "namespace_capital_1_1_memo.html#af3687272f0cdf8bef9b5a2561bea68a7", null ],
@@ -34,18 +33,15 @@ var namespace_capital =
       [ "get_program_invest_memo", "namespace_capital_1_1_memo.html#ad8ddb83d4c5ef53f12fa1ba4cce19731", null ],
       [ "get_program_property_memo", "namespace_capital_1_1_memo.html#af9c4811593f28292e235e49e1df0376b", null ],
       [ "get_program_withdraw_memo", "namespace_capital_1_1_memo.html#a810c02ee4e65f9ae3a1bfee56df2e3bf", null ],
-      [ "get_project_withdraw_memo", "namespace_capital_1_1_memo.html#a8f2e94a0563adece55f899215ae7e616", null ],
       [ "get_push_result_memo", "namespace_capital_1_1_memo.html#a1208ed47bf08bc1f6b3f0662145702c5", null ],
       [ "get_result_memo", "namespace_capital_1_1_memo.html#ae808e4458d95d1c8300f97d78503f190", null ],
       [ "get_result_withdraw_memo", "namespace_capital_1_1_memo.html#a5c7177388253db7ad1fa3a3711ae552f", null ],
       [ "get_return_unused_investments_memo", "namespace_capital_1_1_memo.html#a56a1dcb67972b284cb1c7d92389fad93", null ]
     ] ],
-    [ "ProgramInvests", "namespace_capital_1_1_program_invests.html", "namespace_capital_1_1_program_invests" ],
     [ "ProgramProperties", "namespace_capital_1_1_program_properties.html", "namespace_capital_1_1_program_properties" ],
     [ "ProgramWithdraw", "namespace_capital_1_1_program_withdraw.html", "namespace_capital_1_1_program_withdraw" ],
     [ "ProjectProperties", "namespace_capital_1_1_project_properties.html", "namespace_capital_1_1_project_properties" ],
     [ "Projects", "namespace_capital_1_1_projects.html", "namespace_capital_1_1_projects" ],
-    [ "ProjectWithdraw", "namespace_capital_1_1_project_withdraw.html", "namespace_capital_1_1_project_withdraw" ],
     [ "Results", "namespace_capital_1_1_results.html", "namespace_capital_1_1_results" ],
     [ "Segments", "namespace_capital_1_1_segments.html", "namespace_capital_1_1_segments" ],
     [ "State", "namespace_capital_1_1_state.html", [
@@ -60,12 +56,9 @@ var namespace_capital =
     ] ],
     [ "Wallets", "namespace_capital_1_1_wallets.html", [
       [ "get_capital_wallet_by_username", "namespace_capital_1_1_wallets.html#aadd9de8aec7067d27059b380561123f2", null ],
-      [ "get_capital_wallet_or_fail", "namespace_capital_1_1_wallets.html#aaba7c93b97799f39c993c7ebca3af6d1", null ],
+      [ "get_capital_wallet_or_fail", "namespace_capital_1_1_wallets.html#a75cf0d6b8f3bed8d6133d63d6676e5ec", null ],
       [ "get_program_capital_wallet", "namespace_capital_1_1_wallets.html#a7219cc7677bc65a9794207603ad6e26a", null ],
-      [ "get_project_wallet", "namespace_capital_1_1_wallets.html#a94929368dc749448e47388f27480065a", null ],
-      [ "get_project_wallet_or_fail", "namespace_capital_1_1_wallets.html#a8f304aa36944bec20ec024a5ebbbd58e", null ],
-      [ "upsert_capital_wallet", "namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b", null ],
-      [ "upsert_project_wallet", "namespace_capital_1_1_wallets.html#ac76b956b177f3835b662c0d058a7db91", null ]
+      [ "upsert_capital_wallet", "namespace_capital_1_1_wallets.html#a3c2842ea5e7103a7b575a91693b0552b", null ]
     ] ],
     [ "appendix", "struct_capital_1_1appendix.html", "struct_capital_1_1appendix" ],
     [ "capital_wallet", "struct_capital_1_1capital__wallet.html", "struct_capital_1_1capital__wallet" ],
@@ -81,8 +74,6 @@ var namespace_capital =
     [ "program_invest", "struct_capital_1_1program__invest.html", "struct_capital_1_1program__invest" ],
     [ "program_withdraw", "struct_capital_1_1program__withdraw.html", "struct_capital_1_1program__withdraw" ],
     [ "project", "struct_capital_1_1project.html", "struct_capital_1_1project" ],
-    [ "project_wallet", "struct_capital_1_1project__wallet.html", "struct_capital_1_1project__wallet" ],
-    [ "project_withdraw", "struct_capital_1_1project__withdraw.html", "struct_capital_1_1project__withdraw" ],
     [ "result", "struct_capital_1_1result.html", "struct_capital_1_1result" ],
     [ "vote", "struct_capital_1_1vote.html", "struct_capital_1_1vote" ],
     [ "vote_input", "struct_capital_1_1vote__input.html", "struct_capital_1_1vote__input" ],
@@ -97,11 +88,8 @@ var namespace_capital =
     [ "program_invest_index", "namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb", null ],
     [ "program_withdraws_index", "namespace_capital.html#a7a79f9a7dcf43721933385c38b818163", null ],
     [ "project_index", "namespace_capital.html#a11fe614fec0c1f370def261fc2cec426", null ],
-    [ "project_wallets_index", "namespace_capital.html#a248d42905ee7fbdd7c818f21134e62d5", null ],
-    [ "project_withdraws_index", "namespace_capital.html#ab7894e59d1f9f585f85217916f771e0d", null ],
     [ "result_index", "namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4", null ],
     [ "votes_index", "namespace_capital.html#a477f1081fcd9c5bb1af0d117ac7805c0", null ],
     [ "get_expense", "namespace_capital.html#a39477bc4ec8ee57ee4fc2e32b2d9db38", null ],
-    [ "get_program_withdraw", "namespace_capital.html#ac9b611f36123e8dcb07121850b719eb5", null ],
-    [ "get_project_withdraw", "namespace_capital.html#ac3e81b37cfb7bc46734cbc049bd929be", null ]
+    [ "get_program_withdraw", "namespace_capital.html#ac9b611f36123e8dcb07121850b719eb5", null ]
 ];

@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('group__public__capital__program__inves
   <div class="headertitle"><div class="title">Инвестиции в программу<div class="ingroups"><a class="el" href="group__public__capital.html">Контракт CAPITAL</a> &raquo; <a class="el" href="group__public__capital__processes.html">Процессы</a></div></div></div>
 </div><!--header-->
 <div class="contents">
-<p >Процесс управления инвестициями в программу "Капитализация", позволяющий участникам направлять средства в общую программу с последующим централизованным распределением по проектам. Процесс включает создание заявки на инвестирование, блокировку средств, одобрение или отклонение советом кооператива, а также перевод средств в программу или возврат инвестору.</p>
+<p >Процесс управления инвестициями в программу "Благорост", позволяющий участникам направлять средства в общую программу с последующим централизованным распределением по проектам. Зачёт денежной инвестиции выполняется одним действием <a class="el" href="group__public__capital__actions.html#ga050c50dd1507d8ff15fce60955201d2c">createpinv</a>: проверка заявления, списание с доступного остатка главного кошелька, зачисление на кошелёк программы (заблокировано) и пополнение глобального пула доступных программных инвестиций.</p>
 <h2><a class="anchor" id="autotoc_md123"></a>
 Диаграмма процесса</h2>
 <p > 
@@ -145,67 +145,42 @@ $(document).ready(function(){initNavTree('group__public__capital__program__inves
   sequenceDiagram
       participant I as Инвестор
       participant C as Capital Contract
-      participant S as Soviet Contract
       participant W as Wallet Contract
       
-      I->>C: 1. createpinv(программная инвестиция)
-      Note over C: Блокировка в главном кошельке
-      C->>S: 2. soviet::create_approval
-      
-      alt Принятие инвестиции
-          S->>C: 3. apprvpinv()
-          C->>W: 4. Главный кошелек → Кошелек программы
-          Note over C: Увеличение global_available_invest_pool
-      else Отклонение инвестиции
-          S->>C: 3. declpinv()
-          C->>W: 4. Разблокировка в главном кошельке
-      end
+      I->>C: createpinv(заявление, сумма)
+      Note over C,W: sub_available → add_blocked + кошелёк программы
   </div>
   </p>
 <h2><a class="anchor" id="autotoc_md124"></a>
 Пошаговое описание</h2>
 <h3><a class="anchor" id="autotoc_md125"></a>
-Шаг 1: Создание программной инвестиции</h3>
-<p ><a class="el" href="group__public__capital__actions.html#ga050c50dd1507d8ff15fce60955201d2c">Создание программной инвестиции</a></p>
-<p >Инвестор подаёт заявку на инвестирование в программу капитализации:</p>
-<p ><b>Входящий документ:</b> Заявление на зачёт части паевого взноса с главного кошелька на кошелек программы</p>
+Шаг 1: Программная инвестиция (полный зачёт)</h3>
+<p ><a class="el" href="group__public__capital__actions.html#ga050c50dd1507d8ff15fce60955201d2c">Создание и принятие программной инвестиции</a></p>
+<p >Инвестор подаёт заявление на зачёт части паевого взноса с главного кошелька на кошелёк программы. При успешной проверке документа и предусловий средства в той же транзакции переводятся в программу.</p>
+<p ><b>Входящий документ:</b> Заявление на зачёт части паевого взноса с главного кошелька на кошелёк программы</p>
 <p ><b>Предварительные условия:</b></p><ul>
 <li>Инвестор имеет достаточно средств в главном кошельке</li>
 <li>Инвестор имеет активный договор УХД</li>
-<li>Инвестор подписал соглашение об условиях программы "Капитализация"</li>
+<li>Инвестор подписал соглашение об условиях программы "Благорост"</li>
 </ul>
-<p ><b>Немедленные действия:</b> </p><dl class="section post"><dt>Постусловие</dt><dd>блокировка средств инвестора в главном кошельке</dd></dl>
-<p><b>Результат:</b> Создана заявка на программную инвестицию, средства заблокированы</p>
-<h3><a class="anchor" id="autotoc_md126"></a>
-Шаг 2: Принятие программной инвестиции</h3>
-<p ><a class="el" href="group__public__capital__actions.html#gaf15d15969725b8292b1f8361b842553d">Принятие программной инвестиции</a></p>
-<p >После одобрения председателем и авторизации советом инвестиция принимается в программу.</p>
-<p ><b>Входящий документ:</b> Принятое председателем входящее заявление на зачет от инвестора</p>
-<p ><b>Проводки по кошелькам:</b> </p><dl class="section post"><dt>Постусловие</dt><dd>списание заблокированных средств из главного кошелька </dd>
+<p ><b>Проводки по кошелькам:</b> </p><dl class="section post"><dt>Постусловие</dt><dd>списание с доступного остатка главного кошелька (программа «кошелёк пайщика») </dd>
 <dd>
-зачисление средств в кошелек программы</dd></dl>
+зачисление средств в кошелёк программы благорост (заблокировано на программе)</dd></dl>
 <p><b>Обновление глобального состояния:</b> </p><dl class="section post"><dt>Постусловие</dt><dd>увеличение global_available_invest_pool на сумму инвестиции</dd></dl>
-<p><b>Результат:</b> Средства переведены в программу и готовы к использованию</p>
-<h3><a class="anchor" id="autotoc_md127"></a>
-Шаг 3: Отклонение программной инвестиции (альтернативный путь)</h3>
-<p ><a class="el" href="group__public__capital__actions.html#ga02e305ad6991e369bc7db0139f283b26">Отклонение программной инвестиции</a></p>
-<p >При отклонении заявки:</p>
-<p ><b>Проводки:</b> </p><dl class="section post"><dt>Постусловие</dt><dd>разблокировка средств инвестора в главном кошельке</dd></dl>
-<p><b>Результат:</b> Средства возвращаются инвестору</p>
-<h2><a class="anchor" id="autotoc_md128"></a>
+<p><b>Результат:</b> Средства учтены в программе и доступны для последующей аллокации в проекты</p>
+<h2><a class="anchor" id="autotoc_md126"></a>
 Эффекты процесса</h2>
-<p >🔒 <a class="el" href="class_wallet.html#aa056d4916d6c307822a99eb1df594ee7" title="Блокирует средства на кошельке пользователя">Wallet::block_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a> на сумму инвестиций<br  />
-➖🔒 <a class="el" href="class_wallet.html#ae1679f268ed4f71409a9024166b29f2b" title="Уменьшает заблокированные средства кошелька пользователя">Wallet::sub_blocked_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a> на сумму инвестиций<br  />
-➕🔒 <a class="el" href="class_wallet.html#a52270ac18ff80063d910dec0a29e83f9" title="Добавляет заблокированные средства в баланс кошелька пользователя">Wallet::add_blocked_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a> на сумму инвестиций<br  />
+<p >➖🔓 <a class="el" href="class_wallet.html#a6f374b6f2d3ab4eb7b3fd9a5f08b0976">Wallet::sub_available_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a> на сумму инвестиций<br  />
+➕🔒 <a class="el" href="class_wallet.html#a52270ac18ff80063d910dec0a29e83f9">Wallet::add_blocked_funds</a> на кошельке <a class="el" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a> на сумму инвестиций<br  />
+Увеличение global_available_invest_pool (<a class="el" href="namespace_capital_1_1_core.html#afae1ce65d4f15b39d6b1885804f412f4" title="Добавляет средства в глобальный пул доступных инвестиций программы">Capital::Core::add_program_investment_funds</a>)<br  />
 </p>
-<h2><a class="anchor" id="autotoc_md129"></a>
+<h2><a class="anchor" id="autotoc_md127"></a>
 Документы процесса</h2>
 <p ><ul>
-<li>📄 Заявление на конвертацию из главного кошелька в кошелек программы "Капитализация"</li>
-<li>📄 Визирующая подпись председателя на заявл. на конвертацию </li>
+<li>📄 Заявление на конвертацию из главного кошелька в кошелёк программы "Благорост" </li>
 </ul>
 </p>
-<h2><a class="anchor" id="autotoc_md130"></a>
+<h2><a class="anchor" id="autotoc_md128"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__project__investment__process.html">Инвестиции в проект</a> - альтернативный способ финансирования </li>

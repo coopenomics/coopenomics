@@ -161,6 +161,9 @@ $(document).ready(function(){initNavTree('namespace_document.html',''); initResi
 <tr class="memitem:a110240016fd00fc973bac7429e4a406c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">has_document</a> (const std::vector&lt; <a class="el" href="struct_document_1_1named__document.html">named_document</a> &gt; &amp;docs, const name &amp;name)</td></tr>
 <tr class="memdesc:a110240016fd00fc973bac7429e4a406c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить наличие документа  <a href="namespace_document.html#a110240016fd00fc973bac7429e4a406c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a110240016fd00fc973bac7429e4a406c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa17ab922f4b1aae3294b18bc70bee97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_document.html#aaa17ab922f4b1aae3294b18bc70bee97">is_document_empty</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="structdocument.html">document</a>)</td></tr>
+<tr class="memdesc:aaa17ab922f4b1aae3294b18bc70bee97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, является ли документ пустым по хэшу  <a href="namespace_document.html#aaa17ab922f4b1aae3294b18bc70bee97">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa17ab922f4b1aae3294b18bc70bee97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
 <a id="a11a30750aad2714572a68661627f6a26" name="a11a30750aad2714572a68661627f6a26"></a>
@@ -311,6 +314,41 @@ $(document).ready(function(){initNavTree('namespace_document.html',''); initResi
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true если документ найден </dd></dl>
+
+</div>
+</div>
+<a id="aaa17ab922f4b1aae3294b18bc70bee97" name="aaa17ab922f4b1aae3294b18bc70bee97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa17ab922f4b1aae3294b18bc70bee97">&#9670;&nbsp;</a></span>is_document_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Document::is_document_empty </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdocument2.html">document2</a> &amp;&#160;</td>
+          <td class="paramname"><em>document</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверить, является ли документ пустым по хэшу </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">document</td><td>Документ для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если документ пустой (хэш равен empty_hash) </dd></dl>
 
 </div>
 </div>

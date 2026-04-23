@@ -5,7 +5,7 @@ var searchData=
   ['validate_5fparent_5fhash_2',['validate_parent_hash',['../namespace_capital_1_1_projects.html#ad41b6f24a338f8470b2a64873efff014',1,'Capital::Projects']]],
   ['validate_5fregistry_5fid_3',['validate_registry_id',['../namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e',1,'Document']]],
   ['verificate_4',['verificate',['../group__public__registrator__actions.html#ga4edb42d418f1b8d0a7ec00f06b9927ae',1,'registrator']]],
-  ['verify_5fdocument_5for_5ffail_5',['verify_document_or_fail',['../drafts_8hpp.html#a250c486fb09ccba9984e2fa2076d23de',1,'drafts.hpp']]],
+  ['verify_5fdocument_5for_5ffail_5',['verify_document_or_fail',['../document__core_8hpp.html#ae42f9f65e2c563b5ba2cffd7335119d5',1,'document_core.hpp']]],
   ['vote_6',['vote',['../group__public__meet__actions.html#gac2a9a5d69bc5abef215b9861adc5c00a',1,'meet::vote()'],['../classeosio__system_1_1eosio__system__tester.html#a843ab97e6090ad56369f85749542be5e',1,'eosio_system::eosio_system_tester::vote(const account_name &amp;voter, const std::vector&lt; account_name &gt; &amp;producers, const account_name &amp;proxy=name(0))'],['../classeosio__system_1_1eosio__system__tester.html#abf775b2f5f2422555e886f114f682e89',1,'eosio_system::eosio_system_tester::vote(const account_name &amp;voter, const std::vector&lt; account_name &gt; &amp;producers, std::string_view proxy)']]],
   ['voteagainst_7',['voteagainst',['../group__public__soviet__actions.html#gabbae331a03878970e215d96e825f7879',1,'soviet']]],
   ['votefor_8',['votefor',['../group__public__soviet__actions.html#ga9e0d2caadb056c12bea02dcab9ac8924',1,'soviet']]],

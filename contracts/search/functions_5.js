@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['edit_5fcontributor_0',['edit_contributor',['../namespace_capital_1_1_contributors.html#ae6bce53afc38cd60f9c05c9cb510be44',1,'Capital::Contributors']]],
-  ['edit_5fproject_1',['edit_project',['../namespace_capital_1_1_projects.html#a939fd8aac24dd10e39c1fe425c4cd6ba',1,'Capital::Projects']]],
+  ['edit_5fcontributor_0',['edit_contributor',['../namespace_capital_1_1_contributors.html#a8ca233f64184ac51e237f40028b17043',1,'Capital::Contributors']]],
+  ['edit_5fproject_1',['edit_project',['../namespace_capital_1_1_projects.html#ab7adc1c648926c436a877f6200e8c130',1,'Capital::Projects']]],
   ['editaddress_2',['editaddress',['../group__public__soviet__actions.html#ga7f4b8c38b31645b63c94b008ce2ffa06',1,'soviet']]],
   ['editbranch_3',['editbranch',['../group__public__branch__actions.html#ga0b216f390aabd065940383de3be71a15',1,'branch']]],
   ['editcontrib_4',['editcontrib',['../group__public__capital__actions.html#ga353769a38a7cc07735014825b8409ba2',1,'capital']]],
   ['editdraft_5',['editdraft',['../group__public__draft__actions.html#ga271bfc838fb9224ee99389a2892b1a6c',1,'draft']]],
   ['editfund_6',['editfund',['../classfund.html#a5bfea0aa805494588e426ea63980d31b',1,'fund']]],
   ['editprog_7',['editprog',['../group__public__soviet__actions.html#gaeb52fb6a74619c8130a79c2af552681c',1,'soviet']]],
-  ['editproj_8',['editproj',['../group__public__capital__actions.html#ga819b1040f25720c4e17814859f1578b2',1,'capital']]],
+  ['editproj_8',['editproj',['../group__public__capital__actions.html#ga02c915724660c7f029754c35ff8885b8',1,'capital']]],
   ['edittrans_9',['edittrans',['../group__public__draft__actions.html#gac03b4ddd429262515bc4f31ea5924ee6',1,'draft']]],
   ['emit_10',['emit',['../group__public__system__actions.html#ga7e80c965d15f6613db3ee04188d68af5',1,'eosiosystem::system_contract']]],
   ['enabranches_11',['enabranches',['../group__public__registrator__actions.html#ga0050c9df8577f3975429303c823d4ad2',1,'registrator']]],
@@ -20,7 +20,7 @@ var searchData=
   ['eosio_5fwrap_5ftester_17',['eosio_wrap_tester',['../classeosio__wrap__tester.html#a16769250ac07aefd4a9799dbd3888155',1,'eosio_wrap_tester']]],
   ['erase_18',['erase',['../eosio_8system__blockinfo__tests_8cpp.html#a94549b8e5cd43ffaf0c3f07ab82b401b',1,'eosio.system_blockinfo_tests.cpp']]],
   ['exec_19',['exec',['../group__public__wrap__actions.html#ga62a9871067de866d265fd69a5a4eac60',1,'eosio::wrap::exec()'],['../group__public__msig__actions.html#gac31b3d91892bf8fcdad8d6f123c278ff',1,'eosio::multisig::exec()'],['../group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139',1,'soviet::exec()']]],
-  ['expand_5fexpense_5fpool_20',['expand_expense_pool',['../namespace_capital_1_1_projects.html#acfaa29fac646d2c080c82d98ff4c0361',1,'Capital::Projects']]],
+  ['expand_5fexpense_5fpool_20',['expand_expense_pool',['../namespace_capital_1_1_projects.html#a6869a406dbc91906834aac1cdfc22ade',1,'Capital::Projects']]],
   ['expandexpnss_21',['expandexpnss',['../group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938',1,'capital']]],
   ['exppaycnfrm_22',['exppaycnfrm',['../group__public__capital__actions.html#ga9eaa4019848cfdb62530349fd282219d',1,'capital']]],
   ['extract_5fregistry_5fid_5ffrom_5fmeta_23',['extract_registry_id_from_meta',['../utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99',1,'utils.hpp']]]

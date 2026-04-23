@@ -138,7 +138,7 @@ $(document).ready(function(){initNavTree('group__public__capital__refresh__contr
 </div><!--header-->
 <div class="contents">
 <p >Процесс обновления энергии участника с учетом естественного снижения (decay) в системе геймификации "Уровень и Энергия".</p>
-<h2><a class="anchor" id="autotoc_md175"></a>
+<h2><a class="anchor" id="autotoc_md171"></a>
 Назначение процесса</h2>
 <p >Энергия участника естественным образом снижается со временем, стимулируя регулярную активность в кооперативе. Данный процесс обновляет текущее значение энергии участника на основе:</p><ul>
 <li>Времени с последнего обновления</li>
@@ -162,20 +162,20 @@ sequenceDiagram
     Capital_Contract-->>Кооператив: Энергия обновлена
 </div>
 </p>
-<h2><a class="anchor" id="autotoc_md176"></a>
+<h2><a class="anchor" id="autotoc_md172"></a>
 Пошаговое описание процесса</h2>
-<h3><a class="anchor" id="autotoc_md177"></a>
+<h3><a class="anchor" id="autotoc_md173"></a>
 Шаг 1: Авторизация кооператива</h3>
 <p ><b>Действие:</b> Проверка авторизации от имени кооператива</p>
 <p >Только кооператив может обновлять энергию участников. Это централизованная операция обслуживания системы геймификации.</p>
-<h3><a class="anchor" id="autotoc_md178"></a>
+<h3><a class="anchor" id="autotoc_md174"></a>
 Шаг 2: Получение данных участника</h3>
 <p ><b>Действие:</b> <a class="el" href="group__public__capital__actions.html#gac2ae11c00b7b0b1b5d5a93e68a96c14a">Обновление энергии участника</a></p>
 <p >Система загружает текущее состояние участника из таблицы contributors, включая:</p><ul>
 <li>Текущий уровень энергии (energy)</li>
 <li>Время последнего обновления (last_energy_update)</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md179"></a>
+<h3><a class="anchor" id="autotoc_md175"></a>
 Шаг 3: Расчет естественного снижения (decay)</h3>
 <p ><b>Формула расчета:</b></p>
 <ol type="1">
@@ -192,14 +192,14 @@ sequenceDiagram
 </p>
 </li>
 </ol>
-<h3><a class="anchor" id="autotoc_md180"></a>
+<h3><a class="anchor" id="autotoc_md176"></a>
 Шаг 4: Сохранение обновленного состояния</h3>
 <p ><b>Действие:</b> Запись в таблицу <a class="el" href="struct_capital_1_1contributor.html">Capital::contributor</a></p>
 <p >Система сохраняет:</p><ul>
 <li>Новое значение энергии</li>
 <li>Текущее время как last_energy_update</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md181"></a>
+<h2><a class="anchor" id="autotoc_md177"></a>
 Параметры геймификации</h2>
 <p >Процесс использует следующие параметры из конфигурации:</p>
 <table class="markdownTable">
@@ -213,14 +213,14 @@ sequenceDiagram
 <li><b>2.0%</b> - более агрессивное снижение за 50 дней</li>
 <li><b>0.5%</b> - мягкое снижение за 200 дней</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md182"></a>
+<h2><a class="anchor" id="autotoc_md178"></a>
 Взаимосвязь с другими процессами</h2>
 <p ><b>Прирост энергии:</b> Энергия увеличивается автоматически при:</p><ul>
 <li><a class="el" href="group__public__capital__result__process.html">Приёме результата в кооператив</a></li>
 </ul>
 <p >В этих процессах после обновления рейтингов вызывается Capital::Contributors::update_gamification_from_segment, который рассчитывает прирост энергии от вкладов.</p>
 <p ><b>Переход на новый уровень:</b> Когда энергия достигает 100%, участник автоматически переходит на следующий уровень и получает уведомление через действие <a class="el" href="group__public__capital__actions.html#ga9ece4beeea4575885aa0baade45ca855">lvlnotify</a>.</p>
-<h2><a class="anchor" id="autotoc_md183"></a>
+<h2><a class="anchor" id="autotoc_md179"></a>
 Примечания по использованию</h2>
 <ol type="1">
 <li><b>Регулярность обновления:</b> Рекомендуется вызывать это действие периодически (например, раз в день) для всех активных участников.</li>

@@ -1,9 +1,9 @@
 var class_wallet =
 [
-    [ "deposit", "struct_wallet_1_1deposit.html", "struct_wallet_1_1deposit" ],
-    [ "withdraw", "struct_wallet_1_1withdraw.html", "struct_wallet_1_1withdraw" ],
-    [ "deposits_index", "class_wallet.html#a0886b8bad8845297e28deb4115b8ae08", null ],
-    [ "withdraws_index", "class_wallet.html#a4c7a75eb1dc5dea0264a283e0cfc42c3", null ],
+    [ "deposit", "class_wallet.html#a4ee1eb3c4ff98b7f4bf4a6cac8b72daf", null ],
+    [ "deposits_index", "class_wallet.html#a4f3685344febac0e2922c89d22b81e99", null ],
+    [ "withdraw", "class_wallet.html#abe5043221ae9e6e02041b15c73719358", null ],
+    [ "withdraws_index", "class_wallet.html#a97786ee49d420f02f7da150cad39096c", null ],
     [ "add_available_funds", "class_wallet.html#a734c5f53ffb4470db6112c1664be6cbe", null ],
     [ "add_blocked_funds", "class_wallet.html#a52270ac18ff80063d910dec0a29e83f9", null ],
     [ "block_funds", "class_wallet.html#aa056d4916d6c307822a99eb1df594ee7", null ],

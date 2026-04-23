@@ -7,6 +7,7 @@ var group__public__ledger__consts =
       [ "CASH", "struct_ledger_1_1accounts.html#a84167396d6911538d45f6e2ed52837ef", null ],
       [ "CURRENT_YEAR_PROFIT", "struct_ledger_1_1accounts.html#aa6b7e5d91ad66dbadbb798d5dff782fb", null ],
       [ "DEBTORS_CREDITORS", "struct_ledger_1_1accounts.html#adcfdb7747c3015a86937efb376f8d654", null ],
+      [ "DELEGATE_FEES_FUND", "struct_ledger_1_1accounts.html#abd92983b09ca1ff99285f9e70fcd8d20", null ],
       [ "DEVELOPMENT_FUND", "struct_ledger_1_1accounts.html#aba5233598f654992de284625d79c55c2", null ],
       [ "ECONOMIC_ACTIVITY_FUND", "struct_ledger_1_1accounts.html#aba75b5d36f6cea77b1c2e0e8a6993d3f", null ],
       [ "ENTRANCE_FEES", "struct_ledger_1_1accounts.html#a4541208154372aa61bf4642ed2a66c7c", null ],

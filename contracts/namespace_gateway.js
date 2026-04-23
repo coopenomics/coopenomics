@@ -9,6 +9,6 @@ var namespace_gateway =
     [ "get_outcome", "namespace_gateway.html#a47f70c3eb62afe31d8b7644551a8df3b", null ],
     [ "get_valid_income_action", "namespace_gateway.html#a7acc8b2bc711b313ca82d432cd9e84aa", null ],
     [ "get_valid_outcome_action", "namespace_gateway.html#a29393787b1a856bf099856d74d2ee18e", null ],
-    [ "gateway_income_actions", "group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a", null ],
-    [ "gateway_outcome_actions", "group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce", null ]
+    [ "gateway_income_actions", "namespace_gateway.html#a5557e17c9b2fe878823af5c5d343261a", null ],
+    [ "gateway_outcome_actions", "namespace_gateway.html#a5677d45e7c58841918273a527b7be9ce", null ]
 ];

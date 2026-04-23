@@ -10,12 +10,12 @@ var namespace_capital_1_1_program_properties =
     [ "program_property", "struct_capital_1_1_program_properties_1_1program__property.html", "struct_capital_1_1_program_properties_1_1program__property" ],
     [ "program_property_index", "namespace_capital_1_1_program_properties.html#a50de3847257a257ae28cb32c679caba8", null ],
     [ "create_program_property_with_approve", "namespace_capital_1_1_program_properties.html#a2214ac81cfa9363bcafbe23fe1dfa132", null ],
-    [ "delete_program_property", "namespace_capital_1_1_program_properties.html#acf7fe2c192294ac99b6fbb11b9da1cb8", null ],
+    [ "delete_program_property", "namespace_capital_1_1_program_properties.html#af81000804e9d8b81dc05220c81837ad6", null ],
     [ "get_program_property", "namespace_capital_1_1_program_properties.html#a13430dc29f76a36f6205bcfd054b3bbc", null ],
     [ "get_program_property_or_fail", "namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b", null ],
-    [ "set_program_property_act1", "namespace_capital_1_1_program_properties.html#a00170a677e1015c704742e66326a19e9", null ],
-    [ "set_program_property_act2", "namespace_capital_1_1_program_properties.html#a00a6b94432de862a268bc3b93ea1a43c", null ],
-    [ "set_program_property_approved_statement", "namespace_capital_1_1_program_properties.html#a6a96498018a38059f27f16e1c3983484", null ],
-    [ "set_program_property_authorization", "namespace_capital_1_1_program_properties.html#a4e98197691b87967c9f1b82dcfbec533", null ],
-    [ "update_program_property_status", "namespace_capital_1_1_program_properties.html#a1a65969273d8023867a1dfb432e714be", null ]
+    [ "set_program_property_act1", "namespace_capital_1_1_program_properties.html#ae40b958da19641b16f1c304f970d23ed", null ],
+    [ "set_program_property_act2", "namespace_capital_1_1_program_properties.html#a74677d49f2f02c66b56c68e0f26df257", null ],
+    [ "set_program_property_approved_statement", "namespace_capital_1_1_program_properties.html#af5af64b15543809f4f5a1b4b949c8db1", null ],
+    [ "set_program_property_authorization", "namespace_capital_1_1_program_properties.html#aca5bb0c4005afae00f8e06d1842b1d12", null ],
+    [ "update_program_property_status", "namespace_capital_1_1_program_properties.html#a9b2e30b3e209c809ed89a91eecebe3a7", null ]
 ];

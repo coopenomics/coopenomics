@@ -1,8 +1,9 @@
 var crps_8cpp =
 [
-    [ "refresh_project_wallet_membership_rewards", "crps_8cpp.html#a59b6aa8590aec3ee1c9c847e8e1562db", null ],
-    [ "refresh_provisional_amount", "crps_8cpp.html#a8f0333a8d6ec8e258be4456f675d9da4", null ],
-    [ "refresh_segment", "crps_8cpp.html#ac44a84384c6cf5503e4ab90ef01d990f", null ],
-    [ "update_investor_used_amount", "crps_8cpp.html#ac876fc8c54b1664b5d1535e39d6ac68a", null ],
-    [ "upsert_investor_segment", "crps_8cpp.html#abdec5d69e19de3b2f808ccb31135da75", null ]
+    [ "check_segment_is_updated", "crps_8cpp.html#a0940892d7cc87627e4146b106ab5a898", null ],
+    [ "is_segment_updated", "crps_8cpp.html#a280f1881c70fb42a712cd738e9492bf2", null ],
+    [ "refresh_provisional_amount", "crps_8cpp.html#ab465d7a0e2df9a1f79a322aa31704b0c", null ],
+    [ "refresh_segment", "crps_8cpp.html#a3908c224915b087b0a2d61a595180016", null ],
+    [ "update_investor_used_amount", "crps_8cpp.html#afdf11d95254faeb5fb90fff64229adad", null ],
+    [ "upsert_investor_segment", "crps_8cpp.html#afc248e4871a8f622d136b732e9930366", null ]
 ];

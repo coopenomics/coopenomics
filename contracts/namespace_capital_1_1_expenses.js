@@ -8,9 +8,8 @@ var namespace_capital_1_1_expenses =
       [ "PAID", "namespace_capital_1_1_expenses_1_1_status.html#a7d2208e444eeabebf6af1869e08ca0d3", null ]
     ] ],
     [ "create_expense", "namespace_capital_1_1_expenses.html#a95636876d32d5a243f3bc4d4db5c4fca", null ],
-    [ "delete_expense", "namespace_capital_1_1_expenses.html#a15456c48b7f78972d70e599911e2a11a", null ],
+    [ "delete_expense", "namespace_capital_1_1_expenses.html#a43a91e3b1811bc3137a24fa105b78263", null ],
     [ "get_expense_or_fail", "namespace_capital_1_1_expenses.html#a82a6fb98531f374aa87567739a8fa236", null ],
-    [ "set_approved", "namespace_capital_1_1_expenses.html#acfbf7e472016f9c9ea18de2d13fa02bd", null ],
-    [ "set_authorized", "namespace_capital_1_1_expenses.html#af8c5fb449623bf862793d2d0ce9b9606", null ],
-    [ "update_status", "namespace_capital_1_1_expenses.html#aa158d63a8028682aa4fc62c493988365", null ]
+    [ "set_approved", "namespace_capital_1_1_expenses.html#a455c9ca413030d4e118dca7b4de12d61", null ],
+    [ "set_authorized", "namespace_capital_1_1_expenses.html#af808fdf483c3b09475e70ed06c1cd33b", null ]
 ];

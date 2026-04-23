@@ -145,7 +145,7 @@ $(document).ready(function(){initNavTree('draft_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eosio/system.hpp&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;eosio/time.hpp&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../lib/common.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../lib/index.hpp&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// Константы будут добавлены по мере необходимости</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -188,16 +188,15 @@ $(document).ready(function(){initNavTree('draft_8hpp_source.html',''); initResiz
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      payer = <a class="code hl_variable" href="consts_8hpp.html#a52724c95f23545d7efc4db16f3fe42ce">_system</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_function" href="accounts_8hpp.html#a66254c3afd684e0cf93702b7b64a90ce">get_cooperative_or_fail</a>(scope);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <a class="code hl_function" href="admins_8hpp.html#a1ae7be5fe4aa86080b1ac566ba9f7669">check_auth_or_fail</a>(<a class="code hl_variable" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a>, scope, username, <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <a class="code hl_function" href="table__registrator__coops_8hpp.html#a66254c3afd684e0cf93702b7b64a90ce">get_cooperative_or_fail</a>(scope);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <a class="code hl_function" href="auth_8hpp.html#a1ae7be5fe4aa86080b1ac566ba9f7669">check_auth_or_fail</a>(<a class="code hl_variable" href="consts_8hpp.html#a774dd561cf17ec65e59129b5ad8690d6">_draft</a>, scope, username, <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      payer = username;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    };</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> payer;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
-<div class="ttc" id="aaccounts_8hpp_html_a66254c3afd684e0cf93702b7b64a90ce"><div class="ttname"><a href="accounts_8hpp.html#a66254c3afd684e0cf93702b7b64a90ce">get_cooperative_or_fail</a></div><div class="ttdeci">cooperative2 get_cooperative_or_fail(eosio::name coopname)</div><div class="ttdef"><b>Definition:</b> accounts.hpp:394</div></div>
-<div class="ttc" id="aadmins_8hpp_html_a1ae7be5fe4aa86080b1ac566ba9f7669"><div class="ttname"><a href="admins_8hpp.html#a1ae7be5fe4aa86080b1ac566ba9f7669">check_auth_or_fail</a></div><div class="ttdeci">void check_auth_or_fail(eosio::name contract, eosio::name coopname, eosio::name admin, eosio::name action_name)</div><div class="ttdef"><b>Definition:</b> admins.hpp:3</div></div>
+<div class="ttc" id="aauth_8hpp_html_a1ae7be5fe4aa86080b1ac566ba9f7669"><div class="ttname"><a href="auth_8hpp.html#a1ae7be5fe4aa86080b1ac566ba9f7669">check_auth_or_fail</a></div><div class="ttdeci">void check_auth_or_fail(eosio::name contract, eosio::name coopname, eosio::name admin, eosio::name action_name)</div><div class="ttdef"><b>Definition:</b> auth.hpp:9</div></div>
 <div class="ttc" id="aclassdraft_html"><div class="ttname"><a href="classdraft.html">draft</a></div><div class="ttdoc">Константы контракта шаблонов документов</div><div class="ttdef"><b>Definition:</b> draft.hpp:45</div></div>
 <div class="ttc" id="aclassdraft_html_a6211378aa86663b73f963c48bfc63607"><div class="ttname"><a href="classdraft.html#a6211378aa86663b73f963c48bfc63607">draft::get_payer_and_check_auth_in_scope</a></div><div class="ttdeci">name get_payer_and_check_auth_in_scope(eosio::name scope, eosio::name username, eosio::name action)</div><div class="ttdef"><b>Definition:</b> draft.hpp:76</div></div>
 <div class="ttc" id="aclassdraft_html_acddc6da16e3d5a7076a7d5807fa975e4"><div class="ttname"><a href="classdraft.html#acddc6da16e3d5a7076a7d5807fa975e4">draft::draft</a></div><div class="ttdeci">draft(eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</div><div class="ttdef"><b>Definition:</b> draft.hpp:48</div></div>
@@ -208,8 +207,9 @@ $(document).ready(function(){initNavTree('draft_8hpp_source.html',''); initResiz
 <div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
 <div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
 <div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
-<div class="ttc" id="astructcounts__base_html"><div class="ttname"><a href="structcounts__base.html">counts_base</a></div><div class="ttdef"><b>Definition:</b> counts.hpp:1</div></div>
+<div class="ttc" id="astructcounts__base_html"><div class="ttname"><a href="structcounts__base.html">counts_base</a></div><div class="ttdef"><b>Definition:</b> table_counts.hpp:7</div></div>
 <div class="ttc" id="astructdraft_1_1counts_html"><div class="ttname"><a href="structdraft_1_1counts.html">draft::counts</a></div><div class="ttdef"><b>Definition:</b> draft.hpp:73</div></div>
+<div class="ttc" id="atable__registrator__coops_8hpp_html_a66254c3afd684e0cf93702b7b64a90ce"><div class="ttname"><a href="table__registrator__coops_8hpp.html#a66254c3afd684e0cf93702b7b64a90ce">get_cooperative_or_fail</a></div><div class="ttdeci">cooperative2 get_cooperative_or_fail(eosio::name coopname)</div><div class="ttdef"><b>Definition:</b> table_registrator_coops.hpp:74</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.9.1-->

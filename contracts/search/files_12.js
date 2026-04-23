@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unblock_2ecpp_0',['unblock.cpp',['../ledger_2src_2common_2unblock_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2participant_2unblock_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['unblock_2ecpp_0',['unblock.cpp',['../ledger_2src_2common_2unblock_8cpp.html',1,'(Глобальное пространство имён)'],['../ledger2_2src_2common_2unblock_8cpp.html',1,'(Глобальное пространство имён)'],['../soviet_2src_2participant_2unblock_8cpp.html',1,'(Глобальное пространство имён)']]],
   ['unblockbal_2ecpp_1',['unblockbal.cpp',['../unblockbal_8cpp.html',1,'']]],
   ['unpublish_2ecpp_2',['unpublish.cpp',['../unpublish_8cpp.html',1,'']]],
   ['unused_2dreturn_2ddocs_2edox_3',['unused-return-docs.dox',['../unused-return-docs_8dox.html',1,'']]],

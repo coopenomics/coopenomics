@@ -142,66 +142,46 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
 </div><!--header-->
 <div class="contents">
 
-<p>Таблица исходящих платежей хранит информацию об исходящих платежах из кооператива.  
- <a href="struct_gateway_1_1outcome.html#details">Подробнее...</a></p>
-
-<p><code>#include &lt;<a class="el" href="shared__gateway_8hpp_source.html">shared_gateway.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="table__gateway__outcomes_8hpp_source.html">table_gateway_outcomes.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a812c6f1c931b61d1de3a0e3f154bfadd"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a812c6f1c931b61d1de3a0e3f154bfadd">primary_key</a> () const</td></tr>
-<tr class="memdesc:a812c6f1c931b61d1de3a0e3f154bfadd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первичный ключ (1)  <a href="struct_gateway_1_1outcome.html#a812c6f1c931b61d1de3a0e3f154bfadd">Подробнее...</a><br /></td></tr>
 <tr class="separator:a812c6f1c931b61d1de3a0e3f154bfadd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa755624db6b4f2b8e1dda764cc49da8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#afa755624db6b4f2b8e1dda764cc49da8">by_username</a> () const</td></tr>
-<tr class="memdesc:afa755624db6b4f2b8e1dda764cc49da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс по имени пользователя (2)  <a href="struct_gateway_1_1outcome.html#afa755624db6b4f2b8e1dda764cc49da8">Подробнее...</a><br /></td></tr>
 <tr class="separator:afa755624db6b4f2b8e1dda764cc49da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcde77ed20d9e380a7ceb9857507a51e"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#afcde77ed20d9e380a7ceb9857507a51e">by_hash</a> () const</td></tr>
-<tr class="memdesc:afcde77ed20d9e380a7ceb9857507a51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс по хэшу платежа (3)  <a href="struct_gateway_1_1outcome.html#afcde77ed20d9e380a7ceb9857507a51e">Подробнее...</a><br /></td></tr>
 <tr class="separator:afcde77ed20d9e380a7ceb9857507a51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3d27af8c5540e68b8493ec1151c72a2"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#af3d27af8c5540e68b8493ec1151c72a2">by_status</a> () const</td></tr>
-<tr class="memdesc:af3d27af8c5540e68b8493ec1151c72a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Индекс по статусу платежа (4)  <a href="struct_gateway_1_1outcome.html#af3d27af8c5540e68b8493ec1151c72a2">Подробнее...</a><br /></td></tr>
 <tr class="separator:af3d27af8c5540e68b8493ec1151c72a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Открытые атрибуты</h2></td></tr>
 <tr class="memitem:a6e0cdb474e2744f75ea7e0b0c78f397f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a6e0cdb474e2744f75ea7e0b0c78f397f">id</a></td></tr>
-<tr class="memdesc:a6e0cdb474e2744f75ea7e0b0c78f397f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уникальный идентификатор записи исходящего платежа  <a href="struct_gateway_1_1outcome.html#a6e0cdb474e2744f75ea7e0b0c78f397f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6e0cdb474e2744f75ea7e0b0c78f397f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73d2c644d8189e360e0931d9306b683b"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a73d2c644d8189e360e0931d9306b683b">coopname</a></td></tr>
-<tr class="memdesc:a73d2c644d8189e360e0931d9306b683b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта кооператива, в контексте которого совершается платеж  <a href="struct_gateway_1_1outcome.html#a73d2c644d8189e360e0931d9306b683b">Подробнее...</a><br /></td></tr>
 <tr class="separator:a73d2c644d8189e360e0931d9306b683b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61aa4dea0659e204ba998ddc2f37264a"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a61aa4dea0659e204ba998ddc2f37264a">username</a></td></tr>
-<tr class="memdesc:a61aa4dea0659e204ba998ddc2f37264a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Имя аккаунта пользователя, совершившего платеж  <a href="struct_gateway_1_1outcome.html#a61aa4dea0659e204ba998ddc2f37264a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a61aa4dea0659e204ba998ddc2f37264a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd25617a273fe576fb58e7139f17a9c"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a4dd25617a273fe576fb58e7139f17a9c">type</a></td></tr>
-<tr class="memdesc:a4dd25617a273fe576fb58e7139f17a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип платежа  <a href="struct_gateway_1_1outcome.html#a4dd25617a273fe576fb58e7139f17a9c">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4dd25617a273fe576fb58e7139f17a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04e57cdf339a39e58353baaebae4c48f"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a04e57cdf339a39e58353baaebae4c48f">outcome_hash</a></td></tr>
-<tr class="memdesc:a04e57cdf339a39e58353baaebae4c48f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хэш исходящего платежа  <a href="struct_gateway_1_1outcome.html#a04e57cdf339a39e58353baaebae4c48f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a04e57cdf339a39e58353baaebae4c48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa79de8fda02d0c01224d18a0eb7bcfcf"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#aa79de8fda02d0c01224d18a0eb7bcfcf">callback_contract</a></td></tr>
-<tr class="memdesc:aa79de8fda02d0c01224d18a0eb7bcfcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контракт для вызова коллбэков  <a href="struct_gateway_1_1outcome.html#aa79de8fda02d0c01224d18a0eb7bcfcf">Подробнее...</a><br /></td></tr>
-<tr class="separator:aa79de8fda02d0c01224d18a0eb7bcfcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc631275495667823eed80c3289e6b8d"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#adc631275495667823eed80c3289e6b8d">confirm_callback</a></td></tr>
-<tr class="memdesc:adc631275495667823eed80c3289e6b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действие успеха  <a href="struct_gateway_1_1outcome.html#adc631275495667823eed80c3289e6b8d">Подробнее...</a><br /></td></tr>
-<tr class="separator:adc631275495667823eed80c3289e6b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa5df7f600f69b9849fc58b849589558"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#afa5df7f600f69b9849fc58b849589558">decline_callback</a></td></tr>
-<tr class="memdesc:afa5df7f600f69b9849fc58b849589558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действие отклонения  <a href="struct_gateway_1_1outcome.html#afa5df7f600f69b9849fc58b849589558">Подробнее...</a><br /></td></tr>
-<tr class="separator:afa5df7f600f69b9849fc58b849589558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58a548864088d7906ef865f855317cf5"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a58a548864088d7906ef865f855317cf5">callback_contract</a></td></tr>
+<tr class="separator:a58a548864088d7906ef865f855317cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e3cb775f3298a4178c20ebc9b8ae03"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a76e3cb775f3298a4178c20ebc9b8ae03">confirm_callback</a></td></tr>
+<tr class="separator:a76e3cb775f3298a4178c20ebc9b8ae03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ece46b201a6f7b96af17796b952435"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#aa8ece46b201a6f7b96af17796b952435">decline_callback</a></td></tr>
+<tr class="separator:aa8ece46b201a6f7b96af17796b952435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82651acf744e7f78ed5dad90a26abae8"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a82651acf744e7f78ed5dad90a26abae8">quantity</a></td></tr>
-<tr class="memdesc:a82651acf744e7f78ed5dad90a26abae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество средств во внутренней валюте  <a href="struct_gateway_1_1outcome.html#a82651acf744e7f78ed5dad90a26abae8">Подробнее...</a><br /></td></tr>
 <tr class="separator:a82651acf744e7f78ed5dad90a26abae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a069571292993fbcca477e2b013b53f1e"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a069571292993fbcca477e2b013b53f1e">status</a></td></tr>
-<tr class="memdesc:a069571292993fbcca477e2b013b53f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статус платежа  <a href="struct_gateway_1_1outcome.html#a069571292993fbcca477e2b013b53f1e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a069571292993fbcca477e2b013b53f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1befbb6bcdcffcf6e434aa1b87eedf"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html#a0f1befbb6bcdcffcf6e434aa1b87eedf">created_at</a> = current_time_point()</td></tr>
-<tr class="memdesc:a0f1befbb6bcdcffcf6e434aa1b87eedf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Время создания записи  <a href="struct_gateway_1_1outcome.html#a0f1befbb6bcdcffcf6e434aa1b87eedf">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0f1befbb6bcdcffcf6e434aa1b87eedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
-<div class="textblock"><p >Таблица исходящих платежей хранит информацию об исходящих платежах из кооператива. </p>
-<dl class="section user"><dt>Область памяти (scope): coopname</dt><dd></dd></dl>
-<dl class="section user"><dt>Имя таблицы (table): outcomes</dt><dd></dd></dl>
+<div class="textblock"><dl class="section user"><dt>table: outcomes</dt><dd></dd></dl>
 </div><h2 class="groupheader">Методы</h2>
 <a id="afcde77ed20d9e380a7ceb9857507a51e" name="afcde77ed20d9e380a7ceb9857507a51e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afcde77ed20d9e380a7ceb9857507a51e">&#9670;&nbsp;</a></span>by_hash()</h2>
@@ -225,8 +205,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Индекс по хэшу платежа (3) </p>
 
 </div>
 </div>
@@ -253,8 +231,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
 </table>
 </div><div class="memdoc">
 
-<p>Индекс по статусу платежа (4) </p>
-
 </div>
 </div>
 <a id="afa755624db6b4f2b8e1dda764cc49da8" name="afa755624db6b4f2b8e1dda764cc49da8"></a>
@@ -279,8 +255,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Индекс по имени пользователя (2) </p>
 
 </div>
 </div>
@@ -307,40 +281,34 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
 </table>
 </div><div class="memdoc">
 
-<p>Первичный ключ (1) </p>
-
 </div>
 </div>
 <h2 class="groupheader">Данные класса</h2>
-<a id="aa79de8fda02d0c01224d18a0eb7bcfcf" name="aa79de8fda02d0c01224d18a0eb7bcfcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa79de8fda02d0c01224d18a0eb7bcfcf">&#9670;&nbsp;</a></span>callback_contract</h2>
+<a id="a58a548864088d7906ef865f855317cf5" name="a58a548864088d7906ef865f855317cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58a548864088d7906ef865f855317cf5">&#9670;&nbsp;</a></span>callback_contract</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">name Gateway::outcome::callback_contract</td>
+          <td class="memname">eosio::name Gateway::outcome::callback_contract</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Контракт для вызова коллбэков </p>
-
 </div>
 </div>
-<a id="adc631275495667823eed80c3289e6b8d" name="adc631275495667823eed80c3289e6b8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc631275495667823eed80c3289e6b8d">&#9670;&nbsp;</a></span>confirm_callback</h2>
+<a id="a76e3cb775f3298a4178c20ebc9b8ae03" name="a76e3cb775f3298a4178c20ebc9b8ae03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e3cb775f3298a4178c20ebc9b8ae03">&#9670;&nbsp;</a></span>confirm_callback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">name Gateway::outcome::confirm_callback</td>
+          <td class="memname">eosio::name Gateway::outcome::confirm_callback</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Действие успеха </p>
 
 </div>
 </div>
@@ -356,8 +324,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Имя аккаунта кооператива, в контексте которого совершается платеж </p>
-
 </div>
 </div>
 <a id="a0f1befbb6bcdcffcf6e434aa1b87eedf" name="a0f1befbb6bcdcffcf6e434aa1b87eedf"></a>
@@ -372,23 +338,19 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Время создания записи </p>
-
 </div>
 </div>
-<a id="afa5df7f600f69b9849fc58b849589558" name="afa5df7f600f69b9849fc58b849589558"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa5df7f600f69b9849fc58b849589558">&#9670;&nbsp;</a></span>decline_callback</h2>
+<a id="aa8ece46b201a6f7b96af17796b952435" name="aa8ece46b201a6f7b96af17796b952435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ece46b201a6f7b96af17796b952435">&#9670;&nbsp;</a></span>decline_callback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">name Gateway::outcome::decline_callback</td>
+          <td class="memname">eosio::name Gateway::outcome::decline_callback</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Действие отклонения </p>
 
 </div>
 </div>
@@ -404,8 +366,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Уникальный идентификатор записи исходящего платежа </p>
-
 </div>
 </div>
 <a id="a04e57cdf339a39e58353baaebae4c48f" name="a04e57cdf339a39e58353baaebae4c48f"></a>
@@ -419,8 +379,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Хэш исходящего платежа </p>
 
 </div>
 </div>
@@ -436,8 +394,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Количество средств во внутренней валюте </p>
-
 </div>
 </div>
 <a id="a069571292993fbcca477e2b013b53f1e" name="a069571292993fbcca477e2b013b53f1e"></a>
@@ -451,8 +407,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Статус платежа </p>
 
 </div>
 </div>
@@ -468,8 +422,6 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Тип платежа </p>
-
 </div>
 </div>
 <a id="a61aa4dea0659e204ba998ddc2f37264a" name="a61aa4dea0659e204ba998ddc2f37264a"></a>
@@ -484,12 +436,10 @@ $(document).ready(function(){initNavTree('struct_gateway_1_1outcome.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p>Имя аккаунта пользователя, совершившего платеж </p>
-
 </div>
 </div>
 <hr/>Объявления и описания членов структуры находятся в файле:<ul>
-<li>cpp/lib/<a class="el" href="shared__gateway_8hpp_source.html">shared_gateway.hpp</a></li>
+<li>cpp/lib/domain/<a class="el" href="table__gateway__outcomes_8hpp_source.html">table_gateway_outcomes.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

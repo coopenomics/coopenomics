@@ -145,38 +145,36 @@ $(document).ready(function(){initNavTree('namespace_approver.html',''); initResi
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_approver_1_1approval.html">approval</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица утверждений  <a href="struct_approver_1_1approval.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
-<tr class="memitem:abb7ab0a4f7048134a795bc59d77100e9"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;approvals&quot;_n, <a class="el" href="struct_approver_1_1approval.html">approval</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, checksum256, &amp;<a class="el" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">approval::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">approval::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">approval::by_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">approvals_index</a></td></tr>
-<tr class="separator:abb7ab0a4f7048134a795bc59d77100e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f9736ba63b426a56272410de54e28f"><td class="memItemLeft" align="right" valign="top">typedef multi_index&lt; &quot;approvals&quot;_n, <a class="el" href="struct_approver_1_1approval.html">approval</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, checksum256, &amp;<a class="el" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">approval::by_hash</a> &gt; &gt;, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">approval::by_username</a> &gt; &gt;, indexed_by&lt;&quot;bytype&quot;_n, const_mem_fun&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">approval::by_type</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#a03f9736ba63b426a56272410de54e28f">approvals_index</a></td></tr>
+<tr class="separator:a03f9736ba63b426a56272410de54e28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a9e8214ddc8724f38c858d65c5cdaf627"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#a9e8214ddc8724f38c858d65c5cdaf627">get_approval</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="separator:a9e8214ddc8724f38c858d65c5cdaf627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fbef917f8e63378756a5c775953321"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_approver.html#aa1fbef917f8e63378756a5c775953321">get_approval</a> (name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="separator:aa1fbef917f8e63378756a5c775953321"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
-<a id="abb7ab0a4f7048134a795bc59d77100e9" name="abb7ab0a4f7048134a795bc59d77100e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb7ab0a4f7048134a795bc59d77100e9">&#9670;&nbsp;</a></span>approvals_index</h2>
+<a id="a03f9736ba63b426a56272410de54e28f" name="a03f9736ba63b426a56272410de54e28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f9736ba63b426a56272410de54e28f">&#9670;&nbsp;</a></span>approvals_index</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef eosio::multi_index&lt; &quot;approvals&quot;_n, <a class="el" href="struct_approver_1_1approval.html">approval</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, checksum256, &amp;<a class="el" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">approval::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">approval::by_username</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">approval::by_type</a>&gt; &gt; &gt; <a class="el" href="namespace_approver.html#abb7ab0a4f7048134a795bc59d77100e9">Approver::approvals_index</a></td>
+          <td class="memname">typedef multi_index&lt; &quot;approvals&quot;_n, <a class="el" href="struct_approver_1_1approval.html">approval</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, checksum256, &amp;<a class="el" href="struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641">approval::by_hash</a>&gt; &gt;, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711">approval::by_username</a>&gt; &gt;, indexed_by&lt;&quot;bytype&quot;_n, const_mem_fun&lt;<a class="el" href="struct_approver_1_1approval.html">approval</a>, uint64_t, &amp;<a class="el" href="struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f">approval::by_type</a>&gt; &gt; &gt; <a class="el" href="namespace_approver.html#a03f9736ba63b426a56272410de54e28f">Approver::approvals_index</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Мультииндекс для доступа и манипуляции данными таблицы <code>approvals</code> </p>
 
 </div>
 </div>
 <h2 class="groupheader">Функции</h2>
-<a id="a9e8214ddc8724f38c858d65c5cdaf627" name="a9e8214ddc8724f38c858d65c5cdaf627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e8214ddc8724f38c858d65c5cdaf627">&#9670;&nbsp;</a></span>get_approval()</h2>
+<a id="aa1fbef917f8e63378756a5c775953321" name="aa1fbef917f8e63378756a5c775953321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fbef917f8e63378756a5c775953321">&#9670;&nbsp;</a></span>get_approval()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +185,7 @@ $(document).ready(function(){initNavTree('namespace_approver.html',''); initResi
         <tr>
           <td class="memname">std::optional&lt; <a class="el" href="struct_approver_1_1approval.html">approval</a> &gt; Approver::get_approval </td>
           <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramtype">name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
         </tr>
         <tr>

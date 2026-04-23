@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/core/marketplace/marketplace.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('lib_2core_2marketplace_2marketplace_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">marketplace.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_2core_2marketplace_2marketplace_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;eosio/crypto.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../../consts.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../../domain/document_core.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="lib_2core_2marketplace_2marketplace_8hpp.html#a184d8d3df4538ee1f28ef2ccb588b8ea">   13</a></span><span class="preprocessor">#define AUTH_SIGNATURE eosio::name coopname, checksum256 request_hash, document2 authorization</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="lib_2core_2marketplace_2marketplace_8hpp.html#a59672fc5ccc28c5dcfe6f7c2f5f7c312">   15</a></span><span class="keyword">using</span> <a class="code hl_typedef" href="lib_2core_2marketplace_2marketplace_8hpp.html#a59672fc5ccc28c5dcfe6f7c2f5f7c312">auth_interface</a> = void(<a class="code hl_define" href="lib_2core_2marketplace_2marketplace_8hpp.html#a184d8d3df4538ee1f28ef2ccb588b8ea">AUTH_SIGNATURE</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespace_marketplace.html">   17</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_marketplace.html">Marketplace</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">   21</a></span><span class="keyword">static</span> <span class="keyword">const</span> std::set&lt;eosio::name&gt; <a class="code hl_variable" href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">marketplace_callback_actions</a> = {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="stringliteral">&quot;authoffs2c&quot;</span>_n,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="stringliteral">&quot;authoffc2r&quot;</span>_n,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="stringliteral">&quot;authordcont&quot;</span>_n,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="stringliteral">&quot;authordret&quot;</span>_n,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="stringliteral">&quot;declineacc&quot;</span>_n,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>};</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">   29</a></span><span class="keyword">inline</span> eosio::name <a class="code hl_function" href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">get_valid_marketplace_action</a>(<span class="keyword">const</span> eosio::name &amp;<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  eosio::check(<a class="code hl_variable" href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">marketplace_callback_actions</a>.contains(<a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>), <span class="stringliteral">&quot;Недопустимое имя действия marketplace&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">   34</a></span><span class="keyword">static</span> std::optional&lt;request&gt; <a class="code hl_function" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">get_request_by_hash</a>(eosio::name coopname, checksum256 request_hash) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_typedef" href="namespace_marketplace.html#a394acfbed2ec6056d1c602e52f19abd6">requests_index</a> requests(<a class="code hl_variable" href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">_marketplace</a>, coopname.value);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">auto</span> idx = requests.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">auto</span> req = idx.find(request_hash);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (req != idx.end()) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> *req;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">   45</a></span><span class="keyword">static</span> std::optional&lt;shipment&gt; <a class="code hl_function" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">get_shipment_by_hash</a>(eosio::name coopname, checksum256 shipment_hash) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_typedef" href="namespace_marketplace.html#a1cc8355ba4e8ece81c220689c22b58b2">shipments_index</a> shipments(<a class="code hl_variable" href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">_marketplace</a>, coopname.value);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keyword">auto</span> idx = shipments.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keyword">auto</span> ship = idx.find(shipment_hash);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">if</span> (ship != idx.end()) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">return</span> *ship;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">   56</a></span><span class="keyword">static</span> <a class="code hl_struct" href="struct_marketplace_1_1request.html">request</a> <a class="code hl_function" href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">get_request_by_hash_or_fail</a>(eosio::name coopname, checksum256 request_hash,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                                           <span class="keyword">const</span> std::string &amp;error_msg = <span class="stringliteral">&quot;Заявка не найдена по хэшу&quot;</span>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">auto</span> request_opt = <a class="code hl_function" href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">get_request_by_hash</a>(coopname, request_hash);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  eosio::check(request_opt.has_value(), error_msg);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordflow">return</span> *request_opt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">   63</a></span><span class="keyword">static</span> <a class="code hl_struct" href="struct_marketplace_1_1shipment.html">shipment</a> <a class="code hl_function" href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">get_shipment_by_hash_or_fail</a>(eosio::name coopname, checksum256 shipment_hash,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                             <span class="keyword">const</span> std::string &amp;error_msg = <span class="stringliteral">&quot;Перевозка не найдена по хэшу&quot;</span>) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keyword">auto</span> shipment_opt = <a class="code hl_function" href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">get_shipment_by_hash</a>(coopname, shipment_hash);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  eosio::check(shipment_opt.has_value(), error_msg);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordflow">return</span> *shipment_opt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html">   70</a></span><span class="keyword">namespace </span>DocumentNames {</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a56e91518069fa90868b9ede38a648bd9">   71</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a56e91518069fa90868b9ede38a648bd9">RETURN_STMT</a> = <span class="stringliteral">&quot;returnstmt&quot;</span>_n;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a802aeafc27039c6cf29cee1945bf361d">   72</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a802aeafc27039c6cf29cee1945bf361d">CONVERT_FROM</a> = <span class="stringliteral">&quot;convertfrom&quot;</span>_n;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a98475502cfab1b293cc01ea3dee9fa07">   73</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a98475502cfab1b293cc01ea3dee9fa07">CONVERT_TO</a> = <span class="stringliteral">&quot;convertto&quot;</span>_n;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a529f721b9d537dbe880ee321b9f3682e">   74</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a529f721b9d537dbe880ee321b9f3682e">CONTRIB_STMT</a> = <span class="stringliteral">&quot;contribstmt&quot;</span>_n;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#ab65d2dee379971651a83bec9f5b0977a">   75</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#ab65d2dee379971651a83bec9f5b0977a">CONTRIB_AUTH</a> = <span class="stringliteral">&quot;contribauth&quot;</span>_n;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#aabcae3eea69bca7d4fad1e0799cd64fb">   76</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#aabcae3eea69bca7d4fad1e0799cd64fb">RETURN_AUTH</a> = <span class="stringliteral">&quot;returnauth&quot;</span>_n;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#af84378f28abf3a8bde4257f35a273f57">   77</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#af84378f28abf3a8bde4257f35a273f57">RECEIVE_ACT</a> = <span class="stringliteral">&quot;receiveact&quot;</span>_n;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a784626145463e8b1bb8fee9fa30b2aeb">   78</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a784626145463e8b1bb8fee9fa30b2aeb">RECEIVE_ACT_CONF</a> = <span class="stringliteral">&quot;receiveconf&quot;</span>_n;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#ac562bf575114707060dcde4629879f01">   79</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#ac562bf575114707060dcde4629879f01">TRANSPORT1</a> = <span class="stringliteral">&quot;transport1&quot;</span>_n;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a9225b9f084348800bfb7b46e00554394">   80</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a9225b9f084348800bfb7b46e00554394">TRANSPORT2</a> = <span class="stringliteral">&quot;transport2&quot;</span>_n;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#aa74bc68e08fdd178c5689805e6228a42">   81</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#aa74bc68e08fdd178c5689805e6228a42">TRANSPORT3</a> = <span class="stringliteral">&quot;transport3&quot;</span>_n;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#aa1dd85007edad2c2a0b259dbaaa84f63">   82</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#aa1dd85007edad2c2a0b259dbaaa84f63">TRANSPORT4</a> = <span class="stringliteral">&quot;transport4&quot;</span>_n;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#aeb017b4dff489190329d258e8681e2e1">   83</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#aeb017b4dff489190329d258e8681e2e1">SUPPLY_ACT</a> = <span class="stringliteral">&quot;supplyact&quot;</span>_n;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a7133fd2bdc92664eb7f5107f740d7f57">   84</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a7133fd2bdc92664eb7f5107f740d7f57">SUPPLY_ACT_CONF</a> = <span class="stringliteral">&quot;supplyconf&quot;</span>_n;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a51a87e32bee4541f6b891a9a43b44f6a">   85</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a51a87e32bee4541f6b891a9a43b44f6a">SHIPMENT_ACT</a> = <span class="stringliteral">&quot;shipmentact&quot;</span>_n;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#adb894b5f67ac92eba524e3cc0fcbe036">   86</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#adb894b5f67ac92eba524e3cc0fcbe036">DELIVERY_ACT</a> = <span class="stringliteral">&quot;deliveryact&quot;</span>_n;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a8fcd66fa013ae88a0676e5d4b556f350">   88</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a8fcd66fa013ae88a0676e5d4b556f350">SHIPMENT_SEND_ACT</a> = <span class="stringliteral">&quot;shsendact&quot;</span>_n;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a7705338ceedb5f99dec1e5b9d7a1a98d">   89</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a7705338ceedb5f99dec1e5b9d7a1a98d">SHIPMENT_LOADING_ACT</a> = <span class="stringliteral">&quot;shloadact&quot;</span>_n;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a44d69e9b1a0f3d70b86575170645cfb2">   90</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a44d69e9b1a0f3d70b86575170645cfb2">SHIPMENT_ARRIVE_ACT</a> = <span class="stringliteral">&quot;sharriveact&quot;</span>_n;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a6135871ab50074acb25522505a485a95">   91</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a6135871ab50074acb25522505a485a95">SHIPMENT_RECV_ACT</a> = <span class="stringliteral">&quot;shrecvact&quot;</span>_n;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a8b2c12ec75feb6c430f6d4eba801b526">   93</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a8b2c12ec75feb6c430f6d4eba801b526">WDISPUTE</a> = <span class="stringliteral">&quot;wdispute&quot;</span>_n;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#ae10188a75c3042878cb7fdabaa25b752">   94</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#ae10188a75c3042878cb7fdabaa25b752">WRETURN_AUTH</a> = <span class="stringliteral">&quot;wreturnauth&quot;</span>_n;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#ab32b3314d506989ba1735c0830c18db5">   95</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#ab32b3314d506989ba1735c0830c18db5">WSUPPLY_AUTH</a> = <span class="stringliteral">&quot;wsupplyauth&quot;</span>_n;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a8ffcae1f1b63286c308febd1c673e658">   96</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a8ffcae1f1b63286c308febd1c673e658">WRETURN_ACT</a> = <span class="stringliteral">&quot;wreturnact&quot;</span>_n;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#af640f68f6a95ae3f1c57c486f303e6a3">   97</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#af640f68f6a95ae3f1c57c486f303e6a3">WOFFER_ACT</a> = <span class="stringliteral">&quot;wofferact&quot;</span>_n;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_document_names.html#a59340cee104cb7440a681720d813d8bc">   98</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keyword">const</span> name <a class="code hl_variable" href="namespace_marketplace_1_1_document_names.html#a59340cee104cb7440a681720d813d8bc">WACCEPT_ACT</a> = <span class="stringliteral">&quot;wacceptact&quot;</span>_n;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>} <span class="comment">// namespace DocumentNames</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace Marketplace</span></div>
+<div class="ttc" id="aconsts_8hpp_html_afeb0e2ab01520072c8305917005018a1"><div class="ttname"><a href="consts_8hpp.html#afeb0e2ab01520072c8305917005018a1">_marketplace</a></div><div class="ttdeci">static constexpr eosio::name _marketplace</div><div class="ttdef"><b>Definition:</b> consts.hpp:155</div></div>
+<div class="ttc" id="alib_2core_2marketplace_2marketplace_8hpp_html_a184d8d3df4538ee1f28ef2ccb588b8ea"><div class="ttname"><a href="lib_2core_2marketplace_2marketplace_8hpp.html#a184d8d3df4538ee1f28ef2ccb588b8ea">AUTH_SIGNATURE</a></div><div class="ttdeci">#define AUTH_SIGNATURE</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:13</div></div>
+<div class="ttc" id="alib_2core_2marketplace_2marketplace_8hpp_html_a59672fc5ccc28c5dcfe6f7c2f5f7c312"><div class="ttname"><a href="lib_2core_2marketplace_2marketplace_8hpp.html#a59672fc5ccc28c5dcfe6f7c2f5f7c312">auth_interface</a></div><div class="ttdeci">void(AUTH_SIGNATURE) auth_interface</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:15</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a44d69e9b1a0f3d70b86575170645cfb2"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a44d69e9b1a0f3d70b86575170645cfb2">Marketplace::DocumentNames::SHIPMENT_ARRIVE_ACT</a></div><div class="ttdeci">static constexpr const name SHIPMENT_ARRIVE_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:90</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a51a87e32bee4541f6b891a9a43b44f6a"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a51a87e32bee4541f6b891a9a43b44f6a">Marketplace::DocumentNames::SHIPMENT_ACT</a></div><div class="ttdeci">static constexpr const name SHIPMENT_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:85</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a529f721b9d537dbe880ee321b9f3682e"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a529f721b9d537dbe880ee321b9f3682e">Marketplace::DocumentNames::CONTRIB_STMT</a></div><div class="ttdeci">static constexpr const name CONTRIB_STMT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:74</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a56e91518069fa90868b9ede38a648bd9"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a56e91518069fa90868b9ede38a648bd9">Marketplace::DocumentNames::RETURN_STMT</a></div><div class="ttdeci">static constexpr const name RETURN_STMT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:71</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a59340cee104cb7440a681720d813d8bc"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a59340cee104cb7440a681720d813d8bc">Marketplace::DocumentNames::WACCEPT_ACT</a></div><div class="ttdeci">static constexpr const name WACCEPT_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:98</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a6135871ab50074acb25522505a485a95"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a6135871ab50074acb25522505a485a95">Marketplace::DocumentNames::SHIPMENT_RECV_ACT</a></div><div class="ttdeci">static constexpr const name SHIPMENT_RECV_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:91</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a7133fd2bdc92664eb7f5107f740d7f57"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a7133fd2bdc92664eb7f5107f740d7f57">Marketplace::DocumentNames::SUPPLY_ACT_CONF</a></div><div class="ttdeci">static constexpr const name SUPPLY_ACT_CONF</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:84</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a7705338ceedb5f99dec1e5b9d7a1a98d"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a7705338ceedb5f99dec1e5b9d7a1a98d">Marketplace::DocumentNames::SHIPMENT_LOADING_ACT</a></div><div class="ttdeci">static constexpr const name SHIPMENT_LOADING_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:89</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a784626145463e8b1bb8fee9fa30b2aeb"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a784626145463e8b1bb8fee9fa30b2aeb">Marketplace::DocumentNames::RECEIVE_ACT_CONF</a></div><div class="ttdeci">static constexpr const name RECEIVE_ACT_CONF</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:78</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a802aeafc27039c6cf29cee1945bf361d"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a802aeafc27039c6cf29cee1945bf361d">Marketplace::DocumentNames::CONVERT_FROM</a></div><div class="ttdeci">static constexpr const name CONVERT_FROM</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:72</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a8b2c12ec75feb6c430f6d4eba801b526"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a8b2c12ec75feb6c430f6d4eba801b526">Marketplace::DocumentNames::WDISPUTE</a></div><div class="ttdeci">static constexpr const name WDISPUTE</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:93</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a8fcd66fa013ae88a0676e5d4b556f350"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a8fcd66fa013ae88a0676e5d4b556f350">Marketplace::DocumentNames::SHIPMENT_SEND_ACT</a></div><div class="ttdeci">static constexpr const name SHIPMENT_SEND_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:88</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a8ffcae1f1b63286c308febd1c673e658"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a8ffcae1f1b63286c308febd1c673e658">Marketplace::DocumentNames::WRETURN_ACT</a></div><div class="ttdeci">static constexpr const name WRETURN_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:96</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a9225b9f084348800bfb7b46e00554394"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a9225b9f084348800bfb7b46e00554394">Marketplace::DocumentNames::TRANSPORT2</a></div><div class="ttdeci">static constexpr const name TRANSPORT2</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:80</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_a98475502cfab1b293cc01ea3dee9fa07"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#a98475502cfab1b293cc01ea3dee9fa07">Marketplace::DocumentNames::CONVERT_TO</a></div><div class="ttdeci">static constexpr const name CONVERT_TO</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:73</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_aa1dd85007edad2c2a0b259dbaaa84f63"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#aa1dd85007edad2c2a0b259dbaaa84f63">Marketplace::DocumentNames::TRANSPORT4</a></div><div class="ttdeci">static constexpr const name TRANSPORT4</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:82</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_aa74bc68e08fdd178c5689805e6228a42"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#aa74bc68e08fdd178c5689805e6228a42">Marketplace::DocumentNames::TRANSPORT3</a></div><div class="ttdeci">static constexpr const name TRANSPORT3</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:81</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_aabcae3eea69bca7d4fad1e0799cd64fb"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#aabcae3eea69bca7d4fad1e0799cd64fb">Marketplace::DocumentNames::RETURN_AUTH</a></div><div class="ttdeci">static constexpr const name RETURN_AUTH</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:76</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_ab32b3314d506989ba1735c0830c18db5"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#ab32b3314d506989ba1735c0830c18db5">Marketplace::DocumentNames::WSUPPLY_AUTH</a></div><div class="ttdeci">static constexpr const name WSUPPLY_AUTH</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:95</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_ab65d2dee379971651a83bec9f5b0977a"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#ab65d2dee379971651a83bec9f5b0977a">Marketplace::DocumentNames::CONTRIB_AUTH</a></div><div class="ttdeci">static constexpr const name CONTRIB_AUTH</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:75</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_ac562bf575114707060dcde4629879f01"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#ac562bf575114707060dcde4629879f01">Marketplace::DocumentNames::TRANSPORT1</a></div><div class="ttdeci">static constexpr const name TRANSPORT1</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:79</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_adb894b5f67ac92eba524e3cc0fcbe036"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#adb894b5f67ac92eba524e3cc0fcbe036">Marketplace::DocumentNames::DELIVERY_ACT</a></div><div class="ttdeci">static constexpr const name DELIVERY_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:86</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_ae10188a75c3042878cb7fdabaa25b752"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#ae10188a75c3042878cb7fdabaa25b752">Marketplace::DocumentNames::WRETURN_AUTH</a></div><div class="ttdeci">static constexpr const name WRETURN_AUTH</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:94</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_aeb017b4dff489190329d258e8681e2e1"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#aeb017b4dff489190329d258e8681e2e1">Marketplace::DocumentNames::SUPPLY_ACT</a></div><div class="ttdeci">static constexpr const name SUPPLY_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:83</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_af640f68f6a95ae3f1c57c486f303e6a3"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#af640f68f6a95ae3f1c57c486f303e6a3">Marketplace::DocumentNames::WOFFER_ACT</a></div><div class="ttdeci">static constexpr const name WOFFER_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:97</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_document_names_html_af84378f28abf3a8bde4257f35a273f57"><div class="ttname"><a href="namespace_marketplace_1_1_document_names.html#af84378f28abf3a8bde4257f35a273f57">Marketplace::DocumentNames::RECEIVE_ACT</a></div><div class="ttdeci">static constexpr const name RECEIVE_ACT</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:77</div></div>
+<div class="ttc" id="anamespace_marketplace_html"><div class="ttname"><a href="namespace_marketplace.html">Marketplace</a></div><div class="ttdef"><b>Definition:</b> marketplace.hpp:17</div></div>
+<div class="ttc" id="anamespace_marketplace_html_a1cc8355ba4e8ece81c220689c22b58b2"><div class="ttname"><a href="namespace_marketplace.html#a1cc8355ba4e8ece81c220689c22b58b2">Marketplace::shipments_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;shipments&quot;_n, shipment, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; shipment, checksum256, &amp;shipment::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_coop &gt; &gt;, eosio::indexed_by&lt;&quot;bydriver&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_driver &gt; &gt;, eosio::indexed_by&lt;&quot;bysource&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_source &gt; &gt;, eosio::indexed_by&lt;&quot;bydest&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_destination &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_status &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; shipment, uint64_t, &amp;shipment::by_created &gt; &gt; &gt; shipments_index</div><div class="ttdef"><b>Definition:</b> table_marketplace_shipments.hpp:53</div></div>
+<div class="ttc" id="anamespace_marketplace_html_a394acfbed2ec6056d1c602e52f19abd6"><div class="ttname"><a href="namespace_marketplace.html#a394acfbed2ec6056d1c602e52f19abd6">Marketplace::requests_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;requests&quot;_n, request, eosio::indexed_by&lt;&quot;bycoop&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_coop &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_status &gt; &gt;, eosio::indexed_by&lt;&quot;bytype&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_type &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; request, checksum256, &amp;request::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bycreated&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_created &gt; &gt;, eosio::indexed_by&lt;&quot;bycompleted&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_completed &gt; &gt;, eosio::indexed_by&lt;&quot;bydeclined&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_declined &gt; &gt;, eosio::indexed_by&lt;&quot;bycanceled&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_canceled &gt; &gt;, eosio::indexed_by&lt;&quot;bywarrantyid&quot;_n, eosio::const_mem_fun&lt; request, uint64_t, &amp;request::by_warranty_id &gt; &gt; &gt; requests_index</div><div class="ttdef"><b>Definition:</b> table_marketplace_requests.hpp:107</div></div>
+<div class="ttc" id="anamespace_marketplace_html_a46d4bae127a59c993b6262ac276c59df"><div class="ttname"><a href="namespace_marketplace.html#a46d4bae127a59c993b6262ac276c59df">Marketplace::get_request_by_hash</a></div><div class="ttdeci">static std::optional&lt; request &gt; get_request_by_hash(eosio::name coopname, checksum256 request_hash)</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:34</div></div>
+<div class="ttc" id="anamespace_marketplace_html_a94b5f5347b46e3cfbce42010625434ba"><div class="ttname"><a href="namespace_marketplace.html#a94b5f5347b46e3cfbce42010625434ba">Marketplace::get_request_by_hash_or_fail</a></div><div class="ttdeci">static request get_request_by_hash_or_fail(eosio::name coopname, checksum256 request_hash, const std::string &amp;error_msg=&quot;Заявка не найдена по хэшу&quot;)</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:56</div></div>
+<div class="ttc" id="anamespace_marketplace_html_aaa8c90d14e6080d4c13b395c518f8925"><div class="ttname"><a href="namespace_marketplace.html#aaa8c90d14e6080d4c13b395c518f8925">Marketplace::marketplace_callback_actions</a></div><div class="ttdeci">static const std::set&lt; eosio::name &gt; marketplace_callback_actions</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:21</div></div>
+<div class="ttc" id="anamespace_marketplace_html_ac770cc85dc37eeeee1f7e13fc2d09b74"><div class="ttname"><a href="namespace_marketplace.html#ac770cc85dc37eeeee1f7e13fc2d09b74">Marketplace::get_shipment_by_hash</a></div><div class="ttdeci">static std::optional&lt; shipment &gt; get_shipment_by_hash(eosio::name coopname, checksum256 shipment_hash)</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:45</div></div>
+<div class="ttc" id="anamespace_marketplace_html_aeba4b827259d0e461e6e0aaf36806316"><div class="ttname"><a href="namespace_marketplace.html#aeba4b827259d0e461e6e0aaf36806316">Marketplace::get_valid_marketplace_action</a></div><div class="ttdeci">eosio::name get_valid_marketplace_action(const eosio::name &amp;action)</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:29</div></div>
+<div class="ttc" id="anamespace_marketplace_html_aef8efe3e0918a44ea23b0d8364e4f772"><div class="ttname"><a href="namespace_marketplace.html#aef8efe3e0918a44ea23b0d8364e4f772">Marketplace::get_shipment_by_hash_or_fail</a></div><div class="ttdeci">static shipment get_shipment_by_hash_or_fail(eosio::name coopname, checksum256 shipment_hash, const std::string &amp;error_msg=&quot;Перевозка не найдена по хэшу&quot;)</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:63</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
+<div class="ttc" id="astruct_marketplace_1_1request_html"><div class="ttname"><a href="struct_marketplace_1_1request.html">Marketplace::request</a></div><div class="ttdef"><b>Definition:</b> table_marketplace_requests.hpp:18</div></div>
+<div class="ttc" id="astruct_marketplace_1_1shipment_html"><div class="ttname"><a href="struct_marketplace_1_1shipment.html">Marketplace::shipment</a></div><div class="ttdef"><b>Definition:</b> table_marketplace_shipments.hpp:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_7da415c6c9db060620fae2ab355398f8.html">core</a></li><li class="navelem"><a class="el" href="dir_65a4cdd495054e5f79deec68f06ba0fd.html">marketplace</a></li><li class="navelem"><a class="el" href="lib_2core_2marketplace_2marketplace_8hpp.html">marketplace.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

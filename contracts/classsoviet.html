@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="soviet_8hpp_source.html">soviet.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="soviet_2soviet_8hpp_source.html">soviet.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:soviet:</div>
 <div class="dyncontent">
@@ -158,7 +158,13 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="memitem:ga1f4c12ffe2187919adbbe21710fa251c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1f4c12ffe2187919adbbe21710fa251c">migrate</a> ()</td></tr>
 <tr class="memdesc:ga1f4c12ffe2187919adbbe21710fa251c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция данных системы Выполняет миграцию данных системы при обновлении контракта. Вызывается автоматически в CI/CD при каждом деплое.  <a href="group__public__soviet__actions.html#ga1f4c12ffe2187919adbbe21710fa251c">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga1f4c12ffe2187919adbbe21710fa251c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">createagenda</a> (<a class="el" href="shared__soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga45944614c3b8e67dab9ddb0f49ba0b2d">repairdec</a> (eosio::name coopname, uint64_t decision_id, eosio::name username, eosio::name type, uint64_t batch_id, <a class="el" href="structdocument2.html">document2</a> statement, std::vector&lt; eosio::name &gt; votes_for, std::vector&lt; eosio::name &gt; votes_against, bool validated, bool approved, bool authorized, eosio::name authorized_by, <a class="el" href="structdocument2.html">document2</a> authorization, eosio::time_point_sec created_at, eosio::time_point_sec expired_at, std::string meta, eosio::name callback_contract, eosio::name confirm_callback, eosio::name decline_callback, checksum256 hash)</td></tr>
+<tr class="memdesc:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Восстановление решения в таблице decisions Создает решение с заданными параметрами если его не существует  <a href="group__public__soviet__actions.html#ga45944614c3b8e67dab9ddb0f49ba0b2d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a358500b6b36975f6722ae205b4deb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a72a358500b6b36975f6722ae205b4deb">converttoaxn</a> (eosio::name coopname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a72a358500b6b36975f6722ae205b4deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует RUB токены в AXON через инъекцию из фонда eosio.saving Требует подписи _provider. Конвертация происходит по курсу 10:1 (10 RUB = 1 AXON)  <a href="classsoviet.html#a72a358500b6b36975f6722ae205b4deb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72a358500b6b36975f6722ae205b4deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">createagenda</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по различным вопросам кооператива. Инициирует процесс принятия решения с указанными параметрами и обратными вызовами.  <a href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a019f2f2333bf452e95bceef16ec1a473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a019f2f2333bf452e95bceef16ec1a473">authorize_action_effect</a> (eosio::name executer, eosio::name coopname, uint64_t decision_id)</td></tr>
@@ -166,39 +172,39 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="memitem:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">exec</a> (eosio::name executer, eosio::name coopname, uint64_t decision_id)</td></tr>
 <tr class="memdesc:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исполнение решения совета  <a href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga2df3ffc1ac9da194963f3be0aadc4139"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa29071426fd7e6907411ae99fc1375ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa29071426fd7e6907411ae99fc1375ad">newsubmitted</a> (<a class="el" href="shared__soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>)</td></tr>
+<tr class="memitem:gaa29071426fd7e6907411ae99fc1375ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa29071426fd7e6907411ae99fc1375ad">newsubmitted</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#a206e28cd6d6191f48b32d42fdeb878ec">NEWSUBMITTED_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gaa29071426fd7e6907411ae99fc1375ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом представленном документе Отправляет уведомление о новом документе, представленном в систему. Используется для информирования о поступлении документов.  <a href="group__public__soviet__actions.html#gaa29071426fd7e6907411ae99fc1375ad">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa29071426fd7e6907411ae99fc1375ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5743e671d13f6c9cfe0935e7ca233626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga5743e671d13f6c9cfe0935e7ca233626">newresolved</a> (<a class="el" href="shared__soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga5743e671d13f6c9cfe0935e7ca233626"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga5743e671d13f6c9cfe0935e7ca233626">newresolved</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#a779972998ecf7ea47fdbea1960aefce9">NEWRESOLVED_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga5743e671d13f6c9cfe0935e7ca233626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о решенном документе Отправляет уведомление о документе, который был решен в системе. Используется для информирования о завершении обработки документов.  <a href="group__public__soviet__actions.html#ga5743e671d13f6c9cfe0935e7ca233626">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga5743e671d13f6c9cfe0935e7ca233626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafa07eb6414754e6cd55dfb557edb144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafa07eb6414754e6cd55dfb557edb144d">newdecision</a> (<a class="el" href="shared__soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>)</td></tr>
+<tr class="memitem:gafa07eb6414754e6cd55dfb557edb144d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafa07eb6414754e6cd55dfb557edb144d">newdecision</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#a4ec64d3b68504b000f68b0a31de4bdd5">NEWDECISION_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gafa07eb6414754e6cd55dfb557edb144d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом решении Отправляет уведомление о новом решении, принятом в системе. Используется для информирования о принятых решениях совета.  <a href="group__public__soviet__actions.html#gafa07eb6414754e6cd55dfb557edb144d">Подробнее...</a><br /></td></tr>
 <tr class="separator:gafa07eb6414754e6cd55dfb557edb144d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga254917b633f530b839b5d3f21f383c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga254917b633f530b839b5d3f21f383c59">newagreement</a> (<a class="el" href="shared__soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga254917b633f530b839b5d3f21f383c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga254917b633f530b839b5d3f21f383c59">newagreement</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#a3b063cf349aa2bf79d619ae244da2556">NEWAGREEMENT_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga254917b633f530b839b5d3f21f383c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом соглашении Отправляет уведомление о новом соглашении, созданном в системе. Используется для информирования о новых соглашениях.  <a href="group__public__soviet__actions.html#ga254917b633f530b839b5d3f21f383c59">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga254917b633f530b839b5d3f21f383c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafb68ecae35b076a0780709612f78bed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafb68ecae35b076a0780709612f78bed0">newpackage</a> (<a class="el" href="shared__soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>)</td></tr>
+<tr class="memitem:gafb68ecae35b076a0780709612f78bed0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gafb68ecae35b076a0780709612f78bed0">newpackage</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#aee8ec7d6489adcb3f0708e303e66f74b">NEWPACKAGE_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gafb68ecae35b076a0780709612f78bed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление о новом пакете документов Отправляет уведомление о новом пакете документов, созданном в системе. Используется для информирования о пакетах документов.  <a href="group__public__soviet__actions.html#gafb68ecae35b076a0780709612f78bed0">Подробнее...</a><br /></td></tr>
 <tr class="separator:gafb68ecae35b076a0780709612f78bed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1a6ad2edfd8582d9b755fe2a5ec2df29">newact</a> (<a class="el" href="shared__soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga1a6ad2edfd8582d9b755fe2a5ec2df29">newact</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#ab93d9710591738a183988beb6084d441">NEWACT_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового акта Создает новый акт в системе кооператива. Используется для документирования действий и событий.  <a href="group__public__soviet__actions.html#ga1a6ad2edfd8582d9b755fe2a5ec2df29">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga1a6ad2edfd8582d9b755fe2a5ec2df29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9982e72cefe252e6e223b981db0f8933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga9982e72cefe252e6e223b981db0f8933">newlink</a> (<a class="el" href="shared__soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga9982e72cefe252e6e223b981db0f8933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga9982e72cefe252e6e223b981db0f8933">newlink</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#a3f971a5eeabcc60de262be21d56a17bf">NEWLINK_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga9982e72cefe252e6e223b981db0f8933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание новой ссылки Создает новую ссылку в системе кооператива. Используется для связывания документов и объектов.  <a href="group__public__soviet__actions.html#ga9982e72cefe252e6e223b981db0f8933">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga9982e72cefe252e6e223b981db0f8933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa11c3294cd04b3a34c618abd459abc28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa11c3294cd04b3a34c618abd459abc28">newdeclined</a> (<a class="el" href="shared__soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>)</td></tr>
+<tr class="memitem:gaa11c3294cd04b3a34c618abd459abc28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaa11c3294cd04b3a34c618abd459abc28">newdeclined</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#ac5da0c75ff2772d5af152463845b1830">NEWDECLINED_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gaa11c3294cd04b3a34c618abd459abc28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уведомление об отклоненном документе Отправляет уведомление о документе, который был отклонен в системе. Используется для информирования об отклонении документов.  <a href="group__public__soviet__actions.html#gaa11c3294cd04b3a34c618abd459abc28">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa11c3294cd04b3a34c618abd459abc28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad81461be6e6c35e4f60ff81aa7f59276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gad81461be6e6c35e4f60ff81aa7f59276">declinedoc</a> (eosio::name coopname, eosio::name username, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:gad81461be6e6c35e4f60ff81aa7f59276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение документа Отклоняет документ и отправляет уведомление об отклонении. Используется для информирования о непринятии документа в системе.  <a href="group__public__soviet__actions.html#gad81461be6e6c35e4f60ff81aa7f59276">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad81461be6e6c35e4f60ff81aa7f59276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6a98748faaedc6baab83f91faa45dd90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">createapprv</a> (<a class="el" href="shared__soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
+<tr class="memitem:ga6a98748faaedc6baab83f91faa45dd90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">createapprv</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#af1b9238650968640df3f667e9ab89178">CREATEAPPRV_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:ga6a98748faaedc6baab83f91faa45dd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание одобрения документа Создает новое одобрение документа с указанными параметрами и обратными вызовами. Используется для инициации процесса одобрения документов в системе.  <a href="group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga6a98748faaedc6baab83f91faa45dd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070">confirmapprv</a> (eosio::name coopname, eosio::name username, checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
-<tr class="memdesc:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения.  <a href="group__public__soviet__actions.html#gab5ba4dbf6c4d43fbcaeffd5b5c614070">Подробнее...</a><br /></td></tr>
-<tr class="separator:gab5ba4dbf6c4d43fbcaeffd5b5c614070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2779984bdbc11569526b983f5f6c6101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101">confirmapprv</a> (eosio::name coopname, eosio::name username, checksum256 approval_hash, std::optional&lt; <a class="el" href="structdocument2.html">document2</a> &gt; approved_document)</td></tr>
+<tr class="memdesc:ga2779984bdbc11569526b983f5f6c6101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после успешного выполнения.  <a href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2779984bdbc11569526b983f5f6c6101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce">declineapprv</a> (eosio::name coopname, eosio::name username, checksum256 approval_hash, std::string reason)</td></tr>
 <tr class="memdesc:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответствующий обратный вызов. Удаляет запись об одобрении после отклонения.  <a href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga96368e8655e0c6b72c6664a5fcdd08ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,6 +372,49 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 
 </div>
 </div>
+<a id="a72a358500b6b36975f6722ae205b4deb" name="a72a358500b6b36975f6722ae205b4deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a358500b6b36975f6722ae205b4deb">&#9670;&nbsp;</a></span>converttoaxn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void soviet::converttoaxn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конвертирует RUB токены в AXON через инъекцию из фонда eosio.saving Требует подписи _provider. Конвертация происходит по курсу 10:1 (10 RUB = 1 AXON) </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">amount</td><td>Сумма в RUB токенах для конвертации </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aab0457554fac4989899c539f973d4156" name="aab0457554fac4989899c539f973d4156"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab0457554fac4989899c539f973d4156">&#9670;&nbsp;</a></span>freedecision_effect()</h2>
 
@@ -517,7 +566,7 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 </div>
 </div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li>cpp/soviet/<a class="el" href="soviet_8hpp_source.html">soviet.hpp</a></li>
+<li>cpp/soviet/<a class="el" href="soviet_2soviet_8hpp_source.html">soviet.hpp</a></li>
 <li>cpp/soviet/src/address/<a class="el" href="creaddress_8cpp.html">creaddress.cpp</a></li>
 <li>cpp/soviet/src/address/<a class="el" href="deladdress_8cpp.html">deladdress.cpp</a></li>
 <li>cpp/soviet/src/address/<a class="el" href="editaddress_8cpp.html">editaddress.cpp</a></li>
@@ -542,6 +591,7 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <li>cpp/soviet/src/decision/<a class="el" href="cancelexprd_8cpp.html">cancelexprd.cpp</a></li>
 <li>cpp/soviet/src/decision/<a class="el" href="exec_8cpp.html">exec.cpp</a></li>
 <li>cpp/soviet/src/decision/<a class="el" href="freedecision_8cpp.html">freedecision.cpp</a></li>
+<li>cpp/soviet/src/decision/<a class="el" href="repairdec_8cpp.html">repairdec.cpp</a></li>
 <li>cpp/soviet/src/doc/<a class="el" href="declinedoc_8cpp.html">declinedoc.cpp</a></li>
 <li>cpp/soviet/src/doc/<a class="el" href="newact_8cpp.html">newact.cpp</a></li>
 <li>cpp/soviet/src/doc/<a class="el" href="newagreement_8cpp.html">newagreement.cpp</a></li>
@@ -560,6 +610,7 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <li>cpp/soviet/src/program/<a class="el" href="createprog_8cpp.html">createprog.cpp</a></li>
 <li>cpp/soviet/src/program/<a class="el" href="disableprog_8cpp.html">disableprog.cpp</a></li>
 <li>cpp/soviet/src/program/<a class="el" href="editprog_8cpp.html">editprog.cpp</a></li>
+<li>cpp/soviet/src/system/<a class="el" href="converttoaxn_8cpp.html">converttoaxn.cpp</a></li>
 <li>cpp/soviet/src/system/<a class="el" href="soviet_2src_2system_2init_8cpp.html">init.cpp</a></li>
 <li>cpp/soviet/src/system/<a class="el" href="soviet_2src_2system_2migrate_8cpp.html">migrate.cpp</a></li>
 <li>cpp/soviet/src/vote/<a class="el" href="cancelvote_8cpp.html">cancelvote.cpp</a></li>

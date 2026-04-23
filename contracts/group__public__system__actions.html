@@ -142,6 +142,9 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
+<tr class="memitem:gae7d657397577ba191c15b219014aa8ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">eosiosystem::system_contract::injection</a> (const name &amp;coopname, const asset &amp;quantity)</td></tr>
+<tr class="memdesc:gae7d657397577ba191c15b219014aa8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инжектирует токены из фонда eosio.saving на кооператив. Требует подписи _soviet для выполнения операции.  <a href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae7d657397577ba191c15b219014aa8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga93950629ac6f931b47542727a5411097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#ga93950629ac6f931b47542727a5411097">eosiosystem::system_contract::buyrambytes</a> (const name &amp;payer, const name &amp;receiver, uint32_t bytes)</td></tr>
 <tr class="memdesc:ga93950629ac6f931b47542727a5411097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Покупает точное количество RAM в байтах. Покупает точное количество байт RAM и выставляет счет плательщику по текущей рыночной цене.  <a href="group__public__system__actions.html#ga93950629ac6f931b47542727a5411097">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga93950629ac6f931b47542727a5411097"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -399,7 +402,7 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>payer</code> </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Уст.:</a></b></dt><dd>Используется аренда RAM с помощью метода powerup (system_powerup) </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Уст.:</a></b></dt><dd>Используется аренда RAM с помощью метода powerup (system_powerup) </dd></dl>
 
 </div>
 </div>
@@ -689,6 +692,51 @@ $(document).ready(function(){initNavTree('group__public__system__actions.html','
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>eosio.system</code> </dd></dl>
 </li>
 </ul>
+
+</div>
+</div>
+<a id="gae7d657397577ba191c15b219014aa8ff" name="gae7d657397577ba191c15b219014aa8ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7d657397577ba191c15b219014aa8ff">&#9670;&nbsp;</a></span>injection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eosiosystem::system_contract::injection </td>
+          <td>(</td>
+          <td class="paramtype">const name &amp;&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const asset &amp;&#160;</td>
+          <td class="paramname"><em>quantity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инжектирует токены из фонда eosio.saving на кооператив. Требует подписи _soviet для выполнения операции. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива-получателя </td></tr>
+    <tr><td class="paramname">quantity</td><td>Сумма для перевода</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_provider</code> </dd></dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива-получателя </td></tr>
+    <tr><td class="paramname">quantity</td><td>Сумма для перевода </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

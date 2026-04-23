@@ -2,9 +2,9 @@ var searchData=
 [
   ['open_5fat_0',['open_at',['../struct_meet_1_1meet.html#aff2748bcccb7f2ae4880c8951a561fc3',1,'Meet::meet']]],
   ['open_5fprogram_5fwallet_1',['OPEN_PROGRAM_WALLET',['../namespace_names_1_1_external.html#a6aa10b9da933a81c98c7c3a3501d9a3f',1,'Names::External']]],
-  ['org_5finitial_2',['org_initial',['../structorg__data.html#a347a2dbd1b13763c210e15d81ab2764f',1,'org_data::org_initial()'],['../structcooperative.html#a5c5336993628f9656944345a5d490ed8',1,'cooperative::org_initial()'],['../structcooperative2.html#a5b11749543f5e8438839305d83ed1e50',1,'cooperative2::org_initial()']]],
-  ['org_5fminimum_3',['org_minimum',['../structorg__data.html#af68fc1fe5696c2872122d978c9933793',1,'org_data::org_minimum()'],['../structcooperative.html#a70599503a9c4ff138df62996ac236660',1,'cooperative::org_minimum()'],['../structcooperative2.html#a2aefdf7219727b8d5f2acc18b02e2b48',1,'cooperative2::org_minimum()']]],
-  ['org_5fregistration_4',['org_registration',['../structcooperative.html#a9ed49665e29d8c8017b751b7e953b624',1,'cooperative::org_registration()'],['../structcooperative2.html#ae7373bc696c5a76e162d183e68681d10',1,'cooperative2::org_registration()']]],
+  ['org_5finitial_2',['org_initial',['../structorg__data.html#a347a2dbd1b13763c210e15d81ab2764f',1,'org_data::org_initial()'],['../structcooperative2.html#a5b11749543f5e8438839305d83ed1e50',1,'cooperative2::org_initial()'],['../structcooperative.html#a5c5336993628f9656944345a5d490ed8',1,'cooperative::org_initial()']]],
+  ['org_5fminimum_3',['org_minimum',['../structorg__data.html#af68fc1fe5696c2872122d978c9933793',1,'org_data::org_minimum()'],['../structcooperative2.html#a2aefdf7219727b8d5f2acc18b02e2b48',1,'cooperative2::org_minimum()'],['../structcooperative.html#a70599503a9c4ff138df62996ac236660',1,'cooperative::org_minimum()']]],
+  ['org_5fregistration_4',['org_registration',['../structcooperative2.html#ae7373bc696c5a76e162d183e68681d10',1,'cooperative2::org_registration()'],['../structcooperative.html#a9ed49665e29d8c8017b751b7e953b624',1,'cooperative::org_registration()']]],
   ['other_5fincome_5fexpenses_5',['OTHER_INCOME_EXPENSES',['../struct_ledger_1_1accounts.html#af3521418afde0729e4dc76f9038b1db3',1,'Ledger::accounts']]],
   ['other_5fsettlements_6',['OTHER_SETTLEMENTS',['../struct_ledger_1_1accounts.html#aca436c4366499e2ffc395c33be53723c',1,'Ledger::accounts']]],
   ['outcome_5fhash_7',['outcome_hash',['../struct_gateway_1_1outcome.html#a04e57cdf339a39e58353baaebae4c48f',1,'Gateway::outcome']]],

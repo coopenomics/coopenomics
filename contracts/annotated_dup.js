@@ -36,8 +36,6 @@ var annotated_dup =
       [ "program_invest", "struct_capital_1_1program__invest.html", "struct_capital_1_1program__invest" ],
       [ "program_withdraw", "struct_capital_1_1program__withdraw.html", "struct_capital_1_1program__withdraw" ],
       [ "project", "struct_capital_1_1project.html", "struct_capital_1_1project" ],
-      [ "project_wallet", "struct_capital_1_1project__wallet.html", "struct_capital_1_1project__wallet" ],
-      [ "project_withdraw", "struct_capital_1_1project__withdraw.html", "struct_capital_1_1project__withdraw" ],
       [ "result", "struct_capital_1_1result.html", "struct_capital_1_1result" ],
       [ "vote", "struct_capital_1_1vote.html", "struct_capital_1_1vote" ],
       [ "vote_input", "struct_capital_1_1vote__input.html", "struct_capital_1_1vote__input" ],
@@ -132,6 +130,10 @@ var annotated_dup =
         ] ]
       ] ]
     ] ],
+    [ "WalletTables", "namespace_wallet_tables.html", [
+      [ "deposit", "struct_wallet_tables_1_1deposit.html", "struct_wallet_tables_1_1deposit" ],
+      [ "withdraw", "struct_wallet_tables_1_1withdraw.html", "struct_wallet_tables_1_1withdraw" ]
+    ] ],
     [ "_abi_hash", "struct__abi__hash.html", "struct__abi__hash" ],
     [ "accfund", "structaccfund.html", "structaccfund" ],
     [ "account", "structaccount.html", "structaccount" ],
@@ -184,7 +186,6 @@ var annotated_dup =
     [ "marketplace", "classmarketplace.html", "classmarketplace" ],
     [ "meet", "classmeet.html", "classmeet" ],
     [ "meet_point", "structmeet__point.html", "structmeet__point" ],
-    [ "membership_crps", "structmembership__crps.html", "structmembership__crps" ],
     [ "onedraft", "structonedraft.html", "structonedraft" ],
     [ "org_data", "structorg__data.html", "structorg__data" ],
     [ "participant", "structparticipant.html", "structparticipant" ],

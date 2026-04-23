@@ -197,8 +197,11 @@ $(document).ready(function(){initNavTree('struct_capital_1_1plan__pool.html','')
 <tr class="memdesc:aed266ec914c61b20db1adc1949eb5706"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая планируемая сумма генерации  <a href="struct_capital_1_1plan__pool.html#aed266ec914c61b20db1adc1949eb5706">Подробнее...</a><br /></td></tr>
 <tr class="separator:aed266ec914c61b20db1adc1949eb5706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8e0c224955a71bd0a7fe2cd63f802fe"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1plan__pool.html#ab8e0c224955a71bd0a7fe2cd63f802fe">total</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
-<tr class="memdesc:ab8e0c224955a71bd0a7fe2cd63f802fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая планируемая сумма генерации с участниками  <a href="struct_capital_1_1plan__pool.html#ab8e0c224955a71bd0a7fe2cd63f802fe">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:ab8e0c224955a71bd0a7fe2cd63f802fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая планируемая сумма генерации с участниками (без расходов)  <a href="struct_capital_1_1plan__pool.html#ab8e0c224955a71bd0a7fe2cd63f802fe">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab8e0c224955a71bd0a7fe2cd63f802fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327731b5c67349a0d248ffb1ebf23e84"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1plan__pool.html#a327731b5c67349a0d248ffb1ebf23e84">total_with_investments</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a327731b5c67349a0d248ffb1ebf23e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Полная стоимость проекта с инвестициями и расходами (total + total_received_investments)  <a href="struct_capital_1_1plan__pool.html#a327731b5c67349a0d248ffb1ebf23e84">Подробнее...</a><br /></td></tr>
+<tr class="separator:a327731b5c67349a0d248ffb1ebf23e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Структура плановых показателей проекта </p>
@@ -423,7 +426,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1plan__pool.html','')
       </table>
 </div><div class="memdoc">
 
-<p>Общая планируемая сумма генерации с участниками </p>
+<p>Общая планируемая сумма генерации с участниками (без расходов) </p>
 
 </div>
 </div>
@@ -456,6 +459,22 @@ $(document).ready(function(){initNavTree('struct_capital_1_1plan__pool.html','')
 </div><div class="memdoc">
 
 <p>Планируемая общая сумма инвестиций (до распределения) </p>
+
+</div>
+</div>
+<a id="a327731b5c67349a0d248ffb1ebf23e84" name="a327731b5c67349a0d248ffb1ebf23e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327731b5c67349a0d248ffb1ebf23e84">&#9670;&nbsp;</a></span>total_with_investments</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::plan_pool::total_with_investments = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Полная стоимость проекта с инвестициями и расходами (total + total_received_investments) </p>
 
 </div>
 </div>

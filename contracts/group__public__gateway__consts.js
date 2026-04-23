@@ -10,7 +10,5 @@ var group__public__gateway__consts =
       [ "migrate", "group__public__gateway__actions.html#ga7340f7262f2b5c274919ef7f7f5a9800", null ],
       [ "outcomplete", "group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9", null ],
       [ "outdecline", "group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131", null ]
-    ] ],
-    [ "Gateway::gateway_income_actions", "group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a", null ],
-    [ "Gateway::gateway_outcome_actions", "group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce", null ]
+    ] ]
 ];

@@ -238,7 +238,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
 <tr class="memdesc:afa53c4089602537fd00f2897abfa1d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Последняя зафиксированная награда на долю для участников  <a href="struct_capital_1_1_segments_1_1segment.html#afa53c4089602537fd00f2897abfa1d45">Подробнее...</a><br /></td></tr>
 <tr class="separator:afa53c4089602537fd00f2897abfa1d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacdd28226e685555dbbe3632ffbe5257"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#aacdd28226e685555dbbe3632ffbe5257">capital_contributor_shares</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
-<tr class="memdesc:aacdd28226e685555dbbe3632ffbe5257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество долей участника в программе капитализации  <a href="struct_capital_1_1_segments_1_1segment.html#aacdd28226e685555dbbe3632ffbe5257">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:aacdd28226e685555dbbe3632ffbe5257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество долей участника в программе благороста  <a href="struct_capital_1_1_segments_1_1segment.html#aacdd28226e685555dbbe3632ffbe5257">Подробнее...</a><br /></td></tr>
 <tr class="separator:aacdd28226e685555dbbe3632ffbe5257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76a4ec7affcac07048b1f37a2913f0b9"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a76a4ec7affcac07048b1f37a2913f0b9">last_known_invest_pool</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
 <tr class="memdesc:a76a4ec7affcac07048b1f37a2913f0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Последняя известная сумма инвестиций в проекте  <a href="struct_capital_1_1_segments_1_1segment.html#a76a4ec7affcac07048b1f37a2913f0b9">Подробнее...</a><br /></td></tr>
@@ -277,8 +277,20 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
 <tr class="memdesc:abbb6aee5c03f03bc7cc017ad3ea7cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая стоимость бонусных вкладов сегмента  <a href="struct_capital_1_1_segments_1_1segment.html#abbb6aee5c03f03bc7cc017ad3ea7cc27">Подробнее...</a><br /></td></tr>
 <tr class="separator:abbb6aee5c03f03bc7cc017ad3ea7cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ef5d7273d38bca49b5ef2638905c072"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a7ef5d7273d38bca49b5ef2638905c072">total_segment_cost</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
-<tr class="memdesc:a7ef5d7273d38bca49b5ef2638905c072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая стоимость всех вкладов сегмента  <a href="struct_capital_1_1_segments_1_1segment.html#a7ef5d7273d38bca49b5ef2638905c072">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a7ef5d7273d38bca49b5ef2638905c072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая стоимость всех вкладов сегмента (включая investor_base)  <a href="struct_capital_1_1_segments_1_1segment.html#a7ef5d7273d38bca49b5ef2638905c072">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7ef5d7273d38bca49b5ef2638905c072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c217811b4f99c3fd68cbd4e6df3f3a"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a39c217811b4f99c3fd68cbd4e6df3f3a">intellectual_cost</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a39c217811b4f99c3fd68cbd4e6df3f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стоимость интеллектуальных вкладов (total_segment_cost - investor_base)  <a href="struct_capital_1_1_segments_1_1segment.html#a39c217811b4f99c3fd68cbd4e6df3f3a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a39c217811b4f99c3fd68cbd4e6df3f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333774cd82d589d02ed3ef6b49c2281c"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a333774cd82d589d02ed3ef6b49c2281c">available_for_program</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a333774cd82d589d02ed3ef6b49c2281c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступная сумма для конвертации в программу (intellectual_cost - debt_amount)  <a href="struct_capital_1_1_segments_1_1segment.html#a333774cd82d589d02ed3ef6b49c2281c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a333774cd82d589d02ed3ef6b49c2281c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78871a0e9c0460e13a6fc692e008b1b0"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a78871a0e9c0460e13a6fc692e008b1b0">available_for_wallet</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a78871a0e9c0460e13a6fc692e008b1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступная сумма для конвертации в кошелек (provisional_amount - debt_amount)  <a href="struct_capital_1_1_segments_1_1segment.html#a78871a0e9c0460e13a6fc692e008b1b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a78871a0e9c0460e13a6fc692e008b1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6b2ee298d02c06322992986225bce0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_segments_1_1segment.html#a3d6b2ee298d02c06322992986225bce0">share_percent</a> = 0.0</td></tr>
+<tr class="memdesc:a3d6b2ee298d02c06322992986225bce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доля участника в результате (intellectual_cost / fact.total * 100)  <a href="struct_capital_1_1_segments_1_1segment.html#a3d6b2ee298d02c06322992986225bce0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d6b2ee298d02c06322992986225bce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Таблица сегментов хранит данные о вкладах участника в проект. </p>
@@ -398,6 +410,38 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
 
 </div>
 </div>
+<a id="a333774cd82d589d02ed3ef6b49c2281c" name="a333774cd82d589d02ed3ef6b49c2281c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333774cd82d589d02ed3ef6b49c2281c">&#9670;&nbsp;</a></span>available_for_program</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::Segments::segment::available_for_program = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доступная сумма для конвертации в программу (intellectual_cost - debt_amount) </p>
+
+</div>
+</div>
+<a id="a78871a0e9c0460e13a6fc692e008b1b0" name="a78871a0e9c0460e13a6fc692e008b1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78871a0e9c0460e13a6fc692e008b1b0">&#9670;&nbsp;</a></span>available_for_wallet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::Segments::segment::available_for_wallet = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доступная сумма для конвертации в кошелек (provisional_amount - debt_amount) </p>
+
+</div>
+</div>
 <a id="aacdd28226e685555dbbe3632ffbe5257" name="aacdd28226e685555dbbe3632ffbe5257"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacdd28226e685555dbbe3632ffbe5257">&#9670;&nbsp;</a></span>capital_contributor_shares</h2>
 
@@ -410,7 +454,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
       </table>
 </div><div class="memdoc">
 
-<p>Количество долей участника в программе капитализации </p>
+<p>Количество долей участника в программе благороста </p>
 
 </div>
 </div>
@@ -603,6 +647,22 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
 </div><div class="memdoc">
 
 <p>ID сегмента (внутренний ключ) </p>
+
+</div>
+</div>
+<a id="a39c217811b4f99c3fd68cbd4e6df3f3a" name="a39c217811b4f99c3fd68cbd4e6df3f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c217811b4f99c3fd68cbd4e6df3f3a">&#9670;&nbsp;</a></span>intellectual_cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::Segments::segment::intellectual_cost = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Стоимость интеллектуальных вкладов (total_segment_cost - investor_base) </p>
 
 </div>
 </div>
@@ -897,6 +957,22 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
 
 </div>
 </div>
+<a id="a3d6b2ee298d02c06322992986225bce0" name="a3d6b2ee298d02c06322992986225bce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d6b2ee298d02c06322992986225bce0">&#9670;&nbsp;</a></span>share_percent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Capital::Segments::segment::share_percent = 0.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Доля участника в результате (intellectual_cost / fact.total * 100) </p>
+
+</div>
+</div>
 <a id="a16e98843f3fa79481a6a39dc06b07338" name="a16e98843f3fa79481a6a39dc06b07338"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16e98843f3fa79481a6a39dc06b07338">&#9670;&nbsp;</a></span>status</h2>
 
@@ -957,7 +1033,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1_segments_1_1segment
       </table>
 </div><div class="memdoc">
 
-<p>Общая стоимость всех вкладов сегмента </p>
+<p>Общая стоимость всех вкладов сегмента (включая investor_base) </p>
 
 </div>
 </div>

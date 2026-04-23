@@ -152,7 +152,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программных имущественных взносов хранит данные о предложениях по имущественным взносам в программу капитализации.  <a href="struct_capital_1_1_program_properties_1_1program__property.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программных имущественных взносов хранит данные о предложениях по имущественным взносам в программу благороста.  <a href="struct_capital_1_1_program_properties_1_1program__property.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -168,27 +168,27 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 <tr class="memitem:a351f831f14f307ce833d3d1c5d2d442b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_program_properties_1_1program__property.html">program_property</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b">get_program_property_or_fail</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="memdesc:a351f831f14f307ce833d3d1c5d2d442b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает программное предложение по хэшу или падает с ошибкой.  <a href="namespace_capital_1_1_program_properties.html#a351f831f14f307ce833d3d1c5d2d442b">Подробнее...</a><br /></td></tr>
 <tr class="separator:a351f831f14f307ce833d3d1c5d2d442b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#acf7fe2c192294ac99b6fbb11b9da1cb8">delete_program_property</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет программное предложение по хэшу.  <a href="namespace_capital_1_1_program_properties.html#acf7fe2c192294ac99b6fbb11b9da1cb8">Подробнее...</a><br /></td></tr>
-<tr class="separator:acf7fe2c192294ac99b6fbb11b9da1cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81000804e9d8b81dc05220c81837ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#af81000804e9d8b81dc05220c81837ad6">delete_program_property</a> (eosio::name coopname, uint64_t property_id)</td></tr>
+<tr class="memdesc:af81000804e9d8b81dc05220c81837ad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет программное предложение по ID.  <a href="namespace_capital_1_1_program_properties.html#af81000804e9d8b81dc05220c81837ad6">Подробнее...</a><br /></td></tr>
+<tr class="separator:af81000804e9d8b81dc05220c81837ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2214ac81cfa9363bcafbe23fe1dfa132"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a2214ac81cfa9363bcafbe23fe1dfa132">create_program_property_with_approve</a> (eosio::name coopname, eosio::name username, checksum256 property_hash, const eosio::asset &amp;property_amount, const std::string &amp;property_description, const <a class="el" href="structdocument2.html">document2</a> &amp;statement)</td></tr>
 <tr class="memdesc:a2214ac81cfa9363bcafbe23fe1dfa132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает предложение по программному имущественному взносу и отправляет его на утверждение.  <a href="namespace_capital_1_1_program_properties.html#a2214ac81cfa9363bcafbe23fe1dfa132">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2214ac81cfa9363bcafbe23fe1dfa132"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a65969273d8023867a1dfb432e714be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a1a65969273d8023867a1dfb432e714be">update_program_property_status</a> (eosio::name coopname, const checksum256 &amp;property_hash, eosio::name new_status)</td></tr>
-<tr class="memdesc:a1a65969273d8023867a1dfb432e714be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус программного предложения  <a href="namespace_capital_1_1_program_properties.html#a1a65969273d8023867a1dfb432e714be">Подробнее...</a><br /></td></tr>
-<tr class="separator:a1a65969273d8023867a1dfb432e714be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a96498018a38059f27f16e1c3983484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a6a96498018a38059f27f16e1c3983484">set_program_property_approved_statement</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
-<tr class="memdesc:a6a96498018a38059f27f16e1c3983484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает одобренное заявление  <a href="namespace_capital_1_1_program_properties.html#a6a96498018a38059f27f16e1c3983484">Подробнее...</a><br /></td></tr>
-<tr class="separator:a6a96498018a38059f27f16e1c3983484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e98197691b87967c9f1b82dcfbec533"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a4e98197691b87967c9f1b82dcfbec533">set_program_property_authorization</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
-<tr class="memdesc:a4e98197691b87967c9f1b82dcfbec533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает решение совета  <a href="namespace_capital_1_1_program_properties.html#a4e98197691b87967c9f1b82dcfbec533">Подробнее...</a><br /></td></tr>
-<tr class="separator:a4e98197691b87967c9f1b82dcfbec533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00170a677e1015c704742e66326a19e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a00170a677e1015c704742e66326a19e9">set_program_property_act1</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;act1)</td></tr>
-<tr class="memdesc:a00170a677e1015c704742e66326a19e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает первый акт  <a href="namespace_capital_1_1_program_properties.html#a00170a677e1015c704742e66326a19e9">Подробнее...</a><br /></td></tr>
-<tr class="separator:a00170a677e1015c704742e66326a19e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a6b94432de862a268bc3b93ea1a43c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a00a6b94432de862a268bc3b93ea1a43c">set_program_property_act2</a> (eosio::name coopname, const checksum256 &amp;property_hash, const <a class="el" href="structdocument2.html">document2</a> &amp;act2)</td></tr>
-<tr class="memdesc:a00a6b94432de862a268bc3b93ea1a43c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает второй акт  <a href="namespace_capital_1_1_program_properties.html#a00a6b94432de862a268bc3b93ea1a43c">Подробнее...</a><br /></td></tr>
-<tr class="separator:a00a6b94432de862a268bc3b93ea1a43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2e30b3e209c809ed89a91eecebe3a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a9b2e30b3e209c809ed89a91eecebe3a7">update_program_property_status</a> (eosio::name coopname, uint64_t property_id, eosio::name new_status)</td></tr>
+<tr class="memdesc:a9b2e30b3e209c809ed89a91eecebe3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус программного предложения  <a href="namespace_capital_1_1_program_properties.html#a9b2e30b3e209c809ed89a91eecebe3a7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b2e30b3e209c809ed89a91eecebe3a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5af64b15543809f4f5a1b4b949c8db1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#af5af64b15543809f4f5a1b4b949c8db1">set_program_property_approved_statement</a> (eosio::name coopname, uint64_t property_id, const <a class="el" href="structdocument2.html">document2</a> &amp;approved_statement)</td></tr>
+<tr class="memdesc:af5af64b15543809f4f5a1b4b949c8db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает одобренное заявление  <a href="namespace_capital_1_1_program_properties.html#af5af64b15543809f4f5a1b4b949c8db1">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5af64b15543809f4f5a1b4b949c8db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5bb0c4005afae00f8e06d1842b1d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#aca5bb0c4005afae00f8e06d1842b1d12">set_program_property_authorization</a> (eosio::name coopname, uint64_t property_id, const <a class="el" href="structdocument2.html">document2</a> &amp;authorization)</td></tr>
+<tr class="memdesc:aca5bb0c4005afae00f8e06d1842b1d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает решение совета  <a href="namespace_capital_1_1_program_properties.html#aca5bb0c4005afae00f8e06d1842b1d12">Подробнее...</a><br /></td></tr>
+<tr class="separator:aca5bb0c4005afae00f8e06d1842b1d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40b958da19641b16f1c304f970d23ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#ae40b958da19641b16f1c304f970d23ed">set_program_property_act1</a> (eosio::name coopname, uint64_t property_id, const <a class="el" href="structdocument2.html">document2</a> &amp;act1)</td></tr>
+<tr class="memdesc:ae40b958da19641b16f1c304f970d23ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает первый акт  <a href="namespace_capital_1_1_program_properties.html#ae40b958da19641b16f1c304f970d23ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae40b958da19641b16f1c304f970d23ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74677d49f2f02c66b56c68e0f26df257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_properties.html#a74677d49f2f02c66b56c68e0f26df257">set_program_property_act2</a> (eosio::name coopname, uint64_t property_id, const <a class="el" href="structdocument2.html">document2</a> &amp;act2)</td></tr>
+<tr class="memdesc:a74677d49f2f02c66b56c68e0f26df257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Устанавливает второй акт  <a href="namespace_capital_1_1_program_properties.html#a74677d49f2f02c66b56c68e0f26df257">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74677d49f2f02c66b56c68e0f26df257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="a50de3847257a257ae28cb32c679caba8" name="a50de3847257a257ae28cb32c679caba8"></a>
@@ -279,8 +279,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="acf7fe2c192294ac99b6fbb11b9da1cb8" name="acf7fe2c192294ac99b6fbb11b9da1cb8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf7fe2c192294ac99b6fbb11b9da1cb8">&#9670;&nbsp;</a></span>delete_program_property()</h2>
+<a id="af81000804e9d8b81dc05220c81837ad6" name="af81000804e9d8b81dc05220c81837ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81000804e9d8b81dc05220c81837ad6">&#9670;&nbsp;</a></span>delete_program_property()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,8 +297,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -313,11 +313,11 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 </table>
 </div><div class="memdoc">
 
-<p>Удаляет программное предложение по хэшу. </p>
+<p>Удаляет программное предложение по ID. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">hash</td><td>Хэш предложения. </td></tr>
+    <tr><td class="paramname">property_id</td><td>ID предложения. </td></tr>
   </table>
   </dd>
 </dl>
@@ -416,8 +416,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="a00170a677e1015c704742e66326a19e9" name="a00170a677e1015c704742e66326a19e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00170a677e1015c704742e66326a19e9">&#9670;&nbsp;</a></span>set_program_property_act1()</h2>
+<a id="ae40b958da19641b16f1c304f970d23ed" name="ae40b958da19641b16f1c304f970d23ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40b958da19641b16f1c304f970d23ed">&#9670;&nbsp;</a></span>set_program_property_act1()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -434,8 +434,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>property_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -460,8 +460,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="a00a6b94432de862a268bc3b93ea1a43c" name="a00a6b94432de862a268bc3b93ea1a43c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00a6b94432de862a268bc3b93ea1a43c">&#9670;&nbsp;</a></span>set_program_property_act2()</h2>
+<a id="a74677d49f2f02c66b56c68e0f26df257" name="a74677d49f2f02c66b56c68e0f26df257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74677d49f2f02c66b56c68e0f26df257">&#9670;&nbsp;</a></span>set_program_property_act2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,8 +478,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>property_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -504,8 +504,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="a6a96498018a38059f27f16e1c3983484" name="a6a96498018a38059f27f16e1c3983484"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a96498018a38059f27f16e1c3983484">&#9670;&nbsp;</a></span>set_program_property_approved_statement()</h2>
+<a id="af5af64b15543809f4f5a1b4b949c8db1" name="af5af64b15543809f4f5a1b4b949c8db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5af64b15543809f4f5a1b4b949c8db1">&#9670;&nbsp;</a></span>set_program_property_approved_statement()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,8 +522,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>property_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -548,8 +548,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="a4e98197691b87967c9f1b82dcfbec533" name="a4e98197691b87967c9f1b82dcfbec533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e98197691b87967c9f1b82dcfbec533">&#9670;&nbsp;</a></span>set_program_property_authorization()</h2>
+<a id="aca5bb0c4005afae00f8e06d1842b1d12" name="aca5bb0c4005afae00f8e06d1842b1d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5bb0c4005afae00f8e06d1842b1d12">&#9670;&nbsp;</a></span>set_program_property_authorization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -566,8 +566,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>property_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -592,8 +592,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 
 </div>
 </div>
-<a id="a1a65969273d8023867a1dfb432e714be" name="a1a65969273d8023867a1dfb432e714be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a65969273d8023867a1dfb432e714be">&#9670;&nbsp;</a></span>update_program_property_status()</h2>
+<a id="a9b2e30b3e209c809ed89a91eecebe3a7" name="a9b2e30b3e209c809ed89a91eecebe3a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2e30b3e209c809ed89a91eecebe3a7">&#9670;&nbsp;</a></span>update_program_property_status()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -610,8 +610,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>property_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -636,7 +636,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_program_properti
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">property_hash</td><td>Хэш предложения </td></tr>
+    <tr><td class="paramname">property_id</td><td>ID предложения </td></tr>
     <tr><td class="paramname">new_status</td><td>Новый статус </td></tr>
   </table>
   </dd>

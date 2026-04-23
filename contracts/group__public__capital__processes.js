@@ -30,6 +30,8 @@ var group__public__capital__processes =
     [ "Создать проект", "group__public__capital__project__creation__process.html", null ],
     [ "Удалить проект", "group__public__capital__project__deletion__process.html", null ],
     [ "Редактировать проект", "group__public__capital__project__editing__process.html", null ],
+    [ "Финализация проекта", "group__public__capital__finalization__process.html", null ],
+    [ "Инициализировать проект", "group__public__capital__project__initialization__process.html", null ],
     [ "Открытие проекта для инвестиций", "group__public__capital__project__opening__process.html", null ],
     [ "Установить мастера проекта", "group__public__capital__set__master__process.html", null ],
     [ "Планирование проекта", "group__public__capital__planning__process.html", null ],

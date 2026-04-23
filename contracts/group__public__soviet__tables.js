@@ -1,11 +1,11 @@
 var group__public__soviet__tables =
 [
-    [ "coagreement", "structcoagreement.html", [
-      [ "primary_key", "structcoagreement.html#a9a5a9318f1a8cfbf02f6bc51e2e375c8", null ],
-      [ "coopname", "structcoagreement.html#a73bae28eb9080abbcd9ff4d7445bdd5a", null ],
-      [ "draft_id", "structcoagreement.html#a1f28e8b80f9add6707a38eb6ee592251", null ],
-      [ "program_id", "structcoagreement.html#ab3fcaad7d35efa50bbefb847d6ad0b43", null ],
-      [ "type", "structcoagreement.html#aca44ae38cad0b9a44663877dbfa96380", null ]
+    [ "address", "structaddress.html", [
+      [ "primary_key", "structaddress.html#ac17670d77124e31915f628941594b4dd", null ],
+      [ "braname", "structaddress.html#af748837166c7a3e26168697f31499d8d", null ],
+      [ "coopname", "structaddress.html#ad9edc77ee23956092e27a52d1f1daee9", null ],
+      [ "data", "structaddress.html#a811d5c14ce10ef99c7f89ec3870a4996", null ],
+      [ "id", "structaddress.html#abc8aec5b1bd9fe5715797a8185c5ad52", null ]
     ] ],
     [ "agreement", "structagreement.html", [
       [ "by_draft", "structagreement.html#a1235d9934fc5ddfb1dcf24fc659d37ab", null ],
@@ -41,21 +41,6 @@ var group__public__soviet__tables =
       [ "username", "structagreement2.html#a6dae7fec31cdadc1c4c86dd9b9a12494", null ],
       [ "version", "structagreement2.html#a19e4dfcb0a541e8790b0dfd5c4659b5e", null ]
     ] ],
-    [ "progwallet", "structprogwallet.html", [
-      [ "by_agreement", "structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd", null ],
-      [ "by_program", "structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c", null ],
-      [ "by_username", "structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95", null ],
-      [ "by_username_and_program", "structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48", null ],
-      [ "primary_key", "structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398", null ],
-      [ "agreement_id", "structprogwallet.html#a28452c58972d6265119beea328dc775b", null ],
-      [ "available", "structprogwallet.html#a2af4089401221ea41833056eac18f538", null ],
-      [ "blocked", "structprogwallet.html#a695c77f25046ba4d46476fead7bdae07", null ],
-      [ "coopname", "structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa", null ],
-      [ "id", "structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b", null ],
-      [ "membership_contribution", "structprogwallet.html#a39f1d25b58c900fb3e4af41a4051f9b8", null ],
-      [ "program_id", "structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df", null ],
-      [ "username", "structprogwallet.html#a410c433920c4d749335fd1f02937e038", null ]
-    ] ],
     [ "boards", "structboards.html", [
       [ "by_type", "structboards.html#a62601ce5131f1d2be8f17c3df5866f38", null ],
       [ "get_chairman", "structboards.html#ad04db86aca0d3390cbf18c1696818f16", null ],
@@ -74,34 +59,12 @@ var group__public__soviet__tables =
       [ "name", "structboards.html#ad9a12ccbc9bdbabfe1dbd5f7cffdb06f", null ],
       [ "type", "structboards.html#a277bb2ea397a8b6076584f07f2c4432f", null ]
     ] ],
-    [ "staff", "structstaff.html", [
-      [ "has_right", "structstaff.html#a72d9d9dac115d8379e3afa76ff712c98", null ],
-      [ "primary_key", "structstaff.html#a907194daa8db9aee9629350891757d22", null ],
-      [ "created_at", "structstaff.html#ab46bbfc312f86ec081fead61e3d01a10", null ],
-      [ "position_title", "structstaff.html#a8fa0fdaf003c7588f9f1185a087785ba", null ],
-      [ "rights", "structstaff.html#a935eee764193e5796da146fedfc465e5", null ],
-      [ "roles", "structstaff.html#adc9ddede2cb6c7035ee3425ecdee5df4", null ],
-      [ "updated_at", "structstaff.html#a2079dc310b3faf4112d9046e54a72ab7", null ],
-      [ "username", "structstaff.html#aa67b206d474a4f87453bca87fda2f01b", null ]
-    ] ],
-    [ "participant", "structparticipant.html", [
-      [ "by_braname", "structparticipant.html#a20f3461b5fe0e29fb80f7dc0c69f78f3", null ],
-      [ "by_created_at", "structparticipant.html#ae99592d91313f341e9fc51f7479aee0f", null ],
-      [ "bylastpay", "structparticipant.html#a10f27e0747dd58289afc982af0a2104a", null ],
-      [ "is_active", "structparticipant.html#afc41b4f39fe346424c690d4ab60098f8", null ],
-      [ "primary_key", "structparticipant.html#aa13dc96e742a24ebba6d316e1aa139a5", null ],
-      [ "braname", "structparticipant.html#a01c5e1d21edc0f1e7c7a8a8173984eba", null ],
-      [ "created_at", "structparticipant.html#a8173e397d5ba9f0d7c19ab855a34305d", null ],
-      [ "has_vote", "structparticipant.html#abbb680aff322433d0b6309122a582f56", null ],
-      [ "initial_amount", "structparticipant.html#abe5d95bac42aa16addf425ad33aaa16a", null ],
-      [ "is_initial", "structparticipant.html#acaeb624e998b463a8f67f58886bd7bc7", null ],
-      [ "is_minimum", "structparticipant.html#ac5b3b008af41e4d805982762a8c949cd", null ],
-      [ "last_min_pay", "structparticipant.html#ae79d22918b4383221bbd4b601daeeb65", null ],
-      [ "last_update", "structparticipant.html#abceceb99568caad0017e18ba9e9adeaa", null ],
-      [ "minimum_amount", "structparticipant.html#a530f10546256062370cdcf2643aa8c05", null ],
-      [ "status", "structparticipant.html#a9855988bfe1c23094656925325665756", null ],
-      [ "type", "structparticipant.html#a4433399fbeb3e476c965473cde2a80bc", null ],
-      [ "username", "structparticipant.html#a376c595dbc685e77982b0e33cd2de52f", null ]
+    [ "coagreement", "structcoagreement.html", [
+      [ "primary_key", "structcoagreement.html#a9a5a9318f1a8cfbf02f6bc51e2e375c8", null ],
+      [ "coopname", "structcoagreement.html#a73bae28eb9080abbcd9ff4d7445bdd5a", null ],
+      [ "draft_id", "structcoagreement.html#a1f28e8b80f9add6707a38eb6ee592251", null ],
+      [ "program_id", "structcoagreement.html#ab3fcaad7d35efa50bbefb847d6ad0b43", null ],
+      [ "type", "structcoagreement.html#aca44ae38cad0b9a44663877dbfa96380", null ]
     ] ],
     [ "decision", "structdecision.html", [
       [ "by_secondary", "structdecision.html#a126af74e59573ce0c121023853d36696", null ],
@@ -134,12 +97,24 @@ var group__public__soviet__tables =
       [ "votes_against", "structdecision.html#a684d6c4cd9033cd2656f68c1e58b4e3e", null ],
       [ "votes_for", "structdecision.html#ab4dd0cf2e35bbea166ea7a60f7713c69", null ]
     ] ],
-    [ "address", "structaddress.html", [
-      [ "primary_key", "structaddress.html#ac17670d77124e31915f628941594b4dd", null ],
-      [ "braname", "structaddress.html#af748837166c7a3e26168697f31499d8d", null ],
-      [ "coopname", "structaddress.html#ad9edc77ee23956092e27a52d1f1daee9", null ],
-      [ "data", "structaddress.html#a811d5c14ce10ef99c7f89ec3870a4996", null ],
-      [ "id", "structaddress.html#abc8aec5b1bd9fe5715797a8185c5ad52", null ]
+    [ "participant", "structparticipant.html", [
+      [ "by_braname", "structparticipant.html#a20f3461b5fe0e29fb80f7dc0c69f78f3", null ],
+      [ "by_created_at", "structparticipant.html#ae99592d91313f341e9fc51f7479aee0f", null ],
+      [ "bylastpay", "structparticipant.html#a10f27e0747dd58289afc982af0a2104a", null ],
+      [ "is_active", "structparticipant.html#afc41b4f39fe346424c690d4ab60098f8", null ],
+      [ "primary_key", "structparticipant.html#aa13dc96e742a24ebba6d316e1aa139a5", null ],
+      [ "braname", "structparticipant.html#a01c5e1d21edc0f1e7c7a8a8173984eba", null ],
+      [ "created_at", "structparticipant.html#a8173e397d5ba9f0d7c19ab855a34305d", null ],
+      [ "has_vote", "structparticipant.html#abbb680aff322433d0b6309122a582f56", null ],
+      [ "initial_amount", "structparticipant.html#abe5d95bac42aa16addf425ad33aaa16a", null ],
+      [ "is_initial", "structparticipant.html#acaeb624e998b463a8f67f58886bd7bc7", null ],
+      [ "is_minimum", "structparticipant.html#ac5b3b008af41e4d805982762a8c949cd", null ],
+      [ "last_min_pay", "structparticipant.html#ae79d22918b4383221bbd4b601daeeb65", null ],
+      [ "last_update", "structparticipant.html#abceceb99568caad0017e18ba9e9adeaa", null ],
+      [ "minimum_amount", "structparticipant.html#a530f10546256062370cdcf2643aa8c05", null ],
+      [ "status", "structparticipant.html#a9855988bfe1c23094656925325665756", null ],
+      [ "type", "structparticipant.html#a4433399fbeb3e476c965473cde2a80bc", null ],
+      [ "username", "structparticipant.html#a376c595dbc685e77982b0e33cd2de52f", null ]
     ] ],
     [ "program", "structprogram.html", [
       [ "by_draft", "structprogram.html#aaf63e798470130772fb9f75f9155c59d", null ],
@@ -168,22 +143,30 @@ var group__public__soviet__tables =
       [ "start_at", "structprogram.html#a4ab247970586f2c364e5cc4941820bdd", null ],
       [ "title", "structprogram.html#a64f5cecc3b7e8623aae6a4e665ad12be", null ]
     ] ],
-    [ "Approver::approval", "struct_approver_1_1approval.html", [
-      [ "by_hash", "struct_approver_1_1approval.html#a2cad490c52da5f65f940b83047a7e641", null ],
-      [ "by_type", "struct_approver_1_1approval.html#ad31de74ad37a5b04d953db894a2b1c2f", null ],
-      [ "by_username", "struct_approver_1_1approval.html#a90e15bcd5b55f45bad26c4d79c5fe711", null ],
-      [ "primary_key", "struct_approver_1_1approval.html#af1ef2f249646c87a15279b30f72de39c", null ],
-      [ "approval_hash", "struct_approver_1_1approval.html#abcc46ad53c2491a2f2fad13610058554", null ],
-      [ "callback_action_approve", "struct_approver_1_1approval.html#a99bb85ea8454d640404c377909513046", null ],
-      [ "callback_action_decline", "struct_approver_1_1approval.html#a2f5373f13d87b37a7ab9b601b65774bf", null ],
-      [ "callback_contract", "struct_approver_1_1approval.html#a0425546563b3404c55a066d4fc610614", null ],
-      [ "coopname", "struct_approver_1_1approval.html#aafa3ff0d65619bf1f8ce4956742572d8", null ],
-      [ "created_at", "struct_approver_1_1approval.html#aa5051cce7adfa011e303dad4717ae02e", null ],
-      [ "document", "struct_approver_1_1approval.html#abdb1c254ff4571c27ceac378bfd3fd37", null ],
-      [ "id", "struct_approver_1_1approval.html#af81cc14c4b6289aee31c8633842dafc6", null ],
-      [ "meta", "struct_approver_1_1approval.html#a2c78ac733f707084db02053a71191244", null ],
-      [ "type", "struct_approver_1_1approval.html#ac024875ff5bed519570113a47b2a9271", null ],
-      [ "username", "struct_approver_1_1approval.html#a5665b685c8c17dda0e97ee7d0bc24649", null ]
+    [ "progwallet", "structprogwallet.html", [
+      [ "by_agreement", "structprogwallet.html#ac2e6359cb81bde879716cb56b89fc2bd", null ],
+      [ "by_program", "structprogwallet.html#af8ffd261685f17e66c52f6936f80f91c", null ],
+      [ "by_username", "structprogwallet.html#a3dca49bf3da48d9de7e6033b1dd61c95", null ],
+      [ "by_username_and_program", "structprogwallet.html#ab865f7e15bca7860dee2b57f8118db48", null ],
+      [ "primary_key", "structprogwallet.html#ad7deef4dc1c9d49475969e9f87bf8398", null ],
+      [ "agreement_id", "structprogwallet.html#a28452c58972d6265119beea328dc775b", null ],
+      [ "available", "structprogwallet.html#a2af4089401221ea41833056eac18f538", null ],
+      [ "blocked", "structprogwallet.html#a695c77f25046ba4d46476fead7bdae07", null ],
+      [ "coopname", "structprogwallet.html#ace9e56fc5b3da08327c06526680b90aa", null ],
+      [ "id", "structprogwallet.html#a31b4906def8d1a6b37bfd1432787360b", null ],
+      [ "membership_contribution", "structprogwallet.html#a39f1d25b58c900fb3e4af41a4051f9b8", null ],
+      [ "program_id", "structprogwallet.html#a95a8bfc8c2a21a4dbcd678b1454c52df", null ],
+      [ "username", "structprogwallet.html#a410c433920c4d749335fd1f02937e038", null ]
+    ] ],
+    [ "staff", "structstaff.html", [
+      [ "has_right", "structstaff.html#a72d9d9dac115d8379e3afa76ff712c98", null ],
+      [ "primary_key", "structstaff.html#a907194daa8db9aee9629350891757d22", null ],
+      [ "created_at", "structstaff.html#ab46bbfc312f86ec081fead61e3d01a10", null ],
+      [ "position_title", "structstaff.html#a8fa0fdaf003c7588f9f1185a087785ba", null ],
+      [ "rights", "structstaff.html#a935eee764193e5796da146fedfc465e5", null ],
+      [ "roles", "structstaff.html#adc9ddede2cb6c7035ee3425ecdee5df4", null ],
+      [ "updated_at", "structstaff.html#a2079dc310b3faf4112d9046e54a72ab7", null ],
+      [ "username", "structstaff.html#aa67b206d474a4f87453bca87fda2f01b", null ]
     ] ],
     [ "counts", "structcounts.html", null ],
     [ "automator", "structautomator.html", [

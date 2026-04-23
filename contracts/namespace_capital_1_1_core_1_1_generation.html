@@ -161,30 +161,21 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
 <tr class="memdesc:a3d69e0e65c718859291c72a9431dda66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета фактических показателей генерации в проекте по времени создателей  <a href="namespace_capital_1_1_core_1_1_generation.html#a3d69e0e65c718859291c72a9431dda66">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3d69e0e65c718859291c72a9431dda66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade769ea509d235962b58a837fc928d6f"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#ade769ea509d235962b58a837fc928d6f">calculate_coordinator_bonus_from_investment</a> (name coopname, const eosio::asset &amp;investment_amount)</td></tr>
-<tr class="memdesc:ade769ea509d235962b58a837fc928d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета премий координаторов от инвестиций  <a href="namespace_capital_1_1_core_1_1_generation.html#ade769ea509d235962b58a837fc928d6f">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:ade769ea509d235962b58a837fc928d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета премий координаторов от инвестиций (прямой процент)  <a href="namespace_capital_1_1_core_1_1_generation.html#ade769ea509d235962b58a837fc928d6f">Подробнее...</a><br /></td></tr>
 <tr class="separator:ade769ea509d235962b58a837fc928d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65823c8af34422f89aba6a9a2d794433"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a65823c8af34422f89aba6a9a2d794433">distribute_project_membership_funds</a> (eosio::name coopname, uint64_t project_id, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a65823c8af34422f89aba6a9a2d794433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция распределения членских взносов на проект  <a href="namespace_capital_1_1_core_1_1_generation.html#a65823c8af34422f89aba6a9a2d794433">Подробнее...</a><br /></td></tr>
-<tr class="separator:a65823c8af34422f89aba6a9a2d794433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e49a964b892af860e163e0dc5c6e8c9"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a4e49a964b892af860e163e0dc5c6e8c9">calculate_coordinator_bonus_plan</a> (name coopname, const eosio::asset &amp;base_costs)</td></tr>
+<tr class="memdesc:a4e49a964b892af860e163e0dc5c6e8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета премии координатора для плана (обратный процент) Используется в плане, чтобы при заложении суммы инвестиций, после вычета прямого процента координатора в факте, осталась ровно целевая сумма.  <a href="namespace_capital_1_1_core_1_1_generation.html#a4e49a964b892af860e163e0dc5c6e8c9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4e49a964b892af860e163e0dc5c6e8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c05887fc952cc1e031ccda789397e4e"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a4c05887fc952cc1e031ccda789397e4e">calculate_investor_used_amount</a> (const eosio::asset &amp;investor_amount, double use_invest_percent_percent)</td></tr>
 <tr class="memdesc:a4c05887fc952cc1e031ccda789397e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает фактически используемую сумму инвестора с учетом коэффициента использования  <a href="namespace_capital_1_1_core_1_1_generation.html#a4c05887fc952cc1e031ccda789397e4e">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4c05887fc952cc1e031ccda789397e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fe92a3609d53d8867d0d3a201339dc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a7fe92a3609d53d8867d0d3a201339dc4">add_coordinator_funds</a> (eosio::name coopname, const checksum256 &amp;project_hash, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
-<tr class="memdesc:a7fe92a3609d53d8867d0d3a201339dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет координаторские средства к проекту  <a href="namespace_capital_1_1_core_1_1_generation.html#a7fe92a3609d53d8867d0d3a201339dc4">Подробнее...</a><br /></td></tr>
-<tr class="separator:a7fe92a3609d53d8867d0d3a201339dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a349d9e3b1bffd65ce1a2643151db88eb"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a349d9e3b1bffd65ce1a2643151db88eb">calculate_contributors_bonus_pool</a> (const <a class="el" href="struct_capital_1_1fact__pool.html">fact_pool</a> &amp;fact)</td></tr>
-<tr class="memdesc:a349d9e3b1bffd65ce1a2643151db88eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета премий участников (для фактических показателей)  <a href="namespace_capital_1_1_core_1_1_generation.html#a349d9e3b1bffd65ce1a2643151db88eb">Подробнее...</a><br /></td></tr>
-<tr class="separator:a349d9e3b1bffd65ce1a2643151db88eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa934c77a78e71be8a4ad99700ed1342e"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#aa934c77a78e71be8a4ad99700ed1342e">calculate_contributors_bonus_pool</a> (const <a class="el" href="struct_capital_1_1plan__pool.html">plan_pool</a> &amp;plan)</td></tr>
-<tr class="memdesc:aa934c77a78e71be8a4ad99700ed1342e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция расчета премий участников (для плановых показателей)  <a href="namespace_capital_1_1_core_1_1_generation.html#aa934c77a78e71be8a4ad99700ed1342e">Подробнее...</a><br /></td></tr>
-<tr class="separator:aa934c77a78e71be8a4ad99700ed1342e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19c78497d5da25c7782b4f8e28cfe210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#a19c78497d5da25c7782b4f8e28cfe210">distribute_project_membership_funds</a> (eosio::name coopname, uint64_t project_id, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, uint8_t level)</td></tr>
-<tr class="memdesc:a19c78497d5da25c7782b4f8e28cfe210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Распределение паевых средств проекта  <a href="namespace_capital_1_1_core_1_1_generation.html#a19c78497d5da25c7782b4f8e28cfe210">Подробнее...</a><br /></td></tr>
-<tr class="separator:a19c78497d5da25c7782b4f8e28cfe210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec796dbdd2844975944f4bba311bde34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_generation.html#aec796dbdd2844975944f4bba311bde34">add_coordinator_funds</a> (eosio::name coopname, uint64_t project_id, const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:aec796dbdd2844975944f4bba311bde34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет координаторские средства к проекту  <a href="namespace_capital_1_1_core_1_1_generation.html#aec796dbdd2844975944f4bba311bde34">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec796dbdd2844975944f4bba311bde34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="a7fe92a3609d53d8867d0d3a201339dc4" name="a7fe92a3609d53d8867d0d3a201339dc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fe92a3609d53d8867d0d3a201339dc4">&#9670;&nbsp;</a></span>add_coordinator_funds()</h2>
+<a id="aec796dbdd2844975944f4bba311bde34" name="aec796dbdd2844975944f4bba311bde34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec796dbdd2844975944f4bba311bde34">&#9670;&nbsp;</a></span>add_coordinator_funds()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,8 +189,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>project_hash</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>project_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -219,7 +210,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">project_hash</td><td>Хеш проекта </td></tr>
+    <tr><td class="paramname">project_id</td><td>ID проекта </td></tr>
     <tr><td class="paramname">amount</td><td>Сумма координаторских взносов для добавления </td></tr>
   </table>
   </dd>
@@ -227,48 +218,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
 
 </div>
 </div>
-<a id="a349d9e3b1bffd65ce1a2643151db88eb" name="a349d9e3b1bffd65ce1a2643151db88eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a349d9e3b1bffd65ce1a2643151db88eb">&#9670;&nbsp;</a></span>calculate_contributors_bonus_pool() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eosio::asset Capital::Core::Generation::calculate_contributors_bonus_pool </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_capital_1_1fact__pool.html">fact_pool</a> &amp;&#160;</td>
-          <td class="paramname"><em>fact</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция расчета премий участников (для фактических показателей) </p>
-
-</div>
-</div>
-<a id="aa934c77a78e71be8a4ad99700ed1342e" name="aa934c77a78e71be8a4ad99700ed1342e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa934c77a78e71be8a4ad99700ed1342e">&#9670;&nbsp;</a></span>calculate_contributors_bonus_pool() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">eosio::asset Capital::Core::Generation::calculate_contributors_bonus_pool </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_capital_1_1plan__pool.html">plan_pool</a> &amp;&#160;</td>
-          <td class="paramname"><em>plan</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция расчета премий участников (для плановых показателей) </p>
-
-</div>
-</div>
 <a id="ac53f73994b5f405948bad4423d470f33" name="ac53f73994b5f405948bad4423d470f33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac53f73994b5f405948bad4423d470f33">&#9670;&nbsp;</a></span>calculate_contributors_bonus_pool() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac53f73994b5f405948bad4423d470f33">&#9670;&nbsp;</a></span>calculate_contributors_bonus_pool()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +264,38 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
       </table>
 </div><div class="memdoc">
 
-<p>Функция расчета премий координаторов от инвестиций </p>
+<p>Функция расчета премий координаторов от инвестиций (прямой процент) </p>
+
+</div>
+</div>
+<a id="a4e49a964b892af860e163e0dc5c6e8c9" name="a4e49a964b892af860e163e0dc5c6e8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e49a964b892af860e163e0dc5c6e8c9">&#9670;&nbsp;</a></span>calculate_coordinator_bonus_plan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::Core::Generation::calculate_coordinator_bonus_plan </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>base_costs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция расчета премии координатора для плана (обратный процент) Используется в плане, чтобы при заложении суммы инвестиций, после вычета прямого процента координатора в факте, осталась ровно целевая сумма. </p>
+<p >Функция расчета премии координатора для плана (обратный процент) </p>
 
 </div>
 </div>
@@ -571,84 +553,6 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_core_1_1_generat
 
 <p>Функция расчета коэффициента возврата инвестиций для плановых показателей </p>
 <p >Функция расчета коэффициента используемых инвестиций для плановых показателей </p>
-
-</div>
-</div>
-<a id="a65823c8af34422f89aba6a9a2d794433" name="a65823c8af34422f89aba6a9a2d794433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65823c8af34422f89aba6a9a2d794433">&#9670;&nbsp;</a></span>distribute_project_membership_funds() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Core::Generation::distribute_project_membership_funds </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>project_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>amount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Функция распределения членских взносов на проект </p>
-
-</div>
-</div>
-<a id="a19c78497d5da25c7782b4f8e28cfe210" name="a19c78497d5da25c7782b4f8e28cfe210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19c78497d5da25c7782b4f8e28cfe210">&#9670;&nbsp;</a></span>distribute_project_membership_funds() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Capital::Core::Generation::distribute_project_membership_funds </td>
-          <td>(</td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>coopname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>project_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">asset&#160;</td>
-          <td class="paramname"><em>amount</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Распределение паевых средств проекта </p>
 
 </div>
 </div>

@@ -11,6 +11,7 @@ var group__public__system__actions =
     [ "eosiosystem::system_contract::delegatebw", "group__public__system__actions.html#gaa54b498595abb1a3ad9c62c597d4f7b5", null ],
     [ "eosiosystem::system_contract::emit", "group__public__system__actions.html#ga7e80c965d15f6613db3ee04188d68af5", null ],
     [ "eosiosystem::system_contract::init", "group__public__system__actions.html#ga314f5afbd81e51d5e319ba81398f2e06", null ],
+    [ "eosiosystem::system_contract::injection", "group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff", null ],
     [ "eosiosystem::system_contract::limitauthchg", "group__public__system__actions.html#gab940f454d4d3d0018f22bf472caf3b52", null ],
     [ "eosiosystem::system_contract::onblock", "group__public__system__actions.html#gae75458e3f898b3bc834311fa54abc6a0", null ],
     [ "eosiosystem::system_contract::powerup", "group__public__system__actions.html#gab3d6d9e77d6b9ac63b79e6d8104d8312", null ],

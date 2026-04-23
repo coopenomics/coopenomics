@@ -22,7 +22,6 @@ var namespaces_dup =
     [ "eosiobios", "namespaceeosiobios.html", "namespaceeosiobios" ],
     [ "eosioboot", "namespaceeosioboot.html", "namespaceeosioboot" ],
     [ "eosiosystem", "namespaceeosiosystem.html", "namespaceeosiosystem" ],
-    [ "Fund", "namespace_fund.html", null ],
     [ "Gateway", "namespace_gateway.html", "namespace_gateway" ],
     [ "Loan", "namespace_loan.html", "namespace_loan" ],
     [ "Marketplace", "namespace_marketplace.html", "namespace_marketplace" ],
@@ -31,7 +30,9 @@ var namespaces_dup =
     [ "Registrator", "namespace_registrator.html", "namespace_registrator" ],
     [ "Soviet", "namespace_soviet.html", [
       [ "create_agenda", "namespace_soviet.html#a62507a32e3b1f484f8af7dc3606795ff", null ],
-      [ "create_approval", "namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd", null ]
+      [ "create_approval", "namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd", null ],
+      [ "make_complete_document", "namespace_soviet.html#a0d22d6996e8065e8ec9803e53896c53d", null ]
     ] ],
-    [ "system_contracts", "namespacesystem__contracts.html", "namespacesystem__contracts" ]
+    [ "system_contracts", "namespacesystem__contracts.html", "namespacesystem__contracts" ],
+    [ "WalletTables", "namespace_wallet_tables.html", "namespace_wallet_tables" ]
 ];

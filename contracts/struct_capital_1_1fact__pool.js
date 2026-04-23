@@ -20,6 +20,9 @@ var struct_capital_1_1fact__pool =
     [ "total_generation_pool", "struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14", null ],
     [ "total_received_investments", "struct_capital_1_1fact__pool.html#a0da4563f2e52083033ef4cdce38ec759", null ],
     [ "total_returned_investments", "struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b", null ],
+    [ "total_used_for_compensation", "struct_capital_1_1fact__pool.html#aef0955ff92a8baef8f7fcfa4fe6dc2db", null ],
+    [ "total_used_investments", "struct_capital_1_1fact__pool.html#a3e22f7ddf16d993d57e458d6450b5c99", null ],
+    [ "total_with_investments", "struct_capital_1_1fact__pool.html#a736a760bc95f793f05228f9709f2e76e", null ],
     [ "use_invest_percent", "struct_capital_1_1fact__pool.html#aeb766b08ce97c1b10e0d244868330ff2", null ],
     [ "used_expense_pool", "struct_capital_1_1fact__pool.html#a8d372a36946ffa88d167f351cd695e92", null ]
 ];

@@ -1,18 +1,5 @@
 var group__public__fund__tables =
 [
-    [ "simple_wallet", "structsimple__wallet.html", [
-      [ "available", "structsimple__wallet.html#ad4e9b756393a264085843627df30900f", null ],
-      [ "withdrawed", "structsimple__wallet.html#aedfc465cea04dd60e6dd19817554af51", null ]
-    ] ],
-    [ "coopwallet", "structcoopwallet.html", [
-      [ "primary_key", "structcoopwallet.html#a47842b36c0575fc8fb4ac2182282766e", null ],
-      [ "accumulative_account", "structcoopwallet.html#a5ce2818f6c403b1fbc3df7634dc3428f", null ],
-      [ "accumulative_expense_account", "structcoopwallet.html#a55ba31c29e280a95f459d51f6b528a59", null ],
-      [ "circulating_account", "structcoopwallet.html#a2ff52d4728bc26a555c81bc1ebbb1d49", null ],
-      [ "coopname", "structcoopwallet.html#a9b783eefb605ce7ab78d64d05e73d60e", null ],
-      [ "id", "structcoopwallet.html#ac6531e23e7b18cf3f251ffd2a9ff641d", null ],
-      [ "initial_account", "structcoopwallet.html#ae609e1f8e60d9accaa28a45a6e3b15d2", null ]
-    ] ],
     [ "accfund", "structaccfund.html", [
       [ "primary_key", "structaccfund.html#a5f280ecd9d0f660bc96c55b9a2935bc5", null ],
       [ "available", "structaccfund.html#ae566206b604a1307539d3c8fdf2beebd", null ],
@@ -23,6 +10,15 @@ var group__public__fund__tables =
       [ "name", "structaccfund.html#a0f3f14cbb379224c56ca44b7c7a7cfbb", null ],
       [ "percent", "structaccfund.html#af7699ada1bcc2813c4a80b24dd06b1ed", null ],
       [ "withdrawed", "structaccfund.html#a2d98cd28f245a720b54a9450eb7ab4ad", null ]
+    ] ],
+    [ "coopwallet", "structcoopwallet.html", [
+      [ "primary_key", "structcoopwallet.html#a47842b36c0575fc8fb4ac2182282766e", null ],
+      [ "accumulative_account", "structcoopwallet.html#a5ce2818f6c403b1fbc3df7634dc3428f", null ],
+      [ "accumulative_expense_account", "structcoopwallet.html#a55ba31c29e280a95f459d51f6b528a59", null ],
+      [ "circulating_account", "structcoopwallet.html#a2ff52d4728bc26a555c81bc1ebbb1d49", null ],
+      [ "coopname", "structcoopwallet.html#a9b783eefb605ce7ab78d64d05e73d60e", null ],
+      [ "id", "structcoopwallet.html#ac6531e23e7b18cf3f251ffd2a9ff641d", null ],
+      [ "initial_account", "structcoopwallet.html#ae609e1f8e60d9accaa28a45a6e3b15d2", null ]
     ] ],
     [ "expfund", "structexpfund.html", [
       [ "primary_key", "structexpfund.html#afd680a0f39b244ff7aa056fac99a1129", null ],

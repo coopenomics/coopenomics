@@ -143,16 +143,15 @@ $(document).ready(function(){initNavTree('namespace_branch.html',''); initResiza
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:ad86dc7c17b6e7ae489b9381b6f0746c4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_branch.html#ad86dc7c17b6e7ae489b9381b6f0746c4">get_branch_count</a> (eosio::name coopname)</td></tr>
-<tr class="memdesc:ad86dc7c17b6e7ae489b9381b6f0746c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает количество кооперативных участков для данного кооператива  <a href="namespace_branch.html#ad86dc7c17b6e7ae489b9381b6f0746c4">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad86dc7c17b6e7ae489b9381b6f0746c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75064866f3d6569e2919748ea775e8db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_branch.html#a75064866f3d6569e2919748ea775e8db">is_trustee</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="memdesc:a75064866f3d6569e2919748ea775e8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли пользователь уполномоченным лицом (trustee) кооперативного участка  <a href="namespace_branch.html#a75064866f3d6569e2919748ea775e8db">Подробнее...</a><br /></td></tr>
 <tr class="separator:a75064866f3d6569e2919748ea775e8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a66e57af958031d89fd640c45aeece3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_branch.html#a1a66e57af958031d89fd640c45aeece3">is_trusted</a> (eosio::name coopname, eosio::name braname, eosio::name username)</td></tr>
-<tr class="memdesc:a1a66e57af958031d89fd640c45aeece3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, является ли пользователь доверенным лицом (trusted) в указанном участке кооператива  <a href="namespace_branch.html#a1a66e57af958031d89fd640c45aeece3">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1a66e57af958031d89fd640c45aeece3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Функции</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Чтение таблиц branch / branchstat (domain/index.hpp — раньше). </p>
+</div><h2 class="groupheader">Функции</h2>
 <a id="ad86dc7c17b6e7ae489b9381b6f0746c4" name="ad86dc7c17b6e7ae489b9381b6f0746c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad86dc7c17b6e7ae489b9381b6f0746c4">&#9670;&nbsp;</a></span>get_branch_count()</h2>
 
@@ -168,15 +167,6 @@ $(document).ready(function(){initNavTree('namespace_branch.html',''); initResiza
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Получает количество кооперативных участков для данного кооператива </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>Количество участков кооператива </dd></dl>
 
 </div>
 </div>
@@ -212,17 +202,6 @@ $(document).ready(function(){initNavTree('namespace_branch.html',''); initResiza
       </table>
 </div><div class="memdoc">
 
-<p>Проверяет, является ли пользователь доверенным лицом (trusted) в указанном участке кооператива </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">braname</td><td>Имя участка </td></tr>
-    <tr><td class="paramname">username</td><td>Имя пользователя для проверки </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true если пользователь является доверенным, false в противном случае </dd></dl>
-
 </div>
 </div>
 <a id="a75064866f3d6569e2919748ea775e8db" name="a75064866f3d6569e2919748ea775e8db"></a>
@@ -250,16 +229,6 @@ $(document).ready(function(){initNavTree('namespace_branch.html',''); initResiza
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Проверяет, является ли пользователь уполномоченным лицом (trustee) кооперативного участка </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">username</td><td>Имя пользователя для проверки </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true если пользователь является уполномоченным, false в противном случае </dd></dl>
 
 </div>
 </div>

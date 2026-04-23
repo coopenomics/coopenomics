@@ -3,7 +3,7 @@ var searchData=
   ['gamification_2ecpp_0',['gamification.cpp',['../gamification_8cpp.html',1,'']]],
   ['gamification_2ehpp_1',['gamification.hpp',['../gamification_8hpp.html',1,'']]],
   ['gateway_2ecpp_2',['gateway.cpp',['../gateway_8cpp.html',1,'']]],
-  ['gateway_2ehpp_3',['gateway.hpp',['../gateway_8hpp.html',1,'']]],
+  ['gateway_2ehpp_3',['gateway.hpp',['../gateway_2gateway_8hpp.html',1,'(Глобальное пространство имён)'],['../lib_2core_2gateway_2gateway_8hpp.html',1,'(Глобальное пространство имён)']]],
   ['generation_2ecpp_4',['generation.cpp',['../generation_8cpp.html',1,'']]],
   ['generation_2ehpp_5',['generation.hpp',['../generation_8hpp.html',1,'']]],
   ['generation_5famounts_2ehpp_6',['generation_amounts.hpp',['../generation__amounts_8hpp.html',1,'']]],

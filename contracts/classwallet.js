@@ -1,7 +1,7 @@
 var classwallet =
 [
     [ "approvewthd", "classwallet.html#a220c0a35af6cc12a308781f8a2645eb2", null ],
-    [ "authwthd", "classwallet.html#abca08046790743d499828c7c98a41e87", null ],
+    [ "authwthd", "classwallet.html#a4877a82f7e23bc4fa8852ac7450140c3", null ],
     [ "completedpst", "classwallet.html#ae57eb006766cc4a6f6ea6f2be68254cf", null ],
     [ "completewthd", "classwallet.html#aa3b7a1efdfa587334fbd4438bbbe9b59", null ],
     [ "createdpst", "classwallet.html#a00440ad2f35cf4b526c96297f40228e4", null ],

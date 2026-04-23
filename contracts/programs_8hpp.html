@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="COOPENOMICS" />
 <meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
 <!-- END twitter metadata -->
-<title>COOPENOMICS: Файл cpp/lib/programs.hpp</title>
+<title>COOPENOMICS: Файл cpp/lib/core/programs.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -136,27 +136,22 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Классы</a> &#124;
-<a href="#typedef-members">Определения типов</a> &#124;
 <a href="#func-members">Функции</a> &#124;
 <a href="#var-members">Переменные</a>  </div>
   <div class="headertitle"><div class="title">Файл programs.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;map&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &quot;<a class="el" href="consts_8hpp_source.html">../consts.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
+</div>
 <p><a href="programs_8hpp_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprogram.html">program</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программ кооператива  <a href="structprogram.html#details">Подробнее...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_program_info.html">ProgramInfo</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Определения типов</h2></td></tr>
-<tr class="memitem:a997df44033beda2c94630837db349006"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt;&quot;programtype&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">program::by_draft</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a997df44033beda2c94630837db349006">programs_index</a></td></tr>
-<tr class="separator:a997df44033beda2c94630837db349006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
@@ -172,30 +167,14 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 <tr class="separator:acc1e7ef6047a61edfc0a4f00917d2770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5480d0ee4bda1f1fe5854cf115ae3a4b"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#a5480d0ee4bda1f1fe5854cf115ae3a4b">get_draft_id</a> (const eosio::name &amp;type)</td></tr>
 <tr class="separator:a5480d0ee4bda1f1fe5854cf115ae3a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9f495bc694886a526fb7d7f3d67f4c8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#aa9f495bc694886a526fb7d7f3d67f4c8">get_program_wallet</a> (eosio::name coopname, eosio::name username, name type)</td></tr>
-<tr class="separator:aa9f495bc694886a526fb7d7f3d67f4c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5e63f51767f58e8e6dbb608f22c473"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structprogwallet.html">progwallet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#adc5e63f51767f58e8e6dbb608f22c473">get_program_wallet</a> (eosio::name coopname, eosio::name username, eosio::name type)</td></tr>
+<tr class="separator:adc5e63f51767f58e8e6dbb608f22c473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
 <tr class="memitem:aed48ff720fc663a7896d12adec19d855"><td class="memItemLeft" align="right" valign="top">static const std::map&lt; eosio::name, <a class="el" href="struct_program_info.html">ProgramInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="programs_8hpp.html#aed48ff720fc663a7896d12adec19d855">program_map</a></td></tr>
 <tr class="separator:aed48ff720fc663a7896d12adec19d855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Типы</h2>
-<a id="a997df44033beda2c94630837db349006" name="a997df44033beda2c94630837db349006"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a997df44033beda2c94630837db349006">&#9670;&nbsp;</a></span>programs_index</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef eosio::multi_index&lt; &quot;programs&quot;_n, <a class="el" href="structprogram.html">program</a>, eosio::indexed_by&lt;&quot;programtype&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#a4ec4054a69df9337167d3c83bcd51d3b">program::by_program_type</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bydraft&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="structprogram.html">program</a>, uint64_t, &amp;<a class="el" href="structprogram.html#aaf63e798470130772fb9f75f9155c59d">program::by_draft</a>&gt; &gt;&gt; <a class="el" href="programs_8hpp.html#a997df44033beda2c94630837db349006">programs_index</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p >Тип мультииндекса для таблицы целевых программ </p>
-
-</div>
-</div>
 <h2 class="groupheader">Функции</h2>
 <a id="abecd59b9df08fbfab10a35b78ba7c83c" name="abecd59b9df08fbfab10a35b78ba7c83c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abecd59b9df08fbfab10a35b78ba7c83c">&#9670;&nbsp;</a></span>check_valid_program()</h2>
@@ -300,11 +279,12 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
         </tr>
       </table>
 </div><div class="memdoc">
+<p >Логика программ пайщика и кошелька (совет). Таблицы programs / progwallets / agreements — из domain/index.hpp (подключать раньше). </p>
 
 </div>
 </div>
-<a id="aa9f495bc694886a526fb7d7f3d67f4c8" name="aa9f495bc694886a526fb7d7f3d67f4c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9f495bc694886a526fb7d7f3d67f4c8">&#9670;&nbsp;</a></span>get_program_wallet()</h2>
+<a id="adc5e63f51767f58e8e6dbb608f22c473" name="adc5e63f51767f58e8e6dbb608f22c473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5e63f51767f58e8e6dbb608f22c473">&#9670;&nbsp;</a></span>get_program_wallet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,7 +304,7 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">name&#160;</td>
+          <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>type</em>&#160;</td>
         </tr>
         <tr>
@@ -426,14 +406,13 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 </table>
 </div><div class="memdoc">
 <b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a>, {1, 1}},       </div>
-<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">_marketplace_program</a>, {2, 699}},  </div>
-<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">_source_program</a>, {3, 0}},    </div>
-<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a>, {4, 1000}}    </div>
-<div class="line">}</div>
+<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a>, {1, 1}},</div>
+<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">_marketplace_program</a>, {2, 699}},</div>
+<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">_source_program</a>, {3, 0}},</div>
+<div class="line">    {<a class="code hl_variable" href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a>, {4, 1000}}}</div>
 <div class="ttc" id="aconsts_8hpp_html_a4c69e9dd2bcc07568bc73bcc74772b01"><div class="ttname"><a href="consts_8hpp.html#a4c69e9dd2bcc07568bc73bcc74772b01">_wallet_program</a></div><div class="ttdeci">static constexpr eosio::name _wallet_program</div><div class="ttdoc">Главный Кошелёк</div><div class="ttdef"><b>Definition:</b> consts.hpp:79</div></div>
 <div class="ttc" id="aconsts_8hpp_html_a7230ac26306849d2edfa46e4feab091a"><div class="ttname"><a href="consts_8hpp.html#a7230ac26306849d2edfa46e4feab091a">_source_program</a></div><div class="ttdeci">static constexpr eosio::name _source_program</div><div class="ttdoc">Кошелёк для генерации по договору УХД</div><div class="ttdef"><b>Definition:</b> consts.hpp:82</div></div>
-<div class="ttc" id="aconsts_8hpp_html_a857d225f367d67114f7ab9a1c7714a20"><div class="ttname"><a href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a></div><div class="ttdeci">static constexpr eosio::name _capital_program</div><div class="ttdoc">Кошелёк программы &quot;Капитализация&quot;.</div><div class="ttdef"><b>Definition:</b> consts.hpp:83</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a857d225f367d67114f7ab9a1c7714a20"><div class="ttname"><a href="consts_8hpp.html#a857d225f367d67114f7ab9a1c7714a20">_capital_program</a></div><div class="ttdeci">static constexpr eosio::name _capital_program</div><div class="ttdoc">Кошелёк программы &quot;Благорост&quot;.</div><div class="ttdef"><b>Definition:</b> consts.hpp:83</div></div>
 <div class="ttc" id="aconsts_8hpp_html_aade67ec2b2b2a1d544e6260962dd24dd"><div class="ttname"><a href="consts_8hpp.html#aade67ec2b2b2a1d544e6260962dd24dd">_marketplace_program</a></div><div class="ttdeci">static constexpr eosio::name _marketplace_program</div><div class="ttdoc">Кошелёк программы &quot;Маркетплейс&quot;.</div><div class="ttdef"><b>Definition:</b> consts.hpp:80</div></div>
 </div><!-- fragment -->
 </div>
@@ -444,7 +423,7 @@ $(document).ready(function(){initNavTree('programs_8hpp.html',''); initResizable
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="programs_8hpp.html">programs.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_7da415c6c9db060620fae2ab355398f8.html">core</a></li><li class="navelem"><a class="el" href="programs_8hpp.html">programs.hpp</a></li>
     <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

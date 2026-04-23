@@ -172,7 +172,9 @@ var menudata={children:[
 {text:"b",url:"namespacemembers_vars.html#index_b"},
 {text:"c",url:"namespacemembers_vars.html#index_c"},
 {text:"d",url:"namespacemembers_vars.html#index_d"},
+{text:"f",url:"namespacemembers_vars.html#index_f"},
 {text:"g",url:"namespacemembers_vars.html#index_g"},
+{text:"i",url:"namespacemembers_vars.html#index_i"},
 {text:"m",url:"namespacemembers_vars.html#index_m"},
 {text:"o",url:"namespacemembers_vars.html#index_o"},
 {text:"p",url:"namespacemembers_vars.html#index_p"},
@@ -200,7 +202,8 @@ var menudata={children:[
 {text:"s",url:"namespacemembers_type.html#index_s"},
 {text:"t",url:"namespacemembers_type.html#index_t"},
 {text:"u",url:"namespacemembers_type.html#index_u"},
-{text:"v",url:"namespacemembers_type.html#index_v"}]}]}]},
+{text:"v",url:"namespacemembers_type.html#index_v"},
+{text:"w",url:"namespacemembers_type.html#index_w"}]}]}]},
 {text:"Файлы",url:"files.html",children:[
 {text:"Обозреватель",url:"files.html"},
 {text:"Список членов всех файлов",url:"globals.html",children:[

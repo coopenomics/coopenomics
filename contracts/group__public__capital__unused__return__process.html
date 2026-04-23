@@ -138,18 +138,18 @@ $(document).ready(function(){initNavTree('group__public__capital__unused__return
 </div><!--header-->
 <div class="contents">
 <p >Процесс возврата инвесторам неиспользованной части их инвестиций после завершения проекта. Обеспечивает справедливое распределение средств на основе фактического использования инвестиций.</p>
-<h2><a class="anchor" id="autotoc_md140"></a>
+<h2><a class="anchor" id="autotoc_md136"></a>
 Математические основы расчёта</h2>
-<h3><a class="anchor" id="autotoc_md141"></a>
+<h3><a class="anchor" id="autotoc_md137"></a>
 Коэффициент использования инвестиций</h3>
 <p >use_invest_percent = (использованные_средства / полученные_инвестиции) × 100%</p>
-<h3><a class="anchor" id="autotoc_md142"></a>
+<h3><a class="anchor" id="autotoc_md138"></a>
 Расчёт возврата для инвестора</h3>
 <ul>
 <li>investor_base = investor_amount × (use_invest_percent / 100) - использованная часть</li>
 <li>unused_amount = investor_amount - investor_base - неиспользованная часть</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md143"></a>
+<h2><a class="anchor" id="autotoc_md139"></a>
 Диаграмма процесса</h2>
 <p > 
   <div class="mermaid">
@@ -175,15 +175,15 @@ $(document).ready(function(){initNavTree('group__public__capital__unused__return
       Note over C: investor_amount = investor_base (в сегменте)
   </div>
   </p>
-<h2><a class="anchor" id="autotoc_md144"></a>
+<h2><a class="anchor" id="autotoc_md140"></a>
 Пошаговое описание</h2>
-<h3><a class="anchor" id="autotoc_md145"></a>
+<h3><a class="anchor" id="autotoc_md141"></a>
 Предварительные условия для возврата</h3>
 <p ><b>Состояние проекта:</b> Проект должен быть в статусе закрыт, все работы завершены, результаты сданы, рассчитан итоговый коэффициент использования инвестиций и он должен быть меньше 100%, что означает наличие неиспользованных средств.</p>
 <p ><b>Состояние инвестора:</b> Инвестор должен был вложить средства в данный проект, сумма инвестиций в сегменте проекта должна быть больше нуля, и инвестор ещё не получал возврат по данному проекту.</p>
-<h3><a class="anchor" id="autotoc_md146"></a>
+<h3><a class="anchor" id="autotoc_md142"></a>
 Шаг 1: Инициация возврата неиспользованных средств</h3>
-<p ><a class="el" href="group__public__capital__actions.html#ga2ecb2c2825a0646684a29fc279b41298">Инициация возврата неиспользованных инвестиций</a></p>
+<p >Инициация возврата неиспользованных инвестиций</p>
 <p >Инвестор или уполномоченное лицо инициирует возврат неиспользованных средств:</p>
 <p ><b>Автоматический расчёт возврата:</b></p>
 <dl class="section post"><dt>Постусловие</dt><dd>Расчёт использованной части инвестиции: investor_base = investor_amount × (use_invest_percent / 100)</dd>
@@ -197,13 +197,13 @@ $(document).ready(function(){initNavTree('group__public__capital__unused__return
 <dd>
 Пересчёт общей стоимости сегмента с учётом скорректированной инвестиции</dd></dl>
 <p><b>Результат:</b> Неиспользованные средства возвращены инвестору</p>
-<h2><a class="anchor" id="autotoc_md147"></a>
+<h2><a class="anchor" id="autotoc_md143"></a>
 Документы процесса</h2>
 <p ><ul>
 <li>📄 Заявление на конвертацию неиспользуемых инвестиций со счёта кошелька договора УХД в главный кошелёк </li>
 </ul>
 </p>
-<h2><a class="anchor" id="autotoc_md148"></a>
+<h2><a class="anchor" id="autotoc_md144"></a>
 Связанные процессы</h2>
 <ul>
 <li><a class="el" href="group__public__capital__project__investment__process.html">Инвестиции в проект</a> - исходные инвестиции</li>

@@ -146,10 +146,8 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1income.html">income</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица входящих платежей хранит информацию о входящих платежах в кооператив.  <a href="struct_gateway_1_1income.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_gateway_1_1outcome.html">outcome</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица исходящих платежей хранит информацию об исходящих платежах из кооператива.  <a href="struct_gateway_1_1outcome.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -165,22 +163,19 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 <tr class="separator:a7acc8b2bc711b313ca82d432cd9e84aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29393787b1a856bf099856d74d2ee18e"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a29393787b1a856bf099856d74d2ee18e">get_valid_outcome_action</a> (const eosio::name &amp;<a class="el" href="regcomplete_8cpp.html#a38d9c7911c13471033722438e0f6b5c1">action</a>)</td></tr>
 <tr class="separator:a29393787b1a856bf099856d74d2ee18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9bf607ccf012b2e29dc34b26210255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a1c9bf607ccf012b2e29dc34b26210255">create_outcome</a> (name calling_contract, <a class="el" href="lib_2core_2gateway_2gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>)</td></tr>
+<tr class="separator:a1c9bf607ccf012b2e29dc34b26210255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89bb33c209f9597d3314921cc917d315"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1income.html">income</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">get_income</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:a89bb33c209f9597d3314921cc917d315"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает возврат из кошелька по хэшу.  <a href="namespace_gateway.html#a89bb33c209f9597d3314921cc917d315">Подробнее...</a><br /></td></tr>
 <tr class="separator:a89bb33c209f9597d3314921cc917d315"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47f70c3eb62afe31d8b7644551a8df3b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_gateway_1_1outcome.html">outcome</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a47f70c3eb62afe31d8b7644551a8df3b">get_outcome</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="separator:a47f70c3eb62afe31d8b7644551a8df3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c9bf607ccf012b2e29dc34b26210255"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a1c9bf607ccf012b2e29dc34b26210255">create_outcome</a> (name calling_contract, <a class="el" href="shared__gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>)</td></tr>
-<tr class="separator:a1c9bf607ccf012b2e29dc34b26210255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:ga5557e17c9b2fe878823af5c5d343261a"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">gateway_income_actions</a></td></tr>
-<tr class="memdesc:ga5557e17c9b2fe878823af5c5d343261a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для входящих платежей  <a href="group__public__gateway__consts.html#ga5557e17c9b2fe878823af5c5d343261a">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga5557e17c9b2fe878823af5c5d343261a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5677d45e7c58841918273a527b7be9ce"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">gateway_outcome_actions</a></td></tr>
-<tr class="memdesc:ga5677d45e7c58841918273a527b7be9ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допустимые действия для исходящих платежей  <a href="group__public__gateway__consts.html#ga5677d45e7c58841918273a527b7be9ce">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga5677d45e7c58841918273a527b7be9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5557e17c9b2fe878823af5c5d343261a"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a5557e17c9b2fe878823af5c5d343261a">gateway_income_actions</a></td></tr>
+<tr class="separator:a5557e17c9b2fe878823af5c5d343261a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5677d45e7c58841918273a527b7be9ce"><td class="memItemLeft" align="right" valign="top">static const std::set&lt; eosio::name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_gateway.html#a5677d45e7c58841918273a527b7be9ce">gateway_outcome_actions</a></td></tr>
+<tr class="separator:a5677d45e7c58841918273a527b7be9ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Типы</h2>
 <a id="ae81fcd7a7ad80534b2cc00653bbec0b9" name="ae81fcd7a7ad80534b2cc00653bbec0b9"></a>
@@ -194,7 +189,6 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Мультииндекс для доступа и манипуляции данными таблицы <code>incomes</code> </p>
 
 </div>
 </div>
@@ -209,7 +203,6 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Мультииндекс для доступа и манипуляции данными таблицы <code>outcome</code> </p>
 
 </div>
 </div>
@@ -232,7 +225,7 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="shared__gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="lib_2core_2gateway_2gateway_8hpp.html#a72cabe6b9ac6b9f1833b0334899872be">CREATEOUTPAY_SIGNATURE</a>&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -283,16 +276,6 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Получает возврат из кошелька по хэшу. </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">hash</td><td>Хэш возврата. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd><code>std::optional&lt;income&gt;</code> - найденное действие или <code>std::nullopt</code>, если его нет. </dd></dl>
 
 </div>
 </div>
@@ -382,6 +365,57 @@ $(document).ready(function(){initNavTree('namespace_gateway.html',''); initResiz
 </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a5557e17c9b2fe878823af5c5d343261a" name="a5557e17c9b2fe878823af5c5d343261a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5557e17c9b2fe878823af5c5d343261a">&#9670;&nbsp;</a></span>gateway_income_actions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt;eosio::name&gt; Gateway::gateway_income_actions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;deposit&quot;</span>_n,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5677d45e7c58841918273a527b7be9ce" name="a5677d45e7c58841918273a527b7be9ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5677d45e7c58841918273a527b7be9ce">&#9670;&nbsp;</a></span>gateway_outcome_actions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::set&lt;eosio::name&gt; Gateway::gateway_outcome_actions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="stringliteral">&quot;withdraw&quot;</span>_n,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

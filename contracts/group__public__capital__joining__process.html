@@ -140,47 +140,48 @@ $(document).ready(function(){initNavTree('group__public__capital__joining__proce
 <dl class="section pre"><dt>Предусловие</dt><dd>Пайщик имеет активный договор УХД и статус участника</dd></dl>
 <p>Процесс подписания приложений к договору УХД для участия участника в конкретном проекте. Приложение к договору УХД определяет проект, по которому ведется участие в хозяйственной деятельности.</p>
 <p > 
-<div class="mermaid">
-sequenceDiagram
-    participant V as Участник
-    participant C as Capital Contract
-    participant S as Soviet Contract
-    
-    V->>C: 1. Подача заявки на допуск к проекту
-    Note over C: Проверка активного договора УХД
-    C->>S: 2. Направление заявки на рассмотрение
-    
-    alt Одобрение председателем
-        S->>C: 3. Принятие приложения к договору
-        Note over C: Активация приложения
-    else Отклонение
-        S->>C: 3. Отклонение допуска
-        Note over C: Удаление заявки
-    end
-</div>
-</p>
-<h3><a class="anchor" id="autotoc_md154"></a>
+ <div class="mermaid">
+ sequenceDiagram
+     participant V as Участник
+     participant C as Capital Contract
+     participant S as Soviet Contract
+     
+     V->>C: 1. Подача заявки на допуск к проекту
+     Note over C: Проверка активного договора УХД
+     C->>S: 2. Направление заявки на рассмотрение
+     
+     alt Одобрение председателем
+         S->>C: 3. Принятие приложения к договору
+         Note over C: Активация приложения
+     else Отклонение
+         S->>C: 3. Отклонение допуска
+         Note over C: Удаление заявки
+     end
+ </div>
+ </p>
+<h3><a class="anchor" id="autotoc_md150"></a>
 Шаг 1: Подача заявки на допуск к проекту</h3>
 <p ><a class="el" href="group__public__capital__actions.html#gaeb6841458fb337ae80d9359b9bd50616">подача заявки на допуск к проекту</a></p>
 <p >Участник с активным договором УХД подает заявку для участия в конкретном проекте. Необходимо предоставить подписанное приложение к договору УХД с указанием хеша проекта.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>создается запись в таблице допуска со статусом PENDING </dd>
 <dd>
 заявка направляется на рассмотрение в совет</dd></dl>
-<h3><a class="anchor" id="autotoc_md155"></a>
+<h3><a class="anchor" id="autotoc_md151"></a>
 Шаг 2: Принятие приложения к договору УХД</h3>
-<p ><a class="el" href="group__public__capital__actions.html#gafc02c1b58ada3fa280369549c69b6290">принятие приложения к договору УХД</a></p>
+<p ><a class="el" href="classcapital.html#afc02c1b58ada3fa280369549c69b6290">принятие приложения к договору УХД</a></p>
 <p >Председатель совета или уполномоченное лицо рассматривает заявку и принимает приложение к договору УХД своей подписью на документе.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>статус допуска изменяется с PENDING на ACTIVE </dd>
 <dd>
 участник получает право участвовать в проекте </dd>
 <dd>
-становится возможным создание коммитов и инвестиций в проект</dd></dl>
-<h3><a class="anchor" id="autotoc_md156"></a>
+становится возможным создание коммитов и инвестиций в проект </dd></dl>
+<dl class="section note"><dt>Заметки</dt><dd>Учёт доли участника по программе «Благорост» в сегменте проекта (CRPS) выполняется отдельным действием <a class="el" href="group__public__capital__actions.html#ga9d22e27fd98308c93b74d4292ca1fefb">capital::regshare</a>; при принятии приложения (<a class="el" href="classcapital.html#afc02c1b58ada3fa280369549c69b6290">capital::apprvappndx</a>) вызова regshare нет.</dd></dl>
+<h3><a class="anchor" id="autotoc_md152"></a>
 Шаг 3: Отклонение заявки (альтернативный путь)</h3>
 <p ><a class="el" href="group__public__capital__actions.html#gabfa059839f05aaabb9689751130fa42f">отклонение заявки на допуск</a></p>
 <p >При отклонении заявки председателем или советом запись удаляется с указанием причины отказа.</p>
 <dl class="section post"><dt>Постусловие</dt><dd>участник не получает доступ к участию в проекте</dd></dl>
-<h2><a class="anchor" id="autotoc_md157"></a>
+<h2><a class="anchor" id="autotoc_md153"></a>
 Документы процесса</h2>
 <p ><ul>
 <li>📄 Приложение к договору УХД по проекту</li>

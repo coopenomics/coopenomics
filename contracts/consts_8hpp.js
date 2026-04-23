@@ -8,7 +8,6 @@ var consts_8hpp =
     [ "GATEWAY", "consts_8hpp.html#a861181f1d81b4ccb482b33c7bffad5d1", null ],
     [ "HUNDR_PERCENTS", "consts_8hpp.html#a8dca202ba0e066e3375d5314f0191389", null ],
     [ "LEDGER", "consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5", null ],
-    [ "LEDGER", "consts_8hpp.html#a81b0e7cdf4e6040f1d20d74ad43196e5", null ],
     [ "LOAN", "consts_8hpp.html#afd25b38f9757bfaba4247a6c81ea48f1", null ],
     [ "MARKETPLACE", "consts_8hpp.html#a49f9e6e30c4b39068965aa387ae6bf1f", null ],
     [ "MEET", "consts_8hpp.html#a9af8717485817233e79a6039c170e7fe", null ],
@@ -70,6 +69,7 @@ var consts_8hpp =
     [ "_wallet_program_id", "consts_8hpp.html#a352f520a4bd7b6fb5e7b2687eba65684", null ],
     [ "_withdraw_action", "consts_8hpp.html#a9e2440f7709ebcf63b4e0f7ca5c65fe5", null ],
     [ "contracts_whitelist", "consts_8hpp.html#a5a01bac354ffb617c620091722ac5469", null ],
+    [ "MIN_SOVIET_MEMBERS_COUNT", "consts_8hpp.html#ab89fe8ce8622ff448e46e2853c05fef5", null ],
     [ "RAM_symbol", "consts_8hpp.html#a53c8b80330465342487f78d14fad4ce7", null ],
     [ "soviet_actions", "consts_8hpp.html#a1969de36d0715731eeed6eb81951c87f", null ],
     [ "token_whitelist", "consts_8hpp.html#af042516f92d25052ae67d9224b34bea6", null ]

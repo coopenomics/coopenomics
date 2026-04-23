@@ -137,9 +137,7 @@ $(document).ready(function(){initNavTree('program__invests_8hpp.html',''); initR
   <div class="summary">
 <a href="#nested-classes">Классы</a> &#124;
 <a href="#namespaces">Пространства имен</a> &#124;
-<a href="#typedef-members">Определения типов</a> &#124;
-<a href="#func-members">Функции</a> &#124;
-<a href="#var-members">Переменные</a>  </div>
+<a href="#typedef-members">Определения типов</a>  </div>
   <div class="headertitle"><div class="title">Файл program_invests.hpp</div></div>
 </div><!--header-->
 <div class="contents">
@@ -149,44 +147,18 @@ $(document).ready(function(){initNavTree('program__invests_8hpp.html',''); initR
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Классы</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1program__invest.html">Capital::program_invest</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программных инвестиций хранит данные об инвестициях в программу капитализации.  <a href="struct_capital_1_1program__invest.html#details">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Таблица программных инвестиций (progrinvests): ранее использовалась для заявок на зачёт с этапом одобрения советом; при текущей логике createpinv строки не создаёт, таблица сохранена для совместимости и чтения исторических записей.  <a href="struct_capital_1_1program__invest.html#details">Подробнее...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
 <tr class="memitem:namespace_capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html">Capital</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_program_invests"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests.html">Capital::ProgramInvests</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_capital_1_1_program_invests_1_1_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests_1_1_status.html">Capital::ProgramInvests::Status</a></td></tr>
-<tr class="memdesc:namespace_capital_1_1_program_invests_1_1_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Константы статусов программных инвестиций <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Определения типов</h2></td></tr>
 <tr class="memitem:a048ac73318cd0635f2d21d0ca76673cb"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;progrinvests&quot;_n, program_invest, indexed_by&lt;&quot;byusername&quot;_n, const_mem_fun&lt; program_invest, uint64_t, &amp;program_invest::by_username &gt; &gt;, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; program_invest, checksum256, &amp;program_invest::by_hash &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital.html#a048ac73318cd0635f2d21d0ca76673cb">Capital::program_invest_index</a></td></tr>
 <tr class="separator:a048ac73318cd0635f2d21d0ca76673cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Функции</h2></td></tr>
-<tr class="memitem:ac60500c9f0e0faaa18efa9acb7078eb2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; program_invest &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">Capital::ProgramInvests::get_program_invest</a> (eosio::name coopname, const checksum256 &amp;invest_hash)</td></tr>
-<tr class="memdesc:ac60500c9f0e0faaa18efa9acb7078eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает программную инвестицию по хэшу.  <a href="namespace_capital_1_1_program_invests.html#ac60500c9f0e0faaa18efa9acb7078eb2">Подробнее...</a><br /></td></tr>
-<tr class="separator:ac60500c9f0e0faaa18efa9acb7078eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a416f935e741fefcb4e08cae6ba80a2e7"><td class="memItemLeft" align="right" valign="top">program_invest&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">Capital::ProgramInvests::get_program_invest_or_fail</a> (eosio::name coopname, const checksum256 &amp;invest_hash)</td></tr>
-<tr class="memdesc:a416f935e741fefcb4e08cae6ba80a2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает программную инвестицию по хэшу или завершает выполнение с ошибкой.  <a href="namespace_capital_1_1_program_invests.html#a416f935e741fefcb4e08cae6ba80a2e7">Подробнее...</a><br /></td></tr>
-<tr class="separator:a416f935e741fefcb4e08cae6ba80a2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c9986e5acb5c8044588df59b3aa747"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">Capital::ProgramInvests::create_program_invest_with_approve</a> (eosio::name coopname, eosio::name username, checksum256 invest_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
-<tr class="memdesc:a80c9986e5acb5c8044588df59b3aa747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает программную инвестицию и отправляет её на утверждение.  <a href="namespace_capital_1_1_program_invests.html#a80c9986e5acb5c8044588df59b3aa747">Подробнее...</a><br /></td></tr>
-<tr class="separator:a80c9986e5acb5c8044588df59b3aa747"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d3d499075202bf27644396a0d6ef212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">Capital::ProgramInvests::remove_program_invest</a> (eosio::name coopname, const checksum256 &amp;invest_hash)</td></tr>
-<tr class="memdesc:a3d3d499075202bf27644396a0d6ef212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет программную инвестицию после обработки.  <a href="namespace_capital_1_1_program_invests.html#a3d3d499075202bf27644396a0d6ef212">Подробнее...</a><br /></td></tr>
-<tr class="separator:a3d3d499075202bf27644396a0d6ef212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Переменные</h2></td></tr>
-<tr class="memitem:af696d0322b949a4ab9321a9400582b64"><td class="memItemLeft" align="right" valign="top">const eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">Capital::ProgramInvests::Status::CREATED</a> = &quot;created&quot;_n</td></tr>
-<tr class="memdesc:af696d0322b949a4ab9321a9400582b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Программная инвестиция создана  <a href="namespace_capital_1_1_program_invests_1_1_status.html#af696d0322b949a4ab9321a9400582b64">Подробнее...</a><br /></td></tr>
-<tr class="separator:af696d0322b949a4ab9321a9400582b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

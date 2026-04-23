@@ -144,6 +144,8 @@ $(document).ready(function(){initNavTree('capital_2domain_2core_2voting_2voting_
 <code>#include &quot;<a class="el" href="votes_8hpp_source.html">../../entities/votes.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="segments_8hpp_source.html">../../entities/segments.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="projects_8hpp_source.html">../../entities/projects.hpp</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Пространства имен</h2></td></tr>
@@ -156,9 +158,9 @@ $(document).ready(function(){initNavTree('capital_2domain_2core_2voting_2voting_
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a3c4f2672ae5462ed9871bd87fbdedc01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a3c4f2672ae5462ed9871bd87fbdedc01">Capital::Core::Voting::initialize_project_voting</a> (name coopname, checksum256 project_hash)</td></tr>
-<tr class="memdesc:a3c4f2672ae5462ed9871bd87fbdedc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует голосование по проекту при его завершении  <a href="namespace_capital_1_1_core_1_1_voting.html#a3c4f2672ae5462ed9871bd87fbdedc01">Подробнее...</a><br /></td></tr>
-<tr class="separator:a3c4f2672ae5462ed9871bd87fbdedc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832529448f8bc9de4c10e72d096a44e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a832529448f8bc9de4c10e72d096a44e3">Capital::Core::Voting::initialize_project_voting</a> (name coopname, uint64_t project_id)</td></tr>
+<tr class="memdesc:a832529448f8bc9de4c10e72d096a44e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализирует голосование по проекту при его завершении  <a href="namespace_capital_1_1_core_1_1_voting.html#a832529448f8bc9de4c10e72d096a44e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a832529448f8bc9de4c10e72d096a44e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="memItemLeft" align="right" valign="top">voting_amounts&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a3a0ba2c7ad3327a4ef026f10c7cd9b2f">Capital::Core::Voting::calculate_voting_amounts</a> (const eosio::asset &amp;authors_bonus_pool, const eosio::asset &amp;creators_bonus_pool, uint64_t total_author_shares, uint32_t total_voters, double authors_voting_percent=38.2, double creators_voting_percent=38.2)</td></tr>
 <tr class="memdesc:a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает все суммы для голосования по пулам  <a href="namespace_capital_1_1_core_1_1_voting.html#a3a0ba2c7ad3327a4ef026f10c7cd9b2f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3a0ba2c7ad3327a4ef026f10c7cd9b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,9 +176,9 @@ $(document).ready(function(){initNavTree('capital_2domain_2core_2voting_2voting_
 <tr class="memitem:aaa75831b631f7fd08410e395597324f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#aaa75831b631f7fd08410e395597324f9">Capital::Core::Voting::is_voting_completed</a> (const <a class="el" href="struct_capital_1_1project.html">Capital::project</a> &amp;project)</td></tr>
 <tr class="memdesc:aaa75831b631f7fd08410e395597324f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, завершено ли голосование Досрочно: все проголосовали. По дедлайну: срок истек И хотя бы один проголосовал  <a href="namespace_capital_1_1_core_1_1_voting.html#aaa75831b631f7fd08410e395597324f9">Подробнее...</a><br /></td></tr>
 <tr class="separator:aaa75831b631f7fd08410e395597324f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#ac83e51b9c8a7af0b1b7ecb1e49a3812b">Capital::Core::Voting::update_voting_status</a> (eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username)</td></tr>
-<tr class="memdesc:ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус сегмента участника, предоставляя ему право голоса, если это необходимо  <a href="namespace_capital_1_1_core_1_1_voting.html#ac83e51b9c8a7af0b1b7ecb1e49a3812b">Подробнее...</a><br /></td></tr>
-<tr class="separator:ac83e51b9c8a7af0b1b7ecb1e49a3812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ad1696d6eaf7b7f31d5d8f3c4179803"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_core_1_1_voting.html#a0ad1696d6eaf7b7f31d5d8f3c4179803">Capital::Core::Voting::update_voting_status</a> (eosio::name coopname, uint64_t segment_id, uint64_t project_id)</td></tr>
+<tr class="memdesc:a0ad1696d6eaf7b7f31d5d8f3c4179803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет статус сегмента участника, предоставляя ему право голоса, если это необходимо  <a href="namespace_capital_1_1_core_1_1_voting.html#a0ad1696d6eaf7b7f31d5d8f3c4179803">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0ad1696d6eaf7b7f31d5d8f3c4179803"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -10,7 +10,7 @@ var searchData=
   ['regproxy_5faction_7',['regproxy_action',['../classeosiosystem_1_1system__contract.html#a8b1c5e40db2dd35043dc289fec274da2',1,'eosiosystem::system_contract']]],
   ['reqactivated_5faction_8',['reqactivated_action',['../classeosiobios_1_1bios.html#aeca598319b21f76fdf17fe8c5091d8bc',1,'eosiobios::bios::reqactivated_action()'],['../classeosioboot_1_1boot.html#a5a7f8926f3b21fa1588c86472368903e',1,'eosioboot::boot::reqactivated_action()']]],
   ['reqauth_5faction_9',['reqauth_action',['../classeosiobios_1_1bios.html#ab0a2b9e56d84260b7cc1d496856ca232',1,'eosiobios::bios']]],
-  ['requests_5findex_10',['requests_index',['../namespace_marketplace.html#a9bbcc4fa28cd7d2a6317cdffb05baeb6',1,'Marketplace']]],
+  ['requests_5findex_10',['requests_index',['../namespace_marketplace.html#a394acfbed2ec6056d1c602e52f19abd6',1,'Marketplace']]],
   ['result_5findex_11',['result_index',['../namespace_capital.html#a84bb1eacd2b64f11d904455fd1ecf1f4',1,'Capital']]],
   ['resultrewards_5faction_12',['resultrewards_action',['../classeosiosystem_1_1system__contract.html#a3d41d3ced5206d18a287db3f20e17b6f',1,'eosiosystem::system_contract']]],
   ['retire_5faction_13',['retire_action',['../classeosio_1_1token.html#adebe02a32df2bf3ca7f27eec264b32c4',1,'eosio::token']]],

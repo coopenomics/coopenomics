@@ -168,9 +168,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_project_properti
 <tr class="memitem:a3ecb5db5b8590ada9f78c17b07dd0eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_project_properties_1_1property.html">property</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_project_properties.html#a3ecb5db5b8590ada9f78c17b07dd0eb1">get_property_or_fail</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="memdesc:a3ecb5db5b8590ada9f78c17b07dd0eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает предложение по хэшу или падает с ошибкой.  <a href="namespace_capital_1_1_project_properties.html#a3ecb5db5b8590ada9f78c17b07dd0eb1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3ecb5db5b8590ada9f78c17b07dd0eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e6463e655da48b0f2d3b141ad612d53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_project_properties.html#a6e6463e655da48b0f2d3b141ad612d53">delete_property</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:a6e6463e655da48b0f2d3b141ad612d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет предложение по хэшу.  <a href="namespace_capital_1_1_project_properties.html#a6e6463e655da48b0f2d3b141ad612d53">Подробнее...</a><br /></td></tr>
-<tr class="separator:a6e6463e655da48b0f2d3b141ad612d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6a0bcbabe9cd58c3c6c979de08738c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_project_properties.html#abc6a0bcbabe9cd58c3c6c979de08738c">delete_property</a> (eosio::name coopname, uint64_t property_id)</td></tr>
+<tr class="memdesc:abc6a0bcbabe9cd58c3c6c979de08738c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет предложение по ID.  <a href="namespace_capital_1_1_project_properties.html#abc6a0bcbabe9cd58c3c6c979de08738c">Подробнее...</a><br /></td></tr>
+<tr class="separator:abc6a0bcbabe9cd58c3c6c979de08738c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d001889b61fca4d97adb03b658bd605"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_project_properties.html#a4d001889b61fca4d97adb03b658bd605">create_property_with_approve</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 property_hash, const eosio::asset &amp;property_amount, const std::string &amp;property_description)</td></tr>
 <tr class="memdesc:a4d001889b61fca4d97adb03b658bd605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает предложение по имущественному взносу и отправляет его на утверждение.  <a href="namespace_capital_1_1_project_properties.html#a4d001889b61fca4d97adb03b658bd605">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4d001889b61fca4d97adb03b658bd605"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -264,8 +264,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_project_properti
 
 </div>
 </div>
-<a id="a6e6463e655da48b0f2d3b141ad612d53" name="a6e6463e655da48b0f2d3b141ad612d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e6463e655da48b0f2d3b141ad612d53">&#9670;&nbsp;</a></span>delete_property()</h2>
+<a id="abc6a0bcbabe9cd58c3c6c979de08738c" name="abc6a0bcbabe9cd58c3c6c979de08738c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc6a0bcbabe9cd58c3c6c979de08738c">&#9670;&nbsp;</a></span>delete_property()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,8 +282,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_project_properti
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>hash</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>property_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -298,11 +298,11 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_project_properti
 </table>
 </div><div class="memdoc">
 
-<p>Удаляет предложение по хэшу. </p>
+<p>Удаляет предложение по ID. </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">hash</td><td>Хэш предложения. </td></tr>
+    <tr><td class="paramname">property_id</td><td>ID предложения. </td></tr>
   </table>
   </dd>
 </dl>

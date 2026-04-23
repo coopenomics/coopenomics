@@ -168,9 +168,9 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
 <tr class="memitem:aa85b9f3e3bb6d653b776a350049cf609"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_capital_1_1_commits_1_1commit.html">commit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#aa85b9f3e3bb6d653b776a350049cf609">get_commit_or_fail</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
 <tr class="memdesc:aa85b9f3e3bb6d653b776a350049cf609"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получает действие по хэшу действия.  <a href="namespace_capital_1_1_commits.html#aa85b9f3e3bb6d653b776a350049cf609">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa85b9f3e3bb6d653b776a350049cf609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6374fe31b9c0e2f8470908740db81320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">delete_commit</a> (eosio::name coopname, const checksum256 &amp;hash)</td></tr>
-<tr class="memdesc:a6374fe31b9c0e2f8470908740db81320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет коммит по хэшу действия.  <a href="namespace_capital_1_1_commits.html#a6374fe31b9c0e2f8470908740db81320">Подробнее...</a><br /></td></tr>
-<tr class="separator:a6374fe31b9c0e2f8470908740db81320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfeae04a894e56b12203ef4ab1ae207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a0bfeae04a894e56b12203ef4ab1ae207">delete_commit</a> (eosio::name coopname, const uint64_t &amp;commit_id)</td></tr>
+<tr class="memdesc:a0bfeae04a894e56b12203ef4ab1ae207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет коммит по хэшу действия.  <a href="namespace_capital_1_1_commits.html#a0bfeae04a894e56b12203ef4ab1ae207">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0bfeae04a894e56b12203ef4ab1ae207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6975f9091f21a205cc5443a9eba9c591"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_commits.html#a6975f9091f21a205cc5443a9eba9c591">create_commit</a> (eosio::name coopname, eosio::name username, checksum256 project_hash, checksum256 commit_hash, std::string description, std::string meta, const <a class="el" href="struct_capital_1_1generation__amounts.html">generation_amounts</a> &amp;calculated_fact)</td></tr>
 <tr class="memdesc:a6975f9091f21a205cc5443a9eba9c591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создает коммит без отправки на утверждение.  <a href="namespace_capital_1_1_commits.html#a6975f9091f21a205cc5443a9eba9c591">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6975f9091f21a205cc5443a9eba9c591"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,8 +269,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
 
 </div>
 </div>
-<a id="a6374fe31b9c0e2f8470908740db81320" name="a6374fe31b9c0e2f8470908740db81320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6374fe31b9c0e2f8470908740db81320">&#9670;&nbsp;</a></span>delete_commit()</h2>
+<a id="a0bfeae04a894e56b12203ef4ab1ae207" name="a0bfeae04a894e56b12203ef4ab1ae207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfeae04a894e56b12203ef4ab1ae207">&#9670;&nbsp;</a></span>delete_commit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,8 +287,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const checksum256 &amp;&#160;</td>
-          <td class="paramname"><em>hash</em>&#160;</td>
+          <td class="paramtype">const uint64_t &amp;&#160;</td>
+          <td class="paramname"><em>commit_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -307,7 +307,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_commits.html',''
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива (scope таблицы). </td></tr>
-    <tr><td class="paramname">hash</td><td>Хэш действия. </td></tr>
+    <tr><td class="paramname">commit_id</td><td>ID коммита. </td></tr>
   </table>
   </dd>
 </dl>

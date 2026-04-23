@@ -205,6 +205,9 @@ $(document).ready(function(){initNavTree('struct_capital_1_1fact__pool.html','')
 <tr class="memitem:a0caf690e778a7e5c61fd5b177151b79b"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b">total_returned_investments</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
 <tr class="memdesc:a0caf690e778a7e5c61fd5b177151b79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая сумма возвращенных неиспользованных инвестиций  <a href="struct_capital_1_1fact__pool.html#a0caf690e778a7e5c61fd5b177151b79b">Подробнее...</a><br /></td></tr>
 <tr class="separator:a0caf690e778a7e5c61fd5b177151b79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0955ff92a8baef8f7fcfa4fe6dc2db"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#aef0955ff92a8baef8f7fcfa4fe6dc2db">total_used_for_compensation</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:aef0955ff92a8baef8f7fcfa4fe6dc2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая сумма инвестиций, использованных для компенсации трудозатрат  <a href="struct_capital_1_1fact__pool.html#aef0955ff92a8baef8f7fcfa4fe6dc2db">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef0955ff92a8baef8f7fcfa4fe6dc2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c9e8280e64229c8daa3b24c44109b14"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14">total_generation_pool</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
 <tr class="memdesc:a4c9e8280e64229c8daa3b24c44109b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая фактическая сумма генерации  <a href="struct_capital_1_1fact__pool.html#a4c9e8280e64229c8daa3b24c44109b14">Подробнее...</a><br /></td></tr>
 <tr class="separator:a4c9e8280e64229c8daa3b24c44109b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,8 +215,14 @@ $(document).ready(function(){initNavTree('struct_capital_1_1fact__pool.html','')
 <tr class="memdesc:aba457f704207bb1798a50a2605d946ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая сумма вкладов всех пайщиков  <a href="struct_capital_1_1fact__pool.html#aba457f704207bb1798a50a2605d946ab">Подробнее...</a><br /></td></tr>
 <tr class="separator:aba457f704207bb1798a50a2605d946ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cefe1e0cceadca53745325702c93418"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">total</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
-<tr class="memdesc:a2cefe1e0cceadca53745325702c93418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общая фактическая сумма генерации с участниками  <a href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:a2cefe1e0cceadca53745325702c93418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стоимость результата интеллектуальной деятельности (равна total_contribution)  <a href="struct_capital_1_1fact__pool.html#a2cefe1e0cceadca53745325702c93418">Подробнее...</a><br /></td></tr>
 <tr class="separator:a2cefe1e0cceadca53745325702c93418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e22f7ddf16d993d57e458d6450b5c99"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#a3e22f7ddf16d993d57e458d6450b5c99">total_used_investments</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a3e22f7ddf16d993d57e458d6450b5c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фактически используемая часть всех инвестиций (total_received_investments * use_invest_percent / 100)  <a href="struct_capital_1_1fact__pool.html#a3e22f7ddf16d993d57e458d6450b5c99">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e22f7ddf16d993d57e458d6450b5c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a736a760bc95f793f05228f9709f2e76e"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_capital_1_1fact__pool.html#a736a760bc95f793f05228f9709f2e76e">total_with_investments</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a736a760bc95f793f05228f9709f2e76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Полная стоимость проекта с инвестициями и расходами (total + total_used_investments + used_expense_pool)  <a href="struct_capital_1_1fact__pool.html#a736a760bc95f793f05228f9709f2e76e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a736a760bc95f793f05228f9709f2e76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p >Структура фактических показателей проекта </p>
@@ -470,7 +479,7 @@ $(document).ready(function(){initNavTree('struct_capital_1_1fact__pool.html','')
       </table>
 </div><div class="memdoc">
 
-<p>Общая фактическая сумма генерации с участниками </p>
+<p>Стоимость результата интеллектуальной деятельности (равна total_contribution) </p>
 
 </div>
 </div>
@@ -535,6 +544,54 @@ $(document).ready(function(){initNavTree('struct_capital_1_1fact__pool.html','')
 </div><div class="memdoc">
 
 <p>Общая сумма возвращенных неиспользованных инвестиций </p>
+
+</div>
+</div>
+<a id="aef0955ff92a8baef8f7fcfa4fe6dc2db" name="aef0955ff92a8baef8f7fcfa4fe6dc2db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef0955ff92a8baef8f7fcfa4fe6dc2db">&#9670;&nbsp;</a></span>total_used_for_compensation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::fact_pool::total_used_for_compensation = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Общая сумма инвестиций, использованных для компенсации трудозатрат </p>
+
+</div>
+</div>
+<a id="a3e22f7ddf16d993d57e458d6450b5c99" name="a3e22f7ddf16d993d57e458d6450b5c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e22f7ddf16d993d57e458d6450b5c99">&#9670;&nbsp;</a></span>total_used_investments</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::fact_pool::total_used_investments = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Фактически используемая часть всех инвестиций (total_received_investments * use_invest_percent / 100) </p>
+
+</div>
+</div>
+<a id="a736a760bc95f793f05228f9709f2e76e" name="a736a760bc95f793f05228f9709f2e76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736a760bc95f793f05228f9709f2e76e">&#9670;&nbsp;</a></span>total_with_investments</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Capital::fact_pool::total_with_investments = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Полная стоимость проекта с инвестициями и расходами (total + total_used_investments + used_expense_pool) </p>
 
 </div>
 </div>

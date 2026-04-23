@@ -16,5 +16,6 @@ var struct_capital_1_1plan__pool =
     [ "total", "struct_capital_1_1plan__pool.html#ab8e0c224955a71bd0a7fe2cd63f802fe", null ],
     [ "total_generation_pool", "struct_capital_1_1plan__pool.html#aed266ec914c61b20db1adc1949eb5706", null ],
     [ "total_received_investments", "struct_capital_1_1plan__pool.html#a46b64d25f79c03bdcbc967c1ed4fd750", null ],
+    [ "total_with_investments", "struct_capital_1_1plan__pool.html#a327731b5c67349a0d248ffb1ebf23e84", null ],
     [ "use_invest_percent", "struct_capital_1_1plan__pool.html#a68836d3a1d136ac42c54b0ff96df63d9", null ]
 ];

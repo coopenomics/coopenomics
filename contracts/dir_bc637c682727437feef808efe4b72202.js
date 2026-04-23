@@ -3,7 +3,7 @@ var dir_bc637c682727437feef808efe4b72202 =
     [ "appendix.hpp", "appendix_8hpp.html", "appendix_8hpp" ],
     [ "commits.hpp", "commits_8hpp.html", "commits_8hpp" ],
     [ "contributors.hpp", "contributors_8hpp.html", "contributors_8hpp" ],
-    [ "counts.hpp", "capital_2domain_2entities_2counts_8hpp.html", [
+    [ "counts.hpp", "counts_8hpp.html", [
       [ "counts_data", "structcounts__data.html", "structcounts__data" ]
     ] ],
     [ "crps.hpp", "entities_2crps_8hpp.html", [
@@ -18,11 +18,8 @@ var dir_bc637c682727437feef808efe4b72202 =
       [ "Capital::generation_amounts", "struct_capital_1_1generation__amounts.html", "struct_capital_1_1generation__amounts" ]
     ] ],
     [ "global_state.hpp", "global__state_8hpp.html", "global__state_8hpp" ],
-    [ "index.hpp", "entities_2index_8hpp.html", null ],
+    [ "index.hpp", "capital_2domain_2entities_2index_8hpp.html", null ],
     [ "invests.hpp", "invests_8hpp.html", "invests_8hpp" ],
-    [ "membership_crps.hpp", "membership__crps_8hpp.html", [
-      [ "membership_crps", "structmembership__crps.html", "structmembership__crps" ]
-    ] ],
     [ "memo.hpp", "memo_8hpp.html", "memo_8hpp" ],
     [ "plan_pool.hpp", "plan__pool_8hpp.html", [
       [ "Capital::plan_pool", "struct_capital_1_1plan__pool.html", "struct_capital_1_1plan__pool" ]
@@ -31,7 +28,6 @@ var dir_bc637c682727437feef808efe4b72202 =
     [ "program_properties.hpp", "program__properties_8hpp.html", "program__properties_8hpp" ],
     [ "program_withdraw.hpp", "program__withdraw_8hpp.html", "program__withdraw_8hpp" ],
     [ "project_properties.hpp", "project__properties_8hpp.html", "project__properties_8hpp" ],
-    [ "project_withdraw.hpp", "project__withdraw_8hpp.html", "project__withdraw_8hpp" ],
     [ "projects.hpp", "projects_8hpp.html", "projects_8hpp" ],
     [ "results.hpp", "results_8hpp.html", "results_8hpp" ],
     [ "segments.hpp", "segments_8hpp.html", "segments_8hpp" ],

@@ -166,6 +166,8 @@ $(document).ready(function(){initNavTree('classeosiosystem_1_1system__contract.h
 <tr class="separator:aa1920281d36995e7a5017a5369b68a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dff966e1b20b198bd7057c2d643538"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#ac0dff966e1b20b198bd7057c2d643538">initemission_action</a> = eosio::action_wrapper&lt;&quot;initemission&quot;_n, &amp;<a class="el" href="classeosiosystem_1_1system__contract.html#af6ed697e2d198ca5bce29cbacb682490">system_contract::initemission</a> &gt;</td></tr>
 <tr class="separator:ac0dff966e1b20b198bd7057c2d643538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722be27f524740a5f73242a11e82b3e2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#a722be27f524740a5f73242a11e82b3e2">injection_action</a> = eosio::action_wrapper&lt;&quot;injection&quot;_n, &amp;<a class="el" href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">system_contract::injection</a> &gt;</td></tr>
+<tr class="separator:a722be27f524740a5f73242a11e82b3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a405cf7f71120642d5d043fa4648be9b1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#a405cf7f71120642d5d043fa4648be9b1">setacctram_action</a> = eosio::action_wrapper&lt;&quot;setacctram&quot;_n, &amp;<a class="el" href="group__public__system__actions.html#gacdd7c75402f43876338d33649d2e6903">system_contract::setacctram</a> &gt;</td></tr>
 <tr class="separator:a405cf7f71120642d5d043fa4648be9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add114cf85734d0c85edacb0eb7167883"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#add114cf85734d0c85edacb0eb7167883">setacctnet_action</a> = eosio::action_wrapper&lt;&quot;setacctnet&quot;_n, &amp;<a class="el" href="group__public__system__actions.html#gaa4559928f468c62867916d1251fa33b3">system_contract::setacctnet</a> &gt;</td></tr>
@@ -250,6 +252,9 @@ $(document).ready(function(){initNavTree('classeosiosystem_1_1system__contract.h
 <tr class="memitem:a145a6656090dcb0d25e9581f935c3ed4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#a145a6656090dcb0d25e9581f935c3ed4">migrate</a> ()</td></tr>
 <tr class="memdesc:a145a6656090dcb0d25e9581f935c3ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод миграции вызывается после деплоя для внесения моментальных изменений  <a href="classeosiosystem_1_1system__contract.html#a145a6656090dcb0d25e9581f935c3ed4">Подробнее...</a><br /></td></tr>
 <tr class="separator:a145a6656090dcb0d25e9581f935c3ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7d657397577ba191c15b219014aa8ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">injection</a> (const name &amp;coopname, const asset &amp;quantity)</td></tr>
+<tr class="memdesc:gae7d657397577ba191c15b219014aa8ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инжектирует токены из фонда eosio.saving на кооператив. Требует подписи _soviet для выполнения операции.  <a href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae7d657397577ba191c15b219014aa8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cfe0acba41778a7fd2af66056af68b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosiosystem_1_1system__contract.html#a6cfe0acba41778a7fd2af66056af68b1">changekey</a> (name <a class="el" href="structaccount.html">account</a>, name permission, name parent, <a class="el" href="structeosiosystem_1_1authority.html">authority</a> auth)</td></tr>
 <tr class="memdesc:a6cfe0acba41778a7fd2af66056af68b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод обновления активного ключа пользователя кооперативами.  <a href="classeosiosystem_1_1system__contract.html#a6cfe0acba41778a7fd2af66056af68b1">Подробнее...</a><br /></td></tr>
 <tr class="separator:a6cfe0acba41778a7fd2af66056af68b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,6 +592,20 @@ $(document).ready(function(){initNavTree('classeosiosystem_1_1system__contract.h
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classeosiosystem_1_1system__contract.html#ac0dff966e1b20b198bd7057c2d643538">eosiosystem::system_contract::initemission_action</a> =  eosio::action_wrapper&lt;&quot;initemission&quot;_n, &amp;<a class="el" href="classeosiosystem_1_1system__contract.html#af6ed697e2d198ca5bce29cbacb682490">system_contract::initemission</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a722be27f524740a5f73242a11e82b3e2" name="a722be27f524740a5f73242a11e82b3e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722be27f524740a5f73242a11e82b3e2">&#9670;&nbsp;</a></span>injection_action</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classeosiosystem_1_1system__contract.html#a722be27f524740a5f73242a11e82b3e2">eosiosystem::system_contract::injection_action</a> =  eosio::action_wrapper&lt;&quot;injection&quot;_n, &amp;<a class="el" href="group__public__system__actions.html#gae7d657397577ba191c15b219014aa8ff">system_contract::injection</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">

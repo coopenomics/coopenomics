@@ -148,19 +148,19 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
 <tr class="memitem:a1c744a36fd524f111ddffff45d6f0719"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a1c744a36fd524f111ddffff45d6f0719">calculate_energy_gain</a> (eosio::asset contribution_amount, uint32_t current_level, const <a class="el" href="struct_capital_1_1config.html">Capital::config</a> &amp;<a class="el" href="struct_capital_1_1config.html">config</a>)</td></tr>
 <tr class="memdesc:a1c744a36fd524f111ddffff45d6f0719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рассчитывает прирост энергии от вклада  <a href="namespace_capital_1_1_gamification.html#a1c744a36fd524f111ddffff45d6f0719">Подробнее...</a><br /></td></tr>
 <tr class="separator:a1c744a36fd524f111ddffff45d6f0719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7834e63161fb7f752a43f7e9442b157a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a7834e63161fb7f752a43f7e9442b157a">update_energy_with_decay</a> (eosio::name coopname, eosio::name username)</td></tr>
-<tr class="memdesc:a7834e63161fb7f752a43f7e9442b157a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет энергию участника с учетом естественного снижения (decay)  <a href="namespace_capital_1_1_gamification.html#a7834e63161fb7f752a43f7e9442b157a">Подробнее...</a><br /></td></tr>
-<tr class="separator:a7834e63161fb7f752a43f7e9442b157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdf37f65e1fea20f6958f94970cc6aff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#abdf37f65e1fea20f6958f94970cc6aff">add_energy_and_check_levelup</a> (eosio::name coopname, eosio::name username, double energy_gain)</td></tr>
-<tr class="memdesc:abdf37f65e1fea20f6958f94970cc6aff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет энергию участнику и проверяет переход на новый уровень  <a href="namespace_capital_1_1_gamification.html#abdf37f65e1fea20f6958f94970cc6aff">Подробнее...</a><br /></td></tr>
-<tr class="separator:abdf37f65e1fea20f6958f94970cc6aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76d8bdc97985b4f4b4f227a8a035f0b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a76d8bdc97985b4f4b4f227a8a035f0b9">update_gamification_from_segment</a> (eosio::name coopname, const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">Capital::Segments::segment</a> &amp;segment)</td></tr>
-<tr class="memdesc:a76d8bdc97985b4f4b4f227a8a035f0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет геймификацию (уровень и энергию) на основе вкладов из сегмента  <a href="namespace_capital_1_1_gamification.html#a76d8bdc97985b4f4b4f227a8a035f0b9">Подробнее...</a><br /></td></tr>
-<tr class="separator:a76d8bdc97985b4f4b4f227a8a035f0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8744ce640b717fd1408495b5d0f6d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a1c8744ce640b717fd1408495b5d0f6d0">update_energy_with_decay</a> (eosio::name coopname, uint64_t contributor_id)</td></tr>
+<tr class="memdesc:a1c8744ce640b717fd1408495b5d0f6d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет энергию участника с учетом естественного снижения (decay)  <a href="namespace_capital_1_1_gamification.html#a1c8744ce640b717fd1408495b5d0f6d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1c8744ce640b717fd1408495b5d0f6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193d5617b1853983b02773751191c1cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a193d5617b1853983b02773751191c1cc">add_energy_and_check_levelup</a> (eosio::name coopname, uint64_t contributor_id, double energy_gain)</td></tr>
+<tr class="memdesc:a193d5617b1853983b02773751191c1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет энергию участнику и проверяет переход на новый уровень  <a href="namespace_capital_1_1_gamification.html#a193d5617b1853983b02773751191c1cc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a193d5617b1853983b02773751191c1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554f352dd460632bf790cab8b5cf6932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_capital_1_1_gamification.html#a554f352dd460632bf790cab8b5cf6932">update_gamification_from_segment</a> (eosio::name coopname, uint64_t contributor_id, const <a class="el" href="struct_capital_1_1_segments_1_1segment.html">Capital::Segments::segment</a> &amp;segment)</td></tr>
+<tr class="memdesc:a554f352dd460632bf790cab8b5cf6932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновляет геймификацию (уровень и энергию) на основе вкладов из сегмента  <a href="namespace_capital_1_1_gamification.html#a554f352dd460632bf790cab8b5cf6932">Подробнее...</a><br /></td></tr>
+<tr class="separator:a554f352dd460632bf790cab8b5cf6932"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
-<a id="abdf37f65e1fea20f6958f94970cc6aff" name="abdf37f65e1fea20f6958f94970cc6aff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdf37f65e1fea20f6958f94970cc6aff">&#9670;&nbsp;</a></span>add_energy_and_check_levelup()</h2>
+<a id="a193d5617b1853983b02773751191c1cc" name="a193d5617b1853983b02773751191c1cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193d5617b1853983b02773751191c1cc">&#9670;&nbsp;</a></span>add_energy_and_check_levelup()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +177,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>username</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>contributor_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -203,7 +203,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">username</td><td>Имя участника </td></tr>
+    <tr><td class="paramname">contributor_id</td><td>ID участника </td></tr>
     <tr><td class="paramname">energy_gain</td><td>Прирост энергии </td></tr>
   </table>
   </dd>
@@ -310,8 +310,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
 
 </div>
 </div>
-<a id="a7834e63161fb7f752a43f7e9442b157a" name="a7834e63161fb7f752a43f7e9442b157a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7834e63161fb7f752a43f7e9442b157a">&#9670;&nbsp;</a></span>update_energy_with_decay()</h2>
+<a id="a1c8744ce640b717fd1408495b5d0f6d0" name="a1c8744ce640b717fd1408495b5d0f6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8744ce640b717fd1408495b5d0f6d0">&#9670;&nbsp;</a></span>update_energy_with_decay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,8 +328,8 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">eosio::name&#160;</td>
-          <td class="paramname"><em>username</em>&#160;</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>contributor_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -348,15 +348,15 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">username</td><td>Имя участника </td></tr>
+    <tr><td class="paramname">contributor_id</td><td>ID участника </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a76d8bdc97985b4f4b4f227a8a035f0b9" name="a76d8bdc97985b4f4b4f227a8a035f0b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76d8bdc97985b4f4b4f227a8a035f0b9">&#9670;&nbsp;</a></span>update_gamification_from_segment()</h2>
+<a id="a554f352dd460632bf790cab8b5cf6932" name="a554f352dd460632bf790cab8b5cf6932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554f352dd460632bf790cab8b5cf6932">&#9670;&nbsp;</a></span>update_gamification_from_segment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -369,6 +369,12 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
           <td>(</td>
           <td class="paramtype">eosio::name&#160;</td>
           <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>contributor_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -393,6 +399,7 @@ $(document).ready(function(){initNavTree('namespace_capital_1_1_gamification.htm
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">contributor_id</td><td>ID участника </td></tr>
     <tr><td class="paramname">segment</td><td>Сегмент с данными о вкладах участника </td></tr>
   </table>
   </dd>

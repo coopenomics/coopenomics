@@ -62,6 +62,7 @@ var hierarchy =
       [ "fund", "classfund.html", null ],
       [ "gateway", "classgateway.html", null ],
       [ "ledger", "classledger.html", null ],
+      [ "ledger", "classledger.html", null ],
       [ "loan", "classloan.html", null ],
       [ "marketplace", "classmarketplace.html", null ],
       [ "meet", "classmeet.html", null ],
@@ -92,7 +93,7 @@ var hierarchy =
     [ "Loan::debt", "struct_loan_1_1debt.html", null ],
     [ "decision", "structdecision.html", null ],
     [ "eosiosystem::delegated_bandwidth", "structeosiosystem_1_1delegated__bandwidth.html", null ],
-    [ "Wallet::deposit", "struct_wallet_1_1deposit.html", null ],
+    [ "WalletTables::deposit", "struct_wallet_tables_1_1deposit.html", null ],
     [ "document", "structdocument.html", null ],
     [ "document2", "structdocument2.html", null ],
     [ "eosiosystem::emission_state", "structeosiosystem_1_1emission__state.html", null ],
@@ -123,7 +124,6 @@ var hierarchy =
     [ "eosiosystem::limit_auth_change", "structeosiosystem_1_1limit__auth__change.html", null ],
     [ "Meet::meet", "struct_meet_1_1meet.html", null ],
     [ "meet_point", "structmeet__point.html", null ],
-    [ "membership_crps", "structmembership__crps.html", null ],
     [ "eosiosystem::name_bid", "structeosiosystem_1_1name__bid.html", null ],
     [ "Document::named_document", "struct_document_1_1named__document.html", null ],
     [ "eosio::multisig::old_approvals_info", "structeosio_1_1multisig_1_1old__approvals__info.html", null ],
@@ -150,8 +150,6 @@ var hierarchy =
     [ "ProgramInfo", "struct_program_info.html", null ],
     [ "progwallet", "structprogwallet.html", null ],
     [ "Capital::project", "struct_capital_1_1project.html", null ],
-    [ "Capital::project_wallet", "struct_capital_1_1project__wallet.html", null ],
-    [ "Capital::project_withdraw", "struct_capital_1_1project__withdraw.html", null ],
     [ "Capital::ProjectProperties::property", "struct_capital_1_1_project_properties_1_1property.html", null ],
     [ "eosio::multisig::proposal", "structeosio_1_1multisig_1_1proposal.html", null ],
     [ "Meet::question", "struct_meet_1_1question.html", null ],
@@ -168,11 +166,6 @@ var hierarchy =
     [ "simple_wallet", "structsimple__wallet.html", null ],
     [ "staff", "structstaff.html", null ],
     [ "Loan::summary", "struct_loan_1_1summary.html", null ],
-    [ "tester", null, [
-      [ "eosio_msig_tester", "classeosio__msig__tester.html", null ],
-      [ "eosio_token_tester", "classeosio__token__tester.html", null ],
-      [ "eosio_wrap_tester", "classeosio__wrap__tester.html", null ]
-    ] ],
     [ "TESTER", null, [
       [ "eosio_system::eosio_system_tester", "classeosio__system_1_1eosio__system__tester.html", [
         [ "coopenomics_tester", "classcoopenomics__tester.html", [
@@ -180,6 +173,11 @@ var hierarchy =
         ] ],
         [ "limitauth_tester", "structlimitauth__tester.html", null ]
       ] ]
+    ] ],
+    [ "tester", null, [
+      [ "eosio_msig_tester", "classeosio__msig__tester.html", null ],
+      [ "eosio_token_tester", "classeosio__token__tester.html", null ],
+      [ "eosio_wrap_tester", "classeosio__wrap__tester.html", null ]
     ] ],
     [ "test::testrecord", "structtest_1_1testrecord.html", null ],
     [ "translation", "structtranslation.html", null ],
@@ -196,7 +194,7 @@ var hierarchy =
     [ "eosiosystem::wait_weight", "structeosiosystem_1_1wait__weight.html", null ],
     [ "wait_weight", "structwait__weight.html", null ],
     [ "Wallet", "class_wallet.html", null ],
-    [ "Wallet::withdraw", "struct_wallet_1_1withdraw.html", null ],
+    [ "WalletTables::withdraw", "struct_wallet_tables_1_1withdraw.html", null ],
     [ "contributor::withdrawal_request", "structcontributor_1_1withdrawal__request.html", null ],
     [ "writeoff_op", "structwriteoff__op.html", null ]
 ];
