@@ -132,7 +132,8 @@ jobs:
       # ── standards-site → /standards/ на docs.coopenomics.world ───────
       # Отдельный Vue-сайт с BPMN-графом кооперативных стандартов;
       # Vite собирает с base='/standards/' (см. vite.config.ts), dist
-      # копируется в site/standards после mkdocs build.
+      # кладётся в docs/standards/ ДО mkdocs build — mkdocs сам
+      # включит статику в итоговый site/ как обычные ассеты.
       # Пока graph-standarts не смержен в капитал-ветку клона — шаг
       # пропускается (`components/contracts/standards-site/` отсутствует).
       - name: Build standards-site
@@ -145,19 +146,19 @@ jobs:
             echo "⚠ standards-site отсутствует в клонированной ветке mono — пропускаем сборку"
           fi
 
+      - name: Copy standards-site into docs/standards
+        run: |
+          if [ -d mono-repo/components/contracts/standards-site/dist ]; then
+            mkdir -p docs/standards
+            cp -r mono-repo/components/contracts/standards-site/dist/* docs/standards/
+          else
+            echo "⚠ dist/ standards-site не собран — пропускаем копирование"
+          fi
+
       - name: Build docs (mkdocs)
         run: |
           source venv/bin/activate
           mkdocs build
-
-      - name: Copy standards-site into site/standards
-        run: |
-          if [ -d mono-repo/components/contracts/standards-site/dist ]; then
-            mkdir -p site/standards
-            cp -r mono-repo/components/contracts/standards-site/dist/* site/standards/
-          else
-            echo "⚠ dist/ standards-site не собран — пропускаем копирование"
-          fi
 
       - name: Publish to GitHub Pages
         run: npx gh-pages --nojekyll -d site --repo https://x-access-token:${GITHUB_TOKEN}@github.com/coopenomics/coopenomics.git
