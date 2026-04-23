@@ -111,11 +111,12 @@ markdown_extensions:
       alternate_style: true
 nav:
   # - Манифест: index.md
-  # - Идеократия: 
+  # - Идеократия:
     # - Кратко об Идеократии: documentation/capitalization/short-ideocraty.md
     # - Идеократия Кооперативной Экономики: documentation/capitalization/ideocraty.md
 
   - Введение: index.md
+  - Реестр стандартов: https://docs.coopenomics.world/standards/
   - Обзор: documentation/overview.md
   # - Карта пайщика: documentation/cardcoop.md 
   - Блокчейн:
