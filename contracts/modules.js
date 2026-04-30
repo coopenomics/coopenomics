@@ -1,5 +1,6 @@
 var modules =
 [
+    [ "Контракт APPS", "group__public__apps.html", "group__public__apps" ],
     [ "Контракт BRANCH", "group__public__branch.html", "group__public__branch" ],
     [ "Контракт CAPITAL", "group__public__capital.html", "group__public__capital" ],
     [ "Контракт DRAFT", "group__public__draft.html", "group__public__draft" ],

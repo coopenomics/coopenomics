@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Действия</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__public__apps__actions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Действия<div class="ingroups"><a class="el" href="group__public__apps.html">Контракт APPS</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gafe573a18117cfb835a475a335845834a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#gafe573a18117cfb835a475a335845834a">apps::cleanup</a> (eosio::name package_id)</td></tr>
+<tr class="memdesc:gafe573a18117cfb835a475a335845834a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ручной cleanup TTL-просроченных <code>superseded</code>-записей пакета.  <a href="group__public__apps__actions.html#gafe573a18117cfb835a475a335845834a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafe573a18117cfb835a475a335845834a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8956b24f5933cd8f52e3d1b3a28882f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#ga8956b24f5933cd8f52e3d1b3a28882f0">apps::expsub</a> (eosio::name coopname, eosio::name subscriber, eosio::name package_id)</td></tr>
+<tr class="memdesc:ga8956b24f5933cd8f52e3d1b3a28882f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деактивировать подписку (<code>active=false</code>); row не удаляется (нужен для аудита истечения).  <a href="group__public__apps__actions.html#ga8956b24f5933cd8f52e3d1b3a28882f0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8956b24f5933cd8f52e3d1b3a28882f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafb59110652f7acded73a14ba87b1914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#gaafb59110652f7acded73a14ba87b1914">apps::reactivate</a> (eosio::name coopname, eosio::name package_id, std::string version)</td></tr>
+<tr class="memdesc:gaafb59110652f7acded73a14ba87b1914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реактивировать предыдущую версию пакета (FR43).  <a href="group__public__apps__actions.html#gaafb59110652f7acded73a14ba87b1914">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaafb59110652f7acded73a14ba87b1914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79a5a9173f706c23e6fa63ccda5ea3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#ga79a5a9173f706c23e6fa63ccda5ea3c0">apps::regcoop</a> (eosio::name coopname, eosio::checksum256 chain_id, eosio::name subnet_label, eosio::public_key signing_key)</td></tr>
+<tr class="memdesc:ga79a5a9173f706c23e6fa63ccda5ea3c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать кооператив в каталоге.  <a href="group__public__apps__actions.html#ga79a5a9173f706c23e6fa63ccda5ea3c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga79a5a9173f706c23e6fa63ccda5ea3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2e0b652743178b245aacb157f40e341"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#gae2e0b652743178b245aacb157f40e341">apps::regpackage</a> (eosio::name coopname, eosio::name package_id, std::string package_name, eosio::name <a class="el" href="eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653">owner</a>, std::vector&lt; eosio::name &gt; compatible_subnets)</td></tr>
+<tr class="memdesc:gae2e0b652743178b245aacb157f40e341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать новый пакет в каталоге.  <a href="group__public__apps__actions.html#gae2e0b652743178b245aacb157f40e341">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae2e0b652743178b245aacb157f40e341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f09d214367996d3c367abb3c1cab01b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#ga4f09d214367996d3c367abb3c1cab01b">apps::regsub</a> (eosio::name coopname, eosio::name subscriber, eosio::name package_id, eosio::checksum256 chain_id, eosio::name plan, eosio::time_point_sec start_at, eosio::time_point_sec end_at)</td></tr>
+<tr class="memdesc:ga4f09d214367996d3c367abb3c1cab01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать или продлить подписку кооператива на пакет.  <a href="group__public__apps__actions.html#ga4f09d214367996d3c367abb3c1cab01b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4f09d214367996d3c367abb3c1cab01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf879292e81f3484462f46327b2a695ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#gaf879292e81f3484462f46327b2a695ff">apps::setcoop</a> (eosio::name coopname, std::optional&lt; eosio::checksum256 &gt; chain_id, std::optional&lt; eosio::name &gt; subnet_label, std::optional&lt; eosio::public_key &gt; signing_key, std::optional&lt; bool &gt; <a class="el" href="eosio_8limitauth__tests_8cpp.html#a260a6616099c3487f3cd7dd73e6a979a">active</a>)</td></tr>
+<tr class="memdesc:gaf879292e81f3484462f46327b2a695ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обновить параметры кооператива (ротация ключа, перенос подсети, деактивация).  <a href="group__public__apps__actions.html#gaf879292e81f3484462f46327b2a695ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf879292e81f3484462f46327b2a695ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80ff9f602eea9e50026cdcbb103e10d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#ga80ff9f602eea9e50026cdcbb103e10d4">apps::setrelease</a> (eosio::name coopname, eosio::name package_id, std::string version, <a class="el" href="struct_apps_1_1scope__t.html">Apps::scope_t</a> scope, eosio::checksum256 tarball_sha256, eosio::name moderated_by, std::string meta)</td></tr>
+<tr class="memdesc:ga80ff9f602eea9e50026cdcbb103e10d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Опубликовать новый release пакета.  <a href="group__public__apps__actions.html#ga80ff9f602eea9e50026cdcbb103e10d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga80ff9f602eea9e50026cdcbb103e10d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab04eaf806d831c399e9c1571ceecb31a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#gab04eaf806d831c399e9c1571ceecb31a">apps::transferpkg</a> (eosio::name coopname, eosio::name package_id, eosio::name new_owner)</td></tr>
+<tr class="memdesc:gab04eaf806d831c399e9c1571ceecb31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Передать владение пакетом другому пользователю (FR3).  <a href="group__public__apps__actions.html#gab04eaf806d831c399e9c1571ceecb31a">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab04eaf806d831c399e9c1571ceecb31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41036f1ee267527fbe653ddec9382347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__apps__actions.html#ga41036f1ee267527fbe653ddec9382347">apps::withdraw</a> (eosio::name coopname, eosio::name package_id, std::string version, std::string reason)</td></tr>
+<tr class="memdesc:ga41036f1ee267527fbe653ddec9382347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отозвать релиз (CVE / нарушение / юридический отзыв).  <a href="group__public__apps__actions.html#ga41036f1ee267527fbe653ddec9382347">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga41036f1ee267527fbe653ddec9382347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="gafe573a18117cfb835a475a335845834a" name="gafe573a18117cfb835a475a335845834a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe573a18117cfb835a475a335845834a">&#9670;&nbsp;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::cleanup </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ручной cleanup TTL-просроченных <code>superseded</code>-записей пакета. </p>
+<p >Удаляет до <code>CLEANUP_BUDGET_PER_CALL</code> записей с <code>superseded_at &lt; now - RELEASE_RETENTION_SECS</code>. Идемпотентен. </p><dl class="section note"><dt>Заметки</dt><dd>Без авторизации: операция доброкачественная, удаляет только уже невидимые в продакшене записи. Любой может вызвать (и заплатить за CPU).</dd></dl>
+<p>Используется когда <code>setrelease</code> для пакета давно не вызывался, и inline-cleanup в нём не подметает хвост. Удаляет до <code>CLEANUP_BUDGET_PER_CALL</code> записей с <code>status=superseded</code> и <code>superseded_at &lt; now - RELEASE_RETENTION_SECS</code>.</p>
+<p >Идемпотентно. Многократные вызовы безопасны: каждый вызов чистит свой batch до budget'а.</p>
+<dl class="section note"><dt>Заметки</dt><dd>БЕЗ авторизации: операция доброкачественная, удаляет только уже невидимые в продакшене записи, не меняет логику. Любой может вызвать (и заплатить за CPU). Это снижает оперативную нагрузку на оператора каталога. </dd></dl>
+
+</div>
+</div>
+<a id="ga8956b24f5933cd8f52e3d1b3a28882f0" name="ga8956b24f5933cd8f52e3d1b3a28882f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8956b24f5933cd8f52e3d1b3a28882f0">&#9670;&nbsp;</a></span>expsub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::expsub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>subscriber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деактивировать подписку (<code>active=false</code>); row не удаляется (нужен для аудита истечения). </p>
+<p >Деактивировать подписку.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Ставит <code>active=false</code>. Запись остаётся в таблице — она нужна для аудита истечения и для повторной активации (если кооператив снова подпишется, пойдёт через тот же row через <code>regsub</code>-upsert).</p>
+<p >Cleanup физически просроченных записей (например, истёкших год назад и более не нужных в RAM) — задача отдельного периодического действия. Вне scope MVP.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="gaafb59110652f7acded73a14ba87b1914" name="gaafb59110652f7acded73a14ba87b1914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaafb59110652f7acded73a14ba87b1914">&#9670;&nbsp;</a></span>reactivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::reactivate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>version</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Реактивировать предыдущую версию пакета (FR43). </p>
+<p >Находит release по <code>(package_id, version)</code>; ставит ему <code>status=active</code>, <code>superseded_at=0</code>. Текущий <code>active</code> с тем же scope → <code>superseded</code>. Если scope=all — обновляет <code>packages.last_active_version</code>. </p><dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Используется для отката broken release без full re-publish:</p><ul>
+<li>Находит существующий release <code>(package_id, version)</code> со статусом <code>superseded</code> или <code>withdrawn</code>.</li>
+<li>Текущий active с тем же <code>scope</code> → <code>superseded</code>.</li>
+<li>Найденный release → <code>active</code>, <code>superseded_at=0</code>.</li>
+<li>Если scope=all — обновляется <code>packages.last_active_version</code>.</li>
+</ul>
+<p >Окно реактивации ограничено TTL retention (90 дней): за пределами окна superseded-записи уже удалены, и реактивация не возможна — нужен полноценный re-publish.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="ga79a5a9173f706c23e6fa63ccda5ea3c0" name="ga79a5a9173f706c23e6fa63ccda5ea3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79a5a9173f706c23e6fa63ccda5ea3c0">&#9670;&nbsp;</a></span>regcoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::regcoop </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>chain_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>subnet_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::public_key&#160;</td>
+          <td class="paramname"><em>signing_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарегистрировать кооператив в каталоге. </p>
+<p >Регистрация кооператива в каталоге.</p>
+<p >Этот action — часть процесса подключения коопа к каталогу приложений на Восходе (вне scope текущего MVP). Кооператив сам подписывает транзакцию (<code>require_auth(coopname)</code>), подтверждая, что владеет приватной частью <code>signing_key</code>. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>кооператив, который регистрируется. </td></tr>
+    <tr><td class="paramname">chain_id</td><td>подсеть, к которой принадлежит коопе. </td></tr>
+    <tr><td class="paramname">subnet_label</td><td>human-label подсети ("ru","by",...). </td></tr>
+    <tr><td class="paramname">signing_key</td><td>subnet-signing-key (отдельный от @ active). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. Идемпотентность: фейл, если уже зарегистрирован — для обновления использовать <code>setcoop</code>.</dd></dl>
+<p>Кооператив сам подписывает транзакцию своим <code>@active</code>-ключом и передаёт публичную часть <code>signing_key</code> (отдельный ключ для подписи signed-request'ов от DC-оркестратора в <code>CA-auth</code>).</p>
+<p >Идемпотентность: если такой <code>coopname</code> уже зарегистрирован — фейл. Для обновления полей — <code>setcoop</code>.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Контекст: этот action — часть процесса подключения кооператива к каталогу приложений на Восходе (вне scope текущего MVP apps-catalog). Реальный flow: кабинет ВОСХОД проводит onboarding, генерирует/принимает signing keypair, подписывает и отправляет эту транзакцию.</dd>
+<dd>
+Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="gae2e0b652743178b245aacb157f40e341" name="gae2e0b652743178b245aacb157f40e341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2e0b652743178b245aacb157f40e341">&#9670;&nbsp;</a></span>regpackage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::regpackage </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>package_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>owner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; eosio::name &gt;&#160;</td>
+          <td class="paramname"><em>compatible_subnets</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарегистрировать новый пакет в каталоге. </p>
+<p >Регистрация нового пакета в каталоге.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>провайдер каталога (тот, кто подписал транзакцию). </td></tr>
+    <tr><td class="paramname">package_id</td><td>кодовое имя пакета (Antelope name, ≤12 chars). </td></tr>
+    <tr><td class="paramname">package_name</td><td>внешнее имя (npm/go/oci) — может содержать <code>@scope/name</code>. </td></tr>
+    <tr><td class="paramname">owner</td><td>username владельца пакета. </td></tr>
+    <tr><td class="paramname">compatible_subnets</td><td>human-labels подсетей, в которых пакет совместим. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. Идемпотентность: фейл, если package_id уже зарегистрирован (нужен явный transferpkg/withdraw перед re-регистрацией).</dd></dl>
+<p>Контракт операции:</p><ul>
+<li>PK = <code>package_id</code>. Если такой уже существует — фейлим («имя занято»).</li>
+<li><code>package_name</code> — внешнее имя; не уникально (теоретически два пакета могут иметь одинаковое npm-имя, но разные <code>package_id</code>; на практике это ловится UI/правилами кабинета ВОСХОД).</li>
+<li><code>compatible_subnets</code> — может быть пустой; в этом случае пакет считается совместимым со всеми подсетями (resolver на стороне <code>CA</code> обрабатывает пустой набор как «нет ограничений»).</li>
+<li><code>last_active_version</code> инициализируется пустой строкой; заполнится первым <code>setrelease</code> со scope=all.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="ga4f09d214367996d3c367abb3c1cab01b" name="ga4f09d214367996d3c367abb3c1cab01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f09d214367996d3c367abb3c1cab01b">&#9670;&nbsp;</a></span>regsub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::regsub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>subscriber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>chain_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>plan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>start_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>end_at</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарегистрировать или продлить подписку кооператива на пакет. </p>
+<p >Регистрация или продление подписки кооператива на пакет.</p>
+<p >Idempotent по (coopname, package_id):</p><ul>
+<li>row не существует → создаём с <code>active=true</code>.</li>
+<li>row существует → обновляем <code>plan</code>, <code>end_at</code> = max(текущее, новое), <code>active=true</code>, <code>chain_id</code> (на случай переноса между подсетями). <dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>провайдер каталога (тот, кто выписывает подписку). </td></tr>
+    <tr><td class="paramname">subscriber</td><td>кооператив-подписчик. </td></tr>
+    <tr><td class="paramname">chain_id</td><td>подсеть, в которой действует подписка. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+Idempotent по <code>(subscriber, package_id)</code>:</li>
+</ul>
+<p >Row нет → создаём с <code>active=true</code>, <code>start_at</code>, <code>end_at</code>, <code>plan</code>, <code>chain_id</code>.</p><ul>
+<li>Row есть → обновляем <code>plan</code>, <code>end_at</code> = <code>max(текущее, новое)</code>, <code>active=true</code>, <code>chain_id</code> (на случай миграции коопа между подсетями), <code>start_at</code> оставляем как был (это маркер «когда вообще началась подписка»).</li>
+</ul>
+<p >Это поведение специально сознательное: биллинг кабинета ВОСХОД при retry / повторной отправке не должен бояться дубликатов. История выписки подписок остаётся в blockchain trace'ах (Antelope action history), а не в таблице <code>subs</code>.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>провайдер каталога (тот, кто выписывает подписку). </td></tr>
+    <tr><td class="paramname">subscriber</td><td>кооператив-подписчик. </td></tr>
+    <tr><td class="paramname">chain_id</td><td>подсеть, в которой действует подписка.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. Проверки <code>chain_id</code> против <code>coops.chain_id</code> НЕ делаем, потому что: 1) <code>coops</code> row может ещё не существовать при первой выдаче подписки; 2) подписка теоретически может быть выдана коопу из другой подсети (миграция). Лучше доверять биллингу. </dd></dl>
+
+</div>
+</div>
+<a id="gaf879292e81f3484462f46327b2a695ff" name="gaf879292e81f3484462f46327b2a695ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf879292e81f3484462f46327b2a695ff">&#9670;&nbsp;</a></span>setcoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::setcoop </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; eosio::checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>chain_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; eosio::name &gt;&#160;</td>
+          <td class="paramname"><em>subnet_label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; eosio::public_key &gt;&#160;</td>
+          <td class="paramname"><em>signing_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; bool &gt;&#160;</td>
+          <td class="paramname"><em>active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обновить параметры кооператива (ротация ключа, перенос подсети, деактивация). </p>
+<p >Обновление параметров кооператива.</p>
+<p >Все параметры опциональны — обновляются только переданные. При смене <code>signing_key</code> обновляется <code>key_rotated_at=now</code>. Ранее выпущенные JWT (TTL 14 дней) остаются валидны; новые signed-request'ы должны идти от нового приват-ключа. </p><dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Все параметры опциональны — обновляются только переданные. Сценарии использования:</p><ul>
+<li>Ротация подписи: <code>setcoop(coopname, signing_key=&lt;new&gt;)</code>. Меняет <code>signing_key</code> и <code>key_rotated_at=now</code>.</li>
+<li>Деактивация: <code>setcoop(coopname, active=false)</code>. CA-auth перестанет отвечать на запросы от этого коопа.</li>
+<li>Миграция между подсетями: <code>setcoop(coopname, chain_id=&lt;new&gt;, subnet_label=&lt;new&gt;)</code>.</li>
+<li>Обновление human-label: <code>setcoop(coopname, subnet_label=&lt;new&gt;)</code>.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Ранее выпущенные JWT (TTL 14 дней в CA-auth) остаются валидны после ротации <code>signing_key</code>. Только новые signed-request'ы должны идти от нового приват-ключа. Это даёт zero-downtime ротации.</dd>
+<dd>
+Авторизация: <code>coopname</code> @ active. Если <code>@active</code>-ключ коопаккаунта скомпрометирован, эта операция не доступна злоумышленнику — сначала кооператив должен ротировать <code>@active</code> через <code>eosio::updateauth</code> (это отдельная операция, владелец-ключ). </dd></dl>
+
+</div>
+</div>
+<a id="ga80ff9f602eea9e50026cdcbb103e10d4" name="ga80ff9f602eea9e50026cdcbb103e10d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80ff9f602eea9e50026cdcbb103e10d4">&#9670;&nbsp;</a></span>setrelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::setrelease </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_apps_1_1scope__t.html">Apps::scope_t</a>&#160;</td>
+          <td class="paramname"><em>scope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>tarball_sha256</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>moderated_by</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Опубликовать новый release пакета. </p>
+<p >Опубликовать новый release пакета — атомарный transition.</p>
+<p >Атомарно (FR8 «approve → release.ACTIVE»):</p><ol type="1">
+<li>Создаёт row в <code>releases</code> со <code>status=active</code>, <code>superseded_at=0</code>.</li>
+<li>Любой существующий <code>active</code> с тем же <code>(package_id, scope)</code> → <code>superseded</code>, <code>superseded_at=now</code>.</li>
+<li>Если <code>scope.kind == "all"</code> — обновляет <code>packages.last_active_version</code>.</li>
+<li>Inline-cleanup: удаляет до <code>CLEANUP_BUDGET_PER_CALL</code> самых старых <code>superseded</code>-записей с <code>superseded_at &lt; now - RELEASE_RETENTION_SECS</code>.</li>
+</ol>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scope</td><td>область видимости (см. <code>scope_t</code>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Алгоритм (выполняется в одной транзакции):</p>
+<ol type="1">
+<li>Проверки: пакет существует; статус — известный; scope согласован (kind=all → targets пустой; kind=subnet/canary → targets непустой).</li>
+<li>Выполнить supersede предыдущего active с тем же scope (точное совпадение <code>kind</code> + <code>targets</code>). Записывается <code>superseded_at=now</code>. Если кто-то уже superseded — пропускаем.</li>
+<li>Создать новый row со <code>status=active</code>, <code>superseded_at=0</code>.</li>
+<li>Если <code>scope.kind == "all"_n</code> — обновить <code>packages.last_active_version</code>.</li>
+<li>Inline-cleanup: пройтись по <code>bysuperseded</code>-индексу для этого пакета и удалить до <code>CLEANUP_BUDGET_PER_CALL</code> записей с <code>superseded_at &lt; now - RELEASE_RETENTION_SECS</code>.</li>
+</ol>
+<p >Это ядро «atomic moderation approve» (FR8): индекс CA + KE.releases — либо обе, либо ни одна. Со стороны blockchain'а — гарантия атомарности в пределах одной транзакции.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Re-publish одной и той же <code>version</code> запрещён: если releases уже содержит row для (package_id, version) — фейл. Версии публикуются монотонно вверх; для отката используется <code>reactivate(version=старая)</code>.</dd>
+<dd>
+Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="gab04eaf806d831c399e9c1571ceecb31a" name="gab04eaf806d831c399e9c1571ceecb31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab04eaf806d831c399e9c1571ceecb31a">&#9670;&nbsp;</a></span>transferpkg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::transferpkg </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>new_owner</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Передать владение пакетом другому пользователю (FR3). </p>
+<p >Передача владения пакетом другому пользователю (FR3).</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Меняет <code>owner</code> на <code>new_owner</code>. Прав на сами релизы это не меняет — <code>setrelease</code> всё равно выполняется провайдером каталога (<code>coopname</code>), <code>owner</code> — это поле для аудита и UI «чей это пакет».</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+<a id="ga41036f1ee267527fbe653ddec9382347" name="ga41036f1ee267527fbe653ddec9382347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41036f1ee267527fbe653ddec9382347">&#9670;&nbsp;</a></span>withdraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void apps::withdraw </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>package_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отозвать релиз (CVE / нарушение / юридический отзыв). </p>
+<p >Ставит <code>status=withdrawn</code>. Если это был <code>active</code> со scope=all — <code>packages.last_active_version</code> обнуляется ("") до следующего setrelease/reactivate. </p><dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active.</dd></dl>
+<p>Семантика отзыва:</p><ul>
+<li>Релиз становится <code>withdrawn</code> и НЕ может быть установлен через CA-auth.</li>
+<li>Запись остаётся в таблице — TTL на withdrawn не действует.</li>
+<li>Если withdrawn-релиз был active со scope=all, <code>last_active_version</code> обнуляется ("") — UI должен показать «нет активной версии», пока оператор не выпустит новый setrelease или не реактивирует старую.</li>
+<li>Если был active со scope=subnet/canary, <code>last_active_version</code> не трогается — она показывает версию для основной массы кооперативов.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> @ active. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

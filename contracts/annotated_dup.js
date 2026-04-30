@@ -6,6 +6,13 @@ var annotated_dup =
     [ "Approver", "namespace_approver.html", [
       [ "approval", "struct_approver_1_1approval.html", "struct_approver_1_1approval" ]
     ] ],
+    [ "Apps", "namespace_apps.html", [
+      [ "coop", "struct_apps_1_1coop.html", "struct_apps_1_1coop" ],
+      [ "package", "struct_apps_1_1package.html", "struct_apps_1_1package" ],
+      [ "release", "struct_apps_1_1release.html", "struct_apps_1_1release" ],
+      [ "scope_t", "struct_apps_1_1scope__t.html", "struct_apps_1_1scope__t" ],
+      [ "sub", "struct_apps_1_1sub.html", "struct_apps_1_1sub" ]
+    ] ],
     [ "Capital", "namespace_capital.html", [
       [ "Commits", "namespace_capital_1_1_commits.html", [
         [ "commit", "struct_capital_1_1_commits_1_1commit.html", "struct_capital_1_1_commits_1_1commit" ]
@@ -141,6 +148,7 @@ var annotated_dup =
     [ "address_data", "structaddress__data.html", "structaddress__data" ],
     [ "agreement", "structagreement.html", "structagreement" ],
     [ "agreement2", "structagreement2.html", "structagreement2" ],
+    [ "apps", "classapps.html", "classapps" ],
     [ "authority", "structauthority.html", "structauthority" ],
     [ "automator", "structautomator.html", "structautomator" ],
     [ "autosigner", "structautosigner.html", "structautosigner" ],
@@ -209,7 +217,7 @@ var annotated_dup =
     [ "verification", "structverification.html", "structverification" ],
     [ "vote_point", "structvote__point.html", "structvote__point" ],
     [ "wait_weight", "structwait__weight.html", "structwait__weight" ],
-    [ "Wallet", "class_wallet.html", "class_wallet" ],
     [ "wallet", "classwallet.html", "classwallet" ],
+    [ "Wallet", "class_wallet.html", "class_wallet" ],
     [ "writeoff_op", "structwriteoff__op.html", "structwriteoff__op" ]
 ];

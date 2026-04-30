@@ -9,6 +9,7 @@ var namespaces_dup =
     [ "anonymous_namespace{blockinfo_tester.cpp}", "namespaceanonymous__namespace_02blockinfo__tester_8cpp_03.html", null ],
     [ "anonymous_namespace{eosio.system_blockinfo_tests.cpp}", "namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html", "namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03" ],
     [ "Approver", "namespace_approver.html", "namespace_approver" ],
+    [ "Apps", "namespace_apps.html", "namespace_apps" ],
     [ "Branch", "namespace_branch.html", [
       [ "get_branch_count", "namespace_branch.html#ad86dc7c17b6e7ae489b9381b6f0746c4", null ],
       [ "is_trusted", "namespace_branch.html#a1a66e57af958031d89fd640c45aeece3", null ],

@@ -14,11 +14,12 @@ var searchData=
   ['contributor_5findex_11',['contributor_index',['../namespace_capital.html#af59823e8070504b3a5283d910d77d8db',1,'Capital']]],
   ['cooperatives2_5findex_12',['cooperatives2_index',['../table__registrator__coops_8hpp.html#a15621bc26d5120bb5e181966ae1fe0f7',1,'table_registrator_coops.hpp']]],
   ['cooperatives_5findex_13',['cooperatives_index',['../table__registrator__orgs_8hpp.html#a6a82302212dad8b94506ce63e410d9ad',1,'table_registrator_orgs.hpp']]],
-  ['coopwallet_5findex_14',['coopwallet_index',['../table__fund__coopwallet_8hpp.html#a5740d8da890da6036692790e5090473a',1,'table_fund_coopwallet.hpp']]],
-  ['counts_5findex_15',['counts_index',['../table__counts_8hpp.html#a5af27e8af61127ac08bf8af64f4e4766',1,'table_counts.hpp']]],
-  ['create_5faction_16',['create_action',['../classeosio_1_1token.html#ab6f5f8e8c550b3ae9492fcde3f04458a',1,'eosio::token']]],
-  ['createagenda_5finterface_17',['createagenda_interface',['../lib_2core_2soviet_2soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d',1,'soviet.hpp']]],
-  ['createapprv_5finterface_18',['createapprv_interface',['../lib_2core_2soviet_2soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249',1,'soviet.hpp']]],
-  ['createdebt_5finterface_19',['createdebt_interface',['../lib_2core_2loan_2loan_8hpp.html#aa5433e7350b8d303eff0a29de597a972',1,'loan.hpp']]],
-  ['createoutpay_5finterface_20',['createoutpay_interface',['../lib_2core_2gateway_2gateway_8hpp.html#a74c46646c220ce31f3f8e96522ae1f4a',1,'gateway.hpp']]]
+  ['coops_5findex_14',['coops_index',['../namespace_apps.html#a6c1066fcc1f2a3158a45042ad9447f1f',1,'Apps']]],
+  ['coopwallet_5findex_15',['coopwallet_index',['../table__fund__coopwallet_8hpp.html#a5740d8da890da6036692790e5090473a',1,'table_fund_coopwallet.hpp']]],
+  ['counts_5findex_16',['counts_index',['../table__counts_8hpp.html#a5af27e8af61127ac08bf8af64f4e4766',1,'table_counts.hpp']]],
+  ['create_5faction_17',['create_action',['../classeosio_1_1token.html#ab6f5f8e8c550b3ae9492fcde3f04458a',1,'eosio::token']]],
+  ['createagenda_5finterface_18',['createagenda_interface',['../lib_2core_2soviet_2soviet_8hpp.html#a9b54c7e95e7a4553628d76257816514d',1,'soviet.hpp']]],
+  ['createapprv_5finterface_19',['createapprv_interface',['../lib_2core_2soviet_2soviet_8hpp.html#a693e4deeebe24d80d511f5d8517d6249',1,'soviet.hpp']]],
+  ['createdebt_5finterface_20',['createdebt_interface',['../lib_2core_2loan_2loan_8hpp.html#aa5433e7350b8d303eff0a29de597a972',1,'loan.hpp']]],
+  ['createoutpay_5finterface_21',['createoutpay_interface',['../lib_2core_2gateway_2gateway_8hpp.html#a74c46646c220ce31f3f8e96522ae1f4a',1,'gateway.hpp']]]
 ];

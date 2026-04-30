@@ -23,5 +23,6 @@ var searchData=
   ['expand_5fexpense_5fpool_20',['expand_expense_pool',['../namespace_capital_1_1_projects.html#a6869a406dbc91906834aac1cdfc22ade',1,'Capital::Projects']]],
   ['expandexpnss_21',['expandexpnss',['../group__public__capital__actions.html#ga23de9b53501a19b48e0a45ab1a1d4938',1,'capital']]],
   ['exppaycnfrm_22',['exppaycnfrm',['../group__public__capital__actions.html#ga9eaa4019848cfdb62530349fd282219d',1,'capital']]],
-  ['extract_5fregistry_5fid_5ffrom_5fmeta_23',['extract_registry_id_from_meta',['../utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99',1,'utils.hpp']]]
+  ['expsub_23',['expsub',['../group__public__apps__actions.html#ga8956b24f5933cd8f52e3d1b3a28882f0',1,'apps']]],
+  ['extract_5fregistry_5fid_5ffrom_5fmeta_24',['extract_registry_id_from_meta',['../utils_8hpp.html#a5319377f6457a226b9050bcc3f2c8a99',1,'utils.hpp']]]
 ];

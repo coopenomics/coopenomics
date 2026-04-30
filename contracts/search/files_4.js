@@ -40,5 +40,6 @@ var searchData=
   ['expandexpnss_2ecpp_37',['expandexpnss.cpp',['../expandexpnss_8cpp.html',1,'']]],
   ['expenses_2ehpp_38',['expenses.hpp',['../expenses_8hpp.html',1,'']]],
   ['exppaycnfrm_2deffect_2edox_39',['exppaycnfrm-effect.dox',['../exppaycnfrm-effect_8dox.html',1,'']]],
-  ['exppaycnfrm_2ecpp_40',['exppaycnfrm.cpp',['../exppaycnfrm_8cpp.html',1,'']]]
+  ['exppaycnfrm_2ecpp_40',['exppaycnfrm.cpp',['../exppaycnfrm_8cpp.html',1,'']]],
+  ['expsub_2ecpp_41',['expsub.cpp',['../expsub_8cpp.html',1,'']]]
 ];

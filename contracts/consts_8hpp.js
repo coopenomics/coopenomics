@@ -1,6 +1,7 @@
 var consts_8hpp =
 [
     [ "ANO", "consts_8hpp.html#a53678aa3958110e34fce3501d7da1bdf", null ],
+    [ "APPS", "consts_8hpp.html#ad61002880009405eb127d7cb873ad11d", null ],
     [ "BRANCH", "consts_8hpp.html#a5652aaf0ba5376a02bef5d911095a582", null ],
     [ "CAPITAL", "consts_8hpp.html#a9e86bb407a3bf01b7ce8bc9745cca8a8", null ],
     [ "DRAFT", "consts_8hpp.html#a190d95586c2d20966655dbb2e51295d1", null ],
@@ -18,6 +19,7 @@ var consts_8hpp =
     [ "WALLET", "consts_8hpp.html#a4f21c007e776bfa480a281c068ccec84", null ],
     [ "_afund_withdraw_action", "consts_8hpp.html#adc98edb1ff07b01925c99c424e7fa7e3", null ],
     [ "_ano", "consts_8hpp.html#a341b71e63284ca16c8b1561cb0cb0da4", null ],
+    [ "_apps", "consts_8hpp.html#a7f5bca9fba2ae169e318ed32bee72647", null ],
     [ "_auction_name_length_limit", "consts_8hpp.html#a7907328ea2e6a0c7528a5116b1b837c1", null ],
     [ "_branch", "consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348", null ],
     [ "_capital", "consts_8hpp.html#a523079edf0da499462828993f69a920c", null ],

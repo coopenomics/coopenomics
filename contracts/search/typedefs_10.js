@@ -7,8 +7,8 @@ var searchData=
   ['setacctram_5faction_4',['setacctram_action',['../classeosiosystem_1_1system__contract.html#a405cf7f71120642d5d043fa4648be9b1',1,'eosiosystem::system_contract']]],
   ['setalimits_5faction_5',['setalimits_action',['../classeosiobios_1_1bios.html#a8dd8ef730cb1bd25c940c69b67557df4',1,'eosiobios::bios::setalimits_action()'],['../classeosiosystem_1_1system__contract.html#a5546364ddc017d87f96ed0e9a6b1f931',1,'eosiosystem::system_contract::setalimits_action()']]],
   ['setcode_5faction_6',['setcode_action',['../classeosiobios_1_1bios.html#a3284dadf28210ffea040c8eddc01e7b7',1,'eosiobios::bios::setcode_action()'],['../classeosioboot_1_1boot.html#a2d0969b28894f32d4ab5e082ffb479ed',1,'eosioboot::boot::setcode_action()'],['../classeosiosystem_1_1system__contract.html#aa1920281d36995e7a5017a5369b68a4b',1,'eosiosystem::system_contract::setcode_action()']]],
-  ['setparams_5faction_7',['setparams_action',['../classeosiosystem_1_1system__contract.html#ae0cbe561757f43c3856caf74ff58ea2b',1,'eosiosystem::system_contract::setparams_action()'],['../classeosiobios_1_1bios.html#a99756330be6311220baba883425df47b',1,'eosiobios::bios::setparams_action()']]],
-  ['setpriv_5faction_8',['setpriv_action',['../classeosiosystem_1_1system__contract.html#a7c19bb1d99d1abbd00be825f69fbfc3f',1,'eosiosystem::system_contract::setpriv_action()'],['../classeosiobios_1_1bios.html#a3f4944b933f2524b915295ace2c3ccf8',1,'eosiobios::bios::setpriv_action()']]],
+  ['setparams_5faction_7',['setparams_action',['../classeosiobios_1_1bios.html#a99756330be6311220baba883425df47b',1,'eosiobios::bios::setparams_action()'],['../classeosiosystem_1_1system__contract.html#ae0cbe561757f43c3856caf74ff58ea2b',1,'eosiosystem::system_contract::setparams_action()']]],
+  ['setpriv_5faction_8',['setpriv_action',['../classeosiobios_1_1bios.html#a3f4944b933f2524b915295ace2c3ccf8',1,'eosiobios::bios::setpriv_action()'],['../classeosiosystem_1_1system__contract.html#a7c19bb1d99d1abbd00be825f69fbfc3f',1,'eosiosystem::system_contract::setpriv_action()']]],
   ['setprods_5faction_9',['setprods_action',['../classeosiobios_1_1bios.html#a6366d6a56bedac0269d795e5e1b52163',1,'eosiobios::bios']]],
   ['setram_5faction_10',['setram_action',['../classeosiosystem_1_1system__contract.html#a4caad060672784b32a36a2d634a5f3b3',1,'eosiosystem::system_contract']]],
   ['setramrate_5faction_11',['setramrate_action',['../classeosiosystem_1_1system__contract.html#aad4ad84241c38c3541a0438fbca0cc9b',1,'eosiosystem::system_contract']]],
@@ -16,5 +16,6 @@ var searchData=
   ['shipments_5findex_13',['shipments_index',['../namespace_marketplace.html#a1cc8355ba4e8ece81c220689c22b58b2',1,'Marketplace']]],
   ['staff_5findex_14',['staff_index',['../table__soviet__staff_8hpp.html#a04b2c83df71b9adc976ae65b894f4b3d',1,'table_soviet_staff.hpp']]],
   ['stats_15',['stats',['../classeosio_1_1token.html#ab30a2faa46a28a61ddfbe4241c550193',1,'eosio::token']]],
-  ['summaries_5findex_16',['summaries_index',['../namespace_loan.html#a2b80e846ed42caa9e8e59d7f2a3f790d',1,'Loan']]]
+  ['subs_5findex_16',['subs_index',['../namespace_apps.html#a08f0c3beda5c76a1b925528555e5384f',1,'Apps']]],
+  ['summaries_5findex_17',['summaries_index',['../namespace_loan.html#a2b80e846ed42caa9e8e59d7f2a3f790d',1,'Loan']]]
 ];
