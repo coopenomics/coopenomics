@@ -194,17 +194,23 @@ $(document).ready(function(){initNavTree('lib_2domain_2index_8hpp_source.html','
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="table__gateway__outcomes_8hpp.html">table_gateway_outcomes.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="table__ledger__laccount_8hpp.html">table_ledger_laccount.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &quot;<a class="code" href="table__ledger__writeoffs_8hpp.html">table_ledger_writeoffs.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &quot;<a class="code" href="table__loan__debts_8hpp.html">table_loan_debts.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;<a class="code" href="table__loan__summaries_8hpp.html">table_loan_summaries.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__requests_8hpp.html">table_marketplace_requests.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__segments_8hpp.html">table_marketplace_segments.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__shipments_8hpp.html">table_marketplace_shipments.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// apps (каталог приложений)</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__packages_8hpp.html">table_apps_packages.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__releases_8hpp.html">table_apps_releases.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__subs_8hpp.html">table_apps_subs.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__coops_8hpp.html">table_apps_coops.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#include &quot;<a class="code" href="table__ledger2__wallet_8hpp.html">table_ledger2_wallet.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#include &quot;<a class="code" href="table__ledger2__account_8hpp.html">table_ledger2_account.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// Epic 1 addendum (2026-04-18): journal+wjournal удалены из RAM; история</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// собирается на бэкенде из blockchain_actions[ledger2::apply/walletop/debit/credit]</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// и blockchain_deltas[ledger2::accounts/wallets].</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#include &quot;<a class="code" href="table__ledger2__meta_8hpp.html">table_ledger2_meta.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#include &quot;<a class="code" href="table__loan__debts_8hpp.html">table_loan_debts.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#include &quot;<a class="code" href="table__loan__summaries_8hpp.html">table_loan_summaries.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__requests_8hpp.html">table_marketplace_requests.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__segments_8hpp.html">table_marketplace_segments.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &quot;<a class="code" href="table__marketplace__shipments_8hpp.html">table_marketplace_shipments.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">// apps (каталог приложений)</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__packages_8hpp.html">table_apps_packages.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__releases_8hpp.html">table_apps_releases.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__subs_8hpp.html">table_apps_subs.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#include &quot;<a class="code" href="table__apps__coops_8hpp.html">table_apps_coops.hpp</a>&quot;</span></div>
 <div class="ttc" id="aaccount__payer_8hpp_html"><div class="ttname"><a href="account__payer_8hpp.html">account_payer.hpp</a></div></div>
 <div class="ttc" id="acoops__access__helpers_8hpp_html"><div class="ttname"><a href="coops__access__helpers_8hpp.html">coops_access_helpers.hpp</a></div></div>
 <div class="ttc" id="adocument__core_8hpp_html"><div class="ttname"><a href="document__core_8hpp.html">document_core.hpp</a></div></div>
@@ -228,6 +234,9 @@ $(document).ready(function(){initNavTree('lib_2domain_2index_8hpp_source.html','
 <div class="ttc" id="atable__fund__fwithdraws_8hpp_html"><div class="ttname"><a href="table__fund__fwithdraws_8hpp.html">table_fund_fwithdraws.hpp</a></div></div>
 <div class="ttc" id="atable__gateway__incomes_8hpp_html"><div class="ttname"><a href="table__gateway__incomes_8hpp.html">table_gateway_incomes.hpp</a></div></div>
 <div class="ttc" id="atable__gateway__outcomes_8hpp_html"><div class="ttname"><a href="table__gateway__outcomes_8hpp.html">table_gateway_outcomes.hpp</a></div></div>
+<div class="ttc" id="atable__ledger2__account_8hpp_html"><div class="ttname"><a href="table__ledger2__account_8hpp.html">table_ledger2_account.hpp</a></div></div>
+<div class="ttc" id="atable__ledger2__meta_8hpp_html"><div class="ttname"><a href="table__ledger2__meta_8hpp.html">table_ledger2_meta.hpp</a></div></div>
+<div class="ttc" id="atable__ledger2__wallet_8hpp_html"><div class="ttname"><a href="table__ledger2__wallet_8hpp.html">table_ledger2_wallet.hpp</a></div></div>
 <div class="ttc" id="atable__ledger__laccount_8hpp_html"><div class="ttname"><a href="table__ledger__laccount_8hpp.html">table_ledger_laccount.hpp</a></div></div>
 <div class="ttc" id="atable__ledger__writeoffs_8hpp_html"><div class="ttname"><a href="table__ledger__writeoffs_8hpp.html">table_ledger_writeoffs.hpp</a></div></div>
 <div class="ttc" id="atable__loan__debts_8hpp_html"><div class="ttname"><a href="table__loan__debts_8hpp.html">table_loan_debts.hpp</a></div></div>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ram_5fmanaged_0',['ram_managed',['../structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5ae149b497807ee78e9e5180d213e5a402',1,'eosiosystem::voter_info']]]
+  ['minimal_0',['minimal',['../classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35adc43e863c176e9b9f2a0b6054b24bd1a',1,'eosio_system::eosio_system_tester']]]
 ];

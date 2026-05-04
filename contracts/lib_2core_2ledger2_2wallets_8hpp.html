@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/lib/core/ledger2/wallets.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('lib_2core_2ledger2_2wallets_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл wallets.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+</div>
+<p><a href="lib_2core_2ledger2_2wallets_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html">ledger2_wallets</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Стандарт кошельков <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (пересмотр 2026-04-27).  <a href="structledger2__wallets.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ledger2_wallet_meta.html">Ledger2WalletMeta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Справочник кошелька: machine name → human-readable name.  <a href="struct_ledger2_wallet_meta.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceledger2__wallets__detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__wallets__detail.html">ledger2_wallets_detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a03e3c8603e8febea7e006e6392eb9970"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__wallets__detail.html#a03e3c8603e8febea7e006e6392eb9970">ledger2_wallets_detail::wallet_names_unique</a> ()</td></tr>
+<tr class="separator:a03e3c8603e8febea7e006e6392eb9970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe7f703e61ac2882d0fbeef5a2113e15"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__wallets__detail.html#abe7f703e61ac2882d0fbeef5a2113e15">ledger2_wallets_detail::wallet_names_nonempty</a> ()</td></tr>
+<tr class="separator:abe7f703e61ac2882d0fbeef5a2113e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cdc41b3b7ce44b84cca0d681a9af5f"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2core_2ledger2_2wallets_8hpp.html#ab6cdc41b3b7ce44b84cca0d681a9af5f">ledger2_get_wallet_human_name</a> (eosio::name wallet_name)</td></tr>
+<tr class="memdesc:ab6cdc41b3b7ce44b84cca0d681a9af5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает human-readable имя кошелька по его eosio::name.  <a href="lib_2core_2ledger2_2wallets_8hpp.html#ab6cdc41b3b7ce44b84cca0d681a9af5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6cdc41b3b7ce44b84cca0d681a9af5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2984ce608a9cb675e364a94b0d7efc04"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2core_2ledger2_2wallets_8hpp.html#a2984ce608a9cb675e364a94b0d7efc04">ledger2_is_known_wallet</a> (eosio::name wallet_name)</td></tr>
+<tr class="memdesc:a2984ce608a9cb675e364a94b0d7efc04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверяет, что <code>wallet_name</code> присутствует в LEDGER2_WALLET_REGISTRY.  <a href="lib_2core_2ledger2_2wallets_8hpp.html#a2984ce608a9cb675e364a94b0d7efc04">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2984ce608a9cb675e364a94b0d7efc04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:add311a04552da12a8c009ae136f1dccb"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="struct_ledger2_wallet_meta.html">Ledger2WalletMeta</a>, 17 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2core_2ledger2_2wallets_8hpp.html#add311a04552da12a8c009ae136f1dccb">LEDGER2_WALLET_REGISTRY</a></td></tr>
+<tr class="separator:add311a04552da12a8c009ae136f1dccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a721f0a47a6f908d5fd0dda5b5d51e211"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_2core_2ledger2_2wallets_8hpp.html#a721f0a47a6f908d5fd0dda5b5d51e211">LEDGER2_WALLET_REGISTRY_SIZE</a> = LEDGER2_WALLET_REGISTRY.size()</td></tr>
+<tr class="separator:a721f0a47a6f908d5fd0dda5b5d51e211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="ab6cdc41b3b7ce44b84cca0d681a9af5f" name="ab6cdc41b3b7ce44b84cca0d681a9af5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cdc41b3b7ce44b84cca0d681a9af5f">&#9670;&nbsp;</a></span>ledger2_get_wallet_human_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::string_view ledger2_get_wallet_human_name </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает human-readable имя кошелька по его eosio::name. </p>
+<p >Возвращает пустой <code>string_view</code> для незарегистрированных имён и для пустого имени (sentinel — кошелёк вне системы при ISSUE/REVOKE). </p>
+
+</div>
+</div>
+<a id="a2984ce608a9cb675e364a94b0d7efc04" name="a2984ce608a9cb675e364a94b0d7efc04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2984ce608a9cb675e364a94b0d7efc04">&#9670;&nbsp;</a></span>ledger2_is_known_wallet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool ledger2_is_known_wallet </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверяет, что <code>wallet_name</code> присутствует в LEDGER2_WALLET_REGISTRY. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="add311a04552da12a8c009ae136f1dccb" name="add311a04552da12a8c009ae136f1dccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add311a04552da12a8c009ae136f1dccb">&#9670;&nbsp;</a></span>LEDGER2_WALLET_REGISTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::array&lt;<a class="el" href="struct_ledger2_wallet_meta.html">Ledger2WalletMeta</a>, 17&gt; LEDGER2_WALLET_REGISTRY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {{</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#ac6e8f31966ec81e379007900012c84f4">ledger2_wallets::SHARE_FUND_PAY</a>,       <span class="stringliteral">&quot;ЦПП «Цифровой Кошелёк» — паевые взносы деньгами&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a5f9b618e415d14ccc89e4be9fba43062">ledger2_wallets::MIN_SHARE_FUND</a>,       <span class="stringliteral">&quot;Минимальный паевой взнос&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a8ebdc98e0333ac66eff3940094e5f7e1">ledger2_wallets::SHARE_FUND_RID</a>,       <span class="stringliteral">&quot;Паевой фонд — принятые РИД&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#ad22e40c9e0bf22668625f83554ada7a1">ledger2_wallets::ENTRANCE_FEES</a>,        <span class="stringliteral">&quot;Вступительные взносы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#af16e6f8df842e814c1468c1ee5d080f8">ledger2_wallets::MEMBERSHIP_FEES</a>,      <span class="stringliteral">&quot;Членские взносы (платформенные)&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a4f022041450701eaf3a0c9465388e7c8">ledger2_wallets::DELEGATE_FEES</a>,        <span class="stringliteral">&quot;Делегатские членские взносы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#ac09e2fe28e21c07baab3e335bdcc5052">ledger2_wallets::WITHDRAWALS_SINK</a>,     <span class="stringliteral">&quot;Возвраты паевых взносов пайщикам&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a9618d5b10702952cacb5e1ce6b5cae13">ledger2_wallets::SUPPLIER_PAYMENTS</a>,    <span class="stringliteral">&quot;Выплаты поставщикам&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#af5d35267707e1a109be35a81cc943426">ledger2_wallets::LOAN_ISSUED</a>,          <span class="stringliteral">&quot;Выданные пайщикам беспроцентные займы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a6e34fd4c2e1124783b652ead53d3d15f">ledger2_wallets::MANUAL_ADJUST</a>,        <span class="stringliteral">&quot;Ручные корректировки&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a0ca6ca8ef7deb3718326e859ae65979d">ledger2_wallets::BLAGOROST_INVEST</a>,     <span class="stringliteral">&quot;ЦПП «Благорост» — инвестиции деньгами&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a757df4e022806acb50b2a8f3b3bdf6b9">ledger2_wallets::BLAGOROST_RID</a>,        <span class="stringliteral">&quot;ЦПП «Благорост» — принятые РИД&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#acd44dfd0f7a890bbe7b038141f285701">ledger2_wallets::BLAGOROST_PROPERTY</a>,   <span class="stringliteral">&quot;ЦПП «Благорост» — имущественные паевые взносы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a82bd4a621ce0fb850692c7795ac74a48">ledger2_wallets::BLAGOROST_MEMBERSHIP</a>, <span class="stringliteral">&quot;ЦПП «Благорост» — членские взносы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a4b72a6d1e92efde118311ed85c33c6a3">ledger2_wallets::GENERATOR_COMMIT</a>,     <span class="stringliteral">&quot;ЦПП «Генератор» — принятый коммит (имущество)&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a8b428be14e973c0cd5f75369afcb91df">ledger2_wallets::GENERATOR_MEMBERSHIP</a>, <span class="stringliteral">&quot;ЦПП «Генератор» — членские взносы&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#ac06c45cf588ae8b18ec060b64f7db401">ledger2_wallets::MARKETPLACE_FUND</a>,     <span class="stringliteral">&quot;ЦПП «Стол Заказов» — общий кошелёк&quot;</span> },</div>
+<div class="line">}}</div>
+<div class="ttc" id="astructledger2__wallets_html_a0ca6ca8ef7deb3718326e859ae65979d"><div class="ttname"><a href="structledger2__wallets.html#a0ca6ca8ef7deb3718326e859ae65979d">ledger2_wallets::BLAGOROST_INVEST</a></div><div class="ttdeci">static constexpr eosio::name BLAGOROST_INVEST</div><div class="ttdoc">Благорост — инвестиции деньгами (Cr 80)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:54</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a4b72a6d1e92efde118311ed85c33c6a3"><div class="ttname"><a href="structledger2__wallets.html#a4b72a6d1e92efde118311ed85c33c6a3">ledger2_wallets::GENERATOR_COMMIT</a></div><div class="ttdeci">static constexpr eosio::name GENERATOR_COMMIT</div><div class="ttdoc">Генератор — паевой взнос имуществом в статусе «принятый коммит» (Dr 08 / Cr 80)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:58</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a4f022041450701eaf3a0c9465388e7c8"><div class="ttname"><a href="structledger2__wallets.html#a4f022041450701eaf3a0c9465388e7c8">ledger2_wallets::DELEGATE_FEES</a></div><div class="ttdeci">static constexpr eosio::name DELEGATE_FEES</div><div class="ttdoc">Делегатские членские взносы (цель CONVERT_TO_AXN) (Cr 86)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:50</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a5f9b618e415d14ccc89e4be9fba43062"><div class="ttname"><a href="structledger2__wallets.html#a5f9b618e415d14ccc89e4be9fba43062">ledger2_wallets::MIN_SHARE_FUND</a></div><div class="ttdeci">static constexpr eosio::name MIN_SHARE_FUND</div><div class="ttdoc">Минимальный паевой взнос при регистрации (Cr 80)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:45</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a6e34fd4c2e1124783b652ead53d3d15f"><div class="ttname"><a href="structledger2__wallets.html#a6e34fd4c2e1124783b652ead53d3d15f">ledger2_wallets::MANUAL_ADJUST</a></div><div class="ttdeci">static constexpr eosio::name MANUAL_ADJUST</div><div class="ttdoc">Ручные корректировки (резерв под ledger2::adjust)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:66</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a757df4e022806acb50b2a8f3b3bdf6b9"><div class="ttname"><a href="structledger2__wallets.html#a757df4e022806acb50b2a8f3b3bdf6b9">ledger2_wallets::BLAGOROST_RID</a></div><div class="ttdeci">static constexpr eosio::name BLAGOROST_RID</div><div class="ttdoc">Благорост — принятые РИД (Dr 04 / Cr 08 после accept)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:55</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a82bd4a621ce0fb850692c7795ac74a48"><div class="ttname"><a href="structledger2__wallets.html#a82bd4a621ce0fb850692c7795ac74a48">ledger2_wallets::BLAGOROST_MEMBERSHIP</a></div><div class="ttdeci">static constexpr eosio::name BLAGOROST_MEMBERSHIP</div><div class="ttdoc">Благорост — членские взносы по программе (Cr 86)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:57</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a8b428be14e973c0cd5f75369afcb91df"><div class="ttname"><a href="structledger2__wallets.html#a8b428be14e973c0cd5f75369afcb91df">ledger2_wallets::GENERATOR_MEMBERSHIP</a></div><div class="ttdeci">static constexpr eosio::name GENERATOR_MEMBERSHIP</div><div class="ttdoc">Генератор — членские взносы по программе (Cr 86)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:59</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a8ebdc98e0333ac66eff3940094e5f7e1"><div class="ttname"><a href="structledger2__wallets.html#a8ebdc98e0333ac66eff3940094e5f7e1">ledger2_wallets::SHARE_FUND_RID</a></div><div class="ttdeci">static constexpr eosio::name SHARE_FUND_RID</div><div class="ttdoc">Паевой фонд — РИД, принятые в НМА (Dr 04 / Cr 80)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:41</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a9618d5b10702952cacb5e1ce6b5cae13"><div class="ttname"><a href="structledger2__wallets.html#a9618d5b10702952cacb5e1ce6b5cae13">ledger2_wallets::SUPPLIER_PAYMENTS</a></div><div class="ttdeci">static constexpr eosio::name SUPPLIER_PAYMENTS</div><div class="ttdoc">Выплаты поставщикам (sink RECEIVE_CONFIRM)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:62</div></div>
+<div class="ttc" id="astructledger2__wallets_html_ac06c45cf588ae8b18ec060b64f7db401"><div class="ttname"><a href="structledger2__wallets.html#ac06c45cf588ae8b18ec060b64f7db401">ledger2_wallets::MARKETPLACE_FUND</a></div><div class="ttdeci">static constexpr eosio::name MARKETPLACE_FUND</div><div class="ttdoc">ЦПП «Стол Заказов» — общий кошелёк программы (резерв)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:63</div></div>
+<div class="ttc" id="astructledger2__wallets_html_ac09e2fe28e21c07baab3e335bdcc5052"><div class="ttname"><a href="structledger2__wallets.html#ac09e2fe28e21c07baab3e335bdcc5052">ledger2_wallets::WITHDRAWALS_SINK</a></div><div class="ttdeci">static constexpr eosio::name WITHDRAWALS_SINK</div><div class="ttdoc">Возвраты паевых взносов пайщикам (sink TRANSFER)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:42</div></div>
+<div class="ttc" id="astructledger2__wallets_html_ac6e8f31966ec81e379007900012c84f4"><div class="ttname"><a href="structledger2__wallets.html#ac6e8f31966ec81e379007900012c84f4">ledger2_wallets::SHARE_FUND_PAY</a></div><div class="ttdeci">static constexpr eosio::name SHARE_FUND_PAY</div><div class="ttdoc">ЦПП «Цифровой Кошелёк» — паевые взносы деньгами (Cr 80)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:40</div></div>
+<div class="ttc" id="astructledger2__wallets_html_acd44dfd0f7a890bbe7b038141f285701"><div class="ttname"><a href="structledger2__wallets.html#acd44dfd0f7a890bbe7b038141f285701">ledger2_wallets::BLAGOROST_PROPERTY</a></div><div class="ttdeci">static constexpr eosio::name BLAGOROST_PROPERTY</div><div class="ttdoc">Благорост — имущественные паевые взносы</div><div class="ttdef"><b>Definition:</b> wallets.hpp:56</div></div>
+<div class="ttc" id="astructledger2__wallets_html_ad22e40c9e0bf22668625f83554ada7a1"><div class="ttname"><a href="structledger2__wallets.html#ad22e40c9e0bf22668625f83554ada7a1">ledger2_wallets::ENTRANCE_FEES</a></div><div class="ttdeci">static constexpr eosio::name ENTRANCE_FEES</div><div class="ttdoc">Вступительные взносы (Cr 86)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:46</div></div>
+<div class="ttc" id="astructledger2__wallets_html_af16e6f8df842e814c1468c1ee5d080f8"><div class="ttname"><a href="structledger2__wallets.html#af16e6f8df842e814c1468c1ee5d080f8">ledger2_wallets::MEMBERSHIP_FEES</a></div><div class="ttdeci">static constexpr eosio::name MEMBERSHIP_FEES</div><div class="ttdoc">Членские взносы (платформенные) (Cr 86)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:49</div></div>
+<div class="ttc" id="astructledger2__wallets_html_af5d35267707e1a109be35a81cc943426"><div class="ttname"><a href="structledger2__wallets.html#af5d35267707e1a109be35a81cc943426">ledger2_wallets::LOAN_ISSUED</a></div><div class="ttdeci">static constexpr eosio::name LOAN_ISSUED</div><div class="ttdoc">Выданные пайщикам беспроцентные займы (Dr 58 / Cr 51)</div><div class="ttdef"><b>Definition:</b> wallets.hpp:53</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a721f0a47a6f908d5fd0dda5b5d51e211" name="a721f0a47a6f908d5fd0dda5b5d51e211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721f0a47a6f908d5fd0dda5b5d51e211">&#9670;&nbsp;</a></span>LEDGER2_WALLET_REGISTRY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t LEDGER2_WALLET_REGISTRY_SIZE = LEDGER2_WALLET_REGISTRY.size()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_7da415c6c9db060620fae2ab355398f8.html">core</a></li><li class="navelem"><a class="el" href="dir_b4916a3099cb23442e8134726aaea1f6.html">ledger2</a></li><li class="navelem"><a class="el" href="lib_2core_2ledger2_2wallets_8hpp.html">wallets.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

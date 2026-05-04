@@ -90,6 +90,7 @@ var NAVTREE =
         [ "Функции", "globals_func.html", null ],
         [ "Переменные", "globals_vars.html", null ],
         [ "Определения типов", "globals_type.html", null ],
+        [ "Перечисления", "globals_enum.html", null ],
         [ "Макросы", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -98,29 +99,30 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_2src_2common_2add_8cpp.html",
-"classeosio_1_1wrap.html",
-"classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35a9b438b3ae36d520a02a1a53790b97e69",
-"classeosiosystem_1_1system__contract.html#a616d617680f7ed47eb3f7fc2b984650f",
-"consts_8hpp.html#ab17a40fe9229dfa6f28be4de7f739feb",
-"dir_7a58a101592a95cebbfd07e6a75340e1.html",
-"eosio_8system_8hpp.html#a3f7272bcaba5ffb74778b45ecd0fe547",
-"functions_vars_m.html",
-"group__public__capital__project__initialization__process.html",
-"group__public__system__consts.html#gabd74f7ff09c66b649bd6f1e107c4035e",
-"migrateagree_8cpp.html",
-"namespace_capital_1_1_program_properties.html#ae40b958da19641b16f1c304f970d23ed",
-"namespace_names_1_1_external.html#a88d7433a1b2be15003a5b2ed112ef6f2",
-"projects_8hpp.html#ab3a830e64e5bca70c621f76c2194d4bb",
-"struct_apps_1_1release.html#a216de1a987765784bdf70b4491cc6ea9",
-"struct_capital_1_1crps__data.html#a196a2f35f5fe1af361b1abcd363def9f",
-"struct_capital_1_1voting__amounts.html#a2c593d4fb813434d26cacbf4c3d908e5",
-"struct_marketplace_1_1request.html#af7481073af1a6dc01700b0fa60f0b5d7",
-"struct_wallet_tables_1_1withdraw.html#aec3c84ce1df3260e1f5c82c936008870",
-"structcooperative2.html#a895517d40fdb2f7efa43a9fe0cf4b801",
-"structeosiosystem_1_1block__header.html#a9c9c9cbc1cd8ef72b0fce4d6e81002ec",
-"structfwithdraw.html#a9f164e957fc95159dc5aca03faed4967",
-"structwriteoff__op.html#ac2140662009a79e5891146c942b5605d"
+"accept_8cpp.html",
+"classeosio_1_1token.html#a65b248b1427e4ae01523d6f59f6a71ba",
+"classeosio__system_1_1eosio__system__tester.html#adfc053b0749db71a4da569903f384379",
+"classeosiosystem_1_1system__contract.html#a5546364ddc017d87f96ed0e9a6b1f931",
+"consts_8hpp.html#a98383cb202d2d3d56f7796a53a7f3d03",
+"dir_6737da2832b347978c2ec4a8a56b0f3c.html",
+"eosio_8msig__tests_8cpp.html#ae6e2a68057e63fd478300194f7098db7",
+"functions_q.html",
+"group__public__capital__consts.html#gaf69fc1a7901633f4632f5d83acbfb323",
+"group__public__system__actions.html#ga252441c7b5811068d336f37ab627ecd9",
+"limit__auth__changes_8hpp_source.html",
+"namespace_capital_1_1_expenses_1_1_status.html#a4c034f33ec0252aaf228832daf090eef",
+"namespace_names.html",
+"native_8hpp.html",
+"results_8hpp.html#a84bb1eacd2b64f11d904455fd1ecf1f4",
+"struct_capital_1_1_debts_1_1debt.html#a3a1ecb7d7e980c3109e2fec626d50ba0",
+"struct_capital_1_1generation__amounts.html#a163ba51ce936b62db9ca5a4544d8fad5",
+"struct_ledger_1_1accounts.html#a41856f975c9d3b7299548c891f45a26b",
+"struct_marketplace_1_1shipment.html#a4e924e0c97052ee0722ebafd7ef00432",
+"structaddress__data.html#a3bb11f9ff0548c6c8a1c2531a4156325",
+"structcounts__data.html#a5a9204942c998642666e44ec8916f114",
+"structeosiosystem_1_1block__info_1_1latest__block__batch__info__result.html#aae67f275b3852dbc62dcfbc8be6e7e8caeece530443605471d0bd284929c28ad8",
+"structledger2__accounts.html#aea34ba83d00859a93731119b94c1d7cd",
+"structwriteoff__op.html#a854030ad37c9c16d923f2da590f281e2"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

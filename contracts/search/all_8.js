@@ -16,8 +16,9 @@ var searchData=
   ['hello_13',['hello',['../classstarter.html#a5f44f824fcf5016430c9593c70912fe0',1,'starter']]],
   ['high_5fbid_14',['high_bid',['../structeosiosystem_1_1name__bid.html#ac9ef960920cc7cf790dbe29b7378a1e6',1,'eosiosystem::name_bid']]],
   ['high_5fbidder_15',['high_bidder',['../structeosiosystem_1_1name__bid.html#a96ebb10d61560583560670e686216783',1,'eosiosystem::name_bid']]],
-  ['hour_5fcost_16',['hour_cost',['../struct_capital_1_1plan__pool.html#a302e0c4d2423029fcdb539da4456e5f9',1,'Capital::plan_pool::hour_cost()'],['../struct_capital_1_1generation__amounts.html#a64c7a3f9ddf441a2897f435609732dff',1,'Capital::generation_amounts::hour_cost()'],['../struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab',1,'Capital::fact_pool::hour_cost()']]],
+  ['hour_5fcost_16',['hour_cost',['../struct_capital_1_1fact__pool.html#a30af7a721ef888ddbdcaf48eaa9698ab',1,'Capital::fact_pool::hour_cost()'],['../struct_capital_1_1plan__pool.html#a302e0c4d2423029fcdb539da4456e5f9',1,'Capital::plan_pool::hour_cost()'],['../struct_capital_1_1generation__amounts.html#a64c7a3f9ddf441a2897f435609732dff',1,'Capital::generation_amounts::hour_cost()']]],
   ['hours_5fper_5fday_17',['hours_per_day',['../struct_capital_1_1contributor.html#a8b5b4b4131d25a01b625ad58bfc2409a',1,'Capital::contributor']]],
   ['house_5fnumber_18',['house_number',['../structaddress__data.html#a7cd9a23e05094f9e6d6936dd2e476727',1,'address_data']]],
-  ['hundr_5fpercents_19',['HUNDR_PERCENTS',['../consts_8hpp.html#a8dca202ba0e066e3375d5314f0191389',1,'consts.hpp']]]
+  ['human_5fname_19',['human_name',['../struct_ledger2_wallet_meta.html#ad8ec5e4460d585262beff0866abb303e',1,'Ledger2WalletMeta::human_name()'],['../struct_operation_adjustment_entry.html#a5c46789240133d3e041968ed322c33f7',1,'OperationAdjustmentEntry::human_name()'],['../struct_operation_registry_entry.html#a0712634919bd5d7aa19573419b73375e',1,'OperationRegistryEntry::human_name()']]],
+  ['hundr_5fpercents_20',['HUNDR_PERCENTS',['../consts_8hpp.html#a8dca202ba0e066e3375d5314f0191389',1,'consts.hpp']]]
 ];

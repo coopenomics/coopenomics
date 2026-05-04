@@ -3,6 +3,7 @@ var dir_7da415c6c9db060620fae2ab355398f8 =
     [ "branch", "dir_33fd3eebc18275b3371eb9efd5946383.html", "dir_33fd3eebc18275b3371eb9efd5946383" ],
     [ "gateway", "dir_cdfeb302fb68190bfcf09bb92ddb9555.html", "dir_cdfeb302fb68190bfcf09bb92ddb9555" ],
     [ "ledger", "dir_c1fb0366bd27c5d1d6393e53e2fa165d.html", "dir_c1fb0366bd27c5d1d6393e53e2fa165d" ],
+    [ "ledger2", "dir_b4916a3099cb23442e8134726aaea1f6.html", "dir_b4916a3099cb23442e8134726aaea1f6" ],
     [ "loan", "dir_7198666549261dc521c957223e974bcd.html", "dir_7198666549261dc521c957223e974bcd" ],
     [ "marketplace", "dir_65a4cdd495054e5f79deec68f06ba0fd.html", "dir_65a4cdd495054e5f79deec68f06ba0fd" ],
     [ "registrator", "dir_8365e7f3d5e34594070c175a6a022db7.html", "dir_8365e7f3d5e34594070c175a6a022db7" ],

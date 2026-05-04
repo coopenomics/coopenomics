@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['blockinfo_5ftester_0',['blockinfo_tester',['../namespacesystem__contracts_1_1testing_1_1test__contracts_1_1blockinfo__tester.html',1,'system_contracts::testing::test_contracts']]],
-  ['soviet_1',['Soviet',['../namespace_soviet.html',1,'']]],
-  ['system_5fcontracts_2',['system_contracts',['../namespacesystem__contracts.html',1,'']]],
-  ['test_5fcontracts_3',['test_contracts',['../namespacesystem__contracts_1_1testing_1_1test__contracts.html',1,'system_contracts::testing']]],
-  ['testing_4',['testing',['../namespacesystem__contracts_1_1testing.html',1,'system_contracts']]]
+  ['adjustment_0',['adjustment',['../namespaceprocesses_1_1adjustment.html',1,'processes']]],
+  ['capital_1',['capital',['../namespaceprocesses_1_1capital.html',1,'processes']]],
+  ['marketplace_2',['marketplace',['../namespaceprocesses_1_1marketplace.html',1,'processes']]],
+  ['migration_3',['migration',['../namespaceprocesses_1_1migration.html',1,'processes']]],
+  ['processes_4',['processes',['../namespaceprocesses.html',1,'']]],
+  ['registrator_5',['registrator',['../namespaceprocesses_1_1registrator.html',1,'processes']]],
+  ['soviet_6',['soviet',['../namespaceprocesses_1_1soviet.html',1,'processes']]],
+  ['wallet_7',['wallet',['../namespaceprocesses_1_1wallet.html',1,'processes']]]
 ];

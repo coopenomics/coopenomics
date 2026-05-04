@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['core_5ftoken_0',['core_token',['../classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35a9b438b3ae36d520a02a1a53790b97e69',1,'eosio_system::eosio_system_tester']]],
-  ['cpu_5fmanaged_1',['cpu_managed',['../structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5ace319c6a1aa0ced6ea5a02270d863f4c',1,'eosiosystem::voter_info']]]
+  ['active_0',['ACTIVE',['../group__public__ledger2__consts.html#ggab2b80b285dc1ed7dc7d9b4c7b635abf8a18ff74f43da410c5529f7d6fca84f115',1,'accounts.hpp']]],
+  ['active_5fpassive_1',['ACTIVE_PASSIVE',['../group__public__ledger2__consts.html#ggab2b80b285dc1ed7dc7d9b4c7b635abf8a2c987112d98394d3ae45de2014a3c81f',1,'accounts.hpp']]]
 ];

@@ -32,5 +32,5 @@ var dir_bc637c682727437feef808efe4b72202 =
     [ "results.hpp", "results_8hpp.html", "results_8hpp" ],
     [ "segments.hpp", "segments_8hpp.html", "segments_8hpp" ],
     [ "votes.hpp", "votes_8hpp.html", "votes_8hpp" ],
-    [ "wallets.hpp", "wallets_8hpp.html", "wallets_8hpp" ]
+    [ "wallets.hpp", "capital_2domain_2entities_2wallets_8hpp.html", "capital_2domain_2entities_2wallets_8hpp" ]
 ];

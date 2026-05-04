@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wallettables_0',['WalletTables',['../namespace_wallet_tables.html',1,'']]]
+  ['registrator_0',['Registrator',['../namespace_registrator.html',1,'']]]
 ];

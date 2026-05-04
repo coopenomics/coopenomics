@@ -31,7 +31,7 @@ var searchData=
   ['stcoopstatus_2ecpp_28',['stcoopstatus.cpp',['../stcoopstatus_8cpp.html',1,'']]],
   ['stopproject_2ecpp_29',['stopproject.cpp',['../stopproject_8cpp.html',1,'']]],
   ['structs_2ehpp_30',['structs.hpp',['../structs_8hpp.html',1,'']]],
-  ['sub_2ecpp_31',['sub.cpp',['../_2src_2common_2sub_8cpp.html',1,'(Глобальное пространство имён)'],['../src_2common_2sub_8cpp.html',1,'(Глобальное пространство имён)']]],
+  ['sub_2ecpp_31',['sub.cpp',['../sub_8cpp.html',1,'']]],
   ['subaccum_2ecpp_32',['subaccum.cpp',['../subaccum_8cpp.html',1,'']]],
   ['subbal_2ecpp_33',['subbal.cpp',['../subbal_8cpp.html',1,'']]],
   ['subcirculate_2ecpp_34',['subcirculate.cpp',['../subcirculate_8cpp.html',1,'']]],

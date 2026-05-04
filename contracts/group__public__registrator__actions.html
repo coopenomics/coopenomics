@@ -181,9 +181,9 @@ $(document).ready(function(){initNavTree('group__public__registrator__actions.ht
 <tr class="memitem:ga578ec70f97caac13b7b03da09d6511c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__registrator__actions.html#ga578ec70f97caac13b7b03da09d6511c5">registrator::migrate</a> ()</td></tr>
 <tr class="memdesc:ga578ec70f97caac13b7b03da09d6511c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Миграция данных контракта. Обновляет счетчики активных пайщиков для всех кооперативов  <a href="group__public__registrator__actions.html#ga578ec70f97caac13b7b03da09d6511c5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga578ec70f97caac13b7b03da09d6511c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf3dca9c13b7d48799f5c8eaf9ace3129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__registrator__actions.html#gaf3dca9c13b7d48799f5c8eaf9ace3129">registrator::adduser</a> (eosio::name coopname, eosio::name referer, eosio::name username, eosio::name type, eosio::time_point_sec created_at, eosio::asset initial, eosio::asset minimum, bool spread_initial, std::string meta)</td></tr>
-<tr class="memdesc:gaf3dca9c13b7d48799f5c8eaf9ace3129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление пайщика. Создает новый аккаунт и добавляет пайщика в кооператив  <a href="group__public__registrator__actions.html#gaf3dca9c13b7d48799f5c8eaf9ace3129">Подробнее...</a><br /></td></tr>
-<tr class="separator:gaf3dca9c13b7d48799f5c8eaf9ace3129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6d459f9251c9570533238e1aab9c769"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__registrator__actions.html#gaf6d459f9251c9570533238e1aab9c769">registrator::adduser</a> (eosio::name coopname, eosio::name referer, eosio::name username, eosio::name type, eosio::time_point_sec created_at, eosio::asset initial, eosio::asset minimum, bool spread_initial, std::string meta, checksum256 registration_hash)</td></tr>
+<tr class="memdesc:gaf6d459f9251c9570533238e1aab9c769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление пайщика. Создает новый аккаунт и добавляет пайщика в кооператив  <a href="group__public__registrator__actions.html#gaf6d459f9251c9570533238e1aab9c769">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf6d459f9251c9570533238e1aab9c769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga24482a8d65da16a4bf492a53875adf6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__registrator__actions.html#ga24482a8d65da16a4bf492a53875adf6b">registrator::confirmpay</a> (name coopname, checksum256 registration_hash)</td></tr>
 <tr class="memdesc:ga24482a8d65da16a4bf492a53875adf6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение платежа регистрации. Подтверждает оплату регистрационного взноса от gateway.  <a href="group__public__registrator__actions.html#ga24482a8d65da16a4bf492a53875adf6b">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga24482a8d65da16a4bf492a53875adf6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,8 +205,8 @@ $(document).ready(function(){initNavTree('group__public__registrator__actions.ht
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <h2 class="groupheader">Функции</h2>
-<a id="gaf3dca9c13b7d48799f5c8eaf9ace3129" name="gaf3dca9c13b7d48799f5c8eaf9ace3129"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3dca9c13b7d48799f5c8eaf9ace3129">&#9670;&nbsp;</a></span>adduser()</h2>
+<a id="gaf6d459f9251c9570533238e1aab9c769" name="gaf6d459f9251c9570533238e1aab9c769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6d459f9251c9570533238e1aab9c769">&#9670;&nbsp;</a></span>adduser()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +263,13 @@ $(document).ready(function(){initNavTree('group__public__registrator__actions.ht
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>meta</em>&#160;</td>
+          <td class="paramname"><em>meta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>registration_hash</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -284,7 +290,8 @@ $(document).ready(function(){initNavTree('group__public__registrator__actions.ht
     <tr><td class="paramname">initial</td><td>Вступительный взнос </td></tr>
     <tr><td class="paramname">minimum</td><td>Минимальный взнос </td></tr>
     <tr><td class="paramname">spread_initial</td><td>Флаг распределения вступительного взноса </td></tr>
-    <tr><td class="paramname">meta</td><td>Метаданные пользователя</td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные пользователя </td></tr>
+    <tr><td class="paramname">registration_hash</td><td>Entity-hash доменной записи регистрации (из бэкенда)</td></tr>
   </table>
   </dd>
 </dl>

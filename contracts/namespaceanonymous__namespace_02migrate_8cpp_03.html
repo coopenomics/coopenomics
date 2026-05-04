@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен anonymous_namespace{migrate.cpp}</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespaceanonymous__namespace_02migrate_8cpp_03.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен anonymous_namespace{migrate.cpp}<div class="ingroups"><a class="el" href="group__public__ledger2__actions.html">Действия ledger2\ingroup public_ledger2</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Миграция остатков с legacy-ledger на <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (пересмотр 2026-04-20).  
+<a href="namespaceanonymous__namespace_02migrate_8cpp_03.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances.html">LegacyBalances</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad47c5a5d023244af21968f693b9e715b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances.html">LegacyBalances</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#ad47c5a5d023244af21968f693b9e715b">read_legacy_balances</a> (eosio::name coopname)</td></tr>
+<tr class="separator:ad47c5a5d023244af21968f693b9e715b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220af26959c593c3cc019191d68f8a3b"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#a220af26959c593c3cc019191d68f8a3b">sum_progwallet_blocked</a> (eosio::name coopname, uint64_t program_id)</td></tr>
+<tr class="separator:a220af26959c593c3cc019191d68f8a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba38648f9296936b065302b37dd5eaa"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#acba38648f9296936b065302b37dd5eaa">compute_min_total_by_type</a> (eosio::name coopname, const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;coop)</td></tr>
+<tr class="separator:acba38648f9296936b065302b37dd5eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09536c700ad25871c4c49c25bb6cd593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#a09536c700ad25871c4c49c25bb6cd593">send_transit</a> (eosio::name self_name, eosio::name coopname, eosio::name operation_code, const eosio::asset &amp;amt)</td></tr>
+<tr class="separator:a09536c700ad25871c4c49c25bb6cd593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05a0d588bd48e2fe96d1f57f4a337a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#ab05a0d588bd48e2fe96d1f57f4a337a1">emplace_wallet_only</a> (eosio::name self_name, eosio::name coopname, eosio::name wallet_id, const eosio::asset &amp;amt)</td></tr>
+<tr class="separator:ab05a0d588bd48e2fe96d1f57f4a337a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfaabc89e38c6816066cf681f96aa91b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#abfaabc89e38c6816066cf681f96aa91b">migrate_voskhod_facts</a> (eosio::name self_name, const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;coop)</td></tr>
+<tr class="separator:abfaabc89e38c6816066cf681f96aa91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcd01703c67bdbc7a33f6b36eb786c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html#a3fcd01703c67bdbc7a33f6b36eb786c7">migrate_one_coop</a> (eosio::name self_name, const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;coop)</td></tr>
+<tr class="separator:a3fcd01703c67bdbc7a33f6b36eb786c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Миграция остатков с legacy-ledger на <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (пересмотр 2026-04-20). </p>
+<p >Разделение на два независимых потока:</p>
+<p >A. <b>Бухгалтерские остатки</b> из <code>ledger::accounts</code> (scope=coopname, contract=_ledger) → через 4 inline <code>apply(operations::migration::*)</code> с полной двойной проводкой. Счета: 51 / 80 / 86 / 04.</p>
+<p >B. <b>Программные кошельки</b> из <code>soviet::progwallets</code> (scope=coopname, contract=_soviet) → прямой <code>wallets2.emplace</code> в <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> БЕЗ бух-проводок. Legacy::accounts и soviet::progwallets — параллельные системы учёта, <a class="el" href="structprogwallet.html#a695c77f25046ba4d46476fead7bdae07">progwallet.blocked</a> не проводится через 80-й счёт, поэтому любая попытка провести его через Dr 51 / Cr 80 вызовет двойной учёт на бухуровне. Вместо этого переносим только wallet-аналитику (w.cap.bginv BLAGOROST_INVEST, w.cap.gncom GENERATOR_COMMIT).</p>
+<p >Алгоритм на каждый кооператив:</p>
+<ol type="1">
+<li>Чтение legacy-счетов (laccounts_index, scope=coopname): cash_legacy = account[51].available + .blocked share_legacy = account[80].available + .blocked entry_legacy = account[861].available + .blocked</li>
+<li>Чтение параметров кооператива (<a class="el" href="structcooperative2.html">cooperative2</a>, scope=_registrator): coop.minimum — минимальный паевой для individual / entrepreneur coop.org_minimum — минимальный паевой для organization (binary_extension)</li>
+<li><p class="startli">Вычисление распределения: share_money = cash_legacy − entry_legacy rid_share = share_legacy − share_money min_total = clamp(Σ accepted-пайщиков по типу, 0, share_money) где для organization берётся coop.org_minimum, иначе — coop.minimum (см. compute_min_total_by_type). share_remain = share_money − min_total</p>
+<p class="startli">Инварианты (eosio::check): cash_legacy &gt;= entry_legacy share_legacy &gt;= share_money</p>
+</li>
+<li>Отправка 4 inline apply (ненулевые пропускаются): apply(migration::MIN_SHARE, min_total) → Dr 51 / Cr 80, MIN_SHARE_FUND (w.reg.minshr) apply(migration::SHARE,     share_remain) → Dr 51 / Cr 80, SHARE_FUND_PAY (w.wal.share) apply(migration::ENTRY,     entry_legacy) → Dr 51 / Cr 86, ENTRANCE_FEES (w.reg.entry) apply(migration::RID,       rid_share) → Dr 04 / Cr 80, SHARE_FUND_RID (w.wal.sharid)</li>
+<li><p class="startli">Прямой emplace в wallets2 для progwallets (БЕЗ бух-проводок): Σ progwallet[blagorost].blocked → wallets2[BLAGOROST_INVEST w.cap.bginv] Σ progwallet[generator].blocked → wallets2[GENERATOR_COMMIT w.cap.gncom]</p>
+<p class="startli">Если запись wallets2 уже есть (после inline apply сработали) — aggregate через wallets.modify(available += sum). Иначе — emplace.</p>
+</li>
+</ol>
+<p >Курсорный режим: <code>migrate(from_coop_index, limit)</code>. Полный прогон — <code>migrate(0, UINT64_MAX)</code>. Мета фиксирует <code>last_migrated_coop_index</code>.</p>
+<p >Поле <code>writeoff</code> legacy-ledger игнорируется целиком (PRD §4.1.2 FR-L-7). </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="acba38648f9296936b065302b37dd5eaa" name="acba38648f9296936b065302b37dd5eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acba38648f9296936b065302b37dd5eaa">&#9670;&nbsp;</a></span>compute_min_total_by_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset anonymous_namespace{migrate.cpp}::compute_min_total_by_type </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;&#160;</td>
+          <td class="paramname"><em>coop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Считает суммарный «минимальный паевой» по всем accepted-пайщикам коопа с учётом типа: organization → coop.org_minimum, иначе → coop.minimum.</p>
+<p >Кэш <code><a class="el" href="structcooperative2.html#ae3f97abc20e46dba7d9c93b6b9ced203">cooperative2.active_participants_count</a></code> не используется — он не несёт разбивку по типу. Идём по <code>participants_index</code> напрямую.</p>
+<p >Если у пайщика поле <code>type</code> не заполнено (legacy-записи), считаем как individual (берём <code>coop.minimum</code>). Если у коопа отсутствует <code>org_minimum</code> (binary_extension не выставлен) — fallback тоже на <code>coop.minimum</code>, чтобы не уронить миграцию на старых конфигах. </p>
+
+</div>
+</div>
+<a id="ab05a0d588bd48e2fe96d1f57f4a337a1" name="ab05a0d588bd48e2fe96d1f57f4a337a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05a0d588bd48e2fe96d1f57f4a337a1">&#9670;&nbsp;</a></span>emplace_wallet_only()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{migrate.cpp}::emplace_wallet_only </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>self_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>amt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Прямой emplace/add в wallets2 БЕЗ бух-проводок. Используется для переноса соwiet::progwallets → wallets2, т.к. progwallets не проводятся через ledger::accounts (параллельная система учёта — двойная запись не нужна и привела бы к двойному учёту на 80). </p>
+
+</div>
+</div>
+<a id="a3fcd01703c67bdbc7a33f6b36eb786c7" name="a3fcd01703c67bdbc7a33f6b36eb786c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fcd01703c67bdbc7a33f6b36eb786c7">&#9670;&nbsp;</a></span>migrate_one_coop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{migrate.cpp}::migrate_one_coop </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>self_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;&#160;</td>
+          <td class="paramname"><em>coop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Мигрирует один кооператив. Отправляет до 4 inline apply (бух-проводки)</p><ul>
+<li>прямой emplace программных кошельков (без проводок).</li>
+</ul>
+<p >Для voskhod — спец-ветка по фактам (см. migrate_voskhod_facts), т.к. legacy::accounts и soviet::progwallets рассинхронизированы. </p>
+
+</div>
+</div>
+<a id="abfaabc89e38c6816066cf681f96aa91b" name="abfaabc89e38c6816066cf681f96aa91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfaabc89e38c6816066cf681f96aa91b">&#9670;&nbsp;</a></span>migrate_voskhod_facts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{migrate.cpp}::migrate_voskhod_facts </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>self_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structcooperative2.html">cooperative2</a> &amp;&#160;</td>
+          <td class="paramname"><em>coop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Спец-ветка миграции для voskhod — РУЧНОЙ ХАРДКОД сумм по кошелькам.</p>
+<p >Цифры заведены вручную после сверки с фактическими данными mainnet (snapshot 2026-04-29). При необходимости править — править прямо здесь, пересобирать ledger2.wasm и катить.</p>
+<p >Причина хардкода: legacy::accounts и soviet::progwallets рассинхронизированы (деньги Благороста, прошедшие через 51, разошлись 80 vs progwallets, есть бумажный шлейф на 51, и т.п.). Вместо арифметической сшивки — заводим суммы вручную по тому, как кооператив должен выглядеть в <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>.</p>
+<p >Имущественная часть на legacy 80 (РИД ~56.8M) сюда НЕ заводится отдельным w.wal.sharid: она остаётся осадком на legacy 80 до Phase 2 (ADR-009), когда Благорост схлопнется в w.cap.blago и заберёт имущество.</p>
+<p >Бух-баланс по этой таблице: Dr 51 = w.reg.minshr + w.wal.share + w.reg.entry = 31800 + 569900 + 12500 = 614200 Cr 80 = w.reg.minshr + w.wal.share = 31800 + 569900 = 601700 Cr 86 = w.reg.entry = 12500 Σ Dr = Σ Cr = 614200 ✓</p>
+<p >Σ Благороста на bginv (57 044 311) и Генератора на gncom (0) идут прямым emplace без бух-проводок (параллельный progwallets-учёт). </p>
+
+</div>
+</div>
+<a id="ad47c5a5d023244af21968f693b9e715b" name="ad47c5a5d023244af21968f693b9e715b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47c5a5d023244af21968f693b9e715b">&#9670;&nbsp;</a></span>read_legacy_balances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances.html">LegacyBalances</a> anonymous_namespace{migrate.cpp}::read_legacy_balances </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a09536c700ad25871c4c49c25bb6cd593" name="a09536c700ad25871c4c49c25bb6cd593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09536c700ad25871c4c49c25bb6cd593">&#9670;&nbsp;</a></span>send_transit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void anonymous_namespace{migrate.cpp}::send_transit </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>self_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>operation_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>amt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Отправляет inline apply для одной миграционной операции, если amount &gt; 0. process_hash детерминирован по (coopname, operation_code). </p>
+
+</div>
+</div>
+<a id="a220af26959c593c3cc019191d68f8a3b" name="a220af26959c593c3cc019191d68f8a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220af26959c593c3cc019191d68f8a3b">&#9670;&nbsp;</a></span>sum_progwallet_blocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset anonymous_namespace{migrate.cpp}::sum_progwallet_blocked </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>program_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Суммирует <code>blocked</code> по <code>progwallets</code> (soviet, scope=coopname) для program_id. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceanonymous__namespace_02migrate_8cpp_03.html">anonymous_namespace{migrate.cpp}</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

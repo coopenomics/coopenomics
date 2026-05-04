@@ -1,15 +1,21 @@
 var searchData=
 [
   ['waccept_0',['waccept',['../classmarketplace.html#a52e5fa9961f2eea3baf0b34fa89b03a1',1,'marketplace']]],
-  ['wauthorize_1',['wauthorize',['../classmarketplace.html#af7cae474c0ae51448f2f4cf2ab501216',1,'marketplace']]],
-  ['while_2',['while',['../eosio_8wrap__tests_8cpp.html#aa5ff1cefa027f180e6788b1c45695a4c',1,'eosio.wrap_tests.cpp']]],
-  ['withdraw_3',['withdraw',['../group__public__soviet__actions.html#ga722484f515076d09aa0440badd6c968d',1,'soviet::withdraw()'],['../classeosio__system_1_1eosio__system__tester.html#a4146e614926727ff74b52c2cd2cf033f',1,'eosio_system::eosio_system_tester::withdraw()'],['../group__public__apps__actions.html#ga41036f1ee267527fbe653ddec9382347',1,'apps::withdraw()']]],
-  ['withdraw1_4',['withdraw1',['../classcontributor.html#a05d380d2339de9042a2a13f7c0f8e315',1,'contributor']]],
-  ['withdraw2_5',['withdraw2',['../classcontributor.html#a5094f944669a7ebe723af0ec4506e21a',1,'contributor']]],
-  ['withdraw_5feffect_6',['withdraw_effect',['../classsoviet.html#a74775bb15963afd3dec409c7a4df4b7a',1,'soviet']]],
-  ['woffer_7',['woffer',['../classmarketplace.html#af0457578658f1454e99aebb157200126',1,'marketplace']]],
-  ['wrap_5fexec_8',['wrap_exec',['../classeosio__wrap__tester.html#a0e0a3b21a115f1416b098fcc1627e9ba',1,'eosio_wrap_tester']]],
-  ['wreturn_9',['wreturn',['../classmarketplace.html#a2c20ced38b67e9fa6b11f75871e9d5be',1,'marketplace']]],
-  ['writeoff_10',['writeoff',['../group__public__ledger__actions.html#ga43057f8c21fd96c6a3a5f6d421fa51f7',1,'ledger::writeoff(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)'],['../classledger.html#a43057f8c21fd96c6a3a5f6d421fa51f7',1,'ledger::writeoff(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)'],['../class_ledger.html#a60c06b2db73d1b6bff82da7bc21fa120',1,'Ledger::writeoff()']]],
-  ['writeoffcnsl_11',['writeoffcnsl',['../group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888',1,'ledger::writeoffcnsl(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)'],['../classledger.html#aaf91cf2b71c3245356c0d702732fb888',1,'ledger::writeoffcnsl(eosio::name coopname, uint64_t account_id, eosio::asset quantity, std::string comment, checksum256 hash, eosio::name username)'],['../class_ledger.html#ab621ed632e31e5fa2cf91f134f47c9eb',1,'Ledger::writeoffcnsl()']]]
+  ['wallet_5fnames_5fnonempty_1',['wallet_names_nonempty',['../namespaceledger2__wallets__detail.html#abe7f703e61ac2882d0fbeef5a2113e15',1,'ledger2_wallets_detail']]],
+  ['wallet_5fnames_5funique_2',['wallet_names_unique',['../namespaceledger2__wallets__detail.html#a03e3c8603e8febea7e006e6392eb9970',1,'ledger2_wallets_detail']]],
+  ['wallet_5fonly_5fhas_5fzero_5faccounts_3',['wallet_only_has_zero_accounts',['../namespaceledger2__registry__detail.html#a8d4745769dda93d9afb7f2520e93df7e',1,'ledger2_registry_detail']]],
+  ['walletop_4',['walletop',['../group__public__ledger2__actions.html#ga9da2f970398d81f9ab627414ca5c5cea',1,'ledger2']]],
+  ['wallets_5fexist_5fin_5fregistry_5',['wallets_exist_in_registry',['../namespaceledger2__registry__detail.html#aa5fbf771fbfcc0841305368d494f881c',1,'ledger2_registry_detail']]],
+  ['walmove_6',['walmove',['../group__public__ledger2__actions.html#gaf0dac1b44a16d33a96fb6094f0061994',1,'ledger2']]],
+  ['wauthorize_7',['wauthorize',['../classmarketplace.html#af7cae474c0ae51448f2f4cf2ab501216',1,'marketplace']]],
+  ['while_8',['while',['../eosio_8wrap__tests_8cpp.html#aa5ff1cefa027f180e6788b1c45695a4c',1,'eosio.wrap_tests.cpp']]],
+  ['withdraw_9',['withdraw',['../classeosio__system_1_1eosio__system__tester.html#a4146e614926727ff74b52c2cd2cf033f',1,'eosio_system::eosio_system_tester::withdraw()'],['../group__public__soviet__actions.html#ga722484f515076d09aa0440badd6c968d',1,'soviet::withdraw()'],['../group__public__apps__actions.html#ga41036f1ee267527fbe653ddec9382347',1,'apps::withdraw()']]],
+  ['withdraw1_10',['withdraw1',['../classcontributor.html#a05d380d2339de9042a2a13f7c0f8e315',1,'contributor']]],
+  ['withdraw2_11',['withdraw2',['../classcontributor.html#a5094f944669a7ebe723af0ec4506e21a',1,'contributor']]],
+  ['withdraw_5feffect_12',['withdraw_effect',['../classsoviet.html#a74775bb15963afd3dec409c7a4df4b7a',1,'soviet']]],
+  ['woffer_13',['woffer',['../classmarketplace.html#af0457578658f1454e99aebb157200126',1,'marketplace']]],
+  ['wrap_5fexec_14',['wrap_exec',['../classeosio__wrap__tester.html#a0e0a3b21a115f1416b098fcc1627e9ba',1,'eosio_wrap_tester']]],
+  ['wreturn_15',['wreturn',['../classmarketplace.html#a2c20ced38b67e9fa6b11f75871e9d5be',1,'marketplace']]],
+  ['writeoff_16',['writeoff',['../group__public__ledger__actions.html#ga43057f8c21fd96c6a3a5f6d421fa51f7',1,'ledger::writeoff()'],['../class_ledger.html#a60c06b2db73d1b6bff82da7bc21fa120',1,'Ledger::writeoff()']]],
+  ['writeoffcnsl_17',['writeoffcnsl',['../group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888',1,'ledger::writeoffcnsl()'],['../class_ledger.html#ab621ed632e31e5fa2cf91f134f47c9eb',1,'Ledger::writeoffcnsl()']]]
 ];

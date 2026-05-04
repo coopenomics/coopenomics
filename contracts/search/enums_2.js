@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setup_5flevel_0',['setup_level',['../classeosio__system_1_1eosio__system__tester.html#ae7e0ff4e2ebe321e9508b432c8d1ca35',1,'eosio_system::eosio_system_tester']]]
+  ['flags1_5ffields_0',['flags1_fields',['../structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5',1,'eosiosystem::voter_info']]]
 ];

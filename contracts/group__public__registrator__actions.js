@@ -1,6 +1,6 @@
 var group__public__registrator__actions =
 [
-    [ "registrator::adduser", "group__public__registrator__actions.html#gaf3dca9c13b7d48799f5c8eaf9ace3129", null ],
+    [ "registrator::adduser", "group__public__registrator__actions.html#gaf6d459f9251c9570533238e1aab9c769", null ],
     [ "registrator::changekey", "group__public__registrator__actions.html#gad5b90e66aba8c47ea6f8ec3424bf5ba0", null ],
     [ "registrator::confirmpay", "group__public__registrator__actions.html#ga24482a8d65da16a4bf492a53875adf6b", null ],
     [ "registrator::confirmreg", "group__public__registrator__actions.html#ga7705130fbcfb023dc37c50878a1afd3c", null ],

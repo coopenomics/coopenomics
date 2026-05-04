@@ -6,7 +6,8 @@ var searchData=
   ['open_5fproject_3',['open_project',['../namespace_capital_1_1_projects.html#a15cf579a3ddfd1b617e29ea8e828275b',1,'Capital::Projects']]],
   ['openprogwall_4',['openprogwall',['../group__public__soviet__actions.html#gaaf98c65eaa585da91969ef08fd81a1bc',1,'soviet']]],
   ['openproject_5',['openproject',['../group__public__capital__actions.html#ga509604228af7d1590786d8722356ba62',1,'capital']]],
-  ['orderoffer_6',['orderoffer',['../classmarketplace.html#aafc49bca6b4288da5d71f9bb748053bf',1,'marketplace']]],
-  ['outcomplete_7',['outcomplete',['../group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9',1,'gateway']]],
-  ['outdecline_8',['outdecline',['../group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131',1,'gateway']]]
+  ['operation_5fcodes_5funique_6',['operation_codes_unique',['../namespaceledger2__registry__detail.html#a76e2eef8dfe21fcaf45eb8f52eca2702',1,'ledger2_registry_detail']]],
+  ['orderoffer_7',['orderoffer',['../classmarketplace.html#a818614bb41776164c4ab9c35e9ebaa2b',1,'marketplace']]],
+  ['outcomplete_8',['outcomplete',['../group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9',1,'gateway']]],
+  ['outdecline_9',['outdecline',['../group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131',1,'gateway']]]
 ];

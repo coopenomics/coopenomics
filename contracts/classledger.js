@@ -1,29 +1,16 @@
 var classledger =
 [
     [ "ledger", "classledger.html#acef25d9c43198f5a63bd12bdf2df9f17", null ],
-    [ "ledger", "classledger.html#acef25d9c43198f5a63bd12bdf2df9f17", null ],
     [ "add", "group__public__ledger__actions.html#gaa142f25741e0373a3a088105175c7908", null ],
-    [ "add", "classledger.html#aa142f25741e0373a3a088105175c7908", null ],
-    [ "apply", "classledger.html#a708c6e83111e5a327b354c4ceb84025d", null ],
     [ "apply", "classledger.html#a708c6e83111e5a327b354c4ceb84025d", null ],
     [ "auth", "group__public__ledger__actions.html#ga062a0f127e7d1e308dfa14446297c23f", null ],
-    [ "auth", "classledger.html#a062a0f127e7d1e308dfa14446297c23f", null ],
     [ "block", "group__public__ledger__actions.html#ga4b0337474c6a0ca07ef5748a7b826e66", null ],
-    [ "block", "classledger.html#a4b0337474c6a0ca07ef5748a7b826e66", null ],
     [ "complete", "group__public__ledger__actions.html#ga971d74e015d6453b8843ec8e47ec1818", null ],
-    [ "complete", "classledger.html#a971d74e015d6453b8843ec8e47ec1818", null ],
     [ "create", "group__public__ledger__actions.html#gae8748f71d0b84e6516c1a792437578e1", null ],
-    [ "create", "classledger.html#ae8748f71d0b84e6516c1a792437578e1", null ],
     [ "decline", "group__public__ledger__actions.html#gae6f61434651b708fdb0fcca32cff454e", null ],
-    [ "decline", "classledger.html#ae6f61434651b708fdb0fcca32cff454e", null ],
     [ "migrate", "group__public__ledger__actions.html#gad7c09de7dd1c04dff02ebf1de7d40caa", null ],
-    [ "migrate", "classledger.html#ad7c09de7dd1c04dff02ebf1de7d40caa", null ],
     [ "sub", "group__public__ledger__actions.html#gaa4b04679302d4a6d815999ccd7e12560", null ],
-    [ "sub", "classledger.html#aa4b04679302d4a6d815999ccd7e12560", null ],
     [ "unblock", "group__public__ledger__actions.html#gad12411f63fbb70c3e2d0fba8ef22894e", null ],
-    [ "unblock", "classledger.html#ad12411f63fbb70c3e2d0fba8ef22894e", null ],
     [ "writeoff", "group__public__ledger__actions.html#ga43057f8c21fd96c6a3a5f6d421fa51f7", null ],
-    [ "writeoff", "classledger.html#a43057f8c21fd96c6a3a5f6d421fa51f7", null ],
-    [ "writeoffcnsl", "group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888", null ],
-    [ "writeoffcnsl", "classledger.html#aaf91cf2b71c3245356c0d702732fb888", null ]
+    [ "writeoffcnsl", "group__public__ledger__actions.html#gaaf91cf2b71c3245356c0d702732fb888", null ]
 ];

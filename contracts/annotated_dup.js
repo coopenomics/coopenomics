@@ -3,6 +3,9 @@ var annotated_dup =
     [ "anonymous_namespace{eosio.system_blockinfo_tests.cpp}", "namespaceanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03.html", [
       [ "block_info_record", "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html", "structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record" ]
     ] ],
+    [ "anonymous_namespace{migrate.cpp}", "namespaceanonymous__namespace_02migrate_8cpp_03.html", [
+      [ "LegacyBalances", "structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances.html", "structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances" ]
+    ] ],
     [ "Approver", "namespace_approver.html", [
       [ "approval", "struct_approver_1_1approval.html", "struct_approver_1_1approval" ]
     ] ],
@@ -144,6 +147,7 @@ var annotated_dup =
     [ "_abi_hash", "struct__abi__hash.html", "struct__abi__hash" ],
     [ "accfund", "structaccfund.html", "structaccfund" ],
     [ "account", "structaccount.html", "structaccount" ],
+    [ "account2", "structaccount2.html", "structaccount2" ],
     [ "address", "structaddress.html", "structaddress" ],
     [ "address_data", "structaddress__data.html", "structaddress__data" ],
     [ "agreement", "structagreement.html", "structagreement" ],
@@ -187,14 +191,23 @@ var annotated_dup =
     [ "joincoops", "structjoincoops.html", "structjoincoops" ],
     [ "key_weight", "structkey__weight.html", "structkey__weight" ],
     [ "laccount", "structlaccount.html", "structlaccount" ],
-    [ "ledger", "classledger.html", "classledger" ],
     [ "Ledger", "class_ledger.html", "class_ledger" ],
+    [ "ledger", "classledger.html", "classledger" ],
+    [ "Ledger2", "class_ledger2.html", "class_ledger2" ],
+    [ "ledger2", "classledger2.html", "classledger2" ],
+    [ "ledger2_accounts", "structledger2__accounts.html", "structledger2__accounts" ],
+    [ "ledger2_meta", "structledger2__meta.html", "structledger2__meta" ],
+    [ "ledger2_wallets", "structledger2__wallets.html", "structledger2__wallets" ],
+    [ "Ledger2AccountMeta", "struct_ledger2_account_meta.html", "struct_ledger2_account_meta" ],
+    [ "Ledger2WalletMeta", "struct_ledger2_wallet_meta.html", "struct_ledger2_wallet_meta" ],
     [ "limitauth_tester", "structlimitauth__tester.html", "structlimitauth__tester" ],
     [ "loan", "classloan.html", "classloan" ],
     [ "marketplace", "classmarketplace.html", "classmarketplace" ],
     [ "meet", "classmeet.html", "classmeet" ],
     [ "meet_point", "structmeet__point.html", "structmeet__point" ],
     [ "onedraft", "structonedraft.html", "structonedraft" ],
+    [ "OperationAdjustmentEntry", "struct_operation_adjustment_entry.html", "struct_operation_adjustment_entry" ],
+    [ "OperationRegistryEntry", "struct_operation_registry_entry.html", "struct_operation_registry_entry" ],
     [ "org_data", "structorg__data.html", "structorg__data" ],
     [ "participant", "structparticipant.html", "structparticipant" ],
     [ "permission_level_weight", "structpermission__level__weight.html", "structpermission__level__weight" ],
@@ -219,5 +232,6 @@ var annotated_dup =
     [ "wait_weight", "structwait__weight.html", "structwait__weight" ],
     [ "wallet", "classwallet.html", "classwallet" ],
     [ "Wallet", "class_wallet.html", "class_wallet" ],
+    [ "wallet2", "structwallet2.html", "structwallet2" ],
     [ "writeoff_op", "structwriteoff__op.html", "structwriteoff__op" ]
 ];

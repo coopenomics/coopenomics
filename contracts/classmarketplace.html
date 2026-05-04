@@ -169,9 +169,9 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 <tr class="separator:a4a1a5d78b2606e4883239fc79afdfb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a4e1c2dfb1deae979d8d3a4c2d3400058">migrate</a> ()</td></tr>
 <tr class="separator:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafc49bca6b4288da5d71f9bb748053bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aafc49bca6b4288da5d71f9bb748053bf">orderoffer</a> (eosio::name coopname, eosio::name receiver_braname, eosio::name username, checksum256 hash, uint64_t units, eosio::asset unit_cost, uint32_t product_lifecycle_secs, uint32_t warranty_period_secs, eosio::asset membership_fee_amount, eosio::asset cancellation_fee_amount, <a class="el" href="structdocument2.html">document2</a> product_return_statement, <a class="el" href="structdocument2.html">document2</a> convert_in, std::string meta)</td></tr>
-<tr class="memdesc:aafc49bca6b4288da5d71f9bb748053bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать заявку orderoffer - заказчик создает заявку на поставку товара от поставщика.  <a href="classmarketplace.html#aafc49bca6b4288da5d71f9bb748053bf">Подробнее...</a><br /></td></tr>
-<tr class="separator:aafc49bca6b4288da5d71f9bb748053bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a818614bb41776164c4ab9c35e9ebaa2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a818614bb41776164c4ab9c35e9ebaa2b">orderoffer</a> (eosio::name coopname, eosio::name receiver_braname, eosio::name username, checksum256 hash, uint64_t units, eosio::asset unit_cost, uint32_t product_lifecycle_secs, uint32_t warranty_period_secs, eosio::asset membership_fee_amount, eosio::asset cancellation_fee_amount, <a class="el" href="structdocument2.html">document2</a> convert_in, eosio::name delivery_type, eosio::name contribution_type, std::string meta)</td></tr>
+<tr class="memdesc:a818614bb41776164c4ab9c35e9ebaa2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать заявку orderoffer — заказчик создаёт заявку на поставку товара.  <a href="classmarketplace.html#a818614bb41776164c4ab9c35e9ebaa2b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a818614bb41776164c4ab9c35e9ebaa2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a41a8b8d31d4bd48d0d18a74f16ccbd4f">accept</a> (eosio::name coopname, eosio::name supplier_braname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> convert_out, <a class="el" href="structdocument2.html">document2</a> return_document)</td></tr>
 <tr class="memdesc:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение готовности выполнить заявку.  <a href="classmarketplace.html#a41a8b8d31d4bd48d0d18a74f16ccbd4f">Подробнее...</a><br /></td></tr>
 <tr class="separator:a41a8b8d31d4bd48d0d18a74f16ccbd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 <tr class="memdesc:a234ce76e8cc85271378ac87fb67f8c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация заявления на имущественный паевой взнос советом кооператива.  <a href="classmarketplace.html#a234ce76e8cc85271378ac87fb67f8c2d">Подробнее...</a><br /></td></tr>
 <tr class="separator:a234ce76e8cc85271378ac87fb67f8c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ab7ccf66cd8ebacf82dda6afc37ded77c">authreturn</a> (eosio::name coopname, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
-<tr class="memdesc:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация заявления на возврат имущества советом кооператива.  <a href="classmarketplace.html#ab7ccf66cd8ebacf82dda6afc37ded77c">Подробнее...</a><br /></td></tr>
+<tr class="memdesc:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизация заявления на возврат паевого взноса имуществом.  <a href="classmarketplace.html#ab7ccf66cd8ebacf82dda6afc37ded77c">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab7ccf66cd8ebacf82dda6afc37ded77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59224c663e25a6829babaf1749379007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a59224c663e25a6829babaf1749379007">declineacc</a> (eosio::name coopname, checksum256 hash, std::string reason)</td></tr>
 <tr class="memdesc:a59224c663e25a6829babaf1749379007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение принятия заявки советом (declineacc).  <a href="classmarketplace.html#a59224c663e25a6829babaf1749379007">Подробнее...</a><br /></td></tr>
@@ -205,6 +205,21 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 <tr class="memitem:ae70c37b845bb813013e75a569c9a1492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ae70c37b845bb813013e75a569c9a1492">retransport</a> (eosio::name coopname, checksum256 completed_hash, eosio::name new_driver_username, eosio::name source_braname, eosio::name new_destination_braname, std::vector&lt; checksum256 &gt; request_hashes, <a class="el" href="structdocument2.html">document2</a> transport_act_sender)</td></tr>
 <tr class="memdesc:ae70c37b845bb813013e75a569c9a1492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Промежуточная передача товаров между складами.  <a href="classmarketplace.html#ae70c37b845bb813013e75a569c9a1492">Подробнее...</a><br /></td></tr>
 <tr class="separator:ae70c37b845bb813013e75a569c9a1492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacbab9103b6a768152f6aeb825b9d38f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aacbab9103b6a768152f6aeb825b9d38f">createorder</a> (eosio::name coopname, eosio::name receiver_braname, eosio::name username, checksum256 hash, uint64_t units, eosio::asset unit_cost, uint32_t product_lifecycle_secs, uint32_t warranty_period_secs, eosio::asset membership_fee_amount, eosio::asset cancellation_fee_amount, <a class="el" href="structdocument2.html">document2</a> convert_in, eosio::name delivery_type, std::string meta)</td></tr>
+<tr class="memdesc:aacbab9103b6a768152f6aeb825b9d38f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать заказ — заказчик публикует запрос «поставьте мне».  <a href="classmarketplace.html#aacbab9103b6a768152f6aeb825b9d38f">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacbab9103b6a768152f6aeb825b9d38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810c60fa2e1ae010245a23e5f2fbdcc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a810c60fa2e1ae010245a23e5f2fbdcc4">respondoffer</a> (eosio::name coopname, eosio::name supplier_braname, eosio::name username, checksum256 order_hash, checksum256 offer_hash, uint64_t units, uint32_t product_lifecycle_secs, <a class="el" href="structdocument2.html">document2</a> contribution_statement, <a class="el" href="structdocument2.html">document2</a> convert_out)</td></tr>
+<tr class="memdesc:a810c60fa2e1ae010245a23e5f2fbdcc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставщик откликается на заказ встречным предложением.  <a href="classmarketplace.html#a810c60fa2e1ae010245a23e5f2fbdcc4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a810c60fa2e1ae010245a23e5f2fbdcc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837d6b70beca26dfe2a697c24ce93ccc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a837d6b70beca26dfe2a697c24ce93ccc">coopstock</a> (eosio::name coopname, eosio::name braname, checksum256 hash, uint64_t units, eosio::asset unit_cost, uint32_t product_lifecycle_secs, uint32_t warranty_period_secs, eosio::asset membership_fee_amount, std::string meta)</td></tr>
+<tr class="memdesc:a837d6b70beca26dfe2a697c24ce93ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создать заявку на имущество из запасов кооператива.  <a href="classmarketplace.html#a837d6b70beca26dfe2a697c24ce93ccc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a837d6b70beca26dfe2a697c24ce93ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae669065c43a0b252b42a3d652d1d96cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ae669065c43a0b252b42a3d652d1d96cd">acceptstock</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> convert_in, <a class="el" href="structdocument2.html">document2</a> return_statement)</td></tr>
+<tr class="memdesc:ae669065c43a0b252b42a3d652d1d96cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заказчик принимает предложение из запасов кооператива.  <a href="classmarketplace.html#ae669065c43a0b252b42a3d652d1d96cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae669065c43a0b252b42a3d652d1d96cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec1a8fb7c8fe9ddcb94f754eb1795b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a6ec1a8fb7c8fe9ddcb94f754eb1795b4">reqreturn</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> return_statement)</td></tr>
+<tr class="memdesc:a6ec1a8fb7c8fe9ddcb94f754eb1795b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрос на возврат паевого взноса имуществом — перед получением.  <a href="classmarketplace.html#a6ec1a8fb7c8fe9ddcb94f754eb1795b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6ec1a8fb7c8fe9ddcb94f754eb1795b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3044eb189b1019f7602524f3cd88bfc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a3044eb189b1019f7602524f3cd88bfc6">delivered</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
 <tr class="memdesc:a3044eb189b1019f7602524f3cd88bfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод заявки в статус готово к выдаче.  <a href="classmarketplace.html#a3044eb189b1019f7602524f3cd88bfc6">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3044eb189b1019f7602524f3cd88bfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,6 +238,12 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 <tr class="memitem:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ad3da724e8d1ddcdb6bc07a05a42c2aa5">cancel</a> (eosio::name coopname, eosio::name username, checksum256 request_hash)</td></tr>
 <tr class="memdesc:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена заявки и возврат токенов.  <a href="classmarketplace.html#ad3da724e8d1ddcdb6bc07a05a42c2aa5">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad3da724e8d1ddcdb6bc07a05a42c2aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a778517422dce8430e5f5c972f6c3e8e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a778517422dce8430e5f5c972f6c3e8e2">destroy</a> (eosio::name coopname, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> destruction_act)</td></tr>
+<tr class="memdesc:a778517422dce8430e5f5c972f6c3e8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уничтожение просроченного имущества.  <a href="classmarketplace.html#a778517422dce8430e5f5c972f6c3e8e2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a778517422dce8430e5f5c972f6c3e8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb89a82a9ab50fe3f80dfa8fdc3c95dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#afb89a82a9ab50fe3f80dfa8fdc3c95dc">reoffer</a> (eosio::name coopname, checksum256 request_hash, checksum256 new_hash, eosio::asset new_unit_cost, std::string new_meta)</td></tr>
+<tr class="memdesc:afb89a82a9ab50fe3f80dfa8fdc3c95dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перепредложение непринятого имущества по пути coopstock.  <a href="classmarketplace.html#afb89a82a9ab50fe3f80dfa8fdc3c95dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:afb89a82a9ab50fe3f80dfa8fdc3c95dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a333bf818338573c2d92e988b561e4b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a333bf818338573c2d92e988b561e4b14">dispute</a> (eosio::name coopname, eosio::name username, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:a333bf818338573c2d92e988b561e4b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие гарантийного спора по заявке.  <a href="classmarketplace.html#a333bf818338573c2d92e988b561e4b14">Подробнее...</a><br /></td></tr>
 <tr class="separator:a333bf818338573c2d92e988b561e4b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -377,15 +398,75 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>username</code> </dd></dl>
-<p>Поставщик принимает заявку orderoffer на поставку имущества и предоставляет необходимые документы.</p>
+<p>Поставщик принимает заявку orderoffer на поставку имущества. При принятии создаётся ОДНО заявление в совет — на имущественный паевой взнос. Заявление на возврат будет создано позже, перед получением имущества заказчиком.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
     <tr><td class="paramname">supplier_braname</td><td>Имя кооперативного участка поставщика </td></tr>
     <tr><td class="paramname">username</td><td>Имя поставщика </td></tr>
     <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
-    <tr><td class="paramname">convert_out</td><td>Заявление на конвертацию </td></tr>
+    <tr><td class="paramname">convert_out</td><td>Заявление на конвертацию в кошелек (сохраняется для будущего использования) </td></tr>
     <tr><td class="paramname">product_contribution_statement</td><td>Заявление на имущественный паевой взнос</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ae669065c43a0b252b42a3d652d1d96cd" name="ae669065c43a0b252b42a3d652d1d96cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae669065c43a0b252b42a3d652d1d96cd">&#9670;&nbsp;</a></span>acceptstock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::acceptstock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>return_statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заказчик принимает предложение из запасов кооператива. </p>
+<p >Заказчик блокирует средства и запрашивает возврат. Поскольку имущество уже на балансе — авторизация взноса не нужна, сразу создаётся заявление на возврат в совет.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">convert_in</td><td>Заявление на конвертацию из кошелька </td></tr>
+    <tr><td class="paramname">return_statement</td><td>Заявление на возврат паевого взноса имуществом</td></tr>
   </table>
   </dd>
 </dl>
@@ -506,7 +587,7 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Авторизация заявления на имущественный паевой взнос советом кооператива. </p>
-<p >Совет кооператива авторизует заявление на имущественный паевой взнос.</p>
+<p >Совет авторизует заявление поставщика на взнос имуществом. После авторизации заявка переходит в статус authorized — поставщик может начинать поставку. Заявление на возврат будет подано и авторизовано отдельно, перед выдачей заказчику.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
@@ -551,8 +632,8 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
       </table>
 </div><div class="memdoc">
 
-<p>Авторизация заявления на возврат имущества советом кооператива. </p>
-<p >Совет кооператива авторизует заявление на возврат имущества.</p>
+<p>Авторизация заявления на возврат паевого взноса имуществом. </p>
+<p >Совет авторизует заявление заказчика на возврат паевого взноса. Вызывается ПОСЛЕ подачи заявления заказчиком (requestreturn), когда имущество уже доставлено на КУ и готово к выдаче.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
@@ -716,6 +797,216 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a837d6b70beca26dfe2a697c24ce93ccc" name="a837d6b70beca26dfe2a697c24ce93ccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837d6b70beca26dfe2a697c24ce93ccc">&#9670;&nbsp;</a></span>coopstock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::coopstock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>units</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>unit_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>product_lifecycle_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>warranty_period_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>membership_fee_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создать заявку на имущество из запасов кооператива. </p>
+<p >Кооператив (представитель КУ) создаёт предложение на имущество, которое УЖЕ находится на балансе кооператива. В этом случае:</p><ul>
+<li>Не требуется внешний поставщик</li>
+<li>Не требуется взнос имуществом (имущество уже на балансе)</li>
+<li>Не требуется авторизация взноса советом</li>
+<li>Требуется только авторизация возврата при получении заказчиком</li>
+</ul>
+<p >Заявка создаётся со статусом supplied2 (имущество уже на складе КУ). Это упрощённый путь для реализации уценённого или перепредложенного имущества.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>КУ, где хранится имущество </td></tr>
+    <tr><td class="paramname">units</td><td>Количество единиц </td></tr>
+    <tr><td class="paramname">unit_cost</td><td>Стоимость за единицу (может быть уценённой) </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">product_lifecycle_secs</td><td>Срок годности </td></tr>
+    <tr><td class="paramname">warranty_period_secs</td><td>Гарантийный срок </td></tr>
+    <tr><td class="paramname">membership_fee_amount</td><td>Членский взнос </td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные (описание, фото)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="aacbab9103b6a768152f6aeb825b9d38f" name="aacbab9103b6a768152f6aeb825b9d38f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacbab9103b6a768152f6aeb825b9d38f">&#9670;&nbsp;</a></span>createorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::createorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>units</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>unit_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>product_lifecycle_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>warranty_period_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>membership_fee_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>cancellation_fee_amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>delivery_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создать заказ — заказчик публикует запрос «поставьте мне». </p>
+<p >Заказчик создаёт заказ типа order с указанием желаемого количества, стоимости, характеристик. Средства блокируются сразу. Поставщики могут откликнуться встречными предложениями (offer).</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">receiver_braname</td><td>КУ заказчика </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш заказа </td></tr>
+    <tr><td class="paramname">units</td><td>Желаемое количество </td></tr>
+    <tr><td class="paramname">unit_cost</td><td>Предлагаемая цена за единицу </td></tr>
+    <tr><td class="paramname">product_lifecycle_secs</td><td>Желаемый срок годности </td></tr>
+    <tr><td class="paramname">warranty_period_secs</td><td>Желаемый гарантийный срок </td></tr>
+    <tr><td class="paramname">membership_fee_amount</td><td>Членский взнос </td></tr>
+    <tr><td class="paramname">cancellation_fee_amount</td><td>Штраф за отмену </td></tr>
+    <tr><td class="paramname">convert_in</td><td>Заявление на конвертацию </td></tr>
+    <tr><td class="paramname">delivery_type</td><td>Тип доставки: "internal" или "external" </td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> </dd></dl>
 
 </div>
 </div>
@@ -992,6 +1283,57 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 
 </div>
 </div>
+<a id="a778517422dce8430e5f5c972f6c3e8e2" name="a778517422dce8430e5f5c972f6c3e8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778517422dce8430e5f5c972f6c3e8e2">&#9670;&nbsp;</a></span>destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::destroy </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>destruction_act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Уничтожение просроченного имущества. </p>
+<p >Если имущество не получено заказчиком в срок (deadline_for_receipt) и его срок годности истёк, кооператив может уничтожить его. Требуется комиссионный акт и видео/фото подтверждение.</p>
+<p >При уничтожении:</p><ul>
+<li>Заблокированные средства заказчика разблокируются за вычетом cancellation_fee</li>
+<li>cancellation_fee зачисляется в фонд членских взносов</li>
+<li>Из фонда членских взносов поставщику выплачивается стоимость</li>
+</ul>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">destruction_act</td><td>Акт уничтожения имущества (с комиссией)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
 <a id="a333bf818338573c2d92e988b561e4b14" name="a333bf818338573c2d92e988b561e4b14"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a333bf818338573c2d92e988b561e4b14">&#9670;&nbsp;</a></span>dispute()</h2>
 
@@ -1062,8 +1404,8 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 
 </div>
 </div>
-<a id="aafc49bca6b4288da5d71f9bb748053bf" name="aafc49bca6b4288da5d71f9bb748053bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafc49bca6b4288da5d71f9bb748053bf">&#9670;&nbsp;</a></span>orderoffer()</h2>
+<a id="a818614bb41776164c4ab9c35e9ebaa2b" name="a818614bb41776164c4ab9c35e9ebaa2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a818614bb41776164c4ab9c35e9ebaa2b">&#9670;&nbsp;</a></span>orderoffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1132,13 +1474,19 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>product_return_statement</em>, </td>
+          <td class="paramname"><em>convert_in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>convert_in</em>, </td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>delivery_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>contribution_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1154,23 +1502,22 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
       </table>
 </div><div class="memdoc">
 
-<p>Создать заявку orderoffer - заказчик создает заявку на поставку товара от поставщика. </p>
-<p >Данный метод позволяет заказчику создать заявку на поставку товара от поставщика. Заявка содержит всю информацию о товаре, стоимости, документах и сразу блокирует средства заказчика.</p>
+<p>Создать заявку orderoffer — заказчик создаёт заявку на поставку товара. </p>
+<p >Заказчик создаёт заявку на поставку. Средства блокируются сразу. Заявление на возврат НЕ подаётся на этом этапе — оно будет подано перед получением (requestreturn), когда известен точный вес/состав имущества.</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">receiver_braname</td><td>Имя кооперативного участка заказчика для получения товара </td></tr>
+    <tr><td class="paramname">receiver_braname</td><td>КУ заказчика для получения товара </td></tr>
     <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
-    <tr><td class="paramname">hash</td><td>Хэш заявки (уникальный идентификатор) </td></tr>
+    <tr><td class="paramname">hash</td><td>Хэш заявки </td></tr>
     <tr><td class="paramname">units</td><td>Количество единиц товара </td></tr>
-    <tr><td class="paramname">unit_cost</td><td>Цена за единицу товара </td></tr>
-    <tr><td class="paramname">product_lifecycle_secs</td><td>Время жизни продукта </td></tr>
-    <tr><td class="paramname">warranty_period_secs</td><td>Гарантийный срок в секундах </td></tr>
-    <tr><td class="paramname">membership_fee_amount</td><td>Сумма членского взноса </td></tr>
-    <tr><td class="paramname">cancellation_fee_amount</td><td>Сумма комиссии за отмену заявки </td></tr>
-    <tr><td class="paramname">product_return_statement</td><td>Заявление на возврат паевого взноса имуществом </td></tr>
+    <tr><td class="paramname">unit_cost</td><td>Цена за единицу </td></tr>
+    <tr><td class="paramname">product_lifecycle_secs</td><td>Срок годности продукта </td></tr>
+    <tr><td class="paramname">warranty_period_secs</td><td>Гарантийный срок </td></tr>
+    <tr><td class="paramname">membership_fee_amount</td><td>Членский взнос </td></tr>
+    <tr><td class="paramname">cancellation_fee_amount</td><td>Штраф за отмену </td></tr>
     <tr><td class="paramname">convert_in</td><td>Заявление на конвертацию из кошелька в маркетплейс </td></tr>
-    <tr><td class="paramname">meta</td><td>Метаданные о заявке</td></tr>
+    <tr><td class="paramname">meta</td><td>Метаданные</td></tr>
   </table>
   </dd>
 </dl>
@@ -1217,13 +1564,13 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 </div><div class="memdoc">
 
 <p>Получение товара заказчиком. </p>
-<p >Заказчик приходит на КУ для получения имущества. Председатель КУ подписывает акт и передаёт имущество заказчику.</p>
+<p >Заказчик приходит на КУ для получения имущества. Председатель КУ подписывает акт и передаёт имущество заказчику. Получение возможно ТОЛЬКО после авторизации возврата советом (статус retauthorized).</p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
-    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика (председатель КУ подписывает от лица кооператива) </td></tr>
     <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
-    <tr><td class="paramname">document</td><td>Акт получения имущества</td></tr>
+    <tr><td class="paramname">document</td><td>Акт получения имущества (подпись председателя КУ)</td></tr>
   </table>
   </dd>
 </dl>
@@ -1327,6 +1674,209 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
   </dd>
 </dl>
 <dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="afb89a82a9ab50fe3f80dfa8fdc3c95dc" name="afb89a82a9ab50fe3f80dfa8fdc3c95dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb89a82a9ab50fe3f80dfa8fdc3c95dc">&#9670;&nbsp;</a></span>reoffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::reoffer </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>new_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>new_unit_cost</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>new_meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перепредложение непринятого имущества по пути coopstock. </p>
+<p >Если заказчик не получил имущество в срок, но срок годности ещё не истёк, председатель КУ может перепредложить его другим пайщикам. Это создаёт новую заявку типа coopstock на основе текущей, с возможностью изменения цены.</p>
+<p >Текущая заявка закрывается (средства возвращаются заказчику за вычетом штрафа), создаётся новая заявка coopstock.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш текущей заявки </td></tr>
+    <tr><td class="paramname">new_hash</td><td>Хэш новой заявки </td></tr>
+    <tr><td class="paramname">new_unit_cost</td><td>Новая цена за единицу (может быть уценена) </td></tr>
+    <tr><td class="paramname">new_meta</td><td>Новые метаданные</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a6ec1a8fb7c8fe9ddcb94f754eb1795b4" name="a6ec1a8fb7c8fe9ddcb94f754eb1795b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec1a8fb7c8fe9ddcb94f754eb1795b4">&#9670;&nbsp;</a></span>reqreturn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::reqreturn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>return_statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрос на возврат паевого взноса имуществом — перед получением. </p>
+<p >Заказчик подаёт заявление на возврат паевого взноса имуществом. Вызывается когда имущество доставлено на КУ получателя (статус delivered). Председатель КУ фиксирует факт выдачи и точные параметры имущества (вес, количество).</p>
+<p >Создаёт пункт повестки для совета на авторизацию возврата.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Имя заказчика </td></tr>
+    <tr><td class="paramname">request_hash</td><td>Хэш заявки </td></tr>
+    <tr><td class="paramname">return_statement</td><td>Заявление на возврат паевого взноса (обновлённое, с точным весом)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="a810c60fa2e1ae010245a23e5f2fbdcc4" name="a810c60fa2e1ae010245a23e5f2fbdcc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810c60fa2e1ae010245a23e5f2fbdcc4">&#9670;&nbsp;</a></span>respondoffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::respondoffer </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>supplier_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>offer_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>units</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>product_lifecycle_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>contribution_statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поставщик откликается на заказ встречным предложением. </p>
+<p >Поставщик видит заказ и предлагает поставку. Создаёт встречную заявку типа offer, привязанную к order. Заявление на взнос имуществом отправляется в совет.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Имя кооператива </td></tr>
+    <tr><td class="paramname">supplier_braname</td><td>КУ поставщика </td></tr>
+    <tr><td class="paramname">username</td><td>Имя поставщика </td></tr>
+    <tr><td class="paramname">order_hash</td><td>Хэш заказа </td></tr>
+    <tr><td class="paramname">offer_hash</td><td>Хэш предложения </td></tr>
+    <tr><td class="paramname">units</td><td>Количество предлагаемых единиц </td></tr>
+    <tr><td class="paramname">product_lifecycle_secs</td><td>Срок годности от поставщика </td></tr>
+    <tr><td class="paramname">contribution_statement</td><td>Заявление на взнос имуществом </td></tr>
+    <tr><td class="paramname">convert_out</td><td>Заявление на конвертацию</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация: <code>coopname</code> </dd></dl>
 
 </div>
 </div>
@@ -1797,18 +2347,25 @@ $(document).ready(function(){initNavTree('classmarketplace.html',''); initResiza
 <li>cpp/marketplace/src/<a class="el" href="marketplace_2src_2complete_8cpp.html">complete.cpp</a></li>
 <li>cpp/marketplace/src/<a class="el" href="marketplace_2src_2decline_8cpp.html">decline.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2accept_8cpp.html">accept.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="acceptstock_8cpp.html">acceptstock.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="authcontrib_8cpp.html">authcontrib.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="authreturn_8cpp.html">authreturn.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2cancel_8cpp.html">cancel.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="marketplace_2src_2deliver__on__offer_2complete_8cpp.html">complete.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="coopstock_8cpp.html">coopstock.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="marketplace_2src_2deliver__on__offer_2decline_8cpp.html">decline.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="declineacc_8cpp.html">declineacc.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2delivered_8cpp.html">delivered.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="destroy_8cpp.html">destroy.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="orderoffer_8cpp.html">orderoffer.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="receive_8cpp.html">receive.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="receivecnf_8cpp.html">receivecnf.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="reoffer_8cpp.html">reoffer.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="reqreturn_8cpp.html">reqreturn.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="supplcnf_8cpp.html">supplcnf.cpp</a></li>
 <li>cpp/marketplace/src/deliver_on_offer/<a class="el" href="deliver__on__offer_2supply_8cpp.html">supply.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_order/<a class="el" href="createorder_8cpp.html">createorder.cpp</a></li>
+<li>cpp/marketplace/src/deliver_on_order/<a class="el" href="respondoffer_8cpp.html">respondoffer.cpp</a></li>
 <li>cpp/marketplace/src/<a class="el" href="delivered_8cpp.html">delivered.cpp</a></li>
 <li>cpp/marketplace/src/<a class="el" href="dispute_8cpp.html">dispute.cpp</a></li>
 <li>cpp/marketplace/src/dispute_on_offer/<a class="el" href="dispute__on__offer_2dispute_8cpp.html">dispute.cpp</a></li>

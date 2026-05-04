@@ -5,5 +5,6 @@ var namespace_document =
     [ "find_document", "namespace_document.html#adc75b53570b08e7eb3bd2b4dc718b4a3", null ],
     [ "has_document", "namespace_document.html#a110240016fd00fc973bac7429e4a406c", null ],
     [ "is_document_empty", "namespace_document.html#aaa17ab922f4b1aae3294b18bc70bee97", null ],
+    [ "remove_document", "namespace_document.html#a69f5e91b4f0ba8b2e474cbac9f858131", null ],
     [ "validate_registry_id", "namespace_document.html#acab14216599db1fcb9fe3c0ac764f56e", null ]
 ];

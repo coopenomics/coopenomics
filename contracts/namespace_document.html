@@ -164,6 +164,9 @@ $(document).ready(function(){initNavTree('namespace_document.html',''); initResi
 <tr class="memitem:aaa17ab922f4b1aae3294b18bc70bee97"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_document.html#aaa17ab922f4b1aae3294b18bc70bee97">is_document_empty</a> (const <a class="el" href="structdocument2.html">document2</a> &amp;<a class="el" href="structdocument.html">document</a>)</td></tr>
 <tr class="memdesc:aaa17ab922f4b1aae3294b18bc70bee97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, является ли документ пустым по хэшу  <a href="namespace_document.html#aaa17ab922f4b1aae3294b18bc70bee97">Подробнее...</a><br /></td></tr>
 <tr class="separator:aaa17ab922f4b1aae3294b18bc70bee97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f5e91b4f0ba8b2e474cbac9f858131"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_document.html#a69f5e91b4f0ba8b2e474cbac9f858131">remove_document</a> (std::vector&lt; <a class="el" href="struct_document_1_1named__document.html">named_document</a> &gt; &amp;docs, const name &amp;name)</td></tr>
+<tr class="memdesc:a69f5e91b4f0ba8b2e474cbac9f858131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удалить документ по имени из вектора  <a href="namespace_document.html#a69f5e91b4f0ba8b2e474cbac9f858131">Подробнее...</a><br /></td></tr>
+<tr class="separator:a69f5e91b4f0ba8b2e474cbac9f858131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Функции</h2>
 <a id="a11a30750aad2714572a68661627f6a26" name="a11a30750aad2714572a68661627f6a26"></a>
@@ -349,6 +352,52 @@ $(document).ready(function(){initNavTree('namespace_document.html',''); initResi
   </dd>
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true если документ пустой (хэш равен empty_hash) </dd></dl>
+
+</div>
+</div>
+<a id="a69f5e91b4f0ba8b2e474cbac9f858131" name="a69f5e91b4f0ba8b2e474cbac9f858131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f5e91b4f0ba8b2e474cbac9f858131">&#9670;&nbsp;</a></span>remove_document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Document::remove_document </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_document_1_1named__document.html">named_document</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>docs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const name &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удалить документ по имени из вектора </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">docs</td><td>Вектор документов </td></tr>
+    <tr><td class="paramname">name</td><td>Имя документа для удаления </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true если документ был найден и удалён </dd></dl>
 
 </div>
 </div>

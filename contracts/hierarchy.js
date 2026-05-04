@@ -6,6 +6,7 @@ var hierarchy =
     [ "accfund", "structaccfund.html", null ],
     [ "account", "structaccount.html", null ],
     [ "eosio::token::account", "structeosio_1_1token_1_1account.html", null ],
+    [ "account2", "structaccount2.html", null ],
     [ "powerup_tester::account_info", "structpowerup__tester_1_1account__info.html", null ],
     [ "Ledger::accounts", "struct_ledger_1_1accounts.html", null ],
     [ "address", "structaddress.html", null ],
@@ -63,7 +64,7 @@ var hierarchy =
       [ "fund", "classfund.html", null ],
       [ "gateway", "classgateway.html", null ],
       [ "ledger", "classledger.html", null ],
-      [ "ledger", "classledger.html", null ],
+      [ "ledger2", "classledger2.html", null ],
       [ "loan", "classloan.html", null ],
       [ "marketplace", "classmarketplace.html", null ],
       [ "meet", "classmeet.html", null ],
@@ -124,6 +125,13 @@ var hierarchy =
     [ "eosiosystem::block_info::latest_block_batch_info_result", "structeosiosystem_1_1block__info_1_1latest__block__batch__info__result.html", null ],
     [ "system_contracts::testing::test_contracts::blockinfo_tester::latest_block_batch_info_result", "structsystem__contracts_1_1testing_1_1test__contracts_1_1blockinfo__tester_1_1latest__block__batch__info__result.html", null ],
     [ "Ledger", "class_ledger.html", null ],
+    [ "Ledger2", "class_ledger2.html", null ],
+    [ "ledger2_accounts", "structledger2__accounts.html", null ],
+    [ "ledger2_meta", "structledger2__meta.html", null ],
+    [ "ledger2_wallets", "structledger2__wallets.html", null ],
+    [ "Ledger2AccountMeta", "struct_ledger2_account_meta.html", null ],
+    [ "Ledger2WalletMeta", "struct_ledger2_wallet_meta.html", null ],
+    [ "anonymous_namespace{migrate.cpp}::LegacyBalances", "structanonymous__namespace_02migrate_8cpp_03_1_1_legacy_balances.html", null ],
     [ "eosiosystem::limit_auth_change", "structeosiosystem_1_1limit__auth__change.html", null ],
     [ "Meet::meet", "struct_meet_1_1meet.html", null ],
     [ "meet_point", "structmeet__point.html", null ],
@@ -131,6 +139,8 @@ var hierarchy =
     [ "Document::named_document", "struct_document_1_1named__document.html", null ],
     [ "eosio::multisig::old_approvals_info", "structeosio_1_1multisig_1_1old__approvals__info.html", null ],
     [ "onedraft", "structonedraft.html", null ],
+    [ "OperationAdjustmentEntry", "struct_operation_adjustment_entry.html", null ],
+    [ "OperationRegistryEntry", "struct_operation_registry_entry.html", null ],
     [ "org_data", "structorg__data.html", null ],
     [ "Gateway::outcome", "struct_gateway_1_1outcome.html", null ],
     [ "Apps::package", "struct_apps_1_1package.html", null ],
@@ -173,6 +183,11 @@ var hierarchy =
     [ "staff", "structstaff.html", null ],
     [ "Apps::sub", "struct_apps_1_1sub.html", null ],
     [ "Loan::summary", "struct_loan_1_1summary.html", null ],
+    [ "tester", null, [
+      [ "eosio_msig_tester", "classeosio__msig__tester.html", null ],
+      [ "eosio_token_tester", "classeosio__token__tester.html", null ],
+      [ "eosio_wrap_tester", "classeosio__wrap__tester.html", null ]
+    ] ],
     [ "TESTER", null, [
       [ "eosio_system::eosio_system_tester", "classeosio__system_1_1eosio__system__tester.html", [
         [ "coopenomics_tester", "classcoopenomics__tester.html", [
@@ -180,11 +195,6 @@ var hierarchy =
         ] ],
         [ "limitauth_tester", "structlimitauth__tester.html", null ]
       ] ]
-    ] ],
-    [ "tester", null, [
-      [ "eosio_msig_tester", "classeosio__msig__tester.html", null ],
-      [ "eosio_token_tester", "classeosio__token__tester.html", null ],
-      [ "eosio_wrap_tester", "classeosio__wrap__tester.html", null ]
     ] ],
     [ "test::testrecord", "structtest_1_1testrecord.html", null ],
     [ "translation", "structtranslation.html", null ],
@@ -201,6 +211,7 @@ var hierarchy =
     [ "eosiosystem::wait_weight", "structeosiosystem_1_1wait__weight.html", null ],
     [ "wait_weight", "structwait__weight.html", null ],
     [ "Wallet", "class_wallet.html", null ],
+    [ "wallet2", "structwallet2.html", null ],
     [ "WalletTables::withdraw", "struct_wallet_tables_1_1withdraw.html", null ],
     [ "contributor::withdrawal_request", "structcontributor_1_1withdrawal__request.html", null ],
     [ "writeoff_op", "structwriteoff__op.html", null ]

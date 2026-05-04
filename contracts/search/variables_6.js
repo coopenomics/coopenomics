@@ -2,7 +2,7 @@ var searchData=
 [
   ['fact_0',['fact',['../struct_capital_1_1project.html#a2a006258ec8b0b532bf356c5f35a1448',1,'Capital::project']]],
   ['finalized_1',['FINALIZED',['../namespace_capital_1_1_projects_1_1_status.html#aceb836476b2e7e5f8b059fa650af9033',1,'Capital::Projects::Status']]],
-  ['financial_5finvestments_2',['FINANCIAL_INVESTMENTS',['../struct_ledger_1_1accounts.html#a73d253bf0f1649f938d42d43539371ee',1,'Ledger::accounts']]],
+  ['financial_5finvestments_2',['FINANCIAL_INVESTMENTS',['../struct_ledger_1_1accounts.html#a73d253bf0f1649f938d42d43539371ee',1,'Ledger::accounts::FINANCIAL_INVESTMENTS()'],['../structledger2__accounts.html#a081c6d53bb369650547abd7ea972b203',1,'ledger2_accounts::FINANCIAL_INVESTMENTS()']]],
   ['fixed_5fassets_3',['FIXED_ASSETS',['../struct_ledger_1_1accounts.html#a50d931f4dc7228acdc6b8352011d8788',1,'Ledger::accounts']]],
   ['fixed_5fmembership_5fcontribution_4',['fixed_membership_contribution',['../structprogram.html#a32ef71f31d28e722d42c752911c1cc4c',1,'program']]],
   ['flags1_5',['flags1',['../structeosiosystem_1_1voter__info.html#af77c6136a8d1300951ad6f39b3c28dc1',1,'eosiosystem::voter_info']]],

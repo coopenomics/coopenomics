@@ -161,9 +161,9 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 <tr class="memitem:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#ga45944614c3b8e67dab9ddb0f49ba0b2d">repairdec</a> (eosio::name coopname, uint64_t decision_id, eosio::name username, eosio::name type, uint64_t batch_id, <a class="el" href="structdocument2.html">document2</a> statement, std::vector&lt; eosio::name &gt; votes_for, std::vector&lt; eosio::name &gt; votes_against, bool validated, bool approved, bool authorized, eosio::name authorized_by, <a class="el" href="structdocument2.html">document2</a> authorization, eosio::time_point_sec created_at, eosio::time_point_sec expired_at, std::string meta, eosio::name callback_contract, eosio::name confirm_callback, eosio::name decline_callback, checksum256 hash)</td></tr>
 <tr class="memdesc:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Восстановление решения в таблице decisions Создает решение с заданными параметрами если его не существует  <a href="group__public__soviet__actions.html#ga45944614c3b8e67dab9ddb0f49ba0b2d">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga45944614c3b8e67dab9ddb0f49ba0b2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72a358500b6b36975f6722ae205b4deb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a72a358500b6b36975f6722ae205b4deb">converttoaxn</a> (eosio::name coopname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
-<tr class="memdesc:a72a358500b6b36975f6722ae205b4deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует RUB токены в AXON через инъекцию из фонда eosio.saving Требует подписи _provider. Конвертация происходит по курсу 10:1 (10 RUB = 1 AXON)  <a href="classsoviet.html#a72a358500b6b36975f6722ae205b4deb">Подробнее...</a><br /></td></tr>
-<tr class="separator:a72a358500b6b36975f6722ae205b4deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3e62bcb0ac81a6a98b02c9aa0f7ac7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsoviet.html#a2f3e62bcb0ac81a6a98b02c9aa0f7ac7">converttoaxn</a> (eosio::name coopname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement, checksum256 process_hash)</td></tr>
+<tr class="memdesc:a2f3e62bcb0ac81a6a98b02c9aa0f7ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертирует RUB токены в AXON через инъекцию из фонда eosio.saving Требует подписи _provider. Конвертация происходит по курсу 10:1 (10 RUB = 1 AXON)  <a href="classsoviet.html#a2f3e62bcb0ac81a6a98b02c9aa0f7ac7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2f3e62bcb0ac81a6a98b02c9aa0f7ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">createagenda</a> (<a class="el" href="lib_2core_2soviet_2soviet_8hpp.html#ad60091c12735c92b09cb8157f2585a6b">CREATEAGENDA_SIGNATURE</a>)</td></tr>
 <tr class="memdesc:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по различным вопросам кооператива. Инициирует процесс принятия решения с указанными параметрами и обратными вызовами.  <a href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaea9cdcb4feb799f9f982f1490e5f589d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -372,8 +372,8 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
 
 </div>
 </div>
-<a id="a72a358500b6b36975f6722ae205b4deb" name="a72a358500b6b36975f6722ae205b4deb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72a358500b6b36975f6722ae205b4deb">&#9670;&nbsp;</a></span>converttoaxn()</h2>
+<a id="a2f3e62bcb0ac81a6a98b02c9aa0f7ac7" name="a2f3e62bcb0ac81a6a98b02c9aa0f7ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f3e62bcb0ac81a6a98b02c9aa0f7ac7">&#9670;&nbsp;</a></span>converttoaxn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +394,13 @@ $(document).ready(function(){initNavTree('classsoviet.html',''); initResizable()
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
-          <td class="paramname"><em>statement</em>&#160;</td>
+          <td class="paramname"><em>statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>process_hash</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -14,7 +14,7 @@ var classsoviet =
     [ "cancelvote", "group__public__soviet__actions.html#ga826e017b52f0b323a3339da457ecfa43", null ],
     [ "confirmagree", "group__public__soviet__actions.html#gaaebb26700c3dca525c3884a04d299e21", null ],
     [ "confirmapprv", "group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101", null ],
-    [ "converttoaxn", "classsoviet.html#a72a358500b6b36975f6722ae205b4deb", null ],
+    [ "converttoaxn", "classsoviet.html#a2f3e62bcb0ac81a6a98b02c9aa0f7ac7", null ],
     [ "creaddress", "group__public__soviet__actions.html#gab6d338d7362d3874d44277ec3e3a0aa0", null ],
     [ "createagenda", "group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d", null ],
     [ "createapprv", "group__public__soviet__actions.html#ga6a98748faaedc6baab83f91faa45dd90", null ],
