@@ -18,7 +18,7 @@ jobs:
         run: |
           git clone https://github.com/coopenomics/mono.git mono-repo
           cd mono-repo
-          git checkout main
+          git checkout marketplace2
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
