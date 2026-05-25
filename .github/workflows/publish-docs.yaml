@@ -6,7 +6,20 @@ on:
       - master
   repository_dispatch:
     types: [deploy_from_mono]
-    
+  # Gitea не умеет repository_dispatch через API — mono дёргает пересборку
+  # через workflow_dispatch (см. mono/.github/workflows/release.yaml,
+  # job trigger-coopenomics-docs). Входы информативные, билд их не использует.
+  workflow_dispatch:
+    inputs:
+      mono_sha:
+        description: 'SHA коммита в mono, инициировавшего пересборку'
+        required: false
+        default: ''
+      mono_ref:
+        description: 'ref в mono (тег/ветка)'
+        required: false
+        default: ''
+
 jobs:
   build-and-publish-docs:
     runs-on: ubuntu-latest
