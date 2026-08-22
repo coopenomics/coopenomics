@@ -224,7 +224,13 @@ jobs:
       # ── разбудить сборку объединённого сайта docs.blago.coop ─────────────
       # Релиз mono дёргает именно этот workflow, поэтому цепочку продолжаем
       # отсюда — release.yaml в mono править не приходится.
+      #
+      # always(): docs.blago.coop не должен зависеть от того, собрался ли
+      # старый сайт. Он публикуется на GitHub Pages, куда домен больше не
+      # ведёт (docs.coopenomics.world редиректит на новый), и его падение —
+      # например на vue-tsc реестра стандартов — не повод пропускать релиз.
       - name: Trigger blago docs build
+        if: always()
         run: |
           curl -fsSL -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
