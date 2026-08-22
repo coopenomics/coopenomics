@@ -98,7 +98,10 @@ jobs:
           # без самого контроллера. Пакеты без скрипта build пропускаются.
           pnpm install --filter "@coopenomics/controller^..." --filter @coopenomics/controller
           pnpm --filter "@coopenomics/controller^..." run build
-          pnpm --filter @coopenomics/controller run generate-schema
+          # transpile-only: нам нужна схема, а не typecheck контроллера —
+          # иначе сборка документации падает на любой ошибке типов в его коде
+          # (ветка feat/marketplace-user-docs: TS18048 в marketplace-guard).
+          TS_NODE_TRANSPILE_ONLY=1 pnpm --filter @coopenomics/controller run generate-schema
 
       - name: Generate SDK documentation
         run: |
