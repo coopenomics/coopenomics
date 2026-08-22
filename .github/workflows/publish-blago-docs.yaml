@@ -75,15 +75,15 @@ jobs:
       - name: Install mono workspace packages
         run: |
           cd mono-repo
-          pnpm install --filter @coopenomics/cooptypes... \
+          pnpm install --filter cooptypes... \
                        --filter @coopenomics/controller... \
                        --filter @coopenomics/sdk...
 
       - name: Generate cooptypes docs
         run: |
           cd mono-repo
-          pnpm --filter @coopenomics/cooptypes run build
-          pnpm --filter @coopenomics/cooptypes run docs
+          pnpm --filter cooptypes run build
+          pnpm --filter cooptypes run docs
 
       # SDK-доки собираются из schema.gql: generate-index-comments вычитывает
       # оттуда описания методов. Схема не коммитится, поэтому генерируем её
@@ -152,8 +152,12 @@ jobs:
       - name: Copy contracts and cooptypes docs
         run: |
           mkdir -p docs/contracts docs/cooptypes
-          cp -r mono-repo/components/contracts/docs/html/* docs/contracts/
-          cp -r mono-repo/components/cooptypes/docs/* docs/cooptypes/
+          cp -r mono-repo/components/contracts/docs/html/. docs/contracts/
+          if [ -d mono-repo/components/cooptypes/docs ]; then
+            cp -r mono-repo/components/cooptypes/docs/. docs/cooptypes/
+          else
+            echo "⚠ доки cooptypes не собрались — справочник поедет пустым"
+          fi
 
       - name: Build standards-site
         run: |
