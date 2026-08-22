@@ -76,10 +76,13 @@ jobs:
           # без самого контроллера. Пакеты без скрипта build пропускаются.
           pnpm install --filter "@coopenomics/controller^..." --filter @coopenomics/controller
           pnpm --filter "@coopenomics/controller^..." run build
-          # transpile-only: нам нужна схема, а не typecheck контроллера —
-          # иначе сборка документации падает на любой ошибке типов в его коде
-          # (ветка feat/marketplace-user-docs: TS18048 в marketplace-guard).
-          TS_NODE_TRANSPILE_ONLY=1 pnpm --filter @coopenomics/controller run generate-schema
+          # Компиляцию отключать нельзя: Nest строит схему по метаданным
+          # декораторов, а transpile-only их не эмитит — падает UndefinedTypeError
+          # на первом же @Field. Зато строгость снимаем: документации не дело
+          # спотыкаться о чужой typecheck (в feat/marketplace-user-docs это
+          # TS18048 в marketplace-membership.guard), за типами следит CI mono.
+          TS_NODE_COMPILER_OPTIONS='{"strict":false,"strictNullChecks":false,"noImplicitAny":false}' \
+            pnpm --filter @coopenomics/controller run generate-schema
 
       - name: Generate SDK documentation
         run: |
