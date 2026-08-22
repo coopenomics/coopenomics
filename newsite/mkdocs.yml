@@ -1,0 +1,125 @@
+# ============================================================================
+# Корневой конфиг объединённой документации docs.blago.coop
+#
+# Сайт склеивается из трёх источников через mkdocs-monorepo-plugin:
+#   parts/blockchain — репозиторий C9S/coopenomics (documentation/**)
+#   parts/platform   — mono/components/docs (ядро Цифрового кооператива)
+#   parts/apps       — mono/components/docs (Стол заказов, Благорост)
+#
+# Физически файлы никуда не переносятся: дерево build/ собирает скрипт
+# newsite/build.sh, он же тянет генерируемые справочники (sdk, graphql, cdt,
+# standards, contracts, cooptypes, api) в КОРЕНЬ сайта — там их ждут макросы,
+# которые отдают абсолютные пути вида /sdk/... и /graphql/...
+# ============================================================================
+
+site_name: Благономика
+site_url: https://docs.blago.coop
+copyright: ПК «ВОСХОД» &copy; 2026
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  logo: assets/logo-dark.svg
+  favicon: assets/logo-dark.svg
+  # Внешние шрифты отключены намеренно: Google Fonts из РФ отвечает через раз,
+  # и до его ответа текст рисуется подменным шрифтом — те самые полсекунды
+  # «жирных» заголовков при переходе между вкладками. Системный стек рисуется
+  # мгновенно, семейство задано в blago.css.
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white          # шапка белая: никакой заливки, только тонкая линия
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+  features:
+    - navigation.tabs           # четыре слоя — верхними вкладками
+    - navigation.tabs.sticky
+    - navigation.sections       # группы в левом меню видны сразу
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - toc.follow
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/git-alt
+    tag:
+      chairman: fontawesome/solid/user-tie
+      member: fontawesome/solid/users
+      user: fontawesome/solid/user
+      dev: fontawesome/solid/code
+
+extra_css:
+  - css/blago.css
+  - css/extra.css
+
+extra_javascript:
+  - js/metrika.js
+
+extra:
+  generator: false
+  tags:
+    Председатель: chairman
+    Член совета: member
+    Пайщик: user
+    Разработчик: dev
+
+plugins:
+  - search:
+      lang: ru
+  - macros
+  - section-index
+  - monorepo
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Главная: index.md
+  - Блокчейн: '!include ./parts/blockchain/mkdocs.yml'
+  - Платформа: '!include ./parts/platform/mkdocs.yml'
+  - Приложения: '!include ./parts/apps/mkdocs.yml'
+  - Справочники: reference.md

@@ -1,0 +1,74 @@
+# Слой «Платформа» — суб-документация docs.blago.coop.
+# Контент: mono/components/docs/docs/new/** (кроме marketplace и blagorost).
+# site_name задаёт префикс URL: /platform/...
+#
+# Плоские 18 разделов прежнего сайта сгруппированы по тому, ЧЬЯ это работа:
+# пайщик → кооператив → технологии, а слой «Разработчикам» вынесен в конец.
+site_name: platform
+nav:
+  - Обзор слоя: index.md
+
+  - Начало работы:
+    - Облачная поставка: connection/index.md
+    - Установка кооперативом: installation/chairman.md
+    - Дашборд подключения: connection/dashboard.md
+    - Лицензия: installation/index.md
+
+  - Пайщику:
+    - Вступление в кооператив:
+      - registration/index.md
+      - Вступить в пайщики: registration/join.md
+      - Принять пайщика: registration/accept.md
+    - Вход в систему: auth/signin.md
+    - Кошелёк:
+      - Обзор: participant/wallet.md
+      - Паевой взнос: participant/wallet-topup.md
+      - Возврат взноса: participant/wallet-refund.md
+    - Удостоверение: participant/profile.md
+    - Реквизиты: participant/requisites.md
+    - Документы: participant/documents.md
+    - Платежи: participant/payments.md
+    - Собрания: participant/meetings.md
+    - Контакты: participant/contacts.md
+
+  - Кооперативу:
+    - Стол совета:
+      - Повестка совета: council/agenda.md
+      - Реестр пайщиков: council/participants.md
+      - Реестр документов: council/documents.md
+      - Реестр платежей: council/payments.md
+      - Реестр собраний: council/meetings.md
+      - Реестр кошельков: council/wallets.md
+    - Стол председателя:
+      - Запросы одобрений: chairman/approval-requests.md
+      - Магазин приложений: chairman/app-store.md
+      - Стартовые страницы: chairman/start-pages.md
+      - Члены совета: chairman/board-members.md
+      - Кооперативные участки: chairman/cooperative-branches.md
+      - Регистрационные взносы: chairman/registration-fees.md
+      - Ключ кооператива: chairman/cooperative-key.md
+      - Контакты кооператива: chairman/cooperative-contacts.md
+    - Общие собрания: meet/index.md
+    - Бухгалтерия: buh/index.md
+
+  - Устройство платформы:
+    - Аккаунты: accounts/index.md
+    - Электронная подпись: signature/index.md
+    - Фабрика документов: factory/index.md
+    - Блокчейн: blockchain/index.md
+    - Смарт-контракты: contracts/index.md
+    - Навигатор: navigator/index.md
+    - Вычислительные ресурсы:
+      - Аренда квот ресурсов: resources/quotas.md
+      - Монитор ресурсов: resources/monitor.md
+      - Настройки аренды: resources/settings.md
+      - Лог ресурсов: resources/log.md
+
+  - Разработчикам:
+    - installation/dev.md
+    - Быстрый старт: installation/dev/quick-start.md
+    - Язык API: installation/dev/graphql.md
+    - SDK: installation/dev/sdk.md
+    - Аутентификация: installation/dev/auth.md
+    - Подробный старт: installation/dev/init.md
+    - Регистрация через API: registration/dev.md

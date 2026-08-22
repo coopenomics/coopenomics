@@ -1,2 +1,7 @@
 node_modules
 site
+
+# сборка объединённого сайта: дерево склейки, готовый сайт и чекаут mono
+build/
+site-preview/
+mono-repo
