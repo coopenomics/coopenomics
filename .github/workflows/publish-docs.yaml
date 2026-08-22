@@ -70,7 +70,12 @@ jobs:
       - name: Generate GraphQL schema
         run: |
           cd mono-repo
-          pnpm install --filter @coopenomics/controller...
+          # Контроллер импортирует workspace-пакеты из их dist (extension-kit,
+          # factory, innercoop, jurisdictions, notifications, sdk, cooptypes),
+          # поэтому сперва собираем зависимости — синтаксис ^... берёт именно их,
+          # без самого контроллера. Пакеты без скрипта build пропускаются.
+          pnpm install --filter "@coopenomics/controller^..." --filter @coopenomics/controller
+          pnpm --filter "@coopenomics/controller^..." run build
           pnpm --filter @coopenomics/controller run generate-schema
 
       - name: Generate SDK documentation
