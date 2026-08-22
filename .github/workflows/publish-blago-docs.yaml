@@ -12,6 +12,9 @@
 name: Publish Blago Docs
 
 on:
+  push:
+    branches:
+      - master
   workflow_dispatch:
     inputs:
       mono_ref:
@@ -25,9 +28,10 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      # До мержа PR #185 документация Стола заказов живёт в feat/marketplace-user-docs —
-      # запускать с этим значением вручную, пока ветка не уехала в main.
-      MONO_REF: ${{ github.event.inputs.mono_ref || 'main' }}
+      # Ветка mono, с которой берётся документация. Значение по умолчанию живёт
+      # в переменной репозитория MONO_DOCS_REF — чтобы после мержа PR #185
+      # переключиться на main правкой переменной, а не workflow.
+      MONO_REF: ${{ github.event.inputs.mono_ref || vars.MONO_DOCS_REF || 'main' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -66,15 +70,35 @@ jobs:
       - name: Generate contracts documentation (doxygen)
         run: cd mono-repo/components/contracts && doxygen
 
+      # Ставим только нужные пакеты вместе с их workspace-зависимостями:
+      # корневой install тянет ещё и desktop (quasar), который здесь не нужен.
+      - name: Install mono workspace packages
+        run: |
+          cd mono-repo
+          pnpm install --filter @coopenomics/cooptypes... \
+                       --filter @coopenomics/controller... \
+                       --filter @coopenomics/sdk...
+
       - name: Generate cooptypes docs
         run: |
-          cd mono-repo/components/cooptypes
-          pnpm install && pnpm run build && pnpm run docs
+          cd mono-repo
+          pnpm --filter @coopenomics/cooptypes run build
+          pnpm --filter @coopenomics/cooptypes run docs
+
+      # SDK-доки собираются из schema.gql: generate-index-comments вычитывает
+      # оттуда описания методов. Схема не коммитится, поэтому генерируем её
+      # здесь — скрипт code-first, без HTTP и без баз (CONTROLLER_SCHEMA_GEN=1).
+      # Без этого шага падает и сборка старого сайта — проверено на прогоне 1652.
+      - name: Generate GraphQL schema
+        run: |
+          cd mono-repo
+          pnpm --filter @coopenomics/controller run generate-schema
 
       - name: Generate SDK documentation
         run: |
-          cd mono-repo/components/sdk
-          pnpm install && pnpm run build && pnpm run docs
+          cd mono-repo
+          pnpm --filter @coopenomics/sdk run build
+          pnpm --filter @coopenomics/sdk run docs
 
       - name: Generate node API documentation
         run: |
