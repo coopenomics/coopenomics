@@ -77,6 +77,15 @@ jobs:
           pnpm run build
           pnpm run docs
 
+      # SDK-доки читают описания методов из schema.gql, а она не коммитится —
+      # без этого шага падает generate-index-comments (прогон 1652, 22.08.2026).
+      # Скрипт code-first: ни HTTP, ни баз не поднимает.
+      - name: Generate GraphQL schema
+        run: |
+          cd mono-repo
+          pnpm install --filter @coopenomics/controller...
+          pnpm --filter @coopenomics/controller run generate-schema
+
       - name: Generate SDK documentation
         run: |
           cd mono-repo/components/sdk
@@ -181,3 +190,15 @@ jobs:
           GIT_COMMITTER_NAME: github-actions
           GIT_COMMITTER_EMAIL: github-actions@github.com
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── разбудить сборку объединённого сайта docs.blago.coop ─────────────
+      # Релиз mono дёргает именно этот workflow, поэтому цепочку продолжаем
+      # отсюда — release.yaml в mono править не приходится.
+      - name: Trigger blago docs build
+        run: |
+          curl -fsSL -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"ref":"master"}' \
+            "https://git.coopenomics.world/api/v1/repos/C9S/coopenomics/actions/workflows/publish-blago-docs.yaml/dispatches" || \
+            echo "⚠ не удалось разбудить publish-blago-docs — запустить вручную"
