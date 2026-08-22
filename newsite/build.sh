@@ -61,12 +61,16 @@ done
 
 # SDK-справочник и его typedoc.json — из mono. Макросы платформы читают
 # docs/sdk/typedoc.json и без него печатают «не найден» вместо сигнатур.
+# cp, а не rsync: в образе раннера Gitea rsync не установлен
 if [ -d "$MONO/components/sdk/docs" ]; then
-  rsync -a --delete "$MONO/components/sdk/docs/" "$BUILD/docs/sdk/"
+  rm -rf "$BUILD/docs/sdk"
+  mkdir -p "$BUILD/docs/sdk"
+  cp -r "$MONO/components/sdk/docs/." "$BUILD/docs/sdk/"
 fi
 # Схема GraphQL — из controller (её же копирует components/docs/sync-docs.sh).
 if [ -d "$MONO/components/controller/docs" ]; then
-  rsync -a "$MONO/components/controller/docs/" "$BUILD/docs/graphql/"
+  mkdir -p "$BUILD/docs/graphql"
+  cp -r "$MONO/components/controller/docs/." "$BUILD/docs/graphql/"
 fi
 
 # ── слой «Блокчейн» ────────────────────────────────────────────────────────
