@@ -90,6 +90,12 @@ jobs:
       # здесь — скрипт code-first, без HTTP и без баз (CONTROLLER_SCHEMA_GEN=1).
       # Без этого шага падает и сборка старого сайта — проверено на прогоне 1652.
       - name: Generate GraphQL schema
+        # Необязательный шаг: схема лишь дополняет описания методов SDK, а
+        # комментарии в коде и так лежат в репозитории. Контроллер рабочих
+        # веток компилируется не всегда (ошибки типов), а SWC спотыкается о
+        # циклический импорт TypeORM-сущностей capital — документация из-за
+        # этого стоять не должна.
+        continue-on-error: true
         run: |
           cd mono-repo
           # Контроллер импортирует workspace-пакеты из их dist (extension-kit,
@@ -116,7 +122,12 @@ jobs:
         run: |
           cd mono-repo
           pnpm --filter @coopenomics/sdk run build
-          pnpm --filter @coopenomics/sdk run docs
+          if [ -f components/controller/schema.gql ]; then
+            pnpm --filter @coopenomics/sdk run docs
+          else
+            echo "⚠ schema.gql не собралась — typedoc без описаний из схемы"
+            pnpm --filter @coopenomics/sdk exec typedoc
+          fi
 
       - name: Generate node API documentation
         run: |

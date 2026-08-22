@@ -68,6 +68,12 @@ jobs:
       # без этого шага падает generate-index-comments (прогон 1652, 22.08.2026).
       # Скрипт code-first: ни HTTP, ни баз не поднимает.
       - name: Generate GraphQL schema
+        # Необязательный шаг: схема лишь дополняет описания методов SDK, а
+        # комментарии в коде и так лежат в репозитории. Контроллер рабочих
+        # веток компилируется не всегда (ошибки типов), а SWC спотыкается о
+        # циклический импорт TypeORM-сущностей capital — документация из-за
+        # этого стоять не должна.
+        continue-on-error: true
         run: |
           cd mono-repo
           # Контроллер импортирует workspace-пакеты из их dist (extension-kit,
@@ -95,7 +101,12 @@ jobs:
           cd mono-repo/components/sdk
           pnpm install
           pnpm run build
-          pnpm run docs
+          if [ -f ../controller/schema.gql ]; then
+            pnpm run docs
+          else
+            echo "⚠ schema.gql не собралась — typedoc без описаний из схемы"
+            pnpm exec typedoc
+          fi
 
       - name: Generate Chain API documentation
         run: |
