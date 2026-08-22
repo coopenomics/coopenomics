@@ -45,7 +45,22 @@ jobs:
       - name: Clone mono
         run: |
           git clone https://git.coopenomics.world/C9S/mono.git mono-repo
-          cd mono-repo && git checkout "$MONO_REF"
+          cd mono-repo
+          REF="$MONO_REF"
+          # auto: публикуем прод-срез, как только документация туда доедет.
+          # Признак — каталог стола администратора: он появился при пересборке
+          # раздела по четырём столам, а в старой структуре его нет. Пока main
+          # держит документацию снятого UI, берём staging-срез.
+          if [ "$REF" = "auto" ]; then
+            if git cat-file -e origin/main:components/docs/docs/new/marketplace/admin 2>/dev/null; then
+              REF=main
+            else
+              REF=testnet
+              echo "⚠ в main ещё старая структура документации — публикуем testnet"
+            fi
+          fi
+          echo "ветка документации: $REF"
+          git checkout "$REF"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

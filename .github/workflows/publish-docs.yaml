@@ -1,240 +1,35 @@
-name: Publish Coopenomics Website
+# ============================================================================
+# ОТКЛЮЧЁН 2026-08-22 (задача C28-45).
+#
+# Раньше здесь собирался сайт docs.coopenomics.world и публиковался на GitHub
+# Pages. После объединения документации домен ведёт на docs.blago.coop (301),
+# то есть публиковать стало некуда: сборка с doxygen, typedoc и Vue-реестром
+# занимала единственный раннер впустую.
+#
+# Файл не удалён намеренно: релиз mono дёргает именно этот workflow по имени
+# (release.yaml → publish-docs.yaml/dispatches), и на отсутствующем workflow
+# шаг упал бы с 404, уронив релиз. Поэтому осталась одна задача — разбудить
+# сборку объединённого сайта. Когда release.yaml в mono переключат на
+# publish-blago-docs.yaml напрямую, этот файл можно удалить.
+#
+# История сборки старого сайта — в git до коммита, снявшего её.
+# ============================================================================
+name: Publish Coopenomics Website (legacy, only forwards to blago docs)
 
 on:
-  # push-триггер снят: раннер один, а каждая правка документации запускала
-  # ещё и полную пересборку старого сайта. По релизу mono workflow по-прежнему
-  # дёргается своим dispatch, вручную — через workflow_dispatch.
   workflow_dispatch:
   repository_dispatch:
     types: [deploy_from_mono]
-  # Gitea не умеет repository_dispatch через API — mono дёргает пересборку
-  # через workflow_dispatch (см. mono/.github/workflows/release.yaml,
-  # job trigger-coopenomics-docs). Входы информативные, билд их не использует.
-  workflow_dispatch:
-    inputs:
-      mono_sha:
-        description: 'SHA коммита в mono, инициировавшего пересборку'
-        required: false
-        default: ''
-      mono_ref:
-        description: 'ref в mono (тег/ветка)'
-        required: false
-        default: ''
 
 jobs:
-  build-and-publish-docs:
+  forward:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Clone mono repository
-        run: |
-          git clone https://github.com/coopenomics/mono.git mono-repo
-          cd mono-repo
-          git checkout marketplace2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: Install Doxygen 1.9.3
-        run: |
-          curl -L "https://sourceforge.net/projects/doxygen/files/rel-1.9.3/doxygen-1.9.3.linux.bin.tar.gz/download" -o doxygen.tar.gz
-          tar xzf doxygen.tar.gz
-          sudo cp doxygen-1.9.3/bin/doxygen /usr/local/bin/
-          doxygen --version
-
-      - name: Install pnpm
-        run: npm install -g pnpm
-
-      - name: Install redocly
-        run: npm install -g @redocly/cli
-
-      - name: Install Python requirements
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install mkdocs-material mkdocs-macros-plugin mkdocs-section-index pymdown-extensions
-        
-      - name: Install Node.js dependencies
-        run: pnpm install
-
-      - name: Generate contracts documentation with Doxygen
-        run: |
-          cd mono-repo/components/contracts
-          doxygen
-
-      - name: Generate cooptypes docs
-        run: |
-          cd mono-repo/components/cooptypes
-          pnpm install
-          pnpm run build
-          pnpm run docs
-
-      # SDK-доки читают описания методов из schema.gql, а она не коммитится —
-      # без этого шага падает generate-index-comments (прогон 1652, 22.08.2026).
-      # Скрипт code-first: ни HTTP, ни баз не поднимает.
-      - name: Generate GraphQL schema
-        # Необязательный шаг: схема лишь дополняет описания методов SDK, а
-        # комментарии в коде и так лежат в репозитории. Контроллер рабочих
-        # веток компилируется не всегда (ошибки типов), а SWC спотыкается о
-        # циклический импорт TypeORM-сущностей capital — документация из-за
-        # этого стоять не должна.
-        continue-on-error: true
-        run: |
-          cd mono-repo
-          # Контроллер импортирует workspace-пакеты из их dist (extension-kit,
-          # factory, innercoop, jurisdictions, notifications, sdk, cooptypes),
-          # поэтому сперва собираем зависимости — синтаксис ^... берёт именно их,
-          # без самого контроллера. Пакеты без скрипта build пропускаются.
-          pnpm install --filter "@coopenomics/controller^..." --filter @coopenomics/controller
-          pnpm --filter "@coopenomics/controller^..." run build
-          # Схему строим через SWC, а не ts-node: он эмитит метаданные
-          # декораторов (без них Nest падает с UndefinedTypeError на первом
-          # @Field), но не проверяет типы — а контроллер в рабочих ветках
-          # компилируется не всегда, и документация не должна на этом стоять.
-          # @swc-node/register лежит в devDependencies контроллера ровно для
-          # таких запусков. Первая попытка — штатный скрипт с swc-режимом
-          # ts-node, запасная — прямой вызов через регистратор SWC.
-          TS_NODE_SWC=true pnpm --filter @coopenomics/controller run generate-schema \
-            || ( cd components/controller \
-                 && node -r ./scripts/register-schema-gen-env.cjs \
-                         -r @swc-node/register \
-                         -r tsconfig-paths/register \
-                         scripts/generate-schema.ts )
-
-      - name: Generate SDK documentation
-        run: |
-          cd mono-repo/components/sdk
-          pnpm install
-          pnpm run build
-          if [ -f ../controller/schema.gql ]; then
-            pnpm run docs
-          else
-            echo "⚠ schema.gql не собралась — typedoc без описаний из схемы"
-            pnpm exec typedoc
-          fi
-
-      - name: Generate Chain API documentation
-        run: |
-          mkdir -p docs/api/chain
-          redocly build-docs coopos/chain.swagger.yaml --output docs/api/chain/index.html
-
-      - name: Generate DB Size API documentation
-        run: |
-          mkdir -p docs/api/db_size
-          redocly build-docs coopos/db_size.swagger.yaml --output docs/api/db_size/index.html
-
-      - name: Generate Net API documentation
-        run: |
-          mkdir -p docs/api/net
-          redocly build-docs coopos/net.swagger.yaml --output docs/api/net/index.html
-
-      - name: Generate Trace API documentation
-        run: |
-          mkdir -p docs/api/trace
-          redocly build-docs coopos/trace_api.swagger.yaml --output docs/api/trace/index.html
-
-      - name: Generate Producer API documentation
-        run: |
-          mkdir -p docs/api/producer
-          redocly build-docs coopos/producer.swagger.yaml --output docs/api/producer/index.html
-
-      # Redocly вшивает redoc.standalone.js с cdn.redocly.com — из РФ/части сетей CDN таймаутит.
-      # Кладём тот же артефакт рядом со страницами и подменяем src на относительный путь.
-      - name: Self-host Redoc bundle (replace CDN)
-        run: |
-          set -e
-          VER=$(grep -hoE 'cdn\.redocly\.com/redoc/[^/]+' docs/api/*/index.html 2>/dev/null | head -1 | sed 's|.*/||')
-          if [ -z "$VER" ]; then
-            if ls docs/api/*/index.html >/dev/null 2>&1; then
-              echo "ERROR: есть docs/api/*/index.html, но не найден cdn.redocly.com — формат вывода Redocly сменился."
-              exit 1
-            fi
-            exit 0
-          fi
-          curl -fsSL "https://cdn.jsdelivr.net/npm/redoc@${VER}/bundles/redoc.standalone.js" -o docs/api/redoc.standalone.js
-          for f in docs/api/*/index.html; do
-            sed -i 's|https://cdn\.redocly\.com/redoc/[^/]*/bundles/redoc\.standalone\.js|../redoc.standalone.js|g' "$f"
-          done
-
-      - name: Copy contracts documentation
-        run: |
-          mkdir -p docs/contracts
-          cp -r mono-repo/components/contracts/docs/html/* docs/contracts/
-
-      - name: Copy SDK documentation
-        run: |
-          mkdir -p docs/sdk
-          cp -r mono-repo/components/sdk/docs/. docs/sdk/
-          rm -f docs/sdk/typedoc.json
-
-      - name: Copy cooptypes documentation
-        run: |
-          mkdir -p docs/cooptypes
-          cp -r mono-repo/components/cooptypes/docs/* docs/cooptypes/
-
-      # ── standards-site → /standards/ на docs.coopenomics.world ───────
-      # Отдельный Vue-сайт с BPMN-графом кооперативных стандартов;
-      # Vite собирает с base='/standards/' (см. vite.config.ts), dist
-      # кладётся в docs/standards/ ДО mkdocs build — mkdocs сам
-      # включит статику в итоговый site/ как обычные ассеты.
-      # Пока graph-standarts не смержен в капитал-ветку клона — шаг
-      # пропускается (`components/contracts/standards-site/` отсутствует).
-      - name: Build standards-site
-        run: |
-          if [ -d mono-repo/components/contracts/standards-site ]; then
-            cd mono-repo/components/contracts/standards-site
-            pnpm install
-            pnpm run build
-          else
-            echo "⚠ standards-site отсутствует в клонированной ветке mono — пропускаем сборку"
-          fi
-
-      - name: Copy standards-site into docs/standards
-        run: |
-          if [ -d mono-repo/components/contracts/standards-site/dist ]; then
-            mkdir -p docs/standards
-            cp -r mono-repo/components/contracts/standards-site/dist/* docs/standards/
-          else
-            echo "⚠ dist/ standards-site не собран — пропускаем копирование"
-          fi
-
-      - name: Build docs (mkdocs)
-        run: |
-          source venv/bin/activate
-          mkdocs build
-
-      - name: Publish to GitHub Pages
-        run: npx gh-pages --nojekyll -d site --repo https://x-access-token:${GITHUB_TOKEN}@github.com/coopenomics/coopenomics.git
-        env:
-          GIT_AUTHOR_NAME: github-actions
-          GIT_AUTHOR_EMAIL: github-actions@github.com
-          GIT_COMMITTER_NAME: github-actions
-          GIT_COMMITTER_EMAIL: github-actions@github.com
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # ── разбудить сборку объединённого сайта docs.blago.coop ─────────────
-      # Релиз mono дёргает именно этот workflow, поэтому цепочку продолжаем
-      # отсюда — release.yaml в mono править не приходится.
-      #
-      # always(): docs.blago.coop не должен зависеть от того, собрался ли
-      # старый сайт. Он публикуется на GitHub Pages, куда домен больше не
-      # ведёт (docs.coopenomics.world редиректит на новый), и его падение —
-      # например на vue-tsc реестра стандартов — не повод пропускать релиз.
-      - name: Trigger blago docs build
-        if: always()
+      - name: Разбудить сборку docs.blago.coop
         run: |
           curl -fsSL -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{"ref":"master"}' \
-            "https://git.coopenomics.world/api/v1/repos/C9S/coopenomics/actions/workflows/publish-blago-docs.yaml/dispatches" || \
-            echo "⚠ не удалось разбудить publish-blago-docs — запустить вручную"
+            "https://git.coopenomics.world/api/v1/repos/C9S/coopenomics/actions/workflows/publish-blago-docs.yaml/dispatches"
+          echo "✓ сборка docs.blago.coop запущена"
