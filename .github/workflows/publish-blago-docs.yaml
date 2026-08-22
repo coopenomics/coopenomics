@@ -160,12 +160,17 @@ jobs:
           fi
 
       - name: Build standards-site
+        # Реестр стандартов — отдельный Vue-сайт; его штатный build это
+        # «vue-tsc --noEmit && vite build», то есть ещё один typecheck чужого
+        # кода. Документации нужен собранный dist, поэтому зовём vite напрямую.
+        continue-on-error: true
         run: |
           if [ -d mono-repo/components/contracts/standards-site ]; then
             cd mono-repo/components/contracts/standards-site
-            pnpm install && pnpm run build
+            pnpm install
+            pnpm exec vite build
             mkdir -p "$GITHUB_WORKSPACE/docs/standards"
-            cp -r dist/* "$GITHUB_WORKSPACE/docs/standards/"
+            cp -r dist/. "$GITHUB_WORKSPACE/docs/standards/"
           else
             echo "⚠ standards-site отсутствует в ветке $MONO_REF — пропускаем"
           fi

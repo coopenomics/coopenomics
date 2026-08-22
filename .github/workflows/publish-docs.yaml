@@ -1,9 +1,10 @@
 name: Publish Coopenomics Website
 
 on:
-  push:
-    branches:
-      - master
+  # push-триггер снят: раннер один, а каждая правка документации запускала
+  # ещё и полную пересборку старого сайта. По релизу mono workflow по-прежнему
+  # дёргается своим dispatch, вручную — через workflow_dispatch.
+  workflow_dispatch:
   repository_dispatch:
     types: [deploy_from_mono]
   # Gitea не умеет repository_dispatch через API — mono дёргает пересборку
