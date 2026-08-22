@@ -1,0 +1,129 @@
+# Слой «Блокчейн» — суб-документация docs.blago.coop.
+# Контент: репозиторий C9S/coopenomics, docs/documentation/**.
+# site_name задаёт префикс URL: /blockchain/...
+# Файл сгенерирован из прежнего корневого nav (пути перевешены на новый корень).
+site_name: blockchain
+nav:
+- Обзор слоя: index.md
+- Как устроена кооперативная экономика: overview.md
+- Блокчейн:
+  - Введение: intro.md
+  - Концептуальная модель COOPOS: system-model.md
+  - Аккаунты и разрешения: accounts.md
+  - Ключи и подписи: keys-signatures.md
+  - Действия и транзакции: transactions.md
+  - Состояние и хранение данных: state.md
+  - Узлы сети и история: nodes.md
+  - Программы (инструменты COOPOS): programs.md
+  - Сетевые слои и интерфейсы: protocols.md
+  - Делегаты и консенсус: witnesses.md
+  - Программы узла:
+    - Обзор: coopos/index.md
+    - Установка:
+      - Обзор: coopos/00_install/index.md
+      - Сборка из исходников: coopos/00_install/01_build-from-source/index.md
+      - Прочие Unix (экспериментально): coopos/00_install/01_build-from-source/00_build-unsupported-os.md
+    - Конфигурация:
+      - Обзор: coopos/00_install/configuration/index.md
+      - Seed-нода: coopos/00_install/configuration/seed-node.md
+      - Production-нода: coopos/00_install/configuration/production-node.md
+      - API-нода: coopos/00_install/configuration/api-node.md
+      - State-нода: coopos/00_install/configuration/state-node.md
+      - Light-нода: coopos/00_install/configuration/light-node.md
+    - nodeos:
+      - Обзор: coopos/01_nodeos/index.md
+      - Использование:
+        - Обзор: coopos/01_nodeos/02_usage/index.md
+        - Опции командной строки: coopos/01_nodeos/02_usage/00_nodeos-options.md
+        - Конфигурационный файл: coopos/01_nodeos/02_usage/01_nodeos-configuration.md
+        - Справочник параметров (config.ini): coopos/00_install/configuration/parameters.md
+        - Режим узла (producing / non-producing):
+          - Обзор: coopos/01_nodeos/02_usage/02_node-setups/index.md
+          - Производящий узел: coopos/01_nodeos/02_usage/02_node-setups/00_producing-node.md
+          - Непроизводящий узел: coopos/01_nodeos/02_usage/02_node-setups/01_non-producing-node.md
+        - Среда разработки:
+          - Обзор: coopos/01_nodeos/02_usage/03_development-environment/index.md
+          - Один локальный узел: coopos/01_nodeos/02_usage/03_development-environment/00_local-single-node-testnet.md
+          - Несколько локальных узлов: coopos/01_nodeos/02_usage/03_development-environment/01_local-multi-node-testnet.md
+      - Плагины:
+        - Обзор: coopos/01_nodeos/03_plugins/index.md
+        - chain_plugin: coopos/01_nodeos/03_plugins/chain_plugin/index.md
+        - chain_api_plugin: coopos/01_nodeos/03_plugins/chain_api_plugin/index.md
+        - db_size_api_plugin: coopos/01_nodeos/03_plugins/db_size_api_plugin/index.md
+        - http_plugin: coopos/01_nodeos/03_plugins/http_plugin/index.md
+        - net_plugin: coopos/01_nodeos/03_plugins/net_plugin/index.md
+        - net_api_plugin: coopos/01_nodeos/03_plugins/net_api_plugin/index.md
+        - producer_plugin:
+          - Обзор: coopos/01_nodeos/03_plugins/producer_plugin/index.md
+          - Производство блоков (объяснение): coopos/01_nodeos/03_plugins/producer_plugin/10_block-producing-explained.md
+        - producer_api_plugin: coopos/01_nodeos/03_plugins/producer_api_plugin/index.md
+        - resource_monitor_plugin: coopos/01_nodeos/03_plugins/resource_monitor_plugin/index.md
+        - state_history_plugin:
+          - Обзор: coopos/01_nodeos/03_plugins/state_history_plugin/index.md
+          - Быстрый старт без старой истории: coopos/01_nodeos/03_plugins/state_history_plugin/10_how-to-fast-start-without-old-history.md
+          - Реплей или ресинк с полной историей: coopos/01_nodeos/03_plugins/state_history_plugin/20_how-to-replay-or-resync-with-full-history.md
+          - Снимок с полной историей (создание): coopos/01_nodeos/03_plugins/state_history_plugin/30_how-to-create-snapshot-with-full-history.md
+          - Снимок с полной историей (восстановление): coopos/01_nodeos/03_plugins/state_history_plugin/40_how-to-restore-snapshot-with-full-history.md
+        - test_control_plugin: coopos/01_nodeos/03_plugins/test_control_plugin/index.md
+        - test_control_api_plugin: coopos/01_nodeos/03_plugins/test_control_api_plugin/index.md
+        - trace_api_plugin: coopos/01_nodeos/03_plugins/trace_api_plugin/index.md
+      - Реплеи:
+        - Обзор: coopos/01_nodeos/04_replays/index.md
+        - Сформировать журнал блоков: coopos/01_nodeos/04_replays/how-to-generate-a-blocks.log.md
+        - Создать снимок: coopos/01_nodeos/04_replays/how-to-generate-a-snapshot.md
+        - Реплей из журнала блоков: coopos/01_nodeos/04_replays/how-to-replay-from-a-blocks.log.md
+        - Реплей из снимка: coopos/01_nodeos/04_replays/how-to-replay-from-a-snapshot.md
+      - RPC (обзор): coopos/01_nodeos/05_rpc_apis/index.md
+      - Логирование:
+        - Обзор: coopos/01_nodeos/06_logging/index.md
+        - Настройка logging.json: coopos/01_nodeos/06_logging/00_setup-logging.json.md
+        - Уровни логирования: coopos/01_nodeos/06_logging/01_logging-levels.md
+      - Концепции:
+        - Обзор: coopos/01_nodeos/07_concepts/index.md
+        - Хранение и режимы чтения: coopos/01_nodeos/07_concepts/05_storage-and-read-modes.md
+        - Context-free data: coopos/01_nodeos/07_concepts/10_context-free-data/index.md
+      - Устранение неполадок: coopos/01_nodeos/08_troubleshooting/index.md
+    - cleos:
+      - Обзор: coopos/02_cleos/index.md
+      - Ресурсы сети, регистрация и контракты: system-resources.md
+      - Руководства (how-to): coopos/02_cleos/02_how-to-guides/index.md
+      - Устранение неполадок: coopos/02_cleos/04_troubleshooting.md
+      - FAQ: coopos/02_cleos/05_FAQ.md
+      - Справка по командам: coopos/02_cleos/03_command-reference/index.md
+    - keosd:
+      - Обзор: coopos/03_keosd/index.md
+      - Использование: coopos/03_keosd/10_usage.md
+      - Безопасность: coopos/03_keosd/20_security.md
+      - Спецификация кошелька: coopos/03_keosd/35_wallet-specification.md
+      - Устранение неполадок: coopos/03_keosd/40_troubleshooting.md
+      - FAQ: coopos/03_keosd/50_FAQ.md
+    - Утилиты:
+      - Обзор: coopos/10_utilities/index.md
+      - leap-util: coopos/10_utilities/leap-util.md
+  - API:
+    - Producer API: https://docs.coopenomics.world/api/producer
+    - Chain API: https://docs.coopenomics.world/api/chain
+    - Net API: https://docs.coopenomics.world/api/net
+    - Trace API: https://docs.coopenomics.world/api/trace
+    - State History: state-history-ship.md
+    - DB Size API: https://docs.coopenomics.world/api/db_size
+  - Подписка на поток данных: reactive-ship-reader.md
+- Инструменты разработчика (CDT):
+  - Введение: cdt/index.md
+  - Установка: cdt/installation.md
+  - Справочник команд компилятора: cdt/command-reference.md
+  - Сборка контрактов: cdt/building.md
+  - Таблицы состояния: cdt/tables.md
+  - Действия и авторизация: cdt/actions.md
+  - ABI контракта: cdt/abi.md
+  - Обновление схемы данных: cdt/schema-upgrades.md
+  - Рекомендации: cdt/best-practices.md
+  - Отладка и неполадки: cdt/debug-and-troubleshooting.md
+  - Практические руководства: cdt/how-to-guides.md
+- Фабрика документов:
+  - Введение: fabric/intro.md
+  - Архитектура и принципы: fabric/architecture.md
+  - API и использование: fabric/usage.md
+  - Шаблоны: fabric/templates.md
+  - Реестр документов: fabric/registry.md
+- Реактивный SHiP-ридер: reactive-ship-reader.md

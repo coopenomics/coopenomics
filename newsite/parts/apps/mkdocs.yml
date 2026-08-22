@@ -1,0 +1,73 @@
+# Слой «Приложения» — суб-документация docs.blago.coop.
+# Контент: mono/components/docs/docs/new/{marketplace,blagorost}.
+# site_name задаёт префикс URL: /apps/...
+#
+# Каждое приложение магазина — самостоятельный куст. Новое приложение
+# добавляется одним блоком, чужие кусты при этом не трогаются.
+site_name: apps
+nav:
+  - Обзор слоя: index.md
+
+  - Стол заказов:
+    - Введение: marketplace/index.md
+    - Подключение:
+      - Установка приложения: marketplace/connection/install-market.md
+      - Подключение кооперативом: marketplace/connection/coop-accept-cpp.md
+      - Выбор ПВЗ пайщиком: marketplace/connection/member-pick-cpp.md
+    - Стол заказчика:
+      - marketplace/orderer/index.md
+      - Подключение к столу: marketplace/orderer/connect.md
+      - Каталог: marketplace/orderer/catalog.md
+      - Корзина и оформление заказа: marketplace/orderer/cart-order.md
+      - Мои заказы: marketplace/orderer/my-orders.md
+      - Получение на пункте выдачи: marketplace/orderer/receive.md
+      - Гарантийный возврат: marketplace/orderer/returns.md
+    - Стол поставщика:
+      - marketplace/offerer/index.md
+      - Подключение поставщика: marketplace/offerer/connect.md
+      - Мои предложения: marketplace/offerer/offers.md
+      - Создание предложения: marketplace/offerer/offer-create.md
+      - Входящие заказы: marketplace/offerer/incoming-orders.md
+      - Подготовка отгрузки: marketplace/offerer/shipment.md
+      - Подпись акта приёма-передачи: marketplace/offerer/reception-sign.md
+      - Выплаты: marketplace/offerer/payments.md
+    - Стол оператора ПВЗ:
+      - marketplace/operator/index.md
+      - Ожидаемые поставки: marketplace/operator/reception.md
+      - Приёмка партии: marketplace/operator/reception-flow.md
+      - Склад участка: marketplace/operator/warehouse.md
+      - Боксы и типы боксов: marketplace/operator/containers.md
+      - Выдача заказов: marketplace/operator/issuance.md
+      - Остатки: marketplace/operator/stock.md
+      - Гарантийные возвраты: marketplace/operator/returns.md
+      - Списание на участке: marketplace/operator/writeoffs.md
+      - Экономика участка: marketplace/operator/economy.md
+      - История заказов: marketplace/operator/orders-history.md
+    - Стол администратора:
+      - marketplace/admin/index.md
+      - Реестр заказов: marketplace/admin/orders-registry.md
+      - Реестр поставщиков: marketplace/admin/suppliers-registry.md
+      - Реестр предложений: marketplace/admin/offers-registry.md
+      - Модерация: marketplace/admin/moderation.md
+      - Экономика: marketplace/admin/economy.md
+      - Доступные категории: marketplace/admin/categories.md
+      - Пункты выдачи заказов: marketplace/admin/issuance-points.md
+      - Списания скоропорта: marketplace/admin/writeoffs.md
+    - Заключение: marketplace/conclusion.md
+
+  - Благорост:
+    - Адаптация: blagorost/adaptation.md
+    - Профиль: blagorost/profile.md
+    - Кошельки: blagorost/wallets.md
+    - Мастерская: blagorost/projects-list.md
+    - Получение допуска: blagorost/clearance.md
+    - Жизненный цикл компонента: blagorost/lifecycle.md
+    - Задачи и план работ: blagorost/tasks.md
+    - Моё время: blagorost/commits.md
+    - Голосование: blagorost/voting.md
+    - Результат и получение доли: blagorost/results.md
+    - Создание проекта и компонента: blagorost/project-create.md
+    - Назначение мастера и план: blagorost/master-and-plan.md
+    - Артефакты: blagorost/artifacts.md
+    - Результат интеллектуальной деятельности: blagorost/intellectual-property.md
+    - Инвестирование: blagorost/investments.md

@@ -1,0 +1,139 @@
+# ============================================================================
+# Сборка объединённой документации «Благономика» → docs.blago.coop
+#
+# Собирает один сайт из двух репозиториев (этого и mono) скриптом
+# newsite/build.sh и кладёт готовую статику в ветку pages-blago, откуда её
+# забирает ansible-плейбук playbooks/docs/blago-setup.yaml.
+#
+# Генерируемые справочники (SDK, cooptypes, контракты, Chain API, реестр
+# стандартов) собираются теми же шагами, что и в publish-docs.yaml, и
+# ложатся в КОРЕНЬ сайта — там их ждут макросы, отдающие абсолютные пути.
+# ============================================================================
+name: Publish Blago Docs
+
+on:
+  workflow_dispatch:
+    inputs:
+      mono_ref:
+        description: "Ветка mono, с которой берётся документация"
+        required: false
+        default: "main"
+  repository_dispatch:
+    types: [deploy_blago_docs]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    env:
+      # До мержа PR #185 документация Стола заказов живёт в feat/marketplace-user-docs —
+      # запускать с этим значением вручную, пока ветка не уехала в main.
+      MONO_REF: ${{ github.event.inputs.mono_ref || 'main' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Clone mono
+        run: |
+          git clone https://git.coopenomics.world/C9S/mono.git mono-repo
+          cd mono-repo && git checkout "$MONO_REF"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Doxygen 1.9.3
+        run: |
+          curl -L "https://sourceforge.net/projects/doxygen/files/rel-1.9.3/doxygen-1.9.3.linux.bin.tar.gz/download" -o doxygen.tar.gz
+          tar xzf doxygen.tar.gz
+          sudo cp doxygen-1.9.3/bin/doxygen /usr/local/bin/
+
+      - name: Install pnpm and redocly
+        run: npm install -g pnpm @redocly/cli
+
+      - name: Install Python requirements
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install mkdocs-material mkdocs-macros-plugin mkdocs-section-index \
+                      mkdocs-monorepo-plugin pymdown-extensions
+
+      - name: Generate contracts documentation (doxygen)
+        run: cd mono-repo/components/contracts && doxygen
+
+      - name: Generate cooptypes docs
+        run: |
+          cd mono-repo/components/cooptypes
+          pnpm install && pnpm run build && pnpm run docs
+
+      - name: Generate SDK documentation
+        run: |
+          cd mono-repo/components/sdk
+          pnpm install && pnpm run build && pnpm run docs
+
+      - name: Generate node API documentation
+        run: |
+          for api in chain db_size net trace_api producer; do
+            out="${api%_api}"
+            mkdir -p "docs/api/$out"
+            redocly build-docs "coopos/$api.swagger.yaml" --output "docs/api/$out/index.html" || true
+          done
+
+      # Redocly вшивает redoc.standalone.js с cdn.redocly.com — из РФ CDN таймаутит.
+      - name: Self-host Redoc bundle
+        run: |
+          set -e
+          VER=$(grep -hoE 'cdn\.redocly\.com/redoc/[^/]+' docs/api/*/index.html 2>/dev/null | head -1 | sed 's|.*/||')
+          if [ -n "$VER" ]; then
+            curl -fsSL "https://cdn.jsdelivr.net/npm/redoc@${VER}/bundles/redoc.standalone.js" -o docs/api/redoc.standalone.js
+            for f in docs/api/*/index.html; do
+              sed -i 's|https://cdn\.redocly\.com/redoc/[^/]*/bundles/redoc\.standalone\.js|../redoc.standalone.js|g' "$f"
+            done
+          fi
+
+      - name: Copy contracts and cooptypes docs
+        run: |
+          mkdir -p docs/contracts docs/cooptypes
+          cp -r mono-repo/components/contracts/docs/html/* docs/contracts/
+          cp -r mono-repo/components/cooptypes/docs/* docs/cooptypes/
+
+      - name: Build standards-site
+        run: |
+          if [ -d mono-repo/components/contracts/standards-site ]; then
+            cd mono-repo/components/contracts/standards-site
+            pnpm install && pnpm run build
+            mkdir -p "$GITHUB_WORKSPACE/docs/standards"
+            cp -r dist/* "$GITHUB_WORKSPACE/docs/standards/"
+          else
+            echo "⚠ standards-site отсутствует в ветке $MONO_REF — пропускаем"
+          fi
+
+      - name: Build site
+        run: |
+          source venv/bin/activate
+          MONO_DIR="$GITHUB_WORKSPACE/mono-repo" OUT_DIR="$GITHUB_WORKSPACE/site" \
+            DISABLE_MKDOCS_2_WARNING=true ./newsite/build.sh
+
+      - name: Publish to pages-blago
+        run: |
+          cd site
+          git init -q
+          git config user.name  "gitea-actions"
+          git config user.email "actions@git.coopenomics.world"
+          git add -A
+          git commit -q -m "docs: сборка docs.blago.coop из ${MONO_REF} (${GITHUB_SHA::7})"
+          git push -q --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.coopenomics.world/C9S/coopenomics.git" \
+            HEAD:pages-blago
+
+      - name: Trigger deployment webhook
+        if: ${{ vars.BLAGO_DOCS_DEPLOY_WEBHOOK_URL != '' }}
+        run: |
+          curl -fsSL -X POST "${{ vars.BLAGO_DOCS_DEPLOY_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d "{\"branch\":\"pages-blago\",\"sha\":\"${GITHUB_SHA}\"}"
