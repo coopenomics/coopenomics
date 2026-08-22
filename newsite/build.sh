@@ -134,4 +134,10 @@ PYGUARD
 echo "→ mkdocs build → $OUT"
 cd "$BUILD"
 mkdocs build --site-dir "$OUT" "$@"
-echo "✓ готово: $OUT"
+
+# typedoc.json нужен только во время сборки — из него макросы берут сигнатуры
+# и типы. В опубликованном сайте это мёртвые 200 МБ, которые вдобавок каждый
+# деплой уезжают в git-историю ветки со статикой.
+rm -f "$OUT/sdk/typedoc.json"
+
+echo "✓ готово: $OUT ($(du -sh "$OUT" | cut -f1))"
