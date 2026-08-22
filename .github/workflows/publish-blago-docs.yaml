@@ -98,13 +98,19 @@ jobs:
           # без самого контроллера. Пакеты без скрипта build пропускаются.
           pnpm install --filter "@coopenomics/controller^..." --filter @coopenomics/controller
           pnpm --filter "@coopenomics/controller^..." run build
-          # Компиляцию отключать нельзя: Nest строит схему по метаданным
-          # декораторов, а transpile-only их не эмитит — падает UndefinedTypeError
-          # на первом же @Field. Зато строгость снимаем: документации не дело
-          # спотыкаться о чужой typecheck (в feat/marketplace-user-docs это
-          # TS18048 в marketplace-membership.guard), за типами следит CI mono.
-          TS_NODE_COMPILER_OPTIONS='{"strict":false,"strictNullChecks":false,"noImplicitAny":false}' \
-            pnpm --filter @coopenomics/controller run generate-schema
+          # Схему строим через SWC, а не ts-node: он эмитит метаданные
+          # декораторов (без них Nest падает с UndefinedTypeError на первом
+          # @Field), но не проверяет типы — а контроллер в рабочих ветках
+          # компилируется не всегда, и документация не должна на этом стоять.
+          # @swc-node/register лежит в devDependencies контроллера ровно для
+          # таких запусков. Первая попытка — штатный скрипт с swc-режимом
+          # ts-node, запасная — прямой вызов через регистратор SWC.
+          TS_NODE_SWC=true pnpm --filter @coopenomics/controller run generate-schema \
+            || ( cd components/controller \
+                 && node -r ./scripts/register-schema-gen-env.cjs \
+                         -r @swc-node/register \
+                         -r tsconfig-paths/register \
+                         scripts/generate-schema.ts )
 
       - name: Generate SDK documentation
         run: |
