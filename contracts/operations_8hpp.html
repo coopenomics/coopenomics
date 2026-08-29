@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/lib/core/ledger2/operations.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('operations_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл operations.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;string_view&gt;</code><br />
+<code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="accounts_8hpp_source.html">accounts.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="processes_8hpp_source.html">processes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lib_2core_2ledger2_2wallets_8hpp_source.html">wallets.hpp</a>&quot;</code><br />
+</div>
+<p><a href="operations_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Описание одной именованной операции.  <a href="struct_operation_registry_entry.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_operation_adjustment_entry.html">OperationAdjustmentEntry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_operation_set.html">ExpenseOperationSet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceoperations"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations.html">operations</a></td></tr>
+<tr class="memdesc:namespaceoperations"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реестр именованных операций <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (operation registry). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1registrator"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html">operations::registrator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1wallet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html">operations::wallet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html">operations::capital</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1marketplace"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html">operations::marketplace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1branch"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html">operations::branch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1soviet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1soviet.html">operations::soviet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1expense"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html">operations::expense</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1migration"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1migration.html">operations::migration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceoperations_1_1adjustment"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1adjustment.html">operations::adjustment</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceledger2__registry__detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html">ledger2_registry_detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceledger2__expense__sets__detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__expense__sets__detail.html">ledger2_expense_sets_detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:aa831b57772606993ff6c32fa0c6c910b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910b">WalletOp</a> : uint8_t { <a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910ba1c8ef82c6249e38b3b032a915a28343f">ISSUE</a> = 0
+, <a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910baeb5ddb3b6096fb90ff720d9c3e2a6628">TRANSFER</a> = 1
+, <a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910ba6ce5f855f667c4a7b51360d8c37e2e66">BURN</a> = 4
+, <a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910bab50339a10e1de285ac99d4c3990b8693">NONE</a> = 5
+ }</td></tr>
+<tr class="memdesc:aa831b57772606993ff6c32fa0c6c910b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Элементарные операции по кошелькам (ADR-003).  <a href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa831b57772606993ff6c32fa0c6c910b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a76e2eef8dfe21fcaf45eb8f52eca2702"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#a76e2eef8dfe21fcaf45eb8f52eca2702">ledger2_registry_detail::operation_codes_unique</a> ()</td></tr>
+<tr class="separator:a76e2eef8dfe21fcaf45eb8f52eca2702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b607c74b562442564c6c98bde2b2c83"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#a3b607c74b562442564c6c98bde2b2c83">ledger2_registry_detail::zero_accounts_iff_both</a> ()</td></tr>
+<tr class="separator:a3b607c74b562442564c6c98bde2b2c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39f695c8ebf298918fee03554e84c28"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#ac39f695c8ebf298918fee03554e84c28">ledger2_registry_detail::dr_ne_cr_when_posting</a> ()</td></tr>
+<tr class="separator:ac39f695c8ebf298918fee03554e84c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2358a7c9b92786c03343c7c75552fa"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#a6a2358a7c9b92786c03343c7c75552fa">ledger2_registry_detail::transfer_wallet_from_ne_to</a> ()</td></tr>
+<tr class="separator:a6a2358a7c9b92786c03343c7c75552fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33d68acecf3d9edd0f9e1d73df22808"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#af33d68acecf3d9edd0f9e1d73df22808">ledger2_registry_detail::burn_pattern_correct</a> ()</td></tr>
+<tr class="separator:af33d68acecf3d9edd0f9e1d73df22808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838964366720747b53e821a11cd1b622"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#a838964366720747b53e821a11cd1b622">ledger2_registry_detail::none_pattern_correct</a> ()</td></tr>
+<tr class="separator:a838964366720747b53e821a11cd1b622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1f427c297e54cf296333c1cbf3d08e"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#acb1f427c297e54cf296333c1cbf3d08e">ledger2_registry_detail::accounts_exist_in_map</a> ()</td></tr>
+<tr class="separator:acb1f427c297e54cf296333c1cbf3d08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5fbf771fbfcc0841305368d494f881c"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__registry__detail.html#aa5fbf771fbfcc0841305368d494f881c">ledger2_registry_detail::wallets_exist_in_registry</a> ()</td></tr>
+<tr class="separator:aa5fbf771fbfcc0841305368d494f881c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e41b9eff038beb47d1e4d21be97cdf"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a28e41b9eff038beb47d1e4d21be97cdf">find_operation</a> (eosio::name operation_code)</td></tr>
+<tr class="memdesc:a28e41b9eff038beb47d1e4d21be97cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Линейный поиск записи реестра по operation_code.  <a href="operations_8hpp.html#a28e41b9eff038beb47d1e4d21be97cdf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a28e41b9eff038beb47d1e4d21be97cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfadb690ed13d816fd3d007de760ecf4"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="struct_operation_adjustment_entry.html">OperationAdjustmentEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#adfadb690ed13d816fd3d007de760ecf4">find_adjustment</a> (eosio::name operation_code)</td></tr>
+<tr class="separator:adfadb690ed13d816fd3d007de760ecf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f469a45c516cfe219e85b7749cb6780"><td class="memItemLeft" align="right" valign="top">constexpr const <a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__expense__sets__detail.html#a6f469a45c516cfe219e85b7749cb6780">ledger2_expense_sets_detail::find_op</a> (eosio::name code)</td></tr>
+<tr class="separator:a6f469a45c516cfe219e85b7749cb6780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc68581ed086e4c09db05fba5139fd1e"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__expense__sets__detail.html#afc68581ed086e4c09db05fba5139fd1e">ledger2_expense_sets_detail::source_wallets_unique</a> ()</td></tr>
+<tr class="separator:afc68581ed086e4c09db05fba5139fd1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab12f4ecad18cc52018df030abfcf222b"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceledger2__expense__sets__detail.html#ab12f4ecad18cc52018df030abfcf222b">ledger2_expense_sets_detail::sets_consistent</a> ()</td></tr>
+<tr class="separator:ab12f4ecad18cc52018df030abfcf222b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc51ffef52133d9d673d566a42282ca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_expense_operation_set.html">ExpenseOperationSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a7dc51ffef52133d9d673d566a42282ca">find_expense_operation_set</a> (eosio::name source_wallet)</td></tr>
+<tr class="memdesc:a7dc51ffef52133d9d673d566a42282ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск набора операций шасси расходов по кошельку-источнику.  <a href="operations_8hpp.html#a7dc51ffef52133d9d673d566a42282ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7dc51ffef52133d9d673d566a42282ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a0cd896b2d48c06bdc76ac9edb2e40cc6"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a0cd896b2d48c06bdc76ac9edb2e40cc6">operations::registrator::PAY_ENTRANCE</a> = &quot;o.reg.payent&quot;_n</td></tr>
+<tr class="memdesc:a0cd896b2d48c06bdc76ac9edb2e40cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оплата вступительного взноса (Dr 51 / Cr 86, ISSUE ENTRANCE_FEES). Одношаговый путь adduser (без совета).  <a href="namespaceoperations_1_1registrator.html#a0cd896b2d48c06bdc76ac9edb2e40cc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0cd896b2d48c06bdc76ac9edb2e40cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9479c168540ffd0044fde947e082e56f"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a9479c168540ffd0044fde947e082e56f">operations::registrator::PUT_MINSHARE</a> = &quot;o.reg.putmin&quot;_n</td></tr>
+<tr class="memdesc:a9479c168540ffd0044fde947e082e56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Внесение минимального паевого при регистрации (Dr 51 / Cr 80, ISSUE MIN_SHARE_FUND). Одношаговый путь adduser (без совета).  <a href="namespaceoperations_1_1registrator.html#a9479c168540ffd0044fde947e082e56f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9479c168540ffd0044fde947e082e56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c64878ba1c13d1283db53cb6b9e228"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a01c64878ba1c13d1283db53cb6b9e228">operations::registrator::RECEIVE_PAYMENT</a> = &quot;o.reg.inpay&quot;_n</td></tr>
+<tr class="memdesc:a01c64878ba1c13d1283db53cb6b9e228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём регистрационного взноса кассой в ожидание решения совета (Dr 51 / Cr 76, ISSUE REGISTRATION_PENDING).  <a href="namespaceoperations_1_1registrator.html#a01c64878ba1c13d1283db53cb6b9e228">Подробнее...</a><br /></td></tr>
+<tr class="separator:a01c64878ba1c13d1283db53cb6b9e228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9ceed79c53cafa4c7e324b13857cea"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a1f9ceed79c53cafa4c7e324b13857cea">operations::registrator::SETTLE_MINSHARE</a> = &quot;o.reg.setmin&quot;_n</td></tr>
+<tr class="memdesc:a1f9ceed79c53cafa4c7e324b13857cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачисление минимального паевого по решению совета (Dr 76 / Cr 80, TRANSFER REGISTRATION_PENDING → MIN_SHARE_FUND).  <a href="namespaceoperations_1_1registrator.html#a1f9ceed79c53cafa4c7e324b13857cea">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f9ceed79c53cafa4c7e324b13857cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039b5c7e8320ce64d666bf7a7f1864a0"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a039b5c7e8320ce64d666bf7a7f1864a0">operations::registrator::SETTLE_ENTRANCE</a> = &quot;o.reg.setent&quot;_n</td></tr>
+<tr class="memdesc:a039b5c7e8320ce64d666bf7a7f1864a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачисление вступительного по решению совета (Dr 76 / Cr 86, TRANSFER REGISTRATION_PENDING → ENTRANCE_FEES).  <a href="namespaceoperations_1_1registrator.html#a039b5c7e8320ce64d666bf7a7f1864a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a039b5c7e8320ce64d666bf7a7f1864a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be76f4a1f4486106aa615f0b44f3f2b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a6be76f4a1f4486106aa615f0b44f3f2b">operations::registrator::REFUND</a> = &quot;o.reg.refund&quot;_n</td></tr>
+<tr class="memdesc:a6be76f4a1f4486106aa615f0b44f3f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат регистрационного взноса при отказе совета (Dr 76 / Cr 51, BURN REGISTRATION_PENDING — деньги уходят из системы банковским переводом кандидату).  <a href="namespaceoperations_1_1registrator.html#a6be76f4a1f4486106aa615f0b44f3f2b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6be76f4a1f4486106aa615f0b44f3f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687a95d54cd1e0ada8d01f3d47a026f4"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1registrator.html#a687a95d54cd1e0ada8d01f3d47a026f4">operations::registrator::MOVE_MINSHARE</a> = &quot;o.reg.mvmin&quot;_n</td></tr>
+<tr class="memdesc:a687a95d54cd1e0ada8d01f3d47a026f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перенос минимального паевого на главный паевой при выходе из кооператива (TRANSFER MIN_SHARE_FUND → SHARE_FUND_PAY, без Dr/Cr — оба кошелька на счёте 80). Готовит полный паевой к возврату.  <a href="namespaceoperations_1_1registrator.html#a687a95d54cd1e0ada8d01f3d47a026f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a687a95d54cd1e0ada8d01f3d47a026f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df9394dec6ca43a5244bfbe8ecd425b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html#a6df9394dec6ca43a5244bfbe8ecd425b">operations::wallet::COMPLETE_DEPOSIT</a> = &quot;o.wal.depcpl&quot;_n</td></tr>
+<tr class="memdesc:a6df9394dec6ca43a5244bfbe8ecd425b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершение внесения паевого взноса (Dr 51 / Cr 80, ISSUE SHARE_FUND_PAY).  <a href="namespaceoperations_1_1wallet.html#a6df9394dec6ca43a5244bfbe8ecd425b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6df9394dec6ca43a5244bfbe8ecd425b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37678ab910c79deefa144e6017f71a4d"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html#a37678ab910c79deefa144e6017f71a4d">operations::wallet::COMPLETE_WITHDRAW</a> = &quot;o.wal.wthcpl&quot;_n</td></tr>
+<tr class="memdesc:a37678ab910c79deefa144e6017f71a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершение возврата паевого взноса (Dr 80 / Cr 51, BURN с WITHDRAW_PENDING — деньги уходят из системы, без wallet_to).  <a href="namespaceoperations_1_1wallet.html#a37678ab910c79deefa144e6017f71a4d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a37678ab910c79deefa144e6017f71a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94b76549eab9ad68c91e5d7c3bb76965"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html#a94b76549eab9ad68c91e5d7c3bb76965">operations::wallet::REQUEST_WITHDRAW</a> = &quot;o.wal.wthreq&quot;_n</td></tr>
+<tr class="memdesc:a94b76549eab9ad68c91e5d7c3bb76965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрос на возврат паевого: TRANSFER SHARE_FUND_PAY → WITHDRAW_PENDING (резерв, без Dr/Cr).  <a href="namespaceoperations_1_1wallet.html#a94b76549eab9ad68c91e5d7c3bb76965">Подробнее...</a><br /></td></tr>
+<tr class="separator:a94b76549eab9ad68c91e5d7c3bb76965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24ed6fa5707a59c41a11eff0261c6ac"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html#ac24ed6fa5707a59c41a11eff0261c6ac">operations::wallet::DECLINE_WITHDRAW</a> = &quot;o.wal.wthdec&quot;_n</td></tr>
+<tr class="memdesc:ac24ed6fa5707a59c41a11eff0261c6ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение запроса на возврат: TRANSFER WITHDRAW_PENDING → SHARE_FUND_PAY (снятие резерва, без Dr/Cr).  <a href="namespaceoperations_1_1wallet.html#ac24ed6fa5707a59c41a11eff0261c6ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac24ed6fa5707a59c41a11eff0261c6ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ae120c309a530dc42cecb226456f5b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1wallet.html#ad8ae120c309a530dc42cecb226456f5b">operations::wallet::CONVERT_TO_MEMBER</a> = &quot;o.wal.conv&quot;_n</td></tr>
+<tr class="memdesc:ad8ae120c309a530dc42cecb226456f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация цифрового рубля в универсальный членский кошелёк (Dr 80 / Cr 86, TRANSFER SHARE_FUND_PAY → CK_MEMBER). Conditional-шаг серии createorder в «Столе заказов».  <a href="namespaceoperations_1_1wallet.html#ad8ae120c309a530dc42cecb226456f5b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8ae120c309a530dc42cecb226456f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69d6bff5463ffb7fa61e0d85d6002ae6"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a69d6bff5463ffb7fa61e0d85d6002ae6">operations::capital::IMPORT</a> = &quot;o.cap.import&quot;_n</td></tr>
+<tr class="memdesc:a69d6bff5463ffb7fa61e0d85d6002ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оффлайн-импорт пайщика Благорост (Dr 04 / Cr 80, ISSUE BLAGOROST_FUND). Только РИД-имущество — деньги через INVEST.  <a href="namespaceoperations_1_1capital.html#a69d6bff5463ffb7fa61e0d85d6002ae6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a69d6bff5463ffb7fa61e0d85d6002ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aead400d0985863ebb7431dfbb978ee31"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#aead400d0985863ebb7431dfbb978ee31">operations::capital::INVEST</a> = &quot;o.cap.invest&quot;_n</td></tr>
+<tr class="memdesc:aead400d0985863ebb7431dfbb978ee31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инвестиция в ЦПП Благорост (TRANSFER SHARE_FUND_PAY → BLAGOROST_FUND, без Dr/Cr).  <a href="namespaceoperations_1_1capital.html#aead400d0985863ebb7431dfbb978ee31">Подробнее...</a><br /></td></tr>
+<tr class="separator:aead400d0985863ebb7431dfbb978ee31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1314c8be64df54c7626e781ccbddea02"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a1314c8be64df54c7626e781ccbddea02">operations::capital::COMMIT_RID</a> = &quot;o.cap.commit&quot;_n</td></tr>
+<tr class="memdesc:a1314c8be64df54c7626e781ccbddea02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коммит РИД (Dr 08 / Cr 80, ISSUE GENERATOR_FUND).  <a href="namespaceoperations_1_1capital.html#a1314c8be64df54c7626e781ccbddea02">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1314c8be64df54c7626e781ccbddea02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab545547f861c938fbe0f1ec85ba33f2a"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#ab545547f861c938fbe0f1ec85ba33f2a">operations::capital::ACCEPT_RID</a> = &quot;o.cap.accept&quot;_n</td></tr>
+<tr class="memdesc:ab545547f861c938fbe0f1ec85ba33f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём РИД в НМА (Dr 04 / Cr 08, NONE — только бухпроводка, кошелёк остаётся на GENERATOR_FUND до конвертации сегмента).  <a href="namespaceoperations_1_1capital.html#ab545547f861c938fbe0f1ec85ba33f2a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab545547f861c938fbe0f1ec85ba33f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a980d3f3138c3ca96efb7f9dec5f429"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a1a980d3f3138c3ca96efb7f9dec5f429">operations::capital::ACCEPT_PROPERTY</a> = &quot;o.cap.actprp&quot;_n</td></tr>
+<tr class="memdesc:a1a980d3f3138c3ca96efb7f9dec5f429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Акт-2 имущественный паевой взнос (Dr 04 / Cr 80, ISSUE BLAGOROST_FUND).  <a href="namespaceoperations_1_1capital.html#a1a980d3f3138c3ca96efb7f9dec5f429">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1a980d3f3138c3ca96efb7f9dec5f429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3cf67d27e96c6d5a579376fd1d2697"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a9a3cf67d27e96c6d5a579376fd1d2697">operations::capital::PREIMP</a> = &quot;o.cap.preimp&quot;_n</td></tr>
+<tr class="memdesc:a9a3cf67d27e96c6d5a579376fd1d2697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первичный учёт РИД-взноса до перехода на электронный учёт (Dr 04 / Cr 80, ISSUE PREIMP_FUND).  <a href="namespaceoperations_1_1capital.html#a9a3cf67d27e96c6d5a579376fd1d2697">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9a3cf67d27e96c6d5a579376fd1d2697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2881c0ca481a97b9db69ff45827bdbed"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a2881c0ca481a97b9db69ff45827bdbed">operations::capital::DROP_PREIMP</a> = &quot;o.cap.drppre&quot;_n</td></tr>
+<tr class="memdesc:a2881c0ca481a97b9db69ff45827bdbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие пред-импорт-учёта при переходе на электронный учёт (Dr 80 / Cr 04, BURN PREIMP_FUND). Вызывается из capital::importcontr перед o.cap.import.  <a href="namespaceoperations_1_1capital.html#a2881c0ca481a97b9db69ff45827bdbed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2881c0ca481a97b9db69ff45827bdbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ce2f83b2c95c66bc3cbd319b16e20fb"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a9ce2f83b2c95c66bc3cbd319b16e20fb">operations::capital::LEND</a> = &quot;o.cap.lend&quot;_n</td></tr>
+<tr class="memdesc:a9ce2f83b2c95c66bc3cbd319b16e20fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выдача беспроцентного займа пайщику (Dr 58 / Cr 51, ISSUE LOAN_ISSUED).  <a href="namespaceoperations_1_1capital.html#a9ce2f83b2c95c66bc3cbd319b16e20fb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9ce2f83b2c95c66bc3cbd319b16e20fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a671315170fb68cc10b2d60c3def8024a"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a671315170fb68cc10b2d60c3def8024a">operations::capital::REPAY</a> = &quot;o.cap.repay&quot;_n</td></tr>
+<tr class="memdesc:a671315170fb68cc10b2d60c3def8024a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат займа пайщика по акту-2 (Dr 80 / Cr 58, TRANSFER LOAN_ISSUED → SHARE_FUND_PAY).  <a href="namespaceoperations_1_1capital.html#a671315170fb68cc10b2d60c3def8024a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a671315170fb68cc10b2d60c3def8024a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38527aecee8393c050aea7004cad0f52"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a38527aecee8393c050aea7004cad0f52">operations::capital::WITHDRAW_FROM_CAPITAL</a> = &quot;o.cap.wthcap&quot;_n</td></tr>
+<tr class="memdesc:a38527aecee8393c050aea7004cad0f52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат паевого из ЦПП «Благорост» в кошелёк пайщика (TRANSFER BLAGOROST_FUND → SHARE_FUND_PAY, без Dr/Cr).  <a href="namespaceoperations_1_1capital.html#a38527aecee8393c050aea7004cad0f52">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38527aecee8393c050aea7004cad0f52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3792e623d142ca671350703b5a19e5"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#a4a3792e623d142ca671350703b5a19e5">operations::capital::CONVERT_TO_SHARE</a> = &quot;o.cap.cnvshr&quot;_n</td></tr>
+<tr class="memdesc:a4a3792e623d142ca671350703b5a19e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация сегмента: РИД → главный кошелёк (TRANSFER GENERATOR_FUND → SHARE_FUND_PAY, без Dr/Cr — бухпроводка уже была сделана в ACCEPT_RID).  <a href="namespaceoperations_1_1capital.html#a4a3792e623d142ca671350703b5a19e5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4a3792e623d142ca671350703b5a19e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd1291977ac2874a8ab3bbce77a2e633"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#afd1291977ac2874a8ab3bbce77a2e633">operations::capital::CONVERT_TO_BLAGO</a> = &quot;o.cap.cnvbl&quot;_n</td></tr>
+<tr class="memdesc:afd1291977ac2874a8ab3bbce77a2e633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация сегмента: РИД → ЦПП «Благорост» (TRANSFER GENERATOR_FUND → BLAGOROST_FUND, без Dr/Cr — бухпроводка уже была сделана в ACCEPT_RID).  <a href="namespaceoperations_1_1capital.html#afd1291977ac2874a8ab3bbce77a2e633">Подробнее...</a><br /></td></tr>
+<tr class="separator:afd1291977ac2874a8ab3bbce77a2e633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7852762142ee70622e7d36601e7aa7d"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1capital.html#ae7852762142ee70622e7d36601e7aa7d">operations::capital::PROGRAM_EXPENSE_TOPUP</a> = &quot;o.cap.pgtop&quot;_n</td></tr>
+<tr class="memdesc:ae7852762142ee70622e7d36601e7aa7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пополнение пула программных расходов из инвестиций программы (ISSUE PROGRAM_EXPENSE_POOL, без Dr/Cr — деньги уже на 51, выделяется кооперативный резерв под расходы; паевые L3-кошельки пайщиков не трогаются).  <a href="namespaceoperations_1_1capital.html#ae7852762142ee70622e7d36601e7aa7d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae7852762142ee70622e7d36601e7aa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f25191ffd0982e25192410381bfb71"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#af5f25191ffd0982e25192410381bfb71">operations::marketplace::LOCK_ORDER</a> = &quot;o.mkt.lock&quot;_n</td></tr>
+<tr class="memdesc:af5f25191ffd0982e25192410381bfb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резервирование средств заказчика под конкретный Order (TRANSFER w.wal.share → w.mkt.order, Dr 80 / Cr 86 — паевой переходит в целевое финансирование на резерв-кошелёк). Единственный обязательный шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> при createorder.  <a href="namespaceoperations_1_1marketplace.html#af5f25191ffd0982e25192410381bfb71">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5f25191ffd0982e25192410381bfb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c74015538942249f484d4ac16957cd"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a50c74015538942249f484d4ac16957cd">operations::marketplace::CONVERT_TO_MKT_MEMBER</a> = &quot;o.mkt.conv&quot;_n</td></tr>
+<tr class="memdesc:a50c74015538942249f484d4ac16957cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация паевого взноса в членский кошелёк «Стола заказов» (TRANSFER w.wal.share → w.mkt.member, Dr 80 / Cr 86). ЕДИНСТВЕННЫЙ путь паевой→членский — только по Заявлению о конвертации (action convert). Автоматической конвертации на выдаче (signiss2) НЕТ: доплата/довзнос по факту берутся с уже внесённого членского (o.mkt.lockm/o.mkt.lockmf), при нехватке — отказ.  <a href="namespaceoperations_1_1marketplace.html#a50c74015538942249f484d4ac16957cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a50c74015538942249f484d4ac16957cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e54c9a475dd95444ccedc57dfba43e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a36e54c9a475dd95444ccedc57dfba43e">operations::marketplace::LOCK_FROM_MEMBER</a> = &quot;o.mkt.lockm&quot;_n</td></tr>
+<tr class="memdesc:a36e54c9a475dd95444ccedc57dfba43e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добор резерва заказа с членского «Стола заказов» (TRANSFER w.mkt.member → w.mkt.order, без Dr/Cr — оба кошелька на 86). Парный к o.mkt.conv шаг доплаты по факту: после конвертации добирает резерв под этот же Order.  <a href="namespaceoperations_1_1marketplace.html#a36e54c9a475dd95444ccedc57dfba43e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a36e54c9a475dd95444ccedc57dfba43e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8967c44189242449a9176cf2ec504f"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a7d8967c44189242449a9176cf2ec504f">operations::marketplace::UNLOCK_ORDER</a> = &quot;o.mkt.unlock&quot;_n</td></tr>
+<tr class="memdesc:a7d8967c44189242449a9176cf2ec504f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снятие резерва при отмене Order'а или недовыдаче (TRANSFER w.mkt.order → w.mkt.member, без Dr/Cr — оба кошелька на 86). Средства возвращаются на членский «Стола заказов» (не на универсальный членский) — остаются в программе и могут быть потрачены на следующие заказы.  <a href="namespaceoperations_1_1marketplace.html#a7d8967c44189242449a9176cf2ec504f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d8967c44189242449a9176cf2ec504f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115ccd8c21e633ae40cde387c807c0f1"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a115ccd8c21e633ae40cde387c807c0f1">operations::marketplace::PURCHASE_FROM_SUPPLIER</a> = &quot;o.mkt.purch&quot;_n</td></tr>
+<tr class="memdesc:a115ccd8c21e633ae40cde387c807c0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приёмка имущества кооперативом по АПП приёмки от поставщика (Dr 10 / Cr 86, NONE — только бухпроводка, кошельки не двигаются; имущество — аналитика по 10). Атомарно с PAY_SUPPLIER на закрывающей подписи председателя.  <a href="namespaceoperations_1_1marketplace.html#a115ccd8c21e633ae40cde387c807c0f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a115ccd8c21e633ae40cde387c807c0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a4da05c8f9d58fa6f84a56b0420e84b58">operations::marketplace::PAY_SUPPLIER</a> = &quot;o.mkt.payout&quot;_n</td></tr>
+<tr class="memdesc:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оплата поставщику с расчётного счёта по факту приёмки (Dr 86 / Cr 51, ISSUE ∅ → SUPPLIER_PAYMENTS). Атомарно с PURCHASE_FROM_SUPPLIER.  <a href="namespaceoperations_1_1marketplace.html#a4da05c8f9d58fa6f84a56b0420e84b58">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a661dd6d4a33d71b6e0d873ccf209ca56">operations::marketplace::CONSUME_BY_MEMBER</a> = &quot;o.mkt.consum&quot;_n</td></tr>
+<tr class="memdesc:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выдача имущества пайщику по АПП выдачи (BURN с w.mkt.order, Dr 86 / Cr 10 — сжигание резерва заказа и выбытие имущества со склада через целевое финансирование).  <a href="namespaceoperations_1_1marketplace.html#a661dd6d4a33d71b6e0d873ccf209ca56">Подробнее...</a><br /></td></tr>
+<tr class="separator:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce94bd91e1ebc28225aab2b3262d4ee"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#acce94bd91e1ebc28225aab2b3262d4ee">operations::marketplace::RETURN_BY_MEMBER</a> = &quot;o.mkt.return&quot;_n</td></tr>
+<tr class="memdesc:acce94bd91e1ebc28225aab2b3262d4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Гарантийный возврат имущества пайщиком — compensating forward к CONSUME_BY_MEMBER (ISSUE ∅ → w.mkt.member, Dr 10 / Cr 86 — восстановление средств на членском «Стола заказов» заказчика и возврат имущества на склад). Реверты <a class="el" href="group__public__ledger2__actions.html#ga99d949cfbb551a79f7c54ba709d4ae89" title="Откат ранее проведённой операции (operation o.adj.rev).">ledger2::revert</a> в Столе заказов не используются.  <a href="namespaceoperations_1_1marketplace.html#acce94bd91e1ebc28225aab2b3262d4ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:acce94bd91e1ebc28225aab2b3262d4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841febd957e7b2a8ec6e95768a3cc353"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a841febd957e7b2a8ec6e95768a3cc353">operations::marketplace::WRITE_OFF_PERISHABLE</a> = &quot;o.mkt.wroff&quot;_n</td></tr>
+<tr class="memdesc:a841febd957e7b2a8ec6e95768a3cc353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Утилизация скоропорта со склада (NONE Dr 86 / Cr 10). По протоколу совета.  <a href="namespaceoperations_1_1marketplace.html#a841febd957e7b2a8ec6e95768a3cc353">Подробнее...</a><br /></td></tr>
+<tr class="separator:a841febd957e7b2a8ec6e95768a3cc353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e743fee33ecf27eccc9fbde9176e50b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a1e743fee33ecf27eccc9fbde9176e50b">operations::marketplace::MARKDOWN_LOSS</a> = &quot;o.mkt.loss&quot;_n</td></tr>
+<tr class="memdesc:a1e743fee33ecf27eccc9fbde9176e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уценка при выдаче из остатка кооператива (NONE Dr 91 / Cr 10): разница между ценой прибытия и фактической ценой выдачи выбывает со склада в прочие расходы. Вместе с o.mkt.consum даёт выбытие по полной стоимости прибытия — на счёте 10 ничего не зависает. Накопленный расход на 91 погашается позже отдельным процессом (Dr 86 / Cr 91, аналогично списанию скоропорта через совет — пока не реализован, requirement 76 вопрос 4).  <a href="namespaceoperations_1_1marketplace.html#a1e743fee33ecf27eccc9fbde9176e50b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1e743fee33ecf27eccc9fbde9176e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904a4094ced40c4bcaba2910403f45e9"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a904a4094ced40c4bcaba2910403f45e9">operations::marketplace::MEMBERSHIP_FEE_LOCK</a> = &quot;o.mkt.fee&quot;_n</td></tr>
+<tr class="memdesc:a904a4094ced40c4bcaba2910403f45e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка членского взноса при создании заказа (TRANSFER w.wal.share → w.mkt.fee, Dr 80 / Cr 86 — как o.mkt.lock). Взнос считается от единой ставки кооператива и фиксируется явным полем Order.membership_fee; на signiss2 при факте больше заказа — дособирается этой же операцией.  <a href="namespaceoperations_1_1marketplace.html#a904a4094ced40c4bcaba2910403f45e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a904a4094ced40c4bcaba2910403f45e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a59aa30ac7b5187c7a79f3d8209bdb5be">operations::marketplace::MEMBERSHIP_FEE_REFUND</a> = &quot;o.mkt.refund&quot;_n</td></tr>
+<tr class="memdesc:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неиспользованной части членского взноса (TRANSFER w.mkt.fee → w.mkt.member, без Dr/Cr — оба кошелька на 86). Срабатывает при отмене заказа (полностью) и при недовыдаче (пропорционально факту); симметричен o.mkt.unlock для резерва стоимости.  <a href="namespaceoperations_1_1marketplace.html#a59aa30ac7b5187c7a79f3d8209bdb5be">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188ca2ceecf233b93fc7d16634ea2cf4"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a188ca2ceecf233b93fc7d16634ea2cf4">operations::marketplace::LOCK_FEE_FROM_MEMBER</a> = &quot;o.mkt.lockmf&quot;_n</td></tr>
+<tr class="memdesc:a188ca2ceecf233b93fc7d16634ea2cf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Блокировка членского взноса под заказ из уже внесённых членских средств пайщика (TRANSFER w.mkt.member → w.mkt.fee, без Dr/Cr — оба кошелька на 86). Парный по взносу к o.mkt.lockm (тот добирает тело заказа): stockorder фондируется из членского кошелька «Стола заказов» начисто, паевой сперва конвертируется отдельным действием (o.mkt.conv). Инверсия o.mkt.refund.  <a href="namespaceoperations_1_1marketplace.html#a188ca2ceecf233b93fc7d16634ea2cf4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a188ca2ceecf233b93fc7d16634ea2cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54ac65e900d0445b15ec3316c1ffb54"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#af54ac65e900d0445b15ec3316c1ffb54">operations::marketplace::REFUSAL_PENALTY</a> = &quot;o.mkt.penal&quot;_n</td></tr>
+<tr class="memdesc:af54ac65e900d0445b15ec3316c1ffb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание 50% при отказе пайщика от получения после акцепта поставщиком (TRANSFER w.mkt.order → w.mkt.fee, без Dr/Cr — оба кошелька на 86). Транзит: удержанная половина тела заказа кладётся в пул членских взносов, откуда вместе с удержанной половиной взноса единым o.brn.common (<a class="el" href="namespace_branch.html#abc61d8d8abb14b83545c1fd64fdf9a3e" title="Inline-вызов branch::accrue от контракта-источника членских взносов (requirement b6 «Экономика КУ»,...">Branch::accrue</a>) зачисляется в общий кошелёк КУ. Прямой TRANSFER w.mkt.order[пайщик] → w.brn.common[braname] невозможен — walletop держит один username на обе стороны. Имущество остаётся на складе КУ; вторая половина возвращается пайщику (o.mkt.unlock + o.mkt.refund).  <a href="namespaceoperations_1_1marketplace.html#af54ac65e900d0445b15ec3316c1ffb54">Подробнее...</a><br /></td></tr>
+<tr class="separator:af54ac65e900d0445b15ec3316c1ffb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fb42902a668b939ba1c6ae9a3b82c77"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a3fb42902a668b939ba1c6ae9a3b82c77">operations::branch::DISTRIBUTE_PERSONAL</a> = &quot;o.brn.person&quot;_n</td></tr>
+<tr class="memdesc:a3fb42902a668b939ba1c6ae9a3b82c77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Распределение доверенному/председателю КУ при ручном распределении председателем (TRANSFER w.brn.pool → w.brn.person, без Dr/Cr — внутри 86). Доля = вес/Σвесов из реестра весов branch::weights; вторая нога двухходовки после o.brn.release.  <a href="namespaceoperations_1_1branch.html#a3fb42902a668b939ba1c6ae9a3b82c77">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3fb42902a668b939ba1c6ae9a3b82c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fd6f2e559d69e9eb4c9bbd1e4a671a"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#ad2fd6f2e559d69e9eb4c9bbd1e4a671a">operations::branch::DISTRIBUTE_COMMON</a> = &quot;o.brn.common&quot;_n</td></tr>
+<tr class="memdesc:ad2fd6f2e559d69e9eb4c9bbd1e4a671a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачисление 100% членского взноса в общий кошелёк КУ при финализации заказа (TRANSFER w.mkt.fee → w.brn.common, без Dr/Cr — внутри 86; username = braname КУ). Вызывается <a class="el" href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28" title="Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы)....">branch::accrue</a> инлайн от контракта-источника.  <a href="namespaceoperations_1_1branch.html#ad2fd6f2e559d69e9eb4c9bbd1e4a671a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad2fd6f2e559d69e9eb4c9bbd1e4a671a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65941c721e49e67786937c5b0367a699"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a65941c721e49e67786937c5b0367a699">operations::branch::RETURN_FEE_FROM_COMMON</a> = &quot;o.brn.retfee&quot;_n</td></tr>
+<tr class="memdesc:a65941c721e49e67786937c5b0367a699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат членского взноса из общего кошелька КУ при гарантийном возврате имущества (TRANSFER w.brn.common → w.mkt.fee, без Dr/Cr — внутри 86; username = braname КУ). Точная инверсия DISTRIBUTE_COMMON: взнос идёт обратно тем же путём, каким пришёл. Первая нога двухходовки возврата — вторая (w.mkt.fee → w.mkt.member заказчика) выполняется существующей MEMBERSHIP_FEE_REFUND. Прямой TRANSFER w.brn.common[braname] → w.mkt.member[пайщик] невозможен: walletop держит один username на обе стороны, поэтому транзит через COOPERATIVE-пул w.mkt.fee (тот же приём, что в REFUSAL_PENALTY и RELEASE_FROM_COMMON). Вызывается <a class="el" href="group__public__branch__actions.html#gada32da54e27c99a222b80bdd47a3974c" title="Возврат членских взносов КУ из общего кошелька участка обратно в пул взносов программы-источника (o....">branch::retfee</a> инлайн от контракта-источника.  <a href="namespaceoperations_1_1branch.html#a65941c721e49e67786937c5b0367a699">Подробнее...</a><br /></td></tr>
+<tr class="separator:a65941c721e49e67786937c5b0367a699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f151d52f3f3fe6d351fed6ca9fb3d7"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a67f151d52f3f3fe6d351fed6ca9fb3d7">operations::branch::RELEASE_FROM_COMMON</a> = &quot;o.brn.release&quot;_n</td></tr>
+<tr class="memdesc:a67f151d52f3f3fe6d351fed6ca9fb3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Изъятие из общего кошелька КУ в транзитный пул ручного распределения (TRANSFER w.brn.common → w.brn.pool, без Dr/Cr — внутри 86; username = braname). Первая нога двухходовки распределения: один username на операцию — поэтому common→person идёт через COOPERATIVE-транзит w.brn.pool.  <a href="namespaceoperations_1_1branch.html#a67f151d52f3f3fe6d351fed6ca9fb3d7">Подробнее...</a><br /></td></tr>
+<tr class="separator:a67f151d52f3f3fe6d351fed6ca9fb3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a54373a21971905cf7a9d8b69e281b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a17a54373a21971905cf7a9d8b69e281b">operations::branch::SPEND_COMMON</a> = &quot;o.brn.spend&quot;_n</td></tr>
+<tr class="memdesc:a17a54373a21971905cf7a9d8b69e281b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прямая оплата расхода кооперативного участка по реквизитам получателя (BURN с w.brn.expns, Dr 86 / Cr 51 — выплата с расчётного счёта после подтверждения кассиром). Роль <code>direct</code> в наборе шасси расходов для КУ; средства попадают в пул расходов при создании служебной записки (o.brn.expfnd).  <a href="namespaceoperations_1_1branch.html#a17a54373a21971905cf7a9d8b69e281b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a17a54373a21971905cf7a9d8b69e281b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dc2d37ff64253b9a923c535c944fc0e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a5dc2d37ff64253b9a923c535c944fc0e">operations::branch::EXPENSE_FUND</a> = &quot;o.brn.expfnd&quot;_n</td></tr>
+<tr class="memdesc:a5dc2d37ff64253b9a923c535c944fc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выделение средств участка под расход (TRANSFER w.brn.common → w.brn.expns, без Dr/Cr — внутри 86; username = braname). Выполняется при создании служебной записки: сумма расхода уходит из общего кошелька в пул расходов и перестаёт быть доступной распределению.  <a href="namespaceoperations_1_1branch.html#a5dc2d37ff64253b9a923c535c944fc0e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5dc2d37ff64253b9a923c535c944fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a785c3a73c9ee4beaf5fdfa762b4e1"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a26a785c3a73c9ee4beaf5fdfa762b4e1">operations::branch::EXPENSE_UNFUND</a> = &quot;o.brn.expunf&quot;_n</td></tr>
+<tr class="memdesc:a26a785c3a73c9ee4beaf5fdfa762b4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неизрасходованных средств из пула расходов в общий кошелёк участка (TRANSFER w.brn.expns → w.brn.common, без Dr/Cr — внутри 86; username = braname). Инверсия o.brn.expfnd: совет отклонил расход либо расход закрыт на сумму меньше запланированной.  <a href="namespaceoperations_1_1branch.html#a26a785c3a73c9ee4beaf5fdfa762b4e1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a26a785c3a73c9ee4beaf5fdfa762b4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429a80b951b31e3e6dcad0a9e199d358"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a429a80b951b31e3e6dcad0a9e199d358">operations::branch::EXPENSE_ADVANCE</a> = &quot;o.brn.expadv&quot;_n</td></tr>
+<tr class="memdesc:a429a80b951b31e3e6dcad0a9e199d358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выдача аванса под отчёт по расходу участка (TRANSFER w.brn.expns → w.exp.adv, Dr 86 / Cr 51 — деньги ушли с расчётного счёта получателю; username = получатель аванса). Роль <code>advance</code> в наборе шасси расходов для КУ.  <a href="namespaceoperations_1_1branch.html#a429a80b951b31e3e6dcad0a9e199d358">Подробнее...</a><br /></td></tr>
+<tr class="separator:a429a80b951b31e3e6dcad0a9e199d358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd02058a43150676d08d490f22128ff"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#aadd02058a43150676d08d490f22128ff">operations::branch::EXPENSE_REPORT</a> = &quot;o.brn.exprpt&quot;_n</td></tr>
+<tr class="memdesc:aadd02058a43150676d08d490f22128ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие подотчёта по расходу участка отчётом с чеками (BURN с w.exp.adv, без Dr/Cr — проводка Dr 86 / Cr 51 уже сделана при выдаче аванса). Роль <code>report</code> в наборе шасси расходов для КУ.  <a href="namespaceoperations_1_1branch.html#aadd02058a43150676d08d490f22128ff">Подробнее...</a><br /></td></tr>
+<tr class="separator:aadd02058a43150676d08d490f22128ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c8fdacd953cebc94428513b1e71ab4"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a00c8fdacd953cebc94428513b1e71ab4">operations::branch::EXPENSE_RETURN</a> = &quot;o.brn.expret&quot;_n</td></tr>
+<tr class="memdesc:a00c8fdacd953cebc94428513b1e71ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неиспользованного аванса под отчёт в пул расходов участка (TRANSFER w.exp.adv → w.brn.expns, Dr 51 / Cr 86 — деньги вернулись на расчётный счёт). Роль <code>refund</code> в наборе шасси расходов для КУ.  <a href="namespaceoperations_1_1branch.html#a00c8fdacd953cebc94428513b1e71ab4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00c8fdacd953cebc94428513b1e71ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa263d7d132e53a248b4ccf34a89c7de5"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#aa263d7d132e53a248b4ccf34a89c7de5">operations::branch::EXPENSE_OVERSPEND</a> = &quot;o.brn.expovr&quot;_n</td></tr>
+<tr class="memdesc:aa263d7d132e53a248b4ccf34a89c7de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доплата сверх выданного аванса по расходу участка (TRANSFER w.brn.expns → w.exp.adv, Dr 86 / Cr 51). Роль <code>overspend</code> в наборе шасси расходов для КУ; сразу за ней шасси закрывает подотчёт отчётом.  <a href="namespaceoperations_1_1branch.html#aa263d7d132e53a248b4ccf34a89c7de5">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa263d7d132e53a248b4ccf34a89c7de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8128b90e46e066b49a6b66ade5e9f29"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#aa8128b90e46e066b49a6b66ade5e9f29">operations::branch::FINANCIAL_AID</a> = &quot;o.brn.aid&quot;_n</td></tr>
+<tr class="memdesc:aa8128b90e46e066b49a6b66ade5e9f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Материальная помощь доверенному КУ, сумма К ВЫПЛАТЕ за вычетом налога (BURN с w.brn.person, Dr 86 / Cr 51 — выплата с расчётного счёта по заявлению, после подтверждения кассиром). Парная операция удержания — FINANCIAL_AID_TAX, применяется той же транзакцией.  <a href="namespaceoperations_1_1branch.html#aa8128b90e46e066b49a6b66ade5e9f29">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8128b90e46e066b49a6b66ade5e9f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c20b5fe8762825687b4f4cc6bac518"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a58c20b5fe8762825687b4f4cc6bac518">operations::branch::FINANCIAL_AID_TAX</a> = &quot;o.brn.aidtax&quot;_n</td></tr>
+<tr class="memdesc:a58c20b5fe8762825687b4f4cc6bac518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание НДФЛ из материальной помощи (TRANSFER w.brn.person → w.sov.ndfl, Dr 86 / Cr 68). Кооператив — налоговый агент: с кошелька получателя списывается вся сумма заявления, на руки уходит остаток. Деньги при этом с расчётного счёта не уходят — обязательство висит на 68 до платежа в бюджет (TAX_PAYMENT).  <a href="namespaceoperations_1_1branch.html#a58c20b5fe8762825687b4f4cc6bac518">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58c20b5fe8762825687b4f4cc6bac518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38dfe7f83be2df3c3a1e4a9147736bd4"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1branch.html#a38dfe7f83be2df3c3a1e4a9147736bd4">operations::branch::CONVERT_TO_MKT</a> = &quot;o.brn.conv&quot;_n</td></tr>
+<tr class="memdesc:a38dfe7f83be2df3c3a1e4a9147736bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод персональных средств доверенного в членский кошелёк «Стола заказов» (TRANSFER w.brn.person → w.mkt.member, без Dr/Cr — внутри 86) для заказов как обычный пайщик.  <a href="namespaceoperations_1_1branch.html#a38dfe7f83be2df3c3a1e4a9147736bd4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a38dfe7f83be2df3c3a1e4a9147736bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa390d03d4c1b0a513bf3daa9eb22c33e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1soviet.html#aa390d03d4c1b0a513bf3daa9eb22c33e">operations::soviet::CONVERT_AXN</a> = &quot;o.sov.axncnv&quot;_n</td></tr>
+<tr class="memdesc:aa390d03d4c1b0a513bf3daa9eb22c33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Трансляция паевого взноса в членский (Dr 80 / Cr 86, TRANSFER SHARE_FUND_PAY → DELEGATE_FEES).  <a href="namespaceoperations_1_1soviet.html#aa390d03d4c1b0a513bf3daa9eb22c33e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa390d03d4c1b0a513bf3daa9eb22c33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d98963b78aa9781b344c7479e22d9a0"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1soviet.html#a9d98963b78aa9781b344c7479e22d9a0">operations::soviet::TAX_PAYMENT</a> = &quot;o.sov.taxpay&quot;_n</td></tr>
+<tr class="memdesc:a9d98963b78aa9781b344c7479e22d9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечисление удержанного НДФЛ в бюджет единым налоговым платежом (BURN с w.sov.ndfl, Dr 68 / Cr 51). Инициирует бухгалтер, подтверждает кассир; сумма не может превышать остаток кошелька — перечислить больше удержанного налоговый агент не вправе. Префикс кооперативный, а не программы-источника: в один кошелёк стекаются удержания любой программы, выплатившей доход физлицу.  <a href="namespaceoperations_1_1soviet.html#a9d98963b78aa9781b344c7479e22d9a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9d98963b78aa9781b344c7479e22d9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4f8b324bd7a1be9b75a727fbd0c8e2"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html#aeb4f8b324bd7a1be9b75a727fbd0c8e2">operations::expense::BLAGO_ADVANCE</a> = &quot;o.exp.blgadv&quot;_n</td></tr>
+<tr class="memdesc:aeb4f8b324bd7a1be9b75a727fbd0c8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выдача подотчётных из пула расходов (TRANSFER PROGRAM_EXPENSE_POOL → ADVANCE_HOLD, Dr 08 / Cr 51).  <a href="namespaceoperations_1_1expense.html#aeb4f8b324bd7a1be9b75a727fbd0c8e2">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeb4f8b324bd7a1be9b75a727fbd0c8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411a8df898d72d31b5b566bed952dfb4"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html#a411a8df898d72d31b5b566bed952dfb4">operations::expense::BLAGO_DIRECT</a> = &quot;o.exp.blgdir&quot;_n</td></tr>
+<tr class="memdesc:a411a8df898d72d31b5b566bed952dfb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прямая оплата из пула расходов (BURN PROGRAM_EXPENSE_POOL, Dr 08 / Cr 51).  <a href="namespaceoperations_1_1expense.html#a411a8df898d72d31b5b566bed952dfb4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a411a8df898d72d31b5b566bed952dfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13110a47b920cca4a7a976865fc456e5"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html#a13110a47b920cca4a7a976865fc456e5">operations::expense::ADVANCE_REPORT</a> = &quot;o.exp.advrpt&quot;_n</td></tr>
+<tr class="memdesc:a13110a47b920cca4a7a976865fc456e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие подотчёта пайщика (BURN ADVANCE_HOLD, без бухпроводки — canal 08/51 уже сделан на blgadv).  <a href="namespaceoperations_1_1expense.html#a13110a47b920cca4a7a976865fc456e5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a13110a47b920cca4a7a976865fc456e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af639dd0a850c22dfc6e8ba0732696ca2"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html#af639dd0a850c22dfc6e8ba0732696ca2">operations::expense::ADVANCE_RETURN</a> = &quot;o.exp.advret&quot;_n</td></tr>
+<tr class="memdesc:af639dd0a850c22dfc6e8ba0732696ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неиспользованного подотчёта (TRANSFER ADVANCE_HOLD → PROGRAM_EXPENSE_POOL, Dr 51 / Cr 08).  <a href="namespaceoperations_1_1expense.html#af639dd0a850c22dfc6e8ba0732696ca2">Подробнее...</a><br /></td></tr>
+<tr class="separator:af639dd0a850c22dfc6e8ba0732696ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1dbf38f03857db8fa056b1fd38947a"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1expense.html#a2a1dbf38f03857db8fa056b1fd38947a">operations::expense::OVERSPEND</a> = &quot;o.exp.over&quot;_n</td></tr>
+<tr class="memdesc:a2a1dbf38f03857db8fa056b1fd38947a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доплата сверх подотчёта (TRANSFER PROGRAM_EXPENSE_POOL → ADVANCE_HOLD, Dr 08 / Cr 51); сразу за ней expense вызывает ADVANCE_REPORT.  <a href="namespaceoperations_1_1expense.html#a2a1dbf38f03857db8fa056b1fd38947a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a1dbf38f03857db8fa056b1fd38947a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bf70b43281a5cc9792cb575c0242d2"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1migration.html#a50bf70b43281a5cc9792cb575c0242d2">operations::migration::MIN_SHARE</a> = &quot;o.mig.minshr&quot;_n</td></tr>
+<tr class="memdesc:a50bf70b43281a5cc9792cb575c0242d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перенос: минимальный паевой взнос (Dr 51 / Cr 80, ISSUE MIN_SHARE_FUND).  <a href="namespaceoperations_1_1migration.html#a50bf70b43281a5cc9792cb575c0242d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a50bf70b43281a5cc9792cb575c0242d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2effd1780689b3f5243358c8008b6ce9"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1migration.html#a2effd1780689b3f5243358c8008b6ce9">operations::migration::SHARE</a> = &quot;o.mig.share&quot;_n</td></tr>
+<tr class="memdesc:a2effd1780689b3f5243358c8008b6ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перенос: остаток паевых деньгами (Dr 51 / Cr 80, ISSUE SHARE_FUND_PAY).  <a href="namespaceoperations_1_1migration.html#a2effd1780689b3f5243358c8008b6ce9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2effd1780689b3f5243358c8008b6ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94cc98d2065a5e17302f8c403151619"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1migration.html#af94cc98d2065a5e17302f8c403151619">operations::migration::ENTRY</a> = &quot;o.mig.entry&quot;_n</td></tr>
+<tr class="memdesc:af94cc98d2065a5e17302f8c403151619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перенос: вступительные (Dr 51 / Cr 86, ISSUE ENTRANCE_FEES).  <a href="namespaceoperations_1_1migration.html#af94cc98d2065a5e17302f8c403151619">Подробнее...</a><br /></td></tr>
+<tr class="separator:af94cc98d2065a5e17302f8c403151619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70baae035ca1c5230a32d6430f7894bf"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1adjustment.html#a70baae035ca1c5230a32d6430f7894bf">operations::adjustment::WALMOVE</a> = &quot;o.adj.walmove&quot;_n</td></tr>
+<tr class="memdesc:a70baae035ca1c5230a32d6430f7894bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод между кошельками внутри одного бух.счёта (без Dr/Cr).  <a href="namespaceoperations_1_1adjustment.html#a70baae035ca1c5230a32d6430f7894bf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70baae035ca1c5230a32d6430f7894bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610c227b7965bd65b2a738433ac02ced"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1adjustment.html#a610c227b7965bd65b2a738433ac02ced">operations::adjustment::REVERSAL</a> = &quot;o.adj.rev&quot;_n</td></tr>
+<tr class="memdesc:a610c227b7965bd65b2a738433ac02ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Откат операции: зеркальная проводка по operation_id.  <a href="namespaceoperations_1_1adjustment.html#a610c227b7965bd65b2a738433ac02ced">Подробнее...</a><br /></td></tr>
+<tr class="separator:a610c227b7965bd65b2a738433ac02ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80caa2ac468f2b7ac8d290e6370b0633"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">OPERATION_REGISTRY</a> []</td></tr>
+<tr class="memdesc:a80caa2ac468f2b7ac8d290e6370b0633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хардкод-реестр именованных операций.  <a href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">Подробнее...</a><br /></td></tr>
+<tr class="separator:a80caa2ac468f2b7ac8d290e6370b0633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6d4749c66a7d822cca2f4f99d26c34"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a6a6d4749c66a7d822cca2f4f99d26c34">OPERATION_REGISTRY_SIZE</a> = sizeof(<a class="el" href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">OPERATION_REGISTRY</a>) / sizeof(<a class="el" href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">OPERATION_REGISTRY</a>[0])</td></tr>
+<tr class="separator:a6a6d4749c66a7d822cca2f4f99d26c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af345f5acd127b1d41cf47e00e3307d90"><td class="memItemLeft" align="right" valign="top">constexpr std::array&lt; <a class="el" href="struct_operation_adjustment_entry.html">OperationAdjustmentEntry</a>, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#af345f5acd127b1d41cf47e00e3307d90">OPERATION_ADJUSTMENT_REGISTRY</a></td></tr>
+<tr class="separator:af345f5acd127b1d41cf47e00e3307d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eaf91d29cf48023100023a9b4406474"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="struct_expense_operation_set.html">ExpenseOperationSet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#a3eaf91d29cf48023100023a9b4406474">EXPENSE_OPERATION_SETS</a> []</td></tr>
+<tr class="separator:a3eaf91d29cf48023100023a9b4406474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca798544654d034ef82cb1f982b6c36d"><td class="memItemLeft" align="right" valign="top">static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="operations_8hpp.html#aca798544654d034ef82cb1f982b6c36d">EXPENSE_OPERATION_SETS_SIZE</a></td></tr>
+<tr class="separator:aca798544654d034ef82cb1f982b6c36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="aa831b57772606993ff6c32fa0c6c910b" name="aa831b57772606993ff6c32fa0c6c910b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa831b57772606993ff6c32fa0c6c910b">&#9670;&nbsp;</a></span>WalletOp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="operations_8hpp.html#aa831b57772606993ff6c32fa0c6c910b">WalletOp</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Элементарные операции по кошелькам (ADR-003). </p>
+<p >Семантика «без бухпроводок» — НЕ через отдельный walletop, а через пару <code>(debit_account_id == 0, credit_account_id == 0)</code> на уровне записи реестра. Compile-time правило <code>(debit==0) ⇔ (credit==0)</code> ловит смешанные пары. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="aa831b57772606993ff6c32fa0c6c910ba1c8ef82c6249e38b3b032a915a28343f" name="aa831b57772606993ff6c32fa0c6c910ba1c8ef82c6249e38b3b032a915a28343f"></a>ISSUE&#160;</td><td class="fielddoc"><p >первичный вход средств на кошелёк wallet_to (wallet_from = empty) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa831b57772606993ff6c32fa0c6c910baeb5ddb3b6096fb90ff720d9c3e2a6628" name="aa831b57772606993ff6c32fa0c6c910baeb5ddb3b6096fb90ff720d9c3e2a6628"></a>TRANSFER&#160;</td><td class="fielddoc"><p >перемещение wallet_from → wallet_to (с Dr/Cr ИЛИ без — по парам account_id) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa831b57772606993ff6c32fa0c6c910ba6ce5f855f667c4a7b51360d8c37e2e66" name="aa831b57772606993ff6c32fa0c6c910ba6ce5f855f667c4a7b51360d8c37e2e66"></a>BURN&#160;</td><td class="fielddoc"><p >изъятие amount с wallet_from-&gt;available, без wallet_to. Покрывает оба кейса: (a) штатное сжигание как бизнес-операция в OPERATION_REGISTRY; (b) зеркало ISSUE при <code><a class="el" href="group__public__ledger2__actions.html#ga99d949cfbb551a79f7c54ba709d4ae89" title="Откат ранее проведённой операции (operation o.adj.rev).">ledger2::revert</a></code> (различие — через operation_code: <code>o.adj.rev</code> для adjustment-mirror). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa831b57772606993ff6c32fa0c6c910bab50339a10e1de285ac99d4c3990b8693" name="aa831b57772606993ff6c32fa0c6c910bab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"><p >только бухпроводка без перемещения средств (wallet_from = empty, wallet_to = empty, debit ≠ 0, credit ≠ 0). Покрывает кейсы внутрибалансовых проводок типа Dr 04 / Cr 08 (приём РИД в НМА), когда кошелёк уже на нужном программном фонде. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="adfadb690ed13d816fd3d007de760ecf4" name="adfadb690ed13d816fd3d007de760ecf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfadb690ed13d816fd3d007de760ecf4">&#9670;&nbsp;</a></span>find_adjustment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const <a class="el" href="struct_operation_adjustment_entry.html">OperationAdjustmentEntry</a> * find_adjustment </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>operation_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7dc51ffef52133d9d673d566a42282ca" name="a7dc51ffef52133d9d673d566a42282ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc51ffef52133d9d673d566a42282ca">&#9670;&nbsp;</a></span>find_expense_operation_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_expense_operation_set.html">ExpenseOperationSet</a> * find_expense_operation_set </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_wallet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поиск набора операций шасси расходов по кошельку-источнику. </p>
+
+</div>
+</div>
+<a id="a28e41b9eff038beb47d1e4d21be97cdf" name="a28e41b9eff038beb47d1e4d21be97cdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e41b9eff038beb47d1e4d21be97cdf">&#9670;&nbsp;</a></span>find_operation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a> * find_operation </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>operation_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Линейный поиск записи реестра по operation_code. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a3eaf91d29cf48023100023a9b4406474" name="a3eaf91d29cf48023100023a9b4406474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eaf91d29cf48023100023a9b4406474">&#9670;&nbsp;</a></span>EXPENSE_OPERATION_SETS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="struct_expense_operation_set.html">ExpenseOperationSet</a> EXPENSE_OPERATION_SETS[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  </div>
+<div class="line">  </div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#a297b8c11896731a6380a8cd752a0a9c5">ledger2_wallets::PROGRAM_EXPENSE_POOL</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1expense.html#aeb4f8b324bd7a1be9b75a727fbd0c8e2">operations::expense::BLAGO_ADVANCE</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1expense.html#a411a8df898d72d31b5b566bed952dfb4">operations::expense::BLAGO_DIRECT</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1expense.html#a13110a47b920cca4a7a976865fc456e5">operations::expense::ADVANCE_REPORT</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1expense.html#af639dd0a850c22dfc6e8ba0732696ca2">operations::expense::ADVANCE_RETURN</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1expense.html#a2a1dbf38f03857db8fa056b1fd38947a">operations::expense::OVERSPEND</a> },</div>
+<div class="line"> </div>
+<div class="line">  </div>
+<div class="line">  </div>
+<div class="line">  </div>
+<div class="line">  </div>
+<div class="line">  </div>
+<div class="line">  { <a class="code hl_variable" href="structledger2__wallets.html#ac3d114ac4e92fb42a9e1911d99852664">ledger2_wallets::BRANCH_EXPENSE_POOL</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1branch.html#a429a80b951b31e3e6dcad0a9e199d358">operations::branch::EXPENSE_ADVANCE</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1branch.html#a17a54373a21971905cf7a9d8b69e281b">operations::branch::SPEND_COMMON</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1branch.html#aadd02058a43150676d08d490f22128ff">operations::branch::EXPENSE_REPORT</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1branch.html#a00c8fdacd953cebc94428513b1e71ab4">operations::branch::EXPENSE_RETURN</a>,</div>
+<div class="line">    <a class="code hl_variable" href="namespaceoperations_1_1branch.html#aa263d7d132e53a248b4ccf34a89c7de5">operations::branch::EXPENSE_OVERSPEND</a> },</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespaceoperations_1_1branch_html_a00c8fdacd953cebc94428513b1e71ab4"><div class="ttname"><a href="namespaceoperations_1_1branch.html#a00c8fdacd953cebc94428513b1e71ab4">operations::branch::EXPENSE_RETURN</a></div><div class="ttdeci">constexpr eosio::name EXPENSE_RETURN</div><div class="ttdoc">Возврат неиспользованного аванса под отчёт в пул расходов участка (TRANSFER w.exp....</div><div class="ttdef"><b>Definition:</b> operations.hpp:122</div></div>
+<div class="ttc" id="anamespaceoperations_1_1branch_html_a17a54373a21971905cf7a9d8b69e281b"><div class="ttname"><a href="namespaceoperations_1_1branch.html#a17a54373a21971905cf7a9d8b69e281b">operations::branch::SPEND_COMMON</a></div><div class="ttdeci">constexpr eosio::name SPEND_COMMON</div><div class="ttdoc">Прямая оплата расхода кооперативного участка по реквизитам получателя (BURN с w.brn....</div><div class="ttdef"><b>Definition:</b> operations.hpp:117</div></div>
+<div class="ttc" id="anamespaceoperations_1_1branch_html_a429a80b951b31e3e6dcad0a9e199d358"><div class="ttname"><a href="namespaceoperations_1_1branch.html#a429a80b951b31e3e6dcad0a9e199d358">operations::branch::EXPENSE_ADVANCE</a></div><div class="ttdeci">constexpr eosio::name EXPENSE_ADVANCE</div><div class="ttdoc">Выдача аванса под отчёт по расходу участка (TRANSFER w.brn.expns → w.exp.adv, Dr 86 / Cr 51 — деньги ...</div><div class="ttdef"><b>Definition:</b> operations.hpp:120</div></div>
+<div class="ttc" id="anamespaceoperations_1_1branch_html_aa263d7d132e53a248b4ccf34a89c7de5"><div class="ttname"><a href="namespaceoperations_1_1branch.html#aa263d7d132e53a248b4ccf34a89c7de5">operations::branch::EXPENSE_OVERSPEND</a></div><div class="ttdeci">constexpr eosio::name EXPENSE_OVERSPEND</div><div class="ttdoc">Доплата сверх выданного аванса по расходу участка (TRANSFER w.brn.expns → w.exp.adv,...</div><div class="ttdef"><b>Definition:</b> operations.hpp:123</div></div>
+<div class="ttc" id="anamespaceoperations_1_1branch_html_aadd02058a43150676d08d490f22128ff"><div class="ttname"><a href="namespaceoperations_1_1branch.html#aadd02058a43150676d08d490f22128ff">operations::branch::EXPENSE_REPORT</a></div><div class="ttdeci">constexpr eosio::name EXPENSE_REPORT</div><div class="ttdoc">Закрытие подотчёта по расходу участка отчётом с чеками (BURN с w.exp.adv, без Dr/Cr — проводка Dr 86 ...</div><div class="ttdef"><b>Definition:</b> operations.hpp:121</div></div>
+<div class="ttc" id="anamespaceoperations_1_1expense_html_a13110a47b920cca4a7a976865fc456e5"><div class="ttname"><a href="namespaceoperations_1_1expense.html#a13110a47b920cca4a7a976865fc456e5">operations::expense::ADVANCE_REPORT</a></div><div class="ttdeci">constexpr eosio::name ADVANCE_REPORT</div><div class="ttdoc">Закрытие подотчёта пайщика (BURN ADVANCE_HOLD, без бухпроводки — canal 08/51 уже сделан на blgadv).</div><div class="ttdef"><b>Definition:</b> operations.hpp:151</div></div>
+<div class="ttc" id="anamespaceoperations_1_1expense_html_a2a1dbf38f03857db8fa056b1fd38947a"><div class="ttname"><a href="namespaceoperations_1_1expense.html#a2a1dbf38f03857db8fa056b1fd38947a">operations::expense::OVERSPEND</a></div><div class="ttdeci">constexpr eosio::name OVERSPEND</div><div class="ttdoc">Доплата сверх подотчёта (TRANSFER PROGRAM_EXPENSE_POOL → ADVANCE_HOLD, Dr 08 / Cr 51); сразу за ней e...</div><div class="ttdef"><b>Definition:</b> operations.hpp:153</div></div>
+<div class="ttc" id="anamespaceoperations_1_1expense_html_a411a8df898d72d31b5b566bed952dfb4"><div class="ttname"><a href="namespaceoperations_1_1expense.html#a411a8df898d72d31b5b566bed952dfb4">operations::expense::BLAGO_DIRECT</a></div><div class="ttdeci">constexpr eosio::name BLAGO_DIRECT</div><div class="ttdoc">Прямая оплата из пула расходов (BURN PROGRAM_EXPENSE_POOL, Dr 08 / Cr 51).</div><div class="ttdef"><b>Definition:</b> operations.hpp:150</div></div>
+<div class="ttc" id="anamespaceoperations_1_1expense_html_aeb4f8b324bd7a1be9b75a727fbd0c8e2"><div class="ttname"><a href="namespaceoperations_1_1expense.html#aeb4f8b324bd7a1be9b75a727fbd0c8e2">operations::expense::BLAGO_ADVANCE</a></div><div class="ttdeci">constexpr eosio::name BLAGO_ADVANCE</div><div class="ttdoc">Выдача подотчётных из пула расходов (TRANSFER PROGRAM_EXPENSE_POOL → ADVANCE_HOLD,...</div><div class="ttdef"><b>Definition:</b> operations.hpp:149</div></div>
+<div class="ttc" id="anamespaceoperations_1_1expense_html_af639dd0a850c22dfc6e8ba0732696ca2"><div class="ttname"><a href="namespaceoperations_1_1expense.html#af639dd0a850c22dfc6e8ba0732696ca2">operations::expense::ADVANCE_RETURN</a></div><div class="ttdeci">constexpr eosio::name ADVANCE_RETURN</div><div class="ttdoc">Возврат неиспользованного подотчёта (TRANSFER ADVANCE_HOLD → PROGRAM_EXPENSE_POOL,...</div><div class="ttdef"><b>Definition:</b> operations.hpp:152</div></div>
+<div class="ttc" id="astructledger2__wallets_html_a297b8c11896731a6380a8cd752a0a9c5"><div class="ttname"><a href="structledger2__wallets.html#a297b8c11896731a6380a8cd752a0a9c5">ledger2_wallets::PROGRAM_EXPENSE_POOL</a></div><div class="ttdeci">static constexpr eosio::name PROGRAM_EXPENSE_POOL</div><div class="ttdoc">Пул программных расходов ЦПП «Благорост» (COOPERATIVE) — кооперативный кошелёк, из которого шасси exp...</div><div class="ttdef"><b>Definition:</b> wallets.hpp:70</div></div>
+<div class="ttc" id="astructledger2__wallets_html_ac3d114ac4e92fb42a9e1911d99852664"><div class="ttname"><a href="structledger2__wallets.html#ac3d114ac4e92fb42a9e1911d99852664">ledger2_wallets::BRANCH_EXPENSE_POOL</a></div><div class="ttdeci">static constexpr eosio::name BRANCH_EXPENSE_POOL</div><div class="ttdoc">Пул расходов кооперативного участка (COOPERATIVE) — источник средств шасси расходов для КУ....</div><div class="ttdef"><b>Definition:</b> wallets.hpp:82</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aca798544654d034ef82cb1f982b6c36d" name="aca798544654d034ef82cb1f982b6c36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca798544654d034ef82cb1f982b6c36d">&#9670;&nbsp;</a></span>EXPENSE_OPERATION_SETS_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t EXPENSE_OPERATION_SETS_SIZE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">=</div>
+<div class="line">  <span class="keyword">sizeof</span>(<a class="code hl_variable" href="operations_8hpp.html#a3eaf91d29cf48023100023a9b4406474">EXPENSE_OPERATION_SETS</a>) / <span class="keyword">sizeof</span>(<a class="code hl_variable" href="operations_8hpp.html#a3eaf91d29cf48023100023a9b4406474">EXPENSE_OPERATION_SETS</a>[0])</div>
+<div class="ttc" id="aoperations_8hpp_html_a3eaf91d29cf48023100023a9b4406474"><div class="ttname"><a href="operations_8hpp.html#a3eaf91d29cf48023100023a9b4406474">EXPENSE_OPERATION_SETS</a></div><div class="ttdeci">static constexpr ExpenseOperationSet EXPENSE_OPERATION_SETS[]</div><div class="ttdef"><b>Definition:</b> operations.hpp:944</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af345f5acd127b1d41cf47e00e3307d90" name="af345f5acd127b1d41cf47e00e3307d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af345f5acd127b1d41cf47e00e3307d90">&#9670;&nbsp;</a></span>OPERATION_ADJUSTMENT_REGISTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::array&lt;<a class="el" href="struct_operation_adjustment_entry.html">OperationAdjustmentEntry</a>, 2&gt; OPERATION_ADJUSTMENT_REGISTRY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {{</div>
+<div class="line">  { <a class="code hl_variable" href="namespaceoperations_1_1adjustment.html#a70baae035ca1c5230a32d6430f7894bf">operations::adjustment::WALMOVE</a>,  <a class="code hl_variable" href="namespaceprocesses_1_1adjustment.html#ab9b1fddc2c3fb016589326ab23e48160">processes::adjustment::CORRECTION</a>, <span class="stringliteral">&quot;Перевод между кошельками&quot;</span> },</div>
+<div class="line">  { <a class="code hl_variable" href="namespaceoperations_1_1adjustment.html#a610c227b7965bd65b2a738433ac02ced">operations::adjustment::REVERSAL</a>, <a class="code hl_variable" href="namespaceprocesses_1_1adjustment.html#ab9b1fddc2c3fb016589326ab23e48160">processes::adjustment::CORRECTION</a>, <span class="stringliteral">&quot;Откат операции&quot;</span> },</div>
+<div class="line">}}</div>
+<div class="ttc" id="anamespaceoperations_1_1adjustment_html_a610c227b7965bd65b2a738433ac02ced"><div class="ttname"><a href="namespaceoperations_1_1adjustment.html#a610c227b7965bd65b2a738433ac02ced">operations::adjustment::REVERSAL</a></div><div class="ttdeci">constexpr eosio::name REVERSAL</div><div class="ttdoc">Откат операции: зеркальная проводка по operation_id.</div><div class="ttdef"><b>Definition:</b> operations.hpp:180</div></div>
+<div class="ttc" id="anamespaceoperations_1_1adjustment_html_a70baae035ca1c5230a32d6430f7894bf"><div class="ttname"><a href="namespaceoperations_1_1adjustment.html#a70baae035ca1c5230a32d6430f7894bf">operations::adjustment::WALMOVE</a></div><div class="ttdeci">constexpr eosio::name WALMOVE</div><div class="ttdoc">Перевод между кошельками внутри одного бух.счёта (без Dr/Cr).</div><div class="ttdef"><b>Definition:</b> operations.hpp:179</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1adjustment_html_ab9b1fddc2c3fb016589326ab23e48160"><div class="ttname"><a href="namespaceprocesses_1_1adjustment.html#ab9b1fddc2c3fb016589326ab23e48160">processes::adjustment::CORRECTION</a></div><div class="ttdeci">constexpr eosio::name CORRECTION</div><div class="ttdoc">Ручная корректировка председателя (перевод между кошельками или откат операции).</div><div class="ttdef"><b>Definition:</b> processes.hpp:109</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a80caa2ac468f2b7ac8d290e6370b0633" name="a80caa2ac468f2b7ac8d290e6370b0633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80caa2ac468f2b7ac8d290e6370b0633">&#9670;&nbsp;</a></span>OPERATION_REGISTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="struct_operation_registry_entry.html">OperationRegistryEntry</a> OPERATION_REGISTRY[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хардкод-реестр именованных операций. </p>
+<p >Порядок записей не важен (линейный поиск в <a class="el" href="group__public__ledger2__actions.html#ga88f979b5306132af67fee1107e7bd38e" title="Единая точка входа финансовых движений ledger2 (orchestrator).">ledger2::apply</a>). </p>
+
+</div>
+</div>
+<a id="a6a6d4749c66a7d822cca2f4f99d26c34" name="a6a6d4749c66a7d822cca2f4f99d26c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6d4749c66a7d822cca2f4f99d26c34">&#9670;&nbsp;</a></span>OPERATION_REGISTRY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr size_t OPERATION_REGISTRY_SIZE = sizeof(<a class="el" href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">OPERATION_REGISTRY</a>) / sizeof(<a class="el" href="operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633">OPERATION_REGISTRY</a>[0])</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_7da415c6c9db060620fae2ab355398f8.html">core</a></li><li class="navelem"><a class="el" href="dir_b4916a3099cb23442e8134726aaea1f6.html">ledger2</a></li><li class="navelem"><a class="el" href="operations_8hpp.html">operations.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/domain/table_branch_decisions.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('table__branch__decisions_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">table_branch_decisions.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="table__branch__decisions_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../consts.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="document__core_8hpp.html">document_core.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#a94685e0de3fc10827a1c78e810b9ae7c">   23</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint64_t <a class="code hl_variable" href="table__branch__decisions_8hpp.html#a94685e0de3fc10827a1c78e810b9ae7c">MIN_DECISION_QUORUM</a> = 3;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#aaa6a87c2c6ad5426a241dbef456b4a73">   28</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t <a class="code hl_variable" href="table__branch__decisions_8hpp.html#aaa6a87c2c6ad5426a241dbef456b4a73">DECISION_VOTING_WINDOW_SECONDS</a> = 15 * 60;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structdecision__point.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdecision__point.html">decision_point</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structdecision__point.html#a4abd2ec678dbade1b725201deb92ed56">   32</a></span>  std::string <a class="code hl_variable" href="structdecision__point.html#a4abd2ec678dbade1b725201deb92ed56">title</a>;     </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structdecision__point.html#a63f8dd695a880bc254ead198ed34a6a0">   33</a></span>  std::string <a class="code hl_variable" href="structdecision__point.html#a63f8dd695a880bc254ead198ed34a6a0">decision</a>;  </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structdecision__point.html#ab5cb34c856b617cd1bd40b044a1b262c">   34</a></span>  std::string <a class="code hl_variable" href="structdecision__point.html#ab5cb34c856b617cd1bd40b044a1b262c">context</a>;   </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structdecision__vote__point.html">   38</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdecision__vote__point.html">decision_vote_point</a> {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structdecision__vote__point.html#aa305531d2406558a16458994b9e2a9a1">   39</a></span>  uint64_t <a class="code hl_variable" href="structdecision__vote__point.html#aa305531d2406558a16458994b9e2a9a1">question_id</a>;  </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structdecision__vote__point.html#a962e875466aa716015d1e32ebcc21a65">   40</a></span>  eosio::name <a class="code hl_variable" href="structdecision__vote__point.html#a962e875466aa716015d1e32ebcc21a65">vote</a>;      </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structcoodecision.html">   48</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(BRANCH)]] <a class="code hl_struct" href="structcoodecision.html">coodecision</a> {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b">   49</a></span>  uint64_t <a class="code hl_variable" href="structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b">id</a>;                            </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structcoodecision.html#adcd35f011c2243be4533c3b9ac16d767">   50</a></span>  eosio::checksum256 <a class="code hl_variable" href="structcoodecision.html#adcd35f011c2243be4533c3b9ac16d767">hash</a>;                </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structcoodecision.html#a0e06c23f14c7241cfd7b78ba86d75942">   51</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#a0e06c23f14c7241cfd7b78ba86d75942">coopname</a>;                   </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structcoodecision.html#a967999fb40bb43a90e75dc7e38b64c95">   52</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#a967999fb40bb43a90e75dc7e38b64c95">type</a>;                       </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structcoodecision.html#a33f2f1bbfb6b02a3ed98e776e0e0648c">   53</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#a33f2f1bbfb6b02a3ed98e776e0e0648c">initiator</a>;                  </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structcoodecision.html#ae387ea0fa29956b129cd70192a658b6d">   54</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#ae387ea0fa29956b129cd70192a658b6d">chairman</a>;                   </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structcoodecision.html#a427c7f35357d1daabf26ca0b80f12668">   55</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#a427c7f35357d1daabf26ca0b80f12668">status</a>;                     </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structcoodecision.html#abcf479cb8d40f38b762fdf99b6f87fd0">   57</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#abcf479cb8d40f38b762fdf99b6f87fd0">proposal</a>;                     </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structcoodecision.html#a475cc75a999a50548b0f590afdcac99e">   58</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#a475cc75a999a50548b0f590afdcac99e">protocol</a>;                     </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structcoodecision.html#abeb213d02f690db3a8d0cd5f1a76172e">   59</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#abeb213d02f690db3a8d0cd5f1a76172e">petition</a>;                     </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structcoodecision.html#a5493279f220e9da0b4f6b2bc5bacb1cb">   60</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#a5493279f220e9da0b4f6b2bc5bacb1cb">liability</a>;                    </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structcoodecision.html#a6c3c48238dbdb7bad1c68fd98c5d7930">   61</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#a6c3c48238dbdb7bad1c68fd98c5d7930">authority</a>;                     </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structcoodecision.html#ae7c1dd2dfa5c7bf7ca224ee9074203c3">   62</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="structcoodecision.html#ae7c1dd2dfa5c7bf7ca224ee9074203c3">authorization</a>;                </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structcoodecision.html#a237c32813004573583b9f5dc2ae27d9b">   64</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structcoodecision.html#a237c32813004573583b9f5dc2ae27d9b">open_at</a>;          </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structcoodecision.html#a6d5fcecd02b04e189fc68346d91d399d">   65</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structcoodecision.html#a6d5fcecd02b04e189fc68346d91d399d">close_at</a>;         </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structcoodecision.html#ad5f58fdb7b4e5d3587bfe74db3b26723">   66</a></span>  uint64_t <a class="code hl_variable" href="structcoodecision.html#ad5f58fdb7b4e5d3587bfe74db3b26723">signed_ballots</a>;                </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structcoodecision.html#a6c6426c8a844b09d0390ff0f41bc1afd">   68</a></span>  eosio::name <a class="code hl_variable" href="structcoodecision.html#a6c6426c8a844b09d0390ff0f41bc1afd">braname</a>;                    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structcoodecision.html#ab5d42f9eabe78d37a6313e0ef62ae837">   69</a></span>  std::string <a class="code hl_variable" href="structcoodecision.html#ab5d42f9eabe78d37a6313e0ef62ae837">address</a>;                    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structcoodecision.html#aa0ceea2ffa96119bd8e942e451407343">   71</a></span>  std::vector&lt;eosio::name&gt; <a class="code hl_variable" href="structcoodecision.html#aa0ceea2ffa96119bd8e942e451407343">participants</a>;  </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structcoodecision.html#a5eb112934646fae9c29ebfef88177fc4">   72</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structcoodecision.html#a5eb112934646fae9c29ebfef88177fc4">created_at</a>;       </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// Место и время проведения собрания НЕ публикуются в блокчейн —</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// это приватные данные пайщиков, живут в БД платформы (composite db-слой).</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structcoodecision.html#afadd9c48960455c8764276d9905c6479">   76</a></span>  uint64_t <a class="code hl_function" href="structcoodecision.html#afadd9c48960455c8764276d9905c6479">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b">id</a>; }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structcoodecision.html#a170ce5b80245b67ab34da731b432d063">   77</a></span>  eosio::checksum256 <a class="code hl_function" href="structcoodecision.html#a170ce5b80245b67ab34da731b432d063">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structcoodecision.html#adcd35f011c2243be4533c3b9ac16d767">hash</a>; }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structcoodecision.html#a1934494c62b05843e6d5237e09dc1fcb">   79</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="structcoodecision.html#a1934494c62b05843e6d5237e09dc1fcb">is_participant</a>(<span class="keyword">const</span> eosio::name &amp;username)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> std::find(participants.begin(), participants.end(), username) != participants.end();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="stringliteral">&quot;decisions&quot;</span>_n, <a class="code hl_struct" href="structcoodecision.html">coodecision</a>,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n, eosio::const_mem_fun&lt;coodecision, eosio::checksum256, &amp;coodecision::by_hash&gt;&gt;&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#a2c8a4e8a7147384ddcd2e91069e34d6d">   87</a></span>    <a class="code hl_typedef" href="table__branch__decisions_8hpp.html#a2c8a4e8a7147384ddcd2e91069e34d6d">decision_index</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="structcoodecquest.html">   94</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(BRANCH)]] <a class="code hl_struct" href="structcoodecquest.html">coodecquest</a> {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="structcoodecquest.html#ac645d209e14fc989db183bc6f5e9cd03">   95</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#ac645d209e14fc989db183bc6f5e9cd03">id</a>;                                 </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structcoodecquest.html#af04e8047db3ebe65a55a6fbbe66a46c8">   96</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#af04e8047db3ebe65a55a6fbbe66a46c8">decision_id</a>;                        </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="structcoodecquest.html#ad9a69149e1c695c1c3f197c5991ddd47">   97</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#ad9a69149e1c695c1c3f197c5991ddd47">number</a>;                             </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a64724088249106427af3cb50e4b40309">   98</a></span>  eosio::name <a class="code hl_variable" href="structcoodecquest.html#a64724088249106427af3cb50e4b40309">coopname</a>;                        </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structcoodecquest.html#aa2a5de1b106521ebb4622c827370eab2">  100</a></span>  std::string <a class="code hl_variable" href="structcoodecquest.html#aa2a5de1b106521ebb4622c827370eab2">title</a>;                           </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a6b5279c801457bdfcc36121bc2d65d7d">  101</a></span>  std::string <a class="code hl_variable" href="structcoodecquest.html#a6b5279c801457bdfcc36121bc2d65d7d">decision</a>;                        </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a61421cad8bbf26ea62f6f550cf1bff90">  102</a></span>  std::string <a class="code hl_variable" href="structcoodecquest.html#a61421cad8bbf26ea62f6f550cf1bff90">context</a>;                         </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a690ebcc406b1ecac7d0f52aac657a55f">  104</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#a690ebcc406b1ecac7d0f52aac657a55f">counter_votes_for</a>;                  </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a636fc946b0ecd08888bcc7264c221e3d">  105</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#a636fc946b0ecd08888bcc7264c221e3d">counter_votes_against</a>;              </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structcoodecquest.html#ad8485f98142cfcdb5b5afc0f04b2228e">  106</a></span>  uint64_t <a class="code hl_variable" href="structcoodecquest.html#ad8485f98142cfcdb5b5afc0f04b2228e">counter_votes_abstained</a>;            </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a00a9f2a811ebd10570082d6576ab46b0">  108</a></span>  std::vector&lt;eosio::name&gt; <a class="code hl_variable" href="structcoodecquest.html#a00a9f2a811ebd10570082d6576ab46b0">voters_for</a>;         </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a71111c17b5aff4119963597b2a404582">  109</a></span>  std::vector&lt;eosio::name&gt; <a class="code hl_variable" href="structcoodecquest.html#a71111c17b5aff4119963597b2a404582">voters_against</a>;     </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structcoodecquest.html#adbb7c7cda08b001f046af7ac0bb9e6fb">  110</a></span>  std::vector&lt;eosio::name&gt; <a class="code hl_variable" href="structcoodecquest.html#adbb7c7cda08b001f046af7ac0bb9e6fb">voters_abstained</a>;   </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a8f85d3f03f217c2d12bd3dfdda51d1cf">  112</a></span>  uint64_t <a class="code hl_function" href="structcoodecquest.html#a8f85d3f03f217c2d12bd3dfdda51d1cf">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b">id</a>; }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="structcoodecquest.html#a5e49662269535eaa85df43bf72c29806">  113</a></span>  uint64_t <a class="code hl_function" href="structcoodecquest.html#a5e49662269535eaa85df43bf72c29806">by_decision</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> decision_id; }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="stringliteral">&quot;decisionq&quot;</span>_n, <a class="code hl_struct" href="structcoodecquest.html">coodecquest</a>,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bydecision&quot;</span>_n, eosio::const_mem_fun&lt;coodecquest, uint64_t, &amp;coodecquest::by_decision&gt;&gt;&gt;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#ae7e83c35084e508a3b0ec3ea7a046d64">  119</a></span>    <a class="code hl_typedef" href="table__branch__decisions_8hpp.html#ae7e83c35084e508a3b0ec3ea7a046d64">coodecquest_index</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#a9ceaead9155206a4522031bf197ebff8">  122</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="structcoodecision.html">coodecision</a> <a class="code hl_function" href="table__branch__decisions_8hpp.html#a9ceaead9155206a4522031bf197ebff8">get_decision_or_fail</a>(eosio::name coopname, eosio::checksum256 hash) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <a class="code hl_typedef" href="table__branch__decisions_8hpp.html#a2c8a4e8a7147384ddcd2e91069e34d6d">decision_index</a> decisions(<a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>, coopname.value);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keyword">auto</span> idx = decisions.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keyword">auto</span> itr = idx.find(hash);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  eosio::check(itr != idx.end(), <span class="stringliteral">&quot;Решение собрания не найдено&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">return</span> *itr;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="table__branch__decisions_8hpp.html#a7d2e683fb44ac943c1009fc88a1c098a">  131</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="table__branch__decisions_8hpp.html#a7d2e683fb44ac943c1009fc88a1c098a">erase_coodecquests</a>(eosio::name coopname, uint64_t decision_id) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <a class="code hl_typedef" href="table__branch__decisions_8hpp.html#ae7e83c35084e508a3b0ec3ea7a046d64">coodecquest_index</a> questions(<a class="code hl_variable" href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a>, coopname.value);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keyword">auto</span> by_dec = questions.get_index&lt;<span class="stringliteral">&quot;bydecision&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keyword">auto</span> itr = by_dec.lower_bound(decision_id);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordflow">while</span> (itr != by_dec.end() &amp;&amp; itr-&gt;decision_id == decision_id) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    itr = by_dec.erase(itr);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="ttc" id="aconsts_8hpp_html_ae36fefc5b4aa30cf32d3ae22b64fb348"><div class="ttname"><a href="consts_8hpp.html#ae36fefc5b4aa30cf32d3ae22b64fb348">_branch</a></div><div class="ttdeci">static constexpr eosio::name _branch</div><div class="ttdef"><b>Definition:</b> consts.hpp:176</div></div>
+<div class="ttc" id="adocument__core_8hpp_html"><div class="ttname"><a href="document__core_8hpp.html">document_core.hpp</a></div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructcoodecision_html"><div class="ttname"><a href="structcoodecision.html">coodecision</a></div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:48</div></div>
+<div class="ttc" id="astructcoodecision_html_a0e06c23f14c7241cfd7b78ba86d75942"><div class="ttname"><a href="structcoodecision.html#a0e06c23f14c7241cfd7b78ba86d75942">coodecision::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:51</div></div>
+<div class="ttc" id="astructcoodecision_html_a170ce5b80245b67ab34da731b432d063"><div class="ttname"><a href="structcoodecision.html#a170ce5b80245b67ab34da731b432d063">coodecision::by_hash</a></div><div class="ttdeci">eosio::checksum256 by_hash() const</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:77</div></div>
+<div class="ttc" id="astructcoodecision_html_a1934494c62b05843e6d5237e09dc1fcb"><div class="ttname"><a href="structcoodecision.html#a1934494c62b05843e6d5237e09dc1fcb">coodecision::is_participant</a></div><div class="ttdeci">bool is_participant(const eosio::name &amp;username) const</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:79</div></div>
+<div class="ttc" id="astructcoodecision_html_a237c32813004573583b9f5dc2ae27d9b"><div class="ttname"><a href="structcoodecision.html#a237c32813004573583b9f5dc2ae27d9b">coodecision::open_at</a></div><div class="ttdeci">eosio::time_point_sec open_at</div><div class="ttdoc">Начало голосования</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:64</div></div>
+<div class="ttc" id="astructcoodecision_html_a33f2f1bbfb6b02a3ed98e776e0e0648c"><div class="ttname"><a href="structcoodecision.html#a33f2f1bbfb6b02a3ed98e776e0e0648c">coodecision::initiator</a></div><div class="ttdeci">eosio::name initiator</div><div class="ttdoc">Организатор собрания</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:53</div></div>
+<div class="ttc" id="astructcoodecision_html_a427c7f35357d1daabf26ca0b80f12668"><div class="ttname"><a href="structcoodecision.html#a427c7f35357d1daabf26ca0b80f12668">coodecision::status</a></div><div class="ttdeci">eosio::name status</div><div class="ttdoc">opened | voting | approved | onapproval</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:55</div></div>
+<div class="ttc" id="astructcoodecision_html_a475cc75a999a50548b0f590afdcac99e"><div class="ttname"><a href="structcoodecision.html#a475cc75a999a50548b0f590afdcac99e">coodecision::protocol</a></div><div class="ttdeci">document2 protocol</div><div class="ttdoc">Протокол решения (утверждает председатель)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:58</div></div>
+<div class="ttc" id="astructcoodecision_html_a5493279f220e9da0b4f6b2bc5bacb1cb"><div class="ttname"><a href="structcoodecision.html#a5493279f220e9da0b4f6b2bc5bacb1cb">coodecision::liability</a></div><div class="ttdeci">document2 liability</div><div class="ttdoc">Договор о полной индивидуальной материальной ответственности председателя КУ (подписан председателем ...</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:60</div></div>
+<div class="ttc" id="astructcoodecision_html_a5eb112934646fae9c29ebfef88177fc4"><div class="ttname"><a href="structcoodecision.html#a5eb112934646fae9c29ebfef88177fc4">coodecision::created_at</a></div><div class="ttdeci">eosio::time_point_sec created_at</div><div class="ttdoc">Дата создания</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:72</div></div>
+<div class="ttc" id="astructcoodecision_html_a6c3c48238dbdb7bad1c68fd98c5d7930"><div class="ttname"><a href="structcoodecision.html#a6c3c48238dbdb7bad1c68fd98c5d7930">coodecision::authority</a></div><div class="ttdeci">document2 authority</div><div class="ttdoc">Доверенность председателю КУ (подписана председателем участка, ждёт встречной подписи председателя со...</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:61</div></div>
+<div class="ttc" id="astructcoodecision_html_a6c6426c8a844b09d0390ff0f41bc1afd"><div class="ttname"><a href="structcoodecision.html#a6c6426c8a844b09d0390ff0f41bc1afd">coodecision::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">Заранее сгенерированный аккаунт будущего КУ (createbranch)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:68</div></div>
+<div class="ttc" id="astructcoodecision_html_a6d5fcecd02b04e189fc68346d91d399d"><div class="ttname"><a href="structcoodecision.html#a6d5fcecd02b04e189fc68346d91d399d">coodecision::close_at</a></div><div class="ttdeci">eosio::time_point_sec close_at</div><div class="ttdoc">Плановое закрытие голосования</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:65</div></div>
+<div class="ttc" id="astructcoodecision_html_a793efa243a23853fcd70fc1cda1f9f6b"><div class="ttname"><a href="structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b">coodecision::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор решения</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:49</div></div>
+<div class="ttc" id="astructcoodecision_html_a967999fb40bb43a90e75dc7e38b64c95"><div class="ttname"><a href="structcoodecision.html#a967999fb40bb43a90e75dc7e38b64c95">coodecision::type</a></div><div class="ttdeci">eosio::name type</div><div class="ttdoc">Тип решения: &quot;free&quot; | &quot;createbranch&quot;.</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:52</div></div>
+<div class="ttc" id="astructcoodecision_html_aa0ceea2ffa96119bd8e942e451407343"><div class="ttname"><a href="structcoodecision.html#aa0ceea2ffa96119bd8e942e451407343">coodecision::participants</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; participants</div><div class="ttdoc">Присоединившиеся участники собрания</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:71</div></div>
+<div class="ttc" id="astructcoodecision_html_ab5d42f9eabe78d37a6313e0ef62ae837"><div class="ttname"><a href="structcoodecision.html#ab5d42f9eabe78d37a6313e0ef62ae837">coodecision::address</a></div><div class="ttdeci">std::string address</div><div class="ttdoc">Адрес привязки КУ (createbranch)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:69</div></div>
+<div class="ttc" id="astructcoodecision_html_abcf479cb8d40f38b762fdf99b6f87fd0"><div class="ttname"><a href="structcoodecision.html#abcf479cb8d40f38b762fdf99b6f87fd0">coodecision::proposal</a></div><div class="ttdeci">document2 proposal</div><div class="ttdoc">Подписанное предложение/повестка инициатора</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:57</div></div>
+<div class="ttc" id="astructcoodecision_html_abeb213d02f690db3a8d0cd5f1a76172e"><div class="ttname"><a href="structcoodecision.html#abeb213d02f690db3a8d0cd5f1a76172e">coodecision::petition</a></div><div class="ttdeci">document2 petition</div><div class="ttdoc">Заявление председателя в совет (для createbranch)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:59</div></div>
+<div class="ttc" id="astructcoodecision_html_ad5f58fdb7b4e5d3587bfe74db3b26723"><div class="ttname"><a href="structcoodecision.html#ad5f58fdb7b4e5d3587bfe74db3b26723">coodecision::signed_ballots</a></div><div class="ttdeci">uint64_t signed_ballots</div><div class="ttdoc">Число поданных бюллетеней</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:66</div></div>
+<div class="ttc" id="astructcoodecision_html_adcd35f011c2243be4533c3b9ac16d767"><div class="ttname"><a href="structcoodecision.html#adcd35f011c2243be4533c3b9ac16d767">coodecision::hash</a></div><div class="ttdeci">eosio::checksum256 hash</div><div class="ttdoc">Якорь процесса (внешний идентификатор)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:50</div></div>
+<div class="ttc" id="astructcoodecision_html_ae387ea0fa29956b129cd70192a658b6d"><div class="ttname"><a href="structcoodecision.html#ae387ea0fa29956b129cd70192a658b6d">coodecision::chairman</a></div><div class="ttdeci">eosio::name chairman</div><div class="ttdoc">Председатель собрания — выбирается организатором из участников при открытии голосования (для createbr...</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:54</div></div>
+<div class="ttc" id="astructcoodecision_html_ae7c1dd2dfa5c7bf7ca224ee9074203c3"><div class="ttname"><a href="structcoodecision.html#ae7c1dd2dfa5c7bf7ca224ee9074203c3">coodecision::authorization</a></div><div class="ttdeci">document2 authorization</div><div class="ttdoc">Решение совета (callback)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:62</div></div>
+<div class="ttc" id="astructcoodecision_html_afadd9c48960455c8764276d9905c6479"><div class="ttname"><a href="structcoodecision.html#afadd9c48960455c8764276d9905c6479">coodecision::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:76</div></div>
+<div class="ttc" id="astructcoodecquest_html"><div class="ttname"><a href="structcoodecquest.html">coodecquest</a></div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:94</div></div>
+<div class="ttc" id="astructcoodecquest_html_a00a9f2a811ebd10570082d6576ab46b0"><div class="ttname"><a href="structcoodecquest.html#a00a9f2a811ebd10570082d6576ab46b0">coodecquest::voters_for</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; voters_for</div><div class="ttdoc">Проголосовавшие за</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:108</div></div>
+<div class="ttc" id="astructcoodecquest_html_a5e49662269535eaa85df43bf72c29806"><div class="ttname"><a href="structcoodecquest.html#a5e49662269535eaa85df43bf72c29806">coodecquest::by_decision</a></div><div class="ttdeci">uint64_t by_decision() const</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:113</div></div>
+<div class="ttc" id="astructcoodecquest_html_a61421cad8bbf26ea62f6f550cf1bff90"><div class="ttname"><a href="structcoodecquest.html#a61421cad8bbf26ea62f6f550cf1bff90">coodecquest::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст вопроса</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:102</div></div>
+<div class="ttc" id="astructcoodecquest_html_a636fc946b0ecd08888bcc7264c221e3d"><div class="ttname"><a href="structcoodecquest.html#a636fc946b0ecd08888bcc7264c221e3d">coodecquest::counter_votes_against</a></div><div class="ttdeci">uint64_t counter_votes_against</div><div class="ttdoc">Счётчик голосов против</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:105</div></div>
+<div class="ttc" id="astructcoodecquest_html_a64724088249106427af3cb50e4b40309"><div class="ttname"><a href="structcoodecquest.html#a64724088249106427af3cb50e4b40309">coodecquest::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Имя кооператива</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:98</div></div>
+<div class="ttc" id="astructcoodecquest_html_a690ebcc406b1ecac7d0f52aac657a55f"><div class="ttname"><a href="structcoodecquest.html#a690ebcc406b1ecac7d0f52aac657a55f">coodecquest::counter_votes_for</a></div><div class="ttdeci">uint64_t counter_votes_for</div><div class="ttdoc">Счётчик голосов за</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:104</div></div>
+<div class="ttc" id="astructcoodecquest_html_a6b5279c801457bdfcc36121bc2d65d7d"><div class="ttname"><a href="structcoodecquest.html#a6b5279c801457bdfcc36121bc2d65d7d">coodecquest::decision</a></div><div class="ttdeci">std::string decision</div><div class="ttdoc">Проект решения по вопросу</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:101</div></div>
+<div class="ttc" id="astructcoodecquest_html_a71111c17b5aff4119963597b2a404582"><div class="ttname"><a href="structcoodecquest.html#a71111c17b5aff4119963597b2a404582">coodecquest::voters_against</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; voters_against</div><div class="ttdoc">Проголосовавшие против</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:109</div></div>
+<div class="ttc" id="astructcoodecquest_html_a8f85d3f03f217c2d12bd3dfdda51d1cf"><div class="ttname"><a href="structcoodecquest.html#a8f85d3f03f217c2d12bd3dfdda51d1cf">coodecquest::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:112</div></div>
+<div class="ttc" id="astructcoodecquest_html_aa2a5de1b106521ebb4622c827370eab2"><div class="ttname"><a href="structcoodecquest.html#aa2a5de1b106521ebb4622c827370eab2">coodecquest::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Текст вопроса</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:100</div></div>
+<div class="ttc" id="astructcoodecquest_html_ac645d209e14fc989db183bc6f5e9cd03"><div class="ttname"><a href="structcoodecquest.html#ac645d209e14fc989db183bc6f5e9cd03">coodecquest::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Идентификатор вопроса</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:95</div></div>
+<div class="ttc" id="astructcoodecquest_html_ad8485f98142cfcdb5b5afc0f04b2228e"><div class="ttname"><a href="structcoodecquest.html#ad8485f98142cfcdb5b5afc0f04b2228e">coodecquest::counter_votes_abstained</a></div><div class="ttdeci">uint64_t counter_votes_abstained</div><div class="ttdoc">Счётчик воздержавшихся</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:106</div></div>
+<div class="ttc" id="astructcoodecquest_html_ad9a69149e1c695c1c3f197c5991ddd47"><div class="ttname"><a href="structcoodecquest.html#ad9a69149e1c695c1c3f197c5991ddd47">coodecquest::number</a></div><div class="ttdeci">uint64_t number</div><div class="ttdoc">Номер вопроса в повестке</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:97</div></div>
+<div class="ttc" id="astructcoodecquest_html_adbb7c7cda08b001f046af7ac0bb9e6fb"><div class="ttname"><a href="structcoodecquest.html#adbb7c7cda08b001f046af7ac0bb9e6fb">coodecquest::voters_abstained</a></div><div class="ttdeci">std::vector&lt; eosio::name &gt; voters_abstained</div><div class="ttdoc">Воздержавшиеся</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:110</div></div>
+<div class="ttc" id="astructcoodecquest_html_af04e8047db3ebe65a55a6fbbe66a46c8"><div class="ttname"><a href="structcoodecquest.html#af04e8047db3ebe65a55a6fbbe66a46c8">coodecquest::decision_id</a></div><div class="ttdeci">uint64_t decision_id</div><div class="ttdoc">Идентификатор решения</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:96</div></div>
+<div class="ttc" id="astructdecision__point_html"><div class="ttname"><a href="structdecision__point.html">decision_point</a></div><div class="ttdoc">Точка повестки дня собрания (вход действия createdec).</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:31</div></div>
+<div class="ttc" id="astructdecision__point_html_a4abd2ec678dbade1b725201deb92ed56"><div class="ttname"><a href="structdecision__point.html#a4abd2ec678dbade1b725201deb92ed56">decision_point::title</a></div><div class="ttdeci">std::string title</div><div class="ttdoc">Текст вопроса</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:32</div></div>
+<div class="ttc" id="astructdecision__point_html_a63f8dd695a880bc254ead198ed34a6a0"><div class="ttname"><a href="structdecision__point.html#a63f8dd695a880bc254ead198ed34a6a0">decision_point::decision</a></div><div class="ttdeci">std::string decision</div><div class="ttdoc">Проект решения по вопросу</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:33</div></div>
+<div class="ttc" id="astructdecision__point_html_ab5cb34c856b617cd1bd40b044a1b262c"><div class="ttname"><a href="structdecision__point.html#ab5cb34c856b617cd1bd40b044a1b262c">decision_point::context</a></div><div class="ttdeci">std::string context</div><div class="ttdoc">Контекст вопроса (может быть пустым)</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:34</div></div>
+<div class="ttc" id="astructdecision__vote__point_html"><div class="ttname"><a href="structdecision__vote__point.html">decision_vote_point</a></div><div class="ttdoc">Голос участника по одному вопросу повестки (вход действия votedec).</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:38</div></div>
+<div class="ttc" id="astructdecision__vote__point_html_a962e875466aa716015d1e32ebcc21a65"><div class="ttname"><a href="structdecision__vote__point.html#a962e875466aa716015d1e32ebcc21a65">decision_vote_point::vote</a></div><div class="ttdeci">eosio::name vote</div><div class="ttdoc">Голос: &quot;for&quot;_n | &quot;against&quot;_n | &quot;abstained&quot;_n.</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:40</div></div>
+<div class="ttc" id="astructdecision__vote__point_html_aa305531d2406558a16458994b9e2a9a1"><div class="ttname"><a href="structdecision__vote__point.html#aa305531d2406558a16458994b9e2a9a1">decision_vote_point::question_id</a></div><div class="ttdeci">uint64_t question_id</div><div class="ttdoc">Идентификатор вопроса</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:39</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> document_core.hpp:27</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_a2c8a4e8a7147384ddcd2e91069e34d6d"><div class="ttname"><a href="table__branch__decisions_8hpp.html#a2c8a4e8a7147384ddcd2e91069e34d6d">decision_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;decisions&quot;_n, coodecision, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; coodecision, eosio::checksum256, &amp;coodecision::by_hash &gt; &gt; &gt; decision_index</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:87</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_a7d2e683fb44ac943c1009fc88a1c098a"><div class="ttname"><a href="table__branch__decisions_8hpp.html#a7d2e683fb44ac943c1009fc88a1c098a">erase_coodecquests</a></div><div class="ttdeci">void erase_coodecquests(eosio::name coopname, uint64_t decision_id)</div><div class="ttdoc">Удалить все вопросы повестки данного решения (при erase решения).</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:131</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_a94685e0de3fc10827a1c78e810b9ae7c"><div class="ttname"><a href="table__branch__decisions_8hpp.html#a94685e0de3fc10827a1c78e810b9ae7c">MIN_DECISION_QUORUM</a></div><div class="ttdeci">static constexpr uint64_t MIN_DECISION_QUORUM</div><div class="ttdoc">Минимальный кворум учредительного собрания (число подписанных бюллетеней).</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:23</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_a9ceaead9155206a4522031bf197ebff8"><div class="ttname"><a href="table__branch__decisions_8hpp.html#a9ceaead9155206a4522031bf197ebff8">get_decision_or_fail</a></div><div class="ttdeci">coodecision get_decision_or_fail(eosio::name coopname, eosio::checksum256 hash)</div><div class="ttdoc">Получить решение по якорю или упасть.</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:122</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_aaa6a87c2c6ad5426a241dbef456b4a73"><div class="ttname"><a href="table__branch__decisions_8hpp.html#aaa6a87c2c6ad5426a241dbef456b4a73">DECISION_VOTING_WINDOW_SECONDS</a></div><div class="ttdeci">static constexpr uint32_t DECISION_VOTING_WINDOW_SECONDS</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:28</div></div>
+<div class="ttc" id="atable__branch__decisions_8hpp_html_ae7e83c35084e508a3b0ec3ea7a046d64"><div class="ttname"><a href="table__branch__decisions_8hpp.html#ae7e83c35084e508a3b0ec3ea7a046d64">coodecquest_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;decisionq&quot;_n, coodecquest, eosio::indexed_by&lt;&quot;bydecision&quot;_n, eosio::const_mem_fun&lt; coodecquest, uint64_t, &amp;coodecquest::by_decision &gt; &gt; &gt; coodecquest_index</div><div class="ttdef"><b>Definition:</b> table_branch_decisions.hpp:119</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_99d6a2ec44a7d22665ead9c94e1d5c22.html">domain</a></li><li class="navelem"><a class="el" href="table__branch__decisions_8hpp.html">table_branch_decisions.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

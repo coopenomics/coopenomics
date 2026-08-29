@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен Registrator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespace_registrator.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен Registrator</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Вспомогательные функции процедуры выхода пайщика из кооператива.  
+<a href="namespace_registrator.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_registrator_1_1candidate.html">candidate</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_registrator_1_1exit.html">exit</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявление пайщика на выход из кооператива и сопровождающий его процесс возврата паевого взноса.  <a href="struct_registrator_1_1exit.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a6067a9bd33c7b0e9a4ff30b224455ced"><td class="memItemLeft" align="right" valign="top">typedef multi_index&lt; &quot;candidates2&quot;_n, <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">candidate::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a6067a9bd33c7b0e9a4ff30b224455ced">candidates_index</a></td></tr>
+<tr class="separator:a6067a9bd33c7b0e9a4ff30b224455ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ed275d80b45220d632dc66a46fbe20"><td class="memItemLeft" align="right" valign="top">typedef multi_index&lt; &quot;candidates&quot;_n, <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">candidate_legacy::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a17ed275d80b45220d632dc66a46fbe20">candidates_legacy_index</a></td></tr>
+<tr class="separator:a17ed275d80b45220d632dc66a46fbe20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01a7a177e2ea98bd9dc311e54fc51809"><td class="memItemLeft" align="right" valign="top">typedef multi_index&lt; &quot;exits&quot;_n, <a class="el" href="struct_registrator_1_1exit.html">exit</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; <a class="el" href="struct_registrator_1_1exit.html">exit</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1exit.html#a30a1be527038dfd1f215811b820cbfa5">exit::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a01a7a177e2ea98bd9dc311e54fc51809">exits_index</a></td></tr>
+<tr class="separator:a01a7a177e2ea98bd9dc311e54fc51809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a411e68223f7c3c74c45713efa27630b7"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a411e68223f7c3c74c45713efa27630b7">get_candidate_by_hash</a> (name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="separator:a411e68223f7c3c74c45713efa27630b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb038f00527b74f54626f0e1b38ceaf9"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#aeb038f00527b74f54626f0e1b38ceaf9">get_active_participants_count</a> (name coopname)</td></tr>
+<tr class="separator:aeb038f00527b74f54626f0e1b38ceaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80674a7b20dd7f537aa53aaa011002b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_registrator_1_1exit.html">exit</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#ac80674a7b20dd7f537aa53aaa011002b">get_exit_by_hash</a> (name coopname, const checksum256 &amp;hash)</td></tr>
+<tr class="separator:ac80674a7b20dd7f537aa53aaa011002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aded22b3c40a4c31a1cb2b95b5ae6656e"><td class="memItemLeft" align="right" valign="top">asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#aded22b3c40a4c31a1cb2b95b5ae6656e">get_user_wallet_available</a> (name coopname, name wallet_name, name username)</td></tr>
+<tr class="memdesc:aded22b3c40a4c31a1cb2b95b5ae6656e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступный L3-баланс пайщика на USER_SHARED-кошельке <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>.  <a href="namespace_registrator.html#aded22b3c40a4c31a1cb2b95b5ae6656e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aded22b3c40a4c31a1cb2b95b5ae6656e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec60b5198869fb1e22625a5ba76b8a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#aec60b5198869fb1e22625a5ba76b8a42">consolidate_share_to_main</a> (name coopname, name username, name wallet_name, asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, checksum256 exit_hash)</td></tr>
+<tr class="memdesc:aec60b5198869fb1e22625a5ba76b8a42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Консолидация доступного паевого кошелька пайщика на главный (<code>w.wal.share</code>) перед резервом возврата при выходе.  <a href="namespace_registrator.html#aec60b5198869fb1e22625a5ba76b8a42">Подробнее...</a><br /></td></tr>
+<tr class="separator:aec60b5198869fb1e22625a5ba76b8a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db65305247f30c7ec70295dcd22672e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#a0db65305247f30c7ec70295dcd22672e">finalize_member_exit</a> (name coopname, name username)</td></tr>
+<tr class="memdesc:a0db65305247f30c7ec70295dcd22672e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Финализация выхода: удаление пайщика из реестра совета и блокировка аккаунта в registrator.  <a href="namespace_registrator.html#a0db65305247f30c7ec70295dcd22672e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0db65305247f30c7ec70295dcd22672e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad65acc74a3bbe53fff3b31969c4f14a5"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_registrator.html#ad65acc74a3bbe53fff3b31969c4f14a5">get_registration_pending_balance</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:ad65acc74a3bbe53fff3b31969c4f14a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Баланс кандидата на суспенс-кошельке регистрационного взноса (w.reg.pend, счёт 76) из <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> L3 (userwallets). Запись существует только пока available &gt; 0 (auto-delete на нуле), поэтому отсутствие = нулевой баланс.  <a href="namespace_registrator.html#ad65acc74a3bbe53fff3b31969c4f14a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad65acc74a3bbe53fff3b31969c4f14a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Вспомогательные функции процедуры выхода пайщика из кооператива. </p>
+<p >Вынесены в отдельный заголовок (а не в <a class="el" href="table__registrator__exits_8hpp.html">table_registrator_exits.hpp</a>), т.к. опираются на ledger2-кошельки и userwallets, которые подключаются позже в domain/index.hpp. Подключается в <a class="el" href="registrator_8cpp.html">registrator.cpp</a> перед exit-экшенами, когда весь <a class="el" href="lib_2index_8hpp.html">lib/index.hpp</a> уже доступен. </p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a6067a9bd33c7b0e9a4ff30b224455ced" name="a6067a9bd33c7b0e9a4ff30b224455ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6067a9bd33c7b0e9a4ff30b224455ced">&#9670;&nbsp;</a></span>candidates_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef multi_index&lt; &quot;candidates2&quot;_n, <a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_registrator_1_1candidate.html">candidate</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate.html#a9a4629dc2b756fffccbe76a59875e303">candidate::by_hash</a>&gt; &gt; &gt; <a class="el" href="namespace_registrator.html#a6067a9bd33c7b0e9a4ff30b224455ced">Registrator::candidates_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17ed275d80b45220d632dc66a46fbe20" name="a17ed275d80b45220d632dc66a46fbe20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ed275d80b45220d632dc66a46fbe20">&#9670;&nbsp;</a></span>candidates_legacy_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef multi_index&lt; &quot;candidates&quot;_n, <a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_registrator_1_1candidate__legacy.html">candidate_legacy</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1candidate__legacy.html#a24a39d178549ce8797e771f8a3e1fb60">candidate_legacy::by_hash</a>&gt; &gt; &gt; <a class="el" href="namespace_registrator.html#a17ed275d80b45220d632dc66a46fbe20">Registrator::candidates_legacy_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01a7a177e2ea98bd9dc311e54fc51809" name="a01a7a177e2ea98bd9dc311e54fc51809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01a7a177e2ea98bd9dc311e54fc51809">&#9670;&nbsp;</a></span>exits_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef multi_index&lt; &quot;exits&quot;_n, <a class="el" href="struct_registrator_1_1exit.html">exit</a>, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt;<a class="el" href="struct_registrator_1_1exit.html">exit</a>, checksum256, &amp;<a class="el" href="struct_registrator_1_1exit.html#a30a1be527038dfd1f215811b820cbfa5">exit::by_hash</a>&gt; &gt; &gt; <a class="el" href="namespace_registrator.html#a01a7a177e2ea98bd9dc311e54fc51809">Registrator::exits_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="aec60b5198869fb1e22625a5ba76b8a42" name="aec60b5198869fb1e22625a5ba76b8a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec60b5198869fb1e22625a5ba76b8a42">&#9670;&nbsp;</a></span>consolidate_share_to_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Registrator::consolidate_share_to_main </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>wallet_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>exit_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Консолидация доступного паевого кошелька пайщика на главный (<code>w.wal.share</code>) перед резервом возврата при выходе. </p>
+<p >Главный кошелёк (<code>w.wal.share</code>) уже целевой — перенос не нужен. Для остальных кошельков сета <code>LEDGER2_EXIT_REFUND_WALLETS</code> применяется операция переноса на главный: w.reg.minshr → o.reg.mvmin (MOVE_MINSHARE); w.cap.blago → o.cap.wthcap (WITHDRAW_FROM_CAPITAL).</p>
+<p >Кошелёк сета без операции переноса (новый паевой кошелёк забыли смаппить) валит транзакцию с явным сообщением — защита от тихой потери средств. </p>
+
+</div>
+</div>
+<a id="a0db65305247f30c7ec70295dcd22672e" name="a0db65305247f30c7ec70295dcd22672e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db65305247f30c7ec70295dcd22672e">&#9670;&nbsp;</a></span>finalize_member_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Registrator::finalize_member_exit </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Финализация выхода: удаление пайщика из реестра совета и блокировка аккаунта в registrator. </p>
+<p >Вызывается по завершении возврата паевого взноса (completexit) либо сразу, если возвращать нечего (нулевой паевой). После этого <code>get_participant_or_fail</code> для пайщика начинает падать — он лишён права подавать заявления. </p>
+
+</div>
+</div>
+<a id="aeb038f00527b74f54626f0e1b38ceaf9" name="aeb038f00527b74f54626f0e1b38ceaf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb038f00527b74f54626f0e1b38ceaf9">&#9670;&nbsp;</a></span>get_active_participants_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Registrator::get_active_participants_count </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a411e68223f7c3c74c45713efa27630b7" name="a411e68223f7c3c74c45713efa27630b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411e68223f7c3c74c45713efa27630b7">&#9670;&nbsp;</a></span>get_candidate_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_registrator_1_1candidate.html">candidate</a> &gt; Registrator::get_candidate_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac80674a7b20dd7f537aa53aaa011002b" name="ac80674a7b20dd7f537aa53aaa011002b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80674a7b20dd7f537aa53aaa011002b">&#9670;&nbsp;</a></span>get_exit_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_registrator_1_1exit.html">exit</a> &gt; Registrator::get_exit_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad65acc74a3bbe53fff3b31969c4f14a5" name="ad65acc74a3bbe53fff3b31969c4f14a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad65acc74a3bbe53fff3b31969c4f14a5">&#9670;&nbsp;</a></span>get_registration_pending_balance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Registrator::get_registration_pending_balance </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Баланс кандидата на суспенс-кошельке регистрационного взноса (w.reg.pend, счёт 76) из <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> L3 (userwallets). Запись существует только пока available &gt; 0 (auto-delete на нуле), поэтому отсутствие = нулевой баланс. </p>
+
+</div>
+</div>
+<a id="aded22b3c40a4c31a1cb2b95b5ae6656e" name="aded22b3c40a4c31a1cb2b95b5ae6656e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aded22b3c40a4c31a1cb2b95b5ae6656e">&#9670;&nbsp;</a></span>get_user_wallet_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">asset Registrator::get_user_wallet_available </td>
+          <td>(</td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>wallet_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Доступный L3-баланс пайщика на USER_SHARED-кошельке <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>. </p>
+<p >Возвращает available (без blocked) пары <code>(wallet_name, username)</code> из таблицы userwallets контракта <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>. Если записи нет — нулевая сумма в базовой валюте управления. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_registrator.html">Registrator</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

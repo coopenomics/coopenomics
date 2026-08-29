@@ -1,0 +1,2245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Действия</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__public__branch__actions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Действия<div class="ingroups"><a class="el" href="group__public__branch.html">Контракт BRANCH</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:gacb69360d854201c5f3cf99542a088dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gacb69360d854201c5f3cf99542a088dc6">branch::setweight</a> (eosio::name coopname, eosio::name braname, eosio::name <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>, eosio::name username, uint64_t weight)</td></tr>
+<tr class="memdesc:gacb69360d854201c5f3cf99542a088dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель КУ задаёт/меняет вес участника в распределении членских взносов от контракта-источника. Доля = вес / Σ весов.  <a href="group__public__branch__actions.html#gacb69360d854201c5f3cf99542a088dc6">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacb69360d854201c5f3cf99542a088dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdd58f1f722891732374f96359446303"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gacdd58f1f722891732374f96359446303">branch::delweight</a> (eosio::name coopname, eosio::name braname, eosio::name <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>, eosio::name username)</td></tr>
+<tr class="memdesc:gacdd58f1f722891732374f96359446303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исключение участника из распределения (вес удаляется, доли остальных перебалансируются автоматически).  <a href="group__public__branch__actions.html#gacdd58f1f722891732374f96359446303">Подробнее...</a><br /></td></tr>
+<tr class="separator:gacdd58f1f722891732374f96359446303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24202655a4b0784a2a35a9dba6585e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28">branch::accrue</a> (eosio::name coopname, eosio::name braname, eosio::name source_contract, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, eosio::name process_type, eosio::checksum256 process_hash, std::string memo)</td></tr>
+<tr class="memdesc:ga24202655a4b0784a2a35a9dba6585e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы). Вызывается inline контрактом-источником (marketplace) при финализации заказа.  <a href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga24202655a4b0784a2a35a9dba6585e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada32da54e27c99a222b80bdd47a3974c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gada32da54e27c99a222b80bdd47a3974c">branch::retfee</a> (eosio::name coopname, eosio::name braname, eosio::name source_contract, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, eosio::name process_type, eosio::checksum256 process_hash, std::string memo)</td></tr>
+<tr class="memdesc:gada32da54e27c99a222b80bdd47a3974c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат членских взносов КУ из общего кошелька участка обратно в пул взносов программы-источника (o.brn.retfee) — инверсия accrue. Вызывается inline контрактом-источником (marketplace) при гарантийном возврате имущества, чтобы пайщику вернулась полная уплаченная сумма.  <a href="group__public__branch__actions.html#gada32da54e27c99a222b80bdd47a3974c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gada32da54e27c99a222b80bdd47a3974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga684e0851b7b92f5b1be2441ac66e58d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga684e0851b7b92f5b1be2441ac66e58d8">branch::distribute</a> (eosio::name coopname, eosio::name braname, eosio::name source_contract, eosio::checksum256 round_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, std::string memo)</td></tr>
+<tr class="memdesc:ga684e0851b7b92f5b1be2441ac66e58d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ручное распределение средств общего кошелька КУ между председателем и доверенными по весам реестра: команда председателя, сумма раскладывается по весам (o.brn.release + o.brn.person), остаток округления остаётся в общем кошельке. Можно частично и многократно. Плановый резерв расходов (30 дней) контролирует бэкенд до вызова.  <a href="group__public__branch__actions.html#ga684e0851b7b92f5b1be2441ac66e58d8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga684e0851b7b92f5b1be2441ac66e58d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ef08e9cc9d05fa3d4f98100d2740a73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga7ef08e9cc9d05fa3d4f98100d2740a73">branch::convert</a> (eosio::name coopname, eosio::name username, eosio::checksum256 convert_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:ga7ef08e9cc9d05fa3d4f98100d2740a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод персональных средств доверенного в членский кошелёк «Стола заказов» (o.brn.conv) — для заказов как обычный пайщик.  <a href="group__public__branch__actions.html#ga7ef08e9cc9d05fa3d4f98100d2740a73">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga7ef08e9cc9d05fa3d4f98100d2740a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1be1fe1fb3d13f921fa124acc60ddf8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga1be1fe1fb3d13f921fa124acc60ddf8a">branch::createaid</a> (eosio::name coopname, eosio::name username, eosio::name braname, eosio::checksum256 aid_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement, std::string meta)</td></tr>
+<tr class="memdesc:ga1be1fe1fb3d13f921fa124acc60ddf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявление на материальную помощь доверенного из его персонального кошелька: подписанное заявление вносится на повестку совета (type=brnaid). Исходящий платёж кассиру создаётся только после решения совета — в callback'е onaidauth.  <a href="group__public__branch__actions.html#ga1be1fe1fb3d13f921fa124acc60ddf8a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1be1fe1fb3d13f921fa124acc60ddf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9472735079d3beb68a9eacab1f482587"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga9472735079d3beb68a9eacab1f482587">branch::onaidauth</a> (eosio::name coopname, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:ga9472735079d3beb68a9eacab1f482587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от soviet — совет одобрил выплату материальной помощи. Заявление переходит в authorized, протокол сохраняется, и регистрируется исходящий платёж в gateway — заявка попадает к кассиру.  <a href="group__public__branch__actions.html#ga9472735079d3beb68a9eacab1f482587">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9472735079d3beb68a9eacab1f482587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2a046105ae0c63dfc37d3d9a2663f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gaa2a046105ae0c63dfc37d3d9a2663f37">branch::onaiddecl</a> (eosio::name coopname, eosio::checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:gaa2a046105ae0c63dfc37d3d9a2663f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от soviet — совет отказал в выплате либо срок рассмотрения истёк. Заявление закрывается, не доходя до кассира; средства остаются на персональном кошельке.  <a href="group__public__branch__actions.html#gaa2a046105ae0c63dfc37d3d9a2663f37">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa2a046105ae0c63dfc37d3d9a2663f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafea072308d0573543a42a7098976dd0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gafea072308d0573543a42a7098976dd0f">branch::aidconfirm</a> (eosio::name coopname, eosio::checksum256 outcome_hash)</td></tr>
+<tr class="memdesc:gafea072308d0573543a42a7098976dd0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a> — кассир подтвердил банковский перевод материальной помощи. Здесь применяются o.brn.aidtax (удержание налога, Дт 86 / Кт 68) и o.brn.aid (выплата, Дт 86 / Кт 51).  <a href="group__public__branch__actions.html#gafea072308d0573543a42a7098976dd0f">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafea072308d0573543a42a7098976dd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d775018cfc4f97ac1fa3376811520e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga2d775018cfc4f97ac1fa3376811520e7">branch::aiddecline</a> (eosio::name coopname, eosio::checksum256 outcome_hash, std::string reason)</td></tr>
+<tr class="memdesc:ga2d775018cfc4f97ac1fa3376811520e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a> — перевод не состоялся; средства остаются на персональном кошельке, заявление закрывается.  <a href="group__public__branch__actions.html#ga2d775018cfc4f97ac1fa3376811520e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga2d775018cfc4f97ac1fa3376811520e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b5e9194c13a11c4327bb530148b047a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga1b5e9194c13a11c4327bb530148b047a">branch::createexp</a> (eosio::name coopname, eosio::name braname, eosio::name creator, eosio::checksum256 expense_hash, std::vector&lt; <a class="el" href="struct_expense_domain_1_1item.html">ExpenseDomain::item</a> &gt; items, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:ga1b5e9194c13a11c4327bb530148b047a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подать расход участка в шасси расходов: средства уходят из общего кошелька КУ в пул расходов (o.brn.expfnd), записка передаётся шасси — решение совета, оплата по реквизитам либо аванс под отчёт, отчёт, закрытие.  <a href="group__public__branch__actions.html#ga1b5e9194c13a11c4327bb530148b047a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1b5e9194c13a11c4327bb530148b047a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab33af908640109b2f19e2ab550dfeebc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gab33af908640109b2f19e2ab550dfeebc">branch::onexpdone</a> (eosio::name coopname, eosio::checksum256 expense_hash, uint8_t status, eosio::asset total_actual, std::vector&lt; char &gt; data)</td></tr>
+<tr class="memdesc:gab33af908640109b2f19e2ab550dfeebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback шасси расходов — расход завершён (отклонён советом либо закрыт). Неизрасходованный остаток возвращается в общий кошелёк участка (o.brn.expunf), запись расхода стирается.  <a href="group__public__branch__actions.html#gab33af908640109b2f19e2ab550dfeebc">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab33af908640109b2f19e2ab550dfeebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f1f3f4229438aa77c8f48cb4646fa6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga9f1f3f4229438aa77c8f48cb4646fa6d">branch::migrate</a> ()</td></tr>
+<tr class="memdesc:ga9f1f3f4229438aa77c8f48cb4646fa6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация контракта кооперативных участков. Выполняет начальную настройку контракта.  <a href="group__public__branch__actions.html#ga9f1f3f4229438aa77c8f48cb4646fa6d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9f1f3f4229438aa77c8f48cb4646fa6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga940b0edb8e82cf570d1adf686a17c553"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga940b0edb8e82cf570d1adf686a17c553">branch::init</a> ()</td></tr>
+<tr class="memdesc:ga940b0edb8e82cf570d1adf686a17c553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация контракта кооперативных участков. Выполняет начальную настройку контракта.  <a href="group__public__branch__actions.html#ga940b0edb8e82cf570d1adf686a17c553">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga940b0edb8e82cf570d1adf686a17c553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga250876383e6d547decd69ad052c8dd86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga250876383e6d547decd69ad052c8dd86">branch::addtrusted</a> (eosio::name coopname, eosio::name braname, eosio::name trusted)</td></tr>
+<tr class="memdesc:ga250876383e6d547decd69ad052c8dd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление доверенного лица в кооперативный участок. Добавляет нового доверенного лица в существующий кооперативный участок. Максимальное количество доверенных лиц на один участок - 3.  <a href="group__public__branch__actions.html#ga250876383e6d547decd69ad052c8dd86">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga250876383e6d547decd69ad052c8dd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1da6055cf37e17e4ac5a13f9345b2928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga1da6055cf37e17e4ac5a13f9345b2928">branch::addwhite</a> (eosio::name coopname, eosio::name braname, eosio::name <a class="el" href="structaccount.html">account</a>)</td></tr>
+<tr class="memdesc:ga1da6055cf37e17e4ac5a13f9345b2928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление пайщика в белый список кооперативного участка. Пайщики из белого списка могут выбрать приватный кооперативный участок при вступлении или смене участка. В белый список можно добавить любого пайщика кооператива.  <a href="group__public__branch__actions.html#ga1da6055cf37e17e4ac5a13f9345b2928">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1da6055cf37e17e4ac5a13f9345b2928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ffaf8bc789d337350ee52b630a533c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga1ffaf8bc789d337350ee52b630a533c2">branch::apprauth</a> (eosio::name coopname, eosio::name username, eosio::checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:ga1ffaf8bc789d337350ee52b630a533c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Встречная подпись председателя совета на доверенности председателя кооперативного участка. Callback одобрения совета: председатель совета подписал доверенность второй подписью (механизм <a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a> проверил его подпись). Фиксируем полностью подписанную доверенность в реестре документов по якорю одобрения.  <a href="group__public__branch__actions.html#ga1ffaf8bc789d337350ee52b630a533c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1ffaf8bc789d337350ee52b630a533c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c0de40997856f9c3fea7d7c616f972d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga9c0de40997856f9c3fea7d7c616f972d">branch::apprliab</a> (eosio::name coopname, eosio::name username, eosio::checksum256 approval_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:ga9c0de40997856f9c3fea7d7c616f972d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Встречная подпись председателя совета на договоре о полной материальной ответственности председателя кооперативного участка. Callback одобрения совета: председатель совета подписал договор второй подписью (механизм <a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a> проверил его подпись). Фиксируем полностью подписанный договор в реестре документов по якорю процесса.  <a href="group__public__branch__actions.html#ga9c0de40997856f9c3fea7d7c616f972d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9c0de40997856f9c3fea7d7c616f972d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44b65d645fd62e908c971b55ae950cfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga44b65d645fd62e908c971b55ae950cfe">branch::apprtrusted</a> (eosio::name coopname, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> countersigned, <a class="el" href="structdocument2.html">document2</a> countersigned_authority)</td></tr>
+<tr class="memdesc:ga44b65d645fd62e908c971b55ae950cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Одобрение заявки доверенного лица председателем участка. Председатель кооперативного участка накладывает встречную подпись на договор материальной ответственности и доверенность заявителя; оба полностью подписанных документа фиксируются в реестре документов, пайщик добавляется в список доверенных лиц участка, заявка стирается.  <a href="group__public__branch__actions.html#ga44b65d645fd62e908c971b55ae950cfe">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga44b65d645fd62e908c971b55ae950cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab32cdab5d78eae9ba4f8938ab75610d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gab32cdab5d78eae9ba4f8938ab75610d9">branch::canceldec</a> (eosio::name coopname, eosio::checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:gab32cdab5d78eae9ba4f8938ab75610d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена собрания инициатором до вывода на совет. Инициатор сворачивает собрание, пока решение не ушло в совет; запись и вопросы повестки стираются, причина передаётся аргументом (история — в журнале действий).  <a href="group__public__branch__actions.html#gab32cdab5d78eae9ba4f8938ab75610d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab32cdab5d78eae9ba4f8938ab75610d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55c6c67df3cf9cd5ecbe3dac907e86f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga55c6c67df3cf9cd5ecbe3dac907e86f9">branch::closedec</a> (eosio::name coopname, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> protocol)</td></tr>
+<tr class="memdesc:ga55c6c67df3cf9cd5ecbe3dac907e86f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие собрания и утверждение протокола председателем. Председатель закрывает голосование и утверждает протокол одной своей подписью (секретарь не нужен — подсчёт ведёт контракт). Проверяется кворум и итог голосования. Для типа "free" — терминал: запись стирается (история — в журнале). Для "createbranch" — решение переходит в статус "approved" в ожидании исполнения действием exec (вывод вопроса на совет).  <a href="group__public__branch__actions.html#ga55c6c67df3cf9cd5ecbe3dac907e86f9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga55c6c67df3cf9cd5ecbe3dac907e86f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe4b4efb4049d6f2327d46b172ebd5d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gabe4b4efb4049d6f2327d46b172ebd5d2">branch::confirmdec</a> (eosio::name coopname, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:gabe4b4efb4049d6f2327d46b172ebd5d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подтверждение решения советом — создание кооперативного участка. Callback совета: по утверждению учреждается кооперативный участок с реквизитами из решения (аккаунт участка, избранный председатель), после чего запись решения стирается (история — в журнале действий).  <a href="group__public__branch__actions.html#gabe4b4efb4049d6f2327d46b172ebd5d2">Подробнее...</a><br /></td></tr>
+<tr class="separator:gabe4b4efb4049d6f2327d46b172ebd5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade9ac90a5bd0e499122d5fda8776a223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gade9ac90a5bd0e499122d5fda8776a223">branch::createbranch</a> (eosio::name coopname, eosio::name braname, eosio::name trustee)</td></tr>
+<tr class="memdesc:gade9ac90a5bd0e499122d5fda8776a223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового кооперативного участка. Создает новый кооперативный участок с указанным председателем. При создании третьего участка автоматически активирует систему кооперативных участков.  <a href="group__public__branch__actions.html#gade9ac90a5bd0e499122d5fda8776a223">Подробнее...</a><br /></td></tr>
+<tr class="separator:gade9ac90a5bd0e499122d5fda8776a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27f1618becbfb5eaeff9e49ed3434cd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga27f1618becbfb5eaeff9e49ed3434cd7">branch::createdec</a> (eosio::name coopname, eosio::checksum256 hash, eosio::name type, eosio::name initiator, <a class="el" href="structdocument2.html">document2</a> proposal, eosio::name braname, std::vector&lt; <a class="el" href="structdecision__point.html">decision_point</a> &gt; agenda)</td></tr>
+<tr class="memdesc:ga27f1618becbfb5eaeff9e49ed3434cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Объявление собрания пайщиков с повесткой (создание решения). Универсальный механизм: тип "free" — свободное решение (фиксируется протоколом), тип "createbranch" — автоматизируемое (после утверждения уходит в совет и создаёт КУ).  <a href="group__public__branch__actions.html#ga27f1618becbfb5eaeff9e49ed3434cd7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga27f1618becbfb5eaeff9e49ed3434cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca815012ce985d5732a3ca103fac89b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gaca815012ce985d5732a3ca103fac89b3">branch::declauth</a> (eosio::name coopname, eosio::name username, eosio::checksum256 approval_hash, std::string reason)</td></tr>
+<tr class="memdesc:gaca815012ce985d5732a3ca103fac89b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрет отклонения доверенности председателя кооперативного участка. Callback отклонения совета: к этому моменту решение об учреждении кооперативного участка уже принято советом и участок создан, поэтому доверенность председателю участка отклонить нельзя — председателю совета остаётся только подписать её встречной подписью (см. <a class="el" href="group__public__branch__actions.html#ga1ffaf8bc789d337350ee52b630a533c2" title="Встречная подпись председателя совета на доверенности председателя кооперативного участка....">branch::apprauth</a>). Действие всегда завершается ошибкой.  <a href="group__public__branch__actions.html#gaca815012ce985d5732a3ca103fac89b3">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaca815012ce985d5732a3ca103fac89b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc496501eac7a4d735535ef1b7221076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gafc496501eac7a4d735535ef1b7221076">branch::declinedec</a> (eosio::name coopname, eosio::checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:gafc496501eac7a4d735535ef1b7221076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение решения советом. Callback совета: при отказе совета запись решения и вопросы повестки стираются, причина передаётся аргументом (история — в журнале действий).  <a href="group__public__branch__actions.html#gafc496501eac7a4d735535ef1b7221076">Подробнее...</a><br /></td></tr>
+<tr class="separator:gafc496501eac7a4d735535ef1b7221076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23918a1bad1bf5abb7a61b24d192eb3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga23918a1bad1bf5abb7a61b24d192eb3d">branch::declliab</a> (eosio::name coopname, eosio::name username, eosio::checksum256 approval_hash, std::string reason)</td></tr>
+<tr class="memdesc:ga23918a1bad1bf5abb7a61b24d192eb3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запрет отклонения договора о материальной ответственности председателя участка. Callback отклонения совета: к этому моменту решение об учреждении кооперативного участка уже принято советом и участок создан, поэтому договор о материальной ответственности отклонить нельзя — председателю совета остаётся только подписать его встречной подписью (см. <a class="el" href="group__public__branch__actions.html#ga9c0de40997856f9c3fea7d7c616f972d" title="Встречная подпись председателя совета на договоре о полной материальной ответственности председателя ...">branch::apprliab</a>). Действие всегда завершается ошибкой, тем самым гарантируя, что процесс не уйдёт в неопределённое состояние.  <a href="group__public__branch__actions.html#ga23918a1bad1bf5abb7a61b24d192eb3d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga23918a1bad1bf5abb7a61b24d192eb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga810723101bf4d7d7e13e427650c1b99c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga810723101bf4d7d7e13e427650c1b99c">branch::decltrusted</a> (eosio::name coopname, eosio::checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:ga810723101bf4d7d7e13e427650c1b99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отклонение заявки доверенного лица председателем участка. Заявка стирается, причина передаётся аргументом (история — в журнале действий).  <a href="group__public__branch__actions.html#ga810723101bf4d7d7e13e427650c1b99c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga810723101bf4d7d7e13e427650c1b99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6dfb5c0620c45277092ba530c5d1301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gae6dfb5c0620c45277092ba530c5d1301">branch::deletebranch</a> (eosio::name coopname, eosio::name braname)</td></tr>
+<tr class="memdesc:gae6dfb5c0620c45277092ba530c5d1301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление кооперативного участка. Удаляет существующий кооперативный участок и отключает его участников. При удалении участка, когда остается менее 3 участков, автоматически отключает систему кооперативных участков.  <a href="group__public__branch__actions.html#gae6dfb5c0620c45277092ba530c5d1301">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae6dfb5c0620c45277092ba530c5d1301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa08e1745f6a7aa562569f83aa741d44c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gaa08e1745f6a7aa562569f83aa741d44c">branch::deltrusted</a> (eosio::name coopname, eosio::name braname, eosio::name trusted)</td></tr>
+<tr class="memdesc:gaa08e1745f6a7aa562569f83aa741d44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление доверенного лица из кооперативного участка. Удаляет доверенное лицо из существующего кооперативного участка.  <a href="group__public__branch__actions.html#gaa08e1745f6a7aa562569f83aa741d44c">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa08e1745f6a7aa562569f83aa741d44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e49f519a95d429730a7de366f648f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga8e49f519a95d429730a7de366f648f39">branch::delwhite</a> (eosio::name coopname, eosio::name braname, eosio::name <a class="el" href="structaccount.html">account</a>)</td></tr>
+<tr class="memdesc:ga8e49f519a95d429730a7de366f648f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление аккаунта из белого списка кооперативного участка. Удаляет аккаунт пайщика из белого списка приватного кооперативного участка.  <a href="group__public__branch__actions.html#ga8e49f519a95d429730a7de366f648f39">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga8e49f519a95d429730a7de366f648f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b216f390aabd065940383de3be71a15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga0b216f390aabd065940383de3be71a15">branch::editbranch</a> (eosio::name coopname, eosio::name braname, eosio::name trustee)</td></tr>
+<tr class="memdesc:ga0b216f390aabd065940383de3be71a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Редактирование кооперативного участка. Изменяет председателя существующего кооперативного участка.  <a href="group__public__branch__actions.html#ga0b216f390aabd065940383de3be71a15">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0b216f390aabd065940383de3be71a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bc7695429c372a2cb993c85b5d1a3d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga6bc7695429c372a2cb993c85b5d1a3d9">branch::exec</a> (eosio::name coopname, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> petition, <a class="el" href="structdocument2.html">document2</a> liability, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structauthority.html">authority</a>)</td></tr>
+<tr class="memdesc:ga6bc7695429c372a2cb993c85b5d1a3d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Исполнение утверждённого решения о создании кооперативного участка. Председатель собрания формирует заявление в совет и выводит вопрос об учреждении кооперативного участка на рассмотрение совета. К повестке совета прилагаются протокол собрания и бюллетени (по тому же якорю процесса).  <a href="group__public__branch__actions.html#ga6bc7695429c372a2cb993c85b5d1a3d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga6bc7695429c372a2cb993c85b5d1a3d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31fa8dba7a875dc30f8e5d3308759e7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga31fa8dba7a875dc30f8e5d3308759e7a">branch::joindec</a> (eosio::name coopname, eosio::checksum256 hash, eosio::name username)</td></tr>
+<tr class="memdesc:ga31fa8dba7a875dc30f8e5d3308759e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Присоединение пайщика к собранию. Пайщик фиксируется в списке участников собрания.  <a href="group__public__branch__actions.html#ga31fa8dba7a875dc30f8e5d3308759e7a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga31fa8dba7a875dc30f8e5d3308759e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04448eec7a9446a939040e6e33d86e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga04448eec7a9446a939040e6e33d86e6f">branch::reqtrusted</a> (eosio::name coopname, eosio::name braname, eosio::name username, eosio::checksum256 hash, <a class="el" href="structdocument2.html">document2</a> application, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structauthority.html">authority</a>)</td></tr>
+<tr class="memdesc:ga04448eec7a9446a939040e6e33d86e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подача заявки на приём доверенным лицом кооперативного участка. Пайщик прикладывает подписанные заявление и договор о полной материальной ответственности. Заявка ожидает одобрения председателя участка.  <a href="group__public__branch__actions.html#ga04448eec7a9446a939040e6e33d86e6f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga04448eec7a9446a939040e6e33d86e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b8393c021c146e1fd70fb029597e28f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga1b8393c021c146e1fd70fb029597e28f">branch::setprivate</a> (eosio::name coopname, eosio::name braname, bool is_private)</td></tr>
+<tr class="memdesc:ga1b8393c021c146e1fd70fb029597e28f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка признака приватности кооперативного участка. Приватный кооперативный участок нельзя выбрать при вступлении или смене участка, если аккаунт пайщика не добавлен в белый список этого участка.  <a href="group__public__branch__actions.html#ga1b8393c021c146e1fd70fb029597e28f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga1b8393c021c146e1fd70fb029597e28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e1927d3044080010676df6edcec82f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#ga4e1927d3044080010676df6edcec82f2">branch::startdec</a> (eosio::name coopname, eosio::checksum256 hash, eosio::name chairman, std::string <a class="el" href="structaddress.html">address</a>, std::vector&lt; <a class="el" href="structdecision__point.html">decision_point</a> &gt; agenda)</td></tr>
+<tr class="memdesc:ga4e1927d3044080010676df6edcec82f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открытие голосования по решению. Организатор собрания (он же председатель собрания) открывает голосование, указывая избираемого председателя кооперативного участка (из числа присоединившихся участников) и — для решения "createbranch" — адрес привязки кооперативного участка, определённый собранием. Окно голосования отмеряется автоматически (DECISION_VOTING_WINDOW_SECONDS).  <a href="group__public__branch__actions.html#ga4e1927d3044080010676df6edcec82f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4e1927d3044080010676df6edcec82f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa52ba00cfebacbb752b2504c4620abf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__public__branch__actions.html#gaa52ba00cfebacbb752b2504c4620abf8">branch::votedec</a> (eosio::name coopname, eosio::checksum256 hash, eosio::name username, <a class="el" href="structdocument2.html">document2</a> ballot, std::vector&lt; <a class="el" href="structdecision__vote__point.html">decision_vote_point</a> &gt; votes)</td></tr>
+<tr class="memdesc:gaa52ba00cfebacbb752b2504c4620abf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосование по вопросам повестки бюллетенем. Участник подаёт бюллетень-заявление с волеизъявлением (за/против/воздержался) по каждому вопросу повестки. Подсчёт ведёт контракт. Адаптация <a class="el" href="group__public__meet__actions.html#gac2a9a5d69bc5abef215b9861adc5c00a" title="Голосование на собрании. Регистрирует голос участника по вопросам повестки дня собрания">meet::vote</a>.  <a href="group__public__branch__actions.html#gaa52ba00cfebacbb752b2504c4620abf8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa52ba00cfebacbb752b2504c4620abf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<h2 class="groupheader">Функции</h2>
+<a id="ga24202655a4b0784a2a35a9dba6585e28" name="ga24202655a4b0784a2a35a9dba6585e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24202655a4b0784a2a35a9dba6585e28">&#9670;&nbsp;</a></span>accrue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::accrue </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_contract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>process_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>process_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы). Вызывается inline контрактом-источником (marketplace) при финализации заказа. </p>
+<p >Зачисление поступивших членских взносов в общий кошелёк кооперативного участка (requirement b6 «Экономика КУ», раунд 5; процесс p.brn.fees).</p>
+<p >Вызывается inline контрактом-источником (сегодня — marketplace при финализации заказа, signiss2): 100% фактического членского взноса уходит в общий кошелёк КУ (o.brn.common, username = braname) — приоритет общего кошелька (решение владельца 2026-06-10). Немедленного персонального распределения нет: дальнейшее использование — отдельные команды председателя (distribute / createexp) после контроля планового резерва расходов бэкендом.</p>
+<p >Средства физически уходят с пула w.mkt.fee — он пополнен операцией o.mkt.fee при создании заказа, неиспользованная часть уже возвращена источником через o.mkt.refund.</p>
+<p >Имя нитки процесса (<code>process_type</code>) передаёт контракт-источник: зачисление идёт внутри его нитки (у marketplace — поставка по хэшу заказа), поэтому сама операция не может называть процесс. Пока имя выводилось из кода операции, поставка подписывалась «Членские взносы кооперативного участка».</p>
+<p >Guards:</p><ul>
+<li>авторизация: кооператив либо системный контракт из whitelist;</li>
+<li>сумма в валюте кооператива, больше нуля;</li>
+<li>имя нитки известно реестру процессов (проверяет <a class="el" href="group__public__ledger2__actions.html#ga88f979b5306132af67fee1107e7bd38e" title="Единая точка входа финансовых движений ledger2 (orchestrator).">ledger2::apply</a>). </li>
+</ul>
+
+</div>
+</div>
+<a id="ga250876383e6d547decd69ad052c8dd86" name="ga250876383e6d547decd69ad052c8dd86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga250876383e6d547decd69ad052c8dd86">&#9670;&nbsp;</a></span>addtrusted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::addtrusted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>trusted</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление доверенного лица в кооперативный участок. Добавляет нового доверенного лица в существующий кооперативный участок. Максимальное количество доверенных лиц на один участок - 3. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">trusted</td><td>Доверенное лицо для добавления (должно быть физическим лицом)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga1da6055cf37e17e4ac5a13f9345b2928" name="ga1da6055cf37e17e4ac5a13f9345b2928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1da6055cf37e17e4ac5a13f9345b2928">&#9670;&nbsp;</a></span>addwhite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::addwhite </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>account</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавление пайщика в белый список кооперативного участка. Пайщики из белого списка могут выбрать приватный кооперативный участок при вступлении или смене участка. В белый список можно добавить любого пайщика кооператива. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">account</td><td>Аккаунт пайщика для добавления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gafea072308d0573543a42a7098976dd0f" name="gafea072308d0573543a42a7098976dd0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafea072308d0573543a42a7098976dd0f">&#9670;&nbsp;</a></span>aidconfirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::aidconfirm </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>outcome_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a> — кассир подтвердил банковский перевод материальной помощи. Здесь применяются o.brn.aidtax (удержание налога, Дт 86 / Кт 68) и o.brn.aid (выплата, Дт 86 / Кт 51). </p>
+<p >Callback от gateway о фактическом подтверждении выплаты материальной помощи (requirement b6 «Экономика КУ», процесс p.brn.aid).</p>
+<p >Inline-action отправляется контрактом gateway из <code><a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a></code> после того, как кассир подтвердил реальный банковский перевод получателю. Здесь — единственное место, где применяется списание. С 2026-08-13 кооператив удерживает НДФЛ, поэтому сумма заявления расходится надвое:</p>
+<ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.brn.aidtax, tax, …, hash=aid.hash) — TRANSFER w.brn.person → w.sov.ndfl, Дт 86 / Кт 68 (удержанный налог);</li>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.brn.aid, net, …, hash=aid.hash) — BURN с w.brn.person получателя, Дт 86 / Кт 51 (выплата на руки).</li>
+</ul>
+<p >Ровно ту же сумму <code>net</code> кассир увидел в исходящем платеже: она посчитана из <code>aid.amount</code> тем же <code><a class="el" href="namespace_branch_ndfl.html" title="Удержание НДФЛ с материальной помощи доверенному кооперативного участка (requirement b6 «Экономика КУ...">BranchNdfl</a></code>, поэтому расхождения между платёжкой и проводкой быть не может.</p>
+<p >Выплата подтверждена — терминал жизненного цикла: запись заявления стирается из RAM, история — в журнале действий и в решении совета.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_gateway) — callback легитимен только от gateway-контракта;</li>
+<li>заявление найдено по outcome_hash и одобрено советом (статус authorized): исходящий платёж создаётся только в <code>onaidauth</code>, поэтому иной статус означал бы выплату в обход решения совета. </li>
+</ul>
+
+</div>
+</div>
+<a id="ga2d775018cfc4f97ac1fa3376811520e7" name="ga2d775018cfc4f97ac1fa3376811520e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d775018cfc4f97ac1fa3376811520e7">&#9670;&nbsp;</a></span>aiddecline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::aiddecline </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>outcome_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a> — перевод не состоялся; средства остаются на персональном кошельке, заявление закрывается. </p>
+<p >Callback от gateway — попытка отменить выплату материальной помощи (requirement b6 «Экономика КУ», процесс p.brn.aid).</p>
+<p >Действие обязано существовать: <code><a class="el" href="namespace_gateway.html#a1c9bf607ccf012b2e29dc34b26210255">Gateway::create_outcome</a></code> требует имя decline-callback'а в сигнатуре, иначе исходящий платёж не зарегистрировать. Но отмены в этом процессе нет — действие всегда падает.</p>
+<p >Почему. Выплату материальной помощи разрешает совет (<code>onaidauth</code>), и кассир это решение не пересматривает: принятое решение исполняется. Единственная реальная причина «не смог заплатить» — неверные реквизиты получателя; она решается уточнением реквизитов у получателя, а не отменой решения совета. Отказ до выплаты возможен только на стороне совета — через <code>onaiddecl</code>, пока заявление в статусе proposed. </p>
+
+</div>
+</div>
+<a id="ga1ffaf8bc789d337350ee52b630a533c2" name="ga1ffaf8bc789d337350ee52b630a533c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ffaf8bc789d337350ee52b630a533c2">&#9670;&nbsp;</a></span>apprauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::apprauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>approved_document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Встречная подпись председателя совета на доверенности председателя кооперативного участка. Callback одобрения совета: председатель совета подписал доверенность второй подписью (механизм <a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a> проверил его подпись). Фиксируем полностью подписанную доверенность в реестре документов по якорю одобрения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Председатель кооперативного участка — уполномоченный по доверенности </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Якорь одобрения (хэш документа доверенности) </td></tr>
+    <tr><td class="paramname">approved_document</td><td>Доверенность с встречной подписью председателя совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga9c0de40997856f9c3fea7d7c616f972d" name="ga9c0de40997856f9c3fea7d7c616f972d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9c0de40997856f9c3fea7d7c616f972d">&#9670;&nbsp;</a></span>apprliab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::apprliab </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>approved_document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Встречная подпись председателя совета на договоре о полной материальной ответственности председателя кооперативного участка. Callback одобрения совета: председатель совета подписал договор второй подписью (механизм <a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a> проверил его подпись). Фиксируем полностью подписанный договор в реестре документов по якорю процесса. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Председатель кооперативного участка — сторона «Исполнитель» </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Якорь процесса (хэш одобрения) </td></tr>
+    <tr><td class="paramname">approved_document</td><td>Договор с встречной подписью председателя совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga44b65d645fd62e908c971b55ae950cfe" name="ga44b65d645fd62e908c971b55ae950cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44b65d645fd62e908c971b55ae950cfe">&#9670;&nbsp;</a></span>apprtrusted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::apprtrusted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>countersigned</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>countersigned_authority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Одобрение заявки доверенного лица председателем участка. Председатель кооперативного участка накладывает встречную подпись на договор материальной ответственности и доверенность заявителя; оба полностью подписанных документа фиксируются в реестре документов, пайщик добавляется в список доверенных лиц участка, заявка стирается. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Внешний идентификатор заявки </td></tr>
+    <tr><td class="paramname">countersigned</td><td>Договор материальной ответственности со встречной подписью председателя участка </td></tr>
+    <tr><td class="paramname">countersigned_authority</td><td>Доверенность доверенному лицу со встречной подписью председателя участка</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gab32cdab5d78eae9ba4f8938ab75610d9" name="gab32cdab5d78eae9ba4f8938ab75610d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab32cdab5d78eae9ba4f8938ab75610d9">&#9670;&nbsp;</a></span>canceldec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::canceldec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отмена собрания инициатором до вывода на совет. Инициатор сворачивает собрание, пока решение не ушло в совет; запись и вопросы повестки стираются, причина передаётся аргументом (история — в журнале действий). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отмены</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga55c6c67df3cf9cd5ecbe3dac907e86f9" name="ga55c6c67df3cf9cd5ecbe3dac907e86f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55c6c67df3cf9cd5ecbe3dac907e86f9">&#9670;&nbsp;</a></span>closedec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::closedec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>protocol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрытие собрания и утверждение протокола председателем. Председатель закрывает голосование и утверждает протокол одной своей подписью (секретарь не нужен — подсчёт ведёт контракт). Проверяется кворум и итог голосования. Для типа "free" — терминал: запись стирается (история — в журнале). Для "createbranch" — решение переходит в статус "approved" в ожидании исполнения действием exec (вывод вопроса на совет). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">protocol</td><td>Подписанный председателем протокол решения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gabe4b4efb4049d6f2327d46b172ebd5d2" name="gabe4b4efb4049d6f2327d46b172ebd5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe4b4efb4049d6f2327d46b172ebd5d2">&#9670;&nbsp;</a></span>confirmdec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::confirmdec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подтверждение решения советом — создание кооперативного участка. Callback совета: по утверждению учреждается кооперативный участок с реквизитами из решения (аккаунт участка, избранный председатель), после чего запись решения стирается (история — в журнале действий). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">authorization</td><td>Документ решения совета</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga7ef08e9cc9d05fa3d4f98100d2740a73" name="ga7ef08e9cc9d05fa3d4f98100d2740a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7ef08e9cc9d05fa3d4f98100d2740a73">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::convert </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>convert_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перевод персональных средств доверенного в членский кошелёк «Стола заказов» (o.brn.conv) — для заказов как обычный пайщик. </p>
+<p >Перевод персональных средств доверенного КУ в членский кошелёк «Стола заказов» (requirement b6 «Экономика КУ», процесс p.brn.fees).</p>
+<p >Одна ledger2-операция:</p><ul>
+<li>o.brn.conv (TRANSFER w.brn.person → w.mkt.member, без проводки — оба кошелька на счёте 86): распределённые членские средства доверенного становятся членскими средствами «Стола заказов», и он заказывает имущество как обычный пайщик.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>amount &gt; 0 в валюте кооператива;</li>
+<li>доверенный — активный пайщик кооператива;</li>
+<li>достаточность L3-средств на w.brn.person и подписанная программа «Стола заказов» для w.mkt.member проверяются внутри <a class="el" href="group__public__ledger2__actions.html#gaff100a432e9d924b80e796b3e241417c" title="Атомарная операция по кошельку (issue/transfer/block/unblock).">ledger2::walletop</a>.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> (инициирует сам доверенный из ЛК стола ПВЗ, право проверяет бэкенд). </dd></dl>
+
+</div>
+</div>
+<a id="ga1be1fe1fb3d13f921fa124acc60ddf8a" name="ga1be1fe1fb3d13f921fa124acc60ddf8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1be1fe1fb3d13f921fa124acc60ddf8a">&#9670;&nbsp;</a></span>createaid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::createaid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>aid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заявление на материальную помощь доверенного из его персонального кошелька: подписанное заявление вносится на повестку совета (type=brnaid). Исходящий платёж кассиру создаётся только после решения совета — в callback'е onaidauth. </p>
+<p >Заявление на материальную помощь доверенного/председателя КУ (requirement b6 «Экономика КУ», процесс p.brn.aid).</p>
+<p >Источник — собственный персональный кошелёк членских средств получателя (w.brn.person), пополненный распределением членских взносов участка. Получатель сам подписывает заявление.</p>
+<p >НДФЛ удерживает кооператив: он выступает налоговым агентом и перечисляет получателю сумму за вычетом налога (решение владельца 2026-08-13, отменяет прежний порядок «налог платит получатель сам»). <code>amount</code> здесь — сумма заявления целиком: именно она списывается с персонального кошелька, а разбивка на выплату и удержание считается в <code><a class="el" href="namespace_branch_ndfl.html" title="Удержание НДФЛ с материальной помощи доверенному кооперативного участка (requirement b6 «Экономика КУ...">BranchNdfl</a></code> на шаге выплаты.</p>
+<p >Действие НЕ применяет <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> и НЕ создаёт исходящий платёж. Материальная помощь выводит деньги из кооператива, поэтому решение о выплате принимает совет: здесь заявление лишь вносится на повестку (<a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a>, type=brnaid) со статусом proposed. Регистрация исходящего платежа в gateway происходит в callback'е <code>onaidauth</code> после положительного решения; при отказе совета срабатывает <code>onaiddecl</code> и заявление закрывается, не доходя до кассира. Списание выполняется ещё позже — в <code>aidconfirm</code>, после фактического банковского перевода кассиром, и идёт двумя операциями: o.brn.aidtax (удержание, Дт 86 / Кт 68) и o.brn.aid (выплата, Дт 86 / Кт 51).</p>
+<p >Средства под заявление не блокируются ни на одном шаге: если к моменту подтверждения кассиром баланса уже не хватает (получатель параллельно перевёл их в «Стол заказов»), списание упадёт и кассир не сможет подтвердить выплату.</p>
+<p >Guards:</p><ul>
+<li>amount &gt; 0 в валюте кооператива; заявление с таким hash не существует;</li>
+<li>получатель — активный пайщик; заявление подписано получателем;</li>
+<li>получатель — доверенное лицо либо председатель указанного участка;</li>
+<li>на персональном кошельке достаточно средств на момент подачи.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code>. </dd></dl>
+
+</div>
+</div>
+<a id="gade9ac90a5bd0e499122d5fda8776a223" name="gade9ac90a5bd0e499122d5fda8776a223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade9ac90a5bd0e499122d5fda8776a223">&#9670;&nbsp;</a></span>createbranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::createbranch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>trustee</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Создание нового кооперативного участка. Создает новый кооперативный участок с указанным председателем. При создании третьего участка автоматически активирует систему кооперативных участков. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">trustee</td><td>Председатель кооперативного участка (должен быть физическим лицом)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga27f1618becbfb5eaeff9e49ed3434cd7" name="ga27f1618becbfb5eaeff9e49ed3434cd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27f1618becbfb5eaeff9e49ed3434cd7">&#9670;&nbsp;</a></span>createdec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::createdec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>initiator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>proposal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structdecision__point.html">decision_point</a> &gt;&#160;</td>
+          <td class="paramname"><em>agenda</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Объявление собрания пайщиков с повесткой (создание решения). Универсальный механизм: тип "free" — свободное решение (фиксируется протоколом), тип "createbranch" — автоматизируемое (после утверждения уходит в совет и создаёт КУ). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса (внешний идентификатор решения) </td></tr>
+    <tr><td class="paramname">type</td><td>Тип решения: "free" | "createbranch" </td></tr>
+    <tr><td class="paramname">initiator</td><td>Организатор собрания </td></tr>
+    <tr><td class="paramname">proposal</td><td>Подписанное предложение/повестка </td></tr>
+    <tr><td class="paramname">braname</td><td>Заранее сгенерированный аккаунт будущего КУ (для "createbranch", иначе пустое) </td></tr>
+    <tr><td class="paramname">agenda</td><td>Вопросы повестки дня</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga1b5e9194c13a11c4327bb530148b047a" name="ga1b5e9194c13a11c4327bb530148b047a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b5e9194c13a11c4327bb530148b047a">&#9670;&nbsp;</a></span>createexp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::createexp </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>creator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>expense_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_expense_domain_1_1item.html">ExpenseDomain::item</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подать расход участка в шасси расходов: средства уходят из общего кошелька КУ в пул расходов (o.brn.expfnd), записка передаётся шасси — решение совета, оплата по реквизитам либо аванс под отчёт, отчёт, закрытие. </p>
+<p >Подать расход кооперативного участка в шасси расходов (requirement b6 «Экономика КУ»; процесс p.brn.spend).</p>
+<p >Участок — только инициатор. Сумма служебной записки уходит из общего кошелька членских взносов КУ в пул расходов участка (o.brn.expfnd) и перестаёт быть доступной распределению между участниками, после чего записка передаётся шасси расходов: решение совета, оплата по реквизитам либо выдача аванса под отчёт, отчёт с чеками, закрытие. На терминальном переходе шасси вызывает <code><a class="el" href="group__public__branch__actions.html#gab33af908640109b2f19e2ab550dfeebc" title="Callback шасси расходов — расход завершён (отклонён советом либо закрыт). Неизрасходованный остаток в...">branch::onexpdone</a></code>, где неизрасходованный остаток возвращается участку.</p>
+<p >Транзит через пул нужен и по существу (видно, сколько средств участка отдано под расходы), и технически: шасси работает с кооперативным пулом, а общий кошелёк участка ведёт разрез по участку — прямой перевод между ними невозможен, операция несёт один username.</p>
+<p >Механика оплаты задаётся по каждой позиции (аванс под отчёт пайщику либо прямая оплата организации) и проверяется шасси.</p>
+<p >Guards:</p><ul>
+<li>записка подписана создателем; хотя бы одна позиция; сумма &gt; 0;</li>
+<li>КУ существует, создатель — председатель этого участка;</li>
+<li>расход с таким идентификатором ещё не подавался;</li>
+<li>достаточность средств проверяет сам перевод в книге учёта.</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code>. </dd></dl>
+
+</div>
+</div>
+<a id="gaca815012ce985d5732a3ca103fac89b3" name="gaca815012ce985d5732a3ca103fac89b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca815012ce985d5732a3ca103fac89b3">&#9670;&nbsp;</a></span>declauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::declauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрет отклонения доверенности председателя кооперативного участка. Callback отклонения совета: к этому моменту решение об учреждении кооперативного участка уже принято советом и участок создан, поэтому доверенность председателю участка отклонить нельзя — председателю совета остаётся только подписать её встречной подписью (см. <a class="el" href="group__public__branch__actions.html#ga1ffaf8bc789d337350ee52b630a533c2" title="Встречная подпись председателя совета на доверенности председателя кооперативного участка....">branch::apprauth</a>). Действие всегда завершается ошибкой. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Председатель кооперативного участка — уполномоченный по доверенности </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Якорь одобрения (хэш документа доверенности) </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения (не используется)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="gafc496501eac7a4d735535ef1b7221076" name="gafc496501eac7a4d735535ef1b7221076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc496501eac7a4d735535ef1b7221076">&#9670;&nbsp;</a></span>declinedec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::declinedec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение решения советом. Callback совета: при отказе совета запись решения и вопросы повестки стираются, причина передаётся аргументом (история — в журнале действий). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga23918a1bad1bf5abb7a61b24d192eb3d" name="ga23918a1bad1bf5abb7a61b24d192eb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23918a1bad1bf5abb7a61b24d192eb3d">&#9670;&nbsp;</a></span>declliab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::declliab </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>approval_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запрет отклонения договора о материальной ответственности председателя участка. Callback отклонения совета: к этому моменту решение об учреждении кооперативного участка уже принято советом и участок создан, поэтому договор о материальной ответственности отклонить нельзя — председателю совета остаётся только подписать его встречной подписью (см. <a class="el" href="group__public__branch__actions.html#ga9c0de40997856f9c3fea7d7c616f972d" title="Встречная подпись председателя совета на договоре о полной материальной ответственности председателя ...">branch::apprliab</a>). Действие всегда завершается ошибкой, тем самым гарантируя, что процесс не уйдёт в неопределённое состояние. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">username</td><td>Председатель кооперативного участка — сторона «Исполнитель» </td></tr>
+    <tr><td class="paramname">approval_hash</td><td>Якорь процесса (хэш одобрения) </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения (не используется)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>soviet</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga810723101bf4d7d7e13e427650c1b99c" name="ga810723101bf4d7d7e13e427650c1b99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga810723101bf4d7d7e13e427650c1b99c">&#9670;&nbsp;</a></span>decltrusted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::decltrusted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отклонение заявки доверенного лица председателем участка. Заявка стирается, причина передаётся аргументом (история — в журнале действий). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Внешний идентификатор заявки </td></tr>
+    <tr><td class="paramname">reason</td><td>Причина отклонения</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gae6dfb5c0620c45277092ba530c5d1301" name="gae6dfb5c0620c45277092ba530c5d1301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6dfb5c0620c45277092ba530c5d1301">&#9670;&nbsp;</a></span>deletebranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::deletebranch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление кооперативного участка. Удаляет существующий кооперативный участок и отключает его участников. При удалении участка, когда остается менее 3 участков, автоматически отключает систему кооперативных участков. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка для удаления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaa08e1745f6a7aa562569f83aa741d44c" name="gaa08e1745f6a7aa562569f83aa741d44c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa08e1745f6a7aa562569f83aa741d44c">&#9670;&nbsp;</a></span>deltrusted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::deltrusted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>trusted</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление доверенного лица из кооперативного участка. Удаляет доверенное лицо из существующего кооперативного участка. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">trusted</td><td>Доверенное лицо для удаления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gacdd58f1f722891732374f96359446303" name="gacdd58f1f722891732374f96359446303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdd58f1f722891732374f96359446303">&#9670;&nbsp;</a></span>delweight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::delweight </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>contract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Исключение участника из распределения (вес удаляется, доли остальных перебалансируются автоматически). </p>
+<p >Исключение участника из распределения членских взносов КУ (requirement b6 «Экономика КУ»).</p>
+<p >Запись веса удаляется, Σ весов уменьшается — доли оставшихся участников перебалансируются автоматически на следующих начислениях. Ничего не блокируется и не переносится в общий кошелёк (решение владельца 2026-06-10). Уже распределённые средства остаются на персональном кошельке участника.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga8e49f519a95d429730a7de366f648f39" name="ga8e49f519a95d429730a7de366f648f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8e49f519a95d429730a7de366f648f39">&#9670;&nbsp;</a></span>delwhite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::delwhite </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>account</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаление аккаунта из белого списка кооперативного участка. Удаляет аккаунт пайщика из белого списка приватного кооперативного участка. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">account</td><td>Аккаунт пайщика для удаления</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga684e0851b7b92f5b1be2441ac66e58d8" name="ga684e0851b7b92f5b1be2441ac66e58d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga684e0851b7b92f5b1be2441ac66e58d8">&#9670;&nbsp;</a></span>distribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::distribute </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_contract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>round_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ручное распределение средств общего кошелька КУ между председателем и доверенными по весам реестра: команда председателя, сумма раскладывается по весам (o.brn.release + o.brn.person), остаток округления остаётся в общем кошельке. Можно частично и многократно. Плановый резерв расходов (30 дней) контролирует бэкенд до вызова. </p>
+<p >Ручное распределение средств общего кошелька кооперативного участка (requirement b6 «Экономика КУ», раунд 5; процесс p.brn.fees).</p>
+<p >Команда председателя КУ (НЕ автоматическое действие при финализации заказа — приоритет общего кошелька, решение владельца 2026-06-10): председатель указывает сумму, она раскладывается по весам реестра <code>weights</code> (braname, source_contract). Можно распределять не всё и несколько раз. Плановый резерв расходов (30 дней) контролирует бэкенд до отправки транзакции — гард сознательно оффчейн до шасси расходов.</p>
+<p >Раскладка per-доверенный — двухходовка (walletop несёт один username, прямой TRANSFER между USER_SHARED-разрезами braname → доверенный невозможен):</p>
+<ul>
+<li>o.brn.release: TRANSFER w.brn.common → w.brn.pool (username = braname);</li>
+<li>o.brn.person: TRANSFER w.brn.pool → w.brn.person (username = доверенный).</li>
+</ul>
+<p >Обе ноги выполняются на фактическую долю (целочисленно, вниз), поэтому транзитный пул w.brn.pool в нуле после транзакции, а остаток округления вообще не покидает общий кошелёк. Состояния в RAM раунд не оставляет: история распределений собирается парсером из самого действия (таблица blockchain_actions), round_hash — process_hash ledger2-операций.</p>
+<p >Guards:</p><ul>
+<li>авторизация: кооператив либо системный контракт из whitelist (председательство проверяет бэкенд — все пути идут через контроллер);</li>
+<li>сумма в валюте кооператива, больше нуля;</li>
+<li>веса настроены (Σ весов &gt; 0);</li>
+<li>достаточность общего кошелька проверяет сам <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> при o.brn.release. </li>
+</ul>
+
+</div>
+</div>
+<a id="ga0b216f390aabd065940383de3be71a15" name="ga0b216f390aabd065940383de3be71a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b216f390aabd065940383de3be71a15">&#9670;&nbsp;</a></span>editbranch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::editbranch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>trustee</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Редактирование кооперативного участка. Изменяет председателя существующего кооперативного участка. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">trustee</td><td>Новый председатель кооперативного участка (должен быть физическим лицом)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga6bc7695429c372a2cb993c85b5d1a3d9" name="ga6bc7695429c372a2cb993c85b5d1a3d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bc7695429c372a2cb993c85b5d1a3d9">&#9670;&nbsp;</a></span>exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::exec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>petition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>liability</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Исполнение утверждённого решения о создании кооперативного участка. Председатель собрания формирует заявление в совет и выводит вопрос об учреждении кооперативного участка на рассмотрение совета. К повестке совета прилагаются протокол собрания и бюллетени (по тому же якорю процесса). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">petition</td><td>Подписанное заявление председателя в совет </td></tr>
+    <tr><td class="paramname">liability</td><td>Подписанный председателем участка договор о полной материальной ответственности </td></tr>
+    <tr><td class="paramname">authority</td><td>Подписанная председателем участка доверенность председателю кооперативного участка</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga940b0edb8e82cf570d1adf686a17c553" name="ga940b0edb8e82cf570d1adf686a17c553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga940b0edb8e82cf570d1adf686a17c553">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация контракта кооперативных участков. Выполняет начальную настройку контракта. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_system</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga31fa8dba7a875dc30f8e5d3308759e7a" name="ga31fa8dba7a875dc30f8e5d3308759e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31fa8dba7a875dc30f8e5d3308759e7a">&#9670;&nbsp;</a></span>joindec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::joindec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Присоединение пайщика к собранию. Пайщик фиксируется в списке участников собрания. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">username</td><td>Имя присоединяющегося пайщика</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga9f1f3f4229438aa77c8f48cb4646fa6d" name="ga9f1f3f4229438aa77c8f48cb4646fa6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f1f3f4229438aa77c8f48cb4646fa6d">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация контракта кооперативных участков. Выполняет начальную настройку контракта. </p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>_branch</code> </dd></dl>
+
+</div>
+</div>
+<a id="ga9472735079d3beb68a9eacab1f482587" name="ga9472735079d3beb68a9eacab1f482587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9472735079d3beb68a9eacab1f482587">&#9670;&nbsp;</a></span>onaidauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::onaidauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от soviet — совет одобрил выплату материальной помощи. Заявление переходит в authorized, протокол сохраняется, и регистрируется исходящий платёж в gateway — заявка попадает к кассиру. </p>
+<p >Callback контракта <a class="el" href="namespace_soviet.html">Soviet</a> — совет принял положительное решение по заявлению на материальную помощь (requirement b6, процесс p.brn.aid).</p>
+<p >Приходит inline-вызовом из <code><a class="el" href="classsoviet.html#a019f2f2333bf452e95bceef16ec1a473">soviet::authorize_action_effect</a></code> после того, как совет проголосовал за выплату и председатель подписал протокол. Здесь заявление переходит proposed → authorized, протокол совета сохраняется в записи, и только теперь регистрируется исходящий платёж в gateway — заявка появляется у кассира в реестре исходящих платежей.</p>
+<p >Само списание o.brn.aid (Дт 86 / Кт 51) и удержание налога o.brn.aidtax (Дт 86 / Кт 68) произойдут ещё позже — в callback'е <code>aidconfirm</code>, после фактического банковского перевода кассиром.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_soviet);</li>
+<li>заявление найдено по hash решения и находится в статусе proposed (защита от повторного или позднего callback'а). </li>
+</ul>
+
+</div>
+</div>
+<a id="gaa2a046105ae0c63dfc37d3d9a2663f37" name="gaa2a046105ae0c63dfc37d3d9a2663f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2a046105ae0c63dfc37d3d9a2663f37">&#9670;&nbsp;</a></span>onaiddecl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::onaiddecl </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от soviet — совет отказал в выплате либо срок рассмотрения истёк. Заявление закрывается, не доходя до кассира; средства остаются на персональном кошельке. </p>
+<p >Callback контракта <a class="el" href="namespace_soviet.html">Soviet</a> — совет отказал в выплате материальной помощи либо срок рассмотрения заявления истёк (requirement b6, p.brn.aid).</p>
+<p >Приходит inline-вызовом из <code>soviet::decline_and_erase_decision</code> (голоса «против» либо просрочка повестки). Заявление закрывается, не доходя до кассира: исходящий платёж не создавался, ledger2-операций не было, средства так и остались на персональном кошельке получателя — он может распорядиться ими иначе или подать заявление повторно.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_soviet);</li>
+<li>заявление найдено по hash решения и находится в статусе proposed (одобренное заявление отзывается уже кассиром через <code>aiddecline</code>). </li>
+</ul>
+
+</div>
+</div>
+<a id="gab33af908640109b2f19e2ab550dfeebc" name="gab33af908640109b2f19e2ab550dfeebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab33af908640109b2f19e2ab550dfeebc">&#9670;&nbsp;</a></span>onexpdone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::onexpdone </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>expense_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>total_actual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback шасси расходов — расход завершён (отклонён советом либо закрыт). Неизрасходованный остаток возвращается в общий кошелёк участка (o.brn.expunf), запись расхода стирается. </p>
+<p >Callback шасси расходов — расход участка завершён (requirement b6 «Экономика КУ»; процесс p.brn.spend).</p>
+<p >Приходит inline-вызовом из шасси на терминальном переходе служебной записки: совет отклонил расход либо расход закрыт после отчёта. Всё, что из выделенных средств не было потрачено, возвращается в общий кошелёк участка (o.brn.expunf) и снова становится доступным распределению:</p><ul>
+<li>отклонение — возвращается вся сумма (оплат до отклонения быть не может);</li>
+<li>закрытие — возвращается разница между выделенным и фактически потраченным (в том числе после возврата пайщиком остатка аванса).</li>
+</ul>
+<p >Расход завершён — запись участка стирается из RAM, история движений остаётся в журнале действий.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_expense) — вызывает только шасси расходов;</li>
+<li>расход найден по идентификатору записки;</li>
+<li>потрачено не больше, чем было выделено. </li>
+</ul>
+
+</div>
+</div>
+<a id="ga04448eec7a9446a939040e6e33d86e6f" name="ga04448eec7a9446a939040e6e33d86e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04448eec7a9446a939040e6e33d86e6f">&#9670;&nbsp;</a></span>reqtrusted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::reqtrusted </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>application</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подача заявки на приём доверенным лицом кооперативного участка. Пайщик прикладывает подписанные заявление и договор о полной материальной ответственности. Заявка ожидает одобрения председателя участка. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Кооперативный участок </td></tr>
+    <tr><td class="paramname">username</td><td>Заявитель </td></tr>
+    <tr><td class="paramname">hash</td><td>Внешний идентификатор заявки </td></tr>
+    <tr><td class="paramname">application</td><td>Подписанный заявителем договор о полной материальной ответственности </td></tr>
+    <tr><td class="paramname">authority</td><td>Подписанная заявителем доверенность доверенному лицу/оператору участка</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gada32da54e27c99a222b80bdd47a3974c" name="gada32da54e27c99a222b80bdd47a3974c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada32da54e27c99a222b80bdd47a3974c">&#9670;&nbsp;</a></span>retfee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::retfee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>source_contract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>process_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>process_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возврат членских взносов КУ из общего кошелька участка обратно в пул взносов программы-источника (o.brn.retfee) — инверсия accrue. Вызывается inline контрактом-источником (marketplace) при гарантийном возврате имущества, чтобы пайщику вернулась полная уплаченная сумма. </p>
+<p >Возврат членских взносов из общего кошелька кооперативного участка в пул взносов программы-источника (процесс p.brn.fees) — точная инверсия accrue.</p>
+<p >Вызывается inline контрактом-источником (сегодня — marketplace при приёме гарантийного возврата, accretrn): доля членского взноса, приходящаяся на возвращаемое имущество, уходит из общего кошелька участка (o.brn.retfee, username = braname) обратно в пул взносов программы. Оттуда контракт-источник своей операцией возврата довозвращает её на членский кошелёк заказчика — пайщику возвращается полная уплаченная сумма, а не только стоимость имущества.</p>
+<p >Двухходовка нужна из-за инварианта walletop «один username на обе стороны»: прямой перевод с общего кошелька участка (разрез по braname) на кошелёк пайщика (разрез по пайщику) невозможен, поэтому транзит идёт через кооперативный пул взносов программы.</p>
+<p >Guards:</p><ul>
+<li>авторизация: кооператив либо системный контракт из whitelist;</li>
+<li>сумма в валюте кооператива, больше нуля;</li>
+<li>средств в общем кошельке участка достаточно. Взнос попадает в общий кошелёк сразу при выдаче заказа, а возврат приходит в течение гарантийного срока — к этому моменту участок мог уже распределить или потратить эти средства. Тогда приём возврата не проходит, и председатель сперва пополняет общий кошелёк участка. </li>
+</ul>
+
+</div>
+</div>
+<a id="ga1b8393c021c146e1fd70fb029597e28f" name="ga1b8393c021c146e1fd70fb029597e28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b8393c021c146e1fd70fb029597e28f">&#9670;&nbsp;</a></span>setprivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::setprivate </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_private</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка признака приватности кооперативного участка. Приватный кооперативный участок нельзя выбрать при вступлении или смене участка, если аккаунт пайщика не добавлен в белый список этого участка. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">braname</td><td>Наименование кооперативного участка </td></tr>
+    <tr><td class="paramname">is_private</td><td>Признак приватности (true — приватный, false — публичный)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gacb69360d854201c5f3cf99542a088dc6" name="gacb69360d854201c5f3cf99542a088dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb69360d854201c5f3cf99542a088dc6">&#9670;&nbsp;</a></span>setweight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::setweight </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>contract</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>weight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель КУ задаёт/меняет вес участника в распределении членских взносов от контракта-источника. Доля = вес / Σ весов. </p>
+<p >Назначение/изменение веса участника в распределении членских взносов кооперативного участка (requirement b6 «Экономика КУ»).</p>
+<p >Условия распределения задаются per (КУ, контракт-источник): сегодня источник — «Стол заказов» (marketplace), той же методикой управляются финансы КУ других потребительских программ. Доля участника = вес / Σ весов; изменение состава перебалансирует доли автоматически на следующих начислениях.</p>
+<p >Guards:</p><ul>
+<li>КУ существует; участник — председатель (trustee) или доверенный КУ.</li>
+<li>weight &gt; 0 (исключение из распределения — delweight).</li>
+</ul>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> (назначение — прерогатива председателя КУ, право проверяет бэкенд). </dd></dl>
+
+</div>
+</div>
+<a id="ga4e1927d3044080010676df6edcec82f2" name="ga4e1927d3044080010676df6edcec82f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e1927d3044080010676df6edcec82f2">&#9670;&nbsp;</a></span>startdec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::startdec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>chairman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structdecision__point.html">decision_point</a> &gt;&#160;</td>
+          <td class="paramname"><em>agenda</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открытие голосования по решению. Организатор собрания (он же председатель собрания) открывает голосование, указывая избираемого председателя кооперативного участка (из числа присоединившихся участников) и — для решения "createbranch" — адрес привязки кооперативного участка, определённый собранием. Окно голосования отмеряется автоматически (DECISION_VOTING_WINDOW_SECONDS). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">chairman</td><td>Избираемый председатель кооперативного участка (из участников) </td></tr>
+    <tr><td class="paramname">address</td><td>Адрес привязки кооперативного участка (для "createbranch") </td></tr>
+    <tr><td class="paramname">agenda</td><td>Итоговая повестка собрания: если непуста — заменяет предварительную (уточнённые на собрании формулировки и дополнительные вопросы); пустая — повестка без изменений</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+<a id="gaa52ba00cfebacbb752b2504c4620abf8" name="gaa52ba00cfebacbb752b2504c4620abf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa52ba00cfebacbb752b2504c4620abf8">&#9670;&nbsp;</a></span>votedec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void branch::votedec </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>ballot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structdecision__vote__point.html">decision_vote_point</a> &gt;&#160;</td>
+          <td class="paramname"><em>votes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Голосование по вопросам повестки бюллетенем. Участник подаёт бюллетень-заявление с волеизъявлением (за/против/воздержался) по каждому вопросу повестки. Подсчёт ведёт контракт. Адаптация <a class="el" href="group__public__meet__actions.html#gac2a9a5d69bc5abef215b9861adc5c00a" title="Голосование на собрании. Регистрирует голос участника по вопросам повестки дня собрания">meet::vote</a>. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coopname</td><td>Наименование кооператива </td></tr>
+    <tr><td class="paramname">hash</td><td>Якорь процесса </td></tr>
+    <tr><td class="paramname">username</td><td>Имя голосующего участника </td></tr>
+    <tr><td class="paramname">ballot</td><td>Подписанный бюллетень </td></tr>
+    <tr><td class="paramname">votes</td><td>Массив голосов по вопросам повестки</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

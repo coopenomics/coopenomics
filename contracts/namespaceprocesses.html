@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен processes</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespaceprocesses.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен processes<div class="ingroups"><a class="el" href="group__public__ledger2__consts.html">Константы ledger2\ingroup public_ledger2</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Типы процессов <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (process_type).  
+<a href="namespaceprocesses.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceprocesses_1_1adjustment"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1adjustment.html">adjustment</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1branch"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1branch.html">branch</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1capital"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1capital.html">capital</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1expense"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1expense.html">expense</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1marketplace"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1marketplace.html">marketplace</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1migration"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1migration.html">migration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1registrator"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1registrator.html">registrator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1soviet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1soviet.html">soviet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceprocesses_1_1wallet"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses_1_1wallet.html">wallet</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a91943ef7a71a76655c4405ab124002d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses.html#a91943ef7a71a76655c4405ab124002d9">is_known_process</a> (eosio::name process_type)</td></tr>
+<tr class="memdesc:a91943ef7a71a76655c4405ab124002d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Известно ли имя нитки процесса (см. PROCESS_REGISTRY).  <a href="namespaceprocesses.html#a91943ef7a71a76655c4405ab124002d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a91943ef7a71a76655c4405ab124002d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea22ed00ace45961314c097fd1d4df3"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses.html#a5ea22ed00ace45961314c097fd1d4df3">process_registry_is_unique</a> ()</td></tr>
+<tr class="memdesc:a5ea22ed00ace45961314c097fd1d4df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уникальность имён в PROCESS_REGISTRY — проверяется на сборке.  <a href="namespaceprocesses.html#a5ea22ed00ace45961314c097fd1d4df3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5ea22ed00ace45961314c097fd1d4df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a2cea81530c32baf52609c90439828928"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceprocesses.html#a2cea81530c32baf52609c90439828928">PROCESS_REGISTRY</a> []</td></tr>
+<tr class="memdesc:a2cea81530c32baf52609c90439828928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перечень известных имён процессов — для валидации в <a class="el" href="group__public__ledger2__actions.html#ga88f979b5306132af67fee1107e7bd38e" title="Единая точка входа финансовых движений ledger2 (orchestrator).">ledger2::apply</a>.  <a href="namespaceprocesses.html#a2cea81530c32baf52609c90439828928">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cea81530c32baf52609c90439828928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Типы процессов <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (process_type). </p>
+<p >Процесс — юридически значимая цепочка (<code>process_type</code>, <code>process_hash</code>, <code>coopname</code>) ссылок, размазанная по ончейн-записям (сущностным таблицам).</p>
+<p ><code>process_type</code> называет контракт-инициатор при вызове <code><a class="el" href="group__public__ledger2__actions.html#ga88f979b5306132af67fee1107e7bd38e" title="Единая точка входа финансовых движений ledger2 (orchestrator).">ledger2::apply</a></code> — имя нитки эмитится в цепь вместе с операцией, а не выводится по operation_code. Так процесс называет тот, кто нитку открыл: <code><a class="el" href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28" title="Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы)....">branch::accrue</a></code> зачисляет членский взнос КУ внутри нитки поставки (<code>p.mkt.supply</code>) и возврата (<code>p.mkt.return</code>), хотя сама операция относится к экономике КУ. Пока имя выводилось по операции, у такой нитки было два претендента на название, и поставка подписывалась «Членские взносы кооперативного участка».</p>
+<p >Поле <code>process_type</code> в <code>OPERATION_REGISTRY</code> (<a class="el" href="operations_8hpp.html">operations.hpp</a>) — типовая принадлежность операции: контрактом не читается, бэкенду нужна только для записей, сделанных до появления эмиссии имени.</p>
+<p >Один <code>process_type</code> может соответствовать нескольким operation_code — это явно разрешённая модель мульти-операционных процессов:</p><ul>
+<li><a class="el" href="namespaceprocesses_1_1registrator.html#a184976be5dab9f3e51d74da95e7a8506" title="Приём пайщика в кооператив (o.reg.payent + o.reg.putmin; для потока через совет — o....">processes::registrator::ACCEPT</a> ← o.reg.payent + o.reg.putmin</li>
+<li><a class="el" href="namespaceprocesses_1_1capital.html#ad180f450848ac7b01dfb705e53e3ff2a" title="Приём РИД в паевой фонд: o.cap.commit (коммиты) + o.cap.accept (акт-2) + опц. o.cap....">processes::capital::RID</a> ← o.cap.commit + o.cap.accept (+ o.cap.repay) + o.cap.cnvshr/o.cap.cnvbl</li>
+<li><a class="el" href="namespaceprocesses_1_1marketplace.html#ad3699c1d6e129d869324eca7b1f9b4df" title="Прямая поставка-приобретение имущества (5 операций: o.mkt.lock + o.mkt.unlock + o....">processes::marketplace::SUPPLY</a> ← o.mkt.lock + o.mkt.unlock + o.mkt.purch + o.mkt.payout + o.mkt.consum</li>
+<li><a class="el" href="namespaceprocesses_1_1marketplace.html#a03ad15e3ebd6223be040185eb5e8f3d7" title="Гарантийный возврат имущества пайщиком — compensating forward к o.mkt.consum (o.mkt....">processes::marketplace::RETURN</a> ← o.mkt.return</li>
+<li><a class="el" href="namespaceprocesses_1_1marketplace.html#afe330b12433fb808c9a052791030ab76" title="Утилизация скоропорта со склада КУ (o.mkt.wroff, по протоколу совета).">processes::marketplace::WRITEOFF</a> ← o.mkt.wroff</li>
+</ul>
+<p >Одноактовые процессы: <code><a class="el" href="namespaceprocesses_1_1capital.html#a2fdd9be44462a76573cca242ddf3958b" title="Оффлайн-импорт пайщика Благорост (o.cap.drppre (опц.) + o.cap.import).">capital::IMPORT</a></code>, <code><a class="el" href="namespaceprocesses_1_1capital.html#ad0031e4b98a807d1ee0fc418d6fa6769" title="Приём имущественного паевого взноса (одноактовый).">capital::PROPERTY</a></code>, <code><a class="el" href="namespaceprocesses_1_1capital.html#aa36114ef66aa6969268f7e5844940ef7" title="Инвестиция в ЦПП Благорост (wallet-only 2001→9001).">capital::INVEST</a></code>, <code><a class="el" href="namespaceprocesses_1_1soviet.html#ab59de29c141456b79a294741e7beea2e" title="Конвертация паевого RUB → делегатский ЧВ (одноактовый).">soviet::AXN_CONVERT</a></code> (process_type совпадает с operation_code по сути).</p>
+<p >Имена — eosio::name, ≤ 12 символов (13-й символ с ограничением алфавита — избегаем). Формат: <code>p.&lt;contract&gt;.&lt;noun&gt;</code>:</p><ul>
+<li><code>p.</code> префикс процесса (отличается от <code>o.</code> у operation_code),</li>
+<li><code>&lt;contract&gt;</code> — контракт-источник (<code>reg</code>, <code>wal</code>, <code>cap</code>, <code>mkt</code>, <code>sov</code>, <code>mig</code>).</li>
+</ul>
+<p >Нейминг-рефакторинг 2026-04-24: файл переименован из <code>process_types.hpp</code> в <code><a class="el" href="processes_8hpp.html">processes.hpp</a></code>, namespace <code>process_types</code> → <code>processes::&lt;contract&gt;</code>. </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a91943ef7a71a76655c4405ab124002d9" name="a91943ef7a71a76655c4405ab124002d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91943ef7a71a76655c4405ab124002d9">&#9670;&nbsp;</a></span>is_known_process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool processes::is_known_process </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>process_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Известно ли имя нитки процесса (см. PROCESS_REGISTRY). </p>
+
+</div>
+</div>
+<a id="a5ea22ed00ace45961314c097fd1d4df3" name="a5ea22ed00ace45961314c097fd1d4df3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ea22ed00ace45961314c097fd1d4df3">&#9670;&nbsp;</a></span>process_registry_is_unique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool processes::process_registry_is_unique </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Уникальность имён в PROCESS_REGISTRY — проверяется на сборке. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a2cea81530c32baf52609c90439828928" name="a2cea81530c32baf52609c90439828928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cea81530c32baf52609c90439828928">&#9670;&nbsp;</a></span>PROCESS_REGISTRY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name processes::PROCESS_REGISTRY[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1registrator.html#a184976be5dab9f3e51d74da95e7a8506">registrator::ACCEPT</a>,   <a class="code hl_variable" href="namespaceprocesses_1_1registrator.html#a4e6d6347e88a28cd08ed7209c6fa4f45">registrator::REFUND</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1wallet.html#a04070cd90073b7a85ae230c5fe390e62">wallet::DEPOSIT</a>,       <a class="code hl_variable" href="namespaceprocesses_1_1wallet.html#a47e9b5766238fb9b6a40cd6bf71aeec5">wallet::WITHDRAW</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#a2fdd9be44462a76573cca242ddf3958b">capital::IMPORT</a>,       <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#aa36114ef66aa6969268f7e5844940ef7">capital::INVEST</a>,      <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#ac5bfa8eddb24a9d20d3f53c4fba48e68">capital::DEBT</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#ad180f450848ac7b01dfb705e53e3ff2a">capital::RID</a>,          <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#ad0031e4b98a807d1ee0fc418d6fa6769">capital::PROPERTY</a>,    <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#accc93da81ab4e0a6c6aec4a16a58830d">capital::PREIMP</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#a13a1759dc94b10ddd99bd4cf27063eae">capital::WTHCAP</a>,       <a class="code hl_variable" href="namespaceprocesses_1_1capital.html#aee68513f810f9e32aea21cd69b904325">capital::PGEXP</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1marketplace.html#ad3699c1d6e129d869324eca7b1f9b4df">marketplace::SUPPLY</a>,   <a class="code hl_variable" href="namespaceprocesses_1_1marketplace.html#a03ad15e3ebd6223be040185eb5e8f3d7">marketplace::RETURN</a>,  <a class="code hl_variable" href="namespaceprocesses_1_1marketplace.html#afe330b12433fb808c9a052791030ab76">marketplace::WRITEOFF</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1branch.html#a06bb17dba6972ffacc46a21c3a1d5ad9">branch::FEES</a>,          <a class="code hl_variable" href="namespaceprocesses_1_1branch.html#afc832552c7b37c523fbf5169121c1cd8">branch::AID</a>,          <a class="code hl_variable" href="namespaceprocesses_1_1branch.html#a202e1bdf27e3ba4ba2cbe2bf0508f91f">branch::SPEND</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1expense.html#afdf41f6ea8d84ea9db33803552aef1e8">expense::PROPOSAL</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1soviet.html#ab59de29c141456b79a294741e7beea2e">soviet::AXN_CONVERT</a>,   <a class="code hl_variable" href="namespaceprocesses_1_1soviet.html#afc04df8b8769fe2792c6f0e4c8ea79c2">soviet::TAX</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1migration.html#adcccc7ae39bda1949fc9efde0c170cd7">migration::TRANSIT</a>,</div>
+<div class="line">  <a class="code hl_variable" href="namespaceprocesses_1_1adjustment.html#ab9b1fddc2c3fb016589326ab23e48160">adjustment::CORRECTION</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespaceprocesses_1_1adjustment_html_ab9b1fddc2c3fb016589326ab23e48160"><div class="ttname"><a href="namespaceprocesses_1_1adjustment.html#ab9b1fddc2c3fb016589326ab23e48160">processes::adjustment::CORRECTION</a></div><div class="ttdeci">constexpr eosio::name CORRECTION</div><div class="ttdoc">Ручная корректировка председателя (перевод между кошельками или откат операции).</div><div class="ttdef"><b>Definition:</b> processes.hpp:109</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1branch_html_a06bb17dba6972ffacc46a21c3a1d5ad9"><div class="ttname"><a href="namespaceprocesses_1_1branch.html#a06bb17dba6972ffacc46a21c3a1d5ad9">processes::branch::FEES</a></div><div class="ttdeci">constexpr eosio::name FEES</div><div class="ttdoc">Членские взносы КУ: зачисление в общий кошелёк при финализации заказа (o.brn.common),...</div><div class="ttdef"><b>Definition:</b> processes.hpp:81</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1branch_html_a202e1bdf27e3ba4ba2cbe2bf0508f91f"><div class="ttname"><a href="namespaceprocesses_1_1branch.html#a202e1bdf27e3ba4ba2cbe2bf0508f91f">processes::branch::SPEND</a></div><div class="ttdeci">constexpr eosio::name SPEND</div><div class="ttdoc">Оплата расхода КУ из общего кошелька (o.brn.spend; команда председателя → выплата кассиром по реквизи...</div><div class="ttdef"><b>Definition:</b> processes.hpp:83</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1branch_html_afc832552c7b37c523fbf5169121c1cd8"><div class="ttname"><a href="namespaceprocesses_1_1branch.html#afc832552c7b37c523fbf5169121c1cd8">processes::branch::AID</a></div><div class="ttdeci">constexpr eosio::name AID</div><div class="ttdoc">Материальная помощь доверенному КУ из его персонального кошелька (o.brn.aid; заявление → выплата касс...</div><div class="ttdef"><b>Definition:</b> processes.hpp:82</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_a13a1759dc94b10ddd99bd4cf27063eae"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#a13a1759dc94b10ddd99bd4cf27063eae">processes::capital::WTHCAP</a></div><div class="ttdeci">constexpr eosio::name WTHCAP</div><div class="ttdoc">Возврат паевого из ЦПП «Благорост» в кошелёк пайщика (одноактовый).</div><div class="ttdef"><b>Definition:</b> processes.hpp:68</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_a2fdd9be44462a76573cca242ddf3958b"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#a2fdd9be44462a76573cca242ddf3958b">processes::capital::IMPORT</a></div><div class="ttdeci">constexpr eosio::name IMPORT</div><div class="ttdoc">Оффлайн-импорт пайщика Благорост (o.cap.drppre (опц.) + o.cap.import).</div><div class="ttdef"><b>Definition:</b> processes.hpp:62</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_aa36114ef66aa6969268f7e5844940ef7"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#aa36114ef66aa6969268f7e5844940ef7">processes::capital::INVEST</a></div><div class="ttdeci">constexpr eosio::name INVEST</div><div class="ttdoc">Инвестиция в ЦПП Благорост (wallet-only 2001→9001).</div><div class="ttdef"><b>Definition:</b> processes.hpp:63</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_ac5bfa8eddb24a9d20d3f53c4fba48e68"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#ac5bfa8eddb24a9d20d3f53c4fba48e68">processes::capital::DEBT</a></div><div class="ttdeci">constexpr eosio::name DEBT</div><div class="ttdoc">Займ пайщику (o.cap.lend; возврат o.cap.repay — в p.cap.rid на акте-2).</div><div class="ttdef"><b>Definition:</b> processes.hpp:64</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_accc93da81ab4e0a6c6aec4a16a58830d"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#accc93da81ab4e0a6c6aec4a16a58830d">processes::capital::PREIMP</a></div><div class="ttdeci">constexpr eosio::name PREIMP</div><div class="ttdoc">Первичный учёт РИД-взноса до перехода на электронный учёт (одноактовый, anchor = preimp register hash...</div><div class="ttdef"><b>Definition:</b> processes.hpp:67</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_ad0031e4b98a807d1ee0fc418d6fa6769"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#ad0031e4b98a807d1ee0fc418d6fa6769">processes::capital::PROPERTY</a></div><div class="ttdeci">constexpr eosio::name PROPERTY</div><div class="ttdoc">Приём имущественного паевого взноса (одноактовый).</div><div class="ttdef"><b>Definition:</b> processes.hpp:66</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_ad180f450848ac7b01dfb705e53e3ff2a"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#ad180f450848ac7b01dfb705e53e3ff2a">processes::capital::RID</a></div><div class="ttdeci">constexpr eosio::name RID</div><div class="ttdoc">Приём РИД в паевой фонд: o.cap.commit (коммиты) + o.cap.accept (акт-2) + опц. o.cap....</div><div class="ttdef"><b>Definition:</b> processes.hpp:65</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1capital_html_aee68513f810f9e32aea21cd69b904325"><div class="ttname"><a href="namespaceprocesses_1_1capital.html#aee68513f810f9e32aea21cd69b904325">processes::capital::PGEXP</a></div><div class="ttdeci">constexpr eosio::name PGEXP</div><div class="ttdoc">Пул программных расходов: пополнение из инвестиций программы (o.cap.pgtop, одноактовый).</div><div class="ttdef"><b>Definition:</b> processes.hpp:69</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1expense_html_afdf41f6ea8d84ea9db33803552aef1e8"><div class="ttname"><a href="namespaceprocesses_1_1expense.html#afdf41f6ea8d84ea9db33803552aef1e8">processes::expense::PROPOSAL</a></div><div class="ttdeci">constexpr eosio::name PROPOSAL</div><div class="ttdoc">Цикл расхода по СЗ: o.exp.blgadv|blgdir (платёж) + опц. o.exp.over (перерасход) + o....</div><div class="ttdef"><b>Definition:</b> processes.hpp:88</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1marketplace_html_a03ad15e3ebd6223be040185eb5e8f3d7"><div class="ttname"><a href="namespaceprocesses_1_1marketplace.html#a03ad15e3ebd6223be040185eb5e8f3d7">processes::marketplace::RETURN</a></div><div class="ttdeci">constexpr eosio::name RETURN</div><div class="ttdoc">Гарантийный возврат имущества пайщиком — compensating forward к o.mkt.consum (o.mkt....</div><div class="ttdef"><b>Definition:</b> processes.hpp:75</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1marketplace_html_ad3699c1d6e129d869324eca7b1f9b4df"><div class="ttname"><a href="namespaceprocesses_1_1marketplace.html#ad3699c1d6e129d869324eca7b1f9b4df">processes::marketplace::SUPPLY</a></div><div class="ttdeci">constexpr eosio::name SUPPLY</div><div class="ttdoc">Прямая поставка-приобретение имущества (5 операций: o.mkt.lock + o.mkt.unlock + o....</div><div class="ttdef"><b>Definition:</b> processes.hpp:74</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1marketplace_html_afe330b12433fb808c9a052791030ab76"><div class="ttname"><a href="namespaceprocesses_1_1marketplace.html#afe330b12433fb808c9a052791030ab76">processes::marketplace::WRITEOFF</a></div><div class="ttdeci">constexpr eosio::name WRITEOFF</div><div class="ttdoc">Утилизация скоропорта со склада КУ (o.mkt.wroff, по протоколу совета).</div><div class="ttdef"><b>Definition:</b> processes.hpp:76</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1migration_html_adcccc7ae39bda1949fc9efde0c170cd7"><div class="ttname"><a href="namespaceprocesses_1_1migration.html#adcccc7ae39bda1949fc9efde0c170cd7">processes::migration::TRANSIT</a></div><div class="ttdeci">constexpr eosio::name TRANSIT</div><div class="ttdoc">Транзитный перенос остатков legacy (серия apply на кооп).</div><div class="ttdef"><b>Definition:</b> processes.hpp:99</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1registrator_html_a184976be5dab9f3e51d74da95e7a8506"><div class="ttname"><a href="namespaceprocesses_1_1registrator.html#a184976be5dab9f3e51d74da95e7a8506">processes::registrator::ACCEPT</a></div><div class="ttdeci">constexpr eosio::name ACCEPT</div><div class="ttdoc">Приём пайщика в кооператив (o.reg.payent + o.reg.putmin; для потока через совет — o....</div><div class="ttdef"><b>Definition:</b> processes.hpp:50</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1registrator_html_a4e6d6347e88a28cd08ed7209c6fa4f45"><div class="ttname"><a href="namespaceprocesses_1_1registrator.html#a4e6d6347e88a28cd08ed7209c6fa4f45">processes::registrator::REFUND</a></div><div class="ttdeci">constexpr eosio::name REFUND</div><div class="ttdoc">Возврат регистрационного взноса при отказе совета (o.reg.refund). Отдельный процесс: приём взноса пре...</div><div class="ttdef"><b>Definition:</b> processes.hpp:51</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1soviet_html_ab59de29c141456b79a294741e7beea2e"><div class="ttname"><a href="namespaceprocesses_1_1soviet.html#ab59de29c141456b79a294741e7beea2e">processes::soviet::AXN_CONVERT</a></div><div class="ttdeci">constexpr eosio::name AXN_CONVERT</div><div class="ttdoc">Конвертация паевого RUB → делегатский ЧВ (одноактовый).</div><div class="ttdef"><b>Definition:</b> processes.hpp:93</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1soviet_html_afc04df8b8769fe2792c6f0e4c8ea79c2"><div class="ttname"><a href="namespaceprocesses_1_1soviet.html#afc04df8b8769fe2792c6f0e4c8ea79c2">processes::soviet::TAX</a></div><div class="ttdeci">constexpr eosio::name TAX</div><div class="ttdoc">Перечисление удержанного налога в бюджет (заявка бухгалтера → платёж кассира → закрытие обязательства...</div><div class="ttdef"><b>Definition:</b> processes.hpp:94</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1wallet_html_a04070cd90073b7a85ae230c5fe390e62"><div class="ttname"><a href="namespaceprocesses_1_1wallet.html#a04070cd90073b7a85ae230c5fe390e62">processes::wallet::DEPOSIT</a></div><div class="ttdeci">constexpr eosio::name DEPOSIT</div><div class="ttdoc">Внесение паевого взноса деньгами.</div><div class="ttdef"><b>Definition:</b> processes.hpp:56</div></div>
+<div class="ttc" id="anamespaceprocesses_1_1wallet_html_a47e9b5766238fb9b6a40cd6bf71aeec5"><div class="ttname"><a href="namespaceprocesses_1_1wallet.html#a47e9b5766238fb9b6a40cd6bf71aeec5">processes::wallet::WITHDRAW</a></div><div class="ttdeci">constexpr eosio::name WITHDRAW</div><div class="ttdoc">Возврат паевого взноса пайщику.</div><div class="ttdef"><b>Definition:</b> processes.hpp:57</div></div>
+</div><!-- fragment -->
+<p>Перечень известных имён процессов — для валидации в <a class="el" href="group__public__ledger2__actions.html#ga88f979b5306132af67fee1107e7bd38e" title="Единая точка входа финансовых движений ledger2 (orchestrator).">ledger2::apply</a>. </p>
+<p >Имя нитки называет контракт-инициатор при вызове <code>apply</code>, поэтому опечатка в имени иначе ушла бы в историю молча и процесс остался бы без названия на столе бухгалтера. Порядок записей не важен (линейный поиск).</p>
+<p >Каждое добавленное сюда имя обязано иметь человеческое название в реестре процессов <code>cooptypes/src/ledger2/processes.ts</code> — иначе интерфейс покажет технический код вместо названия. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceprocesses.html">processes</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

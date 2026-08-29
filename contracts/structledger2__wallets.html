@@ -1,0 +1,890 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура ledger2_wallets</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structledger2__wallets.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-attribs">Статические открытые данные</a> &#124;
+<a href="structledger2__wallets-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура ledger2_wallets<div class="ingroups"><a class="el" href="group__public__ledger2__consts.html">Константы ledger2\ingroup public_ledger2</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Стандарт кошельков <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (пересмотр 2026-05-05 — финальный реестр + WalletKind).  
+ <a href="structledger2__wallets.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="lib_2core_2ledger2_2wallets_8hpp_source.html">wallets.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Статические открытые данные</h2></td></tr>
+<tr class="memitem:ac6e8f31966ec81e379007900012c84f4"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ac6e8f31966ec81e379007900012c84f4">SHARE_FUND_PAY</a> = &quot;w.wal.share&quot;_n</td></tr>
+<tr class="memdesc:ac6e8f31966ec81e379007900012c84f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Паевой взнос пайщика (USER_SHARED)  <a href="structledger2__wallets.html#ac6e8f31966ec81e379007900012c84f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac6e8f31966ec81e379007900012c84f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24c57fa5fc0ca5693ab89bcbbb1f574c"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a24c57fa5fc0ca5693ab89bcbbb1f574c">CK_MEMBER</a> = &quot;w.wal.member&quot;_n</td></tr>
+<tr class="memdesc:a24c57fa5fc0ca5693ab89bcbbb1f574c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ЦК — членская часть пайщика (USER_SHARED)  <a href="structledger2__wallets.html#a24c57fa5fc0ca5693ab89bcbbb1f574c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a24c57fa5fc0ca5693ab89bcbbb1f574c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09e2fe28e21c07baab3e335bdcc5052"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ac09e2fe28e21c07baab3e335bdcc5052">WITHDRAWALS_SINK</a> = &quot;w.wal.wthdrw&quot;_n</td></tr>
+<tr class="memdesc:ac09e2fe28e21c07baab3e335bdcc5052"><td class="mdescLeft">&#160;</td><td class="mdescRight">DEPRECATED 2026-05-21: исторический sink возвратов. Оставлен в реестре для исторических L2-балансов (накопленные возвраты до перехода). Не использовать в новых операциях.  <a href="structledger2__wallets.html#ac09e2fe28e21c07baab3e335bdcc5052">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac09e2fe28e21c07baab3e335bdcc5052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a907b27aa4bf581edfcbffbcf27716fc0"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a907b27aa4bf581edfcbffbcf27716fc0">WITHDRAW_PENDING</a> = &quot;w.wal.wpend&quot;_n</td></tr>
+<tr class="memdesc:a907b27aa4bf581edfcbffbcf27716fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резерв паевого под заявку на возврат (COOPERATIVE-пул). o.wal.wthreq переводит сюда с w.wal.share, o.wal.wthdec возвращает обратно, o.wal.wthcpl сжигает отсюда. Заменил механику blocked/BLOCK/UNBLOCK 2026-05-24.  <a href="structledger2__wallets.html#a907b27aa4bf581edfcbffbcf27716fc0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a907b27aa4bf581edfcbffbcf27716fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9b618e415d14ccc89e4be9fba43062"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a5f9b618e415d14ccc89e4be9fba43062">MIN_SHARE_FUND</a> = &quot;w.reg.minshr&quot;_n</td></tr>
+<tr class="memdesc:a5f9b618e415d14ccc89e4be9fba43062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Минимальный паевой взнос пайщика (USER_SHARED, без сверки соглашений)  <a href="structledger2__wallets.html#a5f9b618e415d14ccc89e4be9fba43062">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5f9b618e415d14ccc89e4be9fba43062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22e40c9e0bf22668625f83554ada7a1"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ad22e40c9e0bf22668625f83554ada7a1">ENTRANCE_FEES</a> = &quot;w.reg.entry&quot;_n</td></tr>
+<tr class="memdesc:ad22e40c9e0bf22668625f83554ada7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вступительные взносы (Cr 86, COOPERATIVE)  <a href="structledger2__wallets.html#ad22e40c9e0bf22668625f83554ada7a1">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad22e40c9e0bf22668625f83554ada7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b3b32c576ae07d8b2a11427cf61c5f"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ae1b3b32c576ae07d8b2a11427cf61c5f">REGISTRATION_PENDING</a> = &quot;w.reg.pend&quot;_n</td></tr>
+<tr class="memdesc:ae1b3b32c576ae07d8b2a11427cf61c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Регистрационный взнос в ожидании решения совета (суспенс счёта 76, USER_SHARED, без сверки соглашений — кандидат ещё не член). o.reg.inpay → сюда (Dr 51/Cr 76); o.reg.setmin/setent уносят на 80/86; o.reg.refund сжигает (Dr 76/Cr 51).  <a href="structledger2__wallets.html#ae1b3b32c576ae07d8b2a11427cf61c5f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae1b3b32c576ae07d8b2a11427cf61c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b57a0c485eb89e3fca24af3e0f5973"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a33b57a0c485eb89e3fca24af3e0f5973">INFRA_FEES</a> = &quot;w.sov.infra&quot;_n</td></tr>
+<tr class="memdesc:a33b57a0c485eb89e3fca24af3e0f5973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Членские взносы за инфраструктуру кооп. платформы (COOPERATIVE)  <a href="structledger2__wallets.html#a33b57a0c485eb89e3fca24af3e0f5973">Подробнее...</a><br /></td></tr>
+<tr class="separator:a33b57a0c485eb89e3fca24af3e0f5973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f022041450701eaf3a0c9465388e7c8"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a4f022041450701eaf3a0c9465388e7c8">DELEGATE_FEES</a> = &quot;w.sov.delgte&quot;_n</td></tr>
+<tr class="memdesc:a4f022041450701eaf3a0c9465388e7c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Делегатские членские взносы (цель CONVERT_TO_AXN, COOPERATIVE)  <a href="structledger2__wallets.html#a4f022041450701eaf3a0c9465388e7c8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4f022041450701eaf3a0c9465388e7c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b895d7bc0c44a7b9259106c499e8b4b"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a3b895d7bc0c44a7b9259106c499e8b4b">SOV_EXPENSES</a> = &quot;w.sov.expns&quot;_n</td></tr>
+<tr class="memdesc:a3b895d7bc0c44a7b9259106c499e8b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хозяйственные расходы из числа целевого финансирования (COOPERATIVE)  <a href="structledger2__wallets.html#a3b895d7bc0c44a7b9259106c499e8b4b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3b895d7bc0c44a7b9259106c499e8b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86ae2460fae443215943511819586cc"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ac86ae2460fae443215943511819586cc">MIN_SHARE_USED</a> = &quot;w.sov.mnused&quot;_n</td></tr>
+<tr class="memdesc:ac86ae2460fae443215943511819586cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Использованные минимальные паевые взносы (Cr 80 source, перешедшие в 08; COOPERATIVE)  <a href="structledger2__wallets.html#ac86ae2460fae443215943511819586cc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac86ae2460fae443215943511819586cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad506ea376c4f2f019c82c442e4d86546"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ad506ea376c4f2f019c82c442e4d86546">NDFL_WITHHELD</a> = &quot;w.sov.ndfl&quot;_n</td></tr>
+<tr class="memdesc:ad506ea376c4f2f019c82c442e4d86546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержанный НДФЛ к перечислению в бюджет (COOPERATIVE, счёт 68). Кошелёк общекооперативный: в него стекаются удержания ЛЮБОЙ программы, выплатившей доход физлицу (сегодня — материальная помощь доверенному, o.brn.aidtax), а гасит его бухгалтерия единым налоговым платежом (o.sov.taxpay, BURN, Дт 68 / Кт 51). Поэтому кошелёк не принадлежит программе-источнику и назван по кооперативу, а не по участку. Остаток = долг кооператива перед бюджетом; он же ограничивает сумму платежа — перечислить больше удержанного налоговый агент не вправе. Деньги при удержании с расчётного счёта НЕ уходят: кооператив просто выплатил получателю меньше.  <a href="structledger2__wallets.html#ad506ea376c4f2f019c82c442e4d86546">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad506ea376c4f2f019c82c442e4d86546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5d35267707e1a109be35a81cc943426"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#af5d35267707e1a109be35a81cc943426">LOAN_ISSUED</a> = &quot;w.cap.loan&quot;_n</td></tr>
+<tr class="memdesc:af5d35267707e1a109be35a81cc943426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выданные пайщикам беспроцентные займы (COOPERATIVE; Dr 58 / Cr 51)  <a href="structledger2__wallets.html#af5d35267707e1a109be35a81cc943426">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5d35267707e1a109be35a81cc943426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4543076a7152b3c2405260984e2764"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#abf4543076a7152b3c2405260984e2764">BLAGOROST_FUND</a> = &quot;w.cap.blago&quot;_n</td></tr>
+<tr class="memdesc:abf4543076a7152b3c2405260984e2764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Благорост — единый агрегированный кошелёк программы (USER_SHARED; ADR-009)  <a href="structledger2__wallets.html#abf4543076a7152b3c2405260984e2764">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf4543076a7152b3c2405260984e2764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3814af76166c22a24e49b6c1b3d969d"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#aa3814af76166c22a24e49b6c1b3d969d">GENERATOR_FUND</a> = &quot;w.cap.gen&quot;_n</td></tr>
+<tr class="memdesc:aa3814af76166c22a24e49b6c1b3d969d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Генератор — единый агрегированный кошелёк программы (COOPERATIVE — кооперативный пул, без L3-разреза по пайщику; L3-разрез из ADR-009 отменён из-за несовместимости с CRPS-перераспределением, см. wallets.hpp:107)  <a href="structledger2__wallets.html#aa3814af76166c22a24e49b6c1b3d969d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa3814af76166c22a24e49b6c1b3d969d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967d1b48492ad14a8f46168e1837367a"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a967d1b48492ad14a8f46168e1837367a">PREIMP_FUND</a> = &quot;w.cap.preimp&quot;_n</td></tr>
+<tr class="memdesc:a967d1b48492ad14a8f46168e1837367a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Первичный учёт РИД-взносов до перехода на электронный учёт (USER_SHARED; o.cap.preimp / o.cap.drppre)  <a href="structledger2__wallets.html#a967d1b48492ad14a8f46168e1837367a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a967d1b48492ad14a8f46168e1837367a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297b8c11896731a6380a8cd752a0a9c5"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a297b8c11896731a6380a8cd752a0a9c5">PROGRAM_EXPENSE_POOL</a> = &quot;w.cap.pgexp&quot;_n</td></tr>
+<tr class="memdesc:a297b8c11896731a6380a8cd752a0a9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пул программных расходов ЦПП «Благорост» (COOPERATIVE) — кооперативный кошелёк, из которого шасси expense оплачивает СЗ; пополняется topupprogexp (o.cap.pgtop), паевые L3-кошельки пайщиков (w.cap.blago) при расходах не трогаются  <a href="structledger2__wallets.html#a297b8c11896731a6380a8cd752a0a9c5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a297b8c11896731a6380a8cd752a0a9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c6e797f1342fb9688b3c58cd498b2a"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a73c6e797f1342fb9688b3c58cd498b2a">MARKETPLACE_ORDER_LOCK</a> = &quot;w.mkt.order&quot;_n</td></tr>
+<tr class="memdesc:a73c6e797f1342fb9688b3c58cd498b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ЦПП «Стол Заказов» — резерв средств пайщика под конкретный Order (USER_SHARED). TRANSFER w.wal.share → w.mkt.order на createorder (Дт 80 / Кт 86); обратный TRANSFER на w.mkt.member при cancel/decline/expire (без проводки); BURN с w.mkt.order на signiss2 (Дт 86 / Кт 10).  <a href="structledger2__wallets.html#a73c6e797f1342fb9688b3c58cd498b2a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73c6e797f1342fb9688b3c58cd498b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5f591087ea067fdeafbbe72d4e9828"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a6d5f591087ea067fdeafbbe72d4e9828">MARKETPLACE_MEMBER_FUND</a> = &quot;w.mkt.member&quot;_n</td></tr>
+<tr class="memdesc:a6d5f591087ea067fdeafbbe72d4e9828"><td class="mdescLeft">&#160;</td><td class="mdescRight">ЦПП «Стол Заказов» — членский кошелёк пайщика программы (USER_SHARED, счёт 86). Сюда возвращается остаток резерва при отмене/недовыдаче и гарантийном возврате; сюда же конвертируется паевой взнос (o.mkt.conv) при доплате по факту — списание под заказ идёт ИМЕННО с членского программы, не с паевого напрямую.  <a href="structledger2__wallets.html#a6d5f591087ea067fdeafbbe72d4e9828">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6d5f591087ea067fdeafbbe72d4e9828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9618d5b10702952cacb5e1ce6b5cae13"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a9618d5b10702952cacb5e1ce6b5cae13">SUPPLIER_PAYMENTS</a> = &quot;w.mkt.payout&quot;_n</td></tr>
+<tr class="memdesc:a9618d5b10702952cacb5e1ce6b5cae13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выплаты поставщикам (sink PAYOUT, COOPERATIVE)  <a href="structledger2__wallets.html#a9618d5b10702952cacb5e1ce6b5cae13">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9618d5b10702952cacb5e1ce6b5cae13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac0d003c29be10386c31090ccdaec91"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#adac0d003c29be10386c31090ccdaec91">MARKETPLACE_FEE_POOL</a> = &quot;w.mkt.fee&quot;_n</td></tr>
+<tr class="memdesc:adac0d003c29be10386c31090ccdaec91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Резерв членских взносов «Стола заказов» под заказы (COOPERATIVE-пул, по образцу w.wal.wpend — per-Order разрез держит поле Order.membership_fee). TRANSFER w.wal.share → w.mkt.fee на createorder/stockorder (Дт 80 / Кт 86, o.mkt.fee); возврат неиспользованной части на w.mkt.member (o.mkt.refund, без проводки); при финализации заказа 100% факта взноса зачисляется в общий кошелёк КУ (<a class="el" href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28" title="Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы)....">branch::accrue</a> → o.brn.common).  <a href="structledger2__wallets.html#adac0d003c29be10386c31090ccdaec91">Подробнее...</a><br /></td></tr>
+<tr class="separator:adac0d003c29be10386c31090ccdaec91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6071c9b1e239c03963a043598bc6c5a8"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a6071c9b1e239c03963a043598bc6c5a8">BRANCH_PERSONAL</a> = &quot;w.brn.person&quot;_n</td></tr>
+<tr class="memdesc:a6071c9b1e239c03963a043598bc6c5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Персональный кошелёк доверенного/председателя КУ (USER_SHARED по доверенному, счёт 86). Пополняется ручным распределением председателя КУ из общего кошелька (o.brn.release + o.brn.person); расходуется на материальную помощь (o.brn.aid) или переводом в членский кошелёк «Стола заказов» (o.brn.conv).  <a href="structledger2__wallets.html#a6071c9b1e239c03963a043598bc6c5a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6071c9b1e239c03963a043598bc6c5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb24d42807a490c0c515661d635e133"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a5eb24d42807a490c0c515661d635e133">BRANCH_COMMON</a> = &quot;w.brn.common&quot;_n</td></tr>
+<tr class="memdesc:a5eb24d42807a490c0c515661d635e133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общий кошелёк членских взносов кооперативного участка (USER_SHARED с разрезом по braname КУ, счёт 86). Принимает 100% членского взноса при финализации заказа (o.brn.common); далее — ручное распределение доверенным (o.brn.release), оплата расходов КУ (o.brn.spend), закупка впрок. Плановый резерв расходов (30 дней) контролирует бэкенд.  <a href="structledger2__wallets.html#a5eb24d42807a490c0c515661d635e133">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5eb24d42807a490c0c515661d635e133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a418a20343f6eb782e83efc7dbbfebd50"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a418a20343f6eb782e83efc7dbbfebd50">BRANCH_DISTRIBUTION_POOL</a> = &quot;w.brn.pool&quot;_n</td></tr>
+<tr class="memdesc:a418a20343f6eb782e83efc7dbbfebd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Транзитный пул ручного распределения КУ (COOPERATIVE; баланс нулевой вне транзакции). Нужен из-за инварианта walletop «один username на обе стороны»: прямой TRANSFER w.brn.common (разрез по braname) → w.brn.person (разрез по доверенному) невозможен; двухходовка o.brn.release (username = braname) + o.brn.person (username = доверенный) внутри одной транзакции распределения.  <a href="structledger2__wallets.html#a418a20343f6eb782e83efc7dbbfebd50">Подробнее...</a><br /></td></tr>
+<tr class="separator:a418a20343f6eb782e83efc7dbbfebd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d114ac4e92fb42a9e1911d99852664"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#ac3d114ac4e92fb42a9e1911d99852664">BRANCH_EXPENSE_POOL</a> = &quot;w.brn.expns&quot;_n</td></tr>
+<tr class="memdesc:ac3d114ac4e92fb42a9e1911d99852664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пул расходов кооперативного участка (COOPERATIVE) — источник средств шасси расходов для КУ. Наполняется под конкретный расход при создании служебной записки (o.brn.expfnd, username = braname), расходуется прямой оплатой по реквизитам (o.brn.spend) либо выдачей аванса под отчёт (o.brn.expadv); неизрасходованный остаток возвращается в общий кошелёк участка (o.brn.expunf). Транзит нужен и по существу (видно, сколько средств участка отдано под расходы), и технически: шасси расходов требует COOPERATIVE-пул, а w.brn.common ведёт L3-разрез по braname.  <a href="structledger2__wallets.html#ac3d114ac4e92fb42a9e1911d99852664">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac3d114ac4e92fb42a9e1911d99852664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a186b502cc4fb420b5ab3710daf0415"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structledger2__wallets.html#a2a186b502cc4fb420b5ab3710daf0415">ADVANCE_HOLD</a> = &quot;w.exp.adv&quot;_n</td></tr>
+<tr class="memdesc:a2a186b502cc4fb420b5ab3710daf0415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подотчётные средства пайщика (USER_SHARED; резерв при ADVANCE-механике шасси расходов)  <a href="structledger2__wallets.html#a2a186b502cc4fb420b5ab3710daf0415">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a186b502cc4fb420b5ab3710daf0415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Стандарт кошельков <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> (пересмотр 2026-05-05 — финальный реестр + WalletKind). </p>
+<p >Кошельки <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> — это аналитические разрезы бухгалтерских счетов: «куда/откуда движутся средства» на уровне ЦПП и фондов. Учёт остатков денежных средств (счёт 51) живёт на accounts2 через двойную запись; отдельного «зеркального» wallet-а для 51 НЕТ — любая money-in операция сразу адресуется целевому кошельку-назначению.</p>
+<p >Идентификатор кошелька — <code>eosio::name</code> с префиксом <code>w.&lt;contract&gt;.&lt;waltype&gt;</code> (по аналогии с операциями <code>o.&lt;contract&gt;.&lt;verb&gt;</code> и процессами <code>p.&lt;contract&gt;.&lt;noun&gt;</code>). Длина ≤ 13 base32-символов.</p>
+<p >Группы: w.wal.* — Паевой фонд (журнал Cr 80) и возвраты пайщикам w.reg.* — Регистрация (минимальный паевой, вступительные) w.sov.* — Совет-level фонды (целевое финансирование, использованные паевые) w.cap.* — Программы паевого фонда (Благорост, Генератор) и займы w.mkt.* — Маркетплейс (резервы заказов и членских взносов, выплаты поставщикам) w.brn.* — Экономика кооперативного участка (персональные кошельки доверенных, общий кошелёк КУ)</p>
+<p >Sentinel <code>eosio::name{}</code> (пустое имя, value=0) — «кошелёк вне системы» для ISSUE (нет wallet_from) и для BURN (нет wallet_to).</p>
+<p >При первом ISSUE/TRANSFER кошелёк создаётся автоматически по записи из WALLET_REGISTRY. При обнулении available+blocked запись удаляется.</p>
+<p >Классификация <code>WalletKind</code> (ADR-002): USER_SHARED — обязателен L3-разрез по пайщику (<code>ledger2::userwallets</code>). COOPERATIVE — единый кооперативный баланс, без L3.</p>
+<p >Связь L2↔L3 (ADR-010): отдельный enum имён для L3 не вводится — таблица <code>userwallets</code> хранит <code>wallet_name</code>, ссылающийся на этот же реестр; запись L3 разрешена только для <code>kind == USER_SHARED</code>. </p>
+</div><h2 class="groupheader">Данные класса</h2>
+<a id="a2a186b502cc4fb420b5ab3710daf0415" name="a2a186b502cc4fb420b5ab3710daf0415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a186b502cc4fb420b5ab3710daf0415">&#9670;&nbsp;</a></span>ADVANCE_HOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::ADVANCE_HOLD = &quot;w.exp.adv&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Подотчётные средства пайщика (USER_SHARED; резерв при ADVANCE-механике шасси расходов) </p>
+
+</div>
+</div>
+<a id="abf4543076a7152b3c2405260984e2764" name="abf4543076a7152b3c2405260984e2764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4543076a7152b3c2405260984e2764">&#9670;&nbsp;</a></span>BLAGOROST_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::BLAGOROST_FUND = &quot;w.cap.blago&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Благорост — единый агрегированный кошелёк программы (USER_SHARED; ADR-009) </p>
+
+</div>
+</div>
+<a id="a5eb24d42807a490c0c515661d635e133" name="a5eb24d42807a490c0c515661d635e133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb24d42807a490c0c515661d635e133">&#9670;&nbsp;</a></span>BRANCH_COMMON</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::BRANCH_COMMON = &quot;w.brn.common&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Общий кошелёк членских взносов кооперативного участка (USER_SHARED с разрезом по braname КУ, счёт 86). Принимает 100% членского взноса при финализации заказа (o.brn.common); далее — ручное распределение доверенным (o.brn.release), оплата расходов КУ (o.brn.spend), закупка впрок. Плановый резерв расходов (30 дней) контролирует бэкенд. </p>
+
+</div>
+</div>
+<a id="a418a20343f6eb782e83efc7dbbfebd50" name="a418a20343f6eb782e83efc7dbbfebd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a418a20343f6eb782e83efc7dbbfebd50">&#9670;&nbsp;</a></span>BRANCH_DISTRIBUTION_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::BRANCH_DISTRIBUTION_POOL = &quot;w.brn.pool&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Транзитный пул ручного распределения КУ (COOPERATIVE; баланс нулевой вне транзакции). Нужен из-за инварианта walletop «один username на обе стороны»: прямой TRANSFER w.brn.common (разрез по braname) → w.brn.person (разрез по доверенному) невозможен; двухходовка o.brn.release (username = braname) + o.brn.person (username = доверенный) внутри одной транзакции распределения. </p>
+
+</div>
+</div>
+<a id="ac3d114ac4e92fb42a9e1911d99852664" name="ac3d114ac4e92fb42a9e1911d99852664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d114ac4e92fb42a9e1911d99852664">&#9670;&nbsp;</a></span>BRANCH_EXPENSE_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::BRANCH_EXPENSE_POOL = &quot;w.brn.expns&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Пул расходов кооперативного участка (COOPERATIVE) — источник средств шасси расходов для КУ. Наполняется под конкретный расход при создании служебной записки (o.brn.expfnd, username = braname), расходуется прямой оплатой по реквизитам (o.brn.spend) либо выдачей аванса под отчёт (o.brn.expadv); неизрасходованный остаток возвращается в общий кошелёк участка (o.brn.expunf). Транзит нужен и по существу (видно, сколько средств участка отдано под расходы), и технически: шасси расходов требует COOPERATIVE-пул, а w.brn.common ведёт L3-разрез по braname. </p>
+
+</div>
+</div>
+<a id="a6071c9b1e239c03963a043598bc6c5a8" name="a6071c9b1e239c03963a043598bc6c5a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6071c9b1e239c03963a043598bc6c5a8">&#9670;&nbsp;</a></span>BRANCH_PERSONAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::BRANCH_PERSONAL = &quot;w.brn.person&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Персональный кошелёк доверенного/председателя КУ (USER_SHARED по доверенному, счёт 86). Пополняется ручным распределением председателя КУ из общего кошелька (o.brn.release + o.brn.person); расходуется на материальную помощь (o.brn.aid) или переводом в членский кошелёк «Стола заказов» (o.brn.conv). </p>
+
+</div>
+</div>
+<a id="a24c57fa5fc0ca5693ab89bcbbb1f574c" name="a24c57fa5fc0ca5693ab89bcbbb1f574c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24c57fa5fc0ca5693ab89bcbbb1f574c">&#9670;&nbsp;</a></span>CK_MEMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::CK_MEMBER = &quot;w.wal.member&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ЦК — членская часть пайщика (USER_SHARED) </p>
+
+</div>
+</div>
+<a id="a4f022041450701eaf3a0c9465388e7c8" name="a4f022041450701eaf3a0c9465388e7c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f022041450701eaf3a0c9465388e7c8">&#9670;&nbsp;</a></span>DELEGATE_FEES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::DELEGATE_FEES = &quot;w.sov.delgte&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Делегатские членские взносы (цель CONVERT_TO_AXN, COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="ad22e40c9e0bf22668625f83554ada7a1" name="ad22e40c9e0bf22668625f83554ada7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22e40c9e0bf22668625f83554ada7a1">&#9670;&nbsp;</a></span>ENTRANCE_FEES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::ENTRANCE_FEES = &quot;w.reg.entry&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Вступительные взносы (Cr 86, COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="aa3814af76166c22a24e49b6c1b3d969d" name="aa3814af76166c22a24e49b6c1b3d969d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3814af76166c22a24e49b6c1b3d969d">&#9670;&nbsp;</a></span>GENERATOR_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::GENERATOR_FUND = &quot;w.cap.gen&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Генератор — единый агрегированный кошелёк программы (COOPERATIVE — кооперативный пул, без L3-разреза по пайщику; L3-разрез из ADR-009 отменён из-за несовместимости с CRPS-перераспределением, см. wallets.hpp:107) </p>
+
+</div>
+</div>
+<a id="a33b57a0c485eb89e3fca24af3e0f5973" name="a33b57a0c485eb89e3fca24af3e0f5973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b57a0c485eb89e3fca24af3e0f5973">&#9670;&nbsp;</a></span>INFRA_FEES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::INFRA_FEES = &quot;w.sov.infra&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Членские взносы за инфраструктуру кооп. платформы (COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="af5d35267707e1a109be35a81cc943426" name="af5d35267707e1a109be35a81cc943426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d35267707e1a109be35a81cc943426">&#9670;&nbsp;</a></span>LOAN_ISSUED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::LOAN_ISSUED = &quot;w.cap.loan&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выданные пайщикам беспроцентные займы (COOPERATIVE; Dr 58 / Cr 51) </p>
+
+</div>
+</div>
+<a id="adac0d003c29be10386c31090ccdaec91" name="adac0d003c29be10386c31090ccdaec91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac0d003c29be10386c31090ccdaec91">&#9670;&nbsp;</a></span>MARKETPLACE_FEE_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::MARKETPLACE_FEE_POOL = &quot;w.mkt.fee&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Резерв членских взносов «Стола заказов» под заказы (COOPERATIVE-пул, по образцу w.wal.wpend — per-Order разрез держит поле Order.membership_fee). TRANSFER w.wal.share → w.mkt.fee на createorder/stockorder (Дт 80 / Кт 86, o.mkt.fee); возврат неиспользованной части на w.mkt.member (o.mkt.refund, без проводки); при финализации заказа 100% факта взноса зачисляется в общий кошелёк КУ (<a class="el" href="group__public__branch__actions.html#ga24202655a4b0784a2a35a9dba6585e28" title="Зачисление поступивших членских взносов КУ в общий кошелёк участка (o.brn.common, 100% суммы)....">branch::accrue</a> → o.brn.common). </p>
+
+</div>
+</div>
+<a id="a6d5f591087ea067fdeafbbe72d4e9828" name="a6d5f591087ea067fdeafbbe72d4e9828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5f591087ea067fdeafbbe72d4e9828">&#9670;&nbsp;</a></span>MARKETPLACE_MEMBER_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::MARKETPLACE_MEMBER_FUND = &quot;w.mkt.member&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ЦПП «Стол Заказов» — членский кошелёк пайщика программы (USER_SHARED, счёт 86). Сюда возвращается остаток резерва при отмене/недовыдаче и гарантийном возврате; сюда же конвертируется паевой взнос (o.mkt.conv) при доплате по факту — списание под заказ идёт ИМЕННО с членского программы, не с паевого напрямую. </p>
+
+</div>
+</div>
+<a id="a73c6e797f1342fb9688b3c58cd498b2a" name="a73c6e797f1342fb9688b3c58cd498b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c6e797f1342fb9688b3c58cd498b2a">&#9670;&nbsp;</a></span>MARKETPLACE_ORDER_LOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::MARKETPLACE_ORDER_LOCK = &quot;w.mkt.order&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ЦПП «Стол Заказов» — резерв средств пайщика под конкретный Order (USER_SHARED). TRANSFER w.wal.share → w.mkt.order на createorder (Дт 80 / Кт 86); обратный TRANSFER на w.mkt.member при cancel/decline/expire (без проводки); BURN с w.mkt.order на signiss2 (Дт 86 / Кт 10). </p>
+
+</div>
+</div>
+<a id="a5f9b618e415d14ccc89e4be9fba43062" name="a5f9b618e415d14ccc89e4be9fba43062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9b618e415d14ccc89e4be9fba43062">&#9670;&nbsp;</a></span>MIN_SHARE_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::MIN_SHARE_FUND = &quot;w.reg.minshr&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Минимальный паевой взнос пайщика (USER_SHARED, без сверки соглашений) </p>
+
+</div>
+</div>
+<a id="ac86ae2460fae443215943511819586cc" name="ac86ae2460fae443215943511819586cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86ae2460fae443215943511819586cc">&#9670;&nbsp;</a></span>MIN_SHARE_USED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::MIN_SHARE_USED = &quot;w.sov.mnused&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Использованные минимальные паевые взносы (Cr 80 source, перешедшие в 08; COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="ad506ea376c4f2f019c82c442e4d86546" name="ad506ea376c4f2f019c82c442e4d86546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad506ea376c4f2f019c82c442e4d86546">&#9670;&nbsp;</a></span>NDFL_WITHHELD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::NDFL_WITHHELD = &quot;w.sov.ndfl&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удержанный НДФЛ к перечислению в бюджет (COOPERATIVE, счёт 68). Кошелёк общекооперативный: в него стекаются удержания ЛЮБОЙ программы, выплатившей доход физлицу (сегодня — материальная помощь доверенному, o.brn.aidtax), а гасит его бухгалтерия единым налоговым платежом (o.sov.taxpay, BURN, Дт 68 / Кт 51). Поэтому кошелёк не принадлежит программе-источнику и назван по кооперативу, а не по участку. Остаток = долг кооператива перед бюджетом; он же ограничивает сумму платежа — перечислить больше удержанного налоговый агент не вправе. Деньги при удержании с расчётного счёта НЕ уходят: кооператив просто выплатил получателю меньше. </p>
+
+</div>
+</div>
+<a id="a967d1b48492ad14a8f46168e1837367a" name="a967d1b48492ad14a8f46168e1837367a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967d1b48492ad14a8f46168e1837367a">&#9670;&nbsp;</a></span>PREIMP_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::PREIMP_FUND = &quot;w.cap.preimp&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Первичный учёт РИД-взносов до перехода на электронный учёт (USER_SHARED; o.cap.preimp / o.cap.drppre) </p>
+
+</div>
+</div>
+<a id="a297b8c11896731a6380a8cd752a0a9c5" name="a297b8c11896731a6380a8cd752a0a9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a297b8c11896731a6380a8cd752a0a9c5">&#9670;&nbsp;</a></span>PROGRAM_EXPENSE_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::PROGRAM_EXPENSE_POOL = &quot;w.cap.pgexp&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Пул программных расходов ЦПП «Благорост» (COOPERATIVE) — кооперативный кошелёк, из которого шасси expense оплачивает СЗ; пополняется topupprogexp (o.cap.pgtop), паевые L3-кошельки пайщиков (w.cap.blago) при расходах не трогаются </p>
+
+</div>
+</div>
+<a id="ae1b3b32c576ae07d8b2a11427cf61c5f" name="ae1b3b32c576ae07d8b2a11427cf61c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b3b32c576ae07d8b2a11427cf61c5f">&#9670;&nbsp;</a></span>REGISTRATION_PENDING</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::REGISTRATION_PENDING = &quot;w.reg.pend&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Регистрационный взнос в ожидании решения совета (суспенс счёта 76, USER_SHARED, без сверки соглашений — кандидат ещё не член). o.reg.inpay → сюда (Dr 51/Cr 76); o.reg.setmin/setent уносят на 80/86; o.reg.refund сжигает (Dr 76/Cr 51). </p>
+
+</div>
+</div>
+<a id="ac6e8f31966ec81e379007900012c84f4" name="ac6e8f31966ec81e379007900012c84f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e8f31966ec81e379007900012c84f4">&#9670;&nbsp;</a></span>SHARE_FUND_PAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::SHARE_FUND_PAY = &quot;w.wal.share&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Паевой взнос пайщика (USER_SHARED) </p>
+
+</div>
+</div>
+<a id="a3b895d7bc0c44a7b9259106c499e8b4b" name="a3b895d7bc0c44a7b9259106c499e8b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b895d7bc0c44a7b9259106c499e8b4b">&#9670;&nbsp;</a></span>SOV_EXPENSES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::SOV_EXPENSES = &quot;w.sov.expns&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Хозяйственные расходы из числа целевого финансирования (COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="a9618d5b10702952cacb5e1ce6b5cae13" name="a9618d5b10702952cacb5e1ce6b5cae13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9618d5b10702952cacb5e1ce6b5cae13">&#9670;&nbsp;</a></span>SUPPLIER_PAYMENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::SUPPLIER_PAYMENTS = &quot;w.mkt.payout&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выплаты поставщикам (sink PAYOUT, COOPERATIVE) </p>
+
+</div>
+</div>
+<a id="a907b27aa4bf581edfcbffbcf27716fc0" name="a907b27aa4bf581edfcbffbcf27716fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a907b27aa4bf581edfcbffbcf27716fc0">&#9670;&nbsp;</a></span>WITHDRAW_PENDING</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::WITHDRAW_PENDING = &quot;w.wal.wpend&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Резерв паевого под заявку на возврат (COOPERATIVE-пул). o.wal.wthreq переводит сюда с w.wal.share, o.wal.wthdec возвращает обратно, o.wal.wthcpl сжигает отсюда. Заменил механику blocked/BLOCK/UNBLOCK 2026-05-24. </p>
+
+</div>
+</div>
+<a id="ac09e2fe28e21c07baab3e335bdcc5052" name="ac09e2fe28e21c07baab3e335bdcc5052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09e2fe28e21c07baab3e335bdcc5052">&#9670;&nbsp;</a></span>WITHDRAWALS_SINK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name ledger2_wallets::WITHDRAWALS_SINK = &quot;w.wal.wthdrw&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DEPRECATED 2026-05-21: исторический sink возвратов. Оставлен в реестре для исторических L2-балансов (накопленные возвраты до перехода). Не использовать в новых операциях. </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/core/ledger2/<a class="el" href="lib_2core_2ledger2_2wallets_8hpp_source.html">wallets.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structledger2__wallets.html">ledger2_wallets</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

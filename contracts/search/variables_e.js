@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['offer_5fhash_0',['offer_hash',['../struct_marketplace_1_1order.html#ae0223fc5c894310f3b26d03dc6ecdf17',1,'Marketplace::order']]],
+  ['offerer_1',['offerer',['../struct_marketplace_1_1order.html#a4278603a677ad4e14a224364f05759f4',1,'Marketplace::order']]],
+  ['on_5fbranch_5fexpense_5fdone_2',['ON_BRANCH_EXPENSE_DONE',['../namespace_names_1_1_branch.html#a6b890e3954903c26f8d7b133862f3d53',1,'Names::Branch']]],
+  ['on_5fprogram_5fexpense_5fdone_3',['ON_PROGRAM_EXPENSE_DONE',['../namespace_names_1_1_capital.html#a5f71d70fb45b65d4a3c5a0474d6ea28f',1,'Names::Capital']]],
+  ['open_5fat_4',['open_at',['../structcoodecision.html#a237c32813004573583b9f5dc2ae27d9b',1,'coodecision::open_at()'],['../struct_meet_1_1meet.html#aff2748bcccb7f2ae4880c8951a561fc3',1,'Meet::meet::open_at()']]],
+  ['open_5fprogram_5fwallet_5',['OPEN_PROGRAM_WALLET',['../namespace_names_1_1_external.html#a6aa10b9da933a81c98c7c3a3501d9a3f',1,'Names::External']]],
+  ['operation_5fadjustment_5fregistry_6',['OPERATION_ADJUSTMENT_REGISTRY',['../operations_8hpp.html#af345f5acd127b1d41cf47e00e3307d90',1,'operations.hpp']]],
+  ['operation_5fregistry_7',['OPERATION_REGISTRY',['../operations_8hpp.html#a80caa2ac468f2b7ac8d290e6370b0633',1,'operations.hpp']]],
+  ['operation_5fregistry_5fsize_8',['OPERATION_REGISTRY_SIZE',['../operations_8hpp.html#a6a6d4749c66a7d822cca2f4f99d26c34',1,'operations.hpp']]],
+  ['orderer_9',['orderer',['../struct_marketplace_1_1order.html#a03032727b1b1dce4a3127fa4c6001ff5',1,'Marketplace::order::orderer()'],['../struct_marketplace_1_1return__request.html#ad2a3a74ad9e5422f136cd705397ac706',1,'Marketplace::return_request::orderer()']]],
+  ['org_5finitial_10',['org_initial',['../structcooperative.html#a5c5336993628f9656944345a5d490ed8',1,'cooperative::org_initial()'],['../structcooperative2.html#a5b11749543f5e8438839305d83ed1e50',1,'cooperative2::org_initial()'],['../structorg__data.html#a347a2dbd1b13763c210e15d81ab2764f',1,'org_data::org_initial()']]],
+  ['org_5fminimum_11',['org_minimum',['../structcooperative.html#a70599503a9c4ff138df62996ac236660',1,'cooperative::org_minimum()'],['../structcooperative2.html#a2aefdf7219727b8d5f2acc18b02e2b48',1,'cooperative2::org_minimum()'],['../structorg__data.html#af68fc1fe5696c2872122d978c9933793',1,'org_data::org_minimum()']]],
+  ['org_5fregistration_12',['org_registration',['../structcooperative2.html#ae7373bc696c5a76e162d183e68681d10',1,'cooperative2::org_registration()'],['../structcooperative.html#a9ed49665e29d8c8017b751b7e953b624',1,'cooperative::org_registration()']]],
+  ['original_5fconsume_5fop_5fid_13',['original_consume_op_id',['../struct_marketplace_1_1return__request.html#a8101117fd571f1b3104a7c24e07cb9fd',1,'Marketplace::return_request']]],
+  ['original_5forder_5fhash_14',['original_order_hash',['../struct_marketplace_1_1return__request.html#a862f1e582c075156cb0a9057f348d5cc',1,'Marketplace::return_request']]],
+  ['original_5forder_5fid_15',['original_order_id',['../struct_marketplace_1_1return__request.html#acf63485e08582d8a1f181f2465046994',1,'Marketplace::return_request']]],
+  ['other_5fincome_5fexpenses_16',['OTHER_INCOME_EXPENSES',['../structledger2__accounts.html#a80b1d4137c6797853bebd8627ee0847d',1,'ledger2_accounts::OTHER_INCOME_EXPENSES()'],['../struct_ledger_1_1accounts.html#af3521418afde0729e4dc76f9038b1db3',1,'Ledger::accounts::OTHER_INCOME_EXPENSES()']]],
+  ['other_5fsettlements_17',['OTHER_SETTLEMENTS',['../struct_ledger_1_1accounts.html#aca436c4366499e2ffc395c33be53723c',1,'Ledger::accounts']]],
+  ['outcome_5fhash_18',['outcome_hash',['../struct_gateway_1_1outcome.html#a04e57cdf339a39e58353baaebae4c48f',1,'Gateway::outcome']]],
+  ['overspend_19',['overspend',['../struct_expense_operation_set.html#a19cffd0082f0ec63fe9f86f446456eaf',1,'ExpenseOperationSet']]],
+  ['overspend_20',['OVERSPEND',['../namespaceoperations_1_1expense.html#a2a1dbf38f03857db8fa056b1fd38947a',1,'operations::expense']]],
+  ['owner_21',['owner',['../structeosiosystem_1_1user__resources.html#a8a373411ce7eb180649f9a7c938fb7dd',1,'eosiosystem::user_resources::owner()'],['../structeosiosystem_1_1refund__request.html#a11e5c7ef5cc00904a0d00bf0af8900ef',1,'eosiosystem::refund_request::owner()'],['../structeosiosystem_1_1powerup__order.html#a7367e434fe5c04cc3eea0a4e79d925f4',1,'eosiosystem::powerup_order::owner()'],['../structeosiosystem_1_1abi__hash.html#a4fb47566cda77ad38ad41fcf4fa3616d',1,'eosiosystem::abi_hash::owner()'],['../struct__abi__hash.html#a47247c544376bfdebcf841bacaebc84c',1,'_abi_hash::owner()'],['../structeosiosystem_1_1voter__info.html#a09e1d98da6939690519ea85baedf1c01',1,'eosiosystem::voter_info::owner()'],['../structeosiosystem_1_1producer__info.html#a8e7b745ce26e291c9bb6c01197b39481',1,'eosiosystem::producer_info::owner()'],['../structeosiobios_1_1bios_1_1abi__hash.html#a9192f39fbb92a8ef905d1f28056e904d',1,'eosiobios::bios::abi_hash::owner()'],['../struct_apps_1_1package.html#a34fed5f5829b1789a69f78b3d068dd85',1,'Apps::package::owner()'],['../eosio_8limitauth__tests_8cpp.html#af05624499daa7d1cf22007650e219653',1,'owner():&#160;eosio.limitauth_tests.cpp']]]
+];

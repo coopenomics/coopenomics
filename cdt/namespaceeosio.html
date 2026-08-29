@@ -1,0 +1,728 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="CDT / eosiolib" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация библиотек Contract Development Toolkit (eosiolib)" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="CDT / eosiolib" />
+<meta name="twitter:description" content="Документация библиотек Contract Development Toolkit (eosiolib)" />
+<!-- END twitter metadata -->
+<title>CDT: Пространство имен eosio</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<a href="https://github.com/AntelopeIO/cdt" class="github-corner" title="Исходники CDT на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CDT
+   &#160;<span id="projectnumber">v4.2.0</span>
+   </div>
+   <div id="projectbrief">инструменты разработчика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespaceeosio.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен eosio</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceeosio_1_1__datastream__detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_1_1__datastream__detail.html">_datastream_detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceeosio_1_1__multi__index__detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_1_1__multi__index__detail.html">_multi_index_detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceeosio_1_1detail"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_1_1detail.html">detail</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceeosio_1_1impl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_1_1impl.html">impl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespaceeosio_1_1internal__use__do__not__use"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_1_1internal__use__do__not__use.html">internal_use_do_not_use</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1action.html">action</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1action__wrapper.html">action_wrapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обёртка для конкретного действия, упрощающая отправку встроенных (inline) действий к этому действию из других контрактов. Пример:  <a href="structeosio_1_1action__wrapper.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1asset.html">asset</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1block__signing__authority__v0.html">block_signing_authority_v0</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">взвешенное пороговое полномочие с несколькими подписями (multi-sig)  <a href="structeosio_1_1block__signing__authority__v0.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1block__timestamp.html">block_timestamp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1blockchain__parameters.html">blockchain_parameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1code__hash__result.html">code_hash_result</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1const__mem__fun.html">const_mem_fun</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1contract.html">contract</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1datastream.html">datastream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1datastream_3_01size__t_01_4.html">datastream&lt; size_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1ec__point.html">ec_point</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1ec__point__view.html">ec_point_view</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1extended__asset.html">extended_asset</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1extended__symbol.html">extended_symbol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1fixed__bytes.html">fixed_bytes</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1ignore.html">ignore</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1ignore__wrapper.html">ignore_wrapper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1indexed__by.html">indexed_by</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1inline__dispatcher.html">inline_dispatcher</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1inline__dispatcher_3_01void_07_t_1_1_5_08_07_args_8_8_8_08_00_01_name_01_4.html">inline_dispatcher&lt; void(T::*)(Args...), Name &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1iostream.html">iostream</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1key__weight.html">key_weight</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1multi__index.html">multi_index</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет многоиндексную таблицу COOPOS (Multi Index Table)  <a href="classeosio_1_1multi__index.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1name.html">name</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1onerror.html">onerror</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1overloaded.html">overloaded</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1permission__level.html">permission_level</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1producer__authority.html">producer_authority</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сопоставляет производителя с его ключом подписи  <a href="structeosio_1_1producer__authority.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1producer__key.html">producer_key</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1producer__schedule.html">producer_schedule</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1rope.html">rope</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1security__group.html">security_group</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1signed__int.html">signed_int</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1singleton.html">singleton</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1string.html">string</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1symbol.html">symbol</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1symbol__code.html">symbol_code</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1time__point.html">time_point</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1time__point__sec.html">time_point_sec</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1transaction.html">transaction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1transaction__header.html">transaction_header</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Содержит сведения о транзакции  <a href="classeosio_1_1transaction__header.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1unsigned__int.html">unsigned_int</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1variant__action__wrapper.html">variant_action_wrapper</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:ae29c5ec8317e597280bc1073b514036a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_ae29c5ec8317e597280bc1073b514036a.html#ae29c5ec8317e597280bc1073b514036a">g1_point</a> = <a class="el" href="structeosio_1_1ec__point.html">ec_point</a>&lt; g1_coordinate_size &gt;</td></tr>
+<tr class="separator:ae29c5ec8317e597280bc1073b514036a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aff021c9a288ba2455ebe78af8fb8e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a4aff021c9a288ba2455ebe78af8fb8e1.html#a4aff021c9a288ba2455ebe78af8fb8e1">g2_point</a> = <a class="el" href="structeosio_1_1ec__point.html">ec_point</a>&lt; g2_coordinate_size &gt;</td></tr>
+<tr class="separator:a4aff021c9a288ba2455ebe78af8fb8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df4bd625daf8e623fe79be6335657a0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a4df4bd625daf8e623fe79be6335657a0.html#a4df4bd625daf8e623fe79be6335657a0">g1_point_view</a> = <a class="el" href="structeosio_1_1ec__point__view.html">ec_point_view</a>&lt; g1_coordinate_size &gt;</td></tr>
+<tr class="separator:a4df4bd625daf8e623fe79be6335657a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56573a7efad7729714195ac50d6c1a52"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a56573a7efad7729714195ac50d6c1a52.html#a56573a7efad7729714195ac50d6c1a52">g2_point_view</a> = <a class="el" href="structeosio_1_1ec__point__view.html">ec_point_view</a>&lt; g2_coordinate_size &gt;</td></tr>
+<tr class="separator:a56573a7efad7729714195ac50d6c1a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3abd9c96d56e0547488cae1cd186cc6f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> = std::vector&lt; char &gt;</td></tr>
+<tr class="separator:ga3abd9c96d56e0547488cae1cd186cc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac871966a2176ae48a0a85b6170e13592"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_ac871966a2176ae48a0a85b6170e13592.html#ac871966a2176ae48a0a85b6170e13592">key_type</a> = std::string</td></tr>
+<tr class="separator:ac871966a2176ae48a0a85b6170e13592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f8fa835ef0dc341addb6e51d0d840b3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classeosio_1_1block__timestamp.html">block_timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__time_ga4f8fa835ef0dc341addb6e51d0d840b3.html#ga4f8fa835ef0dc341addb6e51d0d840b3">block_timestamp_type</a></td></tr>
+<tr class="separator:ga4f8fa835ef0dc341addb6e51d0d840b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9f7f8b14b8fcc608e0af99ac46a2c98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__producer__authority_gac9f7f8b14b8fcc608e0af99ac46a2c98.html#gac9f7f8b14b8fcc608e0af99ac46a2c98">block_signing_authority</a> = std::variant&lt; <a class="el" href="structeosio_1_1block__signing__authority__v0.html">block_signing_authority_v0</a> &gt;</td></tr>
+<tr class="separator:gac9f7f8b14b8fcc608e0af99ac46a2c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdbab72cb6a9b99ab917c317a385d28d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_abdbab72cb6a9b99ab917c317a385d28d.html#abdbab72cb6a9b99ab917c317a385d28d">block_num_t</a> = uint32_t</td></tr>
+<tr class="separator:abdbab72cb6a9b99ab917c317a385d28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf3ea17209c6d47129b2b232aede5439"><td class="memItemLeft" align="right" valign="top">typedef std::tuple&lt; uint16_t, std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_gaaf3ea17209c6d47129b2b232aede5439.html#gaaf3ea17209c6d47129b2b232aede5439">extension</a></td></tr>
+<tr class="separator:gaaf3ea17209c6d47129b2b232aede5439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19c346b66f7145a5336177ac3eb0849e"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="group__transaction_gaaf3ea17209c6d47129b2b232aede5439.html#gaaf3ea17209c6d47129b2b232aede5439">extension</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga19c346b66f7145a5336177ac3eb0849e.html#ga19c346b66f7145a5336177ac3eb0849e">extensions_type</a></td></tr>
+<tr class="separator:ga19c346b66f7145a5336177ac3eb0849e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a0620d4ec6f522f17350db97ac3c14840"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0620d4ec6f522f17350db97ac3c14840.html#a0620d4ec6f522f17350db97ac3c14840">write_decimal</a> (char *begin, char *end, bool dry_run, uint64_t number, uint8_t num_decimal_places, bool negative)</td></tr>
+<tr class="separator:a0620d4ec6f522f17350db97ac3c14840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54ad844cfe9f99f2c7cfcc935559e633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga54ad844cfe9f99f2c7cfcc935559e633.html#ga54ad844cfe9f99f2c7cfcc935559e633">check</a> (bool pred, std::string_view msg)</td></tr>
+<tr class="separator:ga54ad844cfe9f99f2c7cfcc935559e633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga919983993e7c2b18dcb253e3a8ef33e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga919983993e7c2b18dcb253e3a8ef33e4.html#ga919983993e7c2b18dcb253e3a8ef33e4">check</a> (bool pred, const char *msg)</td></tr>
+<tr class="separator:ga919983993e7c2b18dcb253e3a8ef33e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa7adb3f6c40df0e974eab5f84e1377b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gaaa7adb3f6c40df0e974eab5f84e1377b.html#gaaa7adb3f6c40df0e974eab5f84e1377b">check</a> (bool pred, const std::string &amp;msg)</td></tr>
+<tr class="separator:gaaa7adb3f6c40df0e974eab5f84e1377b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61e4624ef8320a0d9918cf247df4df90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga61e4624ef8320a0d9918cf247df4df90.html#ga61e4624ef8320a0d9918cf247df4df90">check</a> (bool pred, std::string &amp;&amp;msg)</td></tr>
+<tr class="separator:ga61e4624ef8320a0d9918cf247df4df90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad245a249b8721374fe09819a00a86906"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gad245a249b8721374fe09819a00a86906.html#gad245a249b8721374fe09819a00a86906">check</a> (bool pred, const char *msg, size_t n)</td></tr>
+<tr class="separator:gad245a249b8721374fe09819a00a86906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga076f987fe64de4738b5d2f4381150253"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga076f987fe64de4738b5d2f4381150253.html#ga076f987fe64de4738b5d2f4381150253">check</a> (bool pred, const std::string &amp;msg, size_t n)</td></tr>
+<tr class="separator:ga076f987fe64de4738b5d2f4381150253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f6537af230517a619f07727f6ff33a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga2f6537af230517a619f07727f6ff33a5.html#ga2f6537af230517a619f07727f6ff33a5">check</a> (bool pred, uint64_t code)</td></tr>
+<tr class="separator:ga2f6537af230517a619f07727f6ff33a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af30ec535f8c8483b8779abcfbf73275e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1name.html">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_af30ec535f8c8483b8779abcfbf73275e.html#af30ec535f8c8483b8779abcfbf73275e">current_context_contract</a> ()</td></tr>
+<tr class="separator:af30ec535f8c8483b8779abcfbf73275e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15d62eb0cc4e802cebf37acdeb244347"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga15d62eb0cc4e802cebf37acdeb244347"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceeosio_ae29c5ec8317e597280bc1073b514036a.html#ae29c5ec8317e597280bc1073b514036a">g1_point</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__crypto_ga15d62eb0cc4e802cebf37acdeb244347.html#ga15d62eb0cc4e802cebf37acdeb244347">alt_bn128_add</a> (const T &amp;op1, const T &amp;op2)</td></tr>
+<tr class="separator:ga15d62eb0cc4e802cebf37acdeb244347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6c7cb31acc6ad2034928b0f4f838f1f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gad6c7cb31acc6ad2034928b0f4f838f1f.html#gad6c7cb31acc6ad2034928b0f4f838f1f">alt_bn128_add</a> (const char *op1, uint32_t op1_len, const char *op2, uint32_t op2_len, char *result, uint32_t result_len)</td></tr>
+<tr class="separator:gad6c7cb31acc6ad2034928b0f4f838f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c359bdfef5213a9d7469d4ce1d953be"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga4c359bdfef5213a9d7469d4ce1d953be"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceeosio_ae29c5ec8317e597280bc1073b514036a.html#ae29c5ec8317e597280bc1073b514036a">g1_point</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__crypto_ga4c359bdfef5213a9d7469d4ce1d953be.html#ga4c359bdfef5213a9d7469d4ce1d953be">alt_bn128_mul</a> (const T &amp;g1, const <a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> &amp;scalar)</td></tr>
+<tr class="separator:ga4c359bdfef5213a9d7469d4ce1d953be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a1860ebd5b856a263d61fb3486c6bac"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga0a1860ebd5b856a263d61fb3486c6bac.html#ga0a1860ebd5b856a263d61fb3486c6bac">alt_bn128_mul</a> (const char *g1, uint32_t g1_len, const char *scalar, uint32_t scalar_len, char *result, uint32_t result_len)</td></tr>
+<tr class="separator:ga0a1860ebd5b856a263d61fb3486c6bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c07b3b9afd8013c8852a45906b7b021"><td class="memTemplParams" colspan="2">template&lt;typename G1_T , typename G2_T &gt; </td></tr>
+<tr class="memitem:ga6c07b3b9afd8013c8852a45906b7b021"><td class="memTemplItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__crypto_ga6c07b3b9afd8013c8852a45906b7b021.html#ga6c07b3b9afd8013c8852a45906b7b021">alt_bn128_pair</a> (const std::vector&lt; std::pair&lt; G1_T, G2_T &gt; &gt; &amp;pairs)</td></tr>
+<tr class="separator:ga6c07b3b9afd8013c8852a45906b7b021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad09d0d106fbffeea5ae3fa11a4542060"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gad09d0d106fbffeea5ae3fa11a4542060.html#gad09d0d106fbffeea5ae3fa11a4542060">alt_bn128_pair</a> (const char *pairs, uint32_t pairs_len)</td></tr>
+<tr class="separator:gad09d0d106fbffeea5ae3fa11a4542060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafaa1bb4600feccd42acd799e76570291"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gafaa1bb4600feccd42acd799e76570291.html#gafaa1bb4600feccd42acd799e76570291">mod_exp</a> (const <a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> &amp;base, const <a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> &amp;exp, const <a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> &amp;mod, <a class="el" href="group__crypto_ga3abd9c96d56e0547488cae1cd186cc6f.html#ga3abd9c96d56e0547488cae1cd186cc6f">bigint</a> &amp;result)</td></tr>
+<tr class="separator:gafaa1bb4600feccd42acd799e76570291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30e83b1ef7aa5db6dc580c850a02801c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga30e83b1ef7aa5db6dc580c850a02801c.html#ga30e83b1ef7aa5db6dc580c850a02801c">mod_exp</a> (const char *base, uint32_t base_len, const char *exp, uint32_t exp_len, const char *mod, uint32_t mod_len, char *result, uint32_t result_len)</td></tr>
+<tr class="separator:ga30e83b1ef7aa5db6dc580c850a02801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd02565be968568862b0af73120e9831"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gabd02565be968568862b0af73120e9831.html#gabd02565be968568862b0af73120e9831">blake2_f</a> (uint32_t rounds, const std::vector&lt; char &gt; &amp;state, const std::vector&lt; char &gt; &amp;msg, const std::vector&lt; char &gt; &amp;t0_offset, const std::vector&lt; char &gt; &amp;t1_offset, bool final, std::vector&lt; char &gt; &amp;result)</td></tr>
+<tr class="separator:gabd02565be968568862b0af73120e9831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64df5cb191f12821722e306229ed19aa"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga64df5cb191f12821722e306229ed19aa.html#ga64df5cb191f12821722e306229ed19aa">blake2_f</a> (uint32_t rounds, const char *state, uint32_t state_len, const char *msg, uint32_t msg_len, const char *t0_offset, uint32_t t0_len, const char *t1_offset, uint32_t t1_len, int32_t final, char *result, uint32_t result_len)</td></tr>
+<tr class="separator:ga64df5cb191f12821722e306229ed19aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72b1a23b79771d3be88f1330bbe0e3cb"><td class="memItemLeft" align="right" valign="top">eosio::checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga72b1a23b79771d3be88f1330bbe0e3cb.html#ga72b1a23b79771d3be88f1330bbe0e3cb">sha3</a> (const char *data, uint32_t length)</td></tr>
+<tr class="separator:ga72b1a23b79771d3be88f1330bbe0e3cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5911e4dd154cdc173eb05c44bbfe02d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga5911e4dd154cdc173eb05c44bbfe02d0.html#ga5911e4dd154cdc173eb05c44bbfe02d0">assert_sha3</a> (const char *data, uint32_t length, const eosio::checksum256 &amp;hash)</td></tr>
+<tr class="separator:ga5911e4dd154cdc173eb05c44bbfe02d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee42036696553a2aab82c8beadc949cc"><td class="memItemLeft" align="right" valign="top">eosio::checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gaee42036696553a2aab82c8beadc949cc.html#gaee42036696553a2aab82c8beadc949cc">keccak</a> (const char *data, uint32_t length)</td></tr>
+<tr class="separator:gaee42036696553a2aab82c8beadc949cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga525a44f742b17926399841c745a4a7ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_ga525a44f742b17926399841c745a4a7ec.html#ga525a44f742b17926399841c745a4a7ec">assert_keccak</a> (const char *data, uint32_t length, const eosio::checksum256 &amp;hash)</td></tr>
+<tr class="separator:ga525a44f742b17926399841c745a4a7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa651eeb4147e53a045ccf1fd3c06f14d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__crypto_gaa651eeb4147e53a045ccf1fd3c06f14d.html#gaa651eeb4147e53a045ccf1fd3c06f14d">k1_recover</a> (const char *sig, uint32_t sig_len, const char *dig, uint32_t dig_len, char *pub, uint32_t pub_len)</td></tr>
+<tr class="separator:gaa651eeb4147e53a045ccf1fd3c06f14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f0396ed775d5fe67df4b29bc7fc61f"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:ac9f0396ed775d5fe67df4b29bc7fc61f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ac9f0396ed775d5fe67df4b29bc7fc61f.html#ac9f0396ed775d5fe67df4b29bc7fc61f">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::list&lt; T &gt; &amp;l)</td></tr>
+<tr class="separator:ac9f0396ed775d5fe67df4b29bc7fc61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0071f0e52a33e72d2b0da6fb69fd5a01"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a0071f0e52a33e72d2b0da6fb69fd5a01"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0071f0e52a33e72d2b0da6fb69fd5a01.html#a0071f0e52a33e72d2b0da6fb69fd5a01">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::list&lt; T &gt; &amp;l)</td></tr>
+<tr class="separator:a0071f0e52a33e72d2b0da6fb69fd5a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290409b4cb05910111f068b83f65018f"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a290409b4cb05910111f068b83f65018f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a290409b4cb05910111f068b83f65018f.html#a290409b4cb05910111f068b83f65018f">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::deque&lt; T &gt; &amp;d)</td></tr>
+<tr class="separator:a290409b4cb05910111f068b83f65018f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96515453c996337cf8a448415ea1997b"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a96515453c996337cf8a448415ea1997b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a96515453c996337cf8a448415ea1997b.html#a96515453c996337cf8a448415ea1997b">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::deque&lt; T &gt; &amp;d)</td></tr>
+<tr class="separator:a96515453c996337cf8a448415ea1997b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5c48a772a3cc24ae76620483aceb23"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename... Ts&gt; </td></tr>
+<tr class="memitem:a0b5c48a772a3cc24ae76620483aceb23"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0b5c48a772a3cc24ae76620483aceb23.html#a0b5c48a772a3cc24ae76620483aceb23">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::variant&lt; Ts... &gt; &amp;var)</td></tr>
+<tr class="separator:a0b5c48a772a3cc24ae76620483aceb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11247ca58ee8acf29f3486c0e2772788"><td class="memTemplParams" colspan="2">template&lt;int I, typename Stream , typename... Ts&gt; </td></tr>
+<tr class="memitem:a11247ca58ee8acf29f3486c0e2772788"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a11247ca58ee8acf29f3486c0e2772788.html#a11247ca58ee8acf29f3486c0e2772788">deserialize</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::variant&lt; Ts... &gt; &amp;var, int i)</td></tr>
+<tr class="separator:a11247ca58ee8acf29f3486c0e2772788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057c7fbba3a58e93208c3901359e5896"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename... Ts&gt; </td></tr>
+<tr class="memitem:a057c7fbba3a58e93208c3901359e5896"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a057c7fbba3a58e93208c3901359e5896.html#a057c7fbba3a58e93208c3901359e5896">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::variant&lt; Ts... &gt; &amp;var)</td></tr>
+<tr class="separator:a057c7fbba3a58e93208c3901359e5896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97755f06683e48a1305a409ca3a6e9c3"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:a97755f06683e48a1305a409ca3a6e9c3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a97755f06683e48a1305a409ca3a6e9c3.html#a97755f06683e48a1305a409ca3a6e9c3">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::pair&lt; T1, T2 &gt; &amp;t)</td></tr>
+<tr class="separator:a97755f06683e48a1305a409ca3a6e9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada409d460d12c2d64ef2b02b3f99ddef"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T1 , typename T2 &gt; </td></tr>
+<tr class="memitem:ada409d460d12c2d64ef2b02b3f99ddef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ada409d460d12c2d64ef2b02b3f99ddef.html#ada409d460d12c2d64ef2b02b3f99ddef">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::pair&lt; T1, T2 &gt; &amp;t)</td></tr>
+<tr class="separator:ada409d460d12c2d64ef2b02b3f99ddef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188287b053c352c204cf0ef83786cdcd"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a188287b053c352c204cf0ef83786cdcd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a188287b053c352c204cf0ef83786cdcd.html#a188287b053c352c204cf0ef83786cdcd">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::optional&lt; T &gt; &amp;opt)</td></tr>
+<tr class="separator:a188287b053c352c204cf0ef83786cdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37421e74f3192dbb7ca11ff9b9c0864c"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a37421e74f3192dbb7ca11ff9b9c0864c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a37421e74f3192dbb7ca11ff9b9c0864c.html#a37421e74f3192dbb7ca11ff9b9c0864c">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::optional&lt; T &gt; &amp;opt)</td></tr>
+<tr class="separator:a37421e74f3192dbb7ca11ff9b9c0864c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4a7f3bd49b821a6b3f0a3b9c45a4a5"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:afe4a7f3bd49b821a6b3f0a3b9c45a4a5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_afe4a7f3bd49b821a6b3f0a3b9c45a4a5.html#afe4a7f3bd49b821a6b3f0a3b9c45a4a5">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const bool &amp;d)</td></tr>
+<tr class="separator:afe4a7f3bd49b821a6b3f0a3b9c45a4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b454140b1bb214fbd65d75887098864"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:a9b454140b1bb214fbd65d75887098864"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a9b454140b1bb214fbd65d75887098864.html#a9b454140b1bb214fbd65d75887098864">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, bool &amp;d)</td></tr>
+<tr class="separator:a9b454140b1bb214fbd65d75887098864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e70f3361540d36ba192ca715a08adc"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:a59e70f3361540d36ba192ca715a08adc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a59e70f3361540d36ba192ca715a08adc.html#a59e70f3361540d36ba192ca715a08adc">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::string &amp;v)</td></tr>
+<tr class="separator:a59e70f3361540d36ba192ca715a08adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfb0796f4c681681dfc3e28b1f581c14"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:abfb0796f4c681681dfc3e28b1f581c14"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_abfb0796f4c681681dfc3e28b1f581c14.html#abfb0796f4c681681dfc3e28b1f581c14">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::string &amp;v)</td></tr>
+<tr class="separator:abfb0796f4c681681dfc3e28b1f581c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5451fc739da28dc1a006d3f72e18b4"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::size_t N&gt; </td></tr>
+<tr class="memitem:aea5451fc739da28dc1a006d3f72e18b4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aea5451fc739da28dc1a006d3f72e18b4.html#aea5451fc739da28dc1a006d3f72e18b4">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::array&lt; T, N &gt; &amp;v)</td></tr>
+<tr class="separator:aea5451fc739da28dc1a006d3f72e18b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49a88acb71519dbd9e1c11c1e093625"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::size_t N&gt; </td></tr>
+<tr class="memitem:af49a88acb71519dbd9e1c11c1e093625"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_af49a88acb71519dbd9e1c11c1e093625.html#af49a88acb71519dbd9e1c11c1e093625">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::array&lt; T, N &gt; &amp;v)</td></tr>
+<tr class="separator:af49a88acb71519dbd9e1c11c1e093625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92909b82c15215ec31eebe461e7d6403"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::enable_if_t&lt; <a class="el" href="namespaceeosio_1_1__datastream__detail_a756af9772c5c98915bbdacafa7165278.html#a756af9772c5c98915bbdacafa7165278">_datastream_detail::is_pointer</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a92909b82c15215ec31eebe461e7d6403"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a92909b82c15215ec31eebe461e7d6403.html#a92909b82c15215ec31eebe461e7d6403">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, T)</td></tr>
+<tr class="memdesc:a92909b82c15215ec31eebe461e7d6403"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель не должен сериализоваться; эта перегрузка всегда приводит к ошибке  <a href="namespaceeosio_a92909b82c15215ec31eebe461e7d6403.html#a92909b82c15215ec31eebe461e7d6403">Подробнее...</a><br /></td></tr>
+<tr class="separator:a92909b82c15215ec31eebe461e7d6403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae800a5c9a4c8d9ea2546535d1a91c95b"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::size_t N, std::enable_if_t&lt;!<a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;() &amp;&amp;!<a class="el" href="namespaceeosio_1_1__datastream__detail_a756af9772c5c98915bbdacafa7165278.html#a756af9772c5c98915bbdacafa7165278">_datastream_detail::is_pointer</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:ae800a5c9a4c8d9ea2546535d1a91c95b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ae800a5c9a4c8d9ea2546535d1a91c95b.html#ae800a5c9a4c8d9ea2546535d1a91c95b">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const T(&amp;v)[N])</td></tr>
+<tr class="separator:ae800a5c9a4c8d9ea2546535d1a91c95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f65b4138ad6406630da2366a3f5b579"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::size_t N, std::enable_if_t&lt;!<a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;() &amp;&amp;!<a class="el" href="namespaceeosio_1_1__datastream__detail_a756af9772c5c98915bbdacafa7165278.html#a756af9772c5c98915bbdacafa7165278">_datastream_detail::is_pointer</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a8f65b4138ad6406630da2366a3f5b579"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a8f65b4138ad6406630da2366a3f5b579.html#a8f65b4138ad6406630da2366a3f5b579">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, T(&amp;v)[N])</td></tr>
+<tr class="separator:a8f65b4138ad6406630da2366a3f5b579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c1d8a8d997953cd44283b2de8860c4a"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::enable_if_t&lt; <a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a2c1d8a8d997953cd44283b2de8860c4a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a2c1d8a8d997953cd44283b2de8860c4a.html#a2c1d8a8d997953cd44283b2de8860c4a">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::vector&lt; T &gt; &amp;v)</td></tr>
+<tr class="separator:a2c1d8a8d997953cd44283b2de8860c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea13490e88014aa37e0bd98d45b4858"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::enable_if_t&lt; <a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a3ea13490e88014aa37e0bd98d45b4858"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a3ea13490e88014aa37e0bd98d45b4858.html#a3ea13490e88014aa37e0bd98d45b4858">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::vector&lt; T &gt; &amp;v)</td></tr>
+<tr class="separator:a3ea13490e88014aa37e0bd98d45b4858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95c7ba8a4618dd4c006765742303329"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:ae95c7ba8a4618dd4c006765742303329"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ae95c7ba8a4618dd4c006765742303329.html#ae95c7ba8a4618dd4c006765742303329">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::basic_string&lt; T &gt; &amp;s)</td></tr>
+<tr class="separator:ae95c7ba8a4618dd4c006765742303329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a513f0adb057b01a6f5b5e6a67fc9d212"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a513f0adb057b01a6f5b5e6a67fc9d212"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a513f0adb057b01a6f5b5e6a67fc9d212.html#a513f0adb057b01a6f5b5e6a67fc9d212">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::basic_string&lt; T &gt; &amp;s)</td></tr>
+<tr class="separator:a513f0adb057b01a6f5b5e6a67fc9d212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381a9f8735361fcbfb7b3a619764fad9"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:a381a9f8735361fcbfb7b3a619764fad9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a381a9f8735361fcbfb7b3a619764fad9.html#a381a9f8735361fcbfb7b3a619764fad9">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::basic_string&lt; uint8_t &gt; &amp;s)</td></tr>
+<tr class="separator:a381a9f8735361fcbfb7b3a619764fad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bac2858769a47b327004fb7dfacafa"><td class="memTemplParams" colspan="2">template&lt;typename Stream &gt; </td></tr>
+<tr class="memitem:a58bac2858769a47b327004fb7dfacafa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a58bac2858769a47b327004fb7dfacafa.html#a58bac2858769a47b327004fb7dfacafa">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::basic_string&lt; uint8_t &gt; &amp;s)</td></tr>
+<tr class="separator:a58bac2858769a47b327004fb7dfacafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f484a1bd28d77948b4166d0b92b6f1"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a34f484a1bd28d77948b4166d0b92b6f1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a34f484a1bd28d77948b4166d0b92b6f1.html#a34f484a1bd28d77948b4166d0b92b6f1">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::set&lt; T &gt; &amp;s)</td></tr>
+<tr class="separator:a34f484a1bd28d77948b4166d0b92b6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a47165efbcc2cb38f68e8db90c377a"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T &gt; </td></tr>
+<tr class="memitem:a47a47165efbcc2cb38f68e8db90c377a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a47a47165efbcc2cb38f68e8db90c377a.html#a47a47165efbcc2cb38f68e8db90c377a">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::set&lt; T &gt; &amp;s)</td></tr>
+<tr class="separator:a47a47165efbcc2cb38f68e8db90c377a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3257302604d39723e60f3431e4fab38a"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename K , typename V &gt; </td></tr>
+<tr class="memitem:a3257302604d39723e60f3431e4fab38a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a3257302604d39723e60f3431e4fab38a.html#a3257302604d39723e60f3431e4fab38a">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::map&lt; K, V &gt; &amp;m)</td></tr>
+<tr class="separator:a3257302604d39723e60f3431e4fab38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bd481ffeae8e16fbeb6244f57fdaa4"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename K , typename V &gt; </td></tr>
+<tr class="memitem:a66bd481ffeae8e16fbeb6244f57fdaa4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a66bd481ffeae8e16fbeb6244f57fdaa4.html#a66bd481ffeae8e16fbeb6244f57fdaa4">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::map&lt; K, V &gt; &amp;m)</td></tr>
+<tr class="separator:a66bd481ffeae8e16fbeb6244f57fdaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabff7004d7cfc4fc8168bb0401f506e5"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename... Args&gt; </td></tr>
+<tr class="memitem:aabff7004d7cfc4fc8168bb0401f506e5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aabff7004d7cfc4fc8168bb0401f506e5.html#aabff7004d7cfc4fc8168bb0401f506e5">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const std::tuple&lt; Args... &gt; &amp;t)</td></tr>
+<tr class="separator:aabff7004d7cfc4fc8168bb0401f506e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1033bcb60718baa8636b8639205cbb79"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename... Args&gt; </td></tr>
+<tr class="memitem:a1033bcb60718baa8636b8639205cbb79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a1033bcb60718baa8636b8639205cbb79.html#a1033bcb60718baa8636b8639205cbb79">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, std::tuple&lt; Args... &gt; &amp;t)</td></tr>
+<tr class="separator:a1033bcb60718baa8636b8639205cbb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59511f8552dbf4a2aced270041c17f04"><td class="memTemplParams" colspan="2">template&lt;typename DataStream , typename T , std::enable_if_t&lt; std::is_class&lt; T &gt;::value &amp;&amp;<a class="el" href="structeosio_1_1__datastream__detail_1_1is__datastream.html">_datastream_detail::is_datastream</a>&lt; DataStream &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a59511f8552dbf4a2aced270041c17f04"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a59511f8552dbf4a2aced270041c17f04.html#a59511f8552dbf4a2aced270041c17f04">operator&lt;&lt;</a> (DataStream &amp;ds, const T &amp;v)</td></tr>
+<tr class="separator:a59511f8552dbf4a2aced270041c17f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d64e2f48bca13601cf6606934e6e8e6"><td class="memTemplParams" colspan="2">template&lt;typename DataStream , typename T , std::enable_if_t&lt; std::is_class&lt; T &gt;::value &amp;&amp;<a class="el" href="structeosio_1_1__datastream__detail_1_1is__datastream.html">_datastream_detail::is_datastream</a>&lt; DataStream &gt;::value &gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a7d64e2f48bca13601cf6606934e6e8e6"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a7d64e2f48bca13601cf6606934e6e8e6.html#a7d64e2f48bca13601cf6606934e6e8e6">operator&gt;&gt;</a> (DataStream &amp;ds, T &amp;v)</td></tr>
+<tr class="separator:a7d64e2f48bca13601cf6606934e6e8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79dc07b5d636c1c341dc595c0fda9a85"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::enable_if_t&lt; <a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a79dc07b5d636c1c341dc595c0fda9a85"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a79dc07b5d636c1c341dc595c0fda9a85.html#a79dc07b5d636c1c341dc595c0fda9a85">operator&lt;&lt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, const T &amp;v)</td></tr>
+<tr class="separator:a79dc07b5d636c1c341dc595c0fda9a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394cc26970e40b355b4c946fffc5fd78"><td class="memTemplParams" colspan="2">template&lt;typename Stream , typename T , std::enable_if_t&lt; <a class="el" href="namespaceeosio_1_1__datastream__detail_ab1b99c65e9a4c3ec9a0077b17466043d.html#ab1b99c65e9a4c3ec9a0077b17466043d">_datastream_detail::is_primitive</a>&lt; T &gt;()&gt; *  = nullptr&gt; </td></tr>
+<tr class="memitem:a394cc26970e40b355b4c946fffc5fd78"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a394cc26970e40b355b4c946fffc5fd78.html#a394cc26970e40b355b4c946fffc5fd78">operator&gt;&gt;</a> (<a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; Stream &gt; &amp;ds, T &amp;v)</td></tr>
+<tr class="separator:a394cc26970e40b355b4c946fffc5fd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ffaa5bd18836b7d40db601fb20965bb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga2ffaa5bd18836b7d40db601fb20965bb"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__datastream_ga2ffaa5bd18836b7d40db601fb20965bb.html#ga2ffaa5bd18836b7d40db601fb20965bb">unpack</a> (const char *buffer, size_t len)</td></tr>
+<tr class="separator:ga2ffaa5bd18836b7d40db601fb20965bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeda637d2d16ecc6235bd072161bc07df"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:gaeda637d2d16ecc6235bd072161bc07df"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__datastream_gaeda637d2d16ecc6235bd072161bc07df.html#gaeda637d2d16ecc6235bd072161bc07df">unpack</a> (T &amp;res, const char *buffer, size_t len)</td></tr>
+<tr class="separator:gaeda637d2d16ecc6235bd072161bc07df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga666b4d583161e4db595e31565fbb6a3d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga666b4d583161e4db595e31565fbb6a3d"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__datastream_ga666b4d583161e4db595e31565fbb6a3d.html#ga666b4d583161e4db595e31565fbb6a3d">unpack</a> (const std::vector&lt; char &gt; &amp;bytes)</td></tr>
+<tr class="separator:ga666b4d583161e4db595e31565fbb6a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30aa7d1c92792afc7f78af37372d68b7"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga30aa7d1c92792afc7f78af37372d68b7"><td class="memTemplItemLeft" align="right" valign="top">size_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__datastream_ga30aa7d1c92792afc7f78af37372d68b7.html#ga30aa7d1c92792afc7f78af37372d68b7">pack_size</a> (const T &amp;value)</td></tr>
+<tr class="separator:ga30aa7d1c92792afc7f78af37372d68b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13b3cd80e2641c0408f247c550e3d667"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga13b3cd80e2641c0408f247c550e3d667"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__datastream_ga13b3cd80e2641c0408f247c550e3d667.html#ga13b3cd80e2641c0408f247c550e3d667">pack</a> (const T &amp;value)</td></tr>
+<tr class="separator:ga13b3cd80e2641c0408f247c550e3d667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cd9c53f852d9d44d757259f38f10a8"><td class="memTemplParams" colspan="2">template&lt;typename DataStream , typename T &gt; </td></tr>
+<tr class="memitem:a73cd9c53f852d9d44d757259f38f10a8"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a73cd9c53f852d9d44d757259f38f10a8.html#a73cd9c53f852d9d44d757259f38f10a8">operator&lt;&lt;</a> (DataStream &amp;ds, const <a class="el" href="structeosio_1_1ignore__wrapper.html">::eosio::ignore_wrapper</a>&lt; T &gt; &amp;val)</td></tr>
+<tr class="memdesc:a73cd9c53f852d9d44d757259f38f10a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализация значения T из ignored_wrapper&lt;T&gt;  <a href="namespaceeosio_a73cd9c53f852d9d44d757259f38f10a8.html#a73cd9c53f852d9d44d757259f38f10a8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73cd9c53f852d9d44d757259f38f10a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71a6485bb43edd10491fc14e79dff5fa"><td class="memTemplParams" colspan="2">template&lt;typename DataStream , typename T &gt; </td></tr>
+<tr class="memitem:a71a6485bb43edd10491fc14e79dff5fa"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a71a6485bb43edd10491fc14e79dff5fa.html#a71a6485bb43edd10491fc14e79dff5fa">operator&lt;&lt;</a> (DataStream &amp;ds, const <a class="el" href="structeosio_1_1ignore.html">::eosio::ignore</a>&lt; T &gt; &amp;val)</td></tr>
+<tr class="memdesc:a71a6485bb43edd10491fc14e79dff5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализация игнорируемого типа  <a href="namespaceeosio_a71a6485bb43edd10491fc14e79dff5fa.html#a71a6485bb43edd10491fc14e79dff5fa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a71a6485bb43edd10491fc14e79dff5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4e9f9863a4d679c37dc04858b7c98a"><td class="memTemplParams" colspan="2">template&lt;typename DataStream , typename T &gt; </td></tr>
+<tr class="memitem:aad4e9f9863a4d679c37dc04858b7c98a"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aad4e9f9863a4d679c37dc04858b7c98a.html#aad4e9f9863a4d679c37dc04858b7c98a">operator&gt;&gt;</a> (DataStream &amp;ds, <a class="el" href="structeosio_1_1ignore.html">::eosio::ignore</a>&lt; T &gt; &amp;)</td></tr>
+<tr class="memdesc:aad4e9f9863a4d679c37dc04858b7c98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Десериализация игнорируемого типа  <a href="namespaceeosio_aad4e9f9863a4d679c37dc04858b7c98a.html#aad4e9f9863a4d679c37dc04858b7c98a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad4e9f9863a4d679c37dc04858b7c98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8010c134258beccbf5224e9f5c040825"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a8010c134258beccbf5224e9f5c040825"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a8010c134258beccbf5224e9f5c040825.html#a8010c134258beccbf5224e9f5c040825">to_key</a> (const T &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a8010c134258beccbf5224e9f5c040825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d56938ffd3af0d7efffb788425112a"><td class="memTemplParams" colspan="2">template&lt;int I, typename T , typename S &gt; </td></tr>
+<tr class="memitem:aa1d56938ffd3af0d7efffb788425112a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aa1d56938ffd3af0d7efffb788425112a.html#aa1d56938ffd3af0d7efffb788425112a">to_key_tuple</a> (const T &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:aa1d56938ffd3af0d7efffb788425112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d4c25130755b9075b48cb9f22411a5"><td class="memTemplParams" colspan="2">template&lt;typename... Ts, typename S &gt; </td></tr>
+<tr class="memitem:a17d4c25130755b9075b48cb9f22411a5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a17d4c25130755b9075b48cb9f22411a5.html#a17d4c25130755b9075b48cb9f22411a5">to_key</a> (const std::tuple&lt; Ts... &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a17d4c25130755b9075b48cb9f22411a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a798574a285557f53efab8521532da82d"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t N, typename S &gt; </td></tr>
+<tr class="memitem:a798574a285557f53efab8521532da82d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a798574a285557f53efab8521532da82d.html#a798574a285557f53efab8521532da82d">to_key</a> (const std::array&lt; T, N &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a798574a285557f53efab8521532da82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377492aec0291bc289eba84d31b52f60"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a377492aec0291bc289eba84d31b52f60"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a377492aec0291bc289eba84d31b52f60.html#a377492aec0291bc289eba84d31b52f60">to_key_optional</a> (const bool *obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a377492aec0291bc289eba84d31b52f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef74f69e6a22bf95b0f7cbff816627b5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:aef74f69e6a22bf95b0f7cbff816627b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aef74f69e6a22bf95b0f7cbff816627b5.html#aef74f69e6a22bf95b0f7cbff816627b5">to_key_optional</a> (const T *obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:aef74f69e6a22bf95b0f7cbff816627b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a414bc3518c0e6f968338533ccbb381b8"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename S &gt; </td></tr>
+<tr class="memitem:a414bc3518c0e6f968338533ccbb381b8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a414bc3518c0e6f968338533ccbb381b8.html#a414bc3518c0e6f968338533ccbb381b8">to_key</a> (const std::pair&lt; T, U &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a414bc3518c0e6f968338533ccbb381b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83093b2d24efd8161abc60290a11945d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a83093b2d24efd8161abc60290a11945d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a83093b2d24efd8161abc60290a11945d.html#a83093b2d24efd8161abc60290a11945d">to_key_range</a> (const T &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a83093b2d24efd8161abc60290a11945d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6985ebc6a27e11e105bb9433765c04d7"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a6985ebc6a27e11e105bb9433765c04d7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a6985ebc6a27e11e105bb9433765c04d7.html#a6985ebc6a27e11e105bb9433765c04d7">to_key</a> (const T &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream) -&gt; std::enable_if_t&lt; is_ranged_type(std::declval&lt; T &gt;()), void &gt;</td></tr>
+<tr class="separator:a6985ebc6a27e11e105bb9433765c04d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765369843265789042da1b4856a07202"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , typename S &gt; </td></tr>
+<tr class="memitem:a765369843265789042da1b4856a07202"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a765369843265789042da1b4856a07202.html#a765369843265789042da1b4856a07202">to_key</a> (const std::map&lt; T, U &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a765369843265789042da1b4856a07202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26818b9f0aa2826193c12ebbcd516d5c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename S &gt; </td></tr>
+<tr class="memitem:a26818b9f0aa2826193c12ebbcd516d5c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a26818b9f0aa2826193c12ebbcd516d5c.html#a26818b9f0aa2826193c12ebbcd516d5c">to_key</a> (const std::optional&lt; T &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a26818b9f0aa2826193c12ebbcd516d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fd095425063722ae432862864d0598"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:af7fd095425063722ae432862864d0598"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_af7fd095425063722ae432862864d0598.html#af7fd095425063722ae432862864d0598">to_key_varuint32</a> (std::uint32_t obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:af7fd095425063722ae432862864d0598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff397ff9cb2e98f4ee095f16a155ff0"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:a9ff397ff9cb2e98f4ee095f16a155ff0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a9ff397ff9cb2e98f4ee095f16a155ff0.html#a9ff397ff9cb2e98f4ee095f16a155ff0">to_key_varint32</a> (std::int32_t obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a9ff397ff9cb2e98f4ee095f16a155ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9cbce17fa0d81b4fb658756a2aa9313"><td class="memTemplParams" colspan="2">template&lt;typename... Ts, typename S &gt; </td></tr>
+<tr class="memitem:aa9cbce17fa0d81b4fb658756a2aa9313"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_aa9cbce17fa0d81b4fb658756a2aa9313.html#aa9cbce17fa0d81b4fb658756a2aa9313">to_key</a> (const std::variant&lt; Ts... &gt; &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:aa9cbce17fa0d81b4fb658756a2aa9313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab18517b08024e1cdc4364a76c74cad59"><td class="memTemplParams" colspan="2">template&lt;std::size_t N, typename S &gt; </td></tr>
+<tr class="memitem:ab18517b08024e1cdc4364a76c74cad59"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ab18517b08024e1cdc4364a76c74cad59.html#ab18517b08024e1cdc4364a76c74cad59">to_key</a> (const char(&amp;str)[N], <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:ab18517b08024e1cdc4364a76c74cad59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad64c4446ffb3e530c2c5eee66efcbd9d"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:ad64c4446ffb3e530c2c5eee66efcbd9d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ad64c4446ffb3e530c2c5eee66efcbd9d.html#ad64c4446ffb3e530c2c5eee66efcbd9d">to_key</a> (std::string_view obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:ad64c4446ffb3e530c2c5eee66efcbd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a886436abb8b2d3bc0ff91fa0faf052b6"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:a886436abb8b2d3bc0ff91fa0faf052b6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a886436abb8b2d3bc0ff91fa0faf052b6.html#a886436abb8b2d3bc0ff91fa0faf052b6">to_key</a> (const std::string &amp;obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:a886436abb8b2d3bc0ff91fa0faf052b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80dcf1bec9db392710cfac9ac0bd49d"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:af80dcf1bec9db392710cfac9ac0bd49d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_af80dcf1bec9db392710cfac9ac0bd49d.html#af80dcf1bec9db392710cfac9ac0bd49d">to_key</a> (bool obj, <a class="el" href="classeosio_1_1datastream.html">datastream</a>&lt; S &gt; &amp;stream)</td></tr>
+<tr class="separator:af80dcf1bec9db392710cfac9ac0bd49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b4a6109935f78a3754bd7db29357a4"><td class="memTemplParams" colspan="2">template&lt;typename UInt , typename T &gt; </td></tr>
+<tr class="memitem:ae3b4a6109935f78a3754bd7db29357a4"><td class="memTemplItemLeft" align="right" valign="top">UInt&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ae3b4a6109935f78a3754bd7db29357a4.html#ae3b4a6109935f78a3754bd7db29357a4">float_to_key</a> (T value)</td></tr>
+<tr class="separator:ae3b4a6109935f78a3754bd7db29357a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3c662ea73d93bdf6f2a4a6c7ab3ee9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0e3c662ea73d93bdf6f2a4a6c7ab3ee9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0e3c662ea73d93bdf6f2a4a6c7ab3ee9.html#a0e3c662ea73d93bdf6f2a4a6c7ab3ee9">convert_to_key</a> (const T &amp;t, <a class="el" href="namespaceeosio_ac871966a2176ae48a0a85b6170e13592.html#ac871966a2176ae48a0a85b6170e13592">key_type</a> &amp;bin)</td></tr>
+<tr class="separator:a0e3c662ea73d93bdf6f2a4a6c7ab3ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8f491c6e9e9e3c629e6439b7b594a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0a8f491c6e9e9e3c629e6439b7b594a8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespaceeosio_ac871966a2176ae48a0a85b6170e13592.html#ac871966a2176ae48a0a85b6170e13592">key_type</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0a8f491c6e9e9e3c629e6439b7b594a8.html#a0a8f491c6e9e9e3c629e6439b7b594a8">convert_to_key</a> (const T &amp;t)</td></tr>
+<tr class="separator:a0a8f491c6e9e9e3c629e6439b7b594a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea93ee4d60913259a084567ee672217"><td class="memTemplParams" colspan="2">template&lt;uint8_t Base, typename T  = uint64_t&gt; </td></tr>
+<tr class="memitem:adea93ee4d60913259a084567ee672217"><td class="memTemplItemLeft" align="right" valign="top">constexpr T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_adea93ee4d60913259a084567ee672217.html#adea93ee4d60913259a084567ee672217">pow</a> (uint8_t exponent)</td></tr>
+<tr class="separator:adea93ee4d60913259a084567ee672217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8eb3bd97387854f71fd4a68d167b418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_gab8eb3bd97387854f71fd4a68d167b418.html#gab8eb3bd97387854f71fd4a68d167b418">printhex</a> (const void *ptr, uint32_t size)</td></tr>
+<tr class="separator:gab8eb3bd97387854f71fd4a68d167b418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7abae4d32d4fec590c9988a6aec88cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_ga7abae4d32d4fec590c9988a6aec88cec.html#ga7abae4d32d4fec590c9988a6aec88cec">printl</a> (const char *ptr, size_t len)</td></tr>
+<tr class="separator:ga7abae4d32d4fec590c9988a6aec88cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0a56fe314d032d027a1565d93a68b21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_gaa0a56fe314d032d027a1565d93a68b21.html#gaa0a56fe314d032d027a1565d93a68b21">print</a> (const char *ptr)</td></tr>
+<tr class="separator:gaa0a56fe314d032d027a1565d93a68b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6059b3dec50360c86d4098f81e70a286"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt; std::is_integral&lt; std::decay_t&lt; T &gt; &gt;::value &amp;&amp;std::is_signed&lt; std::decay_t&lt; T &gt; &gt;::value, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:a6059b3dec50360c86d4098f81e70a286"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a6059b3dec50360c86d4098f81e70a286.html#a6059b3dec50360c86d4098f81e70a286">print</a> (T num)</td></tr>
+<tr class="separator:a6059b3dec50360c86d4098f81e70a286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02d168bc05492d64cefea469dd114c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_ga02d168bc05492d64cefea469dd114c12.html#ga02d168bc05492d64cefea469dd114c12">print</a> (float num)</td></tr>
+<tr class="separator:ga02d168bc05492d64cefea469dd114c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8753f6a7c7d5c518f6369cfebf5be1bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_ga8753f6a7c7d5c518f6369cfebf5be1bb.html#ga8753f6a7c7d5c518f6369cfebf5be1bb">print</a> (double num)</td></tr>
+<tr class="separator:ga8753f6a7c7d5c518f6369cfebf5be1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a3eea270ff4dbe4a15c2269a5c2cfec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_ga2a3eea270ff4dbe4a15c2269a5c2cfec.html#ga2a3eea270ff4dbe4a15c2269a5c2cfec">print</a> (long double num)</td></tr>
+<tr class="separator:ga2a3eea270ff4dbe4a15c2269a5c2cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccb44465b58c681e320b9cb9a6a78e62"><td class="memTemplParams" colspan="2">template&lt;typename T , std::enable_if_t&lt;!std::is_integral&lt; std::decay_t&lt; T &gt; &gt;::value, int &gt;  = 0&gt; </td></tr>
+<tr class="memitem:gaccb44465b58c681e320b9cb9a6a78e62"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__console_gaccb44465b58c681e320b9cb9a6a78e62.html#gaccb44465b58c681e320b9cb9a6a78e62">print</a> (T &amp;&amp;t)</td></tr>
+<tr class="separator:gaccb44465b58c681e320b9cb9a6a78e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9715bf002b919701d38e3ff931feabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__console_gab9715bf002b919701d38e3ff931feabf.html#gab9715bf002b919701d38e3ff931feabf">print_f</a> (const char *s)</td></tr>
+<tr class="separator:gab9715bf002b919701d38e3ff931feabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfae01c6d714474da8407a1c195c836"><td class="memTemplParams" colspan="2">template&lt;typename Arg , typename... Args&gt; </td></tr>
+<tr class="memitem:afcfae01c6d714474da8407a1c195c836"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_afcfae01c6d714474da8407a1c195c836.html#afcfae01c6d714474da8407a1c195c836">print_f</a> (const char *s, Arg val, Args... rest)</td></tr>
+<tr class="separator:afcfae01c6d714474da8407a1c195c836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5232cf7452d463948eac1179f31d9f0"><td class="memTemplParams" colspan="2">template&lt;typename Arg , typename... Args&gt; </td></tr>
+<tr class="memitem:ab5232cf7452d463948eac1179f31d9f0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ab5232cf7452d463948eac1179f31d9f0.html#ab5232cf7452d463948eac1179f31d9f0">print</a> (Arg &amp;&amp;a, Args &amp;&amp;... args)</td></tr>
+<tr class="separator:ab5232cf7452d463948eac1179f31d9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3019314f98ba35c586a0d3c50747e7ee"><td class="memTemplParams" colspan="2">template&lt;class... Ts&gt; </td></tr>
+<tr class="memitem:a3019314f98ba35c586a0d3c50747e7ee"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a3019314f98ba35c586a0d3c50747e7ee.html#a3019314f98ba35c586a0d3c50747e7ee">overloaded</a> (Ts...) -&gt; <a class="el" href="structeosio_1_1overloaded.html">overloaded</a>&lt; Ts... &gt;</td></tr>
+<tr class="separator:a3019314f98ba35c586a0d3c50747e7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3769e5e16987ccf2c510856696f38b9d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a3769e5e16987ccf2c510856696f38b9d.html#a3769e5e16987ccf2c510856696f38b9d">operator&lt;</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:a3769e5e16987ccf2c510856696f38b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a725e824a4b42a2a4a23b994289061"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_ab9a725e824a4b42a2a4a23b994289061.html#ab9a725e824a4b42a2a4a23b994289061">operator&gt;</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:ab9a725e824a4b42a2a4a23b994289061"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fdc59744805f578b1947990dc03372"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a80fdc59744805f578b1947990dc03372.html#a80fdc59744805f578b1947990dc03372">operator&lt;=</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:a80fdc59744805f578b1947990dc03372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab403fc37b2c295133b5be19cfc548c4a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_ab403fc37b2c295133b5be19cfc548c4a.html#ab403fc37b2c295133b5be19cfc548c4a">operator&gt;=</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:ab403fc37b2c295133b5be19cfc548c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f1c46cd699cf27d007b60f941edaca0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a2f1c46cd699cf27d007b60f941edaca0.html#a2f1c46cd699cf27d007b60f941edaca0">operator==</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:a2f1c46cd699cf27d007b60f941edaca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b4435561885695942e8d60b7d5e7b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a14b4435561885695942e8d60b7d5e7b7.html#a14b4435561885695942e8d60b7d5e7b7">operator!=</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:a14b4435561885695942e8d60b7d5e7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c9eef0a1a07d3dd3c924e6f302bf1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1string.html">string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a76c9eef0a1a07d3dd3c924e6f302bf1c.html#a76c9eef0a1a07d3dd3c924e6f302bf1c">operator+</a> (const <a class="el" href="classeosio_1_1string.html">string</a> &amp;lhs, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;rhs)</td></tr>
+<tr class="separator:a76c9eef0a1a07d3dd3c924e6f302bf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca27a6d080cc7375dce87cdc23457e3"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:afca27a6d080cc7375dce87cdc23457e3"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_afca27a6d080cc7375dce87cdc23457e3.html#afca27a6d080cc7375dce87cdc23457e3">operator&lt;&lt;</a> (DataStream &amp;ds, const <a class="el" href="classeosio_1_1string.html">string</a> &amp;str)</td></tr>
+<tr class="separator:afca27a6d080cc7375dce87cdc23457e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b78c005e5ed39960b2e040b06b4053"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:a46b78c005e5ed39960b2e040b06b4053"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a46b78c005e5ed39960b2e040b06b4053.html#a46b78c005e5ed39960b2e040b06b4053">operator&gt;&gt;</a> (DataStream &amp;ds, <a class="el" href="classeosio_1_1string.html">string</a> &amp;str)</td></tr>
+<tr class="separator:a46b78c005e5ed39960b2e040b06b4053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b12cc37c10cfd1c3bf36c217aa29f6"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:a11b12cc37c10cfd1c3bf36c217aa29f6"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a11b12cc37c10cfd1c3bf36c217aa29f6.html#a11b12cc37c10cfd1c3bf36c217aa29f6">operator&lt;&lt;</a> (DataStream &amp;ds, const <a class="el" href="classeosio_1_1symbol__code.html">eosio::symbol_code</a> sym_code)</td></tr>
+<tr class="separator:a11b12cc37c10cfd1c3bf36c217aa29f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a3b6961efd68d456b206a0c8bbb498f"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:a9a3b6961efd68d456b206a0c8bbb498f"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a9a3b6961efd68d456b206a0c8bbb498f.html#a9a3b6961efd68d456b206a0c8bbb498f">operator&gt;&gt;</a> (DataStream &amp;ds, <a class="el" href="classeosio_1_1symbol__code.html">eosio::symbol_code</a> &amp;sym_code)</td></tr>
+<tr class="separator:a9a3b6961efd68d456b206a0c8bbb498f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc89fdc06750abc79c6893c84255bcce"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:adc89fdc06750abc79c6893c84255bcce"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_adc89fdc06750abc79c6893c84255bcce.html#adc89fdc06750abc79c6893c84255bcce">operator&lt;&lt;</a> (DataStream &amp;ds, const <a class="el" href="classeosio_1_1symbol.html">eosio::symbol</a> sym)</td></tr>
+<tr class="memdesc:adc89fdc06750abc79c6893c84255bcce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализация symbol.  <a href="namespaceeosio_adc89fdc06750abc79c6893c84255bcce.html#adc89fdc06750abc79c6893c84255bcce">Подробнее...</a><br /></td></tr>
+<tr class="separator:adc89fdc06750abc79c6893c84255bcce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab432976d17c725306cbb3491917d71c2"><td class="memTemplParams" colspan="2">template&lt;typename DataStream &gt; </td></tr>
+<tr class="memitem:ab432976d17c725306cbb3491917d71c2"><td class="memTemplItemLeft" align="right" valign="top">DataStream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_ab432976d17c725306cbb3491917d71c2.html#ab432976d17c725306cbb3491917d71c2">operator&gt;&gt;</a> (DataStream &amp;ds, <a class="el" href="classeosio_1_1symbol.html">eosio::symbol</a> &amp;sym)</td></tr>
+<tr class="memdesc:ab432976d17c725306cbb3491917d71c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Десериализация symbol.  <a href="namespaceeosio_ab432976d17c725306cbb3491917d71c2.html#ab432976d17c725306cbb3491917d71c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab432976d17c725306cbb3491917d71c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7174ec0c48074b993ec6bac37a84682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_af7174ec0c48074b993ec6bac37a84682.html#af7174ec0c48074b993ec6bac37a84682">seconds</a> (int64_t s)</td></tr>
+<tr class="separator:af7174ec0c48074b993ec6bac37a84682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8d5b8f5a1829bd6967c3fe89eea506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a2b8d5b8f5a1829bd6967c3fe89eea506.html#a2b8d5b8f5a1829bd6967c3fe89eea506">milliseconds</a> (int64_t s)</td></tr>
+<tr class="separator:a2b8d5b8f5a1829bd6967c3fe89eea506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29a31fdb3cb6abce3f6abcf6840ea00c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a29a31fdb3cb6abce3f6abcf6840ea00c.html#a29a31fdb3cb6abce3f6abcf6840ea00c">minutes</a> (int64_t m)</td></tr>
+<tr class="separator:a29a31fdb3cb6abce3f6abcf6840ea00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b982404d2fd14a2618564ae69db447"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a33b982404d2fd14a2618564ae69db447.html#a33b982404d2fd14a2618564ae69db447">hours</a> (int64_t h)</td></tr>
+<tr class="separator:a33b982404d2fd14a2618564ae69db447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1538fa412576d5b367a62c2f0e38730"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1microseconds.html">microseconds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_ae1538fa412576d5b367a62c2f0e38730.html#ae1538fa412576d5b367a62c2f0e38730">days</a> (int64_t d)</td></tr>
+<tr class="separator:ae1538fa412576d5b367a62c2f0e38730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ce0a297276d44f03c9b5dc17fcd2b31"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga3ce0a297276d44f03c9b5dc17fcd2b31"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__action_ga3ce0a297276d44f03c9b5dc17fcd2b31.html#ga3ce0a297276d44f03c9b5dc17fcd2b31">unpack_action_data</a> ()</td></tr>
+<tr class="separator:ga3ce0a297276d44f03c9b5dc17fcd2b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e1838d05857e38ddf8916e616698460"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga4e1838d05857e38ddf8916e616698460.html#ga4e1838d05857e38ddf8916e616698460">require_recipient</a> (<a class="el" href="structeosio_1_1name.html">name</a> notify_account)</td></tr>
+<tr class="memdesc:ga4e1838d05857e38ddf8916e616698460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет указанный аккаунт в множество аккаунтов для уведомления  <a href="group__action_ga4e1838d05857e38ddf8916e616698460.html#ga4e1838d05857e38ddf8916e616698460">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga4e1838d05857e38ddf8916e616698460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa61e47227ac315887caf1e028191ff7d"><td class="memTemplParams" colspan="2">template&lt;typename... accounts&gt; </td></tr>
+<tr class="memitem:gaa61e47227ac315887caf1e028191ff7d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__action_gaa61e47227ac315887caf1e028191ff7d.html#gaa61e47227ac315887caf1e028191ff7d">require_recipient</a> (<a class="el" href="structeosio_1_1name.html">name</a> notify_account, accounts... remaining_accounts)</td></tr>
+<tr class="separator:gaa61e47227ac315887caf1e028191ff7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47b4afe79f1de07376e2ecdd541f92c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga47b4afe79f1de07376e2ecdd541f92c7.html#ga47b4afe79f1de07376e2ecdd541f92c7">require_auth</a> (<a class="el" href="structeosio_1_1name.html">name</a> n)</td></tr>
+<tr class="separator:ga47b4afe79f1de07376e2ecdd541f92c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0005da20de567962c4357c18ba29bdf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1time__point.html">time_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga0005da20de567962c4357c18ba29bdf7.html#ga0005da20de567962c4357c18ba29bdf7">publication_time</a> ()</td></tr>
+<tr class="separator:ga0005da20de567962c4357c18ba29bdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe03e054c95360f2dd4e563aa49695b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1name.html">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a1fe03e054c95360f2dd4e563aa49695b.html#a1fe03e054c95360f2dd4e563aa49695b">current_receiver</a> ()</td></tr>
+<tr class="separator:a1fe03e054c95360f2dd4e563aa49695b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e0876d95586115725e60f81b684b9a"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a42e0876d95586115725e60f81b684b9a.html#a42e0876d95586115725e60f81b684b9a">get_code_hash</a> (<a class="el" href="structeosio_1_1name.html">name</a> account, <a class="el" href="structeosio_1_1code__hash__result.html">code_hash_result</a> *full_result=nullptr)</td></tr>
+<tr class="separator:a42e0876d95586115725e60f81b684b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02dcd9ca25bcdd8279efe0d45e50c9eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga02dcd9ca25bcdd8279efe0d45e50c9eb.html#ga02dcd9ca25bcdd8279efe0d45e50c9eb">read_action_data</a> (void *msg, uint32_t len)</td></tr>
+<tr class="separator:ga02dcd9ca25bcdd8279efe0d45e50c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602640a08f02a893cab6b28016866ec0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio_a602640a08f02a893cab6b28016866ec0.html#a602640a08f02a893cab6b28016866ec0">action_data_size</a> ()</td></tr>
+<tr class="separator:a602640a08f02a893cab6b28016866ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9c6bd255a286073e7dc8a337f2b11a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_gaa9c6bd255a286073e7dc8a337f2b11a2.html#gaa9c6bd255a286073e7dc8a337f2b11a2">require_auth</a> (const <a class="el" href="structeosio_1_1permission__level.html">permission_level</a> &amp;level)</td></tr>
+<tr class="separator:gaa9c6bd255a286073e7dc8a337f2b11a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e4650a61bbe0809cc62e6b2af8252d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga9e4650a61bbe0809cc62e6b2af8252d3.html#ga9e4650a61bbe0809cc62e6b2af8252d3">has_auth</a> (<a class="el" href="structeosio_1_1name.html">name</a> n)</td></tr>
+<tr class="separator:ga9e4650a61bbe0809cc62e6b2af8252d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga887cd0fed2350c5ae52565ba6e290db3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__action_ga887cd0fed2350c5ae52565ba6e290db3.html#ga887cd0fed2350c5ae52565ba6e290db3">is_account</a> (<a class="el" href="structeosio_1_1name.html">name</a> n)</td></tr>
+<tr class="separator:ga887cd0fed2350c5ae52565ba6e290db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0917f40ecb384d7934f7983351b397ce"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:a0917f40ecb384d7934f7983351b397ce"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a0917f40ecb384d7934f7983351b397ce.html#a0917f40ecb384d7934f7983351b397ce">dispatch_inline</a> (<a class="el" href="structeosio_1_1name.html">name</a> code, <a class="el" href="structeosio_1_1name.html">name</a> act, std::vector&lt; <a class="el" href="structeosio_1_1permission__level.html">permission_level</a> &gt; perms, std::tuple&lt; Args... &gt; args)</td></tr>
+<tr class="separator:a0917f40ecb384d7934f7983351b397ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga289285490058d17de4a6a052b52dd680"><td class="memTemplParams" colspan="2">template&lt;typename Contract , typename FirstAction , typename SecondAction , typename... Actions&gt; </td></tr>
+<tr class="memitem:ga289285490058d17de4a6a052b52dd680"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__dispatcher_ga289285490058d17de4a6a052b52dd680.html#ga289285490058d17de4a6a052b52dd680">dispatch</a> (uint64_t code, uint64_t act)</td></tr>
+<tr class="separator:ga289285490058d17de4a6a052b52dd680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c4928c29096799ef6ddabf148dc9cf9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:ga8c4928c29096799ef6ddabf148dc9cf9"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__dispatcher_ga8c4928c29096799ef6ddabf148dc9cf9.html#ga8c4928c29096799ef6ddabf148dc9cf9">execute_action</a> (<a class="el" href="structeosio_1_1name.html">name</a> self, <a class="el" href="structeosio_1_1name.html">name</a> code, void(T::*func)(Args...))</td></tr>
+<tr class="separator:ga8c4928c29096799ef6ddabf148dc9cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b6f34ade1f06f6583b4a17738bebe0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_ga4b6f34ade1f06f6583b4a17738bebe0c.html#ga4b6f34ade1f06f6583b4a17738bebe0c">set_blockchain_parameters</a> (const <a class="el" href="structeosio_1_1blockchain__parameters.html">eosio::blockchain_parameters</a> &amp;params)</td></tr>
+<tr class="separator:ga4b6f34ade1f06f6583b4a17738bebe0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga673da670d201ba73461eedd8bd1aec8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_ga673da670d201ba73461eedd8bd1aec8f.html#ga673da670d201ba73461eedd8bd1aec8f">get_blockchain_parameters</a> (<a class="el" href="structeosio_1_1blockchain__parameters.html">eosio::blockchain_parameters</a> &amp;params)</td></tr>
+<tr class="separator:ga673da670d201ba73461eedd8bd1aec8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd00f6a2896d4156346eee44d6ac0193"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gabd00f6a2896d4156346eee44d6ac0193.html#gabd00f6a2896d4156346eee44d6ac0193">get_account_ram_usage</a> (<a class="el" href="structeosio_1_1name.html">name</a> account, int64_t &amp;used_ram_bytes)</td></tr>
+<tr class="separator:gabd00f6a2896d4156346eee44d6ac0193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab80245def6eafc07e7eff5207f604261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gab80245def6eafc07e7eff5207f604261.html#gab80245def6eafc07e7eff5207f604261">get_resource_limits</a> (<a class="el" href="structeosio_1_1name.html">name</a> account, int64_t &amp;ram_bytes, int64_t &amp;net_weight, int64_t &amp;cpu_weight)</td></tr>
+<tr class="separator:gab80245def6eafc07e7eff5207f604261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad97a90662dc91cc1f9c6b2368b625c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gaad97a90662dc91cc1f9c6b2368b625c3.html#gaad97a90662dc91cc1f9c6b2368b625c3">set_resource_limits</a> (<a class="el" href="structeosio_1_1name.html">name</a> account, int64_t ram_bytes, int64_t net_weight, int64_t cpu_weight)</td></tr>
+<tr class="separator:gaad97a90662dc91cc1f9c6b2368b625c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ae4f7b818d57817a629c7c45372552e"><td class="memItemLeft" align="right" valign="top">std::optional&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_ga8ae4f7b818d57817a629c7c45372552e.html#ga8ae4f7b818d57817a629c7c45372552e">set_proposed_producers</a> (const std::vector&lt; <a class="el" href="structeosio_1_1producer__key.html">producer_key</a> &gt; &amp;prods)</td></tr>
+<tr class="separator:ga8ae4f7b818d57817a629c7c45372552e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac69be7829e437b6a986af0b686b8fd68"><td class="memItemLeft" align="right" valign="top">std::optional&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gac69be7829e437b6a986af0b686b8fd68.html#gac69be7829e437b6a986af0b686b8fd68">set_proposed_producers</a> (const std::vector&lt; <a class="el" href="structeosio_1_1producer__authority.html">producer_authority</a> &gt; &amp;prods)</td></tr>
+<tr class="separator:gac69be7829e437b6a986af0b686b8fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2eb8389a1197594476ea9e41448481a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gad2eb8389a1197594476ea9e41448481a.html#gad2eb8389a1197594476ea9e41448481a">is_privileged</a> (<a class="el" href="structeosio_1_1name.html">name</a> account)</td></tr>
+<tr class="separator:gad2eb8389a1197594476ea9e41448481a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab341227b30ff1294ecb03c540e25a57f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gab341227b30ff1294ecb03c540e25a57f.html#gab341227b30ff1294ecb03c540e25a57f">set_privileged</a> (<a class="el" href="structeosio_1_1name.html">name</a> account, bool is_priv)</td></tr>
+<tr class="separator:gab341227b30ff1294ecb03c540e25a57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef817a1cfd765f9b0962f62897895243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__privileged_gaef817a1cfd765f9b0962f62897895243.html#gaef817a1cfd765f9b0962f62897895243">preactivate_feature</a> (const checksum256 &amp;feature_digest)</td></tr>
+<tr class="separator:gaef817a1cfd765f9b0962f62897895243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd7742a9a5cffa3eccae1accbd1ee771"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structeosio_1_1name.html">name</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__producer__schedule_gabd7742a9a5cffa3eccae1accbd1ee771.html#gabd7742a9a5cffa3eccae1accbd1ee771">get_active_producers</a> ()</td></tr>
+<tr class="separator:gabd7742a9a5cffa3eccae1accbd1ee771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a7cc14a1900bfbb2adc8af0193efe02"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__security__group_ga8a7cc14a1900bfbb2adc8af0193efe02.html#ga8a7cc14a1900bfbb2adc8af0193efe02">add_security_group_participants</a> (const std::set&lt; <a class="el" href="structeosio_1_1name.html">name</a> &gt; &amp;participants)</td></tr>
+<tr class="separator:ga8a7cc14a1900bfbb2adc8af0193efe02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadefafd73d733d635d8d844203120a58d"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__security__group_gadefafd73d733d635d8d844203120a58d.html#gadefafd73d733d635d8d844203120a58d">remove_security_group_participants</a> (const std::set&lt; <a class="el" href="structeosio_1_1name.html">name</a> &gt; &amp;participants)</td></tr>
+<tr class="separator:gadefafd73d733d635d8d844203120a58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9348bff666d401af321e1d67af264a3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__security__group_ga9348bff666d401af321e1d67af264a3d.html#ga9348bff666d401af321e1d67af264a3d">in_active_security_group</a> (const std::set&lt; <a class="el" href="structeosio_1_1name.html">name</a> &gt; &amp;participants)</td></tr>
+<tr class="separator:ga9348bff666d401af321e1d67af264a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac778b25910d9c1a99deb182fea2543e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1security__group.html">security_group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__security__group_gaac778b25910d9c1a99deb182fea2543e.html#gaac778b25910d9c1a99deb182fea2543e">get_active_security_group</a> ()</td></tr>
+<tr class="separator:gaac778b25910d9c1a99deb182fea2543e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga956ded6d541ae9e454b446f0d5d0b24c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga956ded6d541ae9e454b446f0d5d0b24c.html#ga956ded6d541ae9e454b446f0d5d0b24c">eosio_exit</a> (int32_t code)</td></tr>
+<tr class="separator:ga956ded6d541ae9e454b446f0d5d0b24c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5f4701ab1b418fe1f1558e199047e35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1time__point.html">time_point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gad5f4701ab1b418fe1f1558e199047e35.html#gad5f4701ab1b418fe1f1558e199047e35">current_time_point</a> ()</td></tr>
+<tr class="separator:gad5f4701ab1b418fe1f1558e199047e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada0c9f4292996498bc781f2f52255086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1block__timestamp.html">block_timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gada0c9f4292996498bc781f2f52255086.html#gada0c9f4292996498bc781f2f52255086">current_block_time</a> ()</td></tr>
+<tr class="separator:gada0c9f4292996498bc781f2f52255086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7e3e2102562d6671dd70bdac6feda0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceeosio_abdbab72cb6a9b99ab917c317a385d28d.html#abdbab72cb6a9b99ab917c317a385d28d">block_num_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gad7e3e2102562d6671dd70bdac6feda0c.html#gad7e3e2102562d6671dd70bdac6feda0c">current_block_number</a> ()</td></tr>
+<tr class="separator:gad7e3e2102562d6671dd70bdac6feda0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a213f83fa0851779c32cfcf66c816a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_ga6a213f83fa0851779c32cfcf66c816a9.html#ga6a213f83fa0851779c32cfcf66c816a9">is_feature_activated</a> (const checksum256 &amp;feature_digest)</td></tr>
+<tr class="separator:ga6a213f83fa0851779c32cfcf66c816a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4861c14350c38823173733ce00ba6ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1name.html">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system_gad4861c14350c38823173733ce00ba6ff.html#gad4861c14350c38823173733ce00ba6ff">get_sender</a> ()</td></tr>
+<tr class="separator:gad4861c14350c38823173733ce00ba6ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92cd86171a4bcc86bb3bc974618005e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga92cd86171a4bcc86bb3bc974618005e5.html#ga92cd86171a4bcc86bb3bc974618005e5">send_deferred</a> (const uint128_t &amp;sender_id, <a class="el" href="structeosio_1_1name.html">name</a> payer, const char *serialized_transaction, size_t size, bool replace=false)</td></tr>
+<tr class="separator:ga92cd86171a4bcc86bb3bc974618005e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac01a00482f2dc95bf4850b2e8213ee90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1action.html">action</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_gac01a00482f2dc95bf4850b2e8213ee90.html#gac01a00482f2dc95bf4850b2e8213ee90">get_action</a> (uint32_t type, uint32_t index)</td></tr>
+<tr class="separator:gac01a00482f2dc95bf4850b2e8213ee90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47f5ea185e11cab47e2bddd08598375f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga47f5ea185e11cab47e2bddd08598375f.html#ga47f5ea185e11cab47e2bddd08598375f">read_transaction</a> (char *ptr, size_t sz)</td></tr>
+<tr class="separator:ga47f5ea185e11cab47e2bddd08598375f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78a95bee813140ef77b2b8641c472cfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga78a95bee813140ef77b2b8641c472cfa.html#ga78a95bee813140ef77b2b8641c472cfa">cancel_deferred</a> (const uint128_t &amp;sender_id)</td></tr>
+<tr class="separator:ga78a95bee813140ef77b2b8641c472cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44eb86f3c4e862cbb5c862f29b77aa1f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga44eb86f3c4e862cbb5c862f29b77aa1f.html#ga44eb86f3c4e862cbb5c862f29b77aa1f">transaction_size</a> ()</td></tr>
+<tr class="separator:ga44eb86f3c4e862cbb5c862f29b77aa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad2a14b4c7ce6445f669a42ef73a4b685"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_gad2a14b4c7ce6445f669a42ef73a4b685.html#gad2a14b4c7ce6445f669a42ef73a4b685">tapos_block_num</a> ()</td></tr>
+<tr class="separator:gad2a14b4c7ce6445f669a42ef73a4b685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ebcde8a1e1665142ca0b51e4118ed17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga8ebcde8a1e1665142ca0b51e4118ed17.html#ga8ebcde8a1e1665142ca0b51e4118ed17">tapos_block_prefix</a> ()</td></tr>
+<tr class="separator:ga8ebcde8a1e1665142ca0b51e4118ed17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1dda66d94fcc04a2b5fa7a8bffd75b0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_gaf1dda66d94fcc04a2b5fa7a8bffd75b0.html#gaf1dda66d94fcc04a2b5fa7a8bffd75b0">expiration</a> ()</td></tr>
+<tr class="memdesc:gaf1dda66d94fcc04a2b5fa7a8bffd75b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает срок действия текущей выполняемой транзакции.  <a href="group__transaction_gaf1dda66d94fcc04a2b5fa7a8bffd75b0.html#gaf1dda66d94fcc04a2b5fa7a8bffd75b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf1dda66d94fcc04a2b5fa7a8bffd75b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a8affaada54b4a722e819c9da056211"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__transaction_ga0a8affaada54b4a722e819c9da056211.html#ga0a8affaada54b4a722e819c9da056211">get_context_free_data</a> (uint32_t index, char *buff, size_t size)</td></tr>
+<tr class="separator:ga0a8affaada54b4a722e819c9da056211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a4f16ca40c7fd4cdde61b9e1f03d850de"><td class="memTemplParams" colspan="2">template&lt;uint8_t Base, typename T  = uint64_t&gt; </td></tr>
+<tr class="memitem:a4f16ca40c7fd4cdde61b9e1f03d850de"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceeosio_a4f16ca40c7fd4cdde61b9e1f03d850de.html#a4f16ca40c7fd4cdde61b9e1f03d850de">powers_of_base</a> = <a class="el" href="namespaceeosio_1_1detail_a5e3d839eb6a9a68857d5f1c44d053057.html#a5e3d839eb6a9a68857d5f1c44d053057">detail::generate_array</a>&lt;<a class="el" href="structeosio_1_1detail_1_1largest__power.html">detail::largest_power</a>&lt;T, Base&gt;::exponent + 1&gt;( <a class="el" href="namespaceeosio_1_1detail_a184c27c80cca8d2a18974859c0123f8a.html#a184c27c80cca8d2a18974859c0123f8a">detail::pow_generator</a>&lt;T, Base&gt; )</td></tr>
+<tr class="separator:a4f16ca40c7fd4cdde61b9e1f03d850de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceeosio.html">eosio</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/domain/table_branch_aids.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('table__branch__aids_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">table_branch_aids.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="table__branch__aids_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;eosio/asset.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/crypto.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../consts.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../core/document.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_aid_status.html">   18</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_aid_status.html">AidStatus</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_aid_status.html#abd4daef532241912f43d3222957cf556">   19</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="namespace_aid_status.html#abd4daef532241912f43d3222957cf556">PROPOSED</a>   = <span class="stringliteral">&quot;proposed&quot;</span>_n;    </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespace_aid_status.html#ac29bcdd5690f1f27096ea21b80f2eebc">   20</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="namespace_aid_status.html#ac29bcdd5690f1f27096ea21b80f2eebc">AUTHORIZED</a> = <span class="stringliteral">&quot;authorized&quot;</span>_n;  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <span class="comment">// namespace AidStatus</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structbranch__aid.html">   55</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(BRANCH)]] <a class="code hl_struct" href="structbranch__aid.html">branch_aid</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structbranch__aid.html#ae705bd1472a37be323dc697a53b6de3c">   56</a></span>  uint64_t           <a class="code hl_variable" href="structbranch__aid.html#ae705bd1472a37be323dc697a53b6de3c">id</a>;              </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structbranch__aid.html#ac8c7273db1bad9d2ed74dd718dbe8486">   57</a></span>  eosio::checksum256 <a class="code hl_variable" href="structbranch__aid.html#ac8c7273db1bad9d2ed74dd718dbe8486">hash</a>;            </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a0cbda94b1f6711d74102f47836f01752">   58</a></span>  eosio::name        <a class="code hl_variable" href="structbranch__aid.html#a0cbda94b1f6711d74102f47836f01752">username</a>;        </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structbranch__aid.html#aaaba8d5b9f54d3f735fe011476b134aa">   59</a></span>  eosio::name        <a class="code hl_variable" href="structbranch__aid.html#aaaba8d5b9f54d3f735fe011476b134aa">braname</a>;         </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a47a852c5511f9aab379a429f4cf830cc">   60</a></span>  eosio::asset       <a class="code hl_variable" href="structbranch__aid.html#a47a852c5511f9aab379a429f4cf830cc">amount</a>;          </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a28957a239eed62fb52d1fc76605405fa">   61</a></span>  eosio::name        <a class="code hl_variable" href="structbranch__aid.html#a28957a239eed62fb52d1fc76605405fa">status</a>;          </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a77bf3dd35349a34b708087cee1d806de">   62</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a>          <a class="code hl_variable" href="structbranch__aid.html#a77bf3dd35349a34b708087cee1d806de">statement</a>;       </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a366723b75ce6a392eea0279c9ab10256">   63</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a>          <a class="code hl_variable" href="structbranch__aid.html#a366723b75ce6a392eea0279c9ab10256">protocol</a>;        </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a67a2c4aa05eb0e48c4a48e079b6a30b8">   65</a></span>  uint64_t <a class="code hl_function" href="structbranch__aid.html#a67a2c4aa05eb0e48c4a48e079b6a30b8">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structbranch__aid.html#ae705bd1472a37be323dc697a53b6de3c">id</a>; }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structbranch__aid.html#ae9976515eba8f73342121543d50cfead">   66</a></span>  eosio::checksum256 <a class="code hl_function" href="structbranch__aid.html#ae9976515eba8f73342121543d50cfead">by_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structbranch__aid.html#ac8c7273db1bad9d2ed74dd718dbe8486">hash</a>; }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structbranch__aid.html#aeb614d62a92f70495242d20f94d6e175">   67</a></span>  uint64_t <a class="code hl_function" href="structbranch__aid.html#aeb614d62a92f70495242d20f94d6e175">by_username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> username.value; }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structbranch__aid.html#a359a8f53bdcee213dd973ac368d4dea1">   68</a></span>  uint64_t <a class="code hl_function" href="structbranch__aid.html#a359a8f53bdcee213dd973ac368d4dea1">by_status</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> status.value; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="stringliteral">&quot;aids&quot;</span>_n, <a class="code hl_struct" href="structbranch__aid.html">branch_aid</a>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n, eosio::const_mem_fun&lt;branch_aid, eosio::checksum256, &amp;branch_aid::by_hash&gt;&gt;,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byusername&quot;</span>_n, eosio::const_mem_fun&lt;branch_aid, uint64_t, &amp;branch_aid::by_username&gt;&gt;,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bystatus&quot;</span>_n, eosio::const_mem_fun&lt;branch_aid, uint64_t, &amp;branch_aid::by_status&gt;&gt;&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="table__branch__aids_8hpp.html#aa77e2f80daa06f99a84fdea054244ad0">   76</a></span>    <a class="code hl_typedef" href="table__branch__aids_8hpp.html#aa77e2f80daa06f99a84fdea054244ad0">branch_aids_index</a>;</div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespace_aid_status_html"><div class="ttname"><a href="namespace_aid_status.html">AidStatus</a></div><div class="ttdoc">Статусы заявления на материальную помощь.</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:18</div></div>
+<div class="ttc" id="anamespace_aid_status_html_abd4daef532241912f43d3222957cf556"><div class="ttname"><a href="namespace_aid_status.html#abd4daef532241912f43d3222957cf556">AidStatus::PROPOSED</a></div><div class="ttdeci">constexpr eosio::name PROPOSED</div><div class="ttdoc">на рассмотрении совета</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:19</div></div>
+<div class="ttc" id="anamespace_aid_status_html_ac29bcdd5690f1f27096ea21b80f2eebc"><div class="ttname"><a href="namespace_aid_status.html#ac29bcdd5690f1f27096ea21b80f2eebc">AidStatus::AUTHORIZED</a></div><div class="ttdeci">constexpr eosio::name AUTHORIZED</div><div class="ttdoc">совет одобрил, ждёт выплаты кассиром</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:20</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructbranch__aid_html"><div class="ttname"><a href="structbranch__aid.html">branch_aid</a></div><div class="ttdoc">Заявление на материальную помощь доверенного/председателя КУ из его персонального кошелька членских с...</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:55</div></div>
+<div class="ttc" id="astructbranch__aid_html_a0cbda94b1f6711d74102f47836f01752"><div class="ttname"><a href="structbranch__aid.html#a0cbda94b1f6711d74102f47836f01752">branch_aid::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">доверенный/председатель КУ — получатель помощи</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:58</div></div>
+<div class="ttc" id="astructbranch__aid_html_a28957a239eed62fb52d1fc76605405fa"><div class="ttname"><a href="structbranch__aid.html#a28957a239eed62fb52d1fc76605405fa">branch_aid::status</a></div><div class="ttdeci">eosio::name status</div><div class="ttdoc">см. AidStatus</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:61</div></div>
+<div class="ttc" id="astructbranch__aid_html_a359a8f53bdcee213dd973ac368d4dea1"><div class="ttname"><a href="structbranch__aid.html#a359a8f53bdcee213dd973ac368d4dea1">branch_aid::by_status</a></div><div class="ttdeci">uint64_t by_status() const</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:68</div></div>
+<div class="ttc" id="astructbranch__aid_html_a366723b75ce6a392eea0279c9ab10256"><div class="ttname"><a href="structbranch__aid.html#a366723b75ce6a392eea0279c9ab10256">branch_aid::protocol</a></div><div class="ttdeci">document2 protocol</div><div class="ttdoc">протокол совета о выплате (заполняется в onaidauth)</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:63</div></div>
+<div class="ttc" id="astructbranch__aid_html_a47a852c5511f9aab379a429f4cf830cc"><div class="ttname"><a href="structbranch__aid.html#a47a852c5511f9aab379a429f4cf830cc">branch_aid::amount</a></div><div class="ttdeci">eosio::asset amount</div><div class="ttdoc">сумма заявления (брутто): списывается с кошелька целиком, получателю уходит за вычетом НДФЛ</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:60</div></div>
+<div class="ttc" id="astructbranch__aid_html_a67a2c4aa05eb0e48c4a48e079b6a30b8"><div class="ttname"><a href="structbranch__aid.html#a67a2c4aa05eb0e48c4a48e079b6a30b8">branch_aid::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:65</div></div>
+<div class="ttc" id="astructbranch__aid_html_a77bf3dd35349a34b708087cee1d806de"><div class="ttname"><a href="structbranch__aid.html#a77bf3dd35349a34b708087cee1d806de">branch_aid::statement</a></div><div class="ttdeci">document2 statement</div><div class="ttdoc">заявление получателя (его подпись)</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:62</div></div>
+<div class="ttc" id="astructbranch__aid_html_aaaba8d5b9f54d3f735fe011476b134aa"><div class="ttname"><a href="structbranch__aid.html#aaaba8d5b9f54d3f735fe011476b134aa">branch_aid::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">кооперативный участок, по которому распределены средства</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:59</div></div>
+<div class="ttc" id="astructbranch__aid_html_ac8c7273db1bad9d2ed74dd718dbe8486"><div class="ttname"><a href="structbranch__aid.html#ac8c7273db1bad9d2ed74dd718dbe8486">branch_aid::hash</a></div><div class="ttdeci">eosio::checksum256 hash</div><div class="ttdoc">идентификатор заявления (= hash повестки совета, = outcome_hash в gateway, = process_hash в ledger2)</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:57</div></div>
+<div class="ttc" id="astructbranch__aid_html_ae705bd1472a37be323dc697a53b6de3c"><div class="ttname"><a href="structbranch__aid.html#ae705bd1472a37be323dc697a53b6de3c">branch_aid::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">суррогатный ключ (scope coopname)</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:56</div></div>
+<div class="ttc" id="astructbranch__aid_html_ae9976515eba8f73342121543d50cfead"><div class="ttname"><a href="structbranch__aid.html#ae9976515eba8f73342121543d50cfead">branch_aid::by_hash</a></div><div class="ttdeci">eosio::checksum256 by_hash() const</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:66</div></div>
+<div class="ttc" id="astructbranch__aid_html_aeb614d62a92f70495242d20f94d6e175"><div class="ttname"><a href="structbranch__aid.html#aeb614d62a92f70495242d20f94d6e175">branch_aid::by_username</a></div><div class="ttdeci">uint64_t by_username() const</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:67</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> document_core.hpp:27</div></div>
+<div class="ttc" id="atable__branch__aids_8hpp_html_aa77e2f80daa06f99a84fdea054244ad0"><div class="ttname"><a href="table__branch__aids_8hpp.html#aa77e2f80daa06f99a84fdea054244ad0">branch_aids_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;aids&quot;_n, branch_aid, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; branch_aid, eosio::checksum256, &amp;branch_aid::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; branch_aid, uint64_t, &amp;branch_aid::by_username &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; branch_aid, uint64_t, &amp;branch_aid::by_status &gt; &gt; &gt; branch_aids_index</div><div class="ttdef"><b>Definition:</b> table_branch_aids.hpp:76</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_99d6a2ec44a7d22665ead9c94e1d5c22.html">domain</a></li><li class="navelem"><a class="el" href="table__branch__aids_8hpp.html">table_branch_aids.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

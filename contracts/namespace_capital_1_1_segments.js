@@ -1,0 +1,38 @@
+var namespace_capital_1_1_segments =
+[
+    [ "Status", "namespace_capital_1_1_segments_1_1_status.html", [
+      [ "ACT1", "namespace_capital_1_1_segments_1_1_status.html#af962bd165bed947df3d7415177acb815", null ],
+      [ "APPROVED", "namespace_capital_1_1_segments_1_1_status.html#ab36bbfaf3fbf2660e4f94e32e85195f2", null ],
+      [ "AUTHORIZED", "namespace_capital_1_1_segments_1_1_status.html#ad24d4981df8e662854a1d7ff27412685", null ],
+      [ "CONTRIBUTED", "namespace_capital_1_1_segments_1_1_status.html#ae294ba5d424d2b326816a91912c25172", null ],
+      [ "GENERATION", "namespace_capital_1_1_segments_1_1_status.html#a867fba07ca72bf54a40157fa03369981", null ],
+      [ "READY", "namespace_capital_1_1_segments_1_1_status.html#a35d2dee2ca9443c95c18e69683a19b92", null ],
+      [ "SKIPPED", "namespace_capital_1_1_segments_1_1_status.html#ae15ac8ec03dc61493c973d1d261a6ce1", null ],
+      [ "STATEMENT", "namespace_capital_1_1_segments_1_1_status.html#a04d7979cea2929e0ad4e656255a9aa57", null ]
+    ] ],
+    [ "segment", "struct_capital_1_1_segments_1_1segment.html", "struct_capital_1_1_segments_1_1segment" ],
+    [ "segments_index", "namespace_capital_1_1_segments.html#ae5b019f0c4d232e315ed2e327477e7b1", null ],
+    [ "calculate_non_investor_contribution", "namespace_capital_1_1_segments.html#a98d5799db0a96482be3ac45d47bf6507", null ],
+    [ "calculate_segment_base_cost", "namespace_capital_1_1_segments.html#af8702b17d38a2d69e48d79c55ef7bfa7", null ],
+    [ "calculate_segment_bonus_cost", "namespace_capital_1_1_segments.html#a035b7174021132ed66fcfb9e774b1fa8", null ],
+    [ "count_project_authors", "namespace_capital_1_1_segments.html#a340fd27224d3f6f2653b25bdce00783f", null ],
+    [ "create_author_segment", "namespace_capital_1_1_segments.html#abca371570cd1c0d95be4b32be42cee7f", null ],
+    [ "decrease_debt_amount", "namespace_capital_1_1_segments.html#a61df29c36c7654bd85f5c330506895c3", null ],
+    [ "get_segment", "namespace_capital_1_1_segments.html#a28c440ae4f13d4e39dd5705aeb705fc9", null ],
+    [ "get_segment_by_id_or_fail", "namespace_capital_1_1_segments.html#af9015a4ff467f0518531082d5a7d1026", null ],
+    [ "get_segment_id", "namespace_capital_1_1_segments.html#a42577235b979cd6582a8a3e880d8f748", null ],
+    [ "get_segment_or_fail", "namespace_capital_1_1_segments.html#a0304b44fb97648f0d44fe7d53b146886", null ],
+    [ "has_intellectual_contribution_roles", "namespace_capital_1_1_segments.html#ac7f98231412f710b11d280fbc33d88eb", null ],
+    [ "has_project_segments", "namespace_capital_1_1_segments.html#aaa50f612a371458c42fded8be290bec8", null ],
+    [ "increase_debt_amount", "namespace_capital_1_1_segments.html#ab70140e62f0d6b5ec4151202993d17de", null ],
+    [ "is_pure_investor", "namespace_capital_1_1_segments.html#aff79537bcfc65b5c4c7b1b555b1aa02f", null ],
+    [ "is_voting_participant", "namespace_capital_1_1_segments.html#a35d6d130341e42b348049d51e3c9ddfb", null ],
+    [ "remove_all_project_segments", "namespace_capital_1_1_segments.html#a7f51682c8b99f7a6a27f2d3e14f4ae4d", null ],
+    [ "remove_segment", "namespace_capital_1_1_segments.html#a159c785a513138ebbb3254d970516161", null ],
+    [ "set_investor_base_amount_on_return_unused", "namespace_capital_1_1_segments.html#ad7b9c3dd395e437b39ca0c9408749455", null ],
+    [ "update_segment_after_result_contribution", "namespace_capital_1_1_segments.html#aa4a47c8c0cba17df143e99aa730441d0", null ],
+    [ "update_segment_author_status", "namespace_capital_1_1_segments.html#a8bb55c34e498210d09eeeb9aae6321f4", null ],
+    [ "update_segment_status", "namespace_capital_1_1_segments.html#ac695acdec0c36b318a8f9b9424d0035f", null ],
+    [ "update_segment_total_cost", "namespace_capital_1_1_segments.html#ac7a1c4f439aaff0361df6b41fec82a92", null ],
+    [ "update_segment_voting_results", "namespace_capital_1_1_segments.html#af571feda920b2032e89689a397fbd29c", null ]
+];

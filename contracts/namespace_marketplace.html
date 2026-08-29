@@ -1,0 +1,1342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен Marketplace</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespace_marketplace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен Marketplace</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Canonical helpers контракта marketplace (Story 11.1).  
+<a href="namespace_marketplace.html#details">Подробнее...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_marketplace_1_1_memo"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_memo.html">Memo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_marketplace_1_1_order_payout_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_order_payout_status.html">OrderPayoutStatus</a></td></tr>
+<tr class="memdesc:namespace_marketplace_1_1_order_payout_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Состояние выплаты поставщику по Order'у (Locked Decision L12, E11 техдолг 598-16). Выплата идёт через <a class="el" href="group__public__gateway__actions.html#ga1e02f2c8bf5bb52d78e05fae71d274d8" title="Создание исходящего платежа. Создает новый запрос на исходящий платеж в системе процессинга.">gateway::createoutpay</a> → действие кассира → callback <code><a class="el" href="classmarketplace.html#a54a206d4df7a9537b27b085ca50aa631" title="Callback от gateway::outcomplete — кассир подтвердил банковский перевод поставщику (E11 техдолг 598-1...">marketplace::payconfirm</a></code> / <code><a class="el" href="classmarketplace.html#a85cc9ccc7238f5f30b55721178e63bc5" title="Callback от gateway::outdecline — кассир отметил, что банковский перевод не состоялся (E11 техдолг 59...">marketplace::paydecline</a></code>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_marketplace_1_1_order_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_order_status.html">OrderStatus</a></td></tr>
+<tr class="memdesc:namespace_marketplace_1_1_order_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статусы Order'а в процессе p.mkt.supply. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_marketplace_1_1_return_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_return_status.html">ReturnStatus</a></td></tr>
+<tr class="memdesc:namespace_marketplace_1_1_return_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рабочие статусы заявления на гарантийный возврат (процесс p.mkt.return). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_marketplace_1_1_wroff_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace_1_1_wroff_status.html">WroffStatus</a></td></tr>
+<tr class="memdesc:namespace_marketplace_1_1_wroff_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статусы проекта решения совета о списании скоропорта (процесс p.mkt.wroff). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html">order</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-chain Order — анкер процесса p.mkt.supply.  <a href="struct_marketplace_1_1order.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1return__request.html">return_request</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-chain Заявление на гарантийный возврат — анкер процесса p.mkt.return.  <a href="struct_marketplace_1_1return__request.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1_user_wallet_available.html">UserWalletAvailable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">On-chain Проект решения совета о списании скоропорта — анкер процесса p.mkt.wroff.  <a href="struct_marketplace_1_1writeoff__proposal.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1wroff__item.html">wroff_item</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Позиция к списанию в составе <a class="el" href="struct_marketplace_1_1writeoff__proposal.html" title="On-chain Проект решения совета о списании скоропорта — анкер процесса p.mkt.wroff.">writeoff_proposal</a>.  <a href="struct_marketplace_1_1wroff__item.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a2599a1e6adf6eb958beddcf528319777"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;orders&quot;_n, <a class="el" href="struct_marketplace_1_1order.html">order</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#ac6d8722ed70ddf30e34ef3da60af9a45">order::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byorderer&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a80dca6ca21d94ba8544ab9372eda9f05">order::by_orderer</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byofferer&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a05a5ad76747d9962c06b5ecc818d8f1a">order::by_offerer</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#afaa779fcc7b58870109b368c1b0382c0">order::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bybatch&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#a2fab193f4309e73db768255936b75ede">order::by_batch</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byoffer&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#a4547598acebccfd1d6edbbff38006140">order::by_offer</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bydelivbra&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#ac656bda12aba2168159b95747a4275f5">order::by_delivery_bra</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byacceptbra&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a64d1b2603a46ac3113da32ce4c9f9369">order::by_accept_bra</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a2599a1e6adf6eb958beddcf528319777">orders_index</a></td></tr>
+<tr class="separator:a2599a1e6adf6eb958beddcf528319777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ebe5e7e7ac9579c58ef9b19688d25a"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;retrequests&quot;_n, <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a183dc8375f0c64dc40b510c00c9d21e0">return_request::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byorderer&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a8559d3e41c4bd14e15f8eeb8a9afd4b1">return_request::by_orderer</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a405d9278d2b27b343b65e8de9ebe4db8">return_request::by_status</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byorigorder&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a67b7a01877f2dc4405b1090f64ae5ea2">return_request::by_original_order</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ae5ebe5e7e7ac9579c58ef9b19688d25a">return_requests_index</a></td></tr>
+<tr class="separator:ae5ebe5e7e7ac9579c58ef9b19688d25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a49961d56cf43559a4ea1fedc15d699"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;wroffprops&quot;_n, <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html#a110338255d5804e4a55b64beef60129c">writeoff_proposal::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html#ae584ce3a1e00c073dd06f5e730258862">writeoff_proposal::by_status</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a5a49961d56cf43559a4ea1fedc15d699">writeoff_proposals_index</a></td></tr>
+<tr class="separator:a5a49961d56cf43559a4ea1fedc15d699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afde74cdc3ab5707b9f84f331075d727c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#afde74cdc3ab5707b9f84f331075d727c">is_valid_unit_symbol</a> (const eosio::symbol &amp;sym)</td></tr>
+<tr class="separator:afde74cdc3ab5707b9f84f331075d727c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea6f2a92fd5f84021bd573cde4044b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a4ea6f2a92fd5f84021bd573cde4044b1">check_quantity</a> (const eosio::asset &amp;quantity)</td></tr>
+<tr class="memdesc:a4ea6f2a92fd5f84021bd573cde4044b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Валидация количества: корректный asset, известная единица, положительное.  <a href="namespace_marketplace.html#a4ea6f2a92fd5f84021bd573cde4044b1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ea6f2a92fd5f84021bd573cde4044b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b695b44fe66f71bfb2cc7f20fe1616a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a6b695b44fe66f71bfb2cc7f20fe1616a">check_packaging</a> (const eosio::asset &amp;quantity, const eosio::asset &amp;package_size)</td></tr>
+<tr class="separator:a6b695b44fe66f71bfb2cc7f20fe1616a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7626724eeb9ce90a69d5659bad07d51d"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a7626724eeb9ce90a69d5659bad07d51d">calc_cost</a> (const eosio::asset &amp;quantity, const eosio::asset &amp;unit_price, const eosio::asset &amp;package_size=eosio::asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>))</td></tr>
+<tr class="separator:a7626724eeb9ce90a69d5659bad07d51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a253653d91d019a353d56031bd67b13"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a5a253653d91d019a353d56031bd67b13">pro_rata</a> (const eosio::asset &amp;total, int64_t part, int64_t whole)</td></tr>
+<tr class="separator:a5a253653d91d019a353d56031bd67b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d760df0e13f692612dac967b09112b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a03d760df0e13f692612dac967b09112b">get_order_by_hash</a> (eosio::name coopname, const checksum256 &amp;order_hash)</td></tr>
+<tr class="separator:a03d760df0e13f692612dac967b09112b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8046b38e0ccbbc92c4d8abce55d9ea9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_marketplace_1_1order.html">order</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#aa8046b38e0ccbbc92c4d8abce55d9ea9">get_order_by_hash_or_fail</a> (eosio::name coopname, const checksum256 &amp;order_hash, const std::string &amp;msg=&quot;Заказ не найден по хэшу&quot;)</td></tr>
+<tr class="separator:aa8046b38e0ccbbc92c4d8abce55d9ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdddfdd38ca9c0771189be14cfbc2a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#acdddfdd38ca9c0771189be14cfbc2a9b">update_order</a> (eosio::name coopname, uint64_t order_id, const std::function&lt; void(<a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;)&gt; &amp;fn)</td></tr>
+<tr class="separator:acdddfdd38ca9c0771189be14cfbc2a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a79ce2a6bed0db7ac39e89e103a816"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a17a79ce2a6bed0db7ac39e89e103a816">erase_order</a> (eosio::name coopname, uint64_t order_id)</td></tr>
+<tr class="separator:a17a79ce2a6bed0db7ac39e89e103a816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8780eb230760c0727a89ecfbf7e20ad"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#af8780eb230760c0727a89ecfbf7e20ad">get_return_request_by_hash</a> (eosio::name coopname, const checksum256 &amp;request_hash)</td></tr>
+<tr class="separator:af8780eb230760c0727a89ecfbf7e20ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe91606ef4ef719b3c743660f024a89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a0fe91606ef4ef719b3c743660f024a89">get_return_request_by_hash_or_fail</a> (eosio::name coopname, const checksum256 &amp;request_hash, const std::string &amp;msg=&quot;Заявление на возврат не найдено по хэшу&quot;)</td></tr>
+<tr class="separator:a0fe91606ef4ef719b3c743660f024a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9b7e255ef151f6b71fecf89b57047f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a9b9b7e255ef151f6b71fecf89b57047f">update_return_request</a> (eosio::name coopname, uint64_t request_id, const std::function&lt; void(<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &amp;)&gt; &amp;fn)</td></tr>
+<tr class="separator:a9b9b7e255ef151f6b71fecf89b57047f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a846f39494fc6af36446460bf29c21a76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a846f39494fc6af36446460bf29c21a76">erase_return_request</a> (eosio::name coopname, uint64_t request_id)</td></tr>
+<tr class="separator:a846f39494fc6af36446460bf29c21a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e5814bf5d4651a8fcb129265747ad6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a02e5814bf5d4651a8fcb129265747ad6">check_return_request_branch</a> (eosio::name coopname, const <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &amp;r, eosio::name braname)</td></tr>
+<tr class="separator:a02e5814bf5d4651a8fcb129265747ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d99a32b5aa466d0b3ae6dcc41194026"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a2d99a32b5aa466d0b3ae6dcc41194026">get_writeoff_proposal_by_hash</a> (eosio::name coopname, const checksum256 &amp;proposal_hash)</td></tr>
+<tr class="separator:a2d99a32b5aa466d0b3ae6dcc41194026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893bb0b61c3040f7ad8a0fe9eef544f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a893bb0b61c3040f7ad8a0fe9eef544f3">get_writeoff_proposal_by_hash_or_fail</a> (eosio::name coopname, const checksum256 &amp;proposal_hash, const std::string &amp;msg=&quot;Проект списания не найден по хэшу&quot;)</td></tr>
+<tr class="separator:a893bb0b61c3040f7ad8a0fe9eef544f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d262b8e6934f6c09a025a73d167c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a54d262b8e6934f6c09a025a73d167c35">update_writeoff_proposal</a> (eosio::name coopname, uint64_t proposal_id, const std::function&lt; void(<a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a> &amp;)&gt; &amp;fn)</td></tr>
+<tr class="separator:a54d262b8e6934f6c09a025a73d167c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1662a56dcc8389c6719b32395674de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a4a1662a56dcc8389c6719b32395674de">erase_writeoff_proposal</a> (eosio::name coopname, uint64_t proposal_id)</td></tr>
+<tr class="separator:a4a1662a56dcc8389c6719b32395674de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f172fa39b0a40189749c23ab3a0ab93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_marketplace_1_1_user_wallet_available.html">UserWalletAvailable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a3f172fa39b0a40189749c23ab3a0ab93">get_user_wallet_balance</a> (eosio::name coopname, eosio::name wallet_id, eosio::name username)</td></tr>
+<tr class="separator:a3f172fa39b0a40189749c23ab3a0ab93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84ad16b2d89795bce83cdde91e9b29a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ac84ad16b2d89795bce83cdde91e9b29a">get_membership_fee_percent</a> (eosio::name coopname)</td></tr>
+<tr class="separator:ac84ad16b2d89795bce83cdde91e9b29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2889fb9d09978c7a07dbf70e0dc5d3cd"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a2889fb9d09978c7a07dbf70e0dc5d3cd">calc_membership_fee</a> (const eosio::asset &amp;base, uint64_t fee_percent)</td></tr>
+<tr class="memdesc:a2889fb9d09978c7a07dbf70e0dc5d3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма членского взноса от базы по ставке (целочисленно, вниз).  <a href="namespace_marketplace.html#a2889fb9d09978c7a07dbf70e0dc5d3cd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2889fb9d09978c7a07dbf70e0dc5d3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ab2671ec111719bd7d28e75de7f0bb"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a60ab2671ec111719bd7d28e75de7f0bb">get_order_membership_fee</a> (const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;o)</td></tr>
+<tr class="memdesc:a60ab2671ec111719bd7d28e75de7f0bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Членский взнос заказа (ноль — взнос не начислялся).  <a href="namespace_marketplace.html#a60ab2671ec111719bd7d28e75de7f0bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a60ab2671ec111719bd7d28e75de7f0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9af126bf79d24f49b157819bfaf9eb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ab9af126bf79d24f49b157819bfaf9eb1">refund_membership_fee_if_any</a> (eosio::name coopname, const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;o)</td></tr>
+<tr class="separator:ab9af126bf79d24f49b157819bfaf9eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1441aadbd920b43be686a30798207a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#ae1441aadbd920b43be686a30798207a7">refund_order_full</a> (eosio::name coopname, const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;o)</td></tr>
+<tr class="separator:ae1441aadbd920b43be686a30798207a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a13194e9a7034dd93e9c424415a488"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a65a13194e9a7034dd93e9c424415a488">refusal_penalty_share</a> (const eosio::asset &amp;base)</td></tr>
+<tr class="memdesc:a65a13194e9a7034dd93e9c424415a488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удерживаемая часть суммы (округление вниз — остаток в пользу пайщика).  <a href="namespace_marketplace.html#a65a13194e9a7034dd93e9c424415a488">Подробнее...</a><br /></td></tr>
+<tr class="separator:a65a13194e9a7034dd93e9c424415a488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39c1bcd87eea266fba4db8de4257b21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#af39c1bcd87eea266fba4db8de4257b21">retain_refusal_penalty</a> (eosio::name coopname, const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;o)</td></tr>
+<tr class="separator:af39c1bcd87eea266fba4db8de4257b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a334de0e3b1b907c2c3d53b90d6a4a53a"><td class="memItemLeft" align="right" valign="top">constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a334de0e3b1b907c2c3d53b90d6a4a53a">DEFAULT_MEMBERSHIP_FEE_PERCENT</a> = 300000</td></tr>
+<tr class="separator:a334de0e3b1b907c2c3d53b90d6a4a53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d56a44a58861d43403c2d92b9ad78e5"><td class="memItemLeft" align="right" valign="top">constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a4d56a44a58861d43403c2d92b9ad78e5">REFUSAL_PENALTY_PERCENT</a> = 50</td></tr>
+<tr class="separator:a4d56a44a58861d43403c2d92b9ad78e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Canonical helpers контракта marketplace (Story 11.1). </p>
+<p >Donor-helpers (<code>get_request_by_hash</code>, <code>get_shipment_by_hash</code>, namespace <code>DocumentNames</code>, <code>marketplace_callback_actions</code>) удалены вместе с соответствующими actions и таблицами (AR30).</p>
+<p >Этот файл содержит только утилиты доступа к canonical-сущностям трёх процессов p.mkt.supply / p.mkt.return / p.mkt.wroff и helper'ы для проверки доступного баланса (для createorder guard'а Locked Decision L6). </p>
+</div><h2 class="groupheader">Типы</h2>
+<a id="a2599a1e6adf6eb958beddcf528319777" name="a2599a1e6adf6eb958beddcf528319777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2599a1e6adf6eb958beddcf528319777">&#9670;&nbsp;</a></span>orders_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;orders&quot;_n, <a class="el" href="struct_marketplace_1_1order.html">order</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#ac6d8722ed70ddf30e34ef3da60af9a45">order::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byorderer&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a80dca6ca21d94ba8544ab9372eda9f05">order::by_orderer</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byofferer&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a05a5ad76747d9962c06b5ecc818d8f1a">order::by_offerer</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#afaa779fcc7b58870109b368c1b0382c0">order::by_status</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bybatch&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#a2fab193f4309e73db768255936b75ede">order::by_batch</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byoffer&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1order.html#a4547598acebccfd1d6edbbff38006140">order::by_offer</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bydelivbra&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#ac656bda12aba2168159b95747a4275f5">order::by_delivery_bra</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byacceptbra&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1order.html">order</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1order.html#a64d1b2603a46ac3113da32ce4c9f9369">order::by_accept_bra</a>&gt; &gt; &gt; <a class="el" href="namespace_marketplace.html#a2599a1e6adf6eb958beddcf528319777">Marketplace::orders_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5ebe5e7e7ac9579c58ef9b19688d25a" name="ae5ebe5e7e7ac9579c58ef9b19688d25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ebe5e7e7ac9579c58ef9b19688d25a">&#9670;&nbsp;</a></span>return_requests_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;retrequests&quot;_n, <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a183dc8375f0c64dc40b510c00c9d21e0">return_request::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byorderer&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a8559d3e41c4bd14e15f8eeb8a9afd4b1">return_request::by_orderer</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a405d9278d2b27b343b65e8de9ebe4db8">return_request::by_status</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byorigorder&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1return__request.html#a67b7a01877f2dc4405b1090f64ae5ea2">return_request::by_original_order</a>&gt; &gt; &gt; <a class="el" href="namespace_marketplace.html#ae5ebe5e7e7ac9579c58ef9b19688d25a">Marketplace::return_requests_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a49961d56cf43559a4ea1fedc15d699" name="a5a49961d56cf43559a4ea1fedc15d699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a49961d56cf43559a4ea1fedc15d699">&#9670;&nbsp;</a></span>writeoff_proposals_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;wroffprops&quot;_n, <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, checksum256, &amp;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html#a110338255d5804e4a55b64beef60129c">writeoff_proposal::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a>, uint64_t, &amp;<a class="el" href="struct_marketplace_1_1writeoff__proposal.html#ae584ce3a1e00c073dd06f5e730258862">writeoff_proposal::by_status</a>&gt; &gt; &gt; <a class="el" href="namespace_marketplace.html#a5a49961d56cf43559a4ea1fedc15d699">Marketplace::writeoff_proposals_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a7626724eeb9ce90a69d5659bad07d51d" name="a7626724eeb9ce90a69d5659bad07d51d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7626724eeb9ce90a69d5659bad07d51d">&#9670;&nbsp;</a></span>calc_cost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::calc_cost </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>unit_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>package_size</em> = <code>eosio::asset(0,&#160;<a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Стоимость заказа. Два режима отпуска (Эпик 18):</p><ul>
+<li>по мере (package_size.amount == 0): <code>unit_price</code> — цена за базовую единицу; cost = количество × цена / 10^precision(количества), half-up.</li>
+<li>упаковкой (package_size.amount &gt; 0): <code>unit_price</code> — цена за упаковку; cost = (количество / размер_упаковки) × цена. Деление точное — кратность гарантирует <code>check_packaging</code>, копейка не округляется. Цена — money-asset в _root_govern_symbol; результат — в её символе. int128 против переполнения (крупные партии: тонны × цена). </li>
+</ul>
+
+</div>
+</div>
+<a id="a2889fb9d09978c7a07dbf70e0dc5d3cd" name="a2889fb9d09978c7a07dbf70e0dc5d3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2889fb9d09978c7a07dbf70e0dc5d3cd">&#9670;&nbsp;</a></span>calc_membership_fee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::calc_membership_fee </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>fee_percent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сумма членского взноса от базы по ставке (целочисленно, вниз). </p>
+
+</div>
+</div>
+<a id="a6b695b44fe66f71bfb2cc7f20fe1616a" name="a6b695b44fe66f71bfb2cc7f20fe1616a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b695b44fe66f71bfb2cc7f20fe1616a">&#9670;&nbsp;</a></span>check_packaging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::check_packaging </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>package_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Валидация упаковочного отпуска. <code>package_size</code> — содержимое одной упаковки в базовой единице (той же, что и количество). package_size.amount == 0 — отпуск «по мере» (весовой/наливной/поштучный): проверок нет, цена за базовую единицу. package_size.amount &gt; 0 — упаковочный отпуск: символ упаковки равен символу количества, размер положителен, а количество кратно упаковке (заказать/выдать можно только целое число упаковок). </p>
+
+</div>
+</div>
+<a id="a4ea6f2a92fd5f84021bd573cde4044b1" name="a4ea6f2a92fd5f84021bd573cde4044b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea6f2a92fd5f84021bd573cde4044b1">&#9670;&nbsp;</a></span>check_quantity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::check_quantity </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>quantity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Валидация количества: корректный asset, известная единица, положительное. </p>
+
+</div>
+</div>
+<a id="a02e5814bf5d4651a8fcb129265747ad6" name="a02e5814bf5d4651a8fcb129265747ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e5814bf5d4651a8fcb129265747ad6">&#9670;&nbsp;</a></span>check_return_request_branch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::check_return_request_branch </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Заявление на возврат рассматривает кооперативный участок выдачи заказа: имущество вернётся на его склад, а членский взнос списывается с его общего кошелька. Участок приходит параметром действия, поэтому сверяется с заказом на цепи — уполномоченный чужого участка решение по заявлению не проводит. </p>
+
+</div>
+</div>
+<a id="a17a79ce2a6bed0db7ac39e89e103a816" name="a17a79ce2a6bed0db7ac39e89e103a816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a79ce2a6bed0db7ac39e89e103a816">&#9670;&nbsp;</a></span>erase_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::erase_order </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>order_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a846f39494fc6af36446460bf29c21a76" name="a846f39494fc6af36446460bf29c21a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846f39494fc6af36446460bf29c21a76">&#9670;&nbsp;</a></span>erase_return_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::erase_return_request </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>request_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a1662a56dcc8389c6719b32395674de" name="a4a1662a56dcc8389c6719b32395674de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1662a56dcc8389c6719b32395674de">&#9670;&nbsp;</a></span>erase_writeoff_proposal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::erase_writeoff_proposal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>proposal_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac84ad16b2d89795bce83cdde91e9b29a" name="ac84ad16b2d89795bce83cdde91e9b29a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84ad16b2d89795bce83cdde91e9b29a">&#9670;&nbsp;</a></span>get_membership_fee_percent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::get_membership_fee_percent </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Единая ставка членского взноса кооператива (HUNDR_PERCENTS = 100%); нет явной настройки (singleton не создан) — берётся стандартный дефолт. </p>
+
+</div>
+</div>
+<a id="a03d760df0e13f692612dac967b09112b" name="a03d760df0e13f692612dac967b09112b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d760df0e13f692612dac967b09112b">&#9670;&nbsp;</a></span>get_order_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_marketplace_1_1order.html">order</a> &gt; Marketplace::get_order_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8046b38e0ccbbc92c4d8abce55d9ea9" name="aa8046b38e0ccbbc92c4d8abce55d9ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8046b38e0ccbbc92c4d8abce55d9ea9">&#9670;&nbsp;</a></span>get_order_by_hash_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_marketplace_1_1order.html">order</a> Marketplace::get_order_by_hash_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em> = <code>&quot;Заказ&#160;не&#160;найден&#160;по&#160;хэшу&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60ab2671ec111719bd7d28e75de7f0bb" name="a60ab2671ec111719bd7d28e75de7f0bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ab2671ec111719bd7d28e75de7f0bb">&#9670;&nbsp;</a></span>get_order_membership_fee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::get_order_membership_fee </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Членский взнос заказа (ноль — взнос не начислялся). </p>
+
+</div>
+</div>
+<a id="af8780eb230760c0727a89ecfbf7e20ad" name="af8780eb230760c0727a89ecfbf7e20ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8780eb230760c0727a89ecfbf7e20ad">&#9670;&nbsp;</a></span>get_return_request_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &gt; Marketplace::get_return_request_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fe91606ef4ef719b3c743660f024a89" name="a0fe91606ef4ef719b3c743660f024a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe91606ef4ef719b3c743660f024a89">&#9670;&nbsp;</a></span>get_return_request_by_hash_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> Marketplace::get_return_request_by_hash_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em> = <code>&quot;Заявление&#160;на&#160;возврат&#160;не&#160;найдено&#160;по&#160;хэшу&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f172fa39b0a40189749c23ab3a0ab93" name="a3f172fa39b0a40189749c23ab3a0ab93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f172fa39b0a40189749c23ab3a0ab93">&#9670;&nbsp;</a></span>get_user_wallet_balance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_marketplace_1_1_user_wallet_available.html">UserWalletAvailable</a> Marketplace::get_user_wallet_balance </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d99a32b5aa466d0b3ae6dcc41194026" name="a2d99a32b5aa466d0b3ae6dcc41194026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d99a32b5aa466d0b3ae6dcc41194026">&#9670;&nbsp;</a></span>get_writeoff_proposal_by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a> &gt; Marketplace::get_writeoff_proposal_by_hash </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>proposal_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a893bb0b61c3040f7ad8a0fe9eef544f3" name="a893bb0b61c3040f7ad8a0fe9eef544f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893bb0b61c3040f7ad8a0fe9eef544f3">&#9670;&nbsp;</a></span>get_writeoff_proposal_by_hash_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a> Marketplace::get_writeoff_proposal_by_hash_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>proposal_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em> = <code>&quot;Проект&#160;списания&#160;не&#160;найден&#160;по&#160;хэшу&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afde74cdc3ab5707b9f84f331075d727c" name="afde74cdc3ab5707b9f84f331075d727c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde74cdc3ab5707b9f84f331075d727c">&#9670;&nbsp;</a></span>is_valid_unit_symbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Marketplace::is_valid_unit_symbol </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::symbol &amp;&#160;</td>
+          <td class="paramname"><em>sym</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a253653d91d019a353d56031bd67b13" name="a5a253653d91d019a353d56031bd67b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a253653d91d019a353d56031bd67b13">&#9670;&nbsp;</a></span>pro_rata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::pro_rata </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>total</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>part</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>whole</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Доля суммы, пропорциональная части от целого, с округлением половины вверх (то же правило, что в <code>calc_cost</code>). Применяется там, где сумму нельзя пересчитать от цены — её надо разделить ровно так, как она сложилась: стоимость возвращаемой части выданного, доля членского взноса и т. п. При part == whole результат равен исходной сумме без потери копейки. </p>
+
+</div>
+</div>
+<a id="ab9af126bf79d24f49b157819bfaf9eb1" name="ab9af126bf79d24f49b157819bfaf9eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9af126bf79d24f49b157819bfaf9eb1">&#9670;&nbsp;</a></span>refund_membership_fee_if_any()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::refund_membership_fee_if_any </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Полный возврат членского взноса заказа на членский кошелёк «Стола заказов» (o.mkt.refund) при отмене/отклонении/истечении; no-op для заказов без взноса. Частичный возврат при недовыдаче — в signiss2. </p>
+
+</div>
+</div>
+<a id="ae1441aadbd920b43be686a30798207a7" name="ae1441aadbd920b43be686a30798207a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1441aadbd920b43be686a30798207a7">&#9670;&nbsp;</a></span>refund_order_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::refund_order_full </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Полный возврат резерва заказа и членского взноса на членский «Стола заказов» (бесплатная отмена: до акцепта поставщиком либо заказ из остатка кооператива — поставщика и его риска нет). </p>
+
+</div>
+</div>
+<a id="a65a13194e9a7034dd93e9c424415a488" name="a65a13194e9a7034dd93e9c424415a488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a13194e9a7034dd93e9c424415a488">&#9670;&nbsp;</a></span>refusal_penalty_share()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::refusal_penalty_share </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>base</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удерживаемая часть суммы (округление вниз — остаток в пользу пайщика). </p>
+
+</div>
+</div>
+<a id="af39c1bcd87eea266fba4db8de4257b21" name="af39c1bcd87eea266fba4db8de4257b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39c1bcd87eea266fba4db8de4257b21">&#9670;&nbsp;</a></span>retain_refusal_penalty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::retain_refusal_penalty </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;&#160;</td>
+          <td class="paramname"><em>o</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Отказ пайщика от получения позиции после акцепта поставщиком: удержание 50%. Тело заказа и членский взнос делятся пополам — удержанная половина уходит в общий кошелёк КУ выдачи (тело — транзитом через пул взносов o.mkt.penalty, затем единым <a class="el" href="namespace_branch.html#abc61d8d8abb14b83545c1fd64fdf9a3e" title="Inline-вызов branch::accrue от контракта-источника членских взносов (requirement b6 «Экономика КУ»,...">Branch::accrue</a> вместе с удержанной половиной взноса), вторая половина возвращается пайщику на членский «Стола заказов». Имущество остаётся на складе КУ (без движения по счёту 10) — кооператив несёт риск уже оплаченной поставки, под который и держится удержание. </p>
+
+</div>
+</div>
+<a id="acdddfdd38ca9c0771189be14cfbc2a9b" name="acdddfdd38ca9c0771189be14cfbc2a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdddfdd38ca9c0771189be14cfbc2a9b">&#9670;&nbsp;</a></span>update_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::update_order </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>order_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="struct_marketplace_1_1order.html">order</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b9b7e255ef151f6b71fecf89b57047f" name="a9b9b7e255ef151f6b71fecf89b57047f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9b7e255ef151f6b71fecf89b57047f">&#9670;&nbsp;</a></span>update_return_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::update_return_request </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>request_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="struct_marketplace_1_1return__request.html">return_request</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54d262b8e6934f6c09a025a73d167c35" name="a54d262b8e6934f6c09a025a73d167c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d262b8e6934f6c09a025a73d167c35">&#9670;&nbsp;</a></span>update_writeoff_proposal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Marketplace::update_writeoff_proposal </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>proposal_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="struct_marketplace_1_1writeoff__proposal.html">writeoff_proposal</a> &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a334de0e3b1b907c2c3d53b90d6a4a53a" name="a334de0e3b1b907c2c3d53b90d6a4a53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334de0e3b1b907c2c3d53b90d6a4a53a">&#9670;&nbsp;</a></span>DEFAULT_MEMBERSHIP_FEE_PERCENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint64_t Marketplace::DEFAULT_MEMBERSHIP_FEE_PERCENT = 300000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Дефолтная ставка членского взноса нового кооператива — 30% (HUNDR_PERCENTS = 100%). Действует, пока председатель явно не настроит свою ставку через <code>setfee</code> (в т.ч. явный 0 — взнос осознанно отключён, это по-прежнему доступно, просто больше не подразумевается молчаливым «не настроено»). </p>
+
+</div>
+</div>
+<a id="a4d56a44a58861d43403c2d92b9ad78e5" name="a4d56a44a58861d43403c2d92b9ad78e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d56a44a58861d43403c2d92b9ad78e5">&#9670;&nbsp;</a></span>REFUSAL_PENALTY_PERCENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint64_t Marketplace::REFUSAL_PENALTY_PERCENT = 50</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Доля удержания при отказе пайщика от получения после акцепта поставщиком. Hard-code (определяется Положением целевой потребительской программы). </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_marketplace.html">Marketplace</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

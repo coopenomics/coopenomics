@@ -1,0 +1,1869 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Класс marketplace</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmarketplace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classmarketplace-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс marketplace</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Контракт <code>marketplace</code> — кооперативный «Стол заказов» в режиме членских взносов.  
+ <a href="classmarketplace.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="marketplace_2marketplace_8hpp_source.html">marketplace.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:marketplace:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classmarketplace.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa7c0193de8af681a5e36bdc3fb75d595"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aa7c0193de8af681a5e36bdc3fb75d595">marketplace</a> (eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td></tr>
+<tr class="separator:aa7c0193de8af681a5e36bdc3fb75d595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3144231e023b9d00561eebb15b37ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ada3144231e023b9d00561eebb15b37ad">createorder</a> (eosio::name coopname, eosio::name orderer, checksum256 order_hash, checksum256 offer_hash, eosio::name offerer, eosio::name delivery_braname, eosio::asset quantity, eosio::asset unit_price, eosio::asset package_size, uint32_t warranty_period_secs, checksum256 batch_hash, <a class="el" href="structdocument2.html">document2</a> convert_statement)</td></tr>
+<tr class="memdesc:ada3144231e023b9d00561eebb15b37ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заказчик размещает заказ на товар из каталога (Story 4.1). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.mkt.lock (TRANSFER w.wal.share → w.mkt.order). <code>convert_statement</code> — подписанное заказчиком заявление о конвертации паевого взноса в членский по программе «Стол заказов»; публикуется в реестр документов отдельным пакетом (package = hash заявления).  <a href="classmarketplace.html#ada3144231e023b9d00561eebb15b37ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:ada3144231e023b9d00561eebb15b37ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441965683562db99624ce63888d89908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a441965683562db99624ce63888d89908">stockorder</a> (eosio::name coopname, eosio::name orderer, checksum256 order_hash, checksum256 offer_hash, eosio::name delivery_braname, eosio::asset quantity, eosio::asset unit_price, eosio::asset package_size, uint32_t warranty_period_secs, checksum256 batch_hash)</td></tr>
+<tr class="memdesc:a441965683562db99624ce63888d89908"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заказ из обезличенного остатка склада кооператива (requirement 76). Продавец — сам кооператив (<code>offerer == coopname</code>), имущество уже на счёте 10 после ранее закрытых приёмок, поэтому Order создаётся сразу в <code>acceptcoop</code> и идёт только через выдачу signiss1/signiss2. Этапы поставки и выплата поставщику для такого заказа не существуют.  <a href="classmarketplace.html#a441965683562db99624ce63888d89908">Подробнее...</a><br /></td></tr>
+<tr class="separator:a441965683562db99624ce63888d89908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2791da98fdf631db6ed15fc380f2dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a2a2791da98fdf631db6ed15fc380f2dd">convert</a> (eosio::name coopname, eosio::name orderer, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> convert_statement)</td></tr>
+<tr class="memdesc:a2a2791da98fdf631db6ed15fc380f2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация паевого взноса пайщика в членский кошелёк «Стола заказов» (requirement 76, заказ из остатка из членских средств). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.mkt.conv (TRANSFER w.wal.share → w.mkt.member, Дт 80 / Кт 86). <code>convert_statement</code> — подписанное заказчиком Заявление о конвертации (шаблон 1110), публикуется в реестр документов отдельным пакетом (package = hash заявления). Выполняется перед <code>stockorder</code>, когда членских средств пайщика не хватает на заказ из остатка (на полную сумму или только на дельту превышения над высвобождённым при замене).  <a href="classmarketplace.html#a2a2791da98fdf631db6ed15fc380f2dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2a2791da98fdf631db6ed15fc380f2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7541997af123309fb247b13336b0468c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a7541997af123309fb247b13336b0468c">cancelorder</a> (eosio::name coopname, eosio::name orderer, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a7541997af123309fb247b13336b0468c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заказчик отменяет заказ до акцепта (Story 4.4). Триггерит o.mkt.unlock. Заказ из остатка кооператива (offerer == coopname) отменяется и в <code>acceptcoop</code> — до первой подписи акта выдачи (откат оператора, requirement 76 решение 11).  <a href="classmarketplace.html#a7541997af123309fb247b13336b0468c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7541997af123309fb247b13336b0468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66734a46790ca41c9453b16c5604fd25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a66734a46790ca41c9453b16c5604fd25">expireorder</a> (eosio::name coopname, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a66734a46790ca41c9453b16c5604fd25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend закрывает Order по таймауту цикла отсечки (Story 4.3). Per-Order: o.mkt.unlock + статус active → cancelled. Backend вычисляет threshold по batch'у вне контракта; для каждого истёкшего Order'а вызывается отдельный <code>expireorder</code>.  <a href="classmarketplace.html#a66734a46790ca41c9453b16c5604fd25">Подробнее...</a><br /></td></tr>
+<tr class="separator:a66734a46790ca41c9453b16c5604fd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e86ea40bb6637a3c4d4dfe3d1686ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a27e86ea40bb6637a3c4d4dfe3d1686ed">closeorder</a> (eosio::name coopname, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a27e86ea40bb6637a3c4d4dfe3d1686ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрыть выданный заказ после выхода гарантийного срока: терминал жизненного цикла, запись стирается из RAM. Вызывается автоматизированной службой по расписанию; до выхода гарантийного срока, при незавершённой выплате поставщику или открытом возврате закрытие отклоняется.  <a href="classmarketplace.html#a27e86ea40bb6637a3c4d4dfe3d1686ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27e86ea40bb6637a3c4d4dfe3d1686ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4b04f718754e3e0b346dfc633d67f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a8e4b04f718754e3e0b346dfc633d67f5">acceptorder</a> (eosio::name coopname, eosio::name offerer, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a8e4b04f718754e3e0b346dfc633d67f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставщик акцептует один Order (Story 4.5). Без ledger2-операций — статус active → accepted. Backend проходит циклом по orders соответствующего batch'а, вызывая <code>acceptorder</code> per Order.  <a href="classmarketplace.html#a8e4b04f718754e3e0b346dfc633d67f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8e4b04f718754e3e0b346dfc633d67f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3024511c2010779473489d6a470c18db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a3024511c2010779473489d6a470c18db">declineorder</a> (eosio::name coopname, eosio::name offerer, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a3024511c2010779473489d6a470c18db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставщик отказывается от одного Order'а до акцепта (Story 4.5). Per-Order: o.mkt.unlock на total_cost + статус active → cancelled. Backend проходит циклом по orders батча, вызывая <code>declineorder</code> per Order.  <a href="classmarketplace.html#a3024511c2010779473489d6a470c18db">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3024511c2010779473489d6a470c18db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace19b86a0a73bb3010dda0329d7ab052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ace19b86a0a73bb3010dda0329d7ab052">signsupp</a> (eosio::name coopname, eosio::name offerer, checksum256 order_hash, eosio::name accept_braname, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:ace19b86a0a73bb3010dda0329d7ab052"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставщик первой подписью на АПП приёмки фиксирует партию по одному Order'у (Story 5.3/5.4). Без ledger2-операций — статус accepted → supply_prepared. Параметр <code>accept_braname</code> указывает приёмный КУ; запись в Order. Подпись валидируется как <code>verify_document_or_fail(act, {offerer})</code>. Backend проходит циклом по orders батча с одинаковым <code>act</code>.  <a href="classmarketplace.html#ace19b86a0a73bb3010dda0329d7ab052">Подробнее...</a><br /></td></tr>
+<tr class="separator:ace19b86a0a73bb3010dda0329d7ab052"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21480a6405ac2812718efc27833fa79f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a21480a6405ac2812718efc27833fa79f">signchair</a> (eosio::name coopname, eosio::name signer, checksum256 order_hash, eosio::asset actual_quantity, eosio::asset actual_unit_price, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a21480a6405ac2812718efc27833fa79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель приёмного КУ ставит закрывающую подпись на АПП приёмки одного Order'а (Story 5.3/5.4). Per-Order: только o.mkt.purch (Дт 10 / Кт 86). Выплата поставщику (o.mkt.payout) — отдельным lazy action'ом <code>payout</code> после подтверждения кассиром фактического банковского перевода (E11 техдолг 598-16, Locked Decision L12). Авторизация подписи: председатель / trustee / trusted ∈ branches[o.accept_braname]. Backend проходит циклом по orders батча с одинаковым <code>act</code>.  <a href="classmarketplace.html#a21480a6405ac2812718efc27833fa79f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21480a6405ac2812718efc27833fa79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cfaa9384cabdb28080e9b75f5daace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a12cfaa9384cabdb28080e9b75f5daace">payout</a> (eosio::name coopname, checksum256 order_hash)</td></tr>
+<tr class="memdesc:a12cfaa9384cabdb28080e9b75f5daace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициация исходящей выплаты поставщику через контракт gateway по одному Order'у (E11 техдолг 598-16, Locked Decision L12). Per-Order: inline-вызов <code><a class="el" href="group__public__gateway__actions.html#ga1e02f2c8bf5bb52d78e05fae71d274d8" title="Создание исходящего платежа. Создает новый запрос на исходящий платеж в системе процессинга.">gateway::createoutpay</a></code> с callback'ами на <code>payconfirm</code> / <code>paydecline</code>. Ledger2-операция o.mkt.payout (Дт 86 / Кт 51) применяется НЕ здесь, а в callback'е <code>payconfirm</code> после действия кассира. Статус Order'а не меняется; защита от двойного запроса — через <code>order.payout_status</code> (NONE/DECLINED → PENDING).  <a href="classmarketplace.html#a12cfaa9384cabdb28080e9b75f5daace">Подробнее...</a><br /></td></tr>
+<tr class="separator:a12cfaa9384cabdb28080e9b75f5daace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a206d4df7a9537b27b085ca50aa631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a54a206d4df7a9537b27b085ca50aa631">payconfirm</a> (eosio::name coopname, checksum256 outcome_hash)</td></tr>
+<tr class="memdesc:a54a206d4df7a9537b27b085ca50aa631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a> — кассир подтвердил банковский перевод поставщику (E11 техдолг 598-16, Locked Decision L12). Здесь применяется o.mkt.payout (Дт 86 / Кт 51) и <code>payout_status</code> переходит PENDING → COMPLETED. Авторизация: <code>_gateway</code>. <code>outcome_hash</code> совпадает с <code>order.hash</code> (так задано при <code>payout</code>).  <a href="classmarketplace.html#a54a206d4df7a9537b27b085ca50aa631">Подробнее...</a><br /></td></tr>
+<tr class="separator:a54a206d4df7a9537b27b085ca50aa631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cc9ccc7238f5f30b55721178e63bc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a85cc9ccc7238f5f30b55721178e63bc5">paydecline</a> (eosio::name coopname, checksum256 outcome_hash, std::string reason)</td></tr>
+<tr class="memdesc:a85cc9ccc7238f5f30b55721178e63bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a> — кассир отметил, что банковский перевод не состоялся (E11 техдолг 598-16, Locked Decision L12). Ledger2-операция НЕ применяется; обязательство Кт 86 остаётся открытым. <code>payout_status</code> PENDING → DECLINED; <code>payout_decline_reason</code> сохраняется. Авторизация: <code>_gateway</code>.  <a href="classmarketplace.html#a85cc9ccc7238f5f30b55721178e63bc5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a85cc9ccc7238f5f30b55721178e63bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c1445717eab722add5409e9fa48192"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a58c1445717eab722add5409e9fa48192">markdown</a> (eosio::name coopname, checksum256 order_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:a58c1445717eab722add5409e9fa48192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание уценки по заказу из остатка кооператива (requirement 76). Разница между стоимостью прибытия выданного и фактической суммой выдачи выбывает со счёта 10 в прочие расходы: o.mkt.loss (NONE, Дт 91 / Кт 10). Вместе с o.mkt.consum даёт выбытие по полной стоимости прибытия — на складе ничего не зависает. Вызывает backend после финализации выдачи (сумму считает по выданным позициям). Погашение накопленного на 91 (Дт 86 / Кт 91) — будущий процесс по образцу списания скоропорта.  <a href="classmarketplace.html#a58c1445717eab722add5409e9fa48192">Подробнее...</a><br /></td></tr>
+<tr class="separator:a58c1445717eab722add5409e9fa48192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4739bf2ab3e73999e0e429840659ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a6e4739bf2ab3e73999e0e429840659ef">signiss1</a> (eosio::name coopname, eosio::name signer, checksum256 order_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a6e4739bf2ab3e73999e0e429840659ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель КУ выдачи открывает выдачу первой подписью АПП-выдачи (Story 6.1). Без ledger2-операций — статус ready_to_receive. Авторизация: подписант ∈ branches[o.delivery_braname].  <a href="classmarketplace.html#a6e4739bf2ab3e73999e0e429840659ef">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6e4739bf2ab3e73999e0e429840659ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3485cbefe95dfaefb8893ccc5939ad57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a3485cbefe95dfaefb8893ccc5939ad57">signiss2</a> (eosio::name coopname, eosio::name orderer, checksum256 order_hash, eosio::asset actual_quantity, eosio::asset actual_unit_price, eosio::name delivery_signer, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a3485cbefe95dfaefb8893ccc5939ad57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заказчик ставит финальную подпись АПП-выдачи (Story 6.3). Per-Order с поддержкой actual_quantity ≠ ordered (Story 6.2). Atomic: [o.mkt.unlock на разницу если actual&lt;ordered | o.mkt.lock на разницу если actual&gt;ordered].  <a href="classmarketplace.html#a3485cbefe95dfaefb8893ccc5939ad57">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3485cbefe95dfaefb8893ccc5939ad57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a37a786a52c4f2057d98b6d3849a74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a05a37a786a52c4f2057d98b6d3849a74">setfee</a> (eosio::name coopname, uint64_t membership_fee_percent)</td></tr>
+<tr class="memdesc:a05a37a786a52c4f2057d98b6d3849a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка единой ставки членского взноса «Стола заказов» (requirement b6). Одна ставка на весь кооператив (HUNDR_PERCENTS = 100%); задаёт администратор. Применяется к новым заказам; в созданных заказах взнос зафиксирован полем Order.membership_fee.  <a href="classmarketplace.html#a05a37a786a52c4f2057d98b6d3849a74">Подробнее...</a><br /></td></tr>
+<tr class="separator:a05a37a786a52c4f2057d98b6d3849a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e930f674b2721508f3946803499c20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a73e930f674b2721508f3946803499c20">submretrn</a> (eosio::name coopname, eosio::name orderer, checksum256 request_hash, checksum256 original_order_hash, eosio::asset actual_quantity, std::string reason_text, std::vector&lt; checksum256 &gt; photos, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a73e930f674b2721508f3946803499c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Пайщик подаёт заявление на гарантийный возврат (Story 7.1).  <a href="classmarketplace.html#a73e930f674b2721508f3946803499c20">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73e930f674b2721508f3946803499c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcb9d66c8f375bbc3a8138f7731640f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#adcb9d66c8f375bbc3a8138f7731640f5">aprretrem</a> (eosio::name coopname, eosio::name signer, eosio::name braname, checksum256 request_hash)</td></tr>
+<tr class="memdesc:adcb9d66c8f375bbc3a8138f7731640f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель удалённо одобряет очный визит (Story 7.2). Авторизация: подписант ∈ branches[braname]; параметр <code>braname</code> фиксирует КУ, в котором рассматривается заявление.  <a href="classmarketplace.html#adcb9d66c8f375bbc3a8138f7731640f5">Подробнее...</a><br /></td></tr>
+<tr class="separator:adcb9d66c8f375bbc3a8138f7731640f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4db41eb72a746fde9ac444ea1c62ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#ad4db41eb72a746fde9ac444ea1c62ef4">rejretrem</a> (eosio::name coopname, eosio::name signer, eosio::name braname, checksum256 request_hash, std::string reason)</td></tr>
+<tr class="memdesc:ad4db41eb72a746fde9ac444ea1c62ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель удалённо отказывает (Story 7.2). Авторизация: подписант ∈ branches[braname].  <a href="classmarketplace.html#ad4db41eb72a746fde9ac444ea1c62ef4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad4db41eb72a746fde9ac444ea1c62ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a844c62f2c2ebe761dc41e0395a435aa0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a844c62f2c2ebe761dc41e0395a435aa0">accretrn</a> (eosio::name coopname, eosio::name signer, eosio::name braname, checksum256 request_hash, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a844c62f2c2ebe761dc41e0395a435aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель принимает возврат на очном осмотре (Story 7.4). Один шаг: o.mkt.return (compensating forward к o.mkt.consum). Председатель накладывает вторую подпись на заявление пайщика (<code>statement</code> несёт обе подписи — пайщика и председателя), отдельного документа решения нет. Авторизация: подписант ∈ branches[braname].  <a href="classmarketplace.html#a844c62f2c2ebe761dc41e0395a435aa0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a844c62f2c2ebe761dc41e0395a435aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4443e7837153824996322717ab78a29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#aa4443e7837153824996322717ab78a29">rejretrn</a> (eosio::name coopname, eosio::name signer, eosio::name braname, checksum256 request_hash, std::string reason)</td></tr>
+<tr class="memdesc:aa4443e7837153824996322717ab78a29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель отказывает на очном осмотре (Story 7.3). Авторизация: подписант ∈ branches[braname].  <a href="classmarketplace.html#aa4443e7837153824996322717ab78a29">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4443e7837153824996322717ab78a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cdb08e07e4382381a0b5c321b8df020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a2cdb08e07e4382381a0b5c321b8df020">propwroff</a> (eosio::name coopname, eosio::name proposed_by, checksum256 proposal_hash, std::vector&lt; wroff_item &gt; items, <a class="el" href="structdocument2.html">document2</a> statement, std::string meta)</td></tr>
+<tr class="memdesc:a2cdb08e07e4382381a0b5c321b8df020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend выносит проект списания на повестку совета (Story 8.1). Без ledger2-операций — только создание proposal с N позициями (статус proposed) и тем же inline-вызовом ставит повестку: <code><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a></code> от <code>permission_level{_marketplace, active}</code> с <code>callback_contract=marketplace</code>, <code>confirm_callback=onmktwoauth</code>, <code>decline_callback=onmktwodecl</code>, <code>type=mktwroff</code>, <code>hash=proposal_hash</code>, <code>statement</code> (Заявление 1106). Проект может подаваться председателем (за подписью) либо автоматически — мост повестки целиком на контракте, без участия backend.  <a href="classmarketplace.html#a2cdb08e07e4382381a0b5c321b8df020">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cdb08e07e4382381a0b5c321b8df020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf34671ce0841fa8ff7c1554fa954987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#acf34671ce0841fa8ff7c1554fa954987">onmktwoauth</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:acf34671ce0841fa8ff7c1554fa954987"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <code><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139" title="Исполнение решения совета">soviet::exec</a></code> после авторизации Протокола совета (registry 1105) председателем (Story 8.4). PROPOSED → AUTHORIZED; сохраняется <code>authorization</code> в <code>wroffprops.protocol</code>. Цикл per-item списания запускает backend через <code>execwroff</code> после получения этой дельты.  <a href="classmarketplace.html#acf34671ce0841fa8ff7c1554fa954987">Подробнее...</a><br /></td></tr>
+<tr class="separator:acf34671ce0841fa8ff7c1554fa954987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5737c5bc864a86887f58f571d9873ff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a5737c5bc864a86887f58f571d9873ff1">onmktwodecl</a> (eosio::name coopname, checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:a5737c5bc864a86887f58f571d9873ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback от <code><a class="el" href="classsoviet.html#aec30e87d23bbd581029d7358d96376e0">soviet::cancelexprd</a></code> (или от любого decline-эффекта в soviet) — повестка отклонена или просрочена (Story 8.4). PROPOSED → REJECTED; <code>reason</code> сохраняется в <code>wroffprops.reject_reason</code>. Без ledger2-движений.  <a href="classmarketplace.html#a5737c5bc864a86887f58f571d9873ff1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5737c5bc864a86887f58f571d9873ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f05c4e5065037881f807a1a95cc3b68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a5f05c4e5065037881f807a1a95cc3b68">execwroff</a> (eosio::name coopname, eosio::name signer, checksum256 proposal_hash, uint64_t item_index)</td></tr>
+<tr class="memdesc:a5f05c4e5065037881f807a1a95cc3b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Backend исполняет одну позицию авторизованного проекта списания (Story 8.4). Per-item: <code>o.mkt.wroff</code>, <code>items[item_index].executed = true</code>. Когда все items исполнены, статус AUTHORIZED → EXECUTED.  <a href="classmarketplace.html#a5f05c4e5065037881f807a1a95cc3b68">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5f05c4e5065037881f807a1a95cc3b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aacc3db8101ea6d72a4c9c03b974511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a5aacc3db8101ea6d72a4c9c03b974511">confirmwroff</a> (eosio::name coopname, eosio::name signer, checksum256 proposal_hash, eosio::name braname, <a class="el" href="structdocument2.html">document2</a> memo)</td></tr>
+<tr class="memdesc:a5aacc3db8101ea6d72a4c9c03b974511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель кооперативного участка подтверждает фактическое списание со склада своего КУ по авторизованному советом проекту (ручной шаг стола ПВЗ).  <a href="classmarketplace.html#a5aacc3db8101ea6d72a4c9c03b974511">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5aacc3db8101ea6d72a4c9c03b974511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmarketplace.html#a4e1c2dfb1deae979d8d3a4c2d3400058">migrate</a> ()</td></tr>
+<tr class="memdesc:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заглушка миграции — donor-таблиц нет, мигрировать нечего. Оставлена для совместимости с CMake-build и прежним ABI.  <a href="classmarketplace.html#a4e1c2dfb1deae979d8d3a4c2d3400058">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4e1c2dfb1deae979d8d3a4c2d3400058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Контракт <code>marketplace</code> — кооперативный «Стол заказов» в режиме членских взносов. </p>
+<p >Реализует canonical actions трёх процессов из YAML-стандартов:</p><ul>
+<li><b>p.mkt.supply</b> (13 actions): createorder, stockorder, cancelorder, expireorder, acceptorder, declineorder, signsupp, signchair, signiss1, signiss2, closeorder, markdown, setfee.</li>
+<li><b>p.mkt.return</b> (5 actions): submretrn, aprretrem, rejretrem, accretrn, rejretrn.</li>
+<li><b>p.mkt.wroff</b> (4 actions): propwroff, execwroff, onmktwoauth, onmktwodecl. Cписание скоропорта идёт через канонический паттерн «решение совета»: backend подписывает Заявление о списании (registry 1106) ключом кооператива, вызывает <code>propwroff</code> (запись wroffprops::proposed) + <code><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a>(type=mktwroff, callback=onmktwoauth/onmktwodecl)</code>. После голосования совета и подписи Протокола (registry 1105) chairman'ом <a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139" title="Исполнение решения совета">soviet::exec</a> автоматически вызывает callback <code>onmktwoauth</code> (PROPOSED → AUTHORIZED, сохраняется protocol2) или <code>onmktwodecl</code> (PROPOSED → REJECTED). Только после AUTHORIZED backend циклом по items вызывает <code>execwroff</code> per-item (o.mkt.wroff на каждой позиции).</li>
+</ul>
+<p >Все per-batch операции на on-chain выполняются per-Order (бэкенд проходит циклом по Order'ам соответствующего batch'а, объединяя их по <code>batch_hash</code>). Векторов order_hashes в actions нет — это ограничение на размер транзакции в Antelope (тысячи orders в одной транзакции не пройдут).</p>
+<p >Все ledger2-движения средств — через <code><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(_marketplace, …)</code>, никаких прямых wallet/account-операций. 13 marketplace-операций зарегистрированы в <code><a class="el" href="operations_8hpp.html">lib/core/ledger2/operations.hpp</a></code> (<code>OPERATION_REGISTRY</code>).</p>
+<p >Composite-операции (consum+consum2, return+return2, wroff+wroff2) — последовательные <code><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a></code> в одной транзакции Antelope (атомарность через single-action wrapper).</p>
+<p >Авторизация подписей под актами / решениями привязана к кооперативному участку (КУ) через контракт <code>branch</code> и helper <code>Branch::is_user_authorized(coopname, braname, signer)</code> — председатель КУ может делегировать подпись доверенному лицу из <code><a class="el" href="structcoobranch.html#ac9270130a66e62196456774227a34e5f">coobranch.trusted</a>[]</code>.</p>
+<p >Источник правды по логике actions, гардам, state-переходам и операциям — три YAML-файла рядом с этим .hpp:</p><ul>
+<li><code>p.mkt.supply.standard.yaml</code></li>
+<li><code>p.mkt.return.standard.yaml</code></li>
+<li><code>p.mkt.wroff.standard.yaml</code></li>
+</ul>
+<p >Donor-actions старой клиринговой модели (FR19a, AR30) удалены вместе с соответствующими таблицами <code>Marketplace::request/segment/shipment</code>. </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="aa7c0193de8af681a5e36bdc3fb75d595" name="aa7c0193de8af681a5e36bdc3fb75d595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7c0193de8af681a5e36bdc3fb75d595">&#9670;&nbsp;</a></span>marketplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">marketplace::marketplace </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::datastream&lt; const char * &gt;&#160;</td>
+          <td class="paramname"><em>ds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8e4b04f718754e3e0b346dfc633d67f5" name="a8e4b04f718754e3e0b346dfc633d67f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4b04f718754e3e0b346dfc633d67f5">&#9670;&nbsp;</a></span>acceptorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::acceptorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>offerer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поставщик акцептует один Order (Story 4.5). Без ledger2-операций — статус active → accepted. Backend проходит циклом по orders соответствующего batch'а, вызывая <code>acceptorder</code> per Order. </p>
+<p >Поставщик акцептует один Order (Story 4.5, p.mkt.supply).</p>
+<p >Без ledger2-операций — статус active → accepted. Backend проходит циклом по orders соответствующего batch'а, вызывая <code>acceptorder</code> per Order (контракт не принимает векторов order_hash — единичные транзакции масштабируются на любой размер batch'а).</p>
+<p >После акцепта поставщик считается обязанным доставить партию: отдельная подпись «готов отгрузить» (бывший prepship) удалена из процесса — следующий шаг сразу signsupp с актом приёмки.</p>
+<p >Guards:</p><ul>
+<li>Order существует и в статусе active.</li>
+<li>actor == order.offerer. </li>
+</ul>
+
+</div>
+</div>
+<a id="a844c62f2c2ebe761dc41e0395a435aa0" name="a844c62f2c2ebe761dc41e0395a435aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844c62f2c2ebe761dc41e0395a435aa0">&#9670;&nbsp;</a></span>accretrn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::accretrn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель принимает возврат на очном осмотре (Story 7.4). Один шаг: o.mkt.return (compensating forward к o.mkt.consum). Председатель накладывает вторую подпись на заявление пайщика (<code>statement</code> несёт обе подписи — пайщика и председателя), отдельного документа решения нет. Авторизация: подписант ∈ branches[braname]. </p>
+<p >Председатель принимает гарантийный возврат на очном осмотре (Story 7.4, p.mkt.return).</p>
+<ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.return, fact_cost, orderer, hash=request.hash) — ISSUE w.mkt.member, Дт 10 / Кт 86. Восстановление средств на членском «Стола заказов» заказчика и возврат имущества на склад через целевое финансирование.</li>
+</ul>
+<p >Compensating forward, не revert (Locked Decision L3 — AR14): новое событие в journal с прикладным полем <code>original_consume_op_id</code> (заполняется backend'ом в submretrn) для трассировки. Исходная o.mkt.consum в журнале НЕ модифицируется.</p>
+<p >Терминал жизненного цикла: запись заявления стирается из RAM, история (включая со-подписанное заявление) остаётся в журнале действий. Имущество возвращается на склад КУ; средства восстанавливаются на w.mkt.member.available заказчика.</p>
+<p >Принятие возврата оформляется второй подписью председателя на заявлении пайщика (канон двухподписных актов): на вход приходит тот же документ заявления (registry 1104) с двумя подписями — пайщика и председателя; обе проверяются, поле <code>statement</code> перезаписывается со-подписанной версией. Отдельного документа решения нет.</p>
+<p >Guards:</p><ul>
+<li>Указанный КУ (<code>braname</code>) — участок выдачи исходного заказа.</li>
+<li>Подписант (<code>signer</code>) авторизован для указанного КУ (<code>braname</code>).</li>
+<li>return_request.status == approved_for_visit.</li>
+<li>statement подписан пайщиком (orderer) и председателем (signer). </li>
+</ul>
+
+</div>
+</div>
+<a id="adcb9d66c8f375bbc3a8138f7731640f5" name="adcb9d66c8f375bbc3a8138f7731640f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb9d66c8f375bbc3a8138f7731640f5">&#9670;&nbsp;</a></span>aprretrem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::aprretrem </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель удалённо одобряет очный визит (Story 7.2). Авторизация: подписант ∈ branches[braname]; параметр <code>braname</code> фиксирует КУ, в котором рассматривается заявление. </p>
+<p >Председатель удалённо одобряет очный визит (Story 7.2, p.mkt.return).</p>
+<p >Без ledger2-операций и без документов. Процедурное действие: статус return_request pending_review → approved_for_visit фиксируется вместе с actor + blockchain_actions[at]. Подпись на документе на удалённом этапе не требуется — она нужна только при принятии возврата (accretrn).</p>
+<p >Guards:</p><ul>
+<li>Указанный КУ (<code>braname</code>) — участок выдачи исходного заказа.</li>
+<li>Подписант (<code>signer</code>) авторизован для указанного КУ (<code>braname</code>): председатель / trustee / trusted в <code>branches[braname]</code>.</li>
+<li>return_request.status == pending_review. </li>
+</ul>
+
+</div>
+</div>
+<a id="a7541997af123309fb247b13336b0468c" name="a7541997af123309fb247b13336b0468c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7541997af123309fb247b13336b0468c">&#9670;&nbsp;</a></span>cancelorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::cancelorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заказчик отменяет заказ до акцепта (Story 4.4). Триггерит o.mkt.unlock. Заказ из остатка кооператива (offerer == coopname) отменяется и в <code>acceptcoop</code> — до первой подписи акта выдачи (откат оператора, requirement 76 решение 11). </p>
+<p >Заказчик отменяет заказ / отказывается от получения позиции (Story 4.4 + удержание при отказе, p.mkt.supply).</p>
+<p >Граница удержания — акцепт поставщиком (acceptorder). До акцепта поставщик ещё не взял обязательство и ничего не везёт — отмена бесплатна (полный возврат резерва и членского взноса). После акцепта поставщик уже принял заявку и доставляет имущество, кооператив несёт риск его оплаты — отказ пайщика удерживает 50% (тела заказа и взноса) в общий кошелёк КУ; имущество остаётся на складе КУ, вторая половина возвращается пайщику.</p>
+<p >Guards:</p><ul>
+<li>Order существует, actor == order.orderer.</li>
+<li>active → бесплатно (полный возврат).</li>
+<li>accepted / supplyprep / acceptcoop → удержание 50% (после акцепта).</li>
+<li>readyrecv / received → закрыто (акт выдачи уже открыт).</li>
+<li>Заказ из остатка кооператива (offerer == coopname, см. stockorder): поставщика и его риска нет — отмена бесплатна в acceptcoop до первой подписи акта выдачи (requirement 76, решение 11); после signiss1 закрыта. </li>
+</ul>
+
+</div>
+</div>
+<a id="a27e86ea40bb6637a3c4d4dfe3d1686ed" name="a27e86ea40bb6637a3c4d4dfe3d1686ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e86ea40bb6637a3c4d4dfe3d1686ed">&#9670;&nbsp;</a></span>closeorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::closeorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрыть выданный заказ после выхода гарантийного срока: терминал жизненного цикла, запись стирается из RAM. Вызывается автоматизированной службой по расписанию; до выхода гарантийного срока, при незавершённой выплате поставщику или открытом возврате закрытие отклоняется. </p>
+<p >Backend закрывает выданный заказ после выхода гарантийного срока (p.mkt.supply; принцип конечного жизненного цикла RAM-записей).</p>
+<p >Терминал жизненного цикла выданного заказа: запись стирается из RAM, история заказа (акты, выплата, гарантия) остаётся в журнале действий. Вызывается автоматизированной службой по расписанию; контракт — финальный судья условий закрытия, до их наступления закрытие отклоняется:</p>
+<p >Guards:</p><ul>
+<li>require_auth(coopname) — backend от имени кооператива;</li>
+<li>заказ в статусе received (выдан заказчику);</li>
+<li>гарантийный срок вышел: warranty_until ≤ now. Для заказов без гарантии (warranty_period_secs == 0) условие считается выполненным сразу;</li>
+<li>гарантийный возврат не в работе: если по заказу подавалось заявление (return_request_id != 0), его запись должна быть уже стёрта терминалом процесса возврата;</li>
+<li>выплата поставщику завершена (payout_status == completed). Заказ из остатка кооператива (offerer == coopname) выплаты не предполагает. </li>
+</ul>
+
+</div>
+</div>
+<a id="a5aacc3db8101ea6d72a4c9c03b974511" name="a5aacc3db8101ea6d72a4c9c03b974511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aacc3db8101ea6d72a4c9c03b974511">&#9670;&nbsp;</a></span>confirmwroff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::confirmwroff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>proposal_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>memo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель кооперативного участка подтверждает фактическое списание со склада своего КУ по авторизованному советом проекту (ручной шаг стола ПВЗ). </p>
+<p >Председатель кооперативного участка подтверждает фактическое списание со склада своего КУ по авторизованному советом проекту (ручной шаг стола ПВЗ, p.mkt.wroff).</p>
+<p >Совет лишь принимает решение о допустимости списания (proposed → authorized); фактическое выбытие имущества со склада инициирует председатель КУ, подписывая Служебную записку о списании (registry 1111). Один вызов закрывает все неисполненные позиции одного КУ (<code>braname</code>) за одну транзакцию: per-КУ гранулярность разбивает большой проект так, чтобы протокол поместился в лимит транзакции, и привязывает выбытие к подписи ответственного за склад.</p>
+<p >Эффект:</p><ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.wroff) по каждой неисполненной позиции с этим <code>braname</code> (Дт 86 / Кт 10), как в <code>execwroff</code>.</li>
+<li>Служебная записка <code>memo</code> публикуется в реестр документов (<code>make_complete_document</code>, package = proposal_hash).</li>
+<li>Позиции КУ помечаются executed; когда исполнены все позиции проекта, запись proposal стирается из RAM (терминал жизненного цикла).</li>
+</ul>
+<p >Guards:</p><ul>
+<li>proposal.status == AUTHORIZED (совет уже одобрил);</li>
+<li><code>signer</code> уполномочен для КУ <code>braname</code> (<code>branches[braname].is_user_authorized</code>) — председатель КУ или его доверенное лицо;</li>
+<li>у проекта есть хотя бы одна неисполненная позиция этого КУ.</li>
+</ul>
+<p >Совет своим решением (proposed → authorized через <code>onmktwoauth</code>) лишь признаёт списание допустимым. Имущество физически выбывает со склада только после того, как ответственный за склад председатель КУ подпишет Служебную записку о списании (registry 1111) — это и делает данный action.</p>
+<p >Гранулярность — по одному КУ (<code>braname</code>) за вызов: проект списания может охватывать несколько участков, и каждый председатель закрывает только свою часть. Все неисполненные позиции данного КУ списываются в одной транзакции (<a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a> o.mkt.wroff, Дт 86 / Кт 10 — как в <code>execwroff</code>). Служебная записка публикуется в реестр документов в пакете процесса списания (package = proposal_hash). Исполнение последней позиции проекта (по всем КУ) стирает запись из RAM — терминал жизненного цикла. </p>
+
+</div>
+</div>
+<a id="a2a2791da98fdf631db6ed15fc380f2dd" name="a2a2791da98fdf631db6ed15fc380f2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2791da98fdf631db6ed15fc380f2dd">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::convert </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конвертация паевого взноса пайщика в членский кошелёк «Стола заказов» (requirement 76, заказ из остатка из членских средств). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.mkt.conv (TRANSFER w.wal.share → w.mkt.member, Дт 80 / Кт 86). <code>convert_statement</code> — подписанное заказчиком Заявление о конвертации (шаблон 1110), публикуется в реестр документов отдельным пакетом (package = hash заявления). Выполняется перед <code>stockorder</code>, когда членских средств пайщика не хватает на заказ из остатка (на полную сумму или только на дельту превышения над высвобождённым при замене). </p>
+<p >Конвертация паевого взноса пайщика в членский кошелёк «Стола заказов» (requirement 76, заказ из остатка из членских средств).</p>
+<p >Заказ из остатка (<code>stockorder</code>) фондируется ВСЕГДА из членского кошелька пайщика начисто. Этот action — отдельный шаг пополнения членского кошелька с паевого: пайщик подаёт Заявление о конвертации (шаблон 1110) с просьбой транслировать паевой взнос с программы «Цифровой кошелёк» в программу «Стол заказов». Зеркало <code><a class="el" href="group__public__capital__actions.html#ga0928fc2a4de6bc1901f51a5bbf6639a3" title="Конвертация сегмента — финальная фаза процесса внесения РИД (p.cap.rid).">capital::convertsegm</a></code> в Благорост.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.mkt.conv</code> (TRANSFER w.wal.share → w.mkt.member, Дт 80 / Кт 86) — паевой переходит в целевое финансирование на членский кошелёк программы.</li>
+</ul>
+<p >Когда вызывается (оркестрация на backend, всё в одной транзакции с <code>stockorder</code>):</p><ul>
+<li>докладка у стойки / обычный заказ из остатка, когда членских средств не хватает: конвертируется вся требуемая сумма;</li>
+<li>замена непоставленного на свободный остаток, когда замена дороже высвобожденного отменой бюджета: конвертируется только дельта превышения (в рамках высвобожденного доплаты с паевого нет).</li>
+</ul>
+<p >Guards:</p><ul>
+<li>amount &gt; 0 в _root_govern_symbol; подпись Заявления валидна (orderer).</li>
+<li>Заказчик — активный пайщик кооператива.</li>
+<li>w.wal.share.available заказчика &gt;= amount. </li>
+</ul>
+
+</div>
+</div>
+<a id="ada3144231e023b9d00561eebb15b37ad" name="ada3144231e023b9d00561eebb15b37ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3144231e023b9d00561eebb15b37ad">&#9670;&nbsp;</a></span>createorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::createorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>offer_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>offerer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>delivery_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>unit_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>package_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>warranty_period_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>batch_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>convert_statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заказчик размещает заказ на товар из каталога (Story 4.1). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.mkt.lock (TRANSFER w.wal.share → w.mkt.order). <code>convert_statement</code> — подписанное заказчиком заявление о конвертации паевого взноса в членский по программе «Стол заказов»; публикуется в реестр документов отдельным пакетом (package = hash заявления). </p>
+<p >Заказчик размещает заказ на товар (Story 4.1, p.mkt.supply шаг 1).</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.mkt.lock</code> (TRANSFER w.wal.share → w.mkt.order пайщика на total_cost, Дт 80 / Кт 86) — резерв средств заказчика под этот Order. Паевой пайщика переходит в целевое финансирование на резерв-кошелёк.</li>
+</ul>
+<p >Guards (из p.mkt.supply.standard.yaml + Locked Decision L6):</p><ul>
+<li>quantity &gt; 0; unit_price &gt; 0 в _root_govern_symbol.</li>
+<li>Order с таким hash ещё не создан (idempotency).</li>
+<li>Заказчик — активный пайщик кооператива (<code>get_participant_or_fail</code>).</li>
+<li><code>delivery_braname</code> существует в <code>branches</code> (КУ выдачи задаётся пайщиком из доступных и неизменен после создания Order'а).</li>
+<li>w.wal.share.available заказчика &gt;= total_cost; иначе createorder фейлится без создания Order'а.</li>
+<li>Подписка пайщика на оферту ЦПП «Стол заказов» (L2/L3 онбординг) — автоматически проверяется в <code><a class="el" href="group__public__ledger2__actions.html#gaff100a432e9d924b80e796b3e241417c" title="Атомарная операция по кошельку (issue/transfer/block/unblock).">ledger2::walletop</a></code> через <code>assert_program_signed</code> (cross-contract в <code>wallet::users.programs[]</code>) при первом TRANSFER на USER_SHARED-кошельке программы (w.mkt.order).</li>
+</ul>
+<p >Сообщения проверок — для прямого показа пользователю (UI ловит check'ом). </p>
+
+</div>
+</div>
+<a id="a3024511c2010779473489d6a470c18db" name="a3024511c2010779473489d6a470c18db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3024511c2010779473489d6a470c18db">&#9670;&nbsp;</a></span>declineorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::declineorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>offerer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поставщик отказывается от одного Order'а до акцепта (Story 4.5). Per-Order: o.mkt.unlock на total_cost + статус active → cancelled. Backend проходит циклом по orders батча, вызывая <code>declineorder</code> per Order. </p>
+<p >Поставщик отказывается от одного Order'а (Story 4.5 + отказ в приёмке, p.mkt.supply).</p>
+<p >Два случая, оба со стороны поставщика и оба без штрафа — полный возврат резерва и членского взноса заказчику (вина не его):</p><ol type="1">
+<li>До акцепта (active) — поставщик не берёт заявку в работу.</li>
+<li>Отказ в приёмке (accepted / supply_prepared) — поставщик привёз некондицию; кооператив не принимает позицию (ноль единиц в факт), поставщик подтверждает отмену поставки этой позиции и забирает имущество обратно. Имущество ещё не оприходовано на склад (purch на закрывающей подписи приёмки) и поставщик ещё не оплачен — клоубэка нет.</li>
+</ol>
+<p >Per-Order: o.mkt.unlock на total_cost (TRANSFER w.mkt.order → w.mkt.member — резерв возвращается на членский «Стола заказов» заказчика) + полный возврат взноса + erase. Backend проходит циклом по неотмеченным в приёмке orders — векторов order_hash нет.</p>
+<p >Guards:</p><ul>
+<li>Order существует, actor == order.offerer.</li>
+<li>Статус active / accepted / supply_prepared (до оприходования имущества). </li>
+</ul>
+
+</div>
+</div>
+<a id="a5f05c4e5065037881f807a1a95cc3b68" name="a5f05c4e5065037881f807a1a95cc3b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f05c4e5065037881f807a1a95cc3b68">&#9670;&nbsp;</a></span>execwroff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::execwroff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>proposal_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>item_index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Backend исполняет одну позицию авторизованного проекта списания (Story 8.4). Per-item: <code>o.mkt.wroff</code>, <code>items[item_index].executed = true</code>. Когда все items исполнены, статус AUTHORIZED → EXECUTED. </p>
+<p >Backend исполняет одну позицию авторизованного советом проекта списания скоропорта (Story 8.4, p.mkt.wroff).</p>
+<p >Защита от газового лимита (тысячи позиций в одной транзакции Antelope не помещаются) — backend проходит цикл и вызывает <code>execwroff</code> per item.</p>
+<p >Guards:</p><ul>
+<li>proposal.status == AUTHORIZED (callback <code>onmktwoauth</code> уже отработал);</li>
+<li>подписант (<code>signer</code>) авторизован для КУ-источника (<code>branches[items[item_index].braname]</code>).</li>
+</ul>
+<p >Per-item операция:</p><ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.wroff, item.amount, …, hash=proposal.hash) — Дт 86 / Кт 10 (списание со склада через целевое финансирование).</li>
+</ul>
+<p >Вызывается ТОЛЬКО после того, как совет авторизовал проект (status = AUTHORIZED через callback <code>onmktwoauth</code>). Backend проходит циклом по неисполненным позициям, вызывая <code>execwroff(proposal_hash, item_index)</code> per item — это снимает ограничение на максимальный размер протокола.</p>
+<p >Исполнение последней позиции (все items[i].executed == true) — терминал жизненного цикла: запись проекта стирается из RAM, история — в журнале действий и решении совета.</p>
+<p >Подписанный советом protocol уже лежит в <code>proposal.protocol</code> (положен callback'ом <code>onmktwoauth</code>), отдельно его передавать не нужно. </p>
+
+</div>
+</div>
+<a id="a66734a46790ca41c9453b16c5604fd25" name="a66734a46790ca41c9453b16c5604fd25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66734a46790ca41c9453b16c5604fd25">&#9670;&nbsp;</a></span>expireorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::expireorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Backend закрывает Order по таймауту цикла отсечки (Story 4.3). Per-Order: o.mkt.unlock + статус active → cancelled. Backend вычисляет threshold по batch'у вне контракта; для каждого истёкшего Order'а вызывается отдельный <code>expireorder</code>. </p>
+<p >Backend закрывает один Order по таймауту цикла отсечки заявок (Story 4.3, p.mkt.supply).</p>
+<p >Вызывается бэкендом после расчёта по batch'у: если за время цикла Offer'а threshold не достигнут, бэкенд проходит циклом по всем active Order'ам этого batch'а и для каждого вызывает <code>expireorder</code>. Контракт не знает про threshold — это вычисление backend'а; on-chain — только закрытие конкретного Order'а с возвратом резерва.</p>
+<p >Per-Order: o.mkt.unlock на total_cost (TRANSFER w.mkt.order → w.mkt.member — возврат резерва на членский «Стола заказов» заказчика) + статус active → cancelled.</p>
+<p >Guards:</p><ul>
+<li>Order существует и в статусе active (после акцепта поставщика expireorder не применим — поставщик уже взял обязательство; такие Order'ы должны идти через <code>signiss2</code> обычным порядком либо через отдельный механизм просрочки доставки).</li>
+<li>require_auth(coopname) — backend от имени кооператива. </li>
+</ul>
+
+</div>
+</div>
+<a id="a58c1445717eab722add5409e9fa48192" name="a58c1445717eab722add5409e9fa48192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c1445717eab722add5409e9fa48192">&#9670;&nbsp;</a></span>markdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::markdown </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Списание уценки по заказу из остатка кооператива (requirement 76). Разница между стоимостью прибытия выданного и фактической суммой выдачи выбывает со счёта 10 в прочие расходы: o.mkt.loss (NONE, Дт 91 / Кт 10). Вместе с o.mkt.consum даёт выбытие по полной стоимости прибытия — на складе ничего не зависает. Вызывает backend после финализации выдачи (сумму считает по выданным позициям). Погашение накопленного на 91 (Дт 86 / Кт 91) — будущий процесс по образцу списания скоропорта. </p>
+<p >Списание уценки по заказу из остатка кооператива (requirement 76, вопрос 4, p.mkt.supply).</p>
+<p >Имущество остатка оприходовано на счёт 10 по цене прибытия, а выдано пайщику могло быть с уценкой. <code>signiss2</code> (o.mkt.consum) закрывает Кт 10 только на фактическую сумму выдачи — без этого действия разница зависала бы на складе, которого физически уже нет. Здесь разница выбывает в прочие расходы:</p>
+<ul>
+<li><code>o.mkt.loss</code> (NONE, Дт 91 / Кт 10) — кошельки не двигаются, чисто бухгалтерская проводка на сумму уценки.</li>
+</ul>
+<p >Вместе consum + loss дают выбытие по полной стоимости прибытия. Накопленный расход на счёте 91 погашается ПОЗЖЕ отдельным процессом (Дт 86 / Кт 91) по образцу списания скоропорта через решение совета — этот шаг зафиксирован и пока не реализован.</p>
+<p >Вызывает backend сразу после финализации выдачи: сумму уценки он считает точно по выданным складским позициям (цены прибытия у позиций одного заказа могут отличаться — FIFO-резерв), контракту эта аналитика недоступна.</p>
+<p >Guards:</p><ul>
+<li>заказ существует и сделан из остатка кооператива (offerer == coopname);</li>
+<li>выдача завершена (status == received) — основание: двухподписный акт;</li>
+<li>amount &gt; 0 в валюте кооператива;</li>
+<li>идемпотентность: уценка по заказу ещё не списывалась (markdown_cost == 0). </li>
+</ul>
+
+</div>
+</div>
+<a id="a4e1c2dfb1deae979d8d3a4c2d3400058" name="a4e1c2dfb1deae979d8d3a4c2d3400058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1c2dfb1deae979d8d3a4c2d3400058">&#9670;&nbsp;</a></span>migrate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::migrate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заглушка миграции — donor-таблиц нет, мигрировать нечего. Оставлена для совместимости с CMake-build и прежним ABI. </p>
+
+</div>
+</div>
+<a id="acf34671ce0841fa8ff7c1554fa954987" name="acf34671ce0841fa8ff7c1554fa954987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf34671ce0841fa8ff7c1554fa954987">&#9670;&nbsp;</a></span>onmktwoauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::onmktwoauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <code><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139" title="Исполнение решения совета">soviet::exec</a></code> после авторизации Протокола совета (registry 1105) председателем (Story 8.4). PROPOSED → AUTHORIZED; сохраняется <code>authorization</code> в <code>wroffprops.protocol</code>. Цикл per-item списания запускает backend через <code>execwroff</code> после получения этой дельты. </p>
+<p >Callback от <code><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139" title="Исполнение решения совета">soviet::exec</a></code> после авторизации Протокола совета о списании скоропорта (registry 1105) председателем (Story 8.4, p.mkt.wroff).</p>
+<p >Авторизация: контракт <code>_soviet</code> (<code>require_auth(_soviet)</code>); сигнатура соответствует <code>authorize_action_effect</code> в soviet — <code>(coopname, hash, authorization)</code>.</p>
+<p >Соглашение о сигнатуре — <code>(coopname, hash, authorization)</code> — задано в <code>soviet::createagenda::authorize_action_effect</code>. Контракт <code>soviet</code> зовёт <code><a class="el" href="classmarketplace.html#acf34671ce0841fa8ff7c1554fa954987" title="Callback от soviet::exec после авторизации Протокола совета (registry 1105) председателем (Story 8....">marketplace::onmktwoauth</a></code> от своего имени, поэтому единственно допустимая авторизация — <code>_soviet</code>.</p>
+<p >Эффект:</p><ul>
+<li>Находит wroffprops по proposal_hash == <code>hash</code>.</li>
+<li>Проверяет, что текущий статус == PROPOSED (запрет повторного callback'а).</li>
+<li>Записывает подписанный советом protocol2 в <code>proposal.protocol</code>.</li>
+<li>Переводит статус PROPOSED → AUTHORIZED.</li>
+</ul>
+<p >Дальнейший шаг — backend через дельту/мониторинг видит AUTHORIZED и проходит циклом execwroff per-item (см. <code><a class="el" href="execwroff_8cpp.html">execwroff.cpp</a></code>). </p>
+
+</div>
+</div>
+<a id="a5737c5bc864a86887f58f571d9873ff1" name="a5737c5bc864a86887f58f571d9873ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5737c5bc864a86887f58f571d9873ff1">&#9670;&nbsp;</a></span>onmktwodecl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::onmktwodecl </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <code><a class="el" href="classsoviet.html#aec30e87d23bbd581029d7358d96376e0">soviet::cancelexprd</a></code> (или от любого decline-эффекта в soviet) — повестка отклонена или просрочена (Story 8.4). PROPOSED → REJECTED; <code>reason</code> сохраняется в <code>wroffprops.reject_reason</code>. Без ledger2-движений. </p>
+<p >Callback от <code>soviet</code> после отказа в Протоколе совета о списании скоропорта или истечения срока повестки (Story 8.4, p.mkt.wroff).</p>
+<p >Сигнатура <code>(coopname, hash, reason)</code> соответствует <code>DECLINE_CALLBACK_SIGNATURE</code> в <code><a class="el" href="lib_2core_2soviet_2soviet_8hpp.html">lib/core/soviet/soviet.hpp</a>:19</code>. Авторизация: <code>_soviet</code>.</p>
+<p >Сигнатура <code>(coopname, hash, reason)</code> соответствует <code>DECLINE_CALLBACK_SIGNATURE</code> (см. <code><a class="el" href="lib_2core_2soviet_2soviet_8hpp.html">cpp/lib/core/soviet/soviet.hpp</a>:19</code>). Контракт <code>soviet</code> вызывает action из <code>cancelexprd</code> (повестка просрочена) или вручную через <code>decline*</code> actions от своего имени, поэтому единственно допустимая авторизация — <code>_soviet</code>.</p>
+<p >Эффект:</p><ul>
+<li>Находит wroffprops по proposal_hash == <code>hash</code>, проверяет статус PROPOSED.</li>
+<li>Терминал жизненного цикла: запись проекта стирается из RAM; причина отказа остаётся в журнале действий (аргумент reason) и решении совета.</li>
+</ul>
+<p >Без ledger2-движений. </p>
+
+</div>
+</div>
+<a id="a54a206d4df7a9537b27b085ca50aa631" name="a54a206d4df7a9537b27b085ca50aa631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a206d4df7a9537b27b085ca50aa631">&#9670;&nbsp;</a></span>payconfirm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::payconfirm </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>outcome_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a> — кассир подтвердил банковский перевод поставщику (E11 техдолг 598-16, Locked Decision L12). Здесь применяется o.mkt.payout (Дт 86 / Кт 51) и <code>payout_status</code> переходит PENDING → COMPLETED. Авторизация: <code>_gateway</code>. <code>outcome_hash</code> совпадает с <code>order.hash</code> (так задано при <code>payout</code>). </p>
+<p >Callback от gateway о фактическом подтверждении исходящей выплаты поставщику (E11 техдолг 598-16, Locked Decision L12, p.mkt.supply).</p>
+<p >Inline-action отправляется контрактом gateway из <code><a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a></code> после того, как кассир в админке подтвердил реальный банковский перевод. Здесь — единственное место, где применяется бухгалтерская проводка выплаты:</p>
+<ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.payout, fact_cost, …, hash=order.hash) — Дт 86 / Кт 51.</li>
+</ul>
+<p >Сумма — <code>o.fact_cost</code> (фактически принятое после отбраковки на приёмке), а не исходный <code>o.total_cost</code>: проводка должна совпадать с приходованием имущества (Кт 86 = fact_cost из signchair) и с реальной суммой банковского перевода.</p>
+<p ><code>outcome_hash</code> приходит из gateway и равен <code>order.hash</code> (так его задал <a class="el" href="classmarketplace.html#a12cfaa9384cabdb28080e9b75f5daace" title="Инициация исходящей выплаты поставщику через контракт gateway по одному Order&#39;у (E11 техдолг 598-16,...">marketplace::payout</a>). Поиск Order'а — по индексу <code>byhash</code>.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_gateway) — callback легитимен только от gateway-контракта.</li>
+<li>Order найден по <code>outcome_hash</code>.</li>
+<li><code>payout_status == PENDING</code> — на NONE/COMPLETED/DECLINED callback не ждём. </li>
+</ul>
+
+</div>
+</div>
+<a id="a85cc9ccc7238f5f30b55721178e63bc5" name="a85cc9ccc7238f5f30b55721178e63bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cc9ccc7238f5f30b55721178e63bc5">&#9670;&nbsp;</a></span>paydecline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::paydecline </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>outcome_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback от <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a> — кассир отметил, что банковский перевод не состоялся (E11 техдолг 598-16, Locked Decision L12). Ledger2-операция НЕ применяется; обязательство Кт 86 остаётся открытым. <code>payout_status</code> PENDING → DECLINED; <code>payout_decline_reason</code> сохраняется. Авторизация: <code>_gateway</code>. </p>
+<p >Callback от gateway об отклонении исходящей выплаты поставщику (E11 техдолг 598-16, Locked Decision L12, p.mkt.supply).</p>
+<p >Inline-action отправляется контрактом gateway из <code><a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a></code> — кассир отметил, что банковский перевод не прошёл (нет реквизитов, платёж отменён банком, ошибка ввода). Бухгалтерия не двигается — обязательство Кт 86 перед поставщиком остаётся открытым. Backend может повторно вызвать <code><a class="el" href="classmarketplace.html#a12cfaa9384cabdb28080e9b75f5daace" title="Инициация исходящей выплаты поставщику через контракт gateway по одному Order&#39;у (E11 техдолг 598-16,...">marketplace::payout</a></code> после исправления реквизитов; gateway-запись по этому outcome_hash уже стёрта на outdecline, поэтому повторная инициация проходит штатно (см. payout-гард <code>payout_status ∈ { NONE, DECLINED }</code>).</p>
+<p >Guards:</p><ul>
+<li>require_auth(_gateway) — callback легитимен только от gateway-контракта.</li>
+<li>Order найден по <code>outcome_hash</code>.</li>
+<li><code>payout_status == PENDING</code>. </li>
+</ul>
+
+</div>
+</div>
+<a id="a12cfaa9384cabdb28080e9b75f5daace" name="a12cfaa9384cabdb28080e9b75f5daace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cfaa9384cabdb28080e9b75f5daace">&#9670;&nbsp;</a></span>payout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::payout </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициация исходящей выплаты поставщику через контракт gateway по одному Order'у (E11 техдолг 598-16, Locked Decision L12). Per-Order: inline-вызов <code><a class="el" href="group__public__gateway__actions.html#ga1e02f2c8bf5bb52d78e05fae71d274d8" title="Создание исходящего платежа. Создает новый запрос на исходящий платеж в системе процессинга.">gateway::createoutpay</a></code> с callback'ами на <code>payconfirm</code> / <code>paydecline</code>. Ledger2-операция o.mkt.payout (Дт 86 / Кт 51) применяется НЕ здесь, а в callback'е <code>payconfirm</code> после действия кассира. Статус Order'а не меняется; защита от двойного запроса — через <code>order.payout_status</code> (NONE/DECLINED → PENDING). </p>
+<p >Инициация исходящей выплаты поставщику по одному Order'у через gateway (E11 техдолг 598-16, Locked Decision L12, p.mkt.supply).</p>
+<p >Backend дёргает это действие, когда кассир в админке отметил готовность проводить выплату поставщику. Действие НЕ применяет <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> — оно лишь inline-вызовом регистрирует в gateway::outcomes запись типа «исходящий платёж» со статусом pending и привязанным callback'ом на marketplace. Сам Дт 86 / Кт 51 произойдёт уже в callback'е <code>payconfirm</code> после фактического банковского перевода (<a class="el" href="group__public__gateway__actions.html#ga99dba2f76cb08614a9c2e960b41dcfa9" title="Завершение обработки исходящего платежа. Завершает обработку исходящего платежа и вызывает коллбэк ус...">gateway::outcomplete</a> вызывает кассир через свой стол), либо отменится в <code>paydecline</code> (<a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a>).</p>
+<p >Inline-вызов: <code><a class="el" href="group__public__gateway__actions.html#ga1e02f2c8bf5bb52d78e05fae71d274d8" title="Создание исходящего платежа. Создает новый запрос на исходящий платеж в системе процессинга.">gateway::createoutpay</a></code> с <code>callback_contract = _marketplace</code>, <code>confirm_callback = "payconfirm"_n</code>, <code>decline_callback = "paydecline"_n</code>, <code>outcome_hash = order.hash</code> (уникальность гарантирована индексом orders).</p>
+<p >Сумма выплаты — <code>o.fact_cost</code> (фактически принятое после приёмки), а НЕ <code>o.total_cost</code> (исходный заказ): при отбраковке части поставки на приёмке (signchair снизил факт) кооператив должен поставщику ровно принятое. fact_cost зафиксирован на приёмке (статус-гард ниже гарантирует, что приёмка уже прошла), совпадает с приходованием имущества Кт 86 и с суммой платежа в реестре платежей кооператива.</p>
+<p >Status Order'а не меняется (выплата может идти параллельно шагам выдачи). payout_status переходит NONE/DECLINED → PENDING; declined-кейс — повторная попытка после исправления реквизитов (gateway-запись была стёрта на outdecline).</p>
+<p >Guards:</p><ul>
+<li>Order существует и приёмка завершена (статус ∈ accepted_to_coop / ready_to_receive / received).</li>
+<li>payout_status ∈ { NONE, DECLINED } — нельзя инициировать выплату поверх pending или completed. </li>
+</ul>
+
+</div>
+</div>
+<a id="a2cdb08e07e4382381a0b5c321b8df020" name="a2cdb08e07e4382381a0b5c321b8df020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cdb08e07e4382381a0b5c321b8df020">&#9670;&nbsp;</a></span>propwroff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::propwroff </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>proposed_by</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>proposal_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; wroff_item &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>meta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Backend выносит проект списания на повестку совета (Story 8.1). Без ledger2-операций — только создание proposal с N позициями (статус proposed) и тем же inline-вызовом ставит повестку: <code><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a></code> от <code>permission_level{_marketplace, active}</code> с <code>callback_contract=marketplace</code>, <code>confirm_callback=onmktwoauth</code>, <code>decline_callback=onmktwodecl</code>, <code>type=mktwroff</code>, <code>hash=proposal_hash</code>, <code>statement</code> (Заявление 1106). Проект может подаваться председателем (за подписью) либо автоматически — мост повестки целиком на контракте, без участия backend. </p>
+<p >Выносит проект списания скоропорта на повестку совета (Story 8.1, p.mkt.wroff).</p>
+<p >Без ledger2-операций. Создаётся writeoff_proposal в статусе proposed; total_amount = Σ items.amount; все items создаются с executed=false. Тем же action'ом контракт ставит повестку: inline-вызов <code><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a></code> от <code>permission_level{_marketplace, active}</code> (marketplace в contracts_whitelist) с <code>type=mktwroff</code>, <code>hash=proposal_hash</code>, <code>callback_contract=_marketplace</code>, <code>confirm_callback=onmktwoauth</code>, <code>decline_callback=onmktwodecl</code>, <code>statement</code> (подписанное Заявление 1106). Мост повестки целиком на контракте — backend не подписывает createagenda отдельно (кооператив не в whitelist). Списание выполняется per-item через <code>execwroff</code> только после callback'а <code>onmktwoauth</code> (status proposed → authorized).</p>
+<p >Guards:</p><ul>
+<li>actor coopname (require_auth).</li>
+<li>items.size() &gt; 0.</li>
+<li>Все items.amount &gt; 0 в _root_govern_symbol.</li>
+<li>Все items.braname существуют в <code>branches[coopname]</code>.</li>
+<li>proposal_hash уникален. </li>
+</ul>
+
+</div>
+</div>
+<a id="ad4db41eb72a746fde9ac444ea1c62ef4" name="ad4db41eb72a746fde9ac444ea1c62ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4db41eb72a746fde9ac444ea1c62ef4">&#9670;&nbsp;</a></span>rejretrem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::rejretrem </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель удалённо отказывает (Story 7.2). Авторизация: подписант ∈ branches[braname]. </p>
+<p >Председатель удалённо отказывает в гарантийном возврате (Story 7.2, p.mkt.return).</p>
+<p >Финальное решение, без ledger2-операций — терминал жизненного цикла: запись заявления стирается из RAM, причина отказа остаётся в журнале действий (аргумент reason).</p>
+<p >Guards:</p><ul>
+<li>Указанный КУ (<code>braname</code>) — участок выдачи исходного заказа.</li>
+<li>Подписант (<code>signer</code>) авторизован для указанного КУ (<code>braname</code>).</li>
+<li>return_request.status == pending_review.</li>
+<li>reason.size() &gt; 0. </li>
+</ul>
+
+</div>
+</div>
+<a id="aa4443e7837153824996322717ab78a29" name="aa4443e7837153824996322717ab78a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4443e7837153824996322717ab78a29">&#9670;&nbsp;</a></span>rejretrn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::rejretrn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель отказывает на очном осмотре (Story 7.3). Авторизация: подписант ∈ branches[braname]. </p>
+<p >Председатель отказывает в гарантийном возврате на очном осмотре (Story 7.3, p.mkt.return).</p>
+<p >Финальное решение, без ledger2-операций — терминал жизненного цикла: запись заявления стирается из RAM, причина отказа остаётся в журнале действий (аргумент reason).</p>
+<p >Guards:</p><ul>
+<li>Указанный КУ (<code>braname</code>) — участок выдачи исходного заказа.</li>
+<li>Подписант (<code>signer</code>) авторизован для указанного КУ (<code>braname</code>).</li>
+<li>return_request.status == approved_for_visit.</li>
+<li>reason.size() &gt; 0. </li>
+</ul>
+
+</div>
+</div>
+<a id="a05a37a786a52c4f2057d98b6d3849a74" name="a05a37a786a52c4f2057d98b6d3849a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a37a786a52c4f2057d98b6d3849a74">&#9670;&nbsp;</a></span>setfee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::setfee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>membership_fee_percent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установка единой ставки членского взноса «Стола заказов» (requirement b6). Одна ставка на весь кооператив (HUNDR_PERCENTS = 100%); задаёт администратор. Применяется к новым заказам; в созданных заказах взнос зафиксирован полем Order.membership_fee. </p>
+<p >Установка единой ставки членского взноса «Стола заказов» (requirement b6 «Экономика КУ»).</p>
+<p >Ставка одна на весь кооператив — не per-КУ и не per-категория: один и тот же членский взнос вне зависимости от того, на какой кооперативный участок заказ (против спекуляций и конкуренции между участками — решение владельца 2026-06-10). Применяется к заказам, созданным ПОСЛЕ установки: в уже созданных заказах взнос зафиксирован полем Order.membership_fee.</p>
+<p >Проценты — в долях HUNDR_PERCENTS (1000000 = 100%). Ставка 0 отключает начисление взноса.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта: <code>coopname</code> (устанавливает администратор со стола администратора). </dd></dl>
+
+</div>
+</div>
+<a id="a21480a6405ac2812718efc27833fa79f" name="a21480a6405ac2812718efc27833fa79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21480a6405ac2812718efc27833fa79f">&#9670;&nbsp;</a></span>signchair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::signchair </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>actual_quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>actual_unit_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель приёмного КУ ставит закрывающую подпись на АПП приёмки одного Order'а (Story 5.3/5.4). Per-Order: только o.mkt.purch (Дт 10 / Кт 86). Выплата поставщику (o.mkt.payout) — отдельным lazy action'ом <code>payout</code> после подтверждения кассиром фактического банковского перевода (E11 техдолг 598-16, Locked Decision L12). Авторизация подписи: председатель / trustee / trusted ∈ branches[o.accept_braname]. Backend проходит циклом по orders батча с одинаковым <code>act</code>. </p>
+<p >Председатель приёмного КУ ставит закрывающую подпись на АПП приёмки по одному Order'у (Story 5.3/5.4, p.mkt.supply).</p>
+<p >Per-Order — только бухгалтерская приёмка имущества:</p><ul>
+<li><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.purch, fact_cost, …, hash=order.hash) — Дт 10 / Кт 86.</li>
+</ul>
+<p >Факт приёмки (кол-во и цена за единицу) корректируется оператором при открытии приёмки и зашивается в акт, который утверждает поставщик: привезли меньше / другого качества → принимаем со скидкой. Кооператив приходует поставщику итоговую <code>fact_cost = actual_quantity × actual_unit_price</code>, а не исходную <code>o.total_cost</code>. Резерва пайщика на приёмке нет, поэтому веток возврата/доплаты (как в signiss2) здесь не требуется — это просто итоговая стоимость к получению поставщиком.</p>
+<p >Имущество приходуется на склад приёмного КУ (<code>accept_braname</code>); у кооператива возникает обязательство Кт 86 перед поставщиком. Фактическая выплата деньгами (Дт 86 / Кт 51) — отдельным lazy action'ом <code><a class="el" href="classmarketplace.html#a12cfaa9384cabdb28080e9b75f5daace" title="Инициация исходящей выплаты поставщику через контракт gateway по одному Order&#39;у (E11 техдолг 598-16,...">marketplace::payout</a></code> после подтверждения кассиром реального банковского перевода (Locked Decision L12, E11 техдолг 598-16).</p>
+<p >Status: supply_prepared → accepted_to_coop. acceptance_act_signchair сохраняется. <code>payout_done</code> не выставляется — это атрибут payout-действия.</p>
+<p >Guards:</p><ul>
+<li>Order существует и в статусе supply_prepared.</li>
+<li>Подписант (<code>signer</code>) авторизован для приёмного КУ — председатель, trustee либо доверенное лицо в <code>branches[accept_braname].trusted[]</code>.</li>
+<li>На акте есть подписи поставщика и подписанта приёмки.</li>
+<li>actual_quantity &gt; 0; actual_unit_price &gt; 0 и в валюте кооператива. </li>
+</ul>
+
+</div>
+</div>
+<a id="a6e4739bf2ab3e73999e0e429840659ef" name="a6e4739bf2ab3e73999e0e429840659ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4739bf2ab3e73999e0e429840659ef">&#9670;&nbsp;</a></span>signiss1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::signiss1 </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель КУ выдачи открывает выдачу первой подписью АПП-выдачи (Story 6.1). Без ledger2-операций — статус ready_to_receive. Авторизация: подписант ∈ branches[o.delivery_braname]. </p>
+<p >Председатель КУ выдачи открывает выдачу первой подписью АПП-выдачи (Story 6.1, signiss1).</p>
+<p >Без ledger2-операций. Per-Order: статус accepted_to_coop → ready_to_receive; issue_act_signiss1 сохраняется; current_warehouse_braname обновляется на delivery_braname (фиксация факта логистической передачи имущества на склад выдачи — промежуточные перемещения по заготовочным КУ контрактом не подписываются, точка хранения переходит «скачком» в этот момент). Нотификация заказчику — post-effect в backend через ParserClient.</p>
+<p >Guards:</p><ul>
+<li>Order существует и в статусе accepted_to_coop.</li>
+<li>Подписант (<code>signer</code>) авторизован для КУ выдачи (<code>o.delivery_braname</code>): председатель / trustee / trusted в <code>branches[delivery_braname]</code>.</li>
+<li>verify_document_or_fail(act, {signer}).</li>
+<li>Idempotency: is_empty_document(issue_act_signiss1). </li>
+</ul>
+
+</div>
+</div>
+<a id="a3485cbefe95dfaefb8893ccc5939ad57" name="a3485cbefe95dfaefb8893ccc5939ad57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3485cbefe95dfaefb8893ccc5939ad57">&#9670;&nbsp;</a></span>signiss2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::signiss2 </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>actual_quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>actual_unit_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>delivery_signer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заказчик ставит финальную подпись АПП-выдачи (Story 6.3). Per-Order с поддержкой actual_quantity ≠ ordered (Story 6.2). Atomic: [o.mkt.unlock на разницу если actual&lt;ordered | o.mkt.lock на разницу если actual&gt;ordered]. </p>
+<p >Заказчик закрывающей подписью АПП-выдачи получает имущество (Story 6.3, signiss2).</p>
+<ul>
+<li>o.mkt.consum. Подпись акта: orderer + любой авторизованный из branches[o.delivery_braname].</li>
+</ul>
+<p >Per-Order атомарная транзакция с поддержкой actual_quantity ≠ ordered (Story 6.2):</p>
+<p >1) actual == ordered: <a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.consum, fact_cost) — BURN w.mkt.order, Дт 86 / Кт 10 (сжигание резерва заказа и выбытие имущества со склада через целевое финансирование).</p>
+<p >2) actual &lt; ordered (выдано меньше — остаток резерва возвращается): <a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a>(o.mkt.unlock, ordered_cost - fact_cost) — TRANSFER w.mkt.order → w.mkt.member на разницу (остаток резерва на членский «Стола заказов»). затем — consum на fact_cost.</p>
+<p >3) actual &gt; ordered (доплата по факту — ТОЛЬКО с членского, паевой не трогаем): diff = fact_cost - ordered_cost проверка достаточности diff на w.mkt.member (членский «Стола заказов»). o.mkt.lockm(diff) — TRANSFER w.mkt.member → w.mkt.order (без проводки) — добор резерва на этот же Order с членского программы. Затем — consum на fact_cost. Недостающее на членском пайщик переводит ЗАРАНЕЕ отдельным Заявлением о конвертации (action convert, o.mkt.conv) — авто-конвертации паевого на выдаче нет НИГДЕ; при нехватке членского транзакция фейлится.</p>
+<p >Status: ready_to_receive → received. actual_quantity, fact_cost, issue_act_signiss2, warranty_until заполняются.</p>
+<p >Guards:</p><ul>
+<li>actor == order.orderer; Order в ready_to_receive.</li>
+<li>Подписант со стороны кооператива (<code>delivery_signer</code>) авторизован для КУ выдачи (<code>o.delivery_braname</code>).</li>
+<li>verify_document_or_fail(act, {delivery_signer, orderer}).</li>
+<li>actual_quantity &gt; 0; actual_unit_price &gt; 0 и в валюте кооператива. fact_cost = actual_quantity × actual_unit_price (цена скорректирована оператором при открытии выдачи, заказчик факт не редактирует).</li>
+<li>При actual &gt; ordered и нехватке средств — транзакция фейлится с человеческим сообщением, которое UI показывает напрямую.</li>
+<li>Idempotency: is_empty_document(issue_act_signiss2). </li>
+</ul>
+
+</div>
+</div>
+<a id="ace19b86a0a73bb3010dda0329d7ab052" name="ace19b86a0a73bb3010dda0329d7ab052"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace19b86a0a73bb3010dda0329d7ab052">&#9670;&nbsp;</a></span>signsupp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::signsupp </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>offerer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>accept_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Поставщик первой подписью на АПП приёмки фиксирует партию по одному Order'у (Story 5.3/5.4). Без ledger2-операций — статус accepted → supply_prepared. Параметр <code>accept_braname</code> указывает приёмный КУ; запись в Order. Подпись валидируется как <code>verify_document_or_fail(act, {offerer})</code>. Backend проходит циклом по orders батча с одинаковым <code>act</code>. </p>
+<p >Поставщик первой подписью на АПП приёмки фиксирует партию по одному Order'у (Story 5.3/5.4, p.mkt.supply).</p>
+<p >Без ledger2-операций (имущество физически на складе, но юридически не оприходовано до signchair). Per-Order: статус accepted → supply_prepared, параметр <code>accept_braname</code> указывает приёмный КУ — куда поставщик сдаёт партию. Документ acceptance_act_signsupp сохраняется (копия per Order — допустимо для on-chain).</p>
+<p >Backend проходит циклом по orders соответствующего batch'а с одним и тем же актом, вызывая <code>signsupp</code> per Order — это позволяет масштабировать batch на любой размер без риска превысить лимит транзакции Antelope.</p>
+<p >Guards:</p><ul>
+<li>Order существует и в статусе accepted.</li>
+<li>actor == order.offerer.</li>
+<li><code>accept_braname</code> существует в <code>branches[coopname]</code>.</li>
+<li>verify_document_or_fail(act, {offerer}) — поставщик подписал.</li>
+<li>Idempotency: повторный вызов запрещён (<code>is_empty_document(acceptance_act_signsupp)</code>). </li>
+</ul>
+
+</div>
+</div>
+<a id="a441965683562db99624ce63888d89908" name="a441965683562db99624ce63888d89908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441965683562db99624ce63888d89908">&#9670;&nbsp;</a></span>stockorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::stockorder </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>offer_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>delivery_braname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>unit_price</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>package_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>warranty_period_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>batch_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заказ из обезличенного остатка склада кооператива (requirement 76). Продавец — сам кооператив (<code>offerer == coopname</code>), имущество уже на счёте 10 после ранее закрытых приёмок, поэтому Order создаётся сразу в <code>acceptcoop</code> и идёт только через выдачу signiss1/signiss2. Этапы поставки и выплата поставщику для такого заказа не существуют. </p>
+<p >Заказ имущества из обезличенного остатка склада кооператива (requirement 76 «Склад кооператива на КУ», p.mkt.supply).</p>
+<p >Заказ из остатка ВСЕГДА фондируется из членского кошелька «Стола заказов» пайщика начисто (без паевого): o.mkt.lockm (тело, w.mkt.member → w.mkt.order)</p><ul>
+<li>o.mkt.lockmf (взнос, w.mkt.member → w.mkt.fee). Паевой пополняет членский кошелёк заранее отдельным действием <code>convert</code> (Заявление о конвертации). При замене непоставленного на свободный остаток высвобожденные отменой средства уже лежат в w.mkt.member — заказ создаётся без конвертации и доплаты.</li>
+</ul>
+<p >Продавец — сам кооператив: имущество уже принято на склад по ранее закрытым АПП приёмки (числится на счёте 10 после o.mkt.purch) и перепредлагается пайщикам после недовыдачи / отказа от излишка. Поэтому Order создаётся сразу в статусе <code>acceptcoop</code> — этапы поставки (acceptorder / signsupp / signchair) и выплата поставщику (payout) для него не существуют: дальше работает только штатная выдача signiss1 → signiss2 (o.mkt.consum, Дт 86 / Кт 10).</p>
+<p >Маркер заказа из остатка — <code>order.offerer == coopname</code> (кооператив-продавец). По нему <code>cancelorder</code> разрешает отмену в <code>acceptcoop</code> (откат оператора до своей подписи), а <code>payout</code> отклоняет попытку выплаты.</p>
+<p >Фондируется ВСЕГДА из членского кошелька «Стола заказов» пайщика начисто (без паевого), две ledger2-операции (оба кошелька на 86, без проводок):</p><ul>
+<li><code>o.mkt.lockm</code> (TRANSFER w.mkt.member → w.mkt.order на total_cost) — тело;</li>
+<li><code>o.mkt.lockmf</code> (TRANSFER w.mkt.member → w.mkt.fee на взнос) — взнос. Паевой взнос пополняет членский кошелёк ЗАРАНЕЕ отдельным действием <code>convert</code> (Заявление о конвертации). При замене непоставленного на свободный остаток высвобожденные отменой средства уже лежат в w.mkt.member — заказ создаётся без конвертации и без доплаты с паевого.</li>
+</ul>
+<p >Guards (зеркало createorder + специфика остатка):</p><ul>
+<li>quantity &gt; 0; unit_price &gt; 0 в _root_govern_symbol (цена публикации остатка: цена прибытия либо уценка — requirement 76, решение 12).</li>
+<li>Order с таким hash ещё не создан (idempotency).</li>
+<li>Заказчик — активный пайщик кооператива.</li>
+<li><code>delivery_braname</code> существует: КУ, на складе которого лежит остаток; он же — КУ выдачи (<code>accept_braname</code> и <code>current_warehouse_braname</code> равны ему: имущество уже на месте, логистики нет).</li>
+<li>w.mkt.member.available заказчика &gt;= total_cost + взнос (членских средств должно хватать; недостающее конвертируется заранее через <code>convert</code>). </li>
+</ul>
+
+</div>
+</div>
+<a id="a73e930f674b2721508f3946803499c20" name="a73e930f674b2721508f3946803499c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e930f674b2721508f3946803499c20">&#9670;&nbsp;</a></span>submretrn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void marketplace::submretrn </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>orderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>request_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>original_order_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>actual_quantity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason_text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>photos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Пайщик подаёт заявление на гарантийный возврат (Story 7.1). </p>
+<p >Пайщик подаёт заявление на гарантийный возврат (Story 7.1, p.mkt.return).</p>
+<p >Без ledger2-операций. Создаётся return_request в pending_review; order.return_request_id ставится для двусторонней связи. Привязка к конкретному КУ не сохраняется — каждое последующее действие (aprretrem/rejretrem/accretrn/rejretrn) принимает <code>braname</code> параметром и валидирует его через <code>Branch::is_user_authorized</code>.</p>
+<p >Guards (из p.mkt.return.standard.yaml):</p><ul>
+<li>actor == original_order.orderer.</li>
+<li>original_order.status == received.</li>
+<li>original_order.warranty_until &gt; now() (гарантийный срок не истёк, если warranty_period_secs &gt; 0; иначе возврат запрещён).</li>
+<li>photos.size() &gt; 0 (фото приложены).</li>
+<li>actual_quantity &gt; 0 &amp;&amp; &lt;= original_order.actual_quantity.</li>
+<li>request_hash уникален.</li>
+<li>Active возврат на этот order ещё не открыт (idempotency через order.return_request_id == 0). </li>
+</ul>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>cpp/marketplace/<a class="el" href="marketplace_2marketplace_8hpp_source.html">marketplace.hpp</a></li>
+<li>cpp/marketplace/<a class="el" href="marketplace_8cpp.html">marketplace.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.return/<a class="el" href="accretrn_8cpp.html">accretrn.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.return/<a class="el" href="aprretrem_8cpp.html">aprretrem.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.return/<a class="el" href="rejretrem_8cpp.html">rejretrem.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.return/<a class="el" href="rejretrn_8cpp.html">rejretrn.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.return/<a class="el" href="submretrn_8cpp.html">submretrn.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="acceptorder_8cpp.html">acceptorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="cancelorder_8cpp.html">cancelorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="closeorder_8cpp.html">closeorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="marketplace_2src_2p_8mkt_8supply_2convert_8cpp.html">convert.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="createorder_8cpp.html">createorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="declineorder_8cpp.html">declineorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="expireorder_8cpp.html">expireorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="markdown_8cpp.html">markdown.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="payconfirm_8cpp.html">payconfirm.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="paydecline_8cpp.html">paydecline.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="payout_8cpp.html">payout.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="setfee_8cpp.html">setfee.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="signchair_8cpp.html">signchair.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="signiss1_8cpp.html">signiss1.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="signiss2_8cpp.html">signiss2.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="signsupp_8cpp.html">signsupp.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.supply/<a class="el" href="stockorder_8cpp.html">stockorder.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.wroff/<a class="el" href="confirmwroff_8cpp.html">confirmwroff.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.wroff/<a class="el" href="execwroff_8cpp.html">execwroff.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.wroff/<a class="el" href="onmktwoauth_8cpp.html">onmktwoauth.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.wroff/<a class="el" href="onmktwodecl_8cpp.html">onmktwodecl.cpp</a></li>
+<li>cpp/marketplace/src/p.mkt.wroff/<a class="el" href="propwroff_8cpp.html">propwroff.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classmarketplace.html">marketplace</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

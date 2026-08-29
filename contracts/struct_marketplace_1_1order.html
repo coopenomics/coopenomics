@@ -1,0 +1,969 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура Marketplace::order</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('struct_marketplace_1_1order.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="struct_marketplace_1_1order-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура Marketplace::order</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>On-chain Order — анкер процесса p.mkt.supply.  
+ <a href="struct_marketplace_1_1order.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="table__marketplace__orders_8hpp_source.html">table_marketplace_orders.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac37ad211dd2e7c206e32da778ab64b25"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ac37ad211dd2e7c206e32da778ab64b25">primary_key</a> () const</td></tr>
+<tr class="separator:ac37ad211dd2e7c206e32da778ab64b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d8722ed70ddf30e34ef3da60af9a45"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ac6d8722ed70ddf30e34ef3da60af9a45">by_hash</a> () const</td></tr>
+<tr class="separator:ac6d8722ed70ddf30e34ef3da60af9a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80dca6ca21d94ba8544ab9372eda9f05"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a80dca6ca21d94ba8544ab9372eda9f05">by_orderer</a> () const</td></tr>
+<tr class="separator:a80dca6ca21d94ba8544ab9372eda9f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a5ad76747d9962c06b5ecc818d8f1a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a05a5ad76747d9962c06b5ecc818d8f1a">by_offerer</a> () const</td></tr>
+<tr class="separator:a05a5ad76747d9962c06b5ecc818d8f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa779fcc7b58870109b368c1b0382c0"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#afaa779fcc7b58870109b368c1b0382c0">by_status</a> () const</td></tr>
+<tr class="separator:afaa779fcc7b58870109b368c1b0382c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fab193f4309e73db768255936b75ede"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a2fab193f4309e73db768255936b75ede">by_batch</a> () const</td></tr>
+<tr class="separator:a2fab193f4309e73db768255936b75ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4547598acebccfd1d6edbbff38006140"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a4547598acebccfd1d6edbbff38006140">by_offer</a> () const</td></tr>
+<tr class="separator:a4547598acebccfd1d6edbbff38006140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac656bda12aba2168159b95747a4275f5"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ac656bda12aba2168159b95747a4275f5">by_delivery_bra</a> () const</td></tr>
+<tr class="separator:ac656bda12aba2168159b95747a4275f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d1b2603a46ac3113da32ce4c9f9369"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a64d1b2603a46ac3113da32ce4c9f9369">by_accept_bra</a> () const</td></tr>
+<tr class="separator:a64d1b2603a46ac3113da32ce4c9f9369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a3f6d08553dd5a35b74b63c799eb1864f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a3f6d08553dd5a35b74b63c799eb1864f">id</a></td></tr>
+<tr class="memdesc:a3f6d08553dd5a35b74b63c799eb1864f"><td class="mdescLeft">&#160;</td><td class="mdescRight">внутренний ID  <a href="struct_marketplace_1_1order.html#a3f6d08553dd5a35b74b63c799eb1864f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3f6d08553dd5a35b74b63c799eb1864f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117cc0a51c92b2c6814f10f5c0677ac9"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a117cc0a51c92b2c6814f10f5c0677ac9">hash</a></td></tr>
+<tr class="memdesc:a117cc0a51c92b2c6814f10f5c0677ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">process_hash для p.mkt.supply  <a href="struct_marketplace_1_1order.html#a117cc0a51c92b2c6814f10f5c0677ac9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a117cc0a51c92b2c6814f10f5c0677ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c4ffbcd203f2553202524f69643284"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a25c4ffbcd203f2553202524f69643284">coopname</a></td></tr>
+<tr class="memdesc:a25c4ffbcd203f2553202524f69643284"><td class="mdescLeft">&#160;</td><td class="mdescRight">scope-валидация  <a href="struct_marketplace_1_1order.html#a25c4ffbcd203f2553202524f69643284">Подробнее...</a><br /></td></tr>
+<tr class="separator:a25c4ffbcd203f2553202524f69643284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03032727b1b1dce4a3127fa4c6001ff5"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a03032727b1b1dce4a3127fa4c6001ff5">orderer</a></td></tr>
+<tr class="memdesc:a03032727b1b1dce4a3127fa4c6001ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">пайщик-заказчик  <a href="struct_marketplace_1_1order.html#a03032727b1b1dce4a3127fa4c6001ff5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a03032727b1b1dce4a3127fa4c6001ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4278603a677ad4e14a224364f05759f4"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a4278603a677ad4e14a224364f05759f4">offerer</a></td></tr>
+<tr class="memdesc:a4278603a677ad4e14a224364f05759f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">пайщик-поставщик из Offer'а (для acceptorder/declineorder/signsupp guard'а)  <a href="struct_marketplace_1_1order.html#a4278603a677ad4e14a224364f05759f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4278603a677ad4e14a224364f05759f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0223fc5c894310f3b26d03dc6ecdf17"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ae0223fc5c894310f3b26d03dc6ecdf17">offer_hash</a></td></tr>
+<tr class="memdesc:ae0223fc5c894310f3b26d03dc6ecdf17"><td class="mdescLeft">&#160;</td><td class="mdescRight">ссылка на Offer (off-chain в backend)  <a href="struct_marketplace_1_1order.html#ae0223fc5c894310f3b26d03dc6ecdf17">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae0223fc5c894310f3b26d03dc6ecdf17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb34b0f1f147f9b9fb9d670c1e63aa54"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#abb34b0f1f147f9b9fb9d670c1e63aa54">delivery_braname</a></td></tr>
+<tr class="memdesc:abb34b0f1f147f9b9fb9d670c1e63aa54"><td class="mdescLeft">&#160;</td><td class="mdescRight">КУ выдачи (выбран пайщиком на createorder); проверка signiss1/signiss2/p.mkt.return через Branch::is_user_authorized.  <a href="struct_marketplace_1_1order.html#abb34b0f1f147f9b9fb9d670c1e63aa54">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb34b0f1f147f9b9fb9d670c1e63aa54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61cb9b893289d1bf36acb2928db0f32c"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a61cb9b893289d1bf36acb2928db0f32c">accept_braname</a></td></tr>
+<tr class="memdesc:a61cb9b893289d1bf36acb2928db0f32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">КУ приёмки от поставщика (заполняется на signsupp); проверка signchair через Branch::is_user_authorized.  <a href="struct_marketplace_1_1order.html#a61cb9b893289d1bf36acb2928db0f32c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a61cb9b893289d1bf36acb2928db0f32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef60ff1a96fa7c4742569ab3e6ca777"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a3ef60ff1a96fa7c4742569ab3e6ca777">current_warehouse_braname</a></td></tr>
+<tr class="memdesc:a3ef60ff1a96fa7c4742569ab3e6ca777"><td class="mdescLeft">&#160;</td><td class="mdescRight">текущая точка хранения; signchair: = accept_braname; signiss1: = delivery_braname (фиксация готовности к выдаче)  <a href="struct_marketplace_1_1order.html#a3ef60ff1a96fa7c4742569ab3e6ca777">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3ef60ff1a96fa7c4742569ab3e6ca777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ed41310733d2a118039ae2bd7f9073"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a42ed41310733d2a118039ae2bd7f9073">quantity</a> = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td></tr>
+<tr class="memdesc:a42ed41310733d2a118039ae2bd7f9073"><td class="mdescLeft">&#160;</td><td class="mdescRight">заказанное количество (asset с символом единицы KG/LTR/PCS, Эпик 17)  <a href="struct_marketplace_1_1order.html#a42ed41310733d2a118039ae2bd7f9073">Подробнее...</a><br /></td></tr>
+<tr class="separator:a42ed41310733d2a118039ae2bd7f9073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9006f52c9c16c882a313fff47662d980"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a9006f52c9c16c882a313fff47662d980">actual_quantity</a> = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td></tr>
+<tr class="memdesc:a9006f52c9c16c882a313fff47662d980"><td class="mdescLeft">&#160;</td><td class="mdescRight">фактически выданное (signiss2); до signiss2 == quantity  <a href="struct_marketplace_1_1order.html#a9006f52c9c16c882a313fff47662d980">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9006f52c9c16c882a313fff47662d980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad176acc36d2ea73db15d4419105340e"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#aad176acc36d2ea73db15d4419105340e">package_size</a> = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td></tr>
+<tr class="memdesc:aad176acc36d2ea73db15d4419105340e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Эпик 18: содержимое упаковки в базовой единице. 0 = отпуск по мере (unit_price за базовую единицу); &gt;0 = упаковкой (unit_price за упаковку, quantity/actual_quantity кратны package_size)  <a href="struct_marketplace_1_1order.html#aad176acc36d2ea73db15d4419105340e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad176acc36d2ea73db15d4419105340e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb98f4296a5b8984ac85e214600f3f4"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a0cb98f4296a5b8984ac85e214600f3f4">unit_price</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a0cb98f4296a5b8984ac85e214600f3f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">цена за единицу отпуска: за базовую единицу (кг/литр/штуку) при package_size==0, либо за упаковку при package_size&gt;0  <a href="struct_marketplace_1_1order.html#a0cb98f4296a5b8984ac85e214600f3f4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0cb98f4296a5b8984ac85e214600f3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6181f8a8101928be63bb2c9505d18dd8"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a6181f8a8101928be63bb2c9505d18dd8">total_cost</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a6181f8a8101928be63bb2c9505d18dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">quantity * unit_price / 10^precision (заблокированная сумма)  <a href="struct_marketplace_1_1order.html#a6181f8a8101928be63bb2c9505d18dd8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6181f8a8101928be63bb2c9505d18dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381a781d6c1cb5f33687bc165741550c"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a381a781d6c1cb5f33687bc165741550c">fact_cost</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="memdesc:a381a781d6c1cb5f33687bc165741550c"><td class="mdescLeft">&#160;</td><td class="mdescRight">actual_quantity * unit_price / 10^precision (после signiss2)  <a href="struct_marketplace_1_1order.html#a381a781d6c1cb5f33687bc165741550c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a381a781d6c1cb5f33687bc165741550c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216d14152b675b40e4e7e2eb249e3f53"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a216d14152b675b40e4e7e2eb249e3f53">warranty_period_secs</a> = 0</td></tr>
+<tr class="memdesc:a216d14152b675b40e4e7e2eb249e3f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">из Offer'а — для submretrn гард'а  <a href="struct_marketplace_1_1order.html#a216d14152b675b40e4e7e2eb249e3f53">Подробнее...</a><br /></td></tr>
+<tr class="separator:a216d14152b675b40e4e7e2eb249e3f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fb22e9f97ae330ed4da785675a44e30"><td class="memItemLeft" align="right" valign="top">time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a4fb22e9f97ae330ed4da785675a44e30">warranty_until</a> = time_point_sec(0)</td></tr>
+<tr class="memdesc:a4fb22e9f97ae330ed4da785675a44e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">now() + warranty_period_secs (заполняется в signiss2)  <a href="struct_marketplace_1_1order.html#a4fb22e9f97ae330ed4da785675a44e30">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4fb22e9f97ae330ed4da785675a44e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96586cd3f36cbf5b7a0147b77c636fe5"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a96586cd3f36cbf5b7a0147b77c636fe5">status</a> = <a class="el" href="namespace_marketplace_1_1_order_status.html#a40fd0a3f16858cc935f0b60c03b4615e">OrderStatus::ACTIVE</a></td></tr>
+<tr class="memdesc:a96586cd3f36cbf5b7a0147b77c636fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">canonical статус  <a href="struct_marketplace_1_1order.html#a96586cd3f36cbf5b7a0147b77c636fe5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a96586cd3f36cbf5b7a0147b77c636fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e2c5c55978fad79de484468feb9e75"><td class="memItemLeft" align="right" valign="top">checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a21e2c5c55978fad79de484468feb9e75">batch_hash</a></td></tr>
+<tr class="memdesc:a21e2c5c55978fad79de484468feb9e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">opaque ссылка на consolidated request (off-chain)  <a href="struct_marketplace_1_1order.html#a21e2c5c55978fad79de484468feb9e75">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21e2c5c55978fad79de484468feb9e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213ac9239883089b6b61fc3c84783a70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a213ac9239883089b6b61fc3c84783a70">acceptance_act_signsupp</a></td></tr>
+<tr class="memdesc:a213ac9239883089b6b61fc3c84783a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">АПП приёмки — первая подпись поставщика (signsupp)  <a href="struct_marketplace_1_1order.html#a213ac9239883089b6b61fc3c84783a70">Подробнее...</a><br /></td></tr>
+<tr class="separator:a213ac9239883089b6b61fc3c84783a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86e25ee10ee5a8b6a4d66783c9f1c5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ae86e25ee10ee5a8b6a4d66783c9f1c5c">acceptance_act_signchair</a></td></tr>
+<tr class="memdesc:ae86e25ee10ee5a8b6a4d66783c9f1c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">АПП приёмки — финальная подпись председателя приёмного КУ (signchair)  <a href="struct_marketplace_1_1order.html#ae86e25ee10ee5a8b6a4d66783c9f1c5c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae86e25ee10ee5a8b6a4d66783c9f1c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9439dc895bdb0b72ff47786255a9a9bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a9439dc895bdb0b72ff47786255a9a9bb">issue_act_signiss1</a></td></tr>
+<tr class="memdesc:a9439dc895bdb0b72ff47786255a9a9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">АПП выдачи — первая подпись председателя КУ выдачи (signiss1)  <a href="struct_marketplace_1_1order.html#a9439dc895bdb0b72ff47786255a9a9bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9439dc895bdb0b72ff47786255a9a9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4ff41aea4702e66c77e0cf995427b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a2b4ff41aea4702e66c77e0cf995427b1">issue_act_signiss2</a></td></tr>
+<tr class="memdesc:a2b4ff41aea4702e66c77e0cf995427b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">АПП выдачи — финальная подпись заказчика (signiss2)  <a href="struct_marketplace_1_1order.html#a2b4ff41aea4702e66c77e0cf995427b1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2b4ff41aea4702e66c77e0cf995427b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecec59510054a23955549f671f55abe"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a4ecec59510054a23955549f671f55abe">payout_status</a> = <a class="el" href="namespace_marketplace_1_1_order_payout_status.html#a69a3a91503fbdccaff62d07055efcea5">OrderPayoutStatus::NONE</a></td></tr>
+<tr class="memdesc:a4ecec59510054a23955549f671f55abe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locked Decision L12 — состояние выплаты поставщику через gateway (см. namespace <a class="el" href="namespace_marketplace_1_1_order_payout_status.html" title="Состояние выплаты поставщику по Order&#39;у (Locked Decision L12, E11 техдолг 598-16)....">OrderPayoutStatus</a>)  <a href="struct_marketplace_1_1order.html#a4ecec59510054a23955549f671f55abe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4ecec59510054a23955549f671f55abe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68545e782d3bf543a01601cb44bf4927"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a68545e782d3bf543a01601cb44bf4927">payout_decline_reason</a></td></tr>
+<tr class="memdesc:a68545e782d3bf543a01601cb44bf4927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заполняется только при payout_status == DECLINED (текст причины из <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a>)  <a href="struct_marketplace_1_1order.html#a68545e782d3bf543a01601cb44bf4927">Подробнее...</a><br /></td></tr>
+<tr class="separator:a68545e782d3bf543a01601cb44bf4927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef7011fdd639bd823dcfd2cc0ff8bd7"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#adef7011fdd639bd823dcfd2cc0ff8bd7">return_request_id</a> = 0</td></tr>
+<tr class="memdesc:adef7011fdd639bd823dcfd2cc0ff8bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 если активного гарантийного возврата нет  <a href="struct_marketplace_1_1order.html#adef7011fdd639bd823dcfd2cc0ff8bd7">Подробнее...</a><br /></td></tr>
+<tr class="separator:adef7011fdd639bd823dcfd2cc0ff8bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a6899f2fa76f67671060f4bd0cb8fc"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#ac1a6899f2fa76f67671060f4bd0cb8fc">markdown_cost</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="separator:ac1a6899f2fa76f67671060f4bd0cb8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3e80136a2cf377580293a76617fec1"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_marketplace_1_1order.html#a2a3e80136a2cf377580293a76617fec1">membership_fee</a> = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td></tr>
+<tr class="separator:a2a3e80136a2cf377580293a76617fec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >On-chain Order — анкер процесса p.mkt.supply. </p>
+<p >scope = coopname; primary_key = id; уникальность через <code>byhash</code> индекс на <code><a class="el" href="struct_marketplace_1_1order.html#a117cc0a51c92b2c6814f10f5c0677ac9" title="process_hash для p.mkt.supply">order.hash</a></code> — этот hash используется как <code>process_hash</code> во всех ledger2- операциях процесса (BLOCK/UNBLOCK/PURCH/PAYOUT/CONSUM/CONSUM2/RETURN).</p>
+<p >Привязка к кооперативным участкам (КУ) идёт через <code>braname</code> (см. контракт <code>branch</code>, таблица <code>branches</code>). Председатель / trustee / доверенные лица каждого КУ известны контракту <code>branch</code> — авторизация подписей актов выполняется через <code>Branch::is_user_authorized(coopname, braname, signer)</code>, а не по сохранённому имени председателя (председатель может делегировать подпись доверенному лицу из <code><a class="el" href="structcoobranch.html#ac9270130a66e62196456774227a34e5f">coobranch.trusted</a>[]</code>, состав которого может меняться независимо от Order'а).</p>
+<p >Точки контракта:</p><ul>
+<li><code>delivery_braname</code> — КУ выдачи имущества пайщику; задаётся пайщиком на createorder и неизменна. Источник проверки signiss1/signiss2/p.mkt.return.</li>
+<li><code>accept_braname</code> — КУ приёмки от поставщика; заполняется на signsupp как параметр action'а (поставщик указывает, в какой КУ сдаёт партию). Источник проверки signchair.</li>
+<li><code>current_warehouse_braname</code> — текущая точка хранения имущества по этому Order'у. Заполняется на signchair (= <code>accept_braname</code>, имущество на приёмном складе) и обновляется на signiss1 (= <code>delivery_braname</code>, готово к выдаче — фиксирует факт логистической передачи). Бездокументарно — промежуточные перемещения по заготовочным КУ контрактом не подписываются; точка хранения переходит «скачком» в момент готовности к выдаче.</li>
+</ul>
+<p >История внутренних передач между КУ (заготовочный → точка выдачи и т.п.) с подписью ТТН — отложена. Backend может реконструировать движение из blockchain_actions если потребуется.</p>
+<p ><code>acceptance_act</code> (АПП приёмки) и <code>issue_act</code> (АПП выдачи) хранятся полным <a class="el" href="structdocument2.html">document2</a> — это дублирование в случае batch-поставки (один физический акт → копия в каждом order'е batch'а), но это допустимо для on-chain (минимум данных + hash) и упрощает аудит.</p>
+<p ><code>batch_hash</code> — opaque ссылка на off-chain consolidated request (Locked Decision L10: batch — backend-only сущность). Контракт не валидирует существование batch'а, только хранит ссылку для трассировки и группировки Order'ов в UI. Все per-batch операции на on-chain делаются per-Order (backend проходит циклом по orders батча) — векторов order'ов в action'ах нет.</p>
+<p ><code>actual_quantity</code> / <code>fact_cost</code> заполняются на signiss2 (Story 6.2/6.3). До signiss2 равны соответственно <code>quantity</code> / <code>total_cost</code>.</p>
+<p ><code>warranty_until</code> — рассчитывается в signiss2 как <code>now() + warranty_period_secs</code> (period приходит с Offer'а через backend; в <code>submretrn</code> валидируется только это поле). </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a64d1b2603a46ac3113da32ce4c9f9369" name="a64d1b2603a46ac3113da32ce4c9f9369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d1b2603a46ac3113da32ce4c9f9369">&#9670;&nbsp;</a></span>by_accept_bra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::by_accept_bra </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fab193f4309e73db768255936b75ede" name="a2fab193f4309e73db768255936b75ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fab193f4309e73db768255936b75ede">&#9670;&nbsp;</a></span>by_batch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::by_batch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac656bda12aba2168159b95747a4275f5" name="ac656bda12aba2168159b95747a4275f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac656bda12aba2168159b95747a4275f5">&#9670;&nbsp;</a></span>by_delivery_bra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::by_delivery_bra </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6d8722ed70ddf30e34ef3da60af9a45" name="ac6d8722ed70ddf30e34ef3da60af9a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d8722ed70ddf30e34ef3da60af9a45">&#9670;&nbsp;</a></span>by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::by_hash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4547598acebccfd1d6edbbff38006140" name="a4547598acebccfd1d6edbbff38006140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4547598acebccfd1d6edbbff38006140">&#9670;&nbsp;</a></span>by_offer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::by_offer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05a5ad76747d9962c06b5ecc818d8f1a" name="a05a5ad76747d9962c06b5ecc818d8f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a5ad76747d9962c06b5ecc818d8f1a">&#9670;&nbsp;</a></span>by_offerer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::by_offerer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80dca6ca21d94ba8544ab9372eda9f05" name="a80dca6ca21d94ba8544ab9372eda9f05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dca6ca21d94ba8544ab9372eda9f05">&#9670;&nbsp;</a></span>by_orderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::by_orderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afaa779fcc7b58870109b368c1b0382c0" name="afaa779fcc7b58870109b368c1b0382c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa779fcc7b58870109b368c1b0382c0">&#9670;&nbsp;</a></span>by_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::by_status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac37ad211dd2e7c206e32da778ab64b25" name="ac37ad211dd2e7c206e32da778ab64b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37ad211dd2e7c206e32da778ab64b25">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a61cb9b893289d1bf36acb2928db0f32c" name="a61cb9b893289d1bf36acb2928db0f32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61cb9b893289d1bf36acb2928db0f32c">&#9670;&nbsp;</a></span>accept_braname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::accept_braname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>КУ приёмки от поставщика (заполняется на signsupp); проверка signchair через Branch::is_user_authorized. </p>
+
+</div>
+</div>
+<a id="ae86e25ee10ee5a8b6a4d66783c9f1c5c" name="ae86e25ee10ee5a8b6a4d66783c9f1c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae86e25ee10ee5a8b6a4d66783c9f1c5c">&#9670;&nbsp;</a></span>acceptance_act_signchair</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> Marketplace::order::acceptance_act_signchair</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>АПП приёмки — финальная подпись председателя приёмного КУ (signchair) </p>
+
+</div>
+</div>
+<a id="a213ac9239883089b6b61fc3c84783a70" name="a213ac9239883089b6b61fc3c84783a70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213ac9239883089b6b61fc3c84783a70">&#9670;&nbsp;</a></span>acceptance_act_signsupp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> Marketplace::order::acceptance_act_signsupp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>АПП приёмки — первая подпись поставщика (signsupp) </p>
+
+</div>
+</div>
+<a id="a9006f52c9c16c882a313fff47662d980" name="a9006f52c9c16c882a313fff47662d980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9006f52c9c16c882a313fff47662d980">&#9670;&nbsp;</a></span>actual_quantity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::actual_quantity = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>фактически выданное (signiss2); до signiss2 == quantity </p>
+
+</div>
+</div>
+<a id="a21e2c5c55978fad79de484468feb9e75" name="a21e2c5c55978fad79de484468feb9e75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e2c5c55978fad79de484468feb9e75">&#9670;&nbsp;</a></span>batch_hash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::batch_hash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>opaque ссылка на consolidated request (off-chain) </p>
+
+</div>
+</div>
+<a id="a25c4ffbcd203f2553202524f69643284" name="a25c4ffbcd203f2553202524f69643284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c4ffbcd203f2553202524f69643284">&#9670;&nbsp;</a></span>coopname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::coopname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>scope-валидация </p>
+
+</div>
+</div>
+<a id="a3ef60ff1a96fa7c4742569ab3e6ca777" name="a3ef60ff1a96fa7c4742569ab3e6ca777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef60ff1a96fa7c4742569ab3e6ca777">&#9670;&nbsp;</a></span>current_warehouse_braname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::current_warehouse_braname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>текущая точка хранения; signchair: = accept_braname; signiss1: = delivery_braname (фиксация готовности к выдаче) </p>
+
+</div>
+</div>
+<a id="abb34b0f1f147f9b9fb9d670c1e63aa54" name="abb34b0f1f147f9b9fb9d670c1e63aa54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb34b0f1f147f9b9fb9d670c1e63aa54">&#9670;&nbsp;</a></span>delivery_braname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::delivery_braname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>КУ выдачи (выбран пайщиком на createorder); проверка signiss1/signiss2/p.mkt.return через Branch::is_user_authorized. </p>
+
+</div>
+</div>
+<a id="a381a781d6c1cb5f33687bc165741550c" name="a381a781d6c1cb5f33687bc165741550c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381a781d6c1cb5f33687bc165741550c">&#9670;&nbsp;</a></span>fact_cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::fact_cost = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>actual_quantity * unit_price / 10^precision (после signiss2) </p>
+
+</div>
+</div>
+<a id="a117cc0a51c92b2c6814f10f5c0677ac9" name="a117cc0a51c92b2c6814f10f5c0677ac9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117cc0a51c92b2c6814f10f5c0677ac9">&#9670;&nbsp;</a></span>hash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::hash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>process_hash для p.mkt.supply </p>
+
+</div>
+</div>
+<a id="a3f6d08553dd5a35b74b63c799eb1864f" name="a3f6d08553dd5a35b74b63c799eb1864f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6d08553dd5a35b74b63c799eb1864f">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>внутренний ID </p>
+
+</div>
+</div>
+<a id="a9439dc895bdb0b72ff47786255a9a9bb" name="a9439dc895bdb0b72ff47786255a9a9bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9439dc895bdb0b72ff47786255a9a9bb">&#9670;&nbsp;</a></span>issue_act_signiss1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> Marketplace::order::issue_act_signiss1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>АПП выдачи — первая подпись председателя КУ выдачи (signiss1) </p>
+
+</div>
+</div>
+<a id="a2b4ff41aea4702e66c77e0cf995427b1" name="a2b4ff41aea4702e66c77e0cf995427b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4ff41aea4702e66c77e0cf995427b1">&#9670;&nbsp;</a></span>issue_act_signiss2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> Marketplace::order::issue_act_signiss2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>АПП выдачи — финальная подпись заказчика (signiss2) </p>
+
+</div>
+</div>
+<a id="ac1a6899f2fa76f67671060f4bd0cb8fc" name="ac1a6899f2fa76f67671060f4bd0cb8fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a6899f2fa76f67671060f4bd0cb8fc">&#9670;&nbsp;</a></span>markdown_cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::markdown_cost = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Списанная уценка по заказу из остатка кооператива (o.mkt.loss, Дт 91 / Кт 10): разница между стоимостью прибытия выданного и фактической суммой выдачи. Ноль — уценка не списывалась; это же guard идемпотентности action'а <code>markdown</code> (повторное списание по заказу не пройдёт). </p>
+
+</div>
+</div>
+<a id="a2a3e80136a2cf377580293a76617fec1" name="a2a3e80136a2cf377580293a76617fec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3e80136a2cf377580293a76617fec1">&#9670;&nbsp;</a></span>membership_fee</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::membership_fee = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Членский взнос по заказу (requirement b6 «Экономика КУ»): считается от единой ставки кооператива на момент создания заказа и блокируется вместе со стоимостью имущества (o.mkt.fee, Дт 80 / Кт 86, пул w.mkt.fee). Включается в общую стоимость заказа для заказчика. При отмене возвращается полностью (o.mkt.refund); при финализации пересчитывается пропорционально факту и распределяется в кошельки КУ (<a class="el" href="group__public__branch__actions.html#ga684e0851b7b92f5b1be2441ac66e58d8" title="Ручное распределение средств общего кошелька КУ между председателем и доверенными по весам реестра: к...">branch::distribute</a>). Ноль — взнос не начислялся. </p>
+
+</div>
+</div>
+<a id="ae0223fc5c894310f3b26d03dc6ecdf17" name="ae0223fc5c894310f3b26d03dc6ecdf17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0223fc5c894310f3b26d03dc6ecdf17">&#9670;&nbsp;</a></span>offer_hash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">checksum256 Marketplace::order::offer_hash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ссылка на Offer (off-chain в backend) </p>
+
+</div>
+</div>
+<a id="a4278603a677ad4e14a224364f05759f4" name="a4278603a677ad4e14a224364f05759f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4278603a677ad4e14a224364f05759f4">&#9670;&nbsp;</a></span>offerer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::offerer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>пайщик-поставщик из Offer'а (для acceptorder/declineorder/signsupp guard'а) </p>
+
+</div>
+</div>
+<a id="a03032727b1b1dce4a3127fa4c6001ff5" name="a03032727b1b1dce4a3127fa4c6001ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03032727b1b1dce4a3127fa4c6001ff5">&#9670;&nbsp;</a></span>orderer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::orderer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>пайщик-заказчик </p>
+
+</div>
+</div>
+<a id="aad176acc36d2ea73db15d4419105340e" name="aad176acc36d2ea73db15d4419105340e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad176acc36d2ea73db15d4419105340e">&#9670;&nbsp;</a></span>package_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::package_size = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Эпик 18: содержимое упаковки в базовой единице. 0 = отпуск по мере (unit_price за базовую единицу); &gt;0 = упаковкой (unit_price за упаковку, quantity/actual_quantity кратны package_size) </p>
+
+</div>
+</div>
+<a id="a68545e782d3bf543a01601cb44bf4927" name="a68545e782d3bf543a01601cb44bf4927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68545e782d3bf543a01601cb44bf4927">&#9670;&nbsp;</a></span>payout_decline_reason</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Marketplace::order::payout_decline_reason</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Заполняется только при payout_status == DECLINED (текст причины из <a class="el" href="group__public__gateway__actions.html#gaa901dbc40f201008ec260eadfb812131" title="Отклонение исходящего платежа. Отклоняет исходящий платеж и вызывает коллбэк отклонения с указанной п...">gateway::outdecline</a>) </p>
+
+</div>
+</div>
+<a id="a4ecec59510054a23955549f671f55abe" name="a4ecec59510054a23955549f671f55abe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecec59510054a23955549f671f55abe">&#9670;&nbsp;</a></span>payout_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::payout_status = <a class="el" href="namespace_marketplace_1_1_order_payout_status.html#a69a3a91503fbdccaff62d07055efcea5">OrderPayoutStatus::NONE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Locked Decision L12 — состояние выплаты поставщику через gateway (см. namespace <a class="el" href="namespace_marketplace_1_1_order_payout_status.html" title="Состояние выплаты поставщику по Order&#39;у (Locked Decision L12, E11 техдолг 598-16)....">OrderPayoutStatus</a>) </p>
+
+</div>
+</div>
+<a id="a42ed41310733d2a118039ae2bd7f9073" name="a42ed41310733d2a118039ae2bd7f9073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ed41310733d2a118039ae2bd7f9073">&#9670;&nbsp;</a></span>quantity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::quantity = asset(0, <a class="el" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>заказанное количество (asset с символом единицы KG/LTR/PCS, Эпик 17) </p>
+
+</div>
+</div>
+<a id="adef7011fdd639bd823dcfd2cc0ff8bd7" name="adef7011fdd639bd823dcfd2cc0ff8bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef7011fdd639bd823dcfd2cc0ff8bd7">&#9670;&nbsp;</a></span>return_request_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Marketplace::order::return_request_id = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>0 если активного гарантийного возврата нет </p>
+
+</div>
+</div>
+<a id="a96586cd3f36cbf5b7a0147b77c636fe5" name="a96586cd3f36cbf5b7a0147b77c636fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96586cd3f36cbf5b7a0147b77c636fe5">&#9670;&nbsp;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name Marketplace::order::status = <a class="el" href="namespace_marketplace_1_1_order_status.html#a40fd0a3f16858cc935f0b60c03b4615e">OrderStatus::ACTIVE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>canonical статус </p>
+
+</div>
+</div>
+<a id="a6181f8a8101928be63bb2c9505d18dd8" name="a6181f8a8101928be63bb2c9505d18dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6181f8a8101928be63bb2c9505d18dd8">&#9670;&nbsp;</a></span>total_cost</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::total_cost = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>quantity * unit_price / 10^precision (заблокированная сумма) </p>
+
+</div>
+</div>
+<a id="a0cb98f4296a5b8984ac85e214600f3f4" name="a0cb98f4296a5b8984ac85e214600f3f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cb98f4296a5b8984ac85e214600f3f4">&#9670;&nbsp;</a></span>unit_price</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Marketplace::order::unit_price = asset(0, <a class="el" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>цена за единицу отпуска: за базовую единицу (кг/литр/штуку) при package_size==0, либо за упаковку при package_size&gt;0 </p>
+
+</div>
+</div>
+<a id="a216d14152b675b40e4e7e2eb249e3f53" name="a216d14152b675b40e4e7e2eb249e3f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216d14152b675b40e4e7e2eb249e3f53">&#9670;&nbsp;</a></span>warranty_period_secs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Marketplace::order::warranty_period_secs = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>из Offer'а — для submretrn гард'а </p>
+
+</div>
+</div>
+<a id="a4fb22e9f97ae330ed4da785675a44e30" name="a4fb22e9f97ae330ed4da785675a44e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fb22e9f97ae330ed4da785675a44e30">&#9670;&nbsp;</a></span>warranty_until</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_point_sec Marketplace::order::warranty_until = time_point_sec(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>now() + warranty_period_secs (заполняется в signiss2) </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/domain/<a class="el" href="table__marketplace__orders_8hpp_source.html">table_marketplace_orders.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_marketplace.html">Marketplace</a></li><li class="navelem"><a class="el" href="struct_marketplace_1_1order.html">order</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
