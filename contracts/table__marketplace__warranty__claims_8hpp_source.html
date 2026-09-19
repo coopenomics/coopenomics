@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/domain/table_marketplace_warranty_claims.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('table__marketplace__warranty__claims_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">table_marketplace_warranty_claims.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="table__marketplace__warranty__claims_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;eosio/asset.hpp&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/crypto.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../consts.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../core/document.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;../core/utils.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_marketplace.html">Marketplace</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_claim_status.html">   25</a></span><span class="keyword">namespace </span>ClaimStatus {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_claim_status.html#a2143623287b2f71d239d3470274a8c49">   26</a></span>  <span class="keyword">inline</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="namespace_marketplace_1_1_claim_status.html#a2143623287b2f71d239d3470274a8c49">PENDING</a>  = <span class="stringliteral">&quot;pending&quot;</span>_n;   </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_marketplace_1_1_claim_status.html#aee3963883f3d58d46044e2aebb967da7">   27</a></span>  <span class="keyword">inline</span> <span class="keyword">constexpr</span> eosio::name <a class="code hl_variable" href="namespace_marketplace_1_1_claim_status.html#aee3963883f3d58d46044e2aebb967da7">ADMITTED</a> = <span class="stringliteral">&quot;admitted&quot;</span>_n;  </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html">   46</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(MARKETPLACE)]] <a class="code hl_struct" href="struct_marketplace_1_1warranty__claim.html">warranty_claim</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#af79aee5f0e8fa29dcf9c669c314c81f9">   47</a></span>  uint64_t <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#af79aee5f0e8fa29dcf9c669c314c81f9">id</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a40b07e0d425628f2bf636eb1ecfb10cd">   48</a></span>  checksum256 <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a40b07e0d425628f2bf636eb1ecfb10cd">hash</a>;                                           </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#abbdd27086a9fe5806cbd86d1440805a7">   49</a></span>  eosio::name <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#abbdd27086a9fe5806cbd86d1440805a7">coopname</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#ab2419c123c78afeaf30c7560817701a6">   50</a></span>  eosio::name <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#ab2419c123c78afeaf30c7560817701a6">supplier</a>;                                       </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a50ad742d868ce75962f96014f76dbbe5">   51</a></span>  eosio::name <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a50ad742d868ce75962f96014f76dbbe5">orderer</a>;                                        </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a0490349c197336d1598128995437acb3">   53</a></span>  uint64_t <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a0490349c197336d1598128995437acb3">original_order_id</a>;                                 </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#add4fbf04fbd229ba74894215c75a9332">   54</a></span>  checksum256 <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#add4fbf04fbd229ba74894215c75a9332">original_order_hash</a>;                            </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a3bc08b18e2040e62984e77e788c4919c">   56</a></span>  eosio::asset actual_quantity = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a>);       </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a07eb58eb4b003eabd023a2dd0aaa80e7">   57</a></span>  eosio::asset <a class="code hl_variable" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a> = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);        </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#ab572271af868bc13fbd75b6cf75828ed">   59</a></span>  std::string <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#ab572271af868bc13fbd75b6cf75828ed">reason_text</a>;                                    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#aa68d50768ccb3df9918b84040ef717c1">   60</a></span>  std::vector&lt;checksum256&gt; <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#aa68d50768ccb3df9918b84040ef717c1">photos</a>;                            </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a1826643bc7ce265bbe7584ac87d8a9a8">   61</a></span>  <a class="code hl_struct" href="structdocument2.html">document2</a> <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a1826643bc7ce265bbe7584ac87d8a9a8">reclamation</a>;                                      </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a052a695df0dc654641b59c37744df449">   63</a></span>  eosio::name status = <a class="code hl_variable" href="namespace_marketplace_1_1_claim_status.html#a2143623287b2f71d239d3470274a8c49">ClaimStatus::PENDING</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a6daf8579cc304190d71dc3c7bd67c8b0">   64</a></span>  time_point_sec <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a6daf8579cc304190d71dc3c7bd67c8b0">created_at</a>;                                  </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a11d68bbb062524a9d592eafdf1b7bb6e">   65</a></span>  time_point_sec <a class="code hl_variable" href="struct_marketplace_1_1warranty__claim.html#a11d68bbb062524a9d592eafdf1b7bb6e">decided_at</a>;                                  </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a2c33d7cfbfb2360f4d4b9b325216a7ee">   67</a></span>  uint64_t <a class="code hl_function" href="struct_marketplace_1_1warranty__claim.html#a2c33d7cfbfb2360f4d4b9b325216a7ee">primary_key</a>()<span class="keyword">           const </span>{ <span class="keywordflow">return</span> id; }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#ac6036b57e0da9b5484b214954d6e8f47">   68</a></span>  checksum256 <a class="code hl_function" href="struct_marketplace_1_1warranty__claim.html#ac6036b57e0da9b5484b214954d6e8f47">by_hash</a>()<span class="keyword">            const </span>{ <span class="keywordflow">return</span> hash; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a1cbedf5a723d6eeeb4c88ba1a5e5aa74">   69</a></span>  uint64_t <a class="code hl_function" href="struct_marketplace_1_1warranty__claim.html#a1cbedf5a723d6eeeb4c88ba1a5e5aa74">by_supplier</a>()<span class="keyword">           const </span>{ <span class="keywordflow">return</span> supplier.value; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a4390eb96fce62c1fa6c49d269ad736c1">   70</a></span>  uint64_t <a class="code hl_function" href="struct_marketplace_1_1warranty__claim.html#a4390eb96fce62c1fa6c49d269ad736c1">by_status</a>()<span class="keyword">             const </span>{ <span class="keywordflow">return</span> status.value; }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_marketplace_1_1warranty__claim.html#a6e992da31100d987b0e0f60daf12ceaf">   71</a></span>  uint64_t <a class="code hl_function" href="struct_marketplace_1_1warranty__claim.html#a6e992da31100d987b0e0f60daf12ceaf">by_original_order</a>()<span class="keyword">     const </span>{ <span class="keywordflow">return</span> original_order_id; }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="stringliteral">&quot;claims&quot;</span>_n, warranty_claim,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n,        eosio::const_mem_fun&lt;warranty_claim, checksum256, &amp;warranty_claim::by_hash&gt;&gt;,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bysupplier&quot;</span>_n,    eosio::const_mem_fun&lt;warranty_claim, uint64_t,    &amp;warranty_claim::by_supplier&gt;&gt;,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bystatus&quot;</span>_n,      eosio::const_mem_fun&lt;warranty_claim, uint64_t,    &amp;warranty_claim::by_status&gt;&gt;,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;byorigorder&quot;</span>_n,   eosio::const_mem_fun&lt;warranty_claim, uint64_t,    &amp;warranty_claim::by_original_order&gt;&gt;&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespace_marketplace.html#a9fc6cdb4ebf373dbb7b87c33d9b973eb">   80</a></span>    <a class="code hl_typedef" href="namespace_marketplace.html#a9fc6cdb4ebf373dbb7b87c33d9b973eb">warranty_claims_index</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace Marketplace</span></div>
+<div class="ttc" id="aconsts_8hpp_html_a42a315c9536fec5c456f1315fa2d52c9"><div class="ttname"><a href="consts_8hpp.html#a42a315c9536fec5c456f1315fa2d52c9">_unit_piece</a></div><div class="ttdeci">static constexpr eosio::symbol _unit_piece</div><div class="ttdef"><b>Definition:</b> consts.hpp:243</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a5c15ddd21a87c0b286a24580936dc4b7"><div class="ttname"><a href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_govern_symbol</div><div class="ttdef"><b>Definition:</b> consts.hpp:236</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8token__tests_8cpp_html_aca469ae89ae00a572ad079f6d8515ce1"><div class="ttname"><a href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a></div><div class="ttdeci">share_type amount</div><div class="ttdef"><b>Definition:</b> eosio.token_tests.cpp:174</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_claim_status_html_a2143623287b2f71d239d3470274a8c49"><div class="ttname"><a href="namespace_marketplace_1_1_claim_status.html#a2143623287b2f71d239d3470274a8c49">Marketplace::ClaimStatus::PENDING</a></div><div class="ttdeci">constexpr eosio::name PENDING</div><div class="ttdoc">выставлена по решению совета; поставщик не признал</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:26</div></div>
+<div class="ttc" id="anamespace_marketplace_1_1_claim_status_html_aee3963883f3d58d46044e2aebb967da7"><div class="ttname"><a href="namespace_marketplace_1_1_claim_status.html#aee3963883f3d58d46044e2aebb967da7">Marketplace::ClaimStatus::ADMITTED</a></div><div class="ttdeci">constexpr eosio::name ADMITTED</div><div class="ttdoc">поставщик признал — долг к удержанию из выплат</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:27</div></div>
+<div class="ttc" id="anamespace_marketplace_html"><div class="ttname"><a href="namespace_marketplace.html">Marketplace</a></div><div class="ttdoc">Canonical helpers контракта marketplace (Story 11.1).</div><div class="ttdef"><b>Definition:</b> marketplace.hpp:32</div></div>
+<div class="ttc" id="anamespace_marketplace_html_a9fc6cdb4ebf373dbb7b87c33d9b973eb"><div class="ttname"><a href="namespace_marketplace.html#a9fc6cdb4ebf373dbb7b87c33d9b973eb">Marketplace::warranty_claims_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;claims&quot;_n, warranty_claim, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; warranty_claim, checksum256, &amp;warranty_claim::by_hash &gt; &gt;, eosio::indexed_by&lt;&quot;bysupplier&quot;_n, eosio::const_mem_fun&lt; warranty_claim, uint64_t, &amp;warranty_claim::by_supplier &gt; &gt;, eosio::indexed_by&lt;&quot;bystatus&quot;_n, eosio::const_mem_fun&lt; warranty_claim, uint64_t, &amp;warranty_claim::by_status &gt; &gt;, eosio::indexed_by&lt;&quot;byorigorder&quot;_n, eosio::const_mem_fun&lt; warranty_claim, uint64_t, &amp;warranty_claim::by_original_order &gt; &gt; &gt; warranty_claims_index</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:80</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html">Marketplace::warranty_claim</a></div><div class="ttdoc">On-chain гарантийная претензия поставщику — анкер процесса p.mkt.claim (компонент 68,...</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:46</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a0490349c197336d1598128995437acb3"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a0490349c197336d1598128995437acb3">Marketplace::warranty_claim::original_order_id</a></div><div class="ttdeci">uint64_t original_order_id</div><div class="ttdoc">внутренний id заказа</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:53</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a11d68bbb062524a9d592eafdf1b7bb6e"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a11d68bbb062524a9d592eafdf1b7bb6e">Marketplace::warranty_claim::decided_at</a></div><div class="ttdeci">time_point_sec decided_at</div><div class="ttdoc">момент признания поставщиком</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:65</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a1826643bc7ce265bbe7584ac87d8a9a8"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a1826643bc7ce265bbe7584ac87d8a9a8">Marketplace::warranty_claim::reclamation</a></div><div class="ttdeci">document2 reclamation</div><div class="ttdoc">рекламация 1106 с подписями пайщика и оператора участка</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:61</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a1cbedf5a723d6eeeb4c88ba1a5e5aa74"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a1cbedf5a723d6eeeb4c88ba1a5e5aa74">Marketplace::warranty_claim::by_supplier</a></div><div class="ttdeci">uint64_t by_supplier() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:69</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a2c33d7cfbfb2360f4d4b9b325216a7ee"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a2c33d7cfbfb2360f4d4b9b325216a7ee">Marketplace::warranty_claim::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:67</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a40b07e0d425628f2bf636eb1ecfb10cd"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a40b07e0d425628f2bf636eb1ecfb10cd">Marketplace::warranty_claim::hash</a></div><div class="ttdeci">checksum256 hash</div><div class="ttdoc">process_hash для p.mkt.claim = sha256(хэш рекламации ‖ &quot;claim&quot;)</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:48</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a4390eb96fce62c1fa6c49d269ad736c1"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a4390eb96fce62c1fa6c49d269ad736c1">Marketplace::warranty_claim::by_status</a></div><div class="ttdeci">uint64_t by_status() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:70</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a50ad742d868ce75962f96014f76dbbe5"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a50ad742d868ce75962f96014f76dbbe5">Marketplace::warranty_claim::orderer</a></div><div class="ttdeci">eosio::name orderer</div><div class="ttdoc">пайщик, вернувший имущество</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:51</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a6daf8579cc304190d71dc3c7bd67c8b0"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a6daf8579cc304190d71dc3c7bd67c8b0">Marketplace::warranty_claim::created_at</a></div><div class="ttdeci">time_point_sec created_at</div><div class="ttdoc">момент решения совета</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:64</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_a6e992da31100d987b0e0f60daf12ceaf"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#a6e992da31100d987b0e0f60daf12ceaf">Marketplace::warranty_claim::by_original_order</a></div><div class="ttdeci">uint64_t by_original_order() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:71</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_aa68d50768ccb3df9918b84040ef717c1"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#aa68d50768ccb3df9918b84040ef717c1">Marketplace::warranty_claim::photos</a></div><div class="ttdeci">std::vector&lt; checksum256 &gt; photos</div><div class="ttdoc">хеши фотографий из рекламации</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:60</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_ab2419c123c78afeaf30c7560817701a6"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#ab2419c123c78afeaf30c7560817701a6">Marketplace::warranty_claim::supplier</a></div><div class="ttdeci">eosio::name supplier</div><div class="ttdoc">поставщик по заказу (order.offerer)</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:50</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_ab572271af868bc13fbd75b6cf75828ed"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#ab572271af868bc13fbd75b6cf75828ed">Marketplace::warranty_claim::reason_text</a></div><div class="ttdeci">std::string reason_text</div><div class="ttdoc">причина обращения пайщика (из рекламации)</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:59</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_abbdd27086a9fe5806cbd86d1440805a7"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#abbdd27086a9fe5806cbd86d1440805a7">Marketplace::warranty_claim::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:49</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_ac6036b57e0da9b5484b214954d6e8f47"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#ac6036b57e0da9b5484b214954d6e8f47">Marketplace::warranty_claim::by_hash</a></div><div class="ttdeci">checksum256 by_hash() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:68</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_add4fbf04fbd229ba74894215c75a9332"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#add4fbf04fbd229ba74894215c75a9332">Marketplace::warranty_claim::original_order_hash</a></div><div class="ttdeci">checksum256 original_order_hash</div><div class="ttdoc">process_hash заказа (p.mkt.supply)</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:54</div></div>
+<div class="ttc" id="astruct_marketplace_1_1warranty__claim_html_af79aee5f0e8fa29dcf9c669c314c81f9"><div class="ttname"><a href="struct_marketplace_1_1warranty__claim.html#af79aee5f0e8fa29dcf9c669c314c81f9">Marketplace::warranty_claim::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdef"><b>Definition:</b> table_marketplace_warranty_claims.hpp:47</div></div>
+<div class="ttc" id="astructdocument2_html"><div class="ttname"><a href="structdocument2.html">document2</a></div><div class="ttdef"><b>Definition:</b> document_core.hpp:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_99d6a2ec44a7d22665ead9c94e1d5c22.html">domain</a></li><li class="navelem"><a class="el" href="table__marketplace__warranty__claims_8hpp.html">table_marketplace_warranty_claims.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
