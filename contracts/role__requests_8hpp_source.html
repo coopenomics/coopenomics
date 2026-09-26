@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/capital/domain/entities/role_requests.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('role__requests_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">role_requests.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="role__requests_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../../../lib/core/ram_payer.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eosio/asset.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using</span> std::string;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_capital_1_1_role_requests.html">Capital::RoleRequests</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_status.html">   16</a></span><span class="keyword">namespace </span>Status {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">   17</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">PENDING</a>  = <span class="stringliteral">&quot;pending&quot;</span>_n;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_status.html#a045aa42b575be88c59e50c56e339b3a0">   18</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a045aa42b575be88c59e50c56e339b3a0">APPROVED</a> = <span class="stringliteral">&quot;approved&quot;</span>_n;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_status.html#ae7420af05ae0c692f6911056c42746bb">   19</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#ae7420af05ae0c692f6911056c42746bb">DECLINED</a> = <span class="stringliteral">&quot;declined&quot;</span>_n;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_direction.html">   25</a></span><span class="keyword">namespace </span>Direction {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_direction.html#ad158bb5ced26be973ce0af003d94c0d6">   26</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_direction.html#ad158bb5ced26be973ce0af003d94c0d6">REQUEST</a> = <span class="stringliteral">&quot;request&quot;</span>_n;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_direction.html#a07bc534de644a92f2cda4ccb0b059fcf">   27</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_direction.html#a07bc534de644a92f2cda4ccb0b059fcf">INVITE</a>  = <span class="stringliteral">&quot;invite&quot;</span>_n;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_request_type.html">   33</a></span><span class="keyword">namespace </span>RequestType {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_request_type.html#a123fa2b319fc52fa2e1b2486a6da89b8">   34</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_request_type.html#a123fa2b319fc52fa2e1b2486a6da89b8">ROLE</a>        = <span class="stringliteral">&quot;role&quot;</span>_n;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_request_type.html#a6b2d4254b3be02c32f3663a0af246303">   35</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_request_type.html#a6b2d4254b3be02c32f3663a0af246303">RATE_UPDATE</a> = <span class="stringliteral">&quot;rateupdate&quot;</span>_n;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_role.html">   42</a></span><span class="keyword">namespace </span>Role {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_role.html#a861eaedc70e05f6fc2f64998ed9e6f5f">   43</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a861eaedc70e05f6fc2f64998ed9e6f5f">CREATOR</a> = <span class="stringliteral">&quot;creator&quot;</span>_n;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_role.html#a642891cb01ab494f38833bc33f30bc44">   44</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a642891cb01ab494f38833bc33f30bc44">AUTHOR</a>  = <span class="stringliteral">&quot;author&quot;</span>_n;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_role.html#a4fb40b764695a365710b9cd34350cdf3">   45</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a4fb40b764695a365710b9cd34350cdf3">MASTER</a>  = <span class="stringliteral">&quot;master&quot;</span>_n;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests_1_1_role.html#ad1b16bf640afa22301379a73d3f11c9b">   46</a></span>  <span class="keyword">constexpr</span> name <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#ad1b16bf640afa22301379a73d3f11c9b">NONE</a>    = name{};   </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html">   59</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(CAPITAL)]] <a class="code hl_struct" href="struct_capital_1_1_role_requests_1_1role__request.html">role_request</a> {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a28fff2603298db80dcc33b841701e4f8">   60</a></span>  uint64_t      <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#a28fff2603298db80dcc33b841701e4f8">id</a>;                                                  </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#ab05865643b0e39573dd4fd8f3b3c3525">   61</a></span>  eosio::name   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#ab05865643b0e39573dd4fd8f3b3c3525">coopname</a>;                                            </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#aa0611cdce9035c89d1788b21afe1532e">   62</a></span>  checksum256   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#aa0611cdce9035c89d1788b21afe1532e">request_hash</a>;                                        </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#ad3a546a46614c52a15fd50662d945e38">   63</a></span>  checksum256   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#ad3a546a46614c52a15fd50662d945e38">project_hash</a>;                                        </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a53e1d661d079663ef1d521c5db365714">   64</a></span>  eosio::name   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#a53e1d661d079663ef1d521c5db365714">username</a>;                                            </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a5696e35692ce6118554ae55c90ee2861">   65</a></span>  eosio::name   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#a5696e35692ce6118554ae55c90ee2861">master</a>;                                              </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a3f7a9e1dba28db3dbc7a795f9cb6b96b">   66</a></span>  eosio::name   role             = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#ad1b16bf640afa22301379a73d3f11c9b">Role::NONE</a>;                       </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#abdd56db91519c87849fbce8c1f48e230">   67</a></span>  eosio::asset  rate_per_hour    = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a0d4a6c386b8d28a68c44d0e7c4ae8917">   68</a></span>  uint64_t      hours_per_day    = 0;                                </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a5666c99c2cec4e4c1c04f0bd1ffe2526">   69</a></span>  eosio::asset  approved_rate    = asset(0, <a class="code hl_variable" href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a>);    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a6bc508700a53916fc309fef60bd02f2b">   70</a></span>  uint64_t      approved_hours   = 0;                                </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#ab7ce06f5cec8afc8f02a5f12cadb266f">   71</a></span>  eosio::name   direction        = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_direction.html#ad158bb5ced26be973ce0af003d94c0d6">Direction::REQUEST</a>;               </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a884849f9ee738644be2be909ba2dc73d">   72</a></span>  eosio::name   request_type     = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_request_type.html#a123fa2b319fc52fa2e1b2486a6da89b8">RequestType::ROLE</a>;                </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a5af04f0c681e618226e43a3e2a7ae513">   73</a></span>  eosio::name   status           = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">Status::PENDING</a>;                  </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a867391e5357a58620cda9487c342220d">   74</a></span>  std::string   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#a867391e5357a58620cda9487c342220d">description</a>;                                         </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a018b384b152ddafabaa5c3b33ec05acb">   75</a></span>  std::string   <a class="code hl_variable" href="struct_capital_1_1_role_requests_1_1role__request.html#a018b384b152ddafabaa5c3b33ec05acb">decline_reason</a>;                                      </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#aca08e21057e2e73d88f7ee9eb590bde9">   76</a></span>  time_point_sec created_at      = current_time_point();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a3e546ead31c3bf64e02b62f4c6c4c2fe">   78</a></span>  uint64_t   <a class="code hl_function" href="struct_capital_1_1_role_requests_1_1role__request.html#a3e546ead31c3bf64e02b62f4c6c4c2fe">primary_key</a>()<span class="keyword"> const   </span>{ <span class="keywordflow">return</span> id; }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a2b31f6f1c2f90479bf40b8dbc716e18b">   79</a></span>  checksum256 <a class="code hl_function" href="struct_capital_1_1_role_requests_1_1role__request.html#a2b31f6f1c2f90479bf40b8dbc716e18b">by_request_hash</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> request_hash; }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct_capital_1_1_role_requests_1_1role__request.html#a6a1e75c0ea4ff5c0e837adffd57c0cbe">   80</a></span>  uint128_t  <a class="code hl_function" href="struct_capital_1_1_role_requests_1_1role__request.html#a6a1e75c0ea4ff5c0e837adffd57c0cbe">by_project_user</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="utils_8hpp.html#a5dc7f20f695363268de62e5415a51946">combine_checksum_ids</a>(project_hash, username);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="stringliteral">&quot;rolerequests&quot;</span>_n, role_request,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  indexed_by&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n,     const_mem_fun&lt;role_request, checksum256, &amp;role_request::by_request_hash&gt;&gt;,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  indexed_by&lt;<span class="stringliteral">&quot;byprojuser&quot;</span>_n, const_mem_fun&lt;role_request, uint128_t,   &amp;role_request::by_project_user&gt;&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">   89</a></span>&gt; <a class="code hl_typedef" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">role_requests_index</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a4af55d13d60cd65dac976cf549573c8d">   91</a></span><span class="keyword">inline</span> std::optional&lt;role_request&gt; <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a4af55d13d60cd65dac976cf549573c8d">get_role_request</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;request_hash) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_typedef" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">role_requests_index</a> t(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keyword">auto</span> idx = t.get_index&lt;<span class="stringliteral">&quot;byhash&quot;</span>_n&gt;();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keyword">auto</span> itr = idx.find(request_hash);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">if</span> (itr == idx.end()) <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_capital_1_1_role_requests_1_1role__request.html">role_request</a>(*itr);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#aa60b53ad634c2071452cf93c274a57ae">   99</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="struct_capital_1_1_role_requests_1_1role__request.html">role_request</a> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#aa60b53ad634c2071452cf93c274a57ae">get_role_request_or_fail</a>(eosio::name coopname, <span class="keyword">const</span> checksum256 &amp;request_hash) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keyword">auto</span> v = <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a4af55d13d60cd65dac976cf549573c8d">get_role_request</a>(coopname, request_hash);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  eosio::check(v.has_value(), <span class="stringliteral">&quot;Заявка на роль не найдена&quot;</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> v.value();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a83992d2ae294aa9958e9611b64925ff9">  105</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a83992d2ae294aa9958e9611b64925ff9">create</a>(</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  eosio::name coopname,</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">const</span> checksum256 &amp;request_hash,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keyword">const</span> checksum256 &amp;project_hash,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  eosio::name username,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  eosio::name master,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  eosio::name role,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keyword">const</span> eosio::asset &amp;rate_per_hour,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  uint64_t hours_per_day,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  eosio::name direction,</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  eosio::name request_type,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keyword">const</span> std::string &amp;description</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_typedef" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">role_requests_index</a> t(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  eosio::check(!<a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a4af55d13d60cd65dac976cf549573c8d">get_role_request</a>(coopname, request_hash).has_value(),</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>               <span class="stringliteral">&quot;Заявка с указанным хэшем уже существует&quot;</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  uint64_t <span class="keywordtype">id</span> = <a class="code hl_function" href="table__counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a>(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname, <span class="stringliteral">&quot;rolerequests&quot;</span>_n);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  t.emplace(<a class="code hl_function" href="namespace_ram_payer.html#a220bf4b8165ddd96bb0dc474fcf3c683">RamPayer::of</a>(t, coopname), [&amp;](<span class="keyword">auto</span> &amp;r) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    r.id = id;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    r.coopname = coopname;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    r.request_hash = request_hash;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    r.project_hash = project_hash;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    r.username = username;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    r.master = master;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    r.role = role;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    r.rate_per_hour = rate_per_hour;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    r.hours_per_day = hours_per_day;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    r.direction = direction;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    r.request_type = request_type;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    r.status = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">Status::PENDING</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    r.description = description;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    r.created_at = current_time_point();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  });</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a6cc387e73d1b5ab6835d8258c735ad82">  146</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a6cc387e73d1b5ab6835d8258c735ad82">validate_role_or_fail</a>(eosio::name role) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  eosio::check(</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    role == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a861eaedc70e05f6fc2f64998ed9e6f5f">Role::CREATOR</a> || role == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a642891cb01ab494f38833bc33f30bc44">Role::AUTHOR</a> || role == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a4fb40b764695a365710b9cd34350cdf3">Role::MASTER</a>,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="stringliteral">&quot;Допустимые роли заявки: creator, author, master&quot;</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  );</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a98e3783b24c67652c596c2c1fe472f33">  162</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a98e3783b24c67652c596c2c1fe472f33">apply_role_to_project</a>(</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  eosio::name coopname,</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keyword">const</span> checksum256 &amp;project_hash,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  eosio::name username,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  eosio::name role</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordflow">if</span> (role == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a642891cb01ab494f38833bc33f30bc44">Role::AUTHOR</a>) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>(</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">eosio::permission_level</a>{coopname, <span class="stringliteral">&quot;active&quot;</span>_n},</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>,</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <span class="stringliteral">&quot;addauthor&quot;</span>_n,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      std::make_tuple(coopname, project_hash, username)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    ).<a class="code hl_function" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">send</a>();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (role == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_role.html#a4fb40b764695a365710b9cd34350cdf3">Role::MASTER</a>) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_function" href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">eosio::action</a>(</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">eosio::permission_level</a>{coopname, <span class="stringliteral">&quot;active&quot;</span>_n},</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>,</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="stringliteral">&quot;setmaster&quot;</span>_n,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      std::make_tuple(coopname, project_hash, username)</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    ).<a class="code hl_function" href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">send</a>();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#aa8f118d52ae85c2cafd8e674e28b8eb3">  185</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#aa8f118d52ae85c2cafd8e674e28b8eb3">approve</a>(</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  eosio::name coopname,</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  uint64_t request_id,</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keyword">const</span> eosio::asset &amp;approved_rate,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  uint64_t approved_hours</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_typedef" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">role_requests_index</a> t(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">auto</span> itr = t.find(request_id);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  eosio::check(itr != t.end(), <span class="stringliteral">&quot;Заявка не найдена&quot;</span>);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  eosio::check(itr-&gt;status == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">Status::PENDING</a>, <span class="stringliteral">&quot;Заявка уже обработана&quot;</span>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  t.modify(itr, <a class="code hl_function" href="namespace_ram_payer.html#a220bf4b8165ddd96bb0dc474fcf3c683">RamPayer::of</a>(t, coopname), [&amp;](<span class="keyword">auto</span> &amp;r) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    r.status = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a045aa42b575be88c59e50c56e339b3a0">Status::APPROVED</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    r.approved_rate = approved_rate;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    r.approved_hours = approved_hours;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  });</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="namespace_capital_1_1_role_requests.html#a17ed3f14055fe907da4b461ee59063c9">  202</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespace_capital_1_1_role_requests.html#a17ed3f14055fe907da4b461ee59063c9">decline</a>(eosio::name coopname, uint64_t request_id, <span class="keyword">const</span> std::string &amp;reason) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <a class="code hl_typedef" href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">role_requests_index</a> t(<a class="code hl_variable" href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a>, coopname.value);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keyword">auto</span> itr = t.find(request_id);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  eosio::check(itr != t.end(), <span class="stringliteral">&quot;Заявка не найдена&quot;</span>);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  eosio::check(itr-&gt;status == <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">Status::PENDING</a>, <span class="stringliteral">&quot;Заявка уже обработана&quot;</span>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  t.modify(itr, <a class="code hl_function" href="namespace_ram_payer.html#a220bf4b8165ddd96bb0dc474fcf3c683">RamPayer::of</a>(t, coopname), [&amp;](<span class="keyword">auto</span> &amp;r) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    r.status = <a class="code hl_variable" href="namespace_capital_1_1_role_requests_1_1_status.html#ae7420af05ae0c692f6911056c42746bb">Status::DECLINED</a>;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    r.decline_reason = reason;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  });</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>} <span class="comment">// namespace Capital::RoleRequests</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">// Плательщик за оперативную память строк таблицы — правило в lib/core/ram_payer.hpp.</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="role__requests_8hpp.html#ac124e7b0079ce79c1d8f1c9d7616b6a1">  216</a></span><a class="code hl_function" href="role__requests_8hpp.html#ac124e7b0079ce79c1d8f1c9d7616b6a1">RAM_PAYER_CLASS</a>(<a class="code hl_struct" href="struct_capital_1_1_role_requests_1_1role__request.html">Capital::RoleRequests::role_request</a>, <a class="code hl_struct" href="structcooperative.html">cooperative</a>);</div>
+<div class="ttc" id="aconsts_8hpp_html_a523079edf0da499462828993f69a920c"><div class="ttname"><a href="consts_8hpp.html#a523079edf0da499462828993f69a920c">_capital</a></div><div class="ttdeci">static constexpr eosio::name _capital</div><div class="ttdef"><b>Definition:</b> consts.hpp:171</div></div>
+<div class="ttc" id="aconsts_8hpp_html_a5c15ddd21a87c0b286a24580936dc4b7"><div class="ttname"><a href="consts_8hpp.html#a5c15ddd21a87c0b286a24580936dc4b7">_root_govern_symbol</a></div><div class="ttdeci">static constexpr eosio::symbol _root_govern_symbol</div><div class="ttdef"><b>Definition:</b> consts.hpp:236</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_adb5a7af6f4a8319d70ccf6363031f4dc"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#adb5a7af6f4a8319d70ccf6363031f4dc">permission_level</a></div><div class="ttdeci">permission_level</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:896</div></div>
+<div class="ttc" id="anamespace_action_html_a834c43bc3c681b1b84987f3bdc248dcb"><div class="ttname"><a href="namespace_action.html#a834c43bc3c681b1b84987f3bdc248dcb">Action::send</a></div><div class="ttdeci">void send(name contract, name action_name, name actor, Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition:</b> actions.hpp:10</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_direction_html_a07bc534de644a92f2cda4ccb0b059fcf"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_direction.html#a07bc534de644a92f2cda4ccb0b059fcf">Capital::RoleRequests::Direction::INVITE</a></div><div class="ttdeci">constexpr name INVITE</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:27</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_direction_html_ad158bb5ced26be973ce0af003d94c0d6"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_direction.html#ad158bb5ced26be973ce0af003d94c0d6">Capital::RoleRequests::Direction::REQUEST</a></div><div class="ttdeci">constexpr name REQUEST</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:26</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_request_type_html_a123fa2b319fc52fa2e1b2486a6da89b8"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_request_type.html#a123fa2b319fc52fa2e1b2486a6da89b8">Capital::RoleRequests::RequestType::ROLE</a></div><div class="ttdeci">constexpr name ROLE</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:34</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_request_type_html_a6b2d4254b3be02c32f3663a0af246303"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_request_type.html#a6b2d4254b3be02c32f3663a0af246303">Capital::RoleRequests::RequestType::RATE_UPDATE</a></div><div class="ttdeci">constexpr name RATE_UPDATE</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:35</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_role_html_a4fb40b764695a365710b9cd34350cdf3"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_role.html#a4fb40b764695a365710b9cd34350cdf3">Capital::RoleRequests::Role::MASTER</a></div><div class="ttdeci">constexpr name MASTER</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:45</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_role_html_a642891cb01ab494f38833bc33f30bc44"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_role.html#a642891cb01ab494f38833bc33f30bc44">Capital::RoleRequests::Role::AUTHOR</a></div><div class="ttdeci">constexpr name AUTHOR</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:44</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_role_html_a861eaedc70e05f6fc2f64998ed9e6f5f"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_role.html#a861eaedc70e05f6fc2f64998ed9e6f5f">Capital::RoleRequests::Role::CREATOR</a></div><div class="ttdeci">constexpr name CREATOR</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:43</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_role_html_ad1b16bf640afa22301379a73d3f11c9b"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_role.html#ad1b16bf640afa22301379a73d3f11c9b">Capital::RoleRequests::Role::NONE</a></div><div class="ttdeci">constexpr name NONE</div><div class="ttdoc">Для RATE_UPDATE: поле role не значимо</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:46</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_status_html_a045aa42b575be88c59e50c56e339b3a0"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_status.html#a045aa42b575be88c59e50c56e339b3a0">Capital::RoleRequests::Status::APPROVED</a></div><div class="ttdeci">constexpr name APPROVED</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:18</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_status_html_a870cb85fc6800fd07f6ce1b07ba409be"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_status.html#a870cb85fc6800fd07f6ce1b07ba409be">Capital::RoleRequests::Status::PENDING</a></div><div class="ttdeci">constexpr name PENDING</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:17</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_1_1_status_html_ae7420af05ae0c692f6911056c42746bb"><div class="ttname"><a href="namespace_capital_1_1_role_requests_1_1_status.html#ae7420af05ae0c692f6911056c42746bb">Capital::RoleRequests::Status::DECLINED</a></div><div class="ttdeci">constexpr name DECLINED</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:19</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html">Capital::RoleRequests</a></div><div class="ttdef"><b>Definition:</b> role_requests.hpp:11</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a17ed3f14055fe907da4b461ee59063c9"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a17ed3f14055fe907da4b461ee59063c9">Capital::RoleRequests::decline</a></div><div class="ttdeci">void decline(eosio::name coopname, uint64_t request_id, const std::string &amp;reason)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:202</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a4af55d13d60cd65dac976cf549573c8d"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a4af55d13d60cd65dac976cf549573c8d">Capital::RoleRequests::get_role_request</a></div><div class="ttdeci">std::optional&lt; role_request &gt; get_role_request(eosio::name coopname, const checksum256 &amp;request_hash)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:91</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a6cc387e73d1b5ab6835d8258c735ad82"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a6cc387e73d1b5ab6835d8258c735ad82">Capital::RoleRequests::validate_role_or_fail</a></div><div class="ttdeci">void validate_role_or_fail(eosio::name role)</div><div class="ttdoc">Проверяет, что role входит в допустимый набор Role::{CREATOR, AUTHOR, MASTER}. Контрибьюторы и инвест...</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:146</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a83992d2ae294aa9958e9611b64925ff9"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a83992d2ae294aa9958e9611b64925ff9">Capital::RoleRequests::create</a></div><div class="ttdeci">void create(eosio::name coopname, const checksum256 &amp;request_hash, const checksum256 &amp;project_hash, eosio::name username, eosio::name master, eosio::name role, const eosio::asset &amp;rate_per_hour, uint64_t hours_per_day, eosio::name direction, eosio::name request_type, const std::string &amp;description)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:105</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a928c8520f24f1cbaac460b6f550af296"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a928c8520f24f1cbaac460b6f550af296">Capital::RoleRequests::role_requests_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;rolerequests&quot;_n, role_request, indexed_by&lt;&quot;byhash&quot;_n, const_mem_fun&lt; role_request, checksum256, &amp;role_request::by_request_hash &gt; &gt;, indexed_by&lt;&quot;byprojuser&quot;_n, const_mem_fun&lt; role_request, uint128_t, &amp;role_request::by_project_user &gt; &gt; &gt; role_requests_index</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:89</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_a98e3783b24c67652c596c2c1fe472f33"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#a98e3783b24c67652c596c2c1fe472f33">Capital::RoleRequests::apply_role_to_project</a></div><div class="ttdeci">void apply_role_to_project(eosio::name coopname, const checksum256 &amp;project_hash, eosio::name username, eosio::name role)</div><div class="ttdoc">Применяет заявленную роль к проекту через inline action: Role::AUTHOR → addauthor,...</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:162</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_aa60b53ad634c2071452cf93c274a57ae"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#aa60b53ad634c2071452cf93c274a57ae">Capital::RoleRequests::get_role_request_or_fail</a></div><div class="ttdeci">role_request get_role_request_or_fail(eosio::name coopname, const checksum256 &amp;request_hash)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:99</div></div>
+<div class="ttc" id="anamespace_capital_1_1_role_requests_html_aa8f118d52ae85c2cafd8e674e28b8eb3"><div class="ttname"><a href="namespace_capital_1_1_role_requests.html#aa8f118d52ae85c2cafd8e674e28b8eb3">Capital::RoleRequests::approve</a></div><div class="ttdeci">void approve(eosio::name coopname, uint64_t request_id, const eosio::asset &amp;approved_rate, uint64_t approved_hours)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:185</div></div>
+<div class="ttc" id="anamespace_ram_payer_html_a220bf4b8165ddd96bb0dc474fcf3c683"><div class="ttname"><a href="namespace_ram_payer.html#a220bf4b8165ddd96bb0dc474fcf3c683">RamPayer::of</a></div><div class="ttdeci">eosio::name of(const Table &amp;table, eosio::name coopname)</div><div class="ttdef"><b>Definition:</b> ram_payer.hpp:78</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="aregcomplete_8cpp_html_a6ba6770d0b800c47194585bb6b9c8578"><div class="ttname"><a href="regcomplete_8cpp.html#a6ba6770d0b800c47194585bb6b9c8578">action</a></div><div class="ttdeci">action(permission_level{ _gateway, &quot;active&quot;_n}, _gateway, &quot;adduser&quot;_n, std::make_tuple(coopname, deposit-&gt;username, to_spread, to_circulation, eosio::current_time_point(), true)).send()</div></div>
+<div class="ttc" id="arole__requests_8hpp_html_ac124e7b0079ce79c1d8f1c9d7616b6a1"><div class="ttname"><a href="role__requests_8hpp.html#ac124e7b0079ce79c1d8f1c9d7616b6a1">RAM_PAYER_CLASS</a></div><div class="ttdeci">RAM_PAYER_CLASS(Capital::RoleRequests::role_request, cooperative)</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html">Capital::RoleRequests::role_request</a></div><div class="ttdoc">Очередь заявок на L2-допуск/инвайт и на обновление approved-ставки.</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:59</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a018b384b152ddafabaa5c3b33ec05acb"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a018b384b152ddafabaa5c3b33ec05acb">Capital::RoleRequests::role_request::decline_reason</a></div><div class="ttdeci">std::string decline_reason</div><div class="ttdoc">Причина отказа (если DECLINED)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:75</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a28fff2603298db80dcc33b841701e4f8"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a28fff2603298db80dcc33b841701e4f8">Capital::RoleRequests::role_request::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">Внутренний ключ</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:60</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a2b31f6f1c2f90479bf40b8dbc716e18b"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a2b31f6f1c2f90479bf40b8dbc716e18b">Capital::RoleRequests::role_request::by_request_hash</a></div><div class="ttdeci">checksum256 by_request_hash() const</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:79</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a3e546ead31c3bf64e02b62f4c6c4c2fe"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a3e546ead31c3bf64e02b62f4c6c4c2fe">Capital::RoleRequests::role_request::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:78</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a53e1d661d079663ef1d521c5db365714"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a53e1d661d079663ef1d521c5db365714">Capital::RoleRequests::role_request::username</a></div><div class="ttdeci">eosio::name username</div><div class="ttdoc">Заявитель (REQUEST) или кандидат (INVITE)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:64</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a5696e35692ce6118554ae55c90ee2861"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a5696e35692ce6118554ae55c90ee2861">Capital::RoleRequests::role_request::master</a></div><div class="ttdeci">eosio::name master</div><div class="ttdoc">Мастер компонента (одобряющий) — при invite на роль master это координатор/председатель</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:65</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a6a1e75c0ea4ff5c0e837adffd57c0cbe"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a6a1e75c0ea4ff5c0e837adffd57c0cbe">Capital::RoleRequests::role_request::by_project_user</a></div><div class="ttdeci">uint128_t by_project_user() const</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:80</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_a867391e5357a58620cda9487c342220d"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#a867391e5357a58620cda9487c342220d">Capital::RoleRequests::role_request::description</a></div><div class="ttdeci">std::string description</div><div class="ttdoc">Текст заявки / приглашения (может быть пустым)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:74</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_aa0611cdce9035c89d1788b21afe1532e"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#aa0611cdce9035c89d1788b21afe1532e">Capital::RoleRequests::role_request::request_hash</a></div><div class="ttdeci">checksum256 request_hash</div><div class="ttdoc">Хеш заявки (анкер)</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:62</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_ab05865643b0e39573dd4fd8f3b3c3525"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#ab05865643b0e39573dd4fd8f3b3c3525">Capital::RoleRequests::role_request::coopname</a></div><div class="ttdeci">eosio::name coopname</div><div class="ttdoc">Кооператив</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:61</div></div>
+<div class="ttc" id="astruct_capital_1_1_role_requests_1_1role__request_html_ad3a546a46614c52a15fd50662d945e38"><div class="ttname"><a href="struct_capital_1_1_role_requests_1_1role__request.html#ad3a546a46614c52a15fd50662d945e38">Capital::RoleRequests::role_request::project_hash</a></div><div class="ttdeci">checksum256 project_hash</div><div class="ttdoc">Проект / компонент</div><div class="ttdef"><b>Definition:</b> role_requests.hpp:63</div></div>
+<div class="ttc" id="astructcooperative_html"><div class="ttname"><a href="structcooperative.html">cooperative</a></div><div class="ttdef"><b>Definition:</b> table_registrator_orgs.hpp:17</div></div>
+<div class="ttc" id="atable__counts_8hpp_html_ad99cf4a19b51981409c18e05b7fb35c0"><div class="ttname"><a href="table__counts_8hpp.html#ad99cf4a19b51981409c18e05b7fb35c0">get_global_id_in_scope</a></div><div class="ttdeci">uint64_t get_global_id_in_scope(eosio::name _me, eosio::name scope, eosio::name key)</div><div class="ttdef"><b>Definition:</b> table_counts.hpp:62</div></div>
+<div class="ttc" id="autils_8hpp_html_a5dc7f20f695363268de62e5415a51946"><div class="ttname"><a href="utils_8hpp.html#a5dc7f20f695363268de62e5415a51946">combine_checksum_ids</a></div><div class="ttdeci">static uint128_t combine_checksum_ids(const checksum256 &amp;hash, eosio::name username)</div><div class="ttdef"><b>Definition:</b> utils.hpp:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_6bed5699424718c03e38ae945650fbbb.html">capital</a></li><li class="navelem"><a class="el" href="dir_f4cf4a10d9761285b9a85915e871e82c.html">domain</a></li><li class="navelem"><a class="el" href="dir_bc637c682727437feef808efe4b72202.html">entities</a></li><li class="navelem"><a class="el" href="role__requests_8hpp.html">role_requests.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

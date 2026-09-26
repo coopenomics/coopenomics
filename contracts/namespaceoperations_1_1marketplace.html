@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен operations::marketplace</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespaceoperations_1_1marketplace.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен operations::marketplace</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a8e75975d1222df95965628e016fffee0"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a8e75975d1222df95965628e016fffee0">CONVERT_TO_MEMBER</a> = &quot;o.mkt.conv&quot;_n</td></tr>
+<tr class="memdesc:a8e75975d1222df95965628e016fffee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод паевого взноса в членский кошелёк программы по заявлению 1110 отдельным действием convert до заказа (TRANSFER w.wal.share → w.mkt.member, Dr 80 / Cr 86). Сумма — недостающая до взноса участка часть: остаток w.mkt.member используется автоматически.  <a href="namespaceoperations_1_1marketplace.html#a8e75975d1222df95965628e016fffee0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8e75975d1222df95965628e016fffee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f25191ffd0982e25192410381bfb71"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#af5f25191ffd0982e25192410381bfb71">LOCK_ORDER</a> = &quot;o.mkt.lock&quot;_n</td></tr>
+<tr class="memdesc:af5f25191ffd0982e25192410381bfb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Паевой резерв под конкретный Order (TRANSFER w.wal.share → w.mkt.order, без Dr/Cr — оба кошелька на 80). Единственный обязательный шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> при createorder.  <a href="namespaceoperations_1_1marketplace.html#af5f25191ffd0982e25192410381bfb71">Подробнее...</a><br /></td></tr>
+<tr class="separator:af5f25191ffd0982e25192410381bfb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe9c510049ae315cd2cf96d933ddd98"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a8fe9c510049ae315cd2cf96d933ddd98">LOCK_FROM_SHARE</a> = &quot;o.mkt.lockp&quot;_n</td></tr>
+<tr class="memdesc:a8fe9c510049ae315cd2cf96d933ddd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Паевой резерв из свободного паевого «Стола заказов» (TRANSFER w.mkt.share → w.mkt.order, без Dr/Cr — оба на 80). Тело любого заказа и доплата по факту берутся отсюда в первую очередь (сюда возвращаются паевые средства при отменах, недовыдачах и гарантийных возвратах), остаток — LOCK_ORDER с w.wal.share.  <a href="namespaceoperations_1_1marketplace.html#a8fe9c510049ae315cd2cf96d933ddd98">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8fe9c510049ae315cd2cf96d933ddd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d8967c44189242449a9176cf2ec504f"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a7d8967c44189242449a9176cf2ec504f">UNLOCK_ORDER</a> = &quot;o.mkt.unlock&quot;_n</td></tr>
+<tr class="memdesc:a7d8967c44189242449a9176cf2ec504f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат резерва при отмене Order'а или недовыдаче (TRANSFER w.mkt.order → w.mkt.share, без Dr/Cr — оба на 80). Средства остаются паевыми и остаются в программе: идут на тело следующих заказов (LOCK_FROM_SHARE); в общий паевой не выводятся, RECALL_SHARE — только при выходе из кооператива.  <a href="namespaceoperations_1_1marketplace.html#a7d8967c44189242449a9176cf2ec504f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d8967c44189242449a9176cf2ec504f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115ccd8c21e633ae40cde387c807c0f1"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a115ccd8c21e633ae40cde387c807c0f1">PURCHASE_FROM_SUPPLIER</a> = &quot;o.mkt.purch&quot;_n</td></tr>
+<tr class="memdesc:a115ccd8c21e633ae40cde387c807c0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приёмка имущества кооперативом по АПП приёмки (Dr 10 / Cr 76, ISSUE ∅ → w.mkt.topay по поставщику; имущество — аналитика по 10). Обязательство перед поставщиком на счёте расчётов с разными дебиторами и кредиторами (решение владельца 08.09.2026: 76 вместо 60) и сумма к оплате на кошельке поставщика (задача 99D-16).  <a href="namespaceoperations_1_1marketplace.html#a115ccd8c21e633ae40cde387c807c0f1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a115ccd8c21e633ae40cde387c807c0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a4da05c8f9d58fa6f84a56b0420e84b58">PAY_SUPPLIER</a> = &quot;o.mkt.payout&quot;_n</td></tr>
+<tr class="memdesc:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оплата поставщику с расчётного счёта по подтверждению кассира (Dr 76 / Cr 51, BURN с w.mkt.topay). Гасит обязательство, открытое PURCHASE_FROM_SUPPLIER.  <a href="namespaceoperations_1_1marketplace.html#a4da05c8f9d58fa6f84a56b0420e84b58">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4da05c8f9d58fa6f84a56b0420e84b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d731d5d4bd89571bbbdabb41c6b384d"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a7d731d5d4bd89571bbbdabb41c6b384d">OFFSET_PAYABLE</a> = &quot;o.mkt.offset&quot;_n</td></tr>
+<tr class="memdesc:a7d731d5d4bd89571bbbdabb41c6b384d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачёт удержанного гарантийного долга против суммы к оплате поставщику (BURN с w.mkt.topay, без проводки). Парная к DEDUCT_DEBT на ту же сумму в той же транзакции <code>payout</code>: долг поставщика и обязательство перед ним уменьшаются вместе (задача 99D-16).  <a href="namespaceoperations_1_1marketplace.html#a7d731d5d4bd89571bbbdabb41c6b384d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d731d5d4bd89571bbbdabb41c6b384d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a661dd6d4a33d71b6e0d873ccf209ca56">CONSUME_BY_MEMBER</a> = &quot;o.mkt.consum&quot;_n</td></tr>
+<tr class="memdesc:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат паевого взноса имуществом по акту выдачи (BURN с w.mkt.order, Dr 80 / Cr 10 — паевой фонд уменьшается на стоимость переданного имущества по протоколу совета). Ставится только закрывающей подписью председателя участка (issueact2).  <a href="namespaceoperations_1_1marketplace.html#a661dd6d4a33d71b6e0d873ccf209ca56">Подробнее...</a><br /></td></tr>
+<tr class="separator:a661dd6d4a33d71b6e0d873ccf209ca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce94bd91e1ebc28225aab2b3262d4ee"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#acce94bd91e1ebc28225aab2b3262d4ee">RETURN_BY_MEMBER</a> = &quot;o.mkt.return&quot;_n</td></tr>
+<tr class="memdesc:acce94bd91e1ebc28225aab2b3262d4ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отмена сделки по гарантийному возврату по решению совета — compensating forward к CONSUME_BY_MEMBER (ISSUE ∅ → w.mkt.share, Dr 10 / Cr 80 — восстановление паевого на свободном паевом «Стола заказов» и возврат имущества на склад). Реверты <a class="el" href="group__public__ledger2__actions.html#ga99d949cfbb551a79f7c54ba709d4ae89" title="Откат ранее проведённой операции (operation o.adj.rev).">ledger2::revert</a> в Столе заказов не используются.  <a href="namespaceoperations_1_1marketplace.html#acce94bd91e1ebc28225aab2b3262d4ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:acce94bd91e1ebc28225aab2b3262d4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a841febd957e7b2a8ec6e95768a3cc353"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a841febd957e7b2a8ec6e95768a3cc353">WRITE_OFF_PERISHABLE</a> = &quot;o.mkt.wroff&quot;_n</td></tr>
+<tr class="memdesc:a841febd957e7b2a8ec6e95768a3cc353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Утилизация скоропорта со склада (NONE Dr 91 / Cr 10). По протоколу совета. Порча запаса выбывает в прочие расходы тем же путём, что уценка (решение владельца 10.09.2026, задача 99D-15): счёт 86 двигают только операции с кошельками, а закрытие 91 — отдельное решение.  <a href="namespaceoperations_1_1marketplace.html#a841febd957e7b2a8ec6e95768a3cc353">Подробнее...</a><br /></td></tr>
+<tr class="separator:a841febd957e7b2a8ec6e95768a3cc353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e743fee33ecf27eccc9fbde9176e50b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a1e743fee33ecf27eccc9fbde9176e50b">MARKDOWN_LOSS</a> = &quot;o.mkt.loss&quot;_n</td></tr>
+<tr class="memdesc:a1e743fee33ecf27eccc9fbde9176e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уценка при выдаче из остатка кооператива (NONE Dr 91 / Cr 10): разница между ценой прибытия и фактической ценой выдачи выбывает со склада в прочие расходы. Вместе с o.mkt.consum даёт выбытие по полной стоимости прибытия — на счёте 10 ничего не зависает.  <a href="namespaceoperations_1_1marketplace.html#a1e743fee33ecf27eccc9fbde9176e50b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1e743fee33ecf27eccc9fbde9176e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904a4094ced40c4bcaba2910403f45e9"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a904a4094ced40c4bcaba2910403f45e9">MEMBERSHIP_FEE_LOCK</a> = &quot;o.mkt.fee&quot;_n</td></tr>
+<tr class="memdesc:a904a4094ced40c4bcaba2910403f45e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Членский взнос кооперативного участка под заказ из членского кошелька программы (TRANSFER w.mkt.member → w.mkt.fee, без Dr/Cr — оба на 86). createorder, stockorder и довзнос по факту на issueact2; взнос считается от единой ставки кооператива и фиксируется явным полем Order.membership_fee.  <a href="namespaceoperations_1_1marketplace.html#a904a4094ced40c4bcaba2910403f45e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a904a4094ced40c4bcaba2910403f45e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a59aa30ac7b5187c7a79f3d8209bdb5be">MEMBERSHIP_FEE_REFUND</a> = &quot;o.mkt.refund&quot;_n</td></tr>
+<tr class="memdesc:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сторно неиспользованной части членского взноса участка на членский кошелёк программы (TRANSFER w.mkt.fee → w.mkt.member, без Dr/Cr — оба на 86). Отмена — полностью, недовыдача — пропорционально факту, гарантийный возврат — доля за возвращённое; членский остаётся членским и идёт в зачёт следующего заказа.  <a href="namespaceoperations_1_1marketplace.html#a59aa30ac7b5187c7a79f3d8209bdb5be">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59aa30ac7b5187c7a79f3d8209bdb5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54ac65e900d0445b15ec3316c1ffb54"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#af54ac65e900d0445b15ec3316c1ffb54">REFUSAL_PENALTY</a> = &quot;o.mkt.penal&quot;_n</td></tr>
+<tr class="memdesc:af54ac65e900d0445b15ec3316c1ffb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание 50% при отказе пайщика от получения после акцепта поставщиком (TRANSFER w.mkt.order → w.mkt.fee, Dr 80 / Cr 86 — паевой становится членским взносом участка; основание в положении о ЦПП — TBD-Standardization). Транзит через пул взносов: далее единым o.brn.common уходит в общий кошелёк КУ. Имущество остаётся на складе КУ; вторая половина возвращается пайщику (o.mkt.unlock + o.mkt.refund).  <a href="namespaceoperations_1_1marketplace.html#af54ac65e900d0445b15ec3316c1ffb54">Подробнее...</a><br /></td></tr>
+<tr class="separator:af54ac65e900d0445b15ec3316c1ffb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15ebff693ec9b94ca14122fcadd5e21"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#ad15ebff693ec9b94ca14122fcadd5e21">RECALL_SHARE</a> = &quot;o.mkt.recall&quot;_n</td></tr>
+<tr class="memdesc:ad15ebff693ec9b94ca14122fcadd5e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Консолидация свободного паевого «Стола заказов» в общий паевой Цифрового кошелька при выходе пайщика из кооператива (TRANSFER w.mkt.share → w.wal.share, без Dr/Cr — оба на 80); зовёт registrator (exit_helpers).  <a href="namespaceoperations_1_1marketplace.html#ad15ebff693ec9b94ca14122fcadd5e21">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad15ebff693ec9b94ca14122fcadd5e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a536cdbffed3acf16db688dbf2e8e5fa9"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a536cdbffed3acf16db688dbf2e8e5fa9">EXIT_FEE_TO_POOL</a> = &quot;o.mkt.exfee&quot;_n</td></tr>
+<tr class="memdesc:a536cdbffed3acf16db688dbf2e8e5fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остаток членского кошелька программы при выходе пайщика из кооператива (TRANSFER w.mkt.member → w.mkt.fee, без Dr/Cr — оба на 86): членский взнос не возвращается и в паевой не транслируется (решение владельца 10.09.2026, задача 99D-15). Транзит: той же транзакцией o.brn.common зачисляет его в общий кошелёк участка, к которому прикреплён пайщик; без участка остаётся в пуле (задача 99D-16). Зовёт registrator, когда выход состоялся (completexit, confirmexit без выплаты).  <a href="namespaceoperations_1_1marketplace.html#a536cdbffed3acf16db688dbf2e8e5fa9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a536cdbffed3acf16db688dbf2e8e5fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d0aaf5008b1f380d166bb84f911c14"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#a70d0aaf5008b1f380d166bb84f911c14">CLAIM_SUPPLIER</a> = &quot;o.mkt.claim&quot;_n</td></tr>
+<tr class="memdesc:a70d0aaf5008b1f380d166bb84f911c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Гарантийная претензия поставщику выставлена по решению совета об отмене сделки (ISSUE ∅ → w.mkt.claim по поставщику, без проводки — до признания претензия не актив). По умолчанию поставщик не согласен: сумма остаётся здесь как основание для иска. Сумма — стоимость возвращённого имущества.  <a href="namespaceoperations_1_1marketplace.html#a70d0aaf5008b1f380d166bb84f911c14">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70d0aaf5008b1f380d166bb84f911c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeab4aad59e4fcdb5fafa592e0b19589b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#aeab4aad59e4fcdb5fafa592e0b19589b">ADMIT_CLAIM</a> = &quot;o.mkt.admit&quot;_n</td></tr>
+<tr class="memdesc:aeab4aad59e4fcdb5fafa592e0b19589b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поставщик признал претензию: TRANSFER w.mkt.claim → w.mkt.debt, Dr 76 / Cr 91 — дебиторка поставщика признана прочим доходом; далее гасится удержанием из выплат.  <a href="namespaceoperations_1_1marketplace.html#aeab4aad59e4fcdb5fafa592e0b19589b">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeab4aad59e4fcdb5fafa592e0b19589b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbfa11dd98a5de3efc263896dddd7727"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1marketplace.html#adbfa11dd98a5de3efc263896dddd7727">DEDUCT_DEBT</a> = &quot;o.mkt.deduct&quot;_n</td></tr>
+<tr class="memdesc:adbfa11dd98a5de3efc263896dddd7727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание признанного гарантийного долга из выплаты поставщику (BURN с w.mkt.debt, без проводки: обязательство перед поставщиком и его дебиторка на одном счёте 76 сворачиваются). Идёт в нитке заказа при инициации выплаты (<code>payout</code>) вместе с OFFSET_PAYABLE на ту же сумму.  <a href="namespaceoperations_1_1marketplace.html#adbfa11dd98a5de3efc263896dddd7727">Подробнее...</a><br /></td></tr>
+<tr class="separator:adbfa11dd98a5de3efc263896dddd7727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Переменные</h2>
+<a id="aeab4aad59e4fcdb5fafa592e0b19589b" name="aeab4aad59e4fcdb5fafa592e0b19589b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeab4aad59e4fcdb5fafa592e0b19589b">&#9670;&nbsp;</a></span>ADMIT_CLAIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::ADMIT_CLAIM = &quot;o.mkt.admit&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поставщик признал претензию: TRANSFER w.mkt.claim → w.mkt.debt, Dr 76 / Cr 91 — дебиторка поставщика признана прочим доходом; далее гасится удержанием из выплат. </p>
+
+</div>
+</div>
+<a id="a70d0aaf5008b1f380d166bb84f911c14" name="a70d0aaf5008b1f380d166bb84f911c14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d0aaf5008b1f380d166bb84f911c14">&#9670;&nbsp;</a></span>CLAIM_SUPPLIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::CLAIM_SUPPLIER = &quot;o.mkt.claim&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Гарантийная претензия поставщику выставлена по решению совета об отмене сделки (ISSUE ∅ → w.mkt.claim по поставщику, без проводки — до признания претензия не актив). По умолчанию поставщик не согласен: сумма остаётся здесь как основание для иска. Сумма — стоимость возвращённого имущества. </p>
+
+</div>
+</div>
+<a id="a661dd6d4a33d71b6e0d873ccf209ca56" name="a661dd6d4a33d71b6e0d873ccf209ca56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661dd6d4a33d71b6e0d873ccf209ca56">&#9670;&nbsp;</a></span>CONSUME_BY_MEMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::CONSUME_BY_MEMBER = &quot;o.mkt.consum&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат паевого взноса имуществом по акту выдачи (BURN с w.mkt.order, Dr 80 / Cr 10 — паевой фонд уменьшается на стоимость переданного имущества по протоколу совета). Ставится только закрывающей подписью председателя участка (issueact2). </p>
+
+</div>
+</div>
+<a id="a8e75975d1222df95965628e016fffee0" name="a8e75975d1222df95965628e016fffee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e75975d1222df95965628e016fffee0">&#9670;&nbsp;</a></span>CONVERT_TO_MEMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::CONVERT_TO_MEMBER = &quot;o.mkt.conv&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Перевод паевого взноса в членский кошелёк программы по заявлению 1110 отдельным действием convert до заказа (TRANSFER w.wal.share → w.mkt.member, Dr 80 / Cr 86). Сумма — недостающая до взноса участка часть: остаток w.mkt.member используется автоматически. </p>
+
+</div>
+</div>
+<a id="adbfa11dd98a5de3efc263896dddd7727" name="adbfa11dd98a5de3efc263896dddd7727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbfa11dd98a5de3efc263896dddd7727">&#9670;&nbsp;</a></span>DEDUCT_DEBT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::DEDUCT_DEBT = &quot;o.mkt.deduct&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удержание признанного гарантийного долга из выплаты поставщику (BURN с w.mkt.debt, без проводки: обязательство перед поставщиком и его дебиторка на одном счёте 76 сворачиваются). Идёт в нитке заказа при инициации выплаты (<code>payout</code>) вместе с OFFSET_PAYABLE на ту же сумму. </p>
+
+</div>
+</div>
+<a id="a536cdbffed3acf16db688dbf2e8e5fa9" name="a536cdbffed3acf16db688dbf2e8e5fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a536cdbffed3acf16db688dbf2e8e5fa9">&#9670;&nbsp;</a></span>EXIT_FEE_TO_POOL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::EXIT_FEE_TO_POOL = &quot;o.mkt.exfee&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Остаток членского кошелька программы при выходе пайщика из кооператива (TRANSFER w.mkt.member → w.mkt.fee, без Dr/Cr — оба на 86): членский взнос не возвращается и в паевой не транслируется (решение владельца 10.09.2026, задача 99D-15). Транзит: той же транзакцией o.brn.common зачисляет его в общий кошелёк участка, к которому прикреплён пайщик; без участка остаётся в пуле (задача 99D-16). Зовёт registrator, когда выход состоялся (completexit, confirmexit без выплаты). </p>
+
+</div>
+</div>
+<a id="a8fe9c510049ae315cd2cf96d933ddd98" name="a8fe9c510049ae315cd2cf96d933ddd98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe9c510049ae315cd2cf96d933ddd98">&#9670;&nbsp;</a></span>LOCK_FROM_SHARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::LOCK_FROM_SHARE = &quot;o.mkt.lockp&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Паевой резерв из свободного паевого «Стола заказов» (TRANSFER w.mkt.share → w.mkt.order, без Dr/Cr — оба на 80). Тело любого заказа и доплата по факту берутся отсюда в первую очередь (сюда возвращаются паевые средства при отменах, недовыдачах и гарантийных возвратах), остаток — LOCK_ORDER с w.wal.share. </p>
+
+</div>
+</div>
+<a id="af5f25191ffd0982e25192410381bfb71" name="af5f25191ffd0982e25192410381bfb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f25191ffd0982e25192410381bfb71">&#9670;&nbsp;</a></span>LOCK_ORDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::LOCK_ORDER = &quot;o.mkt.lock&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Паевой резерв под конкретный Order (TRANSFER w.wal.share → w.mkt.order, без Dr/Cr — оба кошелька на 80). Единственный обязательный шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a> при createorder. </p>
+
+</div>
+</div>
+<a id="a1e743fee33ecf27eccc9fbde9176e50b" name="a1e743fee33ecf27eccc9fbde9176e50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e743fee33ecf27eccc9fbde9176e50b">&#9670;&nbsp;</a></span>MARKDOWN_LOSS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::MARKDOWN_LOSS = &quot;o.mkt.loss&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Уценка при выдаче из остатка кооператива (NONE Dr 91 / Cr 10): разница между ценой прибытия и фактической ценой выдачи выбывает со склада в прочие расходы. Вместе с o.mkt.consum даёт выбытие по полной стоимости прибытия — на счёте 10 ничего не зависает. </p>
+
+</div>
+</div>
+<a id="a904a4094ced40c4bcaba2910403f45e9" name="a904a4094ced40c4bcaba2910403f45e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904a4094ced40c4bcaba2910403f45e9">&#9670;&nbsp;</a></span>MEMBERSHIP_FEE_LOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::MEMBERSHIP_FEE_LOCK = &quot;o.mkt.fee&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Членский взнос кооперативного участка под заказ из членского кошелька программы (TRANSFER w.mkt.member → w.mkt.fee, без Dr/Cr — оба на 86). createorder, stockorder и довзнос по факту на issueact2; взнос считается от единой ставки кооператива и фиксируется явным полем Order.membership_fee. </p>
+
+</div>
+</div>
+<a id="a59aa30ac7b5187c7a79f3d8209bdb5be" name="a59aa30ac7b5187c7a79f3d8209bdb5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59aa30ac7b5187c7a79f3d8209bdb5be">&#9670;&nbsp;</a></span>MEMBERSHIP_FEE_REFUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::MEMBERSHIP_FEE_REFUND = &quot;o.mkt.refund&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сторно неиспользованной части членского взноса участка на членский кошелёк программы (TRANSFER w.mkt.fee → w.mkt.member, без Dr/Cr — оба на 86). Отмена — полностью, недовыдача — пропорционально факту, гарантийный возврат — доля за возвращённое; членский остаётся членским и идёт в зачёт следующего заказа. </p>
+
+</div>
+</div>
+<a id="a7d731d5d4bd89571bbbdabb41c6b384d" name="a7d731d5d4bd89571bbbdabb41c6b384d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d731d5d4bd89571bbbdabb41c6b384d">&#9670;&nbsp;</a></span>OFFSET_PAYABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::OFFSET_PAYABLE = &quot;o.mkt.offset&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Зачёт удержанного гарантийного долга против суммы к оплате поставщику (BURN с w.mkt.topay, без проводки). Парная к DEDUCT_DEBT на ту же сумму в той же транзакции <code>payout</code>: долг поставщика и обязательство перед ним уменьшаются вместе (задача 99D-16). </p>
+
+</div>
+</div>
+<a id="a4da05c8f9d58fa6f84a56b0420e84b58" name="a4da05c8f9d58fa6f84a56b0420e84b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4da05c8f9d58fa6f84a56b0420e84b58">&#9670;&nbsp;</a></span>PAY_SUPPLIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::PAY_SUPPLIER = &quot;o.mkt.payout&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оплата поставщику с расчётного счёта по подтверждению кассира (Dr 76 / Cr 51, BURN с w.mkt.topay). Гасит обязательство, открытое PURCHASE_FROM_SUPPLIER. </p>
+
+</div>
+</div>
+<a id="a115ccd8c21e633ae40cde387c807c0f1" name="a115ccd8c21e633ae40cde387c807c0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115ccd8c21e633ae40cde387c807c0f1">&#9670;&nbsp;</a></span>PURCHASE_FROM_SUPPLIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::PURCHASE_FROM_SUPPLIER = &quot;o.mkt.purch&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Приёмка имущества кооперативом по АПП приёмки (Dr 10 / Cr 76, ISSUE ∅ → w.mkt.topay по поставщику; имущество — аналитика по 10). Обязательство перед поставщиком на счёте расчётов с разными дебиторами и кредиторами (решение владельца 08.09.2026: 76 вместо 60) и сумма к оплате на кошельке поставщика (задача 99D-16). </p>
+
+</div>
+</div>
+<a id="ad15ebff693ec9b94ca14122fcadd5e21" name="ad15ebff693ec9b94ca14122fcadd5e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15ebff693ec9b94ca14122fcadd5e21">&#9670;&nbsp;</a></span>RECALL_SHARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::RECALL_SHARE = &quot;o.mkt.recall&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Консолидация свободного паевого «Стола заказов» в общий паевой Цифрового кошелька при выходе пайщика из кооператива (TRANSFER w.mkt.share → w.wal.share, без Dr/Cr — оба на 80); зовёт registrator (exit_helpers). </p>
+
+</div>
+</div>
+<a id="af54ac65e900d0445b15ec3316c1ffb54" name="af54ac65e900d0445b15ec3316c1ffb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54ac65e900d0445b15ec3316c1ffb54">&#9670;&nbsp;</a></span>REFUSAL_PENALTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::REFUSAL_PENALTY = &quot;o.mkt.penal&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удержание 50% при отказе пайщика от получения после акцепта поставщиком (TRANSFER w.mkt.order → w.mkt.fee, Dr 80 / Cr 86 — паевой становится членским взносом участка; основание в положении о ЦПП — TBD-Standardization). Транзит через пул взносов: далее единым o.brn.common уходит в общий кошелёк КУ. Имущество остаётся на складе КУ; вторая половина возвращается пайщику (o.mkt.unlock + o.mkt.refund). </p>
+
+</div>
+</div>
+<a id="acce94bd91e1ebc28225aab2b3262d4ee" name="acce94bd91e1ebc28225aab2b3262d4ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce94bd91e1ebc28225aab2b3262d4ee">&#9670;&nbsp;</a></span>RETURN_BY_MEMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::RETURN_BY_MEMBER = &quot;o.mkt.return&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Отмена сделки по гарантийному возврату по решению совета — compensating forward к CONSUME_BY_MEMBER (ISSUE ∅ → w.mkt.share, Dr 10 / Cr 80 — восстановление паевого на свободном паевом «Стола заказов» и возврат имущества на склад). Реверты <a class="el" href="group__public__ledger2__actions.html#ga99d949cfbb551a79f7c54ba709d4ae89" title="Откат ранее проведённой операции (operation o.adj.rev).">ledger2::revert</a> в Столе заказов не используются. </p>
+
+</div>
+</div>
+<a id="a7d8967c44189242449a9176cf2ec504f" name="a7d8967c44189242449a9176cf2ec504f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d8967c44189242449a9176cf2ec504f">&#9670;&nbsp;</a></span>UNLOCK_ORDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::UNLOCK_ORDER = &quot;o.mkt.unlock&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат резерва при отмене Order'а или недовыдаче (TRANSFER w.mkt.order → w.mkt.share, без Dr/Cr — оба на 80). Средства остаются паевыми и остаются в программе: идут на тело следующих заказов (LOCK_FROM_SHARE); в общий паевой не выводятся, RECALL_SHARE — только при выходе из кооператива. </p>
+
+</div>
+</div>
+<a id="a841febd957e7b2a8ec6e95768a3cc353" name="a841febd957e7b2a8ec6e95768a3cc353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a841febd957e7b2a8ec6e95768a3cc353">&#9670;&nbsp;</a></span>WRITE_OFF_PERISHABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::marketplace::WRITE_OFF_PERISHABLE = &quot;o.mkt.wroff&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Утилизация скоропорта со склада (NONE Dr 91 / Cr 10). По протоколу совета. Порча запаса выбывает в прочие расходы тем же путём, что уценка (решение владельца 10.09.2026, задача 99D-15): счёт 86 двигают только операции с кошельками, а закрытие 91 — отдельное решение. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceoperations.html">operations</a></li><li class="navelem"><a class="el" href="namespaceoperations_1_1marketplace.html">marketplace</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
