@@ -1,0 +1,541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/tests/eosio.system_tester.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('eosio_8system__tester_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл eosio.system_tester.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;eosio/testing/tester.hpp&gt;</code><br />
+<code>#include &lt;eosio/chain/abi_serializer.hpp&gt;</code><br />
+<code>#include &lt;eosio/chain/resource_limits.hpp&gt;</code><br />
+<code>#include &quot;contracts.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="test__symbol_8hpp_source.html">test_symbol.hpp</a>&quot;</code><br />
+<code>#include &lt;fc/variant_object.hpp&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+</div>
+<p><a href="eosio_8system__tester_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio__system_1_1eosio__system__tester.html">eosio_system::eosio_system_tester</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespaceeosio__system"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html">eosio_system</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:aada0b9e3aa318087f731b01e9ae59f0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#aada0b9e3aa318087f731b01e9ae59f0d">TESTER</a>&#160;&#160;&#160;validating_tester</td></tr>
+<tr class="separator:aada0b9e3aa318087f731b01e9ae59f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a9ce1cc08f10fbc96c3b7c68675653163"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a9ce1cc08f10fbc96c3b7c68675653163">mvo</a> = fc::mutable_variant_object</td></tr>
+<tr class="separator:a9ce1cc08f10fbc96c3b7c68675653163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a88231cdd2d2c65528b97fb62b1fad462"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#a88231cdd2d2c65528b97fb62b1fad462">eosio_system::voter</a> (account_name acct)</td></tr>
+<tr class="separator:a88231cdd2d2c65528b97fb62b1fad462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934e2d3278cb21f623fdc78e30d747f8"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#a934e2d3278cb21f623fdc78e30d747f8">eosio_system::voter</a> (std::string_view acct)</td></tr>
+<tr class="separator:a934e2d3278cb21f623fdc78e30d747f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7871be20d97113b8d2ab409427dc7696"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#a7871be20d97113b8d2ab409427dc7696">eosio_system::voter</a> (account_name acct, const asset &amp;vote_stake)</td></tr>
+<tr class="separator:a7871be20d97113b8d2ab409427dc7696"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf23cd143824a4f2f7ceb94c68fbaa0c"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#aaf23cd143824a4f2f7ceb94c68fbaa0c">eosio_system::voter</a> (std::string_view acct, const asset &amp;vote_stake)</td></tr>
+<tr class="separator:aaf23cd143824a4f2f7ceb94c68fbaa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad03af2f3b3c775934cd97b46aa90f0dc"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#ad03af2f3b3c775934cd97b46aa90f0dc">eosio_system::voter</a> (account_name acct, int64_t vote_stake)</td></tr>
+<tr class="separator:ad03af2f3b3c775934cd97b46aa90f0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5e2acd4136934a787bb0a38f2fe43c"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#a0b5e2acd4136934a787bb0a38f2fe43c">eosio_system::voter</a> (std::string_view acct, int64_t vote_stake)</td></tr>
+<tr class="separator:a0b5e2acd4136934a787bb0a38f2fe43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6bf3917c9bb1d24d8e756e52513b41a"><td class="memItemLeft" align="right" valign="top">fc::mutable_variant_object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#ad6bf3917c9bb1d24d8e756e52513b41a">eosio_system::proxy</a> (account_name acct)</td></tr>
+<tr class="separator:ad6bf3917c9bb1d24d8e756e52513b41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5efe356846ecbf975dec6a67934acb6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceeosio__system.html#ae5efe356846ecbf975dec6a67934acb6">eosio_system::M</a> (const string &amp;eos_str)</td></tr>
+<tr class="separator:ae5efe356846ecbf975dec6a67934acb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a43ce4f6f5c1aa46e6a7d6c3fbc401e78"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a43ce4f6f5c1aa46e6a7d6c3fbc401e78">_provider</a> = &quot;voskhod&quot;_n</td></tr>
+<tr class="separator:a43ce4f6f5c1aa46e6a7d6c3fbc401e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71cbe61bed1af649380278fc1500ac4"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#ae71cbe61bed1af649380278fc1500ac4">_provider_chairman</a> = &quot;ant&quot;_n</td></tr>
+<tr class="separator:ae71cbe61bed1af649380278fc1500ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f0f719a2d5f3b0c7c9dfef60701d41"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#ad3f0f719a2d5f3b0c7c9dfef60701d41">_ano</a> = &quot;ano&quot;_n</td></tr>
+<tr class="separator:ad3f0f719a2d5f3b0c7c9dfef60701d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb17865ea8dac2c4b5763cef3307e81"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#aaeb17865ea8dac2c4b5763cef3307e81">_gateway</a> = &quot;gateway&quot;_n</td></tr>
+<tr class="separator:aaeb17865ea8dac2c4b5763cef3307e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b944c5f21fa679bb648e5da9d07aa3"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a84b944c5f21fa679bb648e5da9d07aa3">_draft</a> = &quot;draft&quot;_n</td></tr>
+<tr class="separator:a84b944c5f21fa679bb648e5da9d07aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77810873d105ffcecf83ed475cd60d77"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a77810873d105ffcecf83ed475cd60d77">_marketplace</a> = &quot;marketplace&quot;_n</td></tr>
+<tr class="separator:a77810873d105ffcecf83ed475cd60d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a4a880dd86f4fc05dc380bb4ab26ab2"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a1a4a880dd86f4fc05dc380bb4ab26ab2">_soviet</a> = &quot;soviet&quot;_n</td></tr>
+<tr class="separator:a1a4a880dd86f4fc05dc380bb4ab26ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b652bd9f596e25ba829c40b6879c9b6"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a1b652bd9f596e25ba829c40b6879c9b6">_registrator</a> = &quot;registrator&quot;_n</td></tr>
+<tr class="separator:a1b652bd9f596e25ba829c40b6879c9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fc6bba07a8091fdc5a3748d0534d2c"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a35fc6bba07a8091fdc5a3748d0534d2c">_system</a> = &quot;eosio&quot;_n</td></tr>
+<tr class="separator:a35fc6bba07a8091fdc5a3748d0534d2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c0961ddfff56f19617fe9d149332de3"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a2c0961ddfff56f19617fe9d149332de3">_fund</a> = &quot;fund&quot;_n</td></tr>
+<tr class="separator:a2c0961ddfff56f19617fe9d149332de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c048c3ca2828ed3dae2d2d968decf0b"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#a1c048c3ca2828ed3dae2d2d968decf0b">_power_account</a> = &quot;eosio.power&quot;_n</td></tr>
+<tr class="separator:a1c048c3ca2828ed3dae2d2d968decf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00426771f677e7044614af50ee791cd"><td class="memItemLeft" align="right" valign="top">static constexpr eosio::chain::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="eosio_8system__tester_8hpp.html#af00426771f677e7044614af50ee791cd">_saving_account</a> = &quot;eosio.saving&quot;_n</td></tr>
+<tr class="separator:af00426771f677e7044614af50ee791cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="aada0b9e3aa318087f731b01e9ae59f0d" name="aada0b9e3aa318087f731b01e9ae59f0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada0b9e3aa318087f731b01e9ae59f0d">&#9670;&nbsp;</a></span>TESTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TESTER&#160;&#160;&#160;validating_tester</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a9ce1cc08f10fbc96c3b7c68675653163" name="a9ce1cc08f10fbc96c3b7c68675653163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce1cc08f10fbc96c3b7c68675653163">&#9670;&nbsp;</a></span>mvo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="eosio_8msig__tests_8cpp.html#a9ce1cc08f10fbc96c3b7c68675653163">mvo</a> =  fc::mutable_variant_object</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ad3f0f719a2d5f3b0c7c9dfef60701d41" name="ad3f0f719a2d5f3b0c7c9dfef60701d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3f0f719a2d5f3b0c7c9dfef60701d41">&#9670;&nbsp;</a></span>_ano</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _ano = &quot;ano&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84b944c5f21fa679bb648e5da9d07aa3" name="a84b944c5f21fa679bb648e5da9d07aa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84b944c5f21fa679bb648e5da9d07aa3">&#9670;&nbsp;</a></span>_draft</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _draft = &quot;draft&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c0961ddfff56f19617fe9d149332de3" name="a2c0961ddfff56f19617fe9d149332de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c0961ddfff56f19617fe9d149332de3">&#9670;&nbsp;</a></span>_fund</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _fund = &quot;fund&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeb17865ea8dac2c4b5763cef3307e81" name="aaeb17865ea8dac2c4b5763cef3307e81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeb17865ea8dac2c4b5763cef3307e81">&#9670;&nbsp;</a></span>_gateway</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _gateway = &quot;gateway&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77810873d105ffcecf83ed475cd60d77" name="a77810873d105ffcecf83ed475cd60d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77810873d105ffcecf83ed475cd60d77">&#9670;&nbsp;</a></span>_marketplace</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _marketplace = &quot;marketplace&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c048c3ca2828ed3dae2d2d968decf0b" name="a1c048c3ca2828ed3dae2d2d968decf0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c048c3ca2828ed3dae2d2d968decf0b">&#9670;&nbsp;</a></span>_power_account</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _power_account = &quot;eosio.power&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43ce4f6f5c1aa46e6a7d6c3fbc401e78" name="a43ce4f6f5c1aa46e6a7d6c3fbc401e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43ce4f6f5c1aa46e6a7d6c3fbc401e78">&#9670;&nbsp;</a></span>_provider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _provider = &quot;voskhod&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae71cbe61bed1af649380278fc1500ac4" name="ae71cbe61bed1af649380278fc1500ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71cbe61bed1af649380278fc1500ac4">&#9670;&nbsp;</a></span>_provider_chairman</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _provider_chairman = &quot;ant&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b652bd9f596e25ba829c40b6879c9b6" name="a1b652bd9f596e25ba829c40b6879c9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b652bd9f596e25ba829c40b6879c9b6">&#9670;&nbsp;</a></span>_registrator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _registrator = &quot;registrator&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af00426771f677e7044614af50ee791cd" name="af00426771f677e7044614af50ee791cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00426771f677e7044614af50ee791cd">&#9670;&nbsp;</a></span>_saving_account</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _saving_account = &quot;eosio.saving&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a4a880dd86f4fc05dc380bb4ab26ab2" name="a1a4a880dd86f4fc05dc380bb4ab26ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a4a880dd86f4fc05dc380bb4ab26ab2">&#9670;&nbsp;</a></span>_soviet</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _soviet = &quot;soviet&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35fc6bba07a8091fdc5a3748d0534d2c" name="a35fc6bba07a8091fdc5a3748d0534d2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fc6bba07a8091fdc5a3748d0534d2c">&#9670;&nbsp;</a></span>_system</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::chain::name _system = &quot;eosio&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_d1eb7f32592100b226cc7f73f9055757.html">tests</a></li><li class="navelem"><a class="el" href="eosio_8system__tester_8hpp.html">eosio.system_tester.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

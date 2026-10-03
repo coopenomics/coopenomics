@@ -1,0 +1,325 @@
+/* ==========================================================================
+   docs.blago.coop — сдержанное оформление поверх темы Material.
+
+   Правила:
+     • разделяют линии в 1px, а не заливки и тени;
+     • цвет работает точечно — иконки, активная вкладка, ссылки, акценты;
+     • движение минимально: ховер меняет цвет, а не положение элемента.
+
+   ВАЖНО про мигание при переходах: у каждой var() есть запасное значение.
+   Без него в момент, когда тема переставляет data-md-color-scheme, свойство
+   откатывается к initial — а для border-color это currentColor, отчего все
+   линии на долю секунды становятся чёрными и жирными.
+   ========================================================================== */
+
+:root {
+  --blago-accent:      #0f766e;   /* приглушённый тон логотипа */
+  --blago-accent-soft: rgba(15, 118, 110, .07);
+  --blago-line:        #e6e8e6;
+  --blago-muted:       #6b7280;
+
+  /* Системный стек: рисуется мгновенно, без ожидания внешних шрифтов */
+  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter",
+                  "Helvetica Neue", Arial, sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+                  "Liberation Mono", monospace;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--blago-accent, #0f766e);
+  --md-accent-fg-color--transparent: var(--blago-accent-soft, rgba(15, 118, 110, .07));
+}
+
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: var(--blago-accent, #0f766e);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+  --blago-accent:      #4db6a9;
+  --blago-accent-soft: rgba(77, 182, 169, .10);
+  --blago-line:        rgba(255, 255, 255, .11);
+  --blago-muted:       rgba(255, 255, 255, .55);
+  --md-accent-fg-color: #4db6a9;
+  --md-typeset-a-color: #4db6a9;
+}
+
+/* --- шапка: линия вместо заливки --------------------------------------- */
+.md-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--blago-line, #e6e8e6);
+}
+
+.md-header--shadow {
+  box-shadow: none;
+}
+
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -.01em;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.35rem;
+  width: auto;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo img {
+  filter: invert(1);
+}
+
+/* --- вкладки слоёв: подчёркивание в цвете бренда ------------------------- */
+.md-tabs {
+  border-bottom: 1px solid var(--blago-line, #e6e8e6);
+}
+
+.md-tabs__link {
+  font-size: .72rem;
+  font-weight: 500;
+  opacity: .62;
+  margin-top: .5rem;
+  padding-bottom: .45rem;
+  border-bottom: 2px solid transparent;
+  transition: opacity .15s, border-color .15s;
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+}
+
+.md-tabs__link--active {
+  opacity: 1;
+  font-weight: 600;
+  border-bottom-color: var(--blago-accent, #0f766e);
+}
+
+/* --- типографика --------------------------------------------------------- */
+.md-typeset {
+  font-size: .76rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -.03em;
+  color: var(--md-default-fg-color);
+  margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  letter-spacing: -.015em;
+  margin-top: 2.6em;
+  padding-top: 1.2em;
+  border-top: 1px solid var(--blago-line, #e6e8e6);
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* ссылка в тексте подчёркивается только под курсором */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .15s;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* --- главная: заголовок с акцентной чертой ------------------------------- */
+.md-typeset h1:first-of-type::after {
+  content: "";
+  display: block;
+  width: 2.4rem;
+  height: 2px;
+  margin-top: .9rem;
+  background: var(--blago-accent, #0f766e);
+}
+
+.blago-lead {
+  font-size: .95rem;
+  line-height: 1.65;
+  max-width: 34em;
+  color: var(--blago-muted, #6b7280);
+  margin: 1.4rem 0 2rem;
+}
+
+/* --- главная: быстрые входы --------------------------------------------- */
+.blago-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 0 0 3.5rem;
+}
+
+.md-typeset .blago-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .42rem .95rem;
+  border: 1px solid var(--blago-line, #e6e8e6);
+  border-radius: .25rem;
+  color: var(--blago-muted, #6b7280);
+  font-size: .72rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .15s, border-color .15s, background .15s;
+}
+
+.md-typeset .blago-pill:hover {
+  color: var(--blago-accent, #0f766e);
+  border-color: var(--blago-accent, #0f766e);
+  background: var(--blago-accent-soft, rgba(15, 118, 110, .07));
+}
+
+.md-typeset .blago-pill .twemoji {
+  height: 1em;
+  width: 1em;
+}
+
+/* --- карточки слоёв ------------------------------------------------------ */
+.md-typeset .blago-cards > ul {
+  gap: 1rem;
+}
+
+.md-typeset .blago-cards > ul > li {
+  position: relative;
+  border: 1px solid var(--blago-line, #e6e8e6);
+  border-radius: .25rem;
+  padding: 1.5rem 1.5rem 1.3rem;
+  margin: 0;
+  box-shadow: none;
+  background: none;
+  overflow: hidden;
+  transition: border-color .15s;
+}
+
+/* тонкая полоса цвета бренда — проступает при наведении */
+.md-typeset .blago-cards > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--blago-accent, #0f766e);
+  opacity: 0;
+  transition: opacity .18s;
+}
+
+.md-typeset .blago-cards > ul > li:hover {
+  border-color: var(--blago-accent, #0f766e);
+  box-shadow: none;
+  transform: none;
+}
+
+.md-typeset .blago-cards > ul > li:hover::before {
+  opacity: 1;
+}
+
+.md-typeset .blago-cards > ul > li > hr {
+  margin: 1rem 0 1.1rem;
+  border-color: var(--blago-line, #e6e8e6);
+}
+
+.md-typeset .blago-cards > ul > li p {
+  color: var(--blago-muted, #6b7280);
+}
+
+.md-typeset .blago-cards > ul > li > p:first-child,
+.md-typeset .blago-cards > ul > li > p:last-child {
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .blago-cards .twemoji {
+  color: var(--blago-accent, #0f766e);
+}
+
+.md-typeset .blago-cards > ul > li > p:last-child > a {
+  font-weight: 500;
+  font-size: .74rem;
+}
+
+/* --- врезки и цитаты: акцент слева --------------------------------------- */
+.md-typeset .admonition,
+.md-typeset details {
+  border: 1px solid var(--blago-line, #e6e8e6);
+  border-left: 2px solid var(--blago-accent, #0f766e);
+  border-radius: .25rem;
+  box-shadow: none;
+  font-size: .74rem;
+}
+
+.md-typeset blockquote {
+  border-left: 2px solid var(--blago-accent, #0f766e);
+  color: var(--blago-muted, #6b7280);
+}
+
+/* --- боковое меню и футер ------------------------------------------------ */
+.md-nav__title {
+  font-weight: 600;
+  font-size: .68rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--blago-muted, #6b7280);
+  box-shadow: none;
+}
+
+.md-nav__link--active,
+.md-nav__link--active > .md-ellipsis {
+  font-weight: 600;
+}
+
+.md-footer {
+  border-top: 1px solid var(--blago-line, #e6e8e6);
+}
+
+.md-footer,
+.md-footer-meta {
+  background: none;
+  color: var(--md-default-fg-color);
+}
+
+.md-footer__link {
+  opacity: .7;
+}
+
+.md-footer__link:hover {
+  opacity: 1;
+}
+
+.md-copyright {
+  color: var(--blago-muted, #6b7280);
+}
+
+/* --- таблицы и код ------------------------------------------------------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--blago-line, #e6e8e6);
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) th {
+  background: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--blago-line, #e6e8e6);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: var(--blago-accent-soft, rgba(15, 118, 110, .07));
+}
+
+.md-typeset code {
+  background: var(--md-code-bg-color);
+  border-radius: .15rem;
+}
+
+/* --- ничего не мигает при мгновенной навигации --------------------------- */
+/* Material подменяет содержимое без перезагрузки; фиксируем цвет линий на
+   уровне элементов, чтобы промежуточный кадр не рисовался чёрным. */
+.md-typeset hr {
+  border-bottom: 1px solid var(--blago-line, #e6e8e6);
+}

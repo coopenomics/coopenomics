@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура eosiosystem::voter_info</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structeosiosystem_1_1voter__info.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structeosiosystem_1_1voter__info-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура eosiosystem::voter_info<div class="ingroups"><a class="el" href="group__public__system.html">Контракт SYSTEM</a> &raquo; <a class="el" href="group__public__system__tables.html">Таблицы</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Таблица информации о голосующих хранит данные о голосующих и их голосах.  
+ <a href="structeosiosystem_1_1voter__info.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="eosio_8system_8hpp_source.html">eosio.system.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a6bb7318b053ad6dbbde3a0f4415d2cf5"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5">flags1_fields</a> : uint32_t { <a class="el" href="structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5ae149b497807ee78e9e5180d213e5a402">ram_managed</a> = 1
+, <a class="el" href="structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5a944559ad694d4c0fc4bf286864caf2a2">net_managed</a> = 2
+, <a class="el" href="structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5ace319c6a1aa0ced6ea5a02270d863f4c">cpu_managed</a> = 4
+ }</td></tr>
+<tr class="separator:a6bb7318b053ad6dbbde3a0f4415d2cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1fdb370974b4c33380e8114ff52a7d8f"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a1fdb370974b4c33380e8114ff52a7d8f">primary_key</a> () const</td></tr>
+<tr class="separator:a1fdb370974b4c33380e8114ff52a7d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a09e1d98da6939690519ea85baedf1c01"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a09e1d98da6939690519ea85baedf1c01">owner</a></td></tr>
+<tr class="memdesc:a09e1d98da6939690519ea85baedf1c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Голосующий  <a href="structeosiosystem_1_1voter__info.html#a09e1d98da6939690519ea85baedf1c01">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09e1d98da6939690519ea85baedf1c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482ed4e822024852ac234353ac5f08cc"><td class="memItemLeft" align="right" valign="top">name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a482ed4e822024852ac234353ac5f08cc">proxy</a></td></tr>
+<tr class="memdesc:a482ed4e822024852ac234353ac5f08cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прокси, установленный голосующим  <a href="structeosiosystem_1_1voter__info.html#a482ed4e822024852ac234353ac5f08cc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a482ed4e822024852ac234353ac5f08cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90023077cb4f76e82c42482dc65a2783"><td class="memItemLeft" align="right" valign="top">std::vector&lt; name &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a90023077cb4f76e82c42482dc65a2783">producers</a></td></tr>
+<tr class="memdesc:a90023077cb4f76e82c42482dc65a2783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Продюсеры, одобренные этим голосующим, если прокси не установлен  <a href="structeosiosystem_1_1voter__info.html#a90023077cb4f76e82c42482dc65a2783">Подробнее...</a><br /></td></tr>
+<tr class="separator:a90023077cb4f76e82c42482dc65a2783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1a76120b906f5f304c0c4604d4bf37"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a3f1a76120b906f5f304c0c4604d4bf37">staked</a> = 0</td></tr>
+<tr class="memdesc:a3f1a76120b906f5f304c0c4604d4bf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Количество застейканных токенов  <a href="structeosiosystem_1_1voter__info.html#a3f1a76120b906f5f304c0c4604d4bf37">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3f1a76120b906f5f304c0c4604d4bf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60bfb8489e47d8514efd230cd18288e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#aa60bfb8489e47d8514efd230cd18288e">last_vote_weight</a> = 0</td></tr>
+<tr class="memdesc:aa60bfb8489e47d8514efd230cd18288e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вес голоса, отданный в последний раз при обновлении голоса  <a href="structeosiosystem_1_1voter__info.html#aa60bfb8489e47d8514efd230cd18288e">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa60bfb8489e47d8514efd230cd18288e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a7c2263d90ed79d2bf4281e57193c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#af7a7c2263d90ed79d2bf4281e57193c0">proxied_vote_weight</a> = 0</td></tr>
+<tr class="memdesc:af7a7c2263d90ed79d2bf4281e57193c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Общий вес голосов, делегированных этому голосующему как прокси  <a href="structeosiosystem_1_1voter__info.html#af7a7c2263d90ed79d2bf4281e57193c0">Подробнее...</a><br /></td></tr>
+<tr class="separator:af7a7c2263d90ed79d2bf4281e57193c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee50442b79d5561a967486e6b7a61e65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#aee50442b79d5561a967486e6b7a61e65">is_proxy</a> = 0</td></tr>
+<tr class="memdesc:aee50442b79d5561a967486e6b7a61e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Является ли голосующий прокси для других  <a href="structeosiosystem_1_1voter__info.html#aee50442b79d5561a967486e6b7a61e65">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee50442b79d5561a967486e6b7a61e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77c6136a8d1300951ad6f39b3c28dc1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#af77c6136a8d1300951ad6f39b3c28dc1">flags1</a> = 0</td></tr>
+<tr class="memdesc:af77c6136a8d1300951ad6f39b3c28dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Флаги управления ресурсами  <a href="structeosiosystem_1_1voter__info.html#af77c6136a8d1300951ad6f39b3c28dc1">Подробнее...</a><br /></td></tr>
+<tr class="separator:af77c6136a8d1300951ad6f39b3c28dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4ecbb96e5e70acd2b9ce55c6a886d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#a5c4ecbb96e5e70acd2b9ce55c6a886d0">reserved2</a> = 0</td></tr>
+<tr class="memdesc:a5c4ecbb96e5e70acd2b9ce55c6a886d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарезервированное поле 2.  <a href="structeosiosystem_1_1voter__info.html#a5c4ecbb96e5e70acd2b9ce55c6a886d0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5c4ecbb96e5e70acd2b9ce55c6a886d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45fcd076d0257637f5c6b80618e4647"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosiosystem_1_1voter__info.html#ac45fcd076d0257637f5c6b80618e4647">reserved3</a></td></tr>
+<tr class="memdesc:ac45fcd076d0257637f5c6b80618e4647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарезервированное поле 3.  <a href="structeosiosystem_1_1voter__info.html#ac45fcd076d0257637f5c6b80618e4647">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac45fcd076d0257637f5c6b80618e4647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Таблица информации о голосующих хранит данные о голосующих и их голосах. </p>
+<dl class="section user"><dt>Область памяти (scope): eosio.system</dt><dd></dd></dl>
+<dl class="section user"><dt>Имя таблицы (table): voters</dt><dd></dd></dl>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a6bb7318b053ad6dbbde3a0f4415d2cf5" name="a6bb7318b053ad6dbbde3a0f4415d2cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bb7318b053ad6dbbde3a0f4415d2cf5">&#9670;&nbsp;</a></span>flags1_fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="structeosiosystem_1_1voter__info.html#a6bb7318b053ad6dbbde3a0f4415d2cf5">eosiosystem::voter_info::flags1_fields</a> : uint32_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a6bb7318b053ad6dbbde3a0f4415d2cf5ae149b497807ee78e9e5180d213e5a402" name="a6bb7318b053ad6dbbde3a0f4415d2cf5ae149b497807ee78e9e5180d213e5a402"></a>ram_managed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6bb7318b053ad6dbbde3a0f4415d2cf5a944559ad694d4c0fc4bf286864caf2a2" name="a6bb7318b053ad6dbbde3a0f4415d2cf5a944559ad694d4c0fc4bf286864caf2a2"></a>net_managed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6bb7318b053ad6dbbde3a0f4415d2cf5ace319c6a1aa0ced6ea5a02270d863f4c" name="a6bb7318b053ad6dbbde3a0f4415d2cf5ace319c6a1aa0ced6ea5a02270d863f4c"></a>cpu_managed&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1fdb370974b4c33380e8114ff52a7d8f" name="a1fdb370974b4c33380e8114ff52a7d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdb370974b4c33380e8114ff52a7d8f">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t eosiosystem::voter_info::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="af77c6136a8d1300951ad6f39b3c28dc1" name="af77c6136a8d1300951ad6f39b3c28dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77c6136a8d1300951ad6f39b3c28dc1">&#9670;&nbsp;</a></span>flags1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t eosiosystem::voter_info::flags1 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Флаги управления ресурсами </p>
+
+</div>
+</div>
+<a id="aee50442b79d5561a967486e6b7a61e65" name="aee50442b79d5561a967486e6b7a61e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee50442b79d5561a967486e6b7a61e65">&#9670;&nbsp;</a></span>is_proxy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool eosiosystem::voter_info::is_proxy = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Является ли голосующий прокси для других </p>
+
+</div>
+</div>
+<a id="aa60bfb8489e47d8514efd230cd18288e" name="aa60bfb8489e47d8514efd230cd18288e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60bfb8489e47d8514efd230cd18288e">&#9670;&nbsp;</a></span>last_vote_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double eosiosystem::voter_info::last_vote_weight = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вес голоса, отданный в последний раз при обновлении голоса </p>
+
+</div>
+</div>
+<a id="a09e1d98da6939690519ea85baedf1c01" name="a09e1d98da6939690519ea85baedf1c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e1d98da6939690519ea85baedf1c01">&#9670;&nbsp;</a></span>owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">name eosiosystem::voter_info::owner</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Голосующий </p>
+
+</div>
+</div>
+<a id="a90023077cb4f76e82c42482dc65a2783" name="a90023077cb4f76e82c42482dc65a2783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90023077cb4f76e82c42482dc65a2783">&#9670;&nbsp;</a></span>producers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;name&gt; eosiosystem::voter_info::producers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Продюсеры, одобренные этим голосующим, если прокси не установлен </p>
+
+</div>
+</div>
+<a id="af7a7c2263d90ed79d2bf4281e57193c0" name="af7a7c2263d90ed79d2bf4281e57193c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a7c2263d90ed79d2bf4281e57193c0">&#9670;&nbsp;</a></span>proxied_vote_weight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double eosiosystem::voter_info::proxied_vote_weight = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Общий вес голосов, делегированных этому голосующему как прокси </p>
+
+</div>
+</div>
+<a id="a482ed4e822024852ac234353ac5f08cc" name="a482ed4e822024852ac234353ac5f08cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482ed4e822024852ac234353ac5f08cc">&#9670;&nbsp;</a></span>proxy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">name eosiosystem::voter_info::proxy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прокси, установленный голосующим </p>
+
+</div>
+</div>
+<a id="a5c4ecbb96e5e70acd2b9ce55c6a886d0" name="a5c4ecbb96e5e70acd2b9ce55c6a886d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4ecbb96e5e70acd2b9ce55c6a886d0">&#9670;&nbsp;</a></span>reserved2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t eosiosystem::voter_info::reserved2 = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарезервированное поле 2. </p>
+
+</div>
+</div>
+<a id="ac45fcd076d0257637f5c6b80618e4647" name="ac45fcd076d0257637f5c6b80618e4647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45fcd076d0257637f5c6b80618e4647">&#9670;&nbsp;</a></span>reserved3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset eosiosystem::voter_info::reserved3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарезервированное поле 3. </p>
+
+</div>
+</div>
+<a id="a3f1a76120b906f5f304c0c4604d4bf37" name="a3f1a76120b906f5f304c0c4604d4bf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1a76120b906f5f304c0c4604d4bf37">&#9670;&nbsp;</a></span>staked</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t eosiosystem::voter_info::staked = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Количество застейканных токенов </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/system/contracts/eosio.system/include/eosio.system/<a class="el" href="eosio_8system_8hpp_source.html">eosio.system.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceeosiosystem.html">eosiosystem</a></li><li class="navelem"><a class="el" href="structeosiosystem_1_1voter__info.html">voter_info</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
