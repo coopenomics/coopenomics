@@ -82,7 +82,7 @@ nav:
     - edubridge/index.md
     - Стол администратора:
       - edubridge/admin/index.md
-    - Стол участника:
+    - Стол ученика:
       - edubridge/member/index.md
     - Стол преподавателя:
       - edubridge/teacher/index.md
