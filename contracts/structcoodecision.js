@@ -1,0 +1,26 @@
+var structcoodecision =
+[
+    [ "by_hash", "structcoodecision.html#a170ce5b80245b67ab34da731b432d063", null ],
+    [ "is_participant", "structcoodecision.html#a1934494c62b05843e6d5237e09dc1fcb", null ],
+    [ "primary_key", "structcoodecision.html#afadd9c48960455c8764276d9905c6479", null ],
+    [ "address", "structcoodecision.html#ab5d42f9eabe78d37a6313e0ef62ae837", null ],
+    [ "authority", "structcoodecision.html#a6c3c48238dbdb7bad1c68fd98c5d7930", null ],
+    [ "authorization", "structcoodecision.html#ae7c1dd2dfa5c7bf7ca224ee9074203c3", null ],
+    [ "braname", "structcoodecision.html#a6c6426c8a844b09d0390ff0f41bc1afd", null ],
+    [ "chairman", "structcoodecision.html#ae387ea0fa29956b129cd70192a658b6d", null ],
+    [ "close_at", "structcoodecision.html#a6d5fcecd02b04e189fc68346d91d399d", null ],
+    [ "coopname", "structcoodecision.html#a0e06c23f14c7241cfd7b78ba86d75942", null ],
+    [ "created_at", "structcoodecision.html#a5eb112934646fae9c29ebfef88177fc4", null ],
+    [ "hash", "structcoodecision.html#adcd35f011c2243be4533c3b9ac16d767", null ],
+    [ "id", "structcoodecision.html#a793efa243a23853fcd70fc1cda1f9f6b", null ],
+    [ "initiator", "structcoodecision.html#a33f2f1bbfb6b02a3ed98e776e0e0648c", null ],
+    [ "liability", "structcoodecision.html#a5493279f220e9da0b4f6b2bc5bacb1cb", null ],
+    [ "open_at", "structcoodecision.html#a237c32813004573583b9f5dc2ae27d9b", null ],
+    [ "participants", "structcoodecision.html#aa0ceea2ffa96119bd8e942e451407343", null ],
+    [ "petition", "structcoodecision.html#abeb213d02f690db3a8d0cd5f1a76172e", null ],
+    [ "proposal", "structcoodecision.html#abcf479cb8d40f38b762fdf99b6f87fd0", null ],
+    [ "protocol", "structcoodecision.html#a475cc75a999a50548b0f590afdcac99e", null ],
+    [ "signed_ballots", "structcoodecision.html#ad5f58fdb7b4e5d3587bfe74db3b26723", null ],
+    [ "status", "structcoodecision.html#a427c7f35357d1daabf26ca0b80f12668", null ],
+    [ "type", "structcoodecision.html#a967999fb40bb43a90e75dc7e38b64c95", null ]
+];
