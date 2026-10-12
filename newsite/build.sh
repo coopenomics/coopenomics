@@ -30,7 +30,6 @@ cp "$NEWSITE/mkdocs.yml" "$BUILD/mkdocs.yml"
 cp "$NEWSITE/docs/index.md" "$NEWSITE/docs/reference.md" "$BUILD/docs/"
 mkdir -p "$BUILD/docs/css" "$BUILD/docs/js"
 cp "$NEWSITE/docs/css/blago.css" "$NEWSITE/docs/css/apps-layer.css" "$BUILD/docs/css/"
-cp "$NEWSITE/docs/js/apps-layer.js" "$BUILD/docs/js/"
 # собственные ассеты нового сайта (логотипы) кладём ПОСЛЕ слияния чужих,
 # чтобы одноимённые файлы старых сайтов их не перекрыли — см. ниже
 [ -d "$NEWSITE/overrides" ] && cp -r "$NEWSITE/overrides" "$BUILD/overrides"

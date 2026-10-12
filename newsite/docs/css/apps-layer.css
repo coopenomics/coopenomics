@@ -1,27 +1,34 @@
 /* --- слой «Приложения»: у каждого приложения своё левое меню ------------
    Внутри вкладки «Приложения» каждое приложение — группа второго уровня
    (вкладка → приложение → столы). Тема раскрывает все группы вкладки сразу
-   (navigation.sections); здесь, в слое приложений, раскрыта только группа
-   текущего приложения, остальные приложения остаются одной строкой-ссылкой
-   на свой обзор. Класс на <body> ставит js/apps-layer.js по адресу (/apps/). */
-body.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section:not(.md-nav__item--active) > .md-nav {
+   (navigation.sections); в слое приложений раскрыта только группа текущего
+   приложения, остальные приложения остаются одной строкой-ссылкой на свой
+   обзор. Класс apps-layer на боковое меню ставит overrides/main.html при
+   сборке страницы.                                                         */
+
+/* уровень приложения: вкладка «Приложения» → её список → пункт приложения */
+.md-sidebar--primary.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section:not(.md-nav__item--active) > .md-nav {
   display: none;
 }
 
-body.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__container > .md-nav__link,
-body.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
-  font-weight: 600;
-  font-size: .72rem;
-  color: var(--md-default-fg-color);
-  margin-top: .5em;
+/* заголовок приложения — одна линия сверху, на обёртке; ссылка внутри без своей */
+.md-sidebar--primary.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__container {
+  margin-top: .6em;
   padding-top: .55em;
   border-top: 1px solid var(--blago-line, #e6e8e6);
 }
 
-body.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section:not(.md-nav__item--active) > .md-nav__container > .md-nav__link:hover {
+.md-sidebar--primary.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__container > .md-nav__link {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: .72rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-sidebar--primary.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section:not(.md-nav__item--active) > .md-nav__container > .md-nav__link:hover {
   color: var(--md-accent-fg-color);
 }
 
-body.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section.md-nav__item--active > .md-nav__container > .md-nav__link {
+.md-sidebar--primary.apps-layer .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav > .md-nav__list > .md-nav__item--section.md-nav__item--active > .md-nav__container > .md-nav__link {
   color: var(--md-accent-fg-color);
 }

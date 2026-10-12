@@ -20,6 +20,7 @@ docs_dir: docs
 
 theme:
   name: material
+  custom_dir: overrides   # main.html: класс apps-layer на боковом меню слоя «Приложения»
   language: ru
   logo: assets/logo-dark.svg
   favicon: assets/logo-dark.svg
@@ -73,7 +74,6 @@ extra_css:
 
 extra_javascript:
   - js/metrika.js
-  - js/apps-layer.js     # пометка <body> для css/apps-layer.css
 
 extra:
   generator: false

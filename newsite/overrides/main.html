@@ -1,0 +1,33 @@
+{#- Пометка слоя «Приложения» на боковом меню: класс apps-layer ставится при
+    сборке страницы, а не скриптом после отрисовки — иначе меню на долю
+    секунды раскрывалось целиком и схлопывалось. Блок повторяет site_nav из
+    base.html темы, добавлен только класс. -#}
+{% extends "base.html" %}
+
+{% block site_nav %}
+  {% if nav %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "navigation" in page.meta.hide %}
+    {% endif %}
+    {% set layer = "apps-layer" if page and page.url and page.url.startswith("apps/") else "" %}
+    <div class="md-sidebar md-sidebar--primary {{ layer }}" data-md-component="sidebar" data-md-type="navigation" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if "toc.integrate" not in features %}
+    {% if page.meta and page.meta.hide %}
+      {% set hidden = "hidden" if "toc" in page.meta.hide %}
+    {% endif %}
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" {{ hidden }}>
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/toc.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
