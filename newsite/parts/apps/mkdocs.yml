@@ -1,9 +1,14 @@
 # Слой «Приложения» — суб-документация docs.blago.coop.
-# Контент: mono/components/docs/docs/new/{marketplace,blagorost}.
+# Контент: mono/components/docs/docs/new/{marketplace,blagorost,edubridge}.
 # site_name задаёт префикс URL: /apps/...
 #
-# Каждое приложение магазина — самостоятельный куст. Новое приложение
-# добавляется одним блоком, чужие кусты при этом не трогаются.
+# Каждое приложение магазина — самостоятельный куст: обзор приложения и
+# по разделу на рабочий стол. Новое приложение добавляется одним блоком,
+# чужие кусты при этом не трогаются. Первый пункт куста — index.md
+# приложения: с ним заголовок куста в левом меню становится ссылкой на
+# обзор (navigation.indexes), а стили css/apps-layer.css держат раскрытым
+# только куст текущего приложения. Приложение, которого нет в чекауте
+# mono, build.sh снимает из навигации сам.
 site_name: apps
 nav:
   - Обзор слоя: index.md
@@ -56,6 +61,7 @@ nav:
     - Заключение: marketplace/conclusion.md
 
   - Благорост:
+    - blagorost/index.md
     - Адаптация: blagorost/adaptation.md
     - Профиль: blagorost/profile.md
     - Кошельки: blagorost/wallets.md
@@ -71,3 +77,12 @@ nav:
     - Артефакты: blagorost/artifacts.md
     - Результат интеллектуальной деятельности: blagorost/intellectual-property.md
     - Инвестирование: blagorost/investments.md
+
+  - Образование:
+    - edubridge/index.md
+    - Стол администратора:
+      - edubridge/admin/index.md
+    - Стол участника:
+      - edubridge/member/index.md
+    - Стол преподавателя:
+      - edubridge/teacher/index.md

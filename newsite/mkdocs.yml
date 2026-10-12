@@ -69,9 +69,11 @@ theme:
 extra_css:
   - css/blago.css
   - css/extra.css
+  - css/apps-layer.css   # слой «Приложения»: раскрыт только куст текущего приложения
 
 extra_javascript:
   - js/metrika.js
+  - js/apps-layer.js     # пометка <body> для css/apps-layer.css
 
 extra:
   generator: false

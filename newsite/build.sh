@@ -29,7 +29,8 @@ mkdir -p "$BUILD/docs" "$BUILD/parts/blockchain/docs" "$BUILD/parts/platform/doc
 cp "$NEWSITE/mkdocs.yml" "$BUILD/mkdocs.yml"
 cp "$NEWSITE/docs/index.md" "$NEWSITE/docs/reference.md" "$BUILD/docs/"
 mkdir -p "$BUILD/docs/css" "$BUILD/docs/js"
-cp "$NEWSITE/docs/css/blago.css" "$BUILD/docs/css/"
+cp "$NEWSITE/docs/css/blago.css" "$NEWSITE/docs/css/apps-layer.css" "$BUILD/docs/css/"
+cp "$NEWSITE/docs/js/apps-layer.js" "$BUILD/docs/js/"
 # собственные ассеты нового сайта (логотипы) кладём ПОСЛЕ слияния чужих,
 # чтобы одноимённые файлы старых сайтов их не перекрыли — см. ниже
 [ -d "$NEWSITE/overrides" ] && cp -r "$NEWSITE/overrides" "$BUILD/overrides"
@@ -99,9 +100,27 @@ done
 A="$BUILD/parts/apps"
 cp "$NEWSITE/parts/apps/mkdocs.yml" "$A/mkdocs.yml"
 cp "$NEWSITE/parts/apps/index.md"   "$A/docs/index.md"
-for d in marketplace blagorost; do
+for d in marketplace blagorost edubridge; do
   [ -d "$NEW/$d" ] && cp -r "$NEW/$d" "$A/docs/" || echo "  ⚠ нет приложения $d"
 done
+
+# Приложение, которого в этом чекауте mono ещё нет (документация едет с
+# релизом позже конфига сайта), снимается с карточек обзора и из навигации:
+# иначе карточка вела бы на 404, а mkdocs ругался бы на пункты без страниц.
+python3 - "$A" <<'PYAPPS'
+import os, re, sys
+root = sys.argv[1]
+nav_path, idx_path = os.path.join(root, 'mkdocs.yml'), os.path.join(root, 'docs', 'index.md')
+nav, idx = open(nav_path, encoding='utf-8').read(), open(idx_path, encoding='utf-8').read()
+for key in re.findall(r'<!-- app:([\w-]+) -->', idx):
+    if os.path.isdir(os.path.join(root, 'docs', key)):
+        continue
+    idx = re.sub(r'<!-- app:' + key + r' -->.*?<!-- /app -->\n?', '', idx, flags=re.S)
+    nav = re.sub(r'^  - [^\n]+:\n    - ' + key + r'/index\.md\n(?:    .*\n|\n)*?(?=^  - |\Z)', '', nav, flags=re.M)
+    print(f"  ⓘ приложения {key} в mono нет — снято с обзора и из навигации")
+open(nav_path, 'w', encoding='utf-8').write(nav)
+open(idx_path, 'w', encoding='utf-8').write(idx)
+PYAPPS
 
 
 # ── защита от макросов ─────────────────────────────────────────────────────
