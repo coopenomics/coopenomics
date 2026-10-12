@@ -323,3 +323,99 @@
 .md-typeset hr {
   border-bottom: 1px solid var(--blago-line, #e6e8e6);
 }
+
+/* ==========================================================================
+   Светлая тема — больше опоры и контраста (12.10.2026).
+   Тёмная тема держится на разнице поверхностей; у светлой её не было: белая
+   шапка, белое меню, белое поле — текст серый, карточки растворялись.
+   ========================================================================== */
+[data-md-color-scheme="default"] {
+  --md-default-fg-color: #1a1f1d;
+  --md-default-fg-color--light: #3f4945;
+  --md-default-fg-color--lighter: #6b7572;
+  --blago-muted: #4f5a56;
+  --blago-line: #dde2df;
+  --blago-surface: #f5f7f5;
+  --md-code-bg-color: #f0f3f1;
+  --md-typeset-a-color: #0d6b63;
+}
+
+/* шапка и вкладки — светлая плоскость с тонкой линией снизу */
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background: var(--blago-surface, #f5f7f5);
+  color: var(--md-default-fg-color, #1a1f1d);
+}
+
+[data-md-color-scheme="default"] .md-header {
+  border-bottom: 0;
+}
+
+[data-md-color-scheme="default"] .md-tabs {
+  border-bottom: 1px solid var(--blago-line, #dde2df);
+}
+
+[data-md-color-scheme="default"] .md-tabs__link {
+  opacity: .75;
+}
+
+[data-md-color-scheme="default"] .md-search__form {
+  background: #fff;
+  border: 1px solid var(--blago-line, #dde2df);
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder,
+[data-md-color-scheme="default"] .md-search__icon {
+  color: var(--blago-muted, #4f5a56);
+}
+
+/* вводка — темнее и крупнее, не серая вата */
+[data-md-color-scheme="default"] .blago-lead {
+  color: var(--md-default-fg-color--light, #3f4945);
+}
+
+/* карточки — заливка, значок в мягкой плашке */
+[data-md-color-scheme="default"] .md-typeset .blago-cards > ul > li {
+  background: var(--blago-surface, #f5f7f5);
+  border-color: var(--blago-line, #dde2df);
+}
+
+[data-md-color-scheme="default"] .md-typeset .blago-cards > ul > li:hover {
+  background: #fff;
+}
+
+.md-typeset .blago-cards > ul > li > p:first-child .twemoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9em;
+  height: 1.9em;
+  border-radius: .3rem;
+  background: var(--blago-accent-soft, rgba(15, 118, 110, .07));
+}
+
+.md-typeset .blago-cards > ul > li > p:first-child .twemoji svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+/* боковое меню: активный пункт — на подложке, не только цветом */
+[data-md-color-scheme="default"] .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav__link--active > .md-ellipsis {
+  color: var(--blago-accent, #0f766e);
+}
+
+[data-md-color-scheme="default"] .md-nav--primary .md-nav__item .md-nav__link--active {
+  background: var(--blago-accent-soft, rgba(15, 118, 110, .07));
+  border-radius: .2rem;
+  margin-left: -.4rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+
+/* врезки и таблицы — заголовки на подложке */
+[data-md-color-scheme="default"] .md-typeset .admonition-title,
+[data-md-color-scheme="default"] .md-typeset summary,
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background: var(--blago-surface, #f5f7f5);
+}
