@@ -8,6 +8,16 @@
 # Генерируемые справочники (SDK, cooptypes, контракты, Chain API, реестр
 # стандартов) собираются теми же шагами, что и в publish-docs.yaml, и
 # ложатся в КОРЕНЬ сайта — там их ждут макросы, отдающие абсолютные пути.
+#
+# Две цели сборки — одни и те же шаги:
+#   prod    → ветка pages-blago   → docs.blago.coop
+#   preview → ветка preview-pages → docs-preview.blago.coop
+# Превью собирается из ветки mono docs-preview: туда кладут документацию и
+# стандарты на согласование до релиза. Каждые 15 минут работа plan сверяет
+# коммит docs-preview с тем, из которого собрано превью, и пересобирает только
+# при изменении. Немедленно — workflow_dispatch с target=preview.
+# Имя ветки превью не содержит «pages-blago»: интеграция Semaphore боевого
+# сайта срабатывает по вхождению этой строки в ref.
 # ============================================================================
 name: Publish Blago Docs
 
@@ -20,24 +30,82 @@ on:
   # подхватывает их сама; на стороне mono есть ещё и push-триггер по
   # components/docs, но он работает лишь в ветках, куда доехал его workflow.
   schedule:
-    - cron: '17 2 * * *'
+    - cron: '17 2 * * *'      # ночная пересборка боевого сайта
+    - cron: '*/15 * * * *'    # проверка ветки превью
   workflow_dispatch:
     inputs:
-      mono_ref:
-        description: "Ветка mono, с которой берётся документация"
+      target:
+        description: "Куда собирать: prod (docs.blago.coop) или preview (docs-preview.blago.coop)"
         required: false
-        default: "main"
+        default: "prod"
+        type: choice
+        options: [prod, preview]
+      mono_ref:
+        description: "Ветка mono, с которой берётся документация (пусто — по цели)"
+        required: false
+        default: ""
   repository_dispatch:
     types: [deploy_blago_docs]
 
 jobs:
-  build-and-publish:
+  # Решает, что собирать: цель, ветку mono и нужна ли сборка вообще.
+  plan:
     runs-on: ubuntu-latest
+    outputs:
+      target: ${{ steps.plan.outputs.target }}
+      mono_ref: ${{ steps.plan.outputs.mono_ref }}
+      run: ${{ steps.plan.outputs.run }}
+    steps:
+      - id: plan
+        env:
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          IN_TARGET: ${{ github.event.inputs.target }}
+          IN_REF: ${{ github.event.inputs.mono_ref }}
+          # Ветка mono для боевого сайта живёт в переменной репозитория
+          # MONO_DOCS_REF — чтобы переключать её правкой переменной, а не workflow.
+          PROD_REF: ${{ vars.MONO_DOCS_REF || 'main' }}
+        run: |
+          target=prod
+          if [ "$EVENT" = schedule ] && [ "$SCHEDULE" = '*/15 * * * *' ]; then target=preview; fi
+          if [ "$EVENT" = workflow_dispatch ] && [ -n "$IN_TARGET" ]; then target="$IN_TARGET"; fi
+          if [ -n "$IN_REF" ]; then ref="$IN_REF"; elif [ "$target" = preview ]; then ref=docs-preview; else ref="$PROD_REF"; fi
+          run=true
+          # По расписанию превью собирается, только если ветка mono сдвинулась:
+          # коммит, из которого собрано превью, записан в сообщении preview-pages.
+          if [ "$EVENT" = schedule ] && [ "$target" = preview ]; then
+            head=$(git ls-remote https://git.coopenomics.world/C9S/mono.git "refs/heads/$ref" | cut -f1)
+            built=$(git ls-remote https://git.coopenomics.world/C9S/coopenomics.git refs/heads/preview-pages | cut -f1)
+            if [ -z "$head" ]; then
+              run=false
+              echo "ветки $ref в mono нет — превью не собираем"
+            elif [ -n "$built" ]; then
+              git init -q probe && cd probe
+              git fetch -q --depth 1 https://git.coopenomics.world/C9S/coopenomics.git preview-pages
+              if git log -1 --format=%s FETCH_HEAD | grep -q "mono@$head"; then
+                run=false
+                echo "превью уже собрано из $ref@$head"
+              fi
+            fi
+          fi
+          echo "цель: $target, ветка mono: $ref, сборка: $run"
+          {
+            echo "target=$target"
+            echo "mono_ref=$ref"
+            echo "run=$run"
+          } >> "$GITHUB_OUTPUT"
+
+  build-and-publish:
+    needs: plan
+    if: needs.plan.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    # Две сборки одной цели не публикуют поверх друг друга.
+    concurrency:
+      group: blago-docs-${{ needs.plan.outputs.target }}
+      cancel-in-progress: false
     env:
-      # Ветка mono, с которой берётся документация. Значение по умолчанию живёт
-      # в переменной репозитория MONO_DOCS_REF — чтобы после мержа PR #185
-      # переключиться на main правкой переменной, а не workflow.
-      MONO_REF: ${{ github.event.inputs.mono_ref || vars.MONO_DOCS_REF || 'main' }}
+      TARGET: ${{ needs.plan.outputs.target }}
+      MONO_REF: ${{ needs.plan.outputs.mono_ref }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -61,6 +129,7 @@ jobs:
           fi
           echo "ветка документации: $REF"
           git checkout "$REF"
+          echo "MONO_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -223,27 +292,35 @@ jobs:
       # раннеры переехали на GitHub. Токен GitHub для Gitea чужой, поэтому
       # публикует deploy key репозитория C9S/coopenomics с правом записи —
       # секрет GITEA_DEPLOY_KEY. Без секрета (запуск в Gitea) — прежний путь.
-      - name: Publish to pages-blago
+      # Превью открыто по ссылке, но поисковикам закрыто.
+      - name: Close preview from indexing
+        if: env.TARGET == 'preview'
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > site/robots.txt
+
+      - name: Publish static
         env:
           GITEA_DEPLOY_KEY: ${{ secrets.GITEA_DEPLOY_KEY }}
         run: |
+          if [ "$TARGET" = preview ]; then PAGES=preview-pages; else PAGES=pages-blago; fi
           cd site
           git init -q
           git config user.name  "docs-actions"
           git config user.email "actions@git.coopenomics.world"
           git add -A
-          git commit -q -m "docs: сборка docs.blago.coop из ${MONO_REF} (${GITHUB_SHA::7})"
+          # mono@<sha> в сообщении — по нему работа plan узнаёт, из чего собрано превью.
+          git commit -q -m "docs: сборка ${TARGET} из ${MONO_REF} mono@${MONO_SHA} (${GITHUB_SHA::7})"
           if [ -n "$GITEA_DEPLOY_KEY" ]; then
             install -m 700 -d ~/.ssh
             printf '%s\n' "$GITEA_DEPLOY_KEY" > ~/.ssh/gitea_deploy
             chmod 600 ~/.ssh/gitea_deploy
             ssh-keyscan -p 222 git.coopenomics.world >> ~/.ssh/known_hosts 2>/dev/null
             GIT_SSH_COMMAND="ssh -i ~/.ssh/gitea_deploy -o IdentitiesOnly=yes" \
-              git push -q --force ssh://git@git.coopenomics.world:222/C9S/coopenomics.git HEAD:pages-blago
+              git push -q --force ssh://git@git.coopenomics.world:222/C9S/coopenomics.git "HEAD:$PAGES"
           else
             git push -q --force \
               "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.coopenomics.world/C9S/coopenomics.git" \
-              HEAD:pages-blago
+              "HEAD:$PAGES"
           fi
 
       # Раскатку на узел делает вебхук репозитория: push в pages-blago будит
