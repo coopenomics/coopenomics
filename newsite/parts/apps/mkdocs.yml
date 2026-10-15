@@ -83,6 +83,7 @@ nav:
     - Подключение:
       - Установка приложения: edubridge/admin/install.md
       - Подключение ЦПП советом: edubridge/admin/configure.md
+      - Подключение площадки: edubridge/admin/platform-setup.md
     - Стол администратора:
       - edubridge/admin/index.md
       - Разделы и уровни: edubridge/admin/sections.md
