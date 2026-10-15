@@ -27,6 +27,10 @@ nav:
       - Мои заказы: marketplace/orderer/my-orders.md
       - Получение на пункте выдачи: marketplace/orderer/receive.md
       - Гарантийный возврат: marketplace/orderer/returns.md
+      - Заказ до получения: marketplace/orderer/order-no-return-yet.md
+      - Пустой каталог: marketplace/orderer/catalog-empty.md
+      - Нет заказов: marketplace/orderer/orders-empty.md
+      - Стол заказчика целиком: marketplace/orderer/marketplace-tour.md
     - Стол поставщика:
       - marketplace/offerer/index.md
       - Подключение поставщика: marketplace/offerer/connect.md
@@ -48,6 +52,7 @@ nav:
       - Списание на участке: marketplace/operator/writeoffs.md
       - Экономика участка: marketplace/operator/economy.md
       - История заказов: marketplace/operator/orders-history.md
+      - Поставки на чужом пункте: marketplace/operator/incoming-shipments-foreign.md
     - Стол администратора:
       - marketplace/admin/index.md
       - Реестр заказов: marketplace/admin/orders-registry.md
@@ -58,6 +63,12 @@ nav:
       - Доступные категории: marketplace/admin/categories.md
       - Пункты выдачи заказов: marketplace/admin/issuance-points.md
       - Списания скоропорта: marketplace/admin/writeoffs.md
+      - Экосистема: marketplace/chairman/ecosystem.md
+      - Стол администратора целиком: marketplace/chairman/market-tour.md
+    - Стол совета:
+      - Выплаты поставщикам: marketplace/board/payouts-readonly.md
+      - Склад кооператива: marketplace/board/warehouse-readonly.md
+    - Стол председателя кооператива: marketplace/chairman/dashboard.md
     - Заключение: marketplace/conclusion.md
 
   - Благорост:
