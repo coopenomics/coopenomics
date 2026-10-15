@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура ExpenseDomain::proposal</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('struct_expense_domain_1_1proposal.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="struct_expense_domain_1_1proposal-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура ExpenseDomain::proposal</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Таблица СЗ-расходов. Scope = coopname.  
+ <a href="struct_expense_domain_1_1proposal.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="expense_8hpp_source.html">expense.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af28c910e4ecd45bbee05db3e4896b580"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#af28c910e4ecd45bbee05db3e4896b580">primary_key</a> () const</td></tr>
+<tr class="separator:af28c910e4ecd45bbee05db3e4896b580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5c5a66c43ed5ebd10948d434dc89d9"><td class="memItemLeft" align="right" valign="top">eosio::checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a7d5c5a66c43ed5ebd10948d434dc89d9">by_hash</a> () const</td></tr>
+<tr class="separator:a7d5c5a66c43ed5ebd10948d434dc89d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9795c671e8dc19ad434b512a79cb39e4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a9795c671e8dc19ad434b512a79cb39e4">by_username</a> () const</td></tr>
+<tr class="separator:a9795c671e8dc19ad434b512a79cb39e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f60c74ac63a124a2fdaad8f8adeab9"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#ae6f60c74ac63a124a2fdaad8f8adeab9">by_status</a> () const</td></tr>
+<tr class="separator:ae6f60c74ac63a124a2fdaad8f8adeab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a8a38566bff7177b26bd426d6b4e0ce0a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a8a38566bff7177b26bd426d6b4e0ce0a">id</a></td></tr>
+<tr class="separator:a8a38566bff7177b26bd426d6b4e0ce0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af206bab60f7fc6ac0c7621292e6b8d7d"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#af206bab60f7fc6ac0c7621292e6b8d7d">coopname</a></td></tr>
+<tr class="memdesc:af206bab60f7fc6ac0c7621292e6b8d7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">кооператив (= scope таблицы; дублируем полем по канону)  <a href="struct_expense_domain_1_1proposal.html#af206bab60f7fc6ac0c7621292e6b8d7d">Подробнее...</a><br /></td></tr>
+<tr class="separator:af206bab60f7fc6ac0c7621292e6b8d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18349c622817cd43cfdee36a7778e97b"><td class="memItemLeft" align="right" valign="top">eosio::checksum256&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a18349c622817cd43cfdee36a7778e97b">proposal_hash</a></td></tr>
+<tr class="separator:a18349c622817cd43cfdee36a7778e97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca59859f405134066f214bb5622d73e"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a8ca59859f405134066f214bb5622d73e">username</a></td></tr>
+<tr class="memdesc:a8ca59859f405134066f214bb5622d73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">создатель  <a href="struct_expense_domain_1_1proposal.html#a8ca59859f405134066f214bb5622d73e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8ca59859f405134066f214bb5622d73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a131b59054c934f6a9f94e29d25a4bfdf"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a131b59054c934f6a9f94e29d25a4bfdf">source_wallet</a></td></tr>
+<tr class="memdesc:a131b59054c934f6a9f94e29d25a4bfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">семантически — из какого ЦПП/фонда (w.cap.blago, w.sov.expns, …)  <a href="struct_expense_domain_1_1proposal.html#a131b59054c934f6a9f94e29d25a4bfdf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a131b59054c934f6a9f94e29d25a4bfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abad6ac578077ef1cd54f2477527fde89"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#abad6ac578077ef1cd54f2477527fde89">status</a></td></tr>
+<tr class="memdesc:abad6ac578077ef1cd54f2477527fde89"><td class="mdescLeft">&#160;</td><td class="mdescRight">ProposalStatus.  <a href="struct_expense_domain_1_1proposal.html#abad6ac578077ef1cd54f2477527fde89">Подробнее...</a><br /></td></tr>
+<tr class="separator:abad6ac578077ef1cd54f2477527fde89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fffd9ab553f9596aa4cc24540063fc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_expense_domain_1_1item.html">item</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a50fffd9ab553f9596aa4cc24540063fc">items</a></td></tr>
+<tr class="separator:a50fffd9ab553f9596aa4cc24540063fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6f45b892fce5968e1624ee00cb3ffc"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a9a6f45b892fce5968e1624ee00cb3ffc">total_planned</a></td></tr>
+<tr class="separator:a9a6f45b892fce5968e1624ee00cb3ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab571cb3f6efc295dfb9d2a59e6801013"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#ab571cb3f6efc295dfb9d2a59e6801013">total_actual</a></td></tr>
+<tr class="separator:ab571cb3f6efc295dfb9d2a59e6801013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa13b2f0f7f992c27854b3b773fcb930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_expense_domain_1_1callback__handler.html">callback_handler</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#aaa13b2f0f7f992c27854b3b773fcb930">callback</a></td></tr>
+<tr class="memdesc:aaa13b2f0f7f992c27854b3b773fcb930"><td class="mdescLeft">&#160;</td><td class="mdescRight">опционально; contract.value == 0 = нет callback  <a href="struct_expense_domain_1_1proposal.html#aaa13b2f0f7f992c27854b3b773fcb930">Подробнее...</a><br /></td></tr>
+<tr class="separator:aaa13b2f0f7f992c27854b3b773fcb930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b23e291fbaad1a328d5ddb983add330"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#a9b23e291fbaad1a328d5ddb983add330">statement_doc</a></td></tr>
+<tr class="memdesc:a9b23e291fbaad1a328d5ddb983add330"><td class="mdescLeft">&#160;</td><td class="mdescRight">type=2010, signact1 создателя  <a href="struct_expense_domain_1_1proposal.html#a9b23e291fbaad1a328d5ddb983add330">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b23e291fbaad1a328d5ddb983add330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4a8d38fbdc07de0469928dbaf361529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdocument2.html">document2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#ab4a8d38fbdc07de0469928dbaf361529">decision_doc</a></td></tr>
+<tr class="memdesc:ab4a8d38fbdc07de0469928dbaf361529"><td class="mdescLeft">&#160;</td><td class="mdescRight">type=2011, signact2 совета  <a href="struct_expense_domain_1_1proposal.html#ab4a8d38fbdc07de0469928dbaf361529">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab4a8d38fbdc07de0469928dbaf361529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af848d1f8018fc9412d72409a1bd90757"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#af848d1f8018fc9412d72409a1bd90757">created_at</a></td></tr>
+<tr class="separator:af848d1f8018fc9412d72409a1bd90757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acac22a36044be3b7520e0e3dd6855248"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_expense_domain_1_1proposal.html#acac22a36044be3b7520e0e3dd6855248">updated_at</a></td></tr>
+<tr class="separator:acac22a36044be3b7520e0e3dd6855248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Таблица СЗ-расходов. Scope = coopname. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a7d5c5a66c43ed5ebd10948d434dc89d9" name="a7d5c5a66c43ed5ebd10948d434dc89d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5c5a66c43ed5ebd10948d434dc89d9">&#9670;&nbsp;</a></span>by_hash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::checksum256 ExpenseDomain::proposal::by_hash </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6f60c74ac63a124a2fdaad8f8adeab9" name="ae6f60c74ac63a124a2fdaad8f8adeab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f60c74ac63a124a2fdaad8f8adeab9">&#9670;&nbsp;</a></span>by_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ExpenseDomain::proposal::by_status </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9795c671e8dc19ad434b512a79cb39e4" name="a9795c671e8dc19ad434b512a79cb39e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9795c671e8dc19ad434b512a79cb39e4">&#9670;&nbsp;</a></span>by_username()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ExpenseDomain::proposal::by_username </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af28c910e4ecd45bbee05db3e4896b580" name="af28c910e4ecd45bbee05db3e4896b580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af28c910e4ecd45bbee05db3e4896b580">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ExpenseDomain::proposal::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aaa13b2f0f7f992c27854b3b773fcb930" name="aaa13b2f0f7f992c27854b3b773fcb930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa13b2f0f7f992c27854b3b773fcb930">&#9670;&nbsp;</a></span>callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_expense_domain_1_1callback__handler.html">callback_handler</a> ExpenseDomain::proposal::callback</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>опционально; contract.value == 0 = нет callback </p>
+
+</div>
+</div>
+<a id="af206bab60f7fc6ac0c7621292e6b8d7d" name="af206bab60f7fc6ac0c7621292e6b8d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af206bab60f7fc6ac0c7621292e6b8d7d">&#9670;&nbsp;</a></span>coopname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name ExpenseDomain::proposal::coopname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>кооператив (= scope таблицы; дублируем полем по канону) </p>
+
+</div>
+</div>
+<a id="af848d1f8018fc9412d72409a1bd90757" name="af848d1f8018fc9412d72409a1bd90757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af848d1f8018fc9412d72409a1bd90757">&#9670;&nbsp;</a></span>created_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec ExpenseDomain::proposal::created_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4a8d38fbdc07de0469928dbaf361529" name="ab4a8d38fbdc07de0469928dbaf361529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4a8d38fbdc07de0469928dbaf361529">&#9670;&nbsp;</a></span>decision_doc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> ExpenseDomain::proposal::decision_doc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type=2011, signact2 совета </p>
+
+</div>
+</div>
+<a id="a8a38566bff7177b26bd426d6b4e0ce0a" name="a8a38566bff7177b26bd426d6b4e0ce0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a38566bff7177b26bd426d6b4e0ce0a">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t ExpenseDomain::proposal::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a50fffd9ab553f9596aa4cc24540063fc" name="a50fffd9ab553f9596aa4cc24540063fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50fffd9ab553f9596aa4cc24540063fc">&#9670;&nbsp;</a></span>items</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_expense_domain_1_1item.html">item</a>&gt; ExpenseDomain::proposal::items</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18349c622817cd43cfdee36a7778e97b" name="a18349c622817cd43cfdee36a7778e97b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18349c622817cd43cfdee36a7778e97b">&#9670;&nbsp;</a></span>proposal_hash</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::checksum256 ExpenseDomain::proposal::proposal_hash</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a131b59054c934f6a9f94e29d25a4bfdf" name="a131b59054c934f6a9f94e29d25a4bfdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131b59054c934f6a9f94e29d25a4bfdf">&#9670;&nbsp;</a></span>source_wallet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name ExpenseDomain::proposal::source_wallet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>семантически — из какого ЦПП/фонда (w.cap.blago, w.sov.expns, …) </p>
+
+</div>
+</div>
+<a id="a9b23e291fbaad1a328d5ddb983add330" name="a9b23e291fbaad1a328d5ddb983add330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b23e291fbaad1a328d5ddb983add330">&#9670;&nbsp;</a></span>statement_doc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdocument2.html">document2</a> ExpenseDomain::proposal::statement_doc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>type=2010, signact1 создателя </p>
+
+</div>
+</div>
+<a id="abad6ac578077ef1cd54f2477527fde89" name="abad6ac578077ef1cd54f2477527fde89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abad6ac578077ef1cd54f2477527fde89">&#9670;&nbsp;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t ExpenseDomain::proposal::status</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ProposalStatus. </p>
+
+</div>
+</div>
+<a id="ab571cb3f6efc295dfb9d2a59e6801013" name="ab571cb3f6efc295dfb9d2a59e6801013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab571cb3f6efc295dfb9d2a59e6801013">&#9670;&nbsp;</a></span>total_actual</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset ExpenseDomain::proposal::total_actual</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a6f45b892fce5968e1624ee00cb3ffc" name="a9a6f45b892fce5968e1624ee00cb3ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6f45b892fce5968e1624ee00cb3ffc">&#9670;&nbsp;</a></span>total_planned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset ExpenseDomain::proposal::total_planned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acac22a36044be3b7520e0e3dd6855248" name="acac22a36044be3b7520e0e3dd6855248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac22a36044be3b7520e0e3dd6855248">&#9670;&nbsp;</a></span>updated_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec ExpenseDomain::proposal::updated_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ca59859f405134066f214bb5622d73e" name="a8ca59859f405134066f214bb5622d73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ca59859f405134066f214bb5622d73e">&#9670;&nbsp;</a></span>username</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name ExpenseDomain::proposal::username</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>создатель </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/expense/<a class="el" href="expense_8hpp_source.html">expense.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_expense_domain.html">ExpenseDomain</a></li><li class="navelem"><a class="el" href="struct_expense_domain_1_1proposal.html">proposal</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
