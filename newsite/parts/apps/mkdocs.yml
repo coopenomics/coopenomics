@@ -1,5 +1,5 @@
 # Слой «Приложения» — суб-документация docs.blago.coop.
-# Контент: mono/components/docs/docs/new/{marketplace,blagorost,edubridge}.
+# Контент: mono/components/docs/docs/new/{marketplace,blagorost,edubridge,ku,robot}.
 # site_name задаёт префикс URL: /apps/...
 #
 # Каждое приложение магазина — самостоятельный куст: обзор приложения и
@@ -114,3 +114,27 @@ nav:
       - Календарь: edubridge/teacher/lessons.md
       - Отчёты: edubridge/teacher/reports.md
       - Расчёты: edubridge/teacher/settlement.md
+
+  - Кооперативный участок:
+    - ku/index.md
+    - Подключение:
+      - Установка приложения: ku/admin/install.md
+    - Стол председателя кооператива:
+      - Участки: ku/admin/branches.md
+    - Учреждение участка:
+      - Собрания: ku/member/meetings.md
+      - Участие в собрании: ku/member/meeting-join.md
+      - Открытие голосования: ku/member/meeting-vote.md
+      - Бюллетень участника: ku/member/meeting-ballot.md
+      - Протокол и заявление в совет: ku/member/meeting-protocol.md
+      - Решение совета: ku/member/meeting-council.md
+    - Доверенные лица:
+      - Заявка пайщика: ku/member/trusted.md
+      - Одобрение председателем участка: ku/branch-chairman/trusted.md
+
+  - Робот совета:
+    - robot/index.md
+    - Установка приложения: robot/admin/install.md
+    - Действия автоматизации: robot/admin/registry.md
+    - Журнал робота: robot/admin/journal.md
+    - Состояние робота: robot/admin/state.md

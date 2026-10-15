@@ -99,7 +99,7 @@ done
 A="$BUILD/parts/apps"
 cp "$NEWSITE/parts/apps/mkdocs.yml" "$A/mkdocs.yml"
 cp "$NEWSITE/parts/apps/index.md"   "$A/docs/index.md"
-for d in marketplace blagorost edubridge; do
+for d in marketplace blagorost edubridge ku robot; do
   [ -d "$NEW/$d" ] && cp -r "$NEW/$d" "$A/docs/" || echo "  ⚠ нет приложения $d"
 done
 
