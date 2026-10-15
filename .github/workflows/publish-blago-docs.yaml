@@ -202,17 +202,32 @@ jobs:
           MONO_DIR="$GITHUB_WORKSPACE/mono-repo" OUT_DIR="$GITHUB_WORKSPACE/site" \
             DISABLE_MKDOCS_2_WARNING=true ./newsite/build.sh
 
+      # Сборка идёт на GitHub-зеркале: Actions в Gitea выключены (15.10.2026),
+      # раннеры переехали на GitHub. Токен GitHub для Gitea чужой, поэтому
+      # публикует deploy key репозитория C9S/coopenomics с правом записи —
+      # секрет GITEA_DEPLOY_KEY. Без секрета (запуск в Gitea) — прежний путь.
       - name: Publish to pages-blago
+        env:
+          GITEA_DEPLOY_KEY: ${{ secrets.GITEA_DEPLOY_KEY }}
         run: |
           cd site
           git init -q
-          git config user.name  "gitea-actions"
+          git config user.name  "docs-actions"
           git config user.email "actions@git.coopenomics.world"
           git add -A
           git commit -q -m "docs: сборка docs.blago.coop из ${MONO_REF} (${GITHUB_SHA::7})"
-          git push -q --force \
-            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.coopenomics.world/C9S/coopenomics.git" \
-            HEAD:pages-blago
+          if [ -n "$GITEA_DEPLOY_KEY" ]; then
+            install -m 700 -d ~/.ssh
+            printf '%s\n' "$GITEA_DEPLOY_KEY" > ~/.ssh/gitea_deploy
+            chmod 600 ~/.ssh/gitea_deploy
+            ssh-keyscan -p 222 git.coopenomics.world >> ~/.ssh/known_hosts 2>/dev/null
+            GIT_SSH_COMMAND="ssh -i ~/.ssh/gitea_deploy -o IdentitiesOnly=yes" \
+              git push -q --force ssh://git@git.coopenomics.world:222/C9S/coopenomics.git HEAD:pages-blago
+          else
+            git push -q --force \
+              "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.coopenomics.world/C9S/coopenomics.git" \
+              HEAD:pages-blago
+          fi
 
       # Раскатку на узел делает вебхук репозитория: push в pages-blago будит
       # интеграцию Semaphore gitea-blago-docs-deploy (шаблон 96 BLAGO-DOCS,
