@@ -89,6 +89,8 @@ nav:
       - Курсы: edubridge/admin/courses.md
       - Добавление курса: edubridge/admin/course-create.md
       - Страница курса: edubridge/admin/course.md
+      - Группа курса: edubridge/admin/group.md
+      - Календарь школы: edubridge/admin/calendar.md
       - Площадки: edubridge/admin/platforms.md
       - Преподаватели: edubridge/admin/teachers.md
       - Ученики: edubridge/admin/members.md
@@ -107,5 +109,6 @@ nav:
       - Подключение преподавателя: edubridge/teacher/onboarding.md
       - Профиль: edubridge/teacher/profile.md
       - Назначения: edubridge/teacher/assignments.md
-      - Занятия: edubridge/teacher/lessons.md
+      - Календарь: edubridge/teacher/lessons.md
+      - Отчёты: edubridge/teacher/reports.md
       - Расчёты: edubridge/teacher/settlement.md
