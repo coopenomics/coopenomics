@@ -96,6 +96,7 @@ nav:
       - Ученики: edubridge/admin/members.md
       - Взносы преподавателей: edubridge/admin/contributions.md
       - Экономика программы: edubridge/admin/economy.md
+      - Выплаты: edubridge/admin/payments.md
     - Стол ученика:
       - edubridge/member/index.md
       - Каталог курсов: edubridge/member/catalog.md
