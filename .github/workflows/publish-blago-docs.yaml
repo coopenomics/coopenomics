@@ -163,11 +163,28 @@ jobs:
         run: |
           set -e
           VER=$(grep -hoE 'cdn\.redocly\.com/redoc/[^/]+' docs/api/*/index.html 2>/dev/null | head -1 | sed 's|.*/||')
+          # jsdelivr временами отвечает 503 (15.10.2026 сборка упала здесь), поэтому
+          # повторы, запасной CDN и номер версии без «v». Не скачалось — справочник
+          # остаётся на cdn.redocly.com: это хуже для РФ, но не повод терять сайт.
           if [ -n "$VER" ]; then
-            curl -fsSL "https://cdn.jsdelivr.net/npm/redoc@${VER}/bundles/redoc.standalone.js" -o docs/api/redoc.standalone.js
-            for f in docs/api/*/index.html; do
-              sed -i 's|https://cdn\.redocly\.com/redoc/[^/]*/bundles/redoc\.standalone\.js|../redoc.standalone.js|g' "$f"
+            ok=0
+            for v in "$VER" "${VER#v}"; do
+              for src in "https://cdn.jsdelivr.net/npm/redoc@${v}/bundles/redoc.standalone.js" \
+                         "https://unpkg.com/redoc@${v}/bundles/redoc.standalone.js"; do
+                if curl -fsSL --retry 3 --retry-delay 5 "$src" -o docs/api/redoc.standalone.js; then
+                  ok=1
+                  break 2
+                fi
+              done
             done
+            if [ "$ok" = 1 ]; then
+              for f in docs/api/*/index.html; do
+                sed -i 's|https://cdn\.redocly\.com/redoc/[^/]*/bundles/redoc\.standalone\.js|../redoc.standalone.js|g' "$f"
+              done
+            else
+              rm -f docs/api/redoc.standalone.js
+              echo "⚠ redoc ${VER} не скачался — справочник API ссылается на cdn.redocly.com"
+            fi
           fi
 
       - name: Copy contracts and cooptypes docs
