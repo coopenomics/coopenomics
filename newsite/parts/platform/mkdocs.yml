@@ -71,11 +71,18 @@ nav:
         - Архив: buh/archive.md
       - НДФЛ: buh/ndfl.md
       - Реквизиты: buh/settings.md
+    - Стол кассира:
+      - cashier/index.md
+      - Реестр платежей: cashier/payments.md
+      - Расходы: cashier/expenses.md
+      - Авансы: cashier/advances.md
+      - Стол глазами совета: cashier/council-view.md
     - Расходы:
       - expenses/index.md
       - Реестр расходов: expenses/registry.md
-      - Касса: expenses/cashier.md
-      - Мои авансы: expenses/advances.md
+      - Выплаты по записке: expenses/cashier.md
+      - Отчёт по авансу: expenses/advances.md
+      - Закрытие расхода: expenses/close.md
     - Стол связи:
       - chatcoop/index.md
       - Установка: chatcoop/install.md
