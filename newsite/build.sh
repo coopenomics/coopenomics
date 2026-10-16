@@ -90,8 +90,8 @@ P="$BUILD/parts/platform"
 NEW="$MONODOCS/docs/new"
 cp "$NEWSITE/parts/platform/mkdocs.yml" "$P/mkdocs.yml"
 cp "$NEWSITE/parts/platform/index.md"   "$P/docs/index.md"
-for d in accounts auth blockchain buh chairman connection contracts council \
-         factory installation meet navigator participant registration resources signature; do
+for d in accounts auth blockchain buh chairman chatcoop connection contracts council \
+         expenses factory installation meet navigator participant registration resources signature; do
   [ -d "$NEW/$d" ] && cp -r "$NEW/$d" "$P/docs/" || echo "  ⚠ нет раздела $d"
 done
 

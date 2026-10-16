@@ -25,11 +25,13 @@ nav:
       - Паевой взнос: participant/wallet-topup.md
       - Возврат взноса: participant/wallet-refund.md
     - Удостоверение: participant/profile.md
+    - Карта кооператора: participant/cardcoop.md
     - Реквизиты: participant/requisites.md
     - Документы: participant/documents.md
     - Платежи: participant/payments.md
     - Собрания: participant/meetings.md
     - Контакты: participant/contacts.md
+    - Настройки: participant/settings.md
 
   - Кооперативу:
     - Стол совета:
@@ -37,19 +39,52 @@ nav:
       - Реестр пайщиков: council/participants.md
       - Реестр документов: council/documents.md
       - Реестр платежей: council/payments.md
+      - Реестр расходов: council/expenses.md
       - Реестр собраний: council/meetings.md
-      - Реестр кошельков: council/wallets.md
+      - Реестр кооперативов: council/cooperatives.md
     - Стол председателя:
+      - Онбординг: chairman/onboarding.md
       - Запросы одобрений: chairman/approval-requests.md
-      - Магазин приложений: chairman/app-store.md
+      - Управление доступом: chairman/access-roles.md
+      - Пресеты предложений: chairman/agenda-presets.md
+      - Журнал уведомлений: chairman/notifications-journal.md
+      - Каталог приложений: chairman/app-store.md
       - Стартовые страницы: chairman/start-pages.md
       - Члены совета: chairman/board-members.md
       - Кооперативные участки: chairman/cooperative-branches.md
       - Регистрационные взносы: chairman/registration-fees.md
       - Ключ кооператива: chairman/cooperative-key.md
+      - Провайдер платежей: chairman/payment-provider.md
       - Контакты кооператива: chairman/cooperative-contacts.md
+    - Стол бухгалтера:
+      - buh/index.md
+      - Реестр процессов: buh/processes.md
+      - Реестр операций: buh/operations.md
+      - Реестр проводок: buh/postings.md
+      - Реестр кошельков:
+        - Кошельки кооператива: buh/wallets-coop.md
+        - Кошельки пайщиков: buh/wallets-participants.md
+      - Реестр счетов: buh/accounts.md
+      - Отчётность:
+        - Календарь: buh/calendar.md
+        - Список форм: buh/forms.md
+        - Архив: buh/archive.md
+      - НДФЛ: buh/ndfl.md
+      - Реквизиты: buh/settings.md
+    - Расходы:
+      - expenses/index.md
+      - Реестр расходов: expenses/registry.md
+      - Касса: expenses/cashier.md
+      - Мои авансы: expenses/advances.md
+    - Стол связи:
+      - chatcoop/index.md
+      - Установка: chatcoop/install.md
+      - Быстрый клиент: chatcoop/chat.md
+      - Мобильный клиент: chatcoop/mobile.md
+      - Календарь событий: chatcoop/calendar.md
+      - Транскрипции звонков: chatcoop/transcriptions.md
+      - Комнаты секретаря: chatcoop/secretary-rooms.md
     - Общие собрания: meet/index.md
-    - Бухгалтерия: buh/index.md
 
   - Устройство платформы:
     - Аккаунты: accounts/index.md
