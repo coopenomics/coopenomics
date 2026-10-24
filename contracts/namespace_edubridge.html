@@ -1,0 +1,1645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен Edubridge</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespace_edubridge.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен Edubridge</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_edubridge_1_1_contract_status"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge_1_1_contract_status.html">ContractStatus</a></td></tr>
+<tr class="memdesc:namespace_edubridge_1_1_contract_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">Договор преподавателя об участии в хозяйственной деятельности (УХД) по ЦПП «Образование» — анкер процесса p.edu.teach. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_edubridge_1_1_memo"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge_1_1_memo.html">Memo</a></td></tr>
+<tr class="memdesc:namespace_edubridge_1_1_memo"><td class="mdescLeft">&#160;</td><td class="mdescRight">Человекочитаемые memo ledger2-операций ЦПП «Образование». <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_edubridge_1_1_subscription_period"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge_1_1_subscription_period.html">SubscriptionPeriod</a></td></tr>
+<tr class="memdesc:namespace_edubridge_1_1_subscription_period"><td class="mdescLeft">&#160;</td><td class="mdescRight">Периоды подписки на курс ЦПП «Образование». <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__assignment.html">edu_assignment</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допуск преподавателя к курсу и его ставка на этом курсе.  <a href="struct_edubridge_1_1edu__assignment.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__course.html">edu_course</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Учёт средств курса ЦПП «Образование».  <a href="struct_edubridge_1_1edu__course.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__due.html">edu_due</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Учёт занятий по подписке — по нему контракт считает расчёт с преподавателем и возврат участнику.  <a href="struct_edubridge_1_1edu__due.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__lesson.html">edu_lesson</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Занятие, по которому идёт расчёт с участниками.  <a href="struct_edubridge_1_1edu__lesson.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Материалы преподавателя по занятию — анкер процесса p.edu.rid от приёма на ответственное хранение до паевого взноса результатом интеллектуальной деятельности (РИД).  <a href="struct_edubridge_1_1edu__rid.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__slot__terms.html">edu_slot_terms</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Условия курса ЦПП «Образование» — всё, от чего зависит сумма.  <a href="struct_edubridge_1_1edu__slot__terms.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__sub__plan.html">edu_sub_plan</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Активная подписка пайщика на курс — анкер процесса p.edu.access.  <a href="struct_edubridge_1_1edu__subscription.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1_fee_quote.html">FeeQuote</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Что оплачивает один взнос — считает контракт по условиям курса.  <a href="struct_edubridge_1_1_fee_quote.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_edubridge_1_1_user_wallet_available.html">UserWalletAvailable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:aa2e1eb50a3d15674a13831aa17d72e26"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;educontracts&quot;_n, <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__contract.html#a70508c9414b7d61fe81777c11255fc13">edu_contract::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__contract.html#af55ca51f6bb4370009e1409b776f5175">edu_contract::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#aa2e1eb50a3d15674a13831aa17d72e26">edu_contracts_index</a></td></tr>
+<tr class="separator:aa2e1eb50a3d15674a13831aa17d72e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569fd8621438f242aa4861d148a9383a"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;educourses&quot;_n, <a class="el" href="struct_edubridge_1_1edu__course.html">edu_course</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a569fd8621438f242aa4861d148a9383a">edu_courses_index</a></td></tr>
+<tr class="separator:a569fd8621438f242aa4861d148a9383a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952531d1ef239a75939fd4787184adf1"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;edurids&quot;_n, <a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__rid.html#ada5724af237fbba56f54d3d4e2dcb2b4">edu_rid::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__rid.html#a4d46930197122d0e7fda610250e6205b">edu_rid::by_username</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a952531d1ef239a75939fd4787184adf1">edu_rids_index</a></td></tr>
+<tr class="separator:a952531d1ef239a75939fd4787184adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d89d0017cf33fdbcc38b9e536043776"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;edusubs&quot;_n, <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#a699bf6a19dcb13a8470230d71ff54c11">edu_subscription::by_hash</a> &gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#a6e0176b12f0ebe525aca86dc49a9c5e2">edu_subscription::by_username</a> &gt; &gt;, eosio::indexed_by&lt;&quot;bypaiduntil&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#aff87dda2ffcd3b411fa1d02ac3af3927">edu_subscription::by_paid_until</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a></td></tr>
+<tr class="separator:a4d89d0017cf33fdbcc38b9e536043776"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a932b9fca4fa75bd53792d8ebc9314542"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt;&quot;eduterms&quot;_n, <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a932b9fca4fa75bd53792d8ebc9314542">edu_terms_index</a></td></tr>
+<tr class="separator:a932b9fca4fa75bd53792d8ebc9314542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e8b77882b809141b631727c596333d"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;eduassigns&quot;_n, <a class="el" href="struct_edubridge_1_1edu__assignment.html">edu_assignment</a>, eosio::indexed_by&lt;&quot;bycourse&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__assignment.html">edu_assignment</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__assignment.html#a3e4fdebb7b21ba8e56073785c2b2f578">edu_assignment::by_course</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a95e8b77882b809141b631727c596333d">edu_assignments_index</a></td></tr>
+<tr class="separator:a95e8b77882b809141b631727c596333d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0a8cfe8f9d18fb91221ddaab1e1ef8f"><td class="memItemLeft" align="right" valign="top">typedef eosio::multi_index&lt; &quot;edulessons&quot;_n, <a class="el" href="struct_edubridge_1_1edu__lesson.html">edu_lesson</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt; <a class="el" href="struct_edubridge_1_1edu__lesson.html">edu_lesson</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__lesson.html#a54b7d61f1dc6b47034beaf59bf45389c">edu_lesson::by_hash</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ab0a8cfe8f9d18fb91221ddaab1e1ef8f">edu_lessons_index</a></td></tr>
+<tr class="separator:ab0a8cfe8f9d18fb91221ddaab1e1ef8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a4bdc13f943d7baed4e6b91ebe722b87b"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a4bdc13f943d7baed4e6b91ebe722b87b">add_months</a> (eosio::time_point_sec from, uint32_t months, uint32_t month_secs=0)</td></tr>
+<tr class="memdesc:a4bdc13f943d7baed4e6b91ebe722b87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Дата плюс месяцы по четыре недели; время суток сохраняется.  <a href="namespace_edubridge.html#a4bdc13f943d7baed4e6b91ebe722b87b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4bdc13f943d7baed4e6b91ebe722b87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58e3991ef6ab2752f363af7f8342775"><td class="memTemplParams" colspan="2">template&lt;typename Terms &gt; </td></tr>
+<tr class="memitem:ad58e3991ef6ab2752f363af7f8342775"><td class="memTemplItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ad58e3991ef6ab2752f363af7f8342775">program_end</a> (const Terms &amp;terms, eosio::time_point_sec start)</td></tr>
+<tr class="memdesc:ad58e3991ef6ab2752f363af7f8342775"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конец программы группы от дня начала занятий.  <a href="namespace_edubridge.html#ad58e3991ef6ab2752f363af7f8342775">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad58e3991ef6ab2752f363af7f8342775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee96cf3c5982e97c04523ff524ae921d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#aee96cf3c5982e97c04523ff524ae921d">get_terms_or_fail</a> (eosio::name coopname, uint64_t course_id)</td></tr>
+<tr class="memdesc:aee96cf3c5982e97c04523ff524ae921d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Условия курса; бросает, если администратор их ещё не задал.  <a href="namespace_edubridge.html#aee96cf3c5982e97c04523ff524ae921d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee96cf3c5982e97c04523ff524ae921d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcbce02abfc3137464cb381e9fced0a"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a3dcbce02abfc3137464cb381e9fced0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a3dcbce02abfc3137464cb381e9fced0a">update_terms</a> (eosio::name coopname, uint64_t course_id, Fn &amp;&amp;change)</td></tr>
+<tr class="separator:a3dcbce02abfc3137464cb381e9fced0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31340a795485a5bcaa8ac8c704e625c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ac31340a795485a5bcaa8ac8c704e625c">is_guarantee_running</a> (const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;terms, eosio::time_point_sec now)</td></tr>
+<tr class="memdesc:ac31340a795485a5bcaa8ac8c704e625c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Идёт ли гарантийный срок группы.  <a href="namespace_edubridge.html#ac31340a795485a5bcaa8ac8c704e625c">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac31340a795485a5bcaa8ac8c704e625c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf8f5a8dce3fed9e95037b7fd87de82"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#afaf8f5a8dce3fed9e95037b7fd87de82">lesson_hold_until</a> (const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;terms, eosio::time_point_sec held_at)</td></tr>
+<tr class="memdesc:afaf8f5a8dce3fed9e95037b7fd87de82"><td class="mdescLeft">&#160;</td><td class="mdescRight">До какой даты материалы занятия лежат на ответственном хранении — гарантийный срок курса от начала занятий.  <a href="namespace_edubridge.html#afaf8f5a8dce3fed9e95037b7fd87de82">Подробнее...</a><br /></td></tr>
+<tr class="separator:afaf8f5a8dce3fed9e95037b7fd87de82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a374d0cb511b3355a24e4d14c7805cdd6"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a374d0cb511b3355a24e4d14c7805cdd6">day_start</a> (eosio::time_point_sec at)</td></tr>
+<tr class="memdesc:a374d0cb511b3355a24e4d14c7805cdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Начало суток (UTC), на которые приходится момент.  <a href="namespace_edubridge.html#a374d0cb511b3355a24e4d14c7805cdd6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a374d0cb511b3355a24e4d14c7805cdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77bdd5036a7bcb4c9323798278c95989"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a77bdd5036a7bcb4c9323798278c95989">lesson_covered</a> (const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;sub, eosio::time_point_sec held_at)</td></tr>
+<tr class="memdesc:a77bdd5036a7bcb4c9323798278c95989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Оплачено ли занятие подпиской.  <a href="namespace_edubridge.html#a77bdd5036a7bcb4c9323798278c95989">Подробнее...</a><br /></td></tr>
+<tr class="separator:a77bdd5036a7bcb4c9323798278c95989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f769644a454d95ddac329797932d9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_edubridge_1_1_fee_quote.html">FeeQuote</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a9f769644a454d95ddac329797932d9ae">quote_fee</a> (const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;terms, const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;sub, eosio::name period, eosio::time_point_sec now)</td></tr>
+<tr class="memdesc:a9f769644a454d95ddac329797932d9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчёт взноса участника.  <a href="namespace_edubridge.html#a9f769644a454d95ddac329797932d9ae">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f769644a454d95ddac329797932d9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799a4246ff3adf2580d0263d3829af1d"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a799a4246ff3adf2580d0263d3829af1d">refusal_refund</a> (const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;sub)</td></tr>
+<tr class="memdesc:a799a4246ff3adf2580d0263d3829af1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат участнику при отказе после начала занятий.  <a href="namespace_edubridge.html#a799a4246ff3adf2580d0263d3829af1d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a799a4246ff3adf2580d0263d3829af1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0921893e8076a2b05f8bdcc99215a3"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a4e0921893e8076a2b05f8bdcc99215a3">required_lock</a> (const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;sub)</td></tr>
+<tr class="memdesc:a4e0921893e8076a2b05f8bdcc99215a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сколько по подписке удерживается после гарантийного срока.  <a href="namespace_edubridge.html#a4e0921893e8076a2b05f8bdcc99215a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4e0921893e8076a2b05f8bdcc99215a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c4cdabdbdbb913090914575655f5ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#af0c4cdabdbdbb913090914575655f5ac">check_course_covered</a> (const <a class="el" href="struct_edubridge_1_1edu__course.html">edu_course</a> &amp;c)</td></tr>
+<tr class="memdesc:af0c4cdabdbdbb913090914575655f5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка учёта курса: резерв и выплаты преподавателям не превышают собранного по курсу.  <a href="namespace_edubridge.html#af0c4cdabdbdbb913090914575655f5ac">Подробнее...</a><br /></td></tr>
+<tr class="separator:af0c4cdabdbdbb913090914575655f5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5f8ffc6eecc72a615da53804433429"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a3d5f8ffc6eecc72a615da53804433429">rebalance_lock</a> (eosio::name coopname, <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;s)</td></tr>
+<tr class="memdesc:a3d5f8ffc6eecc72a615da53804433429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание по подписке приводится к сумме возможного возврата.  <a href="namespace_edubridge.html#a3d5f8ffc6eecc72a615da53804433429">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d5f8ffc6eecc72a615da53804433429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ed3b7f36ab667fb9a5d2a1507f35bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a09ed3b7f36ab667fb9a5d2a1507f35bb">credit_dues</a> (eosio::name coopname, <a class="el" href="struct_edubridge_1_1edu__sub__plan.html">edu_sub_plan</a> &amp;plan)</td></tr>
+<tr class="memdesc:a09ed3b7f36ab667fb9a5d2a1507f35bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Взнос преподавателей за занятия гарантийного срока по подписке — в суммы их допусков.  <a href="namespace_edubridge.html#a09ed3b7f36ab667fb9a5d2a1507f35bb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a09ed3b7f36ab667fb9a5d2a1507f35bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab032eff4f968a41705c886830681db4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ab032eff4f968a41705c886830681db4a">unlock_subscription</a> (eosio::name coopname, uint64_t course_id)</td></tr>
+<tr class="memdesc:ab032eff4f968a41705c886830681db4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписка закрыла гарантийный срок либо закрыта до его конца — счётчик группы уменьшается.  <a href="namespace_edubridge.html#ab032eff4f968a41705c886830681db4a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab032eff4f968a41705c886830681db4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acebc8135f8d2a59d61210acb3c614ee5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#acebc8135f8d2a59d61210acb3c614ee5">close_guarantee</a> (eosio::name coopname, const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;terms, <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;s, eosio::time_point_sec now)</td></tr>
+<tr class="memdesc:acebc8135f8d2a59d61210acb3c614ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Гарантийный срок группы истёк — взнос перестаёт удерживаться целиком.  <a href="namespace_edubridge.html#acebc8135f8d2a59d61210acb3c614ee5">Подробнее...</a><br /></td></tr>
+<tr class="separator:acebc8135f8d2a59d61210acb3c614ee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae494fbc38549e8d329aee2537d2fc9d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ae494fbc38549e8d329aee2537d2fc9d9">settle_closing</a> (eosio::name coopname, const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;sub, eosio::asset refund, bool to_share, bool drop_due=false)</td></tr>
+<tr class="memdesc:ae494fbc38549e8d329aee2537d2fc9d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие подписки: расчёт по её остаткам и возврат участнику.  <a href="namespace_edubridge.html#ae494fbc38549e8d329aee2537d2fc9d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae494fbc38549e8d329aee2537d2fc9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6c0d4c050be9a87c358ae41942a6e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a7e6c0d4c050be9a87c358ae41942a6e9">check_no_charging</a> (const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;terms)</td></tr>
+<tr class="memdesc:a7e6c0d4c050be9a87c358ae41942a6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">По группе нет занятия в окне расчёта.  <a href="namespace_edubridge.html#a7e6c0d4c050be9a87c358ae41942a6e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7e6c0d4c050be9a87c358ae41942a6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfb893a19b10c7440bd4759066670f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a1cfb893a19b10c7440bd4759066670f2">decline_guarantee</a> (eosio::name coopname, <a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;subs, edu_subscriptions_index::const_iterator sub)</td></tr>
+<tr class="separator:a1cfb893a19b10c7440bd4759066670f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed271f398706efee1152281df9e20b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#aed271f398706efee1152281df9e20b69">grant_guarantee</a> (eosio::name coopname, <a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;subs, edu_subscriptions_index::const_iterator sub)</td></tr>
+<tr class="separator:aed271f398706efee1152281df9e20b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b79e76d1b6bbdc92c86a7af5f883550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_edubridge_1_1_user_wallet_available.html">UserWalletAvailable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a2b79e76d1b6bbdc92c86a7af5f883550">get_user_wallet_balance</a> (eosio::name coopname, eosio::name wallet_id, eosio::name username)</td></tr>
+<tr class="separator:a2b79e76d1b6bbdc92c86a7af5f883550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02abd41a998812f71c1bf046fd3185d"><td class="memItemLeft" align="right" valign="top">edu_subscriptions_index::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ac02abd41a998812f71c1bf046fd3185d">get_subscription_or_fail</a> (<a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;subs, const checksum256 &amp;sub_hash)</td></tr>
+<tr class="memdesc:ac02abd41a998812f71c1bf046fd3185d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подписка по sub_hash; бросает, если не найдена.  <a href="namespace_edubridge.html#ac02abd41a998812f71c1bf046fd3185d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac02abd41a998812f71c1bf046fd3185d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967b798594e0bdb4c41d0f631990aa2e"><td class="memItemLeft" align="right" valign="top">edu_rids_index::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a967b798594e0bdb4c41d0f631990aa2e">get_rid_or_fail</a> (<a class="el" href="namespace_edubridge.html#a952531d1ef239a75939fd4787184adf1">edu_rids_index</a> &amp;rids, const checksum256 &amp;rid_hash)</td></tr>
+<tr class="memdesc:a967b798594e0bdb4c41d0f631990aa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Заявление о РИД по rid_hash; бросает, если не найдено.  <a href="namespace_edubridge.html#a967b798594e0bdb4c41d0f631990aa2e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a967b798594e0bdb4c41d0f631990aa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f43dcc54247cb038afa6c39a7de50c2"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a1f43dcc54247cb038afa6c39a7de50c2">get_contract</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:a1f43dcc54247cb038afa6c39a7de50c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Договор УХД преподавателя по username; nullopt, если не подписывал.  <a href="namespace_edubridge.html#a1f43dcc54247cb038afa6c39a7de50c2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1f43dcc54247cb038afa6c39a7de50c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d479509575e04d982afef084a310a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a7d479509575e04d982afef084a310a28">get_active_contract_or_fail</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:a7d479509575e04d982afef084a310a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Действующий (подписанный обеими сторонами) договор УХД; бросает, если его нет.  <a href="namespace_edubridge.html#a7d479509575e04d982afef084a310a28">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d479509575e04d982afef084a310a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294a4203bf84ca4b647219e302a8cd71"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a294a4203bf84ca4b647219e302a8cd71">get_course_reserve</a> (eosio::name coopname, uint64_t course_id)</td></tr>
+<tr class="memdesc:a294a4203bf84ca4b647219e302a8cd71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Остаток резерва выплат преподавателям курса; ноль, если движений по курсу ещё не было.  <a href="namespace_edubridge.html#a294a4203bf84ca4b647219e302a8cd71">Подробнее...</a><br /></td></tr>
+<tr class="separator:a294a4203bf84ca4b647219e302a8cd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915314df4b8f50694008be159b69a5fe"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
+<tr class="memitem:a915314df4b8f50694008be159b69a5fe"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a915314df4b8f50694008be159b69a5fe">update_course</a> (eosio::name coopname, uint64_t course_id, Fn &amp;&amp;change)</td></tr>
+<tr class="separator:a915314df4b8f50694008be159b69a5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd97cfcdc63a9775053741f5660f03f"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#abdd97cfcdc63a9775053741f5660f03f">get_coop_wallet_available</a> (eosio::name coopname, eosio::name wallet_id)</td></tr>
+<tr class="memdesc:abdd97cfcdc63a9775053741f5660f03f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доступный остаток кооперативного кошелька программы; ноль, если кошелёк ещё не заведён.  <a href="namespace_edubridge.html#abdd97cfcdc63a9775053741f5660f03f">Подробнее...</a><br /></td></tr>
+<tr class="separator:abdd97cfcdc63a9775053741f5660f03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcf75d0eb17478910c15a4a4f8f8356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a5fcf75d0eb17478910c15a4a4f8f8356">check_money</a> (const eosio::asset &amp;<a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const char *what)</td></tr>
+<tr class="memdesc:a5fcf75d0eb17478910c15a4a4f8f8356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Валидация денежной суммы контракта: корректный asset, &gt; 0, символ кооператива.  <a href="namespace_edubridge.html#a5fcf75d0eb17478910c15a4a4f8f8356">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5fcf75d0eb17478910c15a4a4f8f8356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a546bab81565dce42967f8b953aaf4df8"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#a546bab81565dce42967f8b953aaf4df8">SECONDS_IN_DAY</a> = 24 * 60 * 60</td></tr>
+<tr class="separator:a546bab81565dce42967f8b953aaf4df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab65c2686a81f0a5de87066b5bc8e4b92"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ab65c2686a81f0a5de87066b5bc8e4b92">BP_IN_WHOLE</a> = 10000</td></tr>
+<tr class="separator:ab65c2686a81f0a5de87066b5bc8e4b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27d07b060b8191f9c0ea74c4c1cdd91"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_edubridge.html#ac27d07b060b8191f9c0ea74c4c1cdd91">SECONDS_IN_MONTH</a> = 28 * <a class="el" href="namespace_edubridge.html#a546bab81565dce42967f8b953aaf4df8">SECONDS_IN_DAY</a></td></tr>
+<tr class="memdesc:ac27d07b060b8191f9c0ea74c4c1cdd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Месяц сроков и программ — четыре недели: в 28 днях каждого дня недели ровно четыре, занятия по окнам и оплаченные минуты сходятся.  <a href="namespace_edubridge.html#ac27d07b060b8191f9c0ea74c4c1cdd91">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac27d07b060b8191f9c0ea74c4c1cdd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a95e8b77882b809141b631727c596333d" name="a95e8b77882b809141b631727c596333d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95e8b77882b809141b631727c596333d">&#9670;&nbsp;</a></span>edu_assignments_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;eduassigns&quot;_n, <a class="el" href="struct_edubridge_1_1edu__assignment.html">edu_assignment</a>, eosio::indexed_by&lt;&quot;bycourse&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__assignment.html">edu_assignment</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__assignment.html#a3e4fdebb7b21ba8e56073785c2b2f578">edu_assignment::by_course</a>&gt; &gt; &gt; <a class="el" href="namespace_edubridge.html#a95e8b77882b809141b631727c596333d">Edubridge::edu_assignments_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e1eb50a3d15674a13831aa17d72e26" name="aa2e1eb50a3d15674a13831aa17d72e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e1eb50a3d15674a13831aa17d72e26">&#9670;&nbsp;</a></span>edu_contracts_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;educontracts&quot;_n, <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__contract.html#a70508c9414b7d61fe81777c11255fc13">edu_contract::by_username</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__contract.html#af55ca51f6bb4370009e1409b776f5175">edu_contract::by_hash</a>&gt; &gt; &gt; <a class="el" href="namespace_edubridge.html#aa2e1eb50a3d15674a13831aa17d72e26">Edubridge::edu_contracts_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a569fd8621438f242aa4861d148a9383a" name="a569fd8621438f242aa4861d148a9383a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569fd8621438f242aa4861d148a9383a">&#9670;&nbsp;</a></span>edu_courses_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt;&quot;educourses&quot;_n, <a class="el" href="struct_edubridge_1_1edu__course.html">edu_course</a>&gt; <a class="el" href="namespace_edubridge.html#a569fd8621438f242aa4861d148a9383a">Edubridge::edu_courses_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0a8cfe8f9d18fb91221ddaab1e1ef8f" name="ab0a8cfe8f9d18fb91221ddaab1e1ef8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0a8cfe8f9d18fb91221ddaab1e1ef8f">&#9670;&nbsp;</a></span>edu_lessons_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;edulessons&quot;_n, <a class="el" href="struct_edubridge_1_1edu__lesson.html">edu_lesson</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__lesson.html">edu_lesson</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__lesson.html#a54b7d61f1dc6b47034beaf59bf45389c">edu_lesson::by_hash</a>&gt; &gt; &gt; <a class="el" href="namespace_edubridge.html#ab0a8cfe8f9d18fb91221ddaab1e1ef8f">Edubridge::edu_lessons_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a952531d1ef239a75939fd4787184adf1" name="a952531d1ef239a75939fd4787184adf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952531d1ef239a75939fd4787184adf1">&#9670;&nbsp;</a></span>edu_rids_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;edurids&quot;_n, <a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__rid.html#ada5724af237fbba56f54d3d4e2dcb2b4">edu_rid::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__rid.html">edu_rid</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__rid.html#a4d46930197122d0e7fda610250e6205b">edu_rid::by_username</a>&gt; &gt; &gt; <a class="el" href="namespace_edubridge.html#a952531d1ef239a75939fd4787184adf1">Edubridge::edu_rids_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d89d0017cf33fdbcc38b9e536043776" name="a4d89d0017cf33fdbcc38b9e536043776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d89d0017cf33fdbcc38b9e536043776">&#9670;&nbsp;</a></span>edu_subscriptions_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt; &quot;edusubs&quot;_n, <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, eosio::indexed_by&lt;&quot;byhash&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, checksum256, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#a699bf6a19dcb13a8470230d71ff54c11">edu_subscription::by_hash</a>&gt; &gt;, eosio::indexed_by&lt;&quot;byusername&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#a6e0176b12f0ebe525aca86dc49a9c5e2">edu_subscription::by_username</a>&gt; &gt;, eosio::indexed_by&lt;&quot;bypaiduntil&quot;_n, eosio::const_mem_fun&lt;<a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a>, uint64_t, &amp;<a class="el" href="struct_edubridge_1_1edu__subscription.html#aff87dda2ffcd3b411fa1d02ac3af3927">edu_subscription::by_paid_until</a>&gt; &gt; &gt; <a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">Edubridge::edu_subscriptions_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a932b9fca4fa75bd53792d8ebc9314542" name="a932b9fca4fa75bd53792d8ebc9314542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a932b9fca4fa75bd53792d8ebc9314542">&#9670;&nbsp;</a></span>edu_terms_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef eosio::multi_index&lt;&quot;eduterms&quot;_n, <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a>&gt; <a class="el" href="namespace_edubridge.html#a932b9fca4fa75bd53792d8ebc9314542">Edubridge::edu_terms_index</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a4bdc13f943d7baed4e6b91ebe722b87b" name="a4bdc13f943d7baed4e6b91ebe722b87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdc13f943d7baed4e6b91ebe722b87b">&#9670;&nbsp;</a></span>add_months()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec Edubridge::add_months </td>
+          <td>(</td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>months</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>month_secs</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Дата плюс месяцы по четыре недели; время суток сохраняется. </p>
+<p >Календарная длина месяца не учитывается: оплаченный срок и программа считаются неделями, как и расписание. </p>
+
+</div>
+</div>
+<a id="af0c4cdabdbdbb913090914575655f5ac" name="af0c4cdabdbdbb913090914575655f5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c4cdabdbdbb913090914575655f5ac">&#9670;&nbsp;</a></span>check_course_covered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::check_course_covered </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__course.html">edu_course</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверка учёта курса: резерв и выплаты преподавателям не превышают собранного по курсу. </p>
+
+</div>
+</div>
+<a id="a5fcf75d0eb17478910c15a4a4f8f8356" name="a5fcf75d0eb17478910c15a4a4f8f8356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcf75d0eb17478910c15a4a4f8f8356">&#9670;&nbsp;</a></span>check_money()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::check_money </td>
+          <td>(</td>
+          <td class="paramtype">const eosio::asset &amp;&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>what</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Валидация денежной суммы контракта: корректный asset, &gt; 0, символ кооператива. </p>
+
+</div>
+</div>
+<a id="a7e6c0d4c050be9a87c358ae41942a6e9" name="a7e6c0d4c050be9a87c358ae41942a6e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6c0d4c050be9a87c358ae41942a6e9">&#9670;&nbsp;</a></span>check_no_charging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::check_no_charging </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;&#160;</td>
+          <td class="paramname"><em>terms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>По группе нет занятия в окне расчёта. </p>
+<p >Пока приложение рассчитывает отчитанное занятие по подпискам, подписка группы не закрывается: оплата занятия ушла бы мимо преподавателя. Окно живёт один проход приложения и закрывается действием <code>closecharge</code>. </p>
+
+</div>
+</div>
+<a id="acebc8135f8d2a59d61210acb3c614ee5" name="acebc8135f8d2a59d61210acb3c614ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acebc8135f8d2a59d61210acb3c614ee5">&#9670;&nbsp;</a></span>close_guarantee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Edubridge::close_guarantee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;&#160;</td>
+          <td class="paramname"><em>terms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>now</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Гарантийный срок группы истёк — взнос перестаёт удерживаться целиком. </p>
+<p >Весь взнос был удержан: возврат по гарантии — полный. Срок истёк, и остаётся только возврат при отказе. Оплата занятий выделяется в резерв преподавателям — остаток за непроведённые и взнос преподавателей за уже проведённые (<code>o.edu.allot</code>); удержание уменьшается до суммы возможного возврата (<code>o.edu.unlock</code>), остальное остаётся на кошельке программы.</p>
+<p >Пока срок идёт либо он уже закрыт, ничего не делает.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если гарантийный срок закрыт этим вызовом. </dd></dl>
+
+</div>
+</div>
+<a id="a09ed3b7f36ab667fb9a5d2a1507f35bb" name="a09ed3b7f36ab667fb9a5d2a1507f35bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ed3b7f36ab667fb9a5d2a1507f35bb">&#9670;&nbsp;</a></span>credit_dues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::credit_dues </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_edubridge_1_1edu__sub__plan.html">edu_sub_plan</a> &amp;&#160;</td>
+          <td class="paramname"><em>plan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Взнос преподавателей за занятия гарантийного срока по подписке — в суммы их допусков. </p>
+<p >Пока срок шёл, документов с суммой у преподавателя не было. Подписка закрыла срок — её часть переходит в сумму допуска, на которую преподаватель подпишет акт и заявление за весь гарантийный период. Допусков у группы единицы: перебор идёт по списку внутри строки подписки, не по таблице. </p>
+
+</div>
+</div>
+<a id="a374d0cb511b3355a24e4d14c7805cdd6" name="a374d0cb511b3355a24e4d14c7805cdd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a374d0cb511b3355a24e4d14c7805cdd6">&#9670;&nbsp;</a></span>day_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec Edubridge::day_start </td>
+          <td>(</td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>at</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Начало суток (UTC), на которые приходится момент. </p>
+
+</div>
+</div>
+<a id="a1cfb893a19b10c7440bd4759066670f2" name="a1cfb893a19b10c7440bd4759066670f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfb893a19b10c7440bd4759066670f2">&#9670;&nbsp;</a></span>decline_guarantee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::decline_guarantee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;&#160;</td>
+          <td class="paramname"><em>subs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">edu_subscriptions_index::const_iterator&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Отказ по заявлению об аннулировании подписки: заморозка взноса снимается, подписка продолжает действовать. Гарантийный срок группы уже вышел — оплата занятий периода остаётся на кошельке программы, оплата непроведённых занятий выделяется в резерв преподавателям, удержание уменьшается до суммы возможного возврата. </p>
+
+</div>
+</div>
+<a id="a7d479509575e04d982afef084a310a28" name="a7d479509575e04d982afef084a310a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d479509575e04d982afef084a310a28">&#9670;&nbsp;</a></span>get_active_contract_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a> Edubridge::get_active_contract_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Действующий (подписанный обеими сторонами) договор УХД; бросает, если его нет. </p>
+
+</div>
+</div>
+<a id="a1f43dcc54247cb038afa6c39a7de50c2" name="a1f43dcc54247cb038afa6c39a7de50c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f43dcc54247cb038afa6c39a7de50c2">&#9670;&nbsp;</a></span>get_contract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="struct_edubridge_1_1edu__contract.html">edu_contract</a> &gt; Edubridge::get_contract </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Договор УХД преподавателя по username; nullopt, если не подписывал. </p>
+
+</div>
+</div>
+<a id="abdd97cfcdc63a9775053741f5660f03f" name="abdd97cfcdc63a9775053741f5660f03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd97cfcdc63a9775053741f5660f03f">&#9670;&nbsp;</a></span>get_coop_wallet_available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Edubridge::get_coop_wallet_available </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Доступный остаток кооперативного кошелька программы; ноль, если кошелёк ещё не заведён. </p>
+
+</div>
+</div>
+<a id="a294a4203bf84ca4b647219e302a8cd71" name="a294a4203bf84ca4b647219e302a8cd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294a4203bf84ca4b647219e302a8cd71">&#9670;&nbsp;</a></span>get_course_reserve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Edubridge::get_course_reserve </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Остаток резерва выплат преподавателям курса; ноль, если движений по курсу ещё не было. </p>
+
+</div>
+</div>
+<a id="a967b798594e0bdb4c41d0f631990aa2e" name="a967b798594e0bdb4c41d0f631990aa2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967b798594e0bdb4c41d0f631990aa2e">&#9670;&nbsp;</a></span>get_rid_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">edu_rids_index::const_iterator Edubridge::get_rid_or_fail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_edubridge.html#a952531d1ef239a75939fd4787184adf1">edu_rids_index</a> &amp;&#160;</td>
+          <td class="paramname"><em>rids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>rid_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Заявление о РИД по rid_hash; бросает, если не найдено. </p>
+
+</div>
+</div>
+<a id="ac02abd41a998812f71c1bf046fd3185d" name="ac02abd41a998812f71c1bf046fd3185d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02abd41a998812f71c1bf046fd3185d">&#9670;&nbsp;</a></span>get_subscription_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">edu_subscriptions_index::const_iterator Edubridge::get_subscription_or_fail </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;&#160;</td>
+          <td class="paramname"><em>subs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const checksum256 &amp;&#160;</td>
+          <td class="paramname"><em>sub_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Подписка по sub_hash; бросает, если не найдена. </p>
+
+</div>
+</div>
+<a id="aee96cf3c5982e97c04523ff524ae921d" name="aee96cf3c5982e97c04523ff524ae921d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee96cf3c5982e97c04523ff524ae921d">&#9670;&nbsp;</a></span>get_terms_or_fail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> Edubridge::get_terms_or_fail </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Условия курса; бросает, если администратор их ещё не задал. </p>
+
+</div>
+</div>
+<a id="a2b79e76d1b6bbdc92c86a7af5f883550" name="a2b79e76d1b6bbdc92c86a7af5f883550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b79e76d1b6bbdc92c86a7af5f883550">&#9670;&nbsp;</a></span>get_user_wallet_balance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_edubridge_1_1_user_wallet_available.html">UserWalletAvailable</a> Edubridge::get_user_wallet_balance </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>wallet_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed271f398706efee1152281df9e20b69" name="aed271f398706efee1152281df9e20b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed271f398706efee1152281df9e20b69">&#9670;&nbsp;</a></span>grant_guarantee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::grant_guarantee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_edubridge.html#a4d89d0017cf33fdbcc38b9e536043776">edu_subscriptions_index</a> &amp;&#160;</td>
+          <td class="paramname"><em>subs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">edu_subscriptions_index::const_iterator&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Заявление удовлетворено: участник забирает взнос по подписке целиком, его занятия в суммы преподавателей за гарантийный период не входят, подписка закрывается. </p>
+
+</div>
+</div>
+<a id="ac31340a795485a5bcaa8ac8c704e625c" name="ac31340a795485a5bcaa8ac8c704e625c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31340a795485a5bcaa8ac8c704e625c">&#9670;&nbsp;</a></span>is_guarantee_running()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Edubridge::is_guarantee_running </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;&#160;</td>
+          <td class="paramname"><em>terms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>now</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Идёт ли гарантийный срок группы. </p>
+<p >Срок один на группу и отсчитывается от начала занятий: участник, пришедший после его окончания, гарантийных условий не имеет. У неактивированной группы с объявленной гарантией срок ещё впереди. </p>
+
+</div>
+</div>
+<a id="a77bdd5036a7bcb4c9323798278c95989" name="a77bdd5036a7bcb4c9323798278c95989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77bdd5036a7bcb4c9323798278c95989">&#9670;&nbsp;</a></span>lesson_covered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Edubridge::lesson_covered </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>sub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>held_at</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Оплачено ли занятие подпиской. </p>
+<p >Дату занятия преподаватель называет днём, без времени. Поэтому начало оплаченного срока сравнивается по дням: участник, записавшийся утром, оплатил занятие вечера того же дня. Конец срока — как есть: занятие в день, когда срок ещё не вышел, оплачено. </p>
+
+</div>
+</div>
+<a id="afaf8f5a8dce3fed9e95037b7fd87de82" name="afaf8f5a8dce3fed9e95037b7fd87de82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf8f5a8dce3fed9e95037b7fd87de82">&#9670;&nbsp;</a></span>lesson_hold_until()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec Edubridge::lesson_hold_until </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;&#160;</td>
+          <td class="paramname"><em>terms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>held_at</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>До какой даты материалы занятия лежат на ответственном хранении — гарантийный срок курса от начала занятий. </p>
+
+</div>
+</div>
+<a id="ad58e3991ef6ab2752f363af7f8342775" name="ad58e3991ef6ab2752f363af7f8342775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58e3991ef6ab2752f363af7f8342775">&#9670;&nbsp;</a></span>program_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Terms &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec Edubridge::program_end </td>
+          <td>(</td>
+          <td class="paramtype">const Terms &amp;&#160;</td>
+          <td class="paramname"><em>terms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>start</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конец программы группы от дня начала занятий. </p>
+<p >Программа длится столько, сколько занимают её минуты по расписанию: месяцы могут быть неполными — три месяца и две недели. Целое число месяцев даёт то же, что <code>add_months</code>. </p>
+
+</div>
+</div>
+<a id="a9f769644a454d95ddac329797932d9ae" name="a9f769644a454d95ddac329797932d9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f769644a454d95ddac329797932d9ae">&#9670;&nbsp;</a></span>quote_fee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_edubridge_1_1_fee_quote.html">FeeQuote</a> Edubridge::quote_fee </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__terms.html">edu_terms</a> &amp;&#160;</td>
+          <td class="paramname"><em>terms</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>sub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>now</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Расчёт взноса участника. </p>
+<p >Помесячный взнос оплачивает месяц от конца уже оплаченного срока либо от сегодняшнего дня, но не раньше начала занятий: записавшийся заранее оплачивает месяц занятий, а не дни ожидания. За конец программы оплаченный срок не выходит, и взнос за оплаченную до конца программу не принимается. Неполный последний месяц оплачивается по остатку: за минуты занятий, которые в группе ещё не проведены, долей месячного взноса. Программа может длиться неполное число месяцев (три месяца и две недели): её конец считается по минутам программы, взнос — по оплаченным минутам. Взнос разом оплачивает месяцы до конца программы со скидкой курса: пришедший в середине вносит за остаток. </p>
+
+</div>
+</div>
+<a id="a3d5f8ffc6eecc72a615da53804433429" name="a3d5f8ffc6eecc72a615da53804433429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5f8ffc6eecc72a615da53804433429">&#9670;&nbsp;</a></span>rebalance_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::rebalance_lock </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удержание по подписке приводится к сумме возможного возврата. </p>
+<p >Для подписки с закрытым гарантийным сроком. Удержано больше нужного — лишнее возвращается на кошелёк программы (<code>o.edu.unlock</code>); меньше — после нового взноса — недостающее удерживается (<code>o.edu.lock</code>). </p>
+
+</div>
+</div>
+<a id="a799a4246ff3adf2580d0263d3829af1d" name="a799a4246ff3adf2580d0263d3829af1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799a4246ff3adf2580d0263d3829af1d">&#9670;&nbsp;</a></span>refusal_refund()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Edubridge::refusal_refund </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>sub</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат участнику при отказе после начала занятий. </p>
+<p >Половина остаточной стоимости подписки (Положение ЦПП «Образование»). Остаточная стоимость — доля всего внесённого взноса, вместе с целевым членским взносом, приходящаяся на занятия, по которым расчёт ещё не прошёл. Проведённые занятия считает контракт по каждой подписке (<code>chargelesson</code>), поэтому сумма возврата в любой момент точная. </p>
+
+</div>
+</div>
+<a id="a4e0921893e8076a2b05f8bdcc99215a3" name="a4e0921893e8076a2b05f8bdcc99215a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0921893e8076a2b05f8bdcc99215a3">&#9670;&nbsp;</a></span>required_lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset Edubridge::required_lock </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>sub</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сколько по подписке удерживается после гарантийного срока. </p>
+<p >Участник вправе отказаться и получить возврат, поэтому сумма возможного возврата на расходы программы не идёт. Её обеспечивают резерв за непроведённые занятия (при отказе он высвобождается) и удержание: держится только то, чего в резерве не хватает. С каждым проведённым занятием возврат уменьшается, и удержание освобождается. </p>
+
+</div>
+</div>
+<a id="ae494fbc38549e8d329aee2537d2fc9d9" name="ae494fbc38549e8d329aee2537d2fc9d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae494fbc38549e8d329aee2537d2fc9d9">&#9670;&nbsp;</a></span>settle_closing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::settle_closing </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_edubridge_1_1edu__subscription.html">edu_subscription</a> &amp;&#160;</td>
+          <td class="paramname"><em>sub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>refund</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>to_share</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>drop_due</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Закрытие подписки: расчёт по её остаткам и возврат участнику. </p>
+<p >Удержанное возвращается на кошелёк программы. Резерв за непроведённые занятия высвобождается туда же (<code>o.edu.free</code>). Взнос преподавателей за проведённые занятия, ещё не выделенный в резерв, выделяется (<code>o.edu.allot</code>) — преподаватель получает за проведённое при любом исходе подписки. Возврат участнику идёт с кошелька программы и уменьшает собранное по курсу.</p>
+<p >Строку подписки стирает вызывающее действие. </p>
+
+</div>
+</div>
+<a id="ab032eff4f968a41705c886830681db4a" name="ab032eff4f968a41705c886830681db4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab032eff4f968a41705c886830681db4a">&#9670;&nbsp;</a></span>unlock_subscription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::unlock_subscription </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Подписка закрыла гарантийный срок либо закрыта до его конца — счётчик группы уменьшается. </p>
+
+</div>
+</div>
+<a id="a915314df4b8f50694008be159b69a5fe" name="a915314df4b8f50694008be159b69a5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a915314df4b8f50694008be159b69a5fe">&#9670;&nbsp;</a></span>update_course()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::update_course </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>change</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Движение по учёту курса. Строка заводится с нулевыми суммами при первом движении — отдельного действия для курса нет. </p>
+
+</div>
+</div>
+<a id="a3dcbce02abfc3137464cb381e9fced0a" name="a3dcbce02abfc3137464cb381e9fced0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcbce02abfc3137464cb381e9fced0a">&#9670;&nbsp;</a></span>update_terms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Fn &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Edubridge::update_terms </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Fn &amp;&amp;&#160;</td>
+          <td class="paramname"><em>change</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="ab65c2686a81f0a5de87066b5bc8e4b92" name="ab65c2686a81f0a5de87066b5bc8e4b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab65c2686a81f0a5de87066b5bc8e4b92">&#9670;&nbsp;</a></span>BP_IN_WHOLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t Edubridge::BP_IN_WHOLE = 10000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a546bab81565dce42967f8b953aaf4df8" name="a546bab81565dce42967f8b953aaf4df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546bab81565dce42967f8b953aaf4df8">&#9670;&nbsp;</a></span>SECONDS_IN_DAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t Edubridge::SECONDS_IN_DAY = 24 * 60 * 60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac27d07b060b8191f9c0ea74c4c1cdd91" name="ac27d07b060b8191f9c0ea74c4c1cdd91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac27d07b060b8191f9c0ea74c4c1cdd91">&#9670;&nbsp;</a></span>SECONDS_IN_MONTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr uint32_t Edubridge::SECONDS_IN_MONTH = 28 * <a class="el" href="namespace_edubridge.html#a546bab81565dce42967f8b953aaf4df8">SECONDS_IN_DAY</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Месяц сроков и программ — четыре недели: в 28 днях каждого дня недели ровно четыре, занятия по окнам и оплаченные минуты сходятся. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_edubridge.html">Edubridge</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

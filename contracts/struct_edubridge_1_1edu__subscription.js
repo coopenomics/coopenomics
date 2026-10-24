@@ -1,0 +1,28 @@
+var struct_edubridge_1_1edu__subscription =
+[
+    [ "asset_or_zero", "struct_edubridge_1_1edu__subscription.html#aaec69a21e908b2e8b4599fc2456b47f0", null ],
+    [ "by_hash", "struct_edubridge_1_1edu__subscription.html#a699bf6a19dcb13a8470230d71ff54c11", null ],
+    [ "by_paid_until", "struct_edubridge_1_1edu__subscription.html#aff87dda2ffcd3b411fa1d02ac3af3927", null ],
+    [ "by_username", "struct_edubridge_1_1edu__subscription.html#a6e0176b12f0ebe525aca86dc49a9c5e2", null ],
+    [ "charged_or_zero", "struct_edubridge_1_1edu__subscription.html#a52bfebe77f70b4f3f4a5770dd030ef5d", null ],
+    [ "has_plan", "struct_edubridge_1_1edu__subscription.html#a6824d450e519e74453647e00d9798f23", null ],
+    [ "is_tracked", "struct_edubridge_1_1edu__subscription.html#aa4b393f68ebe1ffdaa943e8535a10742", null ],
+    [ "locked_or_zero", "struct_edubridge_1_1edu__subscription.html#acc9057e912487d1cb8e47ea1db8466b6", null ],
+    [ "primary_key", "struct_edubridge_1_1edu__subscription.html#a1040f65d264d8eae75f0b9d9fb3357eb", null ],
+    [ "reserved_or_zero", "struct_edubridge_1_1edu__subscription.html#a2c5e8c7c21eab6300acbf9be5a3beb5c", null ],
+    [ "set_amounts", "struct_edubridge_1_1edu__subscription.html#a6e53736c13867d0c2e07319c0c127355", null ],
+    [ "charged", "struct_edubridge_1_1edu__subscription.html#a01f5c3eccb9ab1270c7faa059af0fb0e", null ],
+    [ "course_id", "struct_edubridge_1_1edu__subscription.html#a163483ec41ba47ebeca768b9f66e1724", null ],
+    [ "created_at", "struct_edubridge_1_1edu__subscription.html#aad570674915fac7b6d54f65e2f0ff066", null ],
+    [ "id", "struct_edubridge_1_1edu__subscription.html#a18e7f776b802ef6686b7ff3e4f02098c", null ],
+    [ "learner_id", "struct_edubridge_1_1edu__subscription.html#a25dccdb2e98627a7507b20c506dd2272", null ],
+    [ "locked", "struct_edubridge_1_1edu__subscription.html#ab5ef0b7538529691869e927446ce923e", null ],
+    [ "paid_until", "struct_edubridge_1_1edu__subscription.html#a90d7953fd9b5ef1eec7821bb4fd643b1", null ],
+    [ "period", "struct_edubridge_1_1edu__subscription.html#ad4945463902035676e719ff367ccca21", null ],
+    [ "plan", "struct_edubridge_1_1edu__subscription.html#aefed4fb368f4d558642ed1156983919f", null ],
+    [ "reserved", "struct_edubridge_1_1edu__subscription.html#ac6dab8fae4085255620836a6d36af8bf", null ],
+    [ "statement_hash", "struct_edubridge_1_1edu__subscription.html#aa0c30bce7a7f7f3e9c10b9187d3f8c80", null ],
+    [ "sub_hash", "struct_edubridge_1_1edu__subscription.html#a0ccf74593ec8c89779882278722ec5a8", null ],
+    [ "updated_at", "struct_edubridge_1_1edu__subscription.html#ab46c7faf22143ce152c5b90713972877", null ],
+    [ "username", "struct_edubridge_1_1edu__subscription.html#a855164c98c6c939afa652b3e5f262402", null ]
+];

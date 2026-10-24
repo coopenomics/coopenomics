@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Пространство имен operations::edubridge</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('namespaceoperations_1_1edubridge.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Пространство имен operations::edubridge</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a27f0048933b4a62f4e5cb384b89fc93e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a27f0048933b4a62f4e5cb384b89fc93e">CONVERT_TO_EDU_MEMBER</a> = &quot;o.edu.conv&quot;_n</td></tr>
+<tr class="memdesc:a27f0048933b4a62f4e5cb384b89fc93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация паевого взноса в членский взнос ЦПП «Образование» по заявлению пайщика (TRANSFER w.wal.share → w.edu.member, Dr 80 / Cr 86). Зеркало o.mkt.conv: единственный путь паевой→членский в программе.  <a href="namespaceoperations_1_1edubridge.html#a27f0048933b4a62f4e5cb384b89fc93e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27f0048933b4a62f4e5cb384b89fc93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053766193a19922ada603bca1dfc49ad"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a053766193a19922ada603bca1dfc49ad">COLLECT_EDU_FEE</a> = &quot;o.edu.fee&quot;_n</td></tr>
+<tr class="memdesc:a053766193a19922ada603bca1dfc49ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Списание членского взноса ученика в фонд программы при открытии и продлении подписки (TRANSFER w.edu.member → w.edu.fund, без Dr/Cr — оба на 86). Образец — o.mkt.fee «Стола заказов»; основание — Положение ЦПП «Образование», п. 4.2.2: стоимость подписки уходит в распоряжение общества.  <a href="namespaceoperations_1_1edubridge.html#a053766193a19922ada603bca1dfc49ad">Подробнее...</a><br /></td></tr>
+<tr class="separator:a053766193a19922ada603bca1dfc49ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cbe10911945e3351d517b026615f046"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a2cbe10911945e3351d517b026615f046">LOCK_FEE</a> = &quot;o.edu.lock&quot;_n</td></tr>
+<tr class="memdesc:a2cbe10911945e3351d517b026615f046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удержание взноса до конца гарантийного срока курса (TRANSFER w.edu.fund → w.edu.escrow, без Dr/Cr — оба на 86). Выполняется сразу после o.edu.fee, пока срок идёт: участник вправе закрыть подписку и получить возврат, поэтому на расходы программы этот взнос не идёт.  <a href="namespaceoperations_1_1edubridge.html#a2cbe10911945e3351d517b026615f046">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cbe10911945e3351d517b026615f046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372515635b3308406e2f1664b1346e88"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a372515635b3308406e2f1664b1346e88">UNLOCK_FEE</a> = &quot;o.edu.unlock&quot;_n</td></tr>
+<tr class="memdesc:a372515635b3308406e2f1664b1346e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разблокировка удержанного взноса (TRANSFER w.edu.escrow → w.edu.fund, без Dr/Cr — оба на 86). Гарантийный срок курса истёк — взнос становится свободными средствами программы; при отмене и закрытии подписки удержанное возвращается в фонд тем же ходом, и возврат участнику идёт уже из фонда.  <a href="namespaceoperations_1_1edubridge.html#a372515635b3308406e2f1664b1346e88">Подробнее...</a><br /></td></tr>
+<tr class="separator:a372515635b3308406e2f1664b1346e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9c5cdddbe2f05ee85018b746327c95"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#afa9c5cdddbe2f05ee85018b746327c95">ALLOT_TEACHER_RESERVE</a> = &quot;o.edu.allot&quot;_n</td></tr>
+<tr class="memdesc:afa9c5cdddbe2f05ee85018b746327c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выделение доли себестоимости собранного взноса в резерв выплат преподавателям (TRANSFER w.edu.fund → w.edu.teach, без Dr/Cr — оба на 86). Выполняется сразу после o.edu.fee: в фонде остаются свободные средства программы, из которых идут расходы, в резерве — обещанное преподавателям за оплаченные занятия.  <a href="namespaceoperations_1_1edubridge.html#afa9c5cdddbe2f05ee85018b746327c95">Подробнее...</a><br /></td></tr>
+<tr class="separator:afa9c5cdddbe2f05ee85018b746327c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14630ddefce3f428353c4ebb4710f86b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a14630ddefce3f428353c4ebb4710f86b">FREE_TEACHER_RESERVE</a> = &quot;o.edu.free&quot;_n</td></tr>
+<tr class="memdesc:a14630ddefce3f428353c4ebb4710f86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Высвобождение резерва выплат преподавателям обратно в фонд программы (TRANSFER w.edu.teach → w.edu.fund, без Dr/Cr — оба на 86). Подписка отменена, оплаченные занятия не состоятся: зарезервированное под них возвращается в фонд, откуда идёт возврат ученику.  <a href="namespaceoperations_1_1edubridge.html#a14630ddefce3f428353c4ebb4710f86b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a14630ddefce3f428353c4ebb4710f86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33894fc9560588a240e818221fe8d34"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#aa33894fc9560588a240e818221fe8d34">SETTLE_TEACHER_RESERVE</a> = &quot;o.edu.settle&quot;_n</td></tr>
+<tr class="memdesc:aa33894fc9560588a240e818221fe8d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчёт с преподавателем за счёт резерва при приёме его результата (BURN с w.edu.teach, без Dr/Cr). Обязательство программы перед преподавателем исполнено: стоимость результата зачислена ему паевым взносом (o.edu.ridshr), и зарезервированные под неё средства перестают числиться за программой.  <a href="namespaceoperations_1_1edubridge.html#aa33894fc9560588a240e818221fe8d34">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa33894fc9560588a240e818221fe8d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac340f1f7be0dbb2a7cacc72ce1c4ee4a"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#ac340f1f7be0dbb2a7cacc72ce1c4ee4a">REFUND_FEE</a> = &quot;o.edu.refund&quot;_n</td></tr>
+<tr class="memdesc:ac340f1f7be0dbb2a7cacc72ce1c4ee4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат членского взноса ученику из фонда программы (TRANSFER w.edu.fund → w.edu.member, без Dr/Cr — оба на 86). Основания в Положении ЦПП: отмена до активации курса — полная стоимость, отмена по недобору — полная, отказ в ходе подписки — половина остаточной стоимости.  <a href="namespaceoperations_1_1edubridge.html#ac340f1f7be0dbb2a7cacc72ce1c4ee4a">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac340f1f7be0dbb2a7cacc72ce1c4ee4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92cb15db0c4b207b82f264b47d5034e"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#af92cb15db0c4b207b82f264b47d5034e">RETURN_TO_SHARE</a> = &quot;o.edu.retshr&quot;_n</td></tr>
+<tr class="memdesc:af92cb15db0c4b207b82f264b47d5034e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перевод членского взноса программы обратно в паевой (TRANSFER w.edu.member → w.wal.share, Dr 86 / Cr 80). Точная инверсия o.edu.conv: возврат по недобору идёт на паевой сразу, остаток кошелька ЦПП — по заявлению ученика с согласованием кооператива.  <a href="namespaceoperations_1_1edubridge.html#af92cb15db0c4b207b82f264b47d5034e">Подробнее...</a><br /></td></tr>
+<tr class="separator:af92cb15db0c4b207b82f264b47d5034e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e92e30f8027b5e683100256d98d1fe"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#ad3e92e30f8027b5e683100256d98d1fe">EXPENSE_FUND</a> = &quot;o.edu.expfnd&quot;_n</td></tr>
+<tr class="memdesc:ad3e92e30f8027b5e683100256d98d1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выделение средств программы под расход (TRANSFER w.edu.fund → w.edu.expns, без Dr/Cr — внутри 86). Выполняется при создании служебной записки: сумма расхода уходит из фонда в пул расходов программы.  <a href="namespaceoperations_1_1edubridge.html#ad3e92e30f8027b5e683100256d98d1fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad3e92e30f8027b5e683100256d98d1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d6bc5a45618c430dc8f1d66d0ec0ca"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a40d6bc5a45618c430dc8f1d66d0ec0ca">EXPENSE_UNFUND</a> = &quot;o.edu.expunf&quot;_n</td></tr>
+<tr class="memdesc:a40d6bc5a45618c430dc8f1d66d0ec0ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неизрасходованного из пула расходов программы в фонд (TRANSFER w.edu.expns → w.edu.fund, без Dr/Cr — внутри 86). Совет отклонил расход либо расход закрыт на сумму меньше запланированной.  <a href="namespaceoperations_1_1edubridge.html#a40d6bc5a45618c430dc8f1d66d0ec0ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a40d6bc5a45618c430dc8f1d66d0ec0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf21918ed37b2f1403d194b9da0f36c"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a2bf21918ed37b2f1403d194b9da0f36c">EXPENSE_SPEND</a> = &quot;o.edu.spend&quot;_n</td></tr>
+<tr class="memdesc:a2bf21918ed37b2f1403d194b9da0f36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прямая оплата расхода программы по реквизитам получателя (BURN с w.edu.expns, Dr 86 / Cr 51 — выплата с расчётного счёта после подтверждения кассиром). Роль <code>direct</code> в наборе шасси расходов программы.  <a href="namespaceoperations_1_1edubridge.html#a2bf21918ed37b2f1403d194b9da0f36c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2bf21918ed37b2f1403d194b9da0f36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44633f4ed13873e3fd5945d39fd276b6"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a44633f4ed13873e3fd5945d39fd276b6">EXPENSE_ADVANCE</a> = &quot;o.edu.expadv&quot;_n</td></tr>
+<tr class="memdesc:a44633f4ed13873e3fd5945d39fd276b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выдача аванса под отчёт по расходу программы (TRANSFER w.edu.expns → w.exp.adv, Dr 86 / Cr 51; username = получатель аванса). Роль <code>advance</code> в наборе шасси расходов программы.  <a href="namespaceoperations_1_1edubridge.html#a44633f4ed13873e3fd5945d39fd276b6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44633f4ed13873e3fd5945d39fd276b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad69fa02d48b6ef9957edd30ec83ba03"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#aad69fa02d48b6ef9957edd30ec83ba03">EXPENSE_REPORT</a> = &quot;o.edu.exprpt&quot;_n</td></tr>
+<tr class="memdesc:aad69fa02d48b6ef9957edd30ec83ba03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрытие подотчёта по расходу программы отчётом с чеками (BURN с w.exp.adv, без Dr/Cr — проводка сделана при выдаче аванса). Роль <code>report</code> в наборе шасси расходов программы.  <a href="namespaceoperations_1_1edubridge.html#aad69fa02d48b6ef9957edd30ec83ba03">Подробнее...</a><br /></td></tr>
+<tr class="separator:aad69fa02d48b6ef9957edd30ec83ba03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f35549e9058dbf9b19133d3da319c07"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a9f35549e9058dbf9b19133d3da319c07">EXPENSE_RETURN</a> = &quot;o.edu.expret&quot;_n</td></tr>
+<tr class="memdesc:a9f35549e9058dbf9b19133d3da319c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возврат неиспользованного аванса в пул расходов программы (TRANSFER w.exp.adv → w.edu.expns, Dr 51 / Cr 86 — деньги вернулись на расчётный счёт). Роль <code>refund</code> в наборе шасси расходов программы.  <a href="namespaceoperations_1_1edubridge.html#a9f35549e9058dbf9b19133d3da319c07">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9f35549e9058dbf9b19133d3da319c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fd1517c4820eb4672b1b30303d269b"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a25fd1517c4820eb4672b1b30303d269b">EXPENSE_OVERSPEND</a> = &quot;o.edu.expovr&quot;_n</td></tr>
+<tr class="memdesc:a25fd1517c4820eb4672b1b30303d269b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Доплата сверх выданного аванса по расходу программы (TRANSFER w.edu.expns → w.exp.adv, Dr 86 / Cr 51). Роль <code>overspend</code> в наборе шасси расходов программы.  <a href="namespaceoperations_1_1edubridge.html#a25fd1517c4820eb4672b1b30303d269b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a25fd1517c4820eb4672b1b30303d269b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d4446a216ab6065f3a4ad4f651a464"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a61d4446a216ab6065f3a4ad4f651a464">HOLD_EDU_RID</a> = &quot;o.edu.hold&quot;_n</td></tr>
+<tr class="memdesc:a61d4446a216ab6065f3a4ad4f651a464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём материалов занятия на ответственное хранение (ISSUE → w.edu.hold, Dr 08 / Cr 76). Материалы переданы кооперативу как объект и весь гарантийный срок курса числятся за преподавателем: актив лежит на 08, источник — обязательство перед ним на 76. Эталон — o.cap.commit «Благороста»: коммит встаёт на 08 против обязательства на 76, паевой фонд признаётся позже отдельной операцией.  <a href="namespaceoperations_1_1edubridge.html#a61d4446a216ab6065f3a4ad4f651a464">Подробнее...</a><br /></td></tr>
+<tr class="separator:a61d4446a216ab6065f3a4ad4f651a464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304fe687a6a1d091a4a2b548e9e746f2"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a304fe687a6a1d091a4a2b548e9e746f2">ACCEPT_EDU_RID</a> = &quot;o.edu.rid&quot;_n</td></tr>
+<tr class="memdesc:a304fe687a6a1d091a4a2b548e9e746f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём результата интеллектуальной деятельности преподавателя в состав нематериальных активов по решению совета и акту (без кошельков, Dr 04 / Cr 08). Зеркало o.cap.accept: хранение на 08 закрывается, РИД встаёт на 04. Вторая нога приёма — o.edu.ridshr.  <a href="namespaceoperations_1_1edubridge.html#a304fe687a6a1d091a4a2b548e9e746f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a304fe687a6a1d091a4a2b548e9e746f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ebb94a4376f56f87c13fda90ad1d2f3"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a8ebb94a4376f56f87c13fda90ad1d2f3">SETTLE_EDU_RID</a> = &quot;o.edu.ridshr&quot;_n</td></tr>
+<tr class="memdesc:a8ebb94a4376f56f87c13fda90ad1d2f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зачисление паевого взноса преподавателю по принятому РИД (TRANSFER w.edu.hold → w.edu.share, Dr 76 / Cr 80). Обязательство перед преподавателем гасится признанием паевого фонда; сумма ложится на паевой кошелёк программы — баланс договора участия в хозяйственной деятельности.  <a href="namespaceoperations_1_1edubridge.html#a8ebb94a4376f56f87c13fda90ad1d2f3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8ebb94a4376f56f87c13fda90ad1d2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8c6e8134953930df8c121a0136e3a3"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a8e8c6e8134953930df8c121a0136e3a3">WITHDRAW_EDU_SHARE</a> = &quot;o.edu.wthshr&quot;_n</td></tr>
+<tr class="memdesc:a8e8c6e8134953930df8c121a0136e3a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Трансляция паевого взноса преподавателя из ЦПП «Образование» в ЦПП «Цифровой Кошелёк» по его заявлению (TRANSFER w.edu.share → w.wal.share, без Dr/Cr — оба на 80). Зеркало o.cap.wthcap «Благороста»; возврат паевого взноса идёт уже с главного паевого кошелька штатным createwthd. Этой же операцией остаток переносится при выходе из кооператива.  <a href="namespaceoperations_1_1edubridge.html#a8e8c6e8134953930df8c121a0136e3a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8e8c6e8134953930df8c121a0136e3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af5151539e2ada32c5962d6cf96f7d8"><td class="memItemLeft" align="right" valign="top">constexpr eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceoperations_1_1edubridge.html#a0af5151539e2ada32c5962d6cf96f7d8">RELEASE_EDU_RID</a> = &quot;o.edu.retrid&quot;_n</td></tr>
+<tr class="memdesc:a0af5151539e2ada32c5962d6cf96f7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снятие материалов с ответственного хранения при рекламации и отказе совета (BURN с w.edu.hold, Dr 76 / Cr 08). Обязательство и актив закрываются встречно, материалы возвращаются преподавателю, паевой фонд остаётся нетронутым.  <a href="namespaceoperations_1_1edubridge.html#a0af5151539e2ada32c5962d6cf96f7d8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0af5151539e2ada32c5962d6cf96f7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Переменные</h2>
+<a id="a304fe687a6a1d091a4a2b548e9e746f2" name="a304fe687a6a1d091a4a2b548e9e746f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304fe687a6a1d091a4a2b548e9e746f2">&#9670;&nbsp;</a></span>ACCEPT_EDU_RID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::ACCEPT_EDU_RID = &quot;o.edu.rid&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Приём результата интеллектуальной деятельности преподавателя в состав нематериальных активов по решению совета и акту (без кошельков, Dr 04 / Cr 08). Зеркало o.cap.accept: хранение на 08 закрывается, РИД встаёт на 04. Вторая нога приёма — o.edu.ridshr. </p>
+
+</div>
+</div>
+<a id="afa9c5cdddbe2f05ee85018b746327c95" name="afa9c5cdddbe2f05ee85018b746327c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9c5cdddbe2f05ee85018b746327c95">&#9670;&nbsp;</a></span>ALLOT_TEACHER_RESERVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::ALLOT_TEACHER_RESERVE = &quot;o.edu.allot&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выделение доли себестоимости собранного взноса в резерв выплат преподавателям (TRANSFER w.edu.fund → w.edu.teach, без Dr/Cr — оба на 86). Выполняется сразу после o.edu.fee: в фонде остаются свободные средства программы, из которых идут расходы, в резерве — обещанное преподавателям за оплаченные занятия. </p>
+
+</div>
+</div>
+<a id="a053766193a19922ada603bca1dfc49ad" name="a053766193a19922ada603bca1dfc49ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a053766193a19922ada603bca1dfc49ad">&#9670;&nbsp;</a></span>COLLECT_EDU_FEE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::COLLECT_EDU_FEE = &quot;o.edu.fee&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Списание членского взноса ученика в фонд программы при открытии и продлении подписки (TRANSFER w.edu.member → w.edu.fund, без Dr/Cr — оба на 86). Образец — o.mkt.fee «Стола заказов»; основание — Положение ЦПП «Образование», п. 4.2.2: стоимость подписки уходит в распоряжение общества. </p>
+
+</div>
+</div>
+<a id="a27f0048933b4a62f4e5cb384b89fc93e" name="a27f0048933b4a62f4e5cb384b89fc93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27f0048933b4a62f4e5cb384b89fc93e">&#9670;&nbsp;</a></span>CONVERT_TO_EDU_MEMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::CONVERT_TO_EDU_MEMBER = &quot;o.edu.conv&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертация паевого взноса в членский взнос ЦПП «Образование» по заявлению пайщика (TRANSFER w.wal.share → w.edu.member, Dr 80 / Cr 86). Зеркало o.mkt.conv: единственный путь паевой→членский в программе. </p>
+
+</div>
+</div>
+<a id="a44633f4ed13873e3fd5945d39fd276b6" name="a44633f4ed13873e3fd5945d39fd276b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44633f4ed13873e3fd5945d39fd276b6">&#9670;&nbsp;</a></span>EXPENSE_ADVANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_ADVANCE = &quot;o.edu.expadv&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выдача аванса под отчёт по расходу программы (TRANSFER w.edu.expns → w.exp.adv, Dr 86 / Cr 51; username = получатель аванса). Роль <code>advance</code> в наборе шасси расходов программы. </p>
+
+</div>
+</div>
+<a id="ad3e92e30f8027b5e683100256d98d1fe" name="ad3e92e30f8027b5e683100256d98d1fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e92e30f8027b5e683100256d98d1fe">&#9670;&nbsp;</a></span>EXPENSE_FUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_FUND = &quot;o.edu.expfnd&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выделение средств программы под расход (TRANSFER w.edu.fund → w.edu.expns, без Dr/Cr — внутри 86). Выполняется при создании служебной записки: сумма расхода уходит из фонда в пул расходов программы. </p>
+
+</div>
+</div>
+<a id="a25fd1517c4820eb4672b1b30303d269b" name="a25fd1517c4820eb4672b1b30303d269b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fd1517c4820eb4672b1b30303d269b">&#9670;&nbsp;</a></span>EXPENSE_OVERSPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_OVERSPEND = &quot;o.edu.expovr&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Доплата сверх выданного аванса по расходу программы (TRANSFER w.edu.expns → w.exp.adv, Dr 86 / Cr 51). Роль <code>overspend</code> в наборе шасси расходов программы. </p>
+
+</div>
+</div>
+<a id="aad69fa02d48b6ef9957edd30ec83ba03" name="aad69fa02d48b6ef9957edd30ec83ba03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad69fa02d48b6ef9957edd30ec83ba03">&#9670;&nbsp;</a></span>EXPENSE_REPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_REPORT = &quot;o.edu.exprpt&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Закрытие подотчёта по расходу программы отчётом с чеками (BURN с w.exp.adv, без Dr/Cr — проводка сделана при выдаче аванса). Роль <code>report</code> в наборе шасси расходов программы. </p>
+
+</div>
+</div>
+<a id="a9f35549e9058dbf9b19133d3da319c07" name="a9f35549e9058dbf9b19133d3da319c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f35549e9058dbf9b19133d3da319c07">&#9670;&nbsp;</a></span>EXPENSE_RETURN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_RETURN = &quot;o.edu.expret&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат неиспользованного аванса в пул расходов программы (TRANSFER w.exp.adv → w.edu.expns, Dr 51 / Cr 86 — деньги вернулись на расчётный счёт). Роль <code>refund</code> в наборе шасси расходов программы. </p>
+
+</div>
+</div>
+<a id="a2bf21918ed37b2f1403d194b9da0f36c" name="a2bf21918ed37b2f1403d194b9da0f36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf21918ed37b2f1403d194b9da0f36c">&#9670;&nbsp;</a></span>EXPENSE_SPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_SPEND = &quot;o.edu.spend&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Прямая оплата расхода программы по реквизитам получателя (BURN с w.edu.expns, Dr 86 / Cr 51 — выплата с расчётного счёта после подтверждения кассиром). Роль <code>direct</code> в наборе шасси расходов программы. </p>
+
+</div>
+</div>
+<a id="a40d6bc5a45618c430dc8f1d66d0ec0ca" name="a40d6bc5a45618c430dc8f1d66d0ec0ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40d6bc5a45618c430dc8f1d66d0ec0ca">&#9670;&nbsp;</a></span>EXPENSE_UNFUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::EXPENSE_UNFUND = &quot;o.edu.expunf&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат неизрасходованного из пула расходов программы в фонд (TRANSFER w.edu.expns → w.edu.fund, без Dr/Cr — внутри 86). Совет отклонил расход либо расход закрыт на сумму меньше запланированной. </p>
+
+</div>
+</div>
+<a id="a14630ddefce3f428353c4ebb4710f86b" name="a14630ddefce3f428353c4ebb4710f86b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14630ddefce3f428353c4ebb4710f86b">&#9670;&nbsp;</a></span>FREE_TEACHER_RESERVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::FREE_TEACHER_RESERVE = &quot;o.edu.free&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Высвобождение резерва выплат преподавателям обратно в фонд программы (TRANSFER w.edu.teach → w.edu.fund, без Dr/Cr — оба на 86). Подписка отменена, оплаченные занятия не состоятся: зарезервированное под них возвращается в фонд, откуда идёт возврат ученику. </p>
+
+</div>
+</div>
+<a id="a61d4446a216ab6065f3a4ad4f651a464" name="a61d4446a216ab6065f3a4ad4f651a464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d4446a216ab6065f3a4ad4f651a464">&#9670;&nbsp;</a></span>HOLD_EDU_RID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::HOLD_EDU_RID = &quot;o.edu.hold&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Приём материалов занятия на ответственное хранение (ISSUE → w.edu.hold, Dr 08 / Cr 76). Материалы переданы кооперативу как объект и весь гарантийный срок курса числятся за преподавателем: актив лежит на 08, источник — обязательство перед ним на 76. Эталон — o.cap.commit «Благороста»: коммит встаёт на 08 против обязательства на 76, паевой фонд признаётся позже отдельной операцией. </p>
+
+</div>
+</div>
+<a id="a2cbe10911945e3351d517b026615f046" name="a2cbe10911945e3351d517b026615f046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cbe10911945e3351d517b026615f046">&#9670;&nbsp;</a></span>LOCK_FEE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::LOCK_FEE = &quot;o.edu.lock&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Удержание взноса до конца гарантийного срока курса (TRANSFER w.edu.fund → w.edu.escrow, без Dr/Cr — оба на 86). Выполняется сразу после o.edu.fee, пока срок идёт: участник вправе закрыть подписку и получить возврат, поэтому на расходы программы этот взнос не идёт. </p>
+
+</div>
+</div>
+<a id="ac340f1f7be0dbb2a7cacc72ce1c4ee4a" name="ac340f1f7be0dbb2a7cacc72ce1c4ee4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac340f1f7be0dbb2a7cacc72ce1c4ee4a">&#9670;&nbsp;</a></span>REFUND_FEE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::REFUND_FEE = &quot;o.edu.refund&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возврат членского взноса ученику из фонда программы (TRANSFER w.edu.fund → w.edu.member, без Dr/Cr — оба на 86). Основания в Положении ЦПП: отмена до активации курса — полная стоимость, отмена по недобору — полная, отказ в ходе подписки — половина остаточной стоимости. </p>
+
+</div>
+</div>
+<a id="a0af5151539e2ada32c5962d6cf96f7d8" name="a0af5151539e2ada32c5962d6cf96f7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af5151539e2ada32c5962d6cf96f7d8">&#9670;&nbsp;</a></span>RELEASE_EDU_RID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::RELEASE_EDU_RID = &quot;o.edu.retrid&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Снятие материалов с ответственного хранения при рекламации и отказе совета (BURN с w.edu.hold, Dr 76 / Cr 08). Обязательство и актив закрываются встречно, материалы возвращаются преподавателю, паевой фонд остаётся нетронутым. </p>
+
+</div>
+</div>
+<a id="af92cb15db0c4b207b82f264b47d5034e" name="af92cb15db0c4b207b82f264b47d5034e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92cb15db0c4b207b82f264b47d5034e">&#9670;&nbsp;</a></span>RETURN_TO_SHARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::RETURN_TO_SHARE = &quot;o.edu.retshr&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Перевод членского взноса программы обратно в паевой (TRANSFER w.edu.member → w.wal.share, Dr 86 / Cr 80). Точная инверсия o.edu.conv: возврат по недобору идёт на паевой сразу, остаток кошелька ЦПП — по заявлению ученика с согласованием кооператива. </p>
+
+</div>
+</div>
+<a id="a8ebb94a4376f56f87c13fda90ad1d2f3" name="a8ebb94a4376f56f87c13fda90ad1d2f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebb94a4376f56f87c13fda90ad1d2f3">&#9670;&nbsp;</a></span>SETTLE_EDU_RID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::SETTLE_EDU_RID = &quot;o.edu.ridshr&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Зачисление паевого взноса преподавателю по принятому РИД (TRANSFER w.edu.hold → w.edu.share, Dr 76 / Cr 80). Обязательство перед преподавателем гасится признанием паевого фонда; сумма ложится на паевой кошелёк программы — баланс договора участия в хозяйственной деятельности. </p>
+
+</div>
+</div>
+<a id="aa33894fc9560588a240e818221fe8d34" name="aa33894fc9560588a240e818221fe8d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33894fc9560588a240e818221fe8d34">&#9670;&nbsp;</a></span>SETTLE_TEACHER_RESERVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::SETTLE_TEACHER_RESERVE = &quot;o.edu.settle&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Расчёт с преподавателем за счёт резерва при приёме его результата (BURN с w.edu.teach, без Dr/Cr). Обязательство программы перед преподавателем исполнено: стоимость результата зачислена ему паевым взносом (o.edu.ridshr), и зарезервированные под неё средства перестают числиться за программой. </p>
+
+</div>
+</div>
+<a id="a372515635b3308406e2f1664b1346e88" name="a372515635b3308406e2f1664b1346e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372515635b3308406e2f1664b1346e88">&#9670;&nbsp;</a></span>UNLOCK_FEE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::UNLOCK_FEE = &quot;o.edu.unlock&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Разблокировка удержанного взноса (TRANSFER w.edu.escrow → w.edu.fund, без Dr/Cr — оба на 86). Гарантийный срок курса истёк — взнос становится свободными средствами программы; при отмене и закрытии подписки удержанное возвращается в фонд тем же ходом, и возврат участнику идёт уже из фонда. </p>
+
+</div>
+</div>
+<a id="a8e8c6e8134953930df8c121a0136e3a3" name="a8e8c6e8134953930df8c121a0136e3a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e8c6e8134953930df8c121a0136e3a3">&#9670;&nbsp;</a></span>WITHDRAW_EDU_SHARE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr eosio::name operations::edubridge::WITHDRAW_EDU_SHARE = &quot;o.edu.wthshr&quot;_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Трансляция паевого взноса преподавателя из ЦПП «Образование» в ЦПП «Цифровой Кошелёк» по его заявлению (TRANSFER w.edu.share → w.wal.share, без Dr/Cr — оба на 80). Зеркало o.cap.wthcap «Благороста»; возврат паевого взноса идёт уже с главного паевого кошелька штатным createwthd. Этой же операцией остаток переносится при выходе из кооператива. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceoperations.html">operations</a></li><li class="navelem"><a class="el" href="namespaceoperations_1_1edubridge.html">edubridge</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
