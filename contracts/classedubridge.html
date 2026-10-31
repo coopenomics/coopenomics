@@ -1,0 +1,2303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Класс edubridge</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classedubridge.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classedubridge-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс edubridge</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Контракт <code>edubridge</code> — ЦПП «Образование» (приложение «Образовательный мост»).  
+ <a href="classedubridge.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="edubridge_2edubridge_8hpp_source.html">edubridge.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:edubridge:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classedubridge.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af1ae4d719af4f179f039b8c74750c773"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#af1ae4d719af4f179f039b8c74750c773">edubridge</a> (eosio::name receiver, eosio::name code, eosio::datastream&lt; const char * &gt; ds)</td></tr>
+<tr class="separator:af1ae4d719af4f179f039b8c74750c773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37e4418ed485643d656ef9b9e389f3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ad37e4418ed485643d656ef9b9e389f3b">convert</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:ad37e4418ed485643d656ef9b9e389f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация паевого взноса пайщика в членский взнос ЦПП «Образование». Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.conv (TRANSFER w.wal.share → w.edu.member, Дт 80 / Кт 86). <code>statement</code> — подписанное пайщиком Заявление о конвертации (шаблон 3011), публикуется в реестр документов пакетом процесса подписки (package = sub_hash).  <a href="classedubridge.html#ad37e4418ed485643d656ef9b9e389f3b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad37e4418ed485643d656ef9b9e389f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d69c9b7d2e6dc849ef57674799898e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ad0d69c9b7d2e6dc849ef57674799898e">setcourse</a> (eosio::name coopname, uint64_t course_id, bool per_learner, eosio::asset target_fee_month, uint32_t minutes_per_month, uint32_t minutes_total, std::vector&lt; edu_slot_terms &gt; slots, bool course_payment, uint32_t discount_bp, uint32_t guarantee_secs, eosio::time_point_sec starts_at, uint32_t month_secs)</td></tr>
+<tr class="memdesc:ad0d69c9b7d2e6dc849ef57674799898e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задать условия курса: окна расписания со стоимостью занятия, способ расчёта с преподавателем (за каждого участника либо фиксированный за занятие), целевой членский взнос за месяц, минуты занятий в месяц и в программе, скидку за взнос разом, гарантийный срок и дату начала занятий. По ним контракт считает все суммы: учёт ведётся в минутах занятий.  <a href="classedubridge.html#ad0d69c9b7d2e6dc849ef57674799898e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad0d69c9b7d2e6dc849ef57674799898e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3d222a971f4641a787c1cf521b64cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab3d222a971f4641a787c1cf521b64cf8">opensub</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, uint64_t learner_id, uint64_t course_id, checksum256 statement_hash)</td></tr>
+<tr class="memdesc:ab3d222a971f4641a787c1cf521b64cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открыть подписку на курс для обучающегося. Срок и взнос считает <code>chargefee</code>.  <a href="classedubridge.html#ab3d222a971f4641a787c1cf521b64cf8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab3d222a971f4641a787c1cf521b64cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c239b375b2374260f5fbe941e6aaff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a00c239b375b2374260f5fbe941e6aaff">chargefee</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, eosio::name period, eosio::asset expected, checksum256 statement_hash)</td></tr>
+<tr class="memdesc:a00c239b375b2374260f5fbe941e6aaff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Членский взнос участника за период (<code>month</code> либо <code>course</code>). Сумму, оплаченный срок и резерв преподавателям считает контракт; <code>expected</code> — сумма из подписанного заявления, расхождение с расчётом — отказ. Движения: o.edu.fee и, пока идёт гарантийный срок участника, o.edu.lock; после срока — o.edu.allot на оплату занятий.  <a href="classedubridge.html#a00c239b375b2374260f5fbe941e6aaff">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00c239b375b2374260f5fbe941e6aaff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcab52af76337fd54f199b013a3dbcf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#adcab52af76337fd54f199b013a3dbcf2">unlockfee</a> (eosio::name coopname, checksum256 sub_hash)</td></tr>
+<tr class="memdesc:adcab52af76337fd54f199b013a3dbcf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрыть гарантийный срок участника: взнос перестаёт удерживаться целиком. Оплата занятий выделяется в резерв преподавателям (o.edu.allot), удержанной остаётся сумма возможного возврата при отказе, остальное — на кошельке программы (o.edu.unlock). Суммы считает контракт.  <a href="classedubridge.html#adcab52af76337fd54f199b013a3dbcf2">Подробнее...</a><br /></td></tr>
+<tr class="separator:adcab52af76337fd54f199b013a3dbcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9cade7564da69f86f6fdfa7ee715c01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ae9cade7564da69f86f6fdfa7ee715c01">regstatement</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:ae9cade7564da69f86f6fdfa7ee715c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Опубликовать Заявление о взносе (шаблон 3011), целиком покрытом кошельком программы участника: конвертации нет, и <code>convert</code> его не публикует. Движений средств нет.  <a href="classedubridge.html#ae9cade7564da69f86f6fdfa7ee715c01">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9cade7564da69f86f6fdfa7ee715c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c2e72ae82637517c0385c116fdac75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a56c2e72ae82637517c0385c116fdac75">warrclaim</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a56c2e72ae82637517c0385c116fdac75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Опубликовать Заявление об аннулировании Подписки по Гарантийным условиям (шаблон 3013): основание для рассмотрения советом. Взнос участника замораживается до решения совета; подписка остаётся действующей.  <a href="classedubridge.html#a56c2e72ae82637517c0385c116fdac75">Подробнее...</a><br /></td></tr>
+<tr class="separator:a56c2e72ae82637517c0385c116fdac75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b885a0cd0183e027d3950f035e8a221"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a3b885a0cd0183e027d3950f035e8a221">warrdecline</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash)</td></tr>
+<tr class="memdesc:a3b885a0cd0183e027d3950f035e8a221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Совет отказал по заявлению об аннулировании Подписки по Гарантийным условиям: заморозка взноса снимается, подписка продолжает действовать. Гарантийный срок группы уже вышел — оплата занятий участника за гарантийный период остаётся на кошельке программы.  <a href="classedubridge.html#a3b885a0cd0183e027d3950f035e8a221">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3b885a0cd0183e027d3950f035e8a221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd051abbe8a563b4305aa403765f8cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#acd051abbe8a563b4305aa403765f8cf2">warrgrant</a> (eosio::name coopname, eosio::name username, checksum256 claim_hash, checksum256 sub_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdecision.html">decision</a>)</td></tr>
+<tr class="memdesc:acd051abbe8a563b4305aa403765f8cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решение совета об удовлетворении заявления по Гарантийным условиям (шаблон 3014): подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника. Сумму берёт контракт.  <a href="classedubridge.html#acd051abbe8a563b4305aa403765f8cf2">Подробнее...</a><br /></td></tr>
+<tr class="separator:acd051abbe8a563b4305aa403765f8cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6d8b187f2e0fcc854a49ffa9364b57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#abf6d8b187f2e0fcc854a49ffa9364b57">onwarrauth</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:abf6d8b187f2e0fcc854a49ffa9364b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обратный вызов совета: заявление по Гарантийным условиям удовлетворено, протокол (шаблон 3014) подписан. Подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника.  <a href="classedubridge.html#abf6d8b187f2e0fcc854a49ffa9364b57">Подробнее...</a><br /></td></tr>
+<tr class="separator:abf6d8b187f2e0fcc854a49ffa9364b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab925f18fcc6ce6a4a0cdd819fbfee049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab925f18fcc6ce6a4a0cdd819fbfee049">onwarrdecl</a> (eosio::name coopname, checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:ab925f18fcc6ce6a4a0cdd819fbfee049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обратный вызов совета: по заявлению по Гарантийным условиям отказано либо вопрос снят с повестки. Заморозка взноса снимается, подписка продолжает действовать.  <a href="classedubridge.html#ab925f18fcc6ce6a4a0cdd819fbfee049">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab925f18fcc6ce6a4a0cdd819fbfee049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039f83f866d3048f98ef3e0863623e45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a039f83f866d3048f98ef3e0863623e45">cancelsub</a> (eosio::name coopname, eosio::name username, checksum256 sub_hash, bool underfilled)</td></tr>
+<tr class="memdesc:a039f83f866d3048f98ef3e0863623e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отменить подписку с возвратом членского взноса. Основание и сумму определяет контракт: недобор и отмена до начала занятий — взнос целиком, отказ в ходе подписки — половина остаточной стоимости подписки. Движения: o.edu.refund (кошелёк программы → кошелёк членских взносов участника) и, при недоборе, o.edu.retshr (→ паевой взнос).  <a href="classedubridge.html#a039f83f866d3048f98ef3e0863623e45">Подробнее...</a><br /></td></tr>
+<tr class="separator:a039f83f866d3048f98ef3e0863623e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ceb4f174b670e3466b377c01ebbffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a34ceb4f174b670e3466b377c01ebbffe">retshare</a> (eosio::name coopname, eosio::name username, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a34ceb4f174b670e3466b377c01ebbffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекратить участие пайщика в ЦПП «Образование» по его заявлению об аннулировании соглашения: весь остаток кошелька программы уходит в паевой (o.edu.retshr, Дт 86 / Кт 80), соглашение о программе аннулируется. Подписки к этому моменту закрыты.  <a href="classedubridge.html#a34ceb4f174b670e3466b377c01ebbffe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a34ceb4f174b670e3466b377c01ebbffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c44fad1f25e348039dc8ed4baf9130c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a4c44fad1f25e348039dc8ed4baf9130c">expiresub</a> (eosio::name coopname, checksum256 sub_hash)</td></tr>
+<tr class="memdesc:a4c44fad1f25e348039dc8ed4baf9130c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрыть истёкшую подписку — запись стирается из RAM.  <a href="classedubridge.html#a4c44fad1f25e348039dc8ed4baf9130c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4c44fad1f25e348039dc8ed4baf9130c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59aefc52cb5998d2093d08db6674ffb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a59aefc52cb5998d2093d08db6674ffb5">createexp</a> (eosio::name coopname, eosio::name creator, eosio::checksum256 expense_hash, std::vector&lt; <a class="el" href="struct_expense_domain_1_1item.html">ExpenseDomain::item</a> &gt; items, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a59aefc52cb5998d2093d08db6674ffb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Подать расход программы в шасси расходов. Сумма записки уходит из фонда программы в пул расходов (o.edu.expfnd), дальше расход ведёт шасси: решение совета, оплата или аванс под отчёт, отчёт, закрытие.  <a href="classedubridge.html#a59aefc52cb5998d2093d08db6674ffb5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a59aefc52cb5998d2093d08db6674ffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1add3318c8c2528019cb6e53bf96f9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a1add3318c8c2528019cb6e53bf96f9f2">onexpdone</a> (eosio::name coopname, eosio::checksum256 expense_hash, uint8_t status, eosio::asset total_actual, std::vector&lt; char &gt; data)</td></tr>
+<tr class="memdesc:a1add3318c8c2528019cb6e53bf96f9f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Коллбэк шасси: расход завершён. Неизрасходованный остаток возвращается в фонд программы (o.edu.expunf), запись стирается.  <a href="classedubridge.html#a1add3318c8c2528019cb6e53bf96f9f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1add3318c8c2528019cb6e53bf96f9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99f51d0fa482e2ec0082583a7358c47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab99f51d0fa482e2ec0082583a7358c47">holdrid</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, eosio::name rid_type, std::vector&lt; checksum256 &gt; pack, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:ab99f51d0fa482e2ec0082583a7358c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преподаватель передаёт материалы занятия на ответственное хранение по Акту (шаблон 3012). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.hold (ISSUE → w.edu.hold, Дт 08 / Кт 76) — материалы числятся за преподавателем весь гарантийный срок курса. Запись запоминает курс занятия (<code>course_id</code>).  <a href="classedubridge.html#ab99f51d0fa482e2ec0082583a7358c47">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab99f51d0fa482e2ec0082583a7358c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a322161da37dfee6b0be273c8ce45ee74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a322161da37dfee6b0be273c8ce45ee74">openlesson</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, uint64_t assignment_id, eosio::time_point_sec held_at, uint32_t number, uint32_t minutes, uint32_t slot)</td></tr>
+<tr class="memdesc:a322161da37dfee6b0be273c8ce45ee74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преподаватель отчитался о занятии календаря — открыть расчёт с участниками. Номер, дата, длительность и окно — из календаря группы; стоимость занятия — по окну, ставка преподавателя фиксируется на момент отчёта.  <a href="classedubridge.html#a322161da37dfee6b0be273c8ce45ee74">Подробнее...</a><br /></td></tr>
+<tr class="separator:a322161da37dfee6b0be273c8ce45ee74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6cbdbe8bbdf7d6631de8edfadc7abfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab6cbdbe8bbdf7d6631de8edfadc7abfb">closecharge</a> (eosio::name coopname, checksum256 rid_hash)</td></tr>
+<tr class="memdesc:ab6cbdbe8bbdf7d6631de8edfadc7abfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрыть окно расчёта по занятию: подписки группы рассчитаны.  <a href="classedubridge.html#ab6cbdbe8bbdf7d6631de8edfadc7abfb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab6cbdbe8bbdf7d6631de8edfadc7abfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68d19e6d5ae851528e3ab3e0f7751aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ae68d19e6d5ae851528e3ab3e0f7751aa">droplesson</a> (eosio::name coopname, checksum256 rid_hash)</td></tr>
+<tr class="memdesc:ae68d19e6d5ae851528e3ab3e0f7751aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отозвать отчёт о занятии до расчёта с участниками.  <a href="classedubridge.html#ae68d19e6d5ae851528e3ab3e0f7751aa">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae68d19e6d5ae851528e3ab3e0f7751aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9709eb4dc48ac50390f8214b7b775064"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a9709eb4dc48ac50390f8214b7b775064">chargelesson</a> (eosio::name coopname, checksum256 rid_hash, checksum256 sub_hash)</td></tr>
+<tr class="memdesc:a9709eb4dc48ac50390f8214b7b775064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчёт за занятие по одной подписке: оплата занятия уходит из резерва подписки, взнос преподавателя по его ставке прибавляется к сумме занятия, разница до плановой ставки поступает на кошелёк программы.  <a href="classedubridge.html#a9709eb4dc48ac50390f8214b7b775064">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9709eb4dc48ac50390f8214b7b775064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b39c1dbad93eced3edc9e8dc8fbecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a35b39c1dbad93eced3edc9e8dc8fbecd">submitrid</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, uint64_t assignment_id, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, eosio::name rid_type, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a35b39c1dbad93eced3edc9e8dc8fbecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преподаватель подаёт Заявление о паевом взносе результатом интеллектуальной деятельности (шаблон 3008) по истечении гарантийного срока. Движений средств нет.  <a href="classedubridge.html#a35b39c1dbad93eced3edc9e8dc8fbecd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a35b39c1dbad93eced3edc9e8dc8fbecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3659072dccc5cffad9eaa62dcc390678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a3659072dccc5cffad9eaa62dcc390678">onridauth</a> (eosio::name coopname, checksum256 hash, <a class="el" href="structdocument2.html">document2</a> authorization)</td></tr>
+<tr class="memdesc:a3659072dccc5cffad9eaa62dcc390678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обратный вызов совета: заявление о паевом взносе РИД принято (протокол 3009 подписан председателем). Движений средств нет — паевой фонд признаётся позже, по акту приёма-передачи (<code>acceptrid</code>). require_auth(_soviet).  <a href="classedubridge.html#a3659072dccc5cffad9eaa62dcc390678">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3659072dccc5cffad9eaa62dcc390678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c389ad52604621140212f4923cb52e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a0c389ad52604621140212f4923cb52e3">onriddecl</a> (eosio::name coopname, checksum256 hash, std::string reason)</td></tr>
+<tr class="memdesc:a0c389ad52604621140212f4923cb52e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обратный вызов совета: в приёме паевого взноса РИД отказано либо вопрос снят с повестки. Движений средств нет — материалы с хранения снимает председатель (<code>recallrid</code>). require_auth(_soviet).  <a href="classedubridge.html#a0c389ad52604621140212f4923cb52e3">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c389ad52604621140212f4923cb52e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f8cc409c3046f10e2ff7e0fc3f7bfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a57f8cc409c3046f10e2ff7e0fc3f7bfe">signridact</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdecision.html">decision</a>, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:a57f8cc409c3046f10e2ff7e0fc3f7bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преподаватель подписал Акт приёма-передачи РИД (шаблон 3010) — первая подпись. Протокол совета (3009) публикуется в реестр, акт уходит на вторую подпись председателю через одобрение («Запросы одобрений»).  <a href="classedubridge.html#a57f8cc409c3046f10e2ff7e0fc3f7bfe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a57f8cc409c3046f10e2ff7e0fc3f7bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127dd71f383bb2f1f80face9dc1b4b45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a127dd71f383bb2f1f80face9dc1b4b45">apprvridact</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:a127dd71f383bb2f1f80face9dc1b4b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель подписал акт — вторая подпись. Вызывается контрактом совета после подтверждения одобрения: результат принимается в паевой фонд, как в <code>acceptrid</code>.  <a href="classedubridge.html#a127dd71f383bb2f1f80face9dc1b4b45">Подробнее...</a><br /></td></tr>
+<tr class="separator:a127dd71f383bb2f1f80face9dc1b4b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21773457e68c8670ab380ca677be0ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a21773457e68c8670ab380ca677be0ce6">dclridact</a> (eosio::name coopname, eosio::name username, checksum256 rid_hash, std::string reason)</td></tr>
+<tr class="memdesc:a21773457e68c8670ab380ca677be0ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель отказал в подписи акта — материалы остаются на хранении, заявление закрывает председатель отдельным действием.  <a href="classedubridge.html#a21773457e68c8670ab380ca677be0ce6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a21773457e68c8670ab380ca677be0ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9255a8202cf0d8c745304b09e38d4be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ae9255a8202cf0d8c745304b09e38d4be">acceptrid</a> (eosio::name coopname, checksum256 rid_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdecision.html">decision</a>, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a7543cef806423d999bdf00434e158dcb">act</a>)</td></tr>
+<tr class="memdesc:ae9255a8202cf0d8c745304b09e38d4be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Приём РИД в паевой фонд по Протоколу совета (3009) и Акту приёма-передачи (3010). Два шага <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.rid (Дт 04 / Кт 08) и o.edu.ridshr (TRANSFER w.edu.hold → w.edu.share, Дт 76 / Кт 80). Третий шаг — o.edu.settle: резерв выплат преподавателям списывается на сумму результата из резерва его курса; при нехватке приём отклоняется. Запись стирается.  <a href="classedubridge.html#ae9255a8202cf0d8c745304b09e38d4be">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae9255a8202cf0d8c745304b09e38d4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac951ea5368b4fb56561f3a4b8e26b8f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ac951ea5368b4fb56561f3a4b8e26b8f2">declinerid</a> (eosio::name coopname, checksum256 rid_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="structdecision.html">decision</a>)</td></tr>
+<tr class="memdesc:ac951ea5368b4fb56561f3a4b8e26b8f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отказ совета в приёме РИД по Протоколу (3009). Материалы снимаются с ответственного хранения (o.edu.retrid, Дт 76 / Кт 08), запись стирается.  <a href="classedubridge.html#ac951ea5368b4fb56561f3a4b8e26b8f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac951ea5368b4fb56561f3a4b8e26b8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2175c25ef205f34e9f3ab1b006450d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab2175c25ef205f34e9f3ab1b006450d5">recallrid</a> (eosio::name coopname, checksum256 rid_hash, std::string reason)</td></tr>
+<tr class="memdesc:ab2175c25ef205f34e9f3ab1b006450d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снятие материалов занятия с ответственного хранения по рекламации внутри гарантийного срока (o.edu.retrid, Дт 76 / Кт 08). Материалы возвращаются преподавателю, паевой взнос по ним не оформляется.  <a href="classedubridge.html#ab2175c25ef205f34e9f3ab1b006450d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab2175c25ef205f34e9f3ab1b006450d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085fbb164474a9cddc479768199a7f7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a085fbb164474a9cddc479768199a7f7b">wthshare</a> (eosio::name coopname, eosio::name username, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, <a class="el" href="structdocument2.html">document2</a> statement)</td></tr>
+<tr class="memdesc:a085fbb164474a9cddc479768199a7f7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Трансляция паевого взноса преподавателя из ЦПП «Образование» в ЦПП «Цифровой Кошелёк» по его Заявлению (шаблон 3015), на весь остаток или его часть. Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.wthshr (TRANSFER w.edu.share → w.wal.share, без проводки). Возврат паевого взноса идёт уже с Цифрового Кошелька штатным заявлением о возврате.  <a href="classedubridge.html#a085fbb164474a9cddc479768199a7f7b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a085fbb164474a9cddc479768199a7f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae72ca8d6457bd945d58238a33ea519a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ae72ca8d6457bd945d58238a33ea519a3">signcontract</a> (eosio::name coopname, eosio::name username, checksum256 contract_hash, <a class="el" href="structdocument2.html">document2</a> <a class="el" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>)</td></tr>
+<tr class="memdesc:ae72ca8d6457bd945d58238a33ea519a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преподаватель подписывает Договор участия в хозяйственной деятельности (шаблон 3006) — первая подпись. Договор уходит на вторую подпись председателю совета (стол председателя, «Запросы одобрений»); до неё запись в <code>educontracts</code> стоит в <code>pending</code>.  <a href="classedubridge.html#ae72ca8d6457bd945d58238a33ea519a3">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae72ca8d6457bd945d58238a33ea519a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73768b404f92891dff447d1b82117a62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a73768b404f92891dff447d1b82117a62">apprvcontr</a> (eosio::name coopname, eosio::name username, checksum256 contract_hash, <a class="el" href="structdocument2.html">document2</a> approved_document)</td></tr>
+<tr class="memdesc:a73768b404f92891dff447d1b82117a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель подписал договор — вторая подпись. Вызывается контрактом совета после подтверждения одобрения: договор становится действующим, двухподписный документ публикуется в реестре.  <a href="classedubridge.html#a73768b404f92891dff447d1b82117a62">Подробнее...</a><br /></td></tr>
+<tr class="separator:a73768b404f92891dff447d1b82117a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf724a2afcb8a567b4d33e74a5fd4b98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#adf724a2afcb8a567b4d33e74a5fd4b98">dclinecontr</a> (eosio::name coopname, eosio::name username, checksum256 contract_hash, std::string reason)</td></tr>
+<tr class="memdesc:adf724a2afcb8a567b4d33e74a5fd4b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Председатель отказал в подписи договора — запись стирается, преподаватель может подписать договор заново.  <a href="classedubridge.html#adf724a2afcb8a567b4d33e74a5fd4b98">Подробнее...</a><br /></td></tr>
+<tr class="separator:adf724a2afcb8a567b4d33e74a5fd4b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a404a14f0d2d5f1e185458e54c5a61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a41a404a14f0d2d5f1e185458e54c5a61">setassign</a> (eosio::name coopname, uint64_t assignment_id, eosio::name username, uint64_t course_id, eosio::asset rate)</td></tr>
+<tr class="memdesc:a41a404a14f0d2d5f1e185458e54c5a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Допуск преподавателя к курсу и его ставка за час на одного участника; не выше плановой ставки курса. Меняется по ходу курса.  <a href="classedubridge.html#a41a404a14f0d2d5f1e185458e54c5a61">Подробнее...</a><br /></td></tr>
+<tr class="separator:a41a404a14f0d2d5f1e185458e54c5a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab262db5233a27c211c64cf248897ac95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#ab262db5233a27c211c64cf248897ac95">delassign</a> (eosio::name coopname, uint64_t assignment_id)</td></tr>
+<tr class="memdesc:ab262db5233a27c211c64cf248897ac95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Снять допуск преподавателя к курсу.  <a href="classedubridge.html#ab262db5233a27c211c64cf248897ac95">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab262db5233a27c211c64cf248897ac95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b513c4772daf95aa6b3c297b6d2128c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a0b513c4772daf95aa6b3c297b6d2128c">termcontract</a> (eosio::name coopname, eosio::name username, checksum256 contract_hash, std::string reason)</td></tr>
+<tr class="memdesc:a0b513c4772daf95aa6b3c297b6d2128c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Прекратить Договор участия в хозяйственной деятельности — при выходе преподавателя из кооператива либо по соглашению сторон. Запись стирается; вернувшийся пайщик подписывает договор заново.  <a href="classedubridge.html#a0b513c4772daf95aa6b3c297b6d2128c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0b513c4772daf95aa6b3c297b6d2128c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57558693da997882accd39216282544c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classedubridge.html#a57558693da997882accd39216282544c">cleanup</a> ()</td></tr>
+<tr class="memdesc:a57558693da997882accd39216282544c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистка отработавших записей по правилам контракта (<a class="el" href="cleanup_8hpp.html">lib/core/cleanup.hpp</a>); плейбук вызывает её на каждом деплое.  <a href="classedubridge.html#a57558693da997882accd39216282544c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a57558693da997882accd39216282544c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Контракт <code>edubridge</code> — ЦПП «Образование» (приложение «Образовательный мост»). </p>
+<p >Реализует actions четырёх процессов из YAML-стандартов рядом с этим .hpp:</p><ul>
+<li><b>p.edu.access</b> (12 actions): setcourse, convert, regstatement, warrclaim, warrgrant, warrdecline, opensub, chargefee, unlockfee, cancelsub, retshare, expiresub — членский взнос за доступ к курсу вносится конвертацией паевого взноса (w.wal.share → w.edu.member, o.edu.conv) по Заявлению о конвертации и списывается в фонд программы (o.edu.fee). Все суммы считает контракт по условиям курса (таблица <code>eduterms</code>): взнос и оплаченный срок, удержание по гарантии, резерв преподавателям по подписке, возврат при отмене (o.edu.refund, o.edu.retshr). Подписка на курс — рабочее состояние в RAM, стирается по истечении либо отмене.</li>
+<li><b>p.edu.spend</b> (2 actions): createexp, onexpdone — расход программы из фонда через общее шасси расходов.</li>
+<li><b>p.edu.rid</b> (15 actions): openlesson, chargelesson, closecharge, droplesson, holdrid, submitrid, onridauth, onriddecl, signridact, apprvridact, dclridact, acceptrid, declinerid, recallrid, wthshare — преподаватель отчитывается по занятию, контракт по одной подписке за действие считает его взнос (оплата занятия уходит из резерва подписки), и преподаватель передаёт материалы на ответственное хранение на эту сумму (o.edu.hold, Дт 08 / Кт 76); по истечении гарантийного срока курса заявление уходит в совет, и по решению с актом результат принимается в паевой фонд (o.edu.rid, Дт 04 / Кт 08, и o.edu.ridshr, w.edu.hold → w.edu.share, Дт 76 / Кт 80). Рекламация внутри срока и отказ совета снимают материалы с хранения (o.edu.retrid, Дт 76 / Кт 08). Паевой взнос с кошелька программы преподаватель переводит в ЦПП «Цифровой Кошелёк» своим заявлением (o.edu.wthshr, w.edu.share → w.wal.share).</li>
+<li><b>p.edu.teach</b> (6 actions): signcontract, apprvcontr, dclinecontr, termcontract, setassign, delassign — договор УХД преподавателя подписывается двумя сторонами: первая подпись преподавателя, вторая — председателя совета через одобрение (<code><a class="el" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></code> → <code><a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a></code> → коллбэк сюда), как договор в «Благоросте». Допуск преподавателя к курсу и его ставка на курсе хранятся в таблице <code>eduassigns</code>; отдельного документа у допуска нет. Движений средств нет.</li>
+</ul>
+<p >Все действия авторизуются ключом кооператива (<code>require_auth(coopname)</code>): пайщик подписывает документ, отправляет его бэкенд кооператива — как <code><a class="el" href="classmarketplace.html#a6a3eeafe386e288921179330b1066943" title="Перевод паевого взноса во внутренний членский кошелёк «Стола заказов» по Заявлению 1110 — отдельная т...">marketplace::convert</a></code>. Все движения средств — через <code><a class="el" href="class_ledger2.html#ac9f10b2b1ed6b31f91425df17530b86c" title="Отправить inline action ledger2::apply.">Ledger2::apply</a></code>.</p>
+<p >Источник правды по логике, гардам и операциям:</p><ul>
+<li><code>p.edu.access.standard.yaml</code></li>
+<li><code>p.edu.spend.standard.yaml</code></li>
+<li><code>p.edu.rid.standard.yaml</code></li>
+<li><code>p.edu.teach.standard.yaml</code> </li>
+</ul>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="af1ae4d719af4f179f039b8c74750c773" name="af1ae4d719af4f179f039b8c74750c773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ae4d719af4f179f039b8c74750c773">&#9670;&nbsp;</a></span>edubridge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">edubridge::edubridge </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>receiver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::datastream&lt; const char * &gt;&#160;</td>
+          <td class="paramname"><em>ds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ae9255a8202cf0d8c745304b09e38d4be" name="ae9255a8202cf0d8c745304b09e38d4be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9255a8202cf0d8c745304b09e38d4be">&#9670;&nbsp;</a></span>acceptrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::acceptrid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>decision</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Приём РИД в паевой фонд по Протоколу совета (3009) и Акту приёма-передачи (3010). Два шага <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.rid (Дт 04 / Кт 08) и o.edu.ridshr (TRANSFER w.edu.hold → w.edu.share, Дт 76 / Кт 80). Третий шаг — o.edu.settle: резерв выплат преподавателям списывается на сумму результата из резерва его курса; при нехватке приём отклоняется. Запись стирается. </p>
+<p >Приём РИД преподавателя в паевой фонд по решению совета и акту — акт с двумя подписями приносит кооператив.</p>
+<p >Совет принял положительное решение по заявлению (Протокол, шаблон 3009), преподаватель и председатель подписали Акт приёма-передачи (шаблон 3010). Контракт публикует оба документа в реестр пакетом процесса и проводит паевой взнос — тело приёма общее с <code>apprvridact</code>, см. <code><a class="el" href="accept__rid_8cpp.html">accept_rid.cpp</a></code>.</p>
+<p >Штатный путь второй подписи — одобрение совета (<code>signridact</code> → «Запросы одобрений» → <code>apprvridact</code>); это действие остаётся для приёма акта, подписанного обеими сторонами вне одобрения.</p>
+<p >Guards:</p><ul>
+<li>материалы с rid_hash приняты на хранение;</li>
+<li>заявление по ним подано (<code>submitrid</code>);</li>
+<li>протокол и акт не пустые, на акте подписи преподавателя и председателя;</li>
+<li>резерв выплат преподавателям по курсу результата не меньше его суммы. </li>
+</ul>
+
+</div>
+</div>
+<a id="a73768b404f92891dff447d1b82117a62" name="a73768b404f92891dff447d1b82117a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73768b404f92891dff447d1b82117a62">&#9670;&nbsp;</a></span>apprvcontr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::apprvcontr </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>contract_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>approved_document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель подписал договор — вторая подпись. Вызывается контрактом совета после подтверждения одобрения: договор становится действующим, двухподписный документ публикуется в реестре. </p>
+<p >Председатель совета подписал договор УХД преподавателя — вторая подпись. Вызывается контрактом совета (<code><a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a></code>) после подтверждения одобрения; подпись председателя уже проверена советом.</p>
+<p >Договор становится действующим, двухподписный документ публикуется в реестре документов пакетом процесса (package = contract_hash).</p>
+<p ><code>username</code> — тот, кто подтвердил одобрение в совете (председатель), а не преподаватель: договор находится по hash, документ публикуется на имя преподавателя из записи договора. </p>
+
+</div>
+</div>
+<a id="a127dd71f383bb2f1f80face9dc1b4b45" name="a127dd71f383bb2f1f80face9dc1b4b45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a127dd71f383bb2f1f80face9dc1b4b45">&#9670;&nbsp;</a></span>apprvridact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::apprvridact </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>approved_document</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель подписал акт — вторая подпись. Вызывается контрактом совета после подтверждения одобрения: результат принимается в паевой фонд, как в <code>acceptrid</code>. </p>
+<p >Председатель совета подписал Акт приёма-передачи РИД — вторая подпись. Вызывается контрактом совета (<code><a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a></code>) после подтверждения одобрения; подпись председателя уже проверена советом.</p>
+<p >Результат принимается в паевой фонд по общему телу приёма (<code><a class="el" href="accept__rid_8cpp.html">accept_rid.cpp</a></code>): проводки, расчёт из резерва курса, публикация двухподписного акта пакетом процесса, запись стирается. Протокол совета опубликован раньше, при первой подписи (<code>signridact</code>).</p>
+<p ><code>username</code> — тот, кто подтвердил одобрение в совете (председатель), а не преподаватель: материалы находятся по hash. </p>
+
+</div>
+</div>
+<a id="a039f83f866d3048f98ef3e0863623e45" name="a039f83f866d3048f98ef3e0863623e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039f83f866d3048f98ef3e0863623e45">&#9670;&nbsp;</a></span>cancelsub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::cancelsub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>underfilled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отменить подписку с возвратом членского взноса. Основание и сумму определяет контракт: недобор и отмена до начала занятий — взнос целиком, отказ в ходе подписки — половина остаточной стоимости подписки. Движения: o.edu.refund (кошелёк программы → кошелёк членских взносов участника) и, при недоборе, o.edu.retshr (→ паевой взнос). </p>
+<p >Отмена подписки на курс с возвратом членского взноса.</p>
+<p >Основание и сумму возврата определяет контракт:</p><ul>
+<li>кооператив отменил курс по недобору (<code>underfilled</code>) — взнос целиком и сразу в паевой взнос: это отмена решения кооператива;</li>
+<li>занятия ещё не начались — взнос целиком на кошелёк членских взносов;</li>
+<li>отказ в ходе подписки — половина остаточной стоимости подписки (<code><a class="el" href="namespace_edubridge.html#a799a4246ff3adf2580d0263d3829af1d" title="Возврат участнику при отказе после начала занятий.">Edubridge::refusal_refund</a></code>): доля всего взноса за занятия, по которым расчёт ещё не прошёл.</li>
+</ul>
+<p >Остаток по подписке расходится тем же действием: резерв за непроведённые занятия возвращается на кошелёк программы, взнос преподавателей за проведённые занятия остаётся в резерве курса.</p>
+<p >Guards:</p><ul>
+<li>подписка существует, принадлежит пайщику и ведёт учёт занятий;</li>
+<li>по подписке завершён расчёт за открытое занятие курса;</li>
+<li>отмена по недобору — только до первого занятия. </li>
+</ul>
+
+</div>
+</div>
+<a id="a00c239b375b2374260f5fbe941e6aaff" name="a00c239b375b2374260f5fbe941e6aaff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c239b375b2374260f5fbe941e6aaff">&#9670;&nbsp;</a></span>chargefee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::chargefee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>period</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>expected</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>statement_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Членский взнос участника за период (<code>month</code> либо <code>course</code>). Сумму, оплаченный срок и резерв преподавателям считает контракт; <code>expected</code> — сумма из подписанного заявления, расхождение с расчётом — отказ. Движения: o.edu.fee и, пока идёт гарантийный срок участника, o.edu.lock; после срока — o.edu.allot на оплату занятий. </p>
+<p >Членский взнос участника за период подписки.</p>
+<p >Сумму считает контракт по условиям курса: помесячный взнос — занятия месяца по плановой ставке и целевой членский взнос; взнос разом — месяцы до конца программы со скидкой курса. Приложение называет только период и сумму из подписанного участником заявления: расхождение с расчётом — отказ, поэтому списывается ровно то, что участник подписал.</p>
+<p >Тем же действием считается оплаченный срок, а оплата занятий по плановой ставке откладывается в резерв подписки: из него идёт расчёт с преподавателем за каждое проведённое занятие (<code>chargelesson</code>).</p>
+<p >Движения средств:</p><ul>
+<li><code>o.edu.fee</code> (TRANSFER w.edu.member → w.edu.fund) — взнос;</li>
+<li>пока идёт гарантийный срок участника — <code>o.edu.lock</code> (w.edu.fund → w.edu.escrow) на весь взнос;</li>
+<li>срок истёк — <code>o.edu.allot</code> (w.edu.fund → w.edu.teach) на оплату занятий и <code>o.edu.lock</code> на сумму возможного возврата сверх резерва.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>подписка существует, принадлежит пайщику и ведёт учёт занятий;</li>
+<li>ожидаемая сумма равна расчётной;</li>
+<li>на кошельке членских взносов пайщика достаточно средств. </li>
+</ul>
+
+</div>
+</div>
+<a id="a9709eb4dc48ac50390f8214b7b775064" name="a9709eb4dc48ac50390f8214b7b775064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9709eb4dc48ac50390f8214b7b775064">&#9670;&nbsp;</a></span>chargelesson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::chargelesson </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расчёт за занятие по одной подписке: оплата занятия уходит из резерва подписки, взнос преподавателя по его ставке прибавляется к сумме занятия, разница до плановой ставки поступает на кошелёк программы. </p>
+<p >Расчёт за занятие по одной подписке.</p>
+<p >Участник с оплаченным доступом на дату занятия оплачивает его из резерва своей подписки. Оплата занятия по плановой ставке уходит из резерва подписки. На курсе с расчётом за каждого участника взнос преподавателя по его ставке прибавляется к сумме занятия с каждой подписки; на курсе с фиксированным расчётом сумма занятия одна и набирается с подписок по очереди. Остаток оплаты занятия поступает на кошелёк программы.</p>
+<p >Приложение вызывает действие по каждой подписке курса отдельно; контракт считает одну. Число рассчитанных подписок и сумма в записи занятия — срез курса на дату занятия.</p>
+<p >Движения средств:</p><ul>
+<li>взнос участника уже в резерве преподавателям — <code>o.edu.free</code> (TRANSFER w.edu.teach → w.edu.fund) на разницу до плановой ставки;</li>
+<li>удержание по подписке уменьшается до суммы возможного возврата (<code>o.edu.unlock</code>): занятие проведено, возвращать за него нечего;</li>
+<li>гарантийный срок группы ещё идёт — движений нет: взнос удержан целиком, взнос преподавателя запоминается в подписке по его допуску, выделяется в резерв и переходит в сумму допуска, когда подписка закроет срок. Участник, вернувший взнос по гарантийным условиям, в эту сумму не входит.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>занятие открыто, окно расчёта по нему не закрыто; подписка — того же курса и ведёт учёт занятий;</li>
+<li>дата занятия внутри оплаченного срока подписки;</li>
+<li>это занятие по подписке ещё не считалось;</li>
+<li>оплаченных минут подписки и резерва хватает на минуты занятия. </li>
+</ul>
+
+</div>
+</div>
+<a id="a57558693da997882accd39216282544c" name="a57558693da997882accd39216282544c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57558693da997882accd39216282544c">&#9670;&nbsp;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очистка отработавших записей по правилам контракта (<a class="el" href="cleanup_8hpp.html">lib/core/cleanup.hpp</a>); плейбук вызывает её на каждом деплое. </p>
+<p >Очистка отработавших записей (<a class="el" href="cleanup_8hpp.html">lib/core/cleanup.hpp</a>).</p>
+<p >Правил нет: контракт новый, строк прежних версий в цепи нет, а процессы удаляют свои записи на терминальном шаге сами. Учёт средств курса (<code>educourses</code>) очистке не подлежит: его суммы — рабочее состояние, по ним оплачиваются результаты преподавателей. Действие есть, потому что раскатка вызывает <code>cleanup</code> у каждого прикладного контракта.</p>
+<dl class="section note"><dt>Заметки</dt><dd>Авторизация требуется от аккаунта контракта. </dd></dl>
+
+</div>
+</div>
+<a id="ab6cbdbe8bbdf7d6631de8edfadc7abfb" name="ab6cbdbe8bbdf7d6631de8edfadc7abfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6cbdbe8bbdf7d6631de8edfadc7abfb">&#9670;&nbsp;</a></span>closecharge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::closecharge </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрыть окно расчёта по занятию: подписки группы рассчитаны. </p>
+<p >Окно расчёта по занятию закрыто: подписки группы рассчитаны.</p>
+<p >Пока окно открыто, подписки группы не закрываются — оплата занятия не должна уйти мимо преподавателя. Приложение закрывает окно сразу после расчёта по подпискам, тем же проходом. Повторный вызов ничего не меняет. Движений средств нет. </p>
+
+</div>
+</div>
+<a id="ad37e4418ed485643d656ef9b9e389f3b" name="ad37e4418ed485643d656ef9b9e389f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37e4418ed485643d656ef9b9e389f3b">&#9670;&nbsp;</a></span>convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::convert </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конвертация паевого взноса пайщика в членский взнос ЦПП «Образование». Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.conv (TRANSFER w.wal.share → w.edu.member, Дт 80 / Кт 86). <code>statement</code> — подписанное пайщиком Заявление о конвертации (шаблон 3011), публикуется в реестр документов пакетом процесса подписки (package = sub_hash). </p>
+<p >Конвертация паевого взноса пайщика в членский взнос ЦПП «Образование».</p>
+<p >Доступ к курсу оплачивается членским взносом программы. Этот action — единственный путь пополнения членского кошелька программы: пайщик подаёт Заявление о конвертации (шаблон 3011) с просьбой транслировать паевой взнос с программы «Цифровой кошелёк» в программу «Образование». Зеркало <code><a class="el" href="classmarketplace.html#a6a3eeafe386e288921179330b1066943" title="Перевод паевого взноса во внутренний членский кошелёк «Стола заказов» по Заявлению 1110 — отдельная т...">marketplace::convert</a></code>.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.edu.conv</code> (TRANSFER w.wal.share → w.edu.member, Дт 80 / Кт 86) — паевой переходит в целевое финансирование на членский кошелёк программы.</li>
+</ul>
+<p >Операция идёт под хэшем подписки (<code>sub_hash</code>) — тем же, что взнос и удержание в <code>chargefee</code>: в реестре процессов доступ к курсу один.</p>
+<p >Guards:</p><ul>
+<li>amount &gt; 0 в _root_govern_symbol; Заявление подписано ключом самого пайщика.</li>
+<li>Пайщик — активный член кооператива.</li>
+<li>w.wal.share.available пайщика &gt;= amount. </li>
+</ul>
+
+</div>
+</div>
+<a id="a59aefc52cb5998d2093d08db6674ffb5" name="a59aefc52cb5998d2093d08db6674ffb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59aefc52cb5998d2093d08db6674ffb5">&#9670;&nbsp;</a></span>createexp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::createexp </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>creator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>expense_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_expense_domain_1_1item.html">ExpenseDomain::item</a> &gt;&#160;</td>
+          <td class="paramname"><em>items</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Подать расход программы в шасси расходов. Сумма записки уходит из фонда программы в пул расходов (o.edu.expfnd), дальше расход ведёт шасси: решение совета, оплата или аванс под отчёт, отчёт, закрытие. </p>
+<p >Подать расход ЦПП «Образование» в шасси расходов (процесс p.edu.spend).</p>
+<p >Программа — только инициатор. Сумма служебной записки уходит из фонда программы в пул расходов (o.edu.expfnd) и перестаёт быть свободной, после чего записка передаётся шасси расходов: решение совета, оплата по реквизитам либо выдача аванса под отчёт, отчёт с чеками, закрытие. На терминальном переходе шасси вызывает <code><a class="el" href="classedubridge.html#a1add3318c8c2528019cb6e53bf96f9f2" title="Коллбэк шасси: расход завершён. Неизрасходованный остаток возвращается в фонд программы (o....">edubridge::onexpdone</a></code>, где неизрасходованный остаток возвращается в фонд.</p>
+<p >Транзит через пул нужен и по существу (видно, сколько средств программы отдано под расходы), и технически: шасси работает с кооперативным пулом.</p>
+<p >Механика оплаты задаётся по каждой позиции (аванс под отчёт пайщику либо прямая оплата организации) и проверяется шасси.</p>
+<p >Guards:</p><ul>
+<li>записка подписана тем, от чьего имени подана; хотя бы одна позиция;</li>
+<li>сумма каждой позиции &gt; 0 в символе кооператива;</li>
+<li>расход с таким идентификатором ещё не подавался;</li>
+<li>достаточность средств фонда проверяет сам перевод в книге учёта. </li>
+</ul>
+
+</div>
+</div>
+<a id="adf724a2afcb8a567b4d33e74a5fd4b98" name="adf724a2afcb8a567b4d33e74a5fd4b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf724a2afcb8a567b4d33e74a5fd4b98">&#9670;&nbsp;</a></span>dclinecontr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::dclinecontr </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>contract_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель отказал в подписи договора — запись стирается, преподаватель может подписать договор заново. </p>
+<p >Председатель совета отказал в подписи договора УХД. Вызывается контрактом совета (<code><a class="el" href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce" title="Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответс...">soviet::declineapprv</a></code>). Запись стирается — преподаватель может подписать договор заново; причина остаётся в журнале действий.</p>
+<p ><code>username</code> — тот, кто отказал в совете (председатель), а не преподаватель: договор находится по hash. </p>
+
+</div>
+</div>
+<a id="a21773457e68c8670ab380ca677be0ce6" name="a21773457e68c8670ab380ca677be0ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21773457e68c8670ab380ca677be0ce6">&#9670;&nbsp;</a></span>dclridact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::dclridact </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Председатель отказал в подписи акта — материалы остаются на хранении, заявление закрывает председатель отдельным действием. </p>
+<p >Председатель совета отказал в подписи Акта приёма-передачи РИД. Вызывается контрактом совета (<code><a class="el" href="group__public__soviet__actions.html#ga96368e8655e0c6b72c6664a5fcdd08ce" title="Отклонение одобрения документа Отклоняет одобрение документа с указанием причины и выполняет соответс...">soviet::declineapprv</a></code>). Движений средств нет: материалы остаются на ответственном хранении, заявление закрывает председатель протоколом совета (<code>declinerid</code>) либо снятием с хранения (<code>recallrid</code>); причина остаётся в журнале действий.</p>
+<p ><code>username</code> — тот, кто отказал в совете (председатель), а не преподаватель. </p>
+
+</div>
+</div>
+<a id="ac951ea5368b4fb56561f3a4b8e26b8f2" name="ac951ea5368b4fb56561f3a4b8e26b8f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac951ea5368b4fb56561f3a4b8e26b8f2">&#9670;&nbsp;</a></span>declinerid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::declinerid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>decision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отказ совета в приёме РИД по Протоколу (3009). Материалы снимаются с ответственного хранения (o.edu.retrid, Дт 76 / Кт 08), запись стирается. </p>
+<p >Отказ совета в приёме РИД преподавателя.</p>
+<p >Совет принял отрицательное решение по заявлению (Протокол, шаблон 3009). Протокол публикуется в реестр документов пакетом процесса, материалы снимаются с ответственного хранения и возвращаются преподавателю.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.edu.retrid</code> (BURN с w.edu.hold, Дт 76 / Кт 08) — обязательство перед преподавателем и принятый актив закрываются встречно, паевой фонд остаётся нетронутым.</li>
+</ul>
+<p >Отказ без решения совета (решение не набрало голосов, истекло) протокола не имеет — такие материалы снимаются с хранения действием <code>recallrid</code>.</p>
+<p >Guards:</p><ul>
+<li>материалы с rid_hash приняты на хранение, заявление по ним подано;</li>
+<li>протокол не пустой. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab262db5233a27c211c64cf248897ac95" name="ab262db5233a27c211c64cf248897ac95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab262db5233a27c211c64cf248897ac95">&#9670;&nbsp;</a></span>delassign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::delassign </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>assignment_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Снять допуск преподавателя к курсу. </p>
+<p >Снятие допуска преподавателя к курсу.</p>
+<p >Запись стирается: новых занятий по этому допуску преподаватель не откроет. Занятие, по которому уже идёт расчёт, доводится до конца — его ставка зафиксирована в записи занятия. Движений средств нет. </p>
+
+</div>
+</div>
+<a id="ae68d19e6d5ae851528e3ab3e0f7751aa" name="ae68d19e6d5ae851528e3ab3e0f7751aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae68d19e6d5ae851528e3ab3e0f7751aa">&#9670;&nbsp;</a></span>droplesson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::droplesson </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отозвать отчёт о занятии до расчёта с участниками. </p>
+<p >Отзыв отчёта о занятии до расчёта с участниками.</p>
+<p >Преподаватель ошибся в дате либо длительности, либо на дату занятия нет участников с оплаченным доступом: запись занятия стирается, номер и минуты программы возвращаются группе. После первого расчёта по подписке занятие доводится до конца действием <code>holdrid</code>. Движений средств нет. </p>
+
+</div>
+</div>
+<a id="a4c44fad1f25e348039dc8ed4baf9130c" name="a4c44fad1f25e348039dc8ed4baf9130c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c44fad1f25e348039dc8ed4baf9130c">&#9670;&nbsp;</a></span>expiresub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::expiresub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрыть истёкшую подписку — запись стирается из RAM. </p>
+<p >Закрытие подписки по истечении оплаченного срока.</p>
+<p >Запись стирается из RAM: в таблице живут только активные подписки (chain-RAM — рабочее состояние, история доступа — у парсера). Момент закрытия определяет кооператив: истечение оплаченного срока либо досрочно, по его решению.</p>
+<p >Возврата участнику нет. Остаток по подписке расходится контрактом: удержанное и резерв за непроведённые занятия возвращаются на кошелёк программы, взнос преподавателей за проведённые занятия остаётся в резерве курса.</p>
+<p >Подписка, открытая до учёта занятий, закрывается по прежнему правилу: удержанное возвращается на кошелёк программы, запись стирается.</p>
+<p >Guards:</p><ul>
+<li>по подписке завершён расчёт за открытое занятие курса. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab99f51d0fa482e2ec0082583a7358c47" name="ab99f51d0fa482e2ec0082583a7358c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99f51d0fa482e2ec0082583a7358c47">&#9670;&nbsp;</a></span>holdrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::holdrid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>rid_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; checksum256 &gt;&#160;</td>
+          <td class="paramname"><em>pack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преподаватель передаёт материалы занятия на ответственное хранение по Акту (шаблон 3012). Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.hold (ISSUE → w.edu.hold, Дт 08 / Кт 76) — материалы числятся за преподавателем весь гарантийный срок курса. Запись запоминает курс занятия (<code>course_id</code>). </p>
+<p >Преподаватель передаёт материалы занятия кооперативу на ответственное хранение — расчёт по занятию завершается.</p>
+<p >Работа преподавателя овеществляется материалами занятия: он отчитывается после занятия (<code>openlesson</code>), приложение проводит расчёт с участниками (<code>chargelesson</code>), и преподаватель подписывает Акт передачи материалов на ответственное хранение (шаблон 3012) на сумму из записи занятия.</p>
+<p >Сумму и срок хранения берёт контракт: сумма — взнос преподавателя за занятие по числу участников с оплаченным доступом, срок — гарантийный срок курса от начала занятий. Кооператив принимает материалы как объект — паевым взносом они становятся позже, по заявлению преподавателя и решению совета.</p>
+<p >Запись занятия стирается — в цепи остаётся только запись материалов. Она запоминает курс: при приёме результат оплачивается из резерва преподавателям этого курса.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.edu.hold</code> (ISSUE → w.edu.hold, Дт 08 / Кт 76) — материалы приняты, у кооператива возникло обязательство перед преподавателем.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>занятие открыто этим преподавателем, окно расчёта закрыто, рассчитан хотя бы один участник;</li>
+<li>подпись акта валидна (username);</li>
+<li>преподаватель — активный член кооператива с действующим договором УХД. </li>
+</ul>
+
+</div>
+</div>
+<a id="a1add3318c8c2528019cb6e53bf96f9f2" name="a1add3318c8c2528019cb6e53bf96f9f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1add3318c8c2528019cb6e53bf96f9f2">&#9670;&nbsp;</a></span>onexpdone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::onexpdone </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::checksum256&#160;</td>
+          <td class="paramname"><em>expense_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>total_actual</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; char &gt;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Коллбэк шасси: расход завершён. Неизрасходованный остаток возвращается в фонд программы (o.edu.expunf), запись стирается. </p>
+<p >Коллбэк шасси расходов — расход программы завершён (p.edu.spend).</p>
+<p >Приходит inline-вызовом из шасси на терминальном переходе служебной записки: совет отклонил расход либо расход закрыт после отчёта.</p><ul>
+<li>отклонение — выделенное возвращается в фонд целиком (оплат до отклонения быть не может);</li>
+<li>закрытие в пределах выделенного — в фонд возвращается разница (o.edu.expunf);</li>
+<li>закрытие с перерасходом — шасси доплатило получателю аванса из пула расходов сверх выделенного под этот расход, то есть заняло у соседних расходов. Превышение докрывается из фонда программы в пул (o.edu.expfnd). Фонд держит только свободные средства программы, поэтому докрыть можно не больше, чем в нём есть: при нехватке закрытие ждёт пополнения фонда.</li>
+</ul>
+<p >Расход завершён — запись программы стирается из RAM, история движений остаётся в журнале действий.</p>
+<p >Guards:</p><ul>
+<li>require_auth(_expense) — вызывает только шасси расходов;</li>
+<li>расход найден по идентификатору записки;</li>
+<li>статус — «закрыт» либо «отклонён»; при отклонении потраченного нет. </li>
+</ul>
+
+</div>
+</div>
+<a id="a3659072dccc5cffad9eaa62dcc390678" name="a3659072dccc5cffad9eaa62dcc390678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3659072dccc5cffad9eaa62dcc390678">&#9670;&nbsp;</a></span>onridauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::onridauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обратный вызов совета: заявление о паевом взносе РИД принято (протокол 3009 подписан председателем). Движений средств нет — паевой фонд признаётся позже, по акту приёма-передачи (<code>acceptrid</code>). require_auth(_soviet). </p>
+<p >Обратный вызов совета: заявление о паевом взносе РИД принято.</p>
+<p ><code><a class="el" href="group__public__soviet__actions.html#ga2df3ffc1ac9da194963f3be0aadc4139" title="Исполнение решения совета">soviet::exec</a></code> после утверждения протокола (шаблон 3009) зовёт это действие с <code>hash = rid_hash</code> и подписанным председателем протоколом. Контракт лишь сверяет, что материалы на хранении и заявление по ним подано: движений средств нет, паевой фонд признаётся позже, по акту приёма-передачи (<code>acceptrid</code>), который подписывают преподаватель и председатель. Запись в RAM не меняется — состояние «совет принял решение» ведёт приложение кооператива по этому действию в цепи.</p>
+<p >Guards:</p><ul>
+<li>вызывает контракт совета;</li>
+<li>материалы с rid_hash приняты на хранение и заявление подано. </li>
+</ul>
+
+</div>
+</div>
+<a id="a0c389ad52604621140212f4923cb52e3" name="a0c389ad52604621140212f4923cb52e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c389ad52604621140212f4923cb52e3">&#9670;&nbsp;</a></span>onriddecl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::onriddecl </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обратный вызов совета: в приёме паевого взноса РИД отказано либо вопрос снят с повестки. Движений средств нет — материалы с хранения снимает председатель (<code>recallrid</code>). require_auth(_soviet). </p>
+<p >Обратный вызов совета: в приёме паевого взноса РИД отказано либо вопрос снят с повестки по сроку.</p>
+<p >Отрицательного протокола у совета не бывает, поэтому движений здесь нет: материалы остаются на ответственном хранении, снимает их председатель действием <code>recallrid</code> с основанием. Приложение кооператива по этому действию в цепи помечает заявление исходом совета.</p>
+<p >Guards:</p><ul>
+<li>вызывает контракт совета;</li>
+<li>материалы с rid_hash приняты на хранение. </li>
+</ul>
+
+</div>
+</div>
+<a id="abf6d8b187f2e0fcc854a49ffa9364b57" name="abf6d8b187f2e0fcc854a49ffa9364b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf6d8b187f2e0fcc854a49ffa9364b57">&#9670;&nbsp;</a></span>onwarrauth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::onwarrauth </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>authorization</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обратный вызов совета: заявление по Гарантийным условиям удовлетворено, протокол (шаблон 3014) подписан. Подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника. </p>
+<p >Обратный вызов совета: заявление об аннулировании подписки по гарантийным условиям удовлетворено.</p>
+<p >Совет проголосовал, председатель подписал протокол (шаблон 3014) — совет вызывает это действие с протоколом. Подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника; сумму берёт контракт. Протокол публикуется в реестре документов пакетом подписки.</p>
+<p >Guards:</p><ul>
+<li>вызывает только контракт совета;</li>
+<li>протокол не пустой;</li>
+<li>подписка существует, и по ней рассматривается заявление;</li>
+<li>по подписке завершён расчёт за открытое занятие группы. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab925f18fcc6ce6a4a0cdd819fbfee049" name="ab925f18fcc6ce6a4a0cdd819fbfee049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab925f18fcc6ce6a4a0cdd819fbfee049">&#9670;&nbsp;</a></span>onwarrdecl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::onwarrdecl </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обратный вызов совета: по заявлению по Гарантийным условиям отказано либо вопрос снят с повестки. Заморозка взноса снимается, подписка продолжает действовать. </p>
+<p >Обратный вызов совета: по заявлению об аннулировании подписки по гарантийным условиям отказано либо вопрос снят с повестки по сроку.</p>
+<p >Подписки могло уже не быть (закрылась, пока совет решал) — тогда снимать нечего, и действие завершается без отказа, чтобы совет закрыл вопрос. </p>
+
+</div>
+</div>
+<a id="a322161da37dfee6b0be273c8ce45ee74" name="a322161da37dfee6b0be273c8ce45ee74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a322161da37dfee6b0be273c8ce45ee74">&#9670;&nbsp;</a></span>openlesson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::openlesson </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>assignment_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>held_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>minutes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>slot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преподаватель отчитался о занятии календаря — открыть расчёт с участниками. Номер, дата, длительность и окно — из календаря группы; стоимость занятия — по окну, ставка преподавателя фиксируется на момент отчёта. </p>
+<p >Преподаватель отчитался о проведённом занятии — открывается расчёт.</p>
+<p >Занятие берётся из календаря группы: приложение называет его номер в программе, дату, длительность и окно расписания. Запись занятия фиксирует ставку преподавателя на курсе и стоимость занятия для участника по окну. Учёт идёт в минутах: занятие занимает в программе свои минуты. Взнос преподавателя — его ставка за проведённое время, но не больше стоимости занятия по окну. После отчёта приложение по одной подписке вызывает <code>chargelesson</code>, закрывает окно расчёта <code>closecharge</code>, затем преподаватель передаёт материалы <code>holdrid</code>.</p>
+<p >Порядка отчётов нет: занятия группы отчитываются в любой очерёдности, у каждого свой номер из календаря. Номер занимается один раз; второй расчёт подписки за тот же номер контракт отклоняет. В гарантийный срок группы занятие закрывается самим отчётом: акт и заявление преподаватель подписывает после срока, одной суммой за все занятия периода. Движений средств нет.</p>
+<p >Guards:</p><ul>
+<li>допуск принадлежит преподавателю, его договор действует;</li>
+<li>курс активирован, дата занятия — не раньше начала занятий и не в будущем;</li>
+<li>номер занятия ещё не занят;</li>
+<li>минут программы хватает на длительность занятия. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab3d222a971f4641a787c1cf521b64cf8" name="ab3d222a971f4641a787c1cf521b64cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d222a971f4641a787c1cf521b64cf8">&#9670;&nbsp;</a></span>opensub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::opensub </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>learner_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>statement_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открыть подписку на курс для обучающегося. Срок и взнос считает <code>chargefee</code>. </p>
+<p >Открытие подписки на курс для обучающегося.</p>
+<p >Создаёт строку подписки без оплаченного срока. Срок, взнос и резерв преподавателям считает <code>chargefee</code> — приложение вызывает его той же транзакцией.</p>
+<p >Движений средств нет.</p>
+<p >Guards:</p><ul>
+<li>условия курса заданы;</li>
+<li>пайщик — действующий член кооператива;</li>
+<li>подписки с таким hash ещё нет. </li>
+</ul>
+
+</div>
+</div>
+<a id="ab2175c25ef205f34e9f3ab1b006450d5" name="ab2175c25ef205f34e9f3ab1b006450d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2175c25ef205f34e9f3ab1b006450d5">&#9670;&nbsp;</a></span>recallrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::recallrid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Снятие материалов занятия с ответственного хранения по рекламации внутри гарантийного срока (o.edu.retrid, Дт 76 / Кт 08). Материалы возвращаются преподавателю, паевой взнос по ним не оформляется. </p>
+<p >Снятие материалов занятия с ответственного хранения без приёма.</p>
+<p >Два основания. Подтверждённый гарантийный случай внутри срока: заявление в совет не уходит. И заявление, по которому совет решения о приёме не принял (не набрало голосов, истекло): отрицательного протокола у совета не бывает, поэтому отказ оформляется снятием с хранения с указанием основания. В обоих случаях материалы возвращаются преподавателю, паевой взнос не оформляется, паевой фонд не затрагивается — обязательство перед преподавателем и принятый на хранение актив закрываются встречно.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.edu.retrid</code> (BURN с w.edu.hold, Дт 76 / Кт 08).</li>
+</ul>
+<p >Guards:</p><ul>
+<li>материалы с rid_hash приняты на хранение (запись живёт до <code>acceptrid</code> либо <code>declinerid</code>, после них снимать нечего);</li>
+<li>основание указано. </li>
+</ul>
+
+</div>
+</div>
+<a id="ae9cade7564da69f86f6fdfa7ee715c01" name="ae9cade7564da69f86f6fdfa7ee715c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9cade7564da69f86f6fdfa7ee715c01">&#9670;&nbsp;</a></span>regstatement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::regstatement </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Опубликовать Заявление о взносе (шаблон 3011), целиком покрытом кошельком программы участника: конвертации нет, и <code>convert</code> его не публикует. Движений средств нет. </p>
+<p >Публикация Заявления о взносе, целиком покрытом кошельком программы.</p>
+<p >Обычно заявление (шаблон 3011) публикует <code>convert</code>. Когда взнос за период полностью покрыт остатком кошелька программы участника, конвертации нет — и подписанное заявление публикуется этим действием в той же транзакцией, что открытие либо продление подписки. Движений средств нет. Заявление публикуется пакетом процесса подписки (package = sub_hash), как и в <code>convert</code>.</p>
+<p >Guards:</p><ul>
+<li>заявление не пустое и подписано ключом самого пайщика;</li>
+<li>пайщик — действующий член кооператива. </li>
+</ul>
+
+</div>
+</div>
+<a id="a34ceb4f174b670e3466b377c01ebbffe" name="a34ceb4f174b670e3466b377c01ebbffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ceb4f174b670e3466b377c01ebbffe">&#9670;&nbsp;</a></span>retshare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::retshare </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекратить участие пайщика в ЦПП «Образование» по его заявлению об аннулировании соглашения: весь остаток кошелька программы уходит в паевой (o.edu.retshr, Дт 86 / Кт 80), соглашение о программе аннулируется. Подписки к этому моменту закрыты. </p>
+<p >Прекращение участия пайщика в ЦПП «Образование».</p>
+<p >Членский взнос программы возвращается в паевой только с прекращением участия в программе: по заявлению пайщика, при его выходе из кооператива и при отмене курса по недобору. Частичного перевода в паевой нет — пока пайщик участвует в программе, остаток его кошелька программы идёт только на новые подписки.</p>
+<p >Основание — заявление об аннулировании соглашения об участии в программе (тот же бланк, что при выходе из кооператива, без выхода и с одной этой программой в таблице). Пайщик подписывает его, кооператив согласует и до этого действия закрывает все подписки пайщика с возвратом по Положению. Здесь остаток кошелька программы целиком уходит в паевой, а соглашение об участии в программе аннулируется. Чтобы снова учиться, пайщик подписывает оферту программы заново.</p>
+<p >Одна ledger2-операция (при ненулевом остатке):</p><ul>
+<li><code>o.edu.retshr</code> (TRANSFER w.edu.member → w.wal.share, Дт 86 / Кт 80) — инверсия <code>o.edu.conv</code>. Inline <code><a class="el" href="classwallet.html#a4247f928bc7e5dd1779e923f47fd04f1" title="Расторжение программного соглашения пайщика.">wallet::revokeagree</a></code> — соглашение о программе «Обучение» снято.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>заявление подписано пайщиком его ключом; пайщик — действующий член;</li>
+<li>действующих подписок у пайщика нет;</li>
+<li>сумма равна всему остатку w.edu.member, ноль допустим. </li>
+</ul>
+
+</div>
+</div>
+<a id="a41a404a14f0d2d5f1e185458e54c5a61" name="a41a404a14f0d2d5f1e185458e54c5a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41a404a14f0d2d5f1e185458e54c5a61">&#9670;&nbsp;</a></span>setassign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::setassign </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>assignment_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Допуск преподавателя к курсу и его ставка за час на одного участника; не выше плановой ставки курса. Меняется по ходу курса. </p>
+<p >Допуск преподавателя к курсу и его ставка на этом курсе.</p>
+<p >Ставка — за час на одного участника. Администратор задаёт её при допуске и меняет по ходу курса: новая ставка действует на занятия, открытые после правки. Ставка не выше плановой ставки курса — оплата занятия заложена во взнос участника по плановой.</p>
+<p >Движений средств нет.</p>
+<p >Guards:</p><ul>
+<li>у преподавателя действующий договор участия в хозяйственной деятельности;</li>
+<li>условия курса заданы;</li>
+<li>ставка &gt; 0 и не выше плановой ставки курса;</li>
+<li>допуск с этим номером принадлежит тому же преподавателю и курсу. </li>
+</ul>
+
+</div>
+</div>
+<a id="ad0d69c9b7d2e6dc849ef57674799898e" name="ad0d69c9b7d2e6dc849ef57674799898e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d69c9b7d2e6dc849ef57674799898e">&#9670;&nbsp;</a></span>setcourse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::setcourse </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>course_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>per_learner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>target_fee_month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>minutes_per_month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>minutes_total</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; edu_slot_terms &gt;&#160;</td>
+          <td class="paramname"><em>slots</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>course_payment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>discount_bp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>guarantee_secs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::time_point_sec&#160;</td>
+          <td class="paramname"><em>starts_at</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>month_secs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Задать условия курса: окна расписания со стоимостью занятия, способ расчёта с преподавателем (за каждого участника либо фиксированный за занятие), целевой членский взнос за месяц, минуты занятий в месяц и в программе, скидку за взнос разом, гарантийный срок и дату начала занятий. По ним контракт считает все суммы: учёт ведётся в минутах занятий. </p>
+<p >Условия курса: по ним контракт считает все суммы процесса.</p>
+<p >Администратор задаёт окна расписания со стоимостью занятия каждого окна, способ расчёта с преподавателем (за каждого участника либо фиксированный за занятие), целевой членский взнос за месяц, минуты занятий, скидку за взнос разом, гарантийный срок и дату начала занятий. Взнос участника, резерв преподавателям, взнос преподавателя за занятие и возврат считаются отсюда.</p>
+<p ><code>month_secs</code> — длина месяца в секундах для стенда разработки со сжатым временем; в работе приложение передаёт 0, и контракт считает месяц четырьмя неделями (28 дней). При действующих подписках она тоже не меняется.</p>
+<p >При действующих подписках денежные условия не меняются: участники вносили взнос по ним. Дата начала занятий не меняется после первого занятия.</p>
+<p >Движений средств нет.</p>
+<p >Guards:</p><ul>
+<li>хотя бы одно окно; стоимость окна и целевой членский взнос в символе кооператива;</li>
+<li>минут занятий в месяц &gt; 0;</li>
+<li>скидка за взнос разом не больше целевого членского взноса;</li>
+<li>при действующих подписках денежные условия прежние. </li>
+</ul>
+
+</div>
+</div>
+<a id="ae72ca8d6457bd945d58238a33ea519a3" name="ae72ca8d6457bd945d58238a33ea519a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae72ca8d6457bd945d58238a33ea519a3">&#9670;&nbsp;</a></span>signcontract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::signcontract </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>contract_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>contract</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преподаватель подписывает Договор участия в хозяйственной деятельности (шаблон 3006) — первая подпись. Договор уходит на вторую подпись председателю совета (стол председателя, «Запросы одобрений»); до неё запись в <code>educontracts</code> стоит в <code>pending</code>. </p>
+<p >Преподаватель подписывает Договор участия в хозяйственной деятельности — первая подпись.</p>
+<p >Открывает процесс p.edu.teach: запись договора заводится в <code>pending</code>, а документ уходит председателю совета на вторую подпись через одобрение (<code><a class="el" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></code>). Публикации в реестре документов на этом шаге нет — в реестр попадает уже двухподписный документ в <code>apprvcontr</code>.</p>
+<p >Guards:</p><ul>
+<li>договор подписан преподавателем; hash документа совпадает с contract_hash;</li>
+<li>преподаватель — активный член кооператива;</li>
+<li>у преподавателя нет договора (ни действующего, ни ожидающего подписи);</li>
+<li>contract_hash ещё не занят. </li>
+</ul>
+
+</div>
+</div>
+<a id="a57f8cc409c3046f10e2ff7e0fc3f7bfe" name="a57f8cc409c3046f10e2ff7e0fc3f7bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f8cc409c3046f10e2ff7e0fc3f7bfe">&#9670;&nbsp;</a></span>signridact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::signridact </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>decision</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преподаватель подписал Акт приёма-передачи РИД (шаблон 3010) — первая подпись. Протокол совета (3009) публикуется в реестр, акт уходит на вторую подпись председателю через одобрение («Запросы одобрений»). </p>
+<p >Преподаватель подписал Акт приёма-передачи (шаблон 3010) — первая подпись. Акт уходит на вторую подпись председателю совета через одобрение (<code><a class="el" href="namespace_soviet.html#ac2a7d429ce980f07d8fe02c278b037bd">Soviet::create_approval</a></code> → стол председателя, «Запросы одобрений» → <code><a class="el" href="group__public__soviet__actions.html#ga2779984bdbc11569526b983f5f6c6101" title="Подтверждение одобрения документа Подтверждает одобрение документа и выполняет соответствующий обратн...">soviet::confirmapprv</a></code> → <code>apprvridact</code>), как договор УХД (<code>signcontract</code>).</p>
+<p >Протокол совета (3009), которым принято заявление, приходит вместе с актом и публикуется в реестр документов сразу: при второй подписи акт уже принимается по нему. Движений средств на этом шаге нет.</p>
+<p >Guards:</p><ul>
+<li>материалы с rid_hash приняты на хранение и заявление по ним подано;</li>
+<li>акт подписан преподавателем материалов, протокол не пустой. </li>
+</ul>
+
+</div>
+</div>
+<a id="a35b39c1dbad93eced3edc9e8dc8fbecd" name="a35b39c1dbad93eced3edc9e8dc8fbecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b39c1dbad93eced3edc9e8dc8fbecd">&#9670;&nbsp;</a></span>submitrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::submitrid </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>rid_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>assignment_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>rid_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Преподаватель подаёт Заявление о паевом взносе результатом интеллектуальной деятельности (шаблон 3008) по истечении гарантийного срока. Движений средств нет. </p>
+<p >Преподаватель подаёт Заявление о паевом взносе результатом интеллектуальной деятельности (РИД).</p>
+<p >Продолжает процесс p.edu.rid, открытый приёмом материалов на ответственное хранение (<code>holdrid</code>). Гарантийный срок курса истёк, материалы остались у кооператива — преподаватель просит принять их в паевой фонд. Заявление (шаблон 3008) публикуется в реестр документов, и тем же действием контракт ставит вопрос в повестку совета: инлайн <code><a class="el" href="group__public__soviet__actions.html#gaea9cdcb4feb799f9f982f1490e5f589d" title="Создание повестки дня для голосования совета Создает новую повестку дня для голосования совета по раз...">soviet::createagenda</a></code> с <code>type=eduacptrid</code>, <code>hash=rid_hash</code>, документом повестки — этим заявлением и обратными вызовами <code>onridauth</code> / <code>onriddecl</code>. Совет подписывает протокол (шаблон 3009) по заявлению — как по возврату в Столе заказов. Движений средств на этом шаге нет: паевой фонд признаётся по решению совета и акту (<code>acceptrid</code>).</p>
+<p >Guards:</p><ul>
+<li>материалы с rid_hash приняты на хранение и гарантийный срок истёк;</li>
+<li>оценка, вид результата и задание совпадают с принятыми на хранение;</li>
+<li>заявление по этим материалам ещё не подано;</li>
+<li>подпись Заявления валидна (username);</li>
+<li>преподаватель — активный член кооператива с действующим договором УХД. </li>
+</ul>
+
+</div>
+</div>
+<a id="a0b513c4772daf95aa6b3c297b6d2128c" name="a0b513c4772daf95aa6b3c297b6d2128c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b513c4772daf95aa6b3c297b6d2128c">&#9670;&nbsp;</a></span>termcontract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::termcontract </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>contract_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>reason</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Прекратить Договор участия в хозяйственной деятельности — при выходе преподавателя из кооператива либо по соглашению сторон. Запись стирается; вернувшийся пайщик подписывает договор заново. </p>
+<p >Прекращение Договора участия в хозяйственной деятельности.</p>
+<p >Договор действует, пока преподаватель — пайщик: с выходом из кооператива он прекращается, так же как и по соглашению сторон. Запись стирается — в RAM живут только действующие и ожидающие договоры; вернувшийся пайщик подписывает договор заново.</p>
+<p >Движений средств нет.</p>
+<p >Guards:</p><ul>
+<li>у преподавателя есть договор с указанным hash;</li>
+<li>основание указано;</li>
+<li>расчёт закрыт: нет материалов на ответственном хранении. </li>
+</ul>
+
+</div>
+</div>
+<a id="adcab52af76337fd54f199b013a3dbcf2" name="adcab52af76337fd54f199b013a3dbcf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcab52af76337fd54f199b013a3dbcf2">&#9670;&nbsp;</a></span>unlockfee()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::unlockfee </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрыть гарантийный срок участника: взнос перестаёт удерживаться целиком. Оплата занятий выделяется в резерв преподавателям (o.edu.allot), удержанной остаётся сумма возможного возврата при отказе, остальное — на кошельке программы (o.edu.unlock). Суммы считает контракт. </p>
+<p >Гарантийный срок участника истёк — взнос перестаёт удерживаться целиком.</p>
+<p >Пока идёт гарантийный срок, взнос удержан весь: возврат по гарантии — полный. После срока остаётся возврат при отказе — половина остаточной стоимости подписки. Действие выделяет оплату занятий в резерв преподавателям и оставляет удержанной только сумму возможного возврата сверх резерва; остальное остаётся на кошельке программы.</p>
+<p >Дальше удержание уменьшается само, по мере проведения занятий (<code>chargelesson</code>). Суммы считает контракт. Приложение вызывает действие по одной подписке.</p>
+<p >Движения средств:</p><ul>
+<li><code>o.edu.unlock</code> (TRANSFER w.edu.escrow → w.edu.fund) — удержанное сверх суммы возможного возврата;</li>
+<li><code>o.edu.allot</code> (TRANSFER w.edu.fund → w.edu.teach) — оплата занятий.</li>
+</ul>
+<p >Guards:</p><ul>
+<li>подписка существует и ведёт учёт занятий;</li>
+<li>гарантийный срок участника истёк и ещё не закрыт. </li>
+</ul>
+
+</div>
+</div>
+<a id="a56c2e72ae82637517c0385c116fdac75" name="a56c2e72ae82637517c0385c116fdac75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56c2e72ae82637517c0385c116fdac75">&#9670;&nbsp;</a></span>warrclaim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::warrclaim </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Опубликовать Заявление об аннулировании Подписки по Гарантийным условиям (шаблон 3013): основание для рассмотрения советом. Взнос участника замораживается до решения совета; подписка остаётся действующей. </p>
+<p >Публикация Заявления об аннулировании Подписки по Гарантийным условиям.</p>
+<p >Положение о ЦПП «Образование» (п. 4.4.2) даёт участнику право аннулировать подписку, для которой объявлены гарантийные условия, обоснованным заявлением. Заявление (шаблон 3013) рассматривает совет: при удовлетворении подписка закрывается с возвратом всей списанной стоимости на паевой (<code>cancelsub</code>), при отказе у участника остаётся обычный отказ от подписки. Здесь заявление публикуется в реестре документов и тем же действием ставится в повестку совета (тип решения <code>eduguarantee</code>, hash = sub_hash, документ повестки — это заявление). Совет подписывает протокол (шаблон 3014) — приходит <code>onwarrauth</code>, отказывает либо не решает в срок — <code>onwarrdecl</code>. Движений средств нет, подписка остаётся действующей.</p>
+<p >Guards:</p><ul>
+<li>заявление не пустое и подписано ключом самого пайщика;</li>
+<li>пайщик — действующий член кооператива;</li>
+<li>подписка с указанным hash существует и принадлежит этому пайщику.</li>
+</ul>
+<p >Срок гарантийных условий контракт не проверяет: его объявляет кооператив в карточке курса, и он же принимает заявление к рассмотрению. </p>
+
+</div>
+</div>
+<a id="a3b885a0cd0183e027d3950f035e8a221" name="a3b885a0cd0183e027d3950f035e8a221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b885a0cd0183e027d3950f035e8a221">&#9670;&nbsp;</a></span>warrdecline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::warrdecline </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Совет отказал по заявлению об аннулировании Подписки по Гарантийным условиям: заморозка взноса снимается, подписка продолжает действовать. Гарантийный срок группы уже вышел — оплата занятий участника за гарантийный период остаётся на кошельке программы. </p>
+<p >Совет отказал по заявлению об аннулировании подписки по гарантийным условиям.</p>
+<p >Общий порядок отказа — <code><a class="el" href="namespace_edubridge.html#a1cfb893a19b10c7440bd4759066670f2">Edubridge::decline_guarantee</a></code>: его же зовёт обратный вызов совета <code>onwarrdecl</code>. Действие оставлено для заявлений, поданных до повестки контракта.</p>
+<p >Заморозка взноса снимается, подписка продолжает действовать. Гарантийный срок группы ещё идёт — подписка возвращается к обычному порядку. Срок уже вышел — оплата занятий, проведённых участнику за гарантийный период, преподавателям не выделяется и остаётся на кошельке программы; оплата непроведённых занятий выделяется в резерв преподавателям как у прочих подписок (<code>o.edu.allot</code>), удержание уменьшается до суммы возможного возврата (<code>o.edu.unlock</code>). </p>
+
+</div>
+</div>
+<a id="acd051abbe8a563b4305aa403765f8cf2" name="acd051abbe8a563b4305aa403765f8cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd051abbe8a563b4305aa403765f8cf2">&#9670;&nbsp;</a></span>warrgrant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::warrgrant </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>claim_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">checksum256&#160;</td>
+          <td class="paramname"><em>sub_hash</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>decision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Решение совета об удовлетворении заявления по Гарантийным условиям (шаблон 3014): подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника. Сумму берёт контракт. </p>
+<p >Решение совета об удовлетворении заявления по Гарантийным условиям.</p>
+<p >Совет удовлетворил заявление участника (п. 4.4.3–4.4.4 Положения о ЦПП «Образование»): подписка аннулируется, весь взнос по ней возвращается в паевой взнос участника. Протокол (шаблон 3014) публикуется в реестре документов и привязывается к заявлению.</p>
+<p >Сумму возврата берёт контракт — всё собранное по подписке. Возврат обеспечен всегда: взнос участника удержан. Взнос преподавателей за уже проведённые занятия выделяется в резерв курса из средств этого же курса, сколько их есть; средства других курсов не используются.</p>
+<p >Guards:</p><ul>
+<li>протокол не пустой и целостный;</li>
+<li>подписка существует, принадлежит пайщику и ведёт учёт занятий;</li>
+<li>по подписке завершён расчёт за открытое занятие курса. </li>
+</ul>
+
+</div>
+</div>
+<a id="a085fbb164474a9cddc479768199a7f7b" name="a085fbb164474a9cddc479768199a7f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085fbb164474a9cddc479768199a7f7b">&#9670;&nbsp;</a></span>wthshare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edubridge::wthshare </td>
+          <td>(</td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>coopname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::name&#160;</td>
+          <td class="paramname"><em>username</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">eosio::asset&#160;</td>
+          <td class="paramname"><em>amount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structdocument2.html">document2</a>&#160;</td>
+          <td class="paramname"><em>statement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Трансляция паевого взноса преподавателя из ЦПП «Образование» в ЦПП «Цифровой Кошелёк» по его Заявлению (шаблон 3015), на весь остаток или его часть. Один шаг <a class="el" href="classledger2.html" title="Контракт ledger2.">ledger2</a>: o.edu.wthshr (TRANSFER w.edu.share → w.wal.share, без проводки). Возврат паевого взноса идёт уже с Цифрового Кошелька штатным заявлением о возврате. </p>
+<p >Трансляция паевого взноса преподавателя из ЦПП «Образование» в ЦПП «Цифровой Кошелёк».</p>
+<p >Принятый результат зачисляется преподавателю паевым взносом на кошелёк программы — баланс его договора участия в хозяйственной деятельности (<code>acceptrid</code>, o.edu.ridshr). Вернуть паевой взнос деньгами можно только с Цифрового Кошелька, поэтому преподаватель сначала переводит туда весь остаток или его часть своим заявлением (шаблон 3015; п. 5.3.1 договора), а возврат оформляет уже штатным заявлением о возврате паевого взноса.</p>
+<p >Одна ledger2-операция:</p><ul>
+<li><code>o.edu.wthshr</code> (TRANSFER w.edu.share → w.wal.share, без проводки — оба кошелька на счёте 80).</li>
+</ul>
+<p >Записи в RAM нет: заявление исполняется сразу и публикуется в реестр документов.</p>
+<p >Guards:</p><ul>
+<li>заявление подписано пайщиком его ключом; пайщик — действующий член;</li>
+<li>сумма положительна и не больше остатка паевого кошелька программы. </li>
+</ul>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>cpp/edubridge/<a class="el" href="edubridge_2edubridge_8hpp_source.html">edubridge.hpp</a></li>
+<li>cpp/edubridge/<a class="el" href="edubridge_8cpp.html">edubridge.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="cancelsub_8cpp.html">cancelsub.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="chargefee_8cpp.html">chargefee.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="edubridge_2src_2p_8edu_8access_2convert_8cpp.html">convert.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="expiresub_8cpp.html">expiresub.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="opensub_8cpp.html">opensub.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="regstatement_8cpp.html">regstatement.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="retshare_8cpp.html">retshare.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="setcourse_8cpp.html">setcourse.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="unlockfee_8cpp.html">unlockfee.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="warrclaim_8cpp.html">warrclaim.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.access/<a class="el" href="warrgrant_8cpp.html">warrgrant.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="acceptrid_8cpp.html">acceptrid.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="apprvridact_8cpp.html">apprvridact.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="chargelesson_8cpp.html">chargelesson.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="dclridact_8cpp.html">dclridact.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="declinerid_8cpp.html">declinerid.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="holdrid_8cpp.html">holdrid.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="onridauth_8cpp.html">onridauth.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="onriddecl_8cpp.html">onriddecl.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="openlesson_8cpp.html">openlesson.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="recallrid_8cpp.html">recallrid.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="signridact_8cpp.html">signridact.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="submitrid_8cpp.html">submitrid.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.rid/<a class="el" href="edubridge_2src_2p_8edu_8rid_2wthshare_8cpp.html">wthshare.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.spend/<a class="el" href="edubridge_2src_2p_8edu_8spend_2createexp_8cpp.html">createexp.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.spend/<a class="el" href="edubridge_2src_2p_8edu_8spend_2onexpdone_8cpp.html">onexpdone.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.teach/<a class="el" href="apprvcontr_8cpp.html">apprvcontr.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.teach/<a class="el" href="dclinecontr_8cpp.html">dclinecontr.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.teach/<a class="el" href="setassign_8cpp.html">setassign.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.teach/<a class="el" href="signcontract_8cpp.html">signcontract.cpp</a></li>
+<li>cpp/edubridge/src/p.edu.teach/<a class="el" href="termcontract_8cpp.html">termcontract.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classedubridge.html">edubridge</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

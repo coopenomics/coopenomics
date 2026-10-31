@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['balances_5fbase_0',['balances_base',['../structbalances__base.html',1,'']]],
+  ['bid_5frefund_1',['bid_refund',['../structeosiosystem_1_1bid__refund.html',1,'eosiosystem']]],
+  ['billing_2',['billing',['../classbilling.html',1,'']]],
+  ['bios_3',['bios',['../classeosiobios_1_1bios.html',1,'eosiobios']]],
+  ['block_5fbatch_5finfo_4',['block_batch_info',['../structeosiosystem_1_1block__info_1_1block__batch__info.html',1,'eosiosystem::block_info']]],
+  ['block_5fheader_5',['block_header',['../structeosiobios_1_1block__header.html',1,'eosiobios::block_header'],['../structeosiosystem_1_1block__header.html',1,'eosiosystem::block_header']]],
+  ['block_5finfo_5frecord_6',['block_info_record',['../structanonymous__namespace_02eosio_8system__blockinfo__tests_8cpp_03_1_1block__info__record.html',1,'anonymous_namespace{eosio.system_blockinfo_tests.cpp}::block_info_record'],['../structeosiosystem_1_1block__info_1_1block__info__record.html',1,'eosiosystem::block_info::block_info_record']]],
+  ['board_5fmember_7',['board_member',['../structboard__member.html',1,'']]],
+  ['boards_8',['boards',['../structboards.html',1,'']]],
+  ['boot_9',['boot',['../classeosioboot_1_1boot.html',1,'eosioboot']]],
+  ['branch_10',['branch',['../classbranch.html',1,'']]],
+  ['branch_5faid_11',['branch_aid',['../structbranch__aid.html',1,'']]],
+  ['branch_5fexpense_12',['branch_expense',['../structbranch__expense.html',1,'']]],
+  ['branch_5fweight_13',['branch_weight',['../structbranch__weight.html',1,'']]],
+  ['branch_5fweight_5ftotal_14',['branch_weight_total',['../structbranch__weight__total.html',1,'']]],
+  ['branchstat_15',['branchstat',['../structbranchstat.html',1,'']]],
+  ['budget_16',['budget',['../struct_cleanup_1_1budget.html',1,'Cleanup']]]
+];
