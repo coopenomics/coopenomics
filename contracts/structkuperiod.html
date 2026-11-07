@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура kuperiod</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structkuperiod.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structkuperiod-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура kuperiod</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Итог прогона списания обеспечительной части по кооперативному участку Стола заказов (задача 99D-21, КЭУ-3; документ «Коэффициент экономического участия», разделы 8–9).  
+ <a href="structkuperiod.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="table__marketplace__periods_8hpp_source.html">table_marketplace_periods.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:aa6c438c8518c5410b8c434591d174184"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#aa6c438c8518c5410b8c434591d174184">primary_key</a> () const</td></tr>
+<tr class="separator:aa6c438c8518c5410b8c434591d174184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e5aba67a7cbc87094e21d6edad1ae1"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a54e5aba67a7cbc87094e21d6edad1ae1">by_branch</a> () const</td></tr>
+<tr class="separator:a54e5aba67a7cbc87094e21d6edad1ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71155e97a4500310a1209b9cc9e64e1"><td class="memItemLeft" align="right" valign="top">uint128_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#ad71155e97a4500310a1209b9cc9e64e1">by_branch_period</a> () const</td></tr>
+<tr class="separator:ad71155e97a4500310a1209b9cc9e64e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:af4f71736825ff794688d75841de5a089"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#af4f71736825ff794688d75841de5a089">id</a></td></tr>
+<tr class="memdesc:af4f71736825ff794688d75841de5a089"><td class="mdescLeft">&#160;</td><td class="mdescRight">суррогатный ключ (scope coopname)  <a href="structkuperiod.html#af4f71736825ff794688d75841de5a089">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4f71736825ff794688d75841de5a089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a240699a0447f6ecc818b9507702ed"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a44a240699a0447f6ecc818b9507702ed">braname</a></td></tr>
+<tr class="memdesc:a44a240699a0447f6ecc818b9507702ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">кооперативный участок  <a href="structkuperiod.html#a44a240699a0447f6ecc818b9507702ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:a44a240699a0447f6ecc818b9507702ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb35489fd6bbc8443497eaa419c22cb3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3">period</a></td></tr>
+<tr class="memdesc:acb35489fd6bbc8443497eaa419c22cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">номер прогона: год × 12 + месяц по часовому поясу кооператива (даёт ИСТОК)  <a href="structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3">Подробнее...</a><br /></td></tr>
+<tr class="separator:acb35489fd6bbc8443497eaa419c22cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c6118e206ef082e8eb0a8f06266b61"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61">turnover</a></td></tr>
+<tr class="memdesc:a00c6118e206ef082e8eb0a8f06266b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">T — стоимость заказов прогона  <a href="structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61">Подробнее...</a><br /></td></tr>
+<tr class="separator:a00c6118e206ef082e8eb0a8f06266b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e40075d8f313dc0cfdbffabe076804"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804">secured</a></td></tr>
+<tr class="memdesc:a37e40075d8f313dc0cfdbffabe076804"><td class="mdescLeft">&#160;</td><td class="mdescRight">C — собранная обеспечительная часть прогона  <a href="structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804">Подробнее...</a><br /></td></tr>
+<tr class="separator:a37e40075d8f313dc0cfdbffabe076804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc821942cb3d705387ff703ddecb2414"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#acc821942cb3d705387ff703ddecb2414">planned</a></td></tr>
+<tr class="memdesc:acc821942cb3d705387ff703ddecb2414"><td class="mdescLeft">&#160;</td><td class="mdescRight">ПР — плановые расходы участка за месяц  <a href="structkuperiod.html#acc821942cb3d705387ff703ddecb2414">Подробнее...</a><br /></td></tr>
+<tr class="separator:acc821942cb3d705387ff703ddecb2414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cab71326c46e6ea6f9b61aa70948928"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928">memos</a></td></tr>
+<tr class="memdesc:a1cab71326c46e6ea6f9b61aa70948928"><td class="mdescLeft">&#160;</td><td class="mdescRight">СЗ — служебные записки сверх плана за месяц  <a href="structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1cab71326c46e6ea6f9b61aa70948928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e09884972aef0fe7f0190404548c50f"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a8e09884972aef0fe7f0190404548c50f">aid_paid</a></td></tr>
+<tr class="memdesc:a8e09884972aef0fe7f0190404548c50f"><td class="mdescLeft">&#160;</td><td class="mdescRight">МП — материальная помощь, выплаченная за месяц  <a href="structkuperiod.html#a8e09884972aef0fe7f0190404548c50f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8e09884972aef0fe7f0190404548c50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb8ec7e413eb24720ea7a6af0e6fa01e"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e">aid_reserve</a></td></tr>
+<tr class="memdesc:abb8ec7e413eb24720ea7a6af0e6fa01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Р — резерв социально-экономического обеспечения пайщиков на следующий месяц  <a href="structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb8ec7e413eb24720ea7a6af0e6fa01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89dd21e6379aeeb47bd86a64fe39be0"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0">aid_unpaid</a></td></tr>
+<tr class="memdesc:aa89dd21e6379aeeb47bd86a64fe39be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Н — невыплаченная часть прошлого резерва  <a href="structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa89dd21e6379aeeb47bd86a64fe39be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b108521897dd8eee3e523a076c7ec6"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6">expenses</a></td></tr>
+<tr class="memdesc:a41b108521897dd8eee3e523a076c7ec6"><td class="mdescLeft">&#160;</td><td class="mdescRight">РК — расходы участка за прогон  <a href="structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a41b108521897dd8eee3e523a076c7ec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcb15ef67087044f1475c2556f546c6"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6">membership</a></td></tr>
+<tr class="memdesc:a0dcb15ef67087044f1475c2556f546c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">М — членский взнос участка за прогон  <a href="structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0dcb15ef67087044f1475c2556f546c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac350cef6a0db5dd5c61af3165685e294"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294">funds_amount</a></td></tr>
+<tr class="memdesc:ac350cef6a0db5dd5c61af3165685e294"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ф — в фонды накопления кооператива  <a href="structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac350cef6a0db5dd5c61af3165685e294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8a612f5c165007b713279641d13c67"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#ade8a612f5c165007b713279641d13c67">branch_amount</a></td></tr>
+<tr class="memdesc:ade8a612f5c165007b713279641d13c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">У — участку на расходы  <a href="structkuperiod.html#ade8a612f5c165007b713279641d13c67">Подробнее...</a><br /></td></tr>
+<tr class="separator:ade8a612f5c165007b713279641d13c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f4133fb7c4f2e496315596ad9a7e792"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792">initiator_amount</a></td></tr>
+<tr class="memdesc:a6f4133fb7c4f2e496315596ad9a7e792"><td class="mdescLeft">&#160;</td><td class="mdescRight">И — инициатору участка  <a href="structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6f4133fb7c4f2e496315596ad9a7e792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80025c163f1317a76a7cf4f9b62224a0"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0">return_amount</a></td></tr>
+<tr class="memdesc:a80025c163f1317a76a7cf4f9b62224a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">В — пайщикам обратно  <a href="structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a80025c163f1317a76a7cf4f9b62224a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfce1afa9d0d0d00d74e83e35f0b69dc"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc">deficit</a></td></tr>
+<tr class="memdesc:abfce1afa9d0d0d00d74e83e35f0b69dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Д — дефицит участка  <a href="structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:abfce1afa9d0d0d00d74e83e35f0b69dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df41c5a6e2f9b6f554f8390546231b4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4">rate_branch</a></td></tr>
+<tr class="memdesc:a7df41c5a6e2f9b6f554f8390546231b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">r_ку — доля стоимости заказа участку (HUNDR_PERCENTS = 100 %)  <a href="structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7df41c5a6e2f9b6f554f8390546231b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8499b655b991e1182173ebba77910efb"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a8499b655b991e1182173ebba77910efb">rate_funds</a></td></tr>
+<tr class="memdesc:a8499b655b991e1182173ebba77910efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">r_ф — доля в фонды  <a href="structkuperiod.html#a8499b655b991e1182173ebba77910efb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8499b655b991e1182173ebba77910efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4858c65cb4fc973b119d866dad9f02f8"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8">rate_initiator</a></td></tr>
+<tr class="memdesc:a4858c65cb4fc973b119d866dad9f02f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">r_и — доля инициатору  <a href="structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4858c65cb4fc973b119d866dad9f02f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee48da598d4f39cfaecd6efb7deb9166"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166">initiator</a></td></tr>
+<tr class="memdesc:aee48da598d4f39cfaecd6efb7deb9166"><td class="mdescLeft">&#160;</td><td class="mdescRight">получатель доли инициатора на момент прогона  <a href="structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee48da598d4f39cfaecd6efb7deb9166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefdb5dd96c49c0714494431305e861a9"><td class="memItemLeft" align="right" valign="top">eosio::time_point_sec&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structkuperiod.html#aefdb5dd96c49c0714494431305e861a9">closed_at</a></td></tr>
+<tr class="memdesc:aefdb5dd96c49c0714494431305e861a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">время расчёта  <a href="structkuperiod.html#aefdb5dd96c49c0714494431305e861a9">Подробнее...</a><br /></td></tr>
+<tr class="separator:aefdb5dd96c49c0714494431305e861a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Итог прогона списания обеспечительной части по кооперативному участку Стола заказов (задача 99D-21, КЭУ-3; документ «Коэффициент экономического участия», разделы 8–9). </p>
+<p >Первого числа ИСТОК отбирает заказы участка, у которых закончился гарантийный срок, и передаёт контракту факты прогона: стоимость этих заказов, собранную обеспечительную часть, плановые расходы, служебные записки и выплаченную материальную помощь за закончившийся месяц. Контракт считает членский взнос участка, отчисления в фонды, долю инициатора, возврат пайщикам и три ставки, по которым затем делится списание каждого заказа (<code>chargeperiod</code>).</p>
+<p >Строка — основание списания для пайщиков: после записи она неизменна. У участка в оперативной памяти цепи не больше двух строк: текущий прогон и предыдущий (его <code>aid_reserve</code> нужен для невыплаченной части). Позапрошлую строку ИСТОК стирает действием <code>delperiod</code>; история прогонов — в базе ИСТОКА.</p>
+<dl class="section user"><dt>table: kuperiods</dt><dd></dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a54e5aba67a7cbc87094e21d6edad1ae1" name="a54e5aba67a7cbc87094e21d6edad1ae1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e5aba67a7cbc87094e21d6edad1ae1">&#9670;&nbsp;</a></span>by_branch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::by_branch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad71155e97a4500310a1209b9cc9e64e1" name="ad71155e97a4500310a1209b9cc9e64e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71155e97a4500310a1209b9cc9e64e1">&#9670;&nbsp;</a></span>by_branch_period()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint128_t kuperiod::by_branch_period </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6c438c8518c5410b8c434591d174184" name="aa6c438c8518c5410b8c434591d174184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c438c8518c5410b8c434591d174184">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a8e09884972aef0fe7f0190404548c50f" name="a8e09884972aef0fe7f0190404548c50f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e09884972aef0fe7f0190404548c50f">&#9670;&nbsp;</a></span>aid_paid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::aid_paid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>МП — материальная помощь, выплаченная за месяц </p>
+
+</div>
+</div>
+<a id="abb8ec7e413eb24720ea7a6af0e6fa01e" name="abb8ec7e413eb24720ea7a6af0e6fa01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb8ec7e413eb24720ea7a6af0e6fa01e">&#9670;&nbsp;</a></span>aid_reserve</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::aid_reserve</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Р — резерв социально-экономического обеспечения пайщиков на следующий месяц </p>
+
+</div>
+</div>
+<a id="aa89dd21e6379aeeb47bd86a64fe39be0" name="aa89dd21e6379aeeb47bd86a64fe39be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89dd21e6379aeeb47bd86a64fe39be0">&#9670;&nbsp;</a></span>aid_unpaid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::aid_unpaid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Н — невыплаченная часть прошлого резерва </p>
+
+</div>
+</div>
+<a id="a44a240699a0447f6ecc818b9507702ed" name="a44a240699a0447f6ecc818b9507702ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a240699a0447f6ecc818b9507702ed">&#9670;&nbsp;</a></span>braname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name kuperiod::braname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>кооперативный участок </p>
+
+</div>
+</div>
+<a id="ade8a612f5c165007b713279641d13c67" name="ade8a612f5c165007b713279641d13c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8a612f5c165007b713279641d13c67">&#9670;&nbsp;</a></span>branch_amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::branch_amount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>У — участку на расходы </p>
+
+</div>
+</div>
+<a id="aefdb5dd96c49c0714494431305e861a9" name="aefdb5dd96c49c0714494431305e861a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefdb5dd96c49c0714494431305e861a9">&#9670;&nbsp;</a></span>closed_at</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::time_point_sec kuperiod::closed_at</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>время расчёта </p>
+
+</div>
+</div>
+<a id="abfce1afa9d0d0d00d74e83e35f0b69dc" name="abfce1afa9d0d0d00d74e83e35f0b69dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfce1afa9d0d0d00d74e83e35f0b69dc">&#9670;&nbsp;</a></span>deficit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::deficit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Д — дефицит участка </p>
+
+</div>
+</div>
+<a id="a41b108521897dd8eee3e523a076c7ec6" name="a41b108521897dd8eee3e523a076c7ec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b108521897dd8eee3e523a076c7ec6">&#9670;&nbsp;</a></span>expenses</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::expenses</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>РК — расходы участка за прогон </p>
+
+</div>
+</div>
+<a id="ac350cef6a0db5dd5c61af3165685e294" name="ac350cef6a0db5dd5c61af3165685e294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac350cef6a0db5dd5c61af3165685e294">&#9670;&nbsp;</a></span>funds_amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::funds_amount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ф — в фонды накопления кооператива </p>
+
+</div>
+</div>
+<a id="af4f71736825ff794688d75841de5a089" name="af4f71736825ff794688d75841de5a089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f71736825ff794688d75841de5a089">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>суррогатный ключ (scope coopname) </p>
+
+</div>
+</div>
+<a id="aee48da598d4f39cfaecd6efb7deb9166" name="aee48da598d4f39cfaecd6efb7deb9166"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee48da598d4f39cfaecd6efb7deb9166">&#9670;&nbsp;</a></span>initiator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name kuperiod::initiator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>получатель доли инициатора на момент прогона </p>
+
+</div>
+</div>
+<a id="a6f4133fb7c4f2e496315596ad9a7e792" name="a6f4133fb7c4f2e496315596ad9a7e792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f4133fb7c4f2e496315596ad9a7e792">&#9670;&nbsp;</a></span>initiator_amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::initiator_amount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>И — инициатору участка </p>
+
+</div>
+</div>
+<a id="a0dcb15ef67087044f1475c2556f546c6" name="a0dcb15ef67087044f1475c2556f546c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dcb15ef67087044f1475c2556f546c6">&#9670;&nbsp;</a></span>membership</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::membership</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>М — членский взнос участка за прогон </p>
+
+</div>
+</div>
+<a id="a1cab71326c46e6ea6f9b61aa70948928" name="a1cab71326c46e6ea6f9b61aa70948928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cab71326c46e6ea6f9b61aa70948928">&#9670;&nbsp;</a></span>memos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::memos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>СЗ — служебные записки сверх плана за месяц </p>
+
+</div>
+</div>
+<a id="acb35489fd6bbc8443497eaa419c22cb3" name="acb35489fd6bbc8443497eaa419c22cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb35489fd6bbc8443497eaa419c22cb3">&#9670;&nbsp;</a></span>period</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t kuperiod::period</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>номер прогона: год × 12 + месяц по часовому поясу кооператива (даёт ИСТОК) </p>
+
+</div>
+</div>
+<a id="acc821942cb3d705387ff703ddecb2414" name="acc821942cb3d705387ff703ddecb2414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc821942cb3d705387ff703ddecb2414">&#9670;&nbsp;</a></span>planned</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::planned</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ПР — плановые расходы участка за месяц </p>
+
+</div>
+</div>
+<a id="a7df41c5a6e2f9b6f554f8390546231b4" name="a7df41c5a6e2f9b6f554f8390546231b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df41c5a6e2f9b6f554f8390546231b4">&#9670;&nbsp;</a></span>rate_branch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::rate_branch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>r_ку — доля стоимости заказа участку (HUNDR_PERCENTS = 100 %) </p>
+
+</div>
+</div>
+<a id="a8499b655b991e1182173ebba77910efb" name="a8499b655b991e1182173ebba77910efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8499b655b991e1182173ebba77910efb">&#9670;&nbsp;</a></span>rate_funds</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::rate_funds</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>r_ф — доля в фонды </p>
+
+</div>
+</div>
+<a id="a4858c65cb4fc973b119d866dad9f02f8" name="a4858c65cb4fc973b119d866dad9f02f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4858c65cb4fc973b119d866dad9f02f8">&#9670;&nbsp;</a></span>rate_initiator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t kuperiod::rate_initiator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>r_и — доля инициатору </p>
+
+</div>
+</div>
+<a id="a80025c163f1317a76a7cf4f9b62224a0" name="a80025c163f1317a76a7cf4f9b62224a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80025c163f1317a76a7cf4f9b62224a0">&#9670;&nbsp;</a></span>return_amount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::return_amount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>В — пайщикам обратно </p>
+
+</div>
+</div>
+<a id="a37e40075d8f313dc0cfdbffabe076804" name="a37e40075d8f313dc0cfdbffabe076804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e40075d8f313dc0cfdbffabe076804">&#9670;&nbsp;</a></span>secured</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::secured</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C — собранная обеспечительная часть прогона </p>
+
+</div>
+</div>
+<a id="a00c6118e206ef082e8eb0a8f06266b61" name="a00c6118e206ef082e8eb0a8f06266b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c6118e206ef082e8eb0a8f06266b61">&#9670;&nbsp;</a></span>turnover</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset kuperiod::turnover</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>T — стоимость заказов прогона </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/domain/<a class="el" href="table__marketplace__periods_8hpp_source.html">table_marketplace_periods.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structkuperiod.html">kuperiod</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

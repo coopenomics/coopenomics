@@ -1,0 +1,28 @@
+var structkuperiod =
+[
+    [ "by_branch", "structkuperiod.html#a54e5aba67a7cbc87094e21d6edad1ae1", null ],
+    [ "by_branch_period", "structkuperiod.html#ad71155e97a4500310a1209b9cc9e64e1", null ],
+    [ "primary_key", "structkuperiod.html#aa6c438c8518c5410b8c434591d174184", null ],
+    [ "aid_paid", "structkuperiod.html#a8e09884972aef0fe7f0190404548c50f", null ],
+    [ "aid_reserve", "structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e", null ],
+    [ "aid_unpaid", "structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0", null ],
+    [ "braname", "structkuperiod.html#a44a240699a0447f6ecc818b9507702ed", null ],
+    [ "branch_amount", "structkuperiod.html#ade8a612f5c165007b713279641d13c67", null ],
+    [ "closed_at", "structkuperiod.html#aefdb5dd96c49c0714494431305e861a9", null ],
+    [ "deficit", "structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc", null ],
+    [ "expenses", "structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6", null ],
+    [ "funds_amount", "structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294", null ],
+    [ "id", "structkuperiod.html#af4f71736825ff794688d75841de5a089", null ],
+    [ "initiator", "structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166", null ],
+    [ "initiator_amount", "structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792", null ],
+    [ "membership", "structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6", null ],
+    [ "memos", "structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928", null ],
+    [ "period", "structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3", null ],
+    [ "planned", "structkuperiod.html#acc821942cb3d705387ff703ddecb2414", null ],
+    [ "rate_branch", "structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4", null ],
+    [ "rate_funds", "structkuperiod.html#a8499b655b991e1182173ebba77910efb", null ],
+    [ "rate_initiator", "structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8", null ],
+    [ "return_amount", "structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0", null ],
+    [ "secured", "structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804", null ],
+    [ "turnover", "structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61", null ]
+];
