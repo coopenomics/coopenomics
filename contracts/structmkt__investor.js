@@ -1,0 +1,26 @@
+var structmkt__investor =
+[
+    [ "by_branch", "structmkt__investor.html#a025def7fe1cb1d657a082dae39699eec", null ],
+    [ "by_branch_user", "structmkt__investor.html#a8174660a9f72d258bc556aa0ba36ef6c", null ],
+    [ "by_done", "structmkt__investor.html#ae33fd18df477f4c4665e70ec6839726e", null ],
+    [ "by_unused", "structmkt__investor.html#a8c0c2a3b7cd2eea6a02bb1a981ad1d92", null ],
+    [ "by_user", "structmkt__investor.html#ab537e08aaabddd1a1dbb9b956870ee77", null ],
+    [ "money_in_or_current", "structmkt__investor.html#af9a08ad3b80016015680e4a8c548a297", null ],
+    [ "primary_key", "structmkt__investor.html#aa1252fb9efea37c9332d80ba2c6f571b", null ],
+    [ "units", "structmkt__investor.html#acaaa1977c9948c3a3857920b3bda2770", null ],
+    [ "unused", "structmkt__investor.html#ad79d1683beefb5386469764f621503bd", null ],
+    [ "acc_done", "structmkt__investor.html#a0fc6c63d348c7685229f678679add22d", null ],
+    [ "acc_join", "structmkt__investor.html#a0d9f5d9b6b4dfd84253a8bddbac1edbc", null ],
+    [ "braname", "structmkt__investor.html#a33bbcfa05e8c5eb0f687f25fe4ce5811", null ],
+    [ "claimed", "structmkt__investor.html#a2d02fb2437dbfb8ea87b375071d22816", null ],
+    [ "id", "structmkt__investor.html#af3c15698a6a829f265c8419f670af7d6", null ],
+    [ "join_seq", "structmkt__investor.html#a60e5e9ac34d012dff2ab9c1b170eeec3", null ],
+    [ "joined_at", "structmkt__investor.html#a22bc9a7b7c9c0bf0d45b3d3f545023c0", null ],
+    [ "money", "structmkt__investor.html#a1d6926474fe21e02847f43a4cb2c9d85", null ],
+    [ "money_in", "structmkt__investor.html#ac4007d1a3e07fa0481ed64c735a7ba5a", null ],
+    [ "property", "structmkt__investor.html#a9f875d689733f9d1c518090843463f44", null ],
+    [ "returned_fixed", "structmkt__investor.html#ad67c0c094041050ff404fd5a040ccd72", null ],
+    [ "status", "structmkt__investor.html#a960b047de9d6aa684a592eadf8956248", null ],
+    [ "used_money", "structmkt__investor.html#a1b513e80a82e3d8b5dcdc1045d299cc1", null ],
+    [ "username", "structmkt__investor.html#ad6dd4170621ec8ffcd0cff628b14bb01", null ]
+];

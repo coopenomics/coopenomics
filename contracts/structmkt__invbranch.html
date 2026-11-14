@@ -1,0 +1,504 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Структура mkt_invbranch</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structmkt__invbranch.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="structmkt__invbranch-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура mkt_invbranch</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Паевые взносы инициаторов одного кооперативного участка и счётчик возврата (CRPS). Строка заводится первым паевым взносом и живёт, пока у участка есть инициаторы.  
+ <a href="structmkt__invbranch.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="table__marketplace__invest_8hpp_source.html">table_marketplace_invest.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:af33c82bd46d95b9aa4c7b68b6cb191e6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#af33c82bd46d95b9aa4c7b68b6cb191e6">primary_key</a> () const</td></tr>
+<tr class="separator:af33c82bd46d95b9aa4c7b68b6cb191e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98f6433a1a3955d74981b9b0fa276598"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a98f6433a1a3955d74981b9b0fa276598">base_money_or_zero</a> () const</td></tr>
+<tr class="separator:a98f6433a1a3955d74981b9b0fa276598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:a7d1a623d28583ab2f35f18ce075576ba"><td class="memItemLeft" align="right" valign="top">eosio::name&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a7d1a623d28583ab2f35f18ce075576ba">braname</a></td></tr>
+<tr class="memdesc:a7d1a623d28583ab2f35f18ce075576ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">кооперативный участок (первичный ключ)  <a href="structmkt__invbranch.html#a7d1a623d28583ab2f35f18ce075576ba">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7d1a623d28583ab2f35f18ce075576ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9527377e394fe69e8b7e842b45ac3227"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a9527377e394fe69e8b7e842b45ac3227">money_total</a></td></tr>
+<tr class="memdesc:a9527377e394fe69e8b7e842b45ac3227"><td class="mdescLeft">&#160;</td><td class="mdescRight">внесено деньгами по строкам инициаторов участка (за вычетом забранного неиспользованного)  <a href="structmkt__invbranch.html#a9527377e394fe69e8b7e842b45ac3227">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9527377e394fe69e8b7e842b45ac3227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e75475e1b3c3bb608ab15c54d3d15a"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#aa5e75475e1b3c3bb608ab15c54d3d15a">property_total</a></td></tr>
+<tr class="memdesc:aa5e75475e1b3c3bb608ab15c54d3d15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">внесено имуществом по цене приёма  <a href="structmkt__invbranch.html#aa5e75475e1b3c3bb608ab15c54d3d15a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa5e75475e1b3c3bb608ab15c54d3d15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea1331910d5213324aa53ca15233c22"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a1ea1331910d5213324aa53ca15233c22">unused_total</a></td></tr>
+<tr class="memdesc:a1ea1331910d5213324aa53ca15233c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">деньги инициаторов, ещё не израсходованные из пула и не забранные заявлением  <a href="structmkt__invbranch.html#a1ea1331910d5213324aa53ca15233c22">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ea1331910d5213324aa53ca15233c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17409bb56b276721dccad31ec99fc342"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a17409bb56b276721dccad31ec99fc342">reserved</a></td></tr>
+<tr class="memdesc:a17409bb56b276721dccad31ec99fc342"><td class="mdescLeft">&#160;</td><td class="mdescRight">выделено в пул под расходы и помощь и ещё не израсходовано  <a href="structmkt__invbranch.html#a17409bb56b276721dccad31ec99fc342">Подробнее...</a><br /></td></tr>
+<tr class="separator:a17409bb56b276721dccad31ec99fc342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af74c75efdca2ea7594d5c62e359b4263"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#af74c75efdca2ea7594d5c62e359b4263">spent_total</a></td></tr>
+<tr class="memdesc:af74c75efdca2ea7594d5c62e359b4263"><td class="mdescLeft">&#160;</td><td class="mdescRight">оплачено из пула всего  <a href="structmkt__invbranch.html#af74c75efdca2ea7594d5c62e359b4263">Подробнее...</a><br /></td></tr>
+<tr class="separator:af74c75efdca2ea7594d5c62e359b4263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dacd557ec831a5d96f7d50e0fdbd6b"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#ad4dacd557ec831a5d96f7d50e0fdbd6b">repaid_total</a></td></tr>
+<tr class="memdesc:ad4dacd557ec831a5d96f7d50e0fdbd6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">возмещено из экономии участка на w.mkt.repay всего  <a href="structmkt__invbranch.html#ad4dacd557ec831a5d96f7d50e0fdbd6b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad4dacd557ec831a5d96f7d50e0fdbd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3026951e831f98952c010a9c743da311"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a3026951e831f98952c010a9c743da311">surplus_total</a></td></tr>
+<tr class="memdesc:a3026951e831f98952c010a9c743da311"><td class="mdescLeft">&#160;</td><td class="mdescRight">переплата на границе завершения возврата, переданная на w.brn.common  <a href="structmkt__invbranch.html#a3026951e831f98952c010a9c743da311">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3026951e831f98952c010a9c743da311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab23fef4037a5ff40c109548994ea5e32"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#ab23fef4037a5ff40c109548994ea5e32">base</a> = 0</td></tr>
+<tr class="memdesc:ab23fef4037a5ff40c109548994ea5e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Σ units активных инициаторов, единицы актива  <a href="structmkt__invbranch.html#ab23fef4037a5ff40c109548994ea5e32">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab23fef4037a5ff40c109548994ea5e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebfc4b205b9919a8263331cd5d49ee9a"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#aebfc4b205b9919a8263331cd5d49ee9a">acc</a> = 0</td></tr>
+<tr class="memdesc:aebfc4b205b9919a8263331cd5d49ee9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">возвращено на единицу базы × SCALE  <a href="structmkt__invbranch.html#aebfc4b205b9919a8263331cd5d49ee9a">Подробнее...</a><br /></td></tr>
+<tr class="separator:aebfc4b205b9919a8263331cd5d49ee9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc2f1b1cfa4e895f74403000fe42f75"><td class="memItemLeft" align="right" valign="top">uint128_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#aacc2f1b1cfa4e895f74403000fe42f75">s_join</a> = 0</td></tr>
+<tr class="memdesc:aacc2f1b1cfa4e895f74403000fe42f75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Σ units_i × acc_join_i по базе  <a href="structmkt__invbranch.html#aacc2f1b1cfa4e895f74403000fe42f75">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacc2f1b1cfa4e895f74403000fe42f75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b0f2f2d92429259fa88482d4fd9131"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#af4b0f2f2d92429259fa88482d4fd9131">s_fixed</a> = 0</td></tr>
+<tr class="memdesc:af4b0f2f2d92429259fa88482d4fd9131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Σ returned_fixed_i по базе  <a href="structmkt__invbranch.html#af4b0f2f2d92429259fa88482d4fd9131">Подробнее...</a><br /></td></tr>
+<tr class="separator:af4b0f2f2d92429259fa88482d4fd9131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c414e884fad773a9470a193a187a22"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#ae7c414e884fad773a9470a193a187a22">join_seq</a> = 0</td></tr>
+<tr class="separator:ae7c414e884fad773a9470a193a187a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13fe25c156fc3e8b62348e25a821f8ca"><td class="memItemLeft" align="right" valign="top">eosio::binary_extension&lt; int64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmkt__invbranch.html#a13fe25c156fc3e8b62348e25a821f8ca">base_money</a></td></tr>
+<tr class="separator:a13fe25c156fc3e8b62348e25a821f8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Паевые взносы инициаторов одного кооперативного участка и счётчик возврата (CRPS). Строка заводится первым паевым взносом и живёт, пока у участка есть инициаторы. </p>
+<p >Обозначения: единицы инициатора <code>units_i = used_money_i + property_i</code> (использованный паевой взнос), база <code>base = Σ units_i</code> по инициаторам в статусе active, возвращено инициатору <code>returned_i = returned_fixed_i + units_i × (acc − acc_join_i) / SCALE</code>. Суммы <code>s_join = Σ units_i × acc_join_i</code> и <code>s_fixed = Σ returned_fixed_i</code> по базе дают непогашенный остаток участка за O(1): <code>base − s_fixed − (acc × base − s_join) / SCALE</code>.</p>
+<dl class="section user"><dt>table: invbranches</dt><dd></dd></dl>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a98f6433a1a3955d74981b9b0fa276598" name="a98f6433a1a3955d74981b9b0fa276598"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98f6433a1a3955d74981b9b0fa276598">&#9670;&nbsp;</a></span>base_money_or_zero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t mkt_invbranch::base_money_or_zero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af33c82bd46d95b9aa4c7b68b6cb191e6" name="af33c82bd46d95b9aa4c7b68b6cb191e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af33c82bd46d95b9aa4c7b68b6cb191e6">&#9670;&nbsp;</a></span>primary_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t mkt_invbranch::primary_key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="aebfc4b205b9919a8263331cd5d49ee9a" name="aebfc4b205b9919a8263331cd5d49ee9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfc4b205b9919a8263331cd5d49ee9a">&#9670;&nbsp;</a></span>acc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t mkt_invbranch::acc = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>возвращено на единицу базы × SCALE </p>
+
+</div>
+</div>
+<a id="ab23fef4037a5ff40c109548994ea5e32" name="ab23fef4037a5ff40c109548994ea5e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23fef4037a5ff40c109548994ea5e32">&#9670;&nbsp;</a></span>base</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t mkt_invbranch::base = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Σ units активных инициаторов, единицы актива </p>
+
+</div>
+</div>
+<a id="a13fe25c156fc3e8b62348e25a821f8ca" name="a13fe25c156fc3e8b62348e25a821f8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13fe25c156fc3e8b62348e25a821f8ca">&#9670;&nbsp;</a></span>base_money</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::binary_extension&lt;int64_t&gt; mkt_invbranch::base_money</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Σ used_money активных инициаторов — денежная часть базы возврата. По ней возмещение делится на долю денег (гасит 26, Дт 86 / Кт 26) и долю имущества (без проводки). Поле добавлено после выпуска таблицы — в конце строки через binary_extension; у строки прежней сборки — ноль. </p>
+
+</div>
+</div>
+<a id="a7d1a623d28583ab2f35f18ce075576ba" name="a7d1a623d28583ab2f35f18ce075576ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1a623d28583ab2f35f18ce075576ba">&#9670;&nbsp;</a></span>braname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::name mkt_invbranch::braname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>кооперативный участок (первичный ключ) </p>
+
+</div>
+</div>
+<a id="ae7c414e884fad773a9470a193a187a22" name="ae7c414e884fad773a9470a193a187a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c414e884fad773a9470a193a187a22">&#9670;&nbsp;</a></span>join_seq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t mkt_invbranch::join_seq = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >счётчик порядка входа инициаторов (очерёдность расхода денег) </p>
+
+</div>
+</div>
+<a id="a9527377e394fe69e8b7e842b45ac3227" name="a9527377e394fe69e8b7e842b45ac3227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9527377e394fe69e8b7e842b45ac3227">&#9670;&nbsp;</a></span>money_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::money_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>внесено деньгами по строкам инициаторов участка (за вычетом забранного неиспользованного) </p>
+
+</div>
+</div>
+<a id="aa5e75475e1b3c3bb608ab15c54d3d15a" name="aa5e75475e1b3c3bb608ab15c54d3d15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e75475e1b3c3bb608ab15c54d3d15a">&#9670;&nbsp;</a></span>property_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::property_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>внесено имуществом по цене приёма </p>
+
+</div>
+</div>
+<a id="ad4dacd557ec831a5d96f7d50e0fdbd6b" name="ad4dacd557ec831a5d96f7d50e0fdbd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4dacd557ec831a5d96f7d50e0fdbd6b">&#9670;&nbsp;</a></span>repaid_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::repaid_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>возмещено из экономии участка на w.mkt.repay всего </p>
+
+</div>
+</div>
+<a id="a17409bb56b276721dccad31ec99fc342" name="a17409bb56b276721dccad31ec99fc342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17409bb56b276721dccad31ec99fc342">&#9670;&nbsp;</a></span>reserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::reserved</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>выделено в пул под расходы и помощь и ещё не израсходовано </p>
+
+</div>
+</div>
+<a id="af4b0f2f2d92429259fa88482d4fd9131" name="af4b0f2f2d92429259fa88482d4fd9131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b0f2f2d92429259fa88482d4fd9131">&#9670;&nbsp;</a></span>s_fixed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t mkt_invbranch::s_fixed = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Σ returned_fixed_i по базе </p>
+
+</div>
+</div>
+<a id="aacc2f1b1cfa4e895f74403000fe42f75" name="aacc2f1b1cfa4e895f74403000fe42f75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacc2f1b1cfa4e895f74403000fe42f75">&#9670;&nbsp;</a></span>s_join</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint128_t mkt_invbranch::s_join = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Σ units_i × acc_join_i по базе </p>
+
+</div>
+</div>
+<a id="af74c75efdca2ea7594d5c62e359b4263" name="af74c75efdca2ea7594d5c62e359b4263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af74c75efdca2ea7594d5c62e359b4263">&#9670;&nbsp;</a></span>spent_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::spent_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>оплачено из пула всего </p>
+
+</div>
+</div>
+<a id="a3026951e831f98952c010a9c743da311" name="a3026951e831f98952c010a9c743da311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3026951e831f98952c010a9c743da311">&#9670;&nbsp;</a></span>surplus_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::surplus_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>переплата на границе завершения возврата, переданная на w.brn.common </p>
+
+</div>
+</div>
+<a id="a1ea1331910d5213324aa53ca15233c22" name="a1ea1331910d5213324aa53ca15233c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea1331910d5213324aa53ca15233c22">&#9670;&nbsp;</a></span>unused_total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">eosio::asset mkt_invbranch::unused_total</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>деньги инициаторов, ещё не израсходованные из пула и не забранные заявлением </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li>cpp/lib/domain/<a class="el" href="table__marketplace__invest_8hpp_source.html">table_marketplace_invest.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structmkt__invbranch.html">mkt_invbranch</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

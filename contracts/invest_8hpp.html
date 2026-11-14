@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Файл cpp/lib/core/marketplace/invest.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('invest_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл invest.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;eosio/asset.hpp&gt;</code><br />
+<code>#include &lt;eosio/eosio.hpp&gt;</code><br />
+</div>
+<p><a href="invest_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_market_invest_1_1_repay_parts.html">MarketInvest::RepayParts</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сумма возмещения, разделённая на долю денег и долю имущества.  <a href="struct_market_invest_1_1_repay_parts.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_market_invest_1_1_claimable.html">MarketInvest::Claimable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:namespace_market_invest"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html">MarketInvest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_marketplace"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html">Marketplace</a></td></tr>
+<tr class="memdesc:namespace_marketplace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Canonical helpers контракта marketplace (Story 11.1). <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a47a891630642057af6c892a84c8aceab"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a47a891630642057af6c892a84c8aceab">MarketInvest::zero_asset</a> ()</td></tr>
+<tr class="separator:a47a891630642057af6c892a84c8aceab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d4ddc245de62dad424b110053f0284"><td class="memItemLeft" align="right" valign="top">uint128_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#ac9d4ddc245de62dad424b110053f0284">MarketInvest::mul</a> (int64_t units, uint64_t acc)</td></tr>
+<tr class="separator:ac9d4ddc245de62dad424b110053f0284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c33afa8bac103022c6ede2102258b0"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a10c33afa8bac103022c6ede2102258b0">MarketInvest::returned_of</a> (const <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i, uint64_t acc)</td></tr>
+<tr class="memdesc:a10c33afa8bac103022c6ede2102258b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возмещено инициатору при текущем счётчике участка, единицы актива.  <a href="namespace_market_invest.html#a10c33afa8bac103022c6ede2102258b0">Подробнее...</a><br /></td></tr>
+<tr class="separator:a10c33afa8bac103022c6ede2102258b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8010c9946975b6289578149db8bfa88"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#aa8010c9946975b6289578149db8bfa88">MarketInvest::done_threshold</a> (const <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i)</td></tr>
+<tr class="memdesc:aa8010c9946975b6289578149db8bfa88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Счётчик участка, при котором использованное инициатора вернётся целиком.  <a href="namespace_market_invest.html#aa8010c9946975b6289578149db8bfa88">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa8010c9946975b6289578149db8bfa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a3b34e9bd0aa33b69f9e1926d11742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#ac1a3b34e9bd0aa33b69f9e1926d11742">MarketInvest::shift_base_money</a> (<a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, int64_t delta)</td></tr>
+<tr class="separator:ac1a3b34e9bd0aa33b69f9e1926d11742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3e21e17274c0f77324a670936ee6c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#ae3e21e17274c0f77324a670936ee6c80">MarketInvest::leave_base</a> (<a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i)</td></tr>
+<tr class="memdesc:ae3e21e17274c0f77324a670936ee6c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывести инициатора из базы участка, зафиксировав накопленное.  <a href="namespace_market_invest.html#ae3e21e17274c0f77324a670936ee6c80">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae3e21e17274c0f77324a670936ee6c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdde4d3f65c3cbff46c8b510270dc15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a9fdde4d3f65c3cbff46c8b510270dc15">MarketInvest::enter_base</a> (<a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i)</td></tr>
+<tr class="memdesc:a9fdde4d3f65c3cbff46c8b510270dc15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ввести инициатора в базу участка с текущей отметкой счётчика.  <a href="namespace_market_invest.html#a9fdde4d3f65c3cbff46c8b510270dc15">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9fdde4d3f65c3cbff46c8b510270dc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adede0af32d6b4a9d8e416e216ddd5010"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#adede0af32d6b4a9d8e416e216ddd5010">MarketInvest::outstanding</a> (const <a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b)</td></tr>
+<tr class="separator:adede0af32d6b4a9d8e416e216ddd5010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae1b77ceb16beb83dccc28b1f6a538b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#aae1b77ceb16beb83dccc28b1f6a538b1">MarketInvest::accept_repay</a> (<a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, int64_t <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>)</td></tr>
+<tr class="memdesc:aae1b77ceb16beb83dccc28b1f6a538b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Принять сумму возмещения в счётчик участка.  <a href="namespace_market_invest.html#aae1b77ceb16beb83dccc28b1f6a538b1">Подробнее...</a><br /></td></tr>
+<tr class="separator:aae1b77ceb16beb83dccc28b1f6a538b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cd9d7bc0d7655ebe11356e6c0ed34e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_market_invest_1_1_repay_parts.html">RepayParts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a85cd9d7bc0d7655ebe11356e6c0ed34e">MarketInvest::split_repay</a> (int64_t <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, int64_t money_units, int64_t units)</td></tr>
+<tr class="separator:a85cd9d7bc0d7655ebe11356e6c0ed34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adffce869a83b8fa7261a2e8688baab91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_market_invest_1_1_repay_parts.html">RepayParts</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#adffce869a83b8fa7261a2e8688baab91">MarketInvest::complete</a> (<a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i)</td></tr>
+<tr class="separator:adffce869a83b8fa7261a2e8688baab91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cf8e24619520e44bcac5b2148dcfe4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_market_invest_1_1_claimable.html">Claimable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a99cf8e24619520e44bcac5b2148dcfe4">MarketInvest::claimable_of</a> (const <a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &amp;b, const <a class="el" href="structmkt__investor.html">mkt_investor</a> &amp;i)</td></tr>
+<tr class="separator:a99cf8e24619520e44bcac5b2148dcfe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cff91458872dc426b3ffed293b15185"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="structmkt__invbranch.html">mkt_invbranch</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a2cff91458872dc426b3ffed293b15185">MarketInvest::get_branch</a> (eosio::name coopname, eosio::name braname)</td></tr>
+<tr class="memdesc:a2cff91458872dc426b3ffed293b15185"><td class="mdescLeft">&#160;</td><td class="mdescRight">Строка участка; без неё паевых взносов в участке нет.  <a href="namespace_market_invest.html#a2cff91458872dc426b3ffed293b15185">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2cff91458872dc426b3ffed293b15185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fc64e837985673078a8aa2cdcbcb76"><td class="memItemLeft" align="right" valign="top">eosio::asset&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a87fc64e837985673078a8aa2cdcbcb76">MarketInvest::free_of</a> (eosio::name coopname, eosio::name braname)</td></tr>
+<tr class="separator:a87fc64e837985673078a8aa2cdcbcb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accf76e700fbd0d31ac06c8a6d2b25471"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#accf76e700fbd0d31ac06c8a6d2b25471">MarketInvest::fund_pool</a> (eosio::name actor, eosio::name coopname, eosio::name braname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:accf76e700fbd0d31ac06c8a6d2b25471"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выделить средства инициаторов под расход или помощь участка (<a class="el" href="classmarketplace.html#a6ac01ba5ae29f12f5390076ccd91eff3" title="Выделение средств инициаторов под расход участка (только branch).">marketplace::fundipool</a>).  <a href="namespace_market_invest.html#accf76e700fbd0d31ac06c8a6d2b25471">Подробнее...</a><br /></td></tr>
+<tr class="separator:accf76e700fbd0d31ac06c8a6d2b25471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e36cc9f98f71c300561582d652d383"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a30e36cc9f98f71c300561582d652d383">MarketInvest::unfund_pool</a> (eosio::name actor, eosio::name coopname, eosio::name braname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a30e36cc9f98f71c300561582d652d383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вернуть невыделенный остаток в средства инициаторов (<a class="el" href="classmarketplace.html#a39be23e1dfc135c0cf25eb2a81a5f184" title="Возврат невыделенного остатка средств инициаторов (только branch).">marketplace::unfundipool</a>).  <a href="namespace_market_invest.html#a30e36cc9f98f71c300561582d652d383">Подробнее...</a><br /></td></tr>
+<tr class="separator:a30e36cc9f98f71c300561582d652d383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c32e2311d26d867716f2da22bfa5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a45c32e2311d26d867716f2da22bfa5b8">MarketInvest::spent_pool</a> (eosio::name actor, eosio::name coopname, eosio::name braname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const checksum256 &amp;hash)</td></tr>
+<tr class="memdesc:a45c32e2311d26d867716f2da22bfa5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расход из средств инициаторов оплачен — в базу возврата (<a class="el" href="classmarketplace.html#ad95fc8b753b333c718266034e9aaf2a6" title="Расход из пула оплачен: деньги инициаторов входят в базу возврата (только branch).">marketplace::spentipool</a>).  <a href="namespace_market_invest.html#a45c32e2311d26d867716f2da22bfa5b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:a45c32e2311d26d867716f2da22bfa5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7656abf5a17ebefea6383719cd04e07d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#a7656abf5a17ebefea6383719cd04e07d">MarketInvest::is_operator</a> (eosio::name coopname, eosio::name braname, eosio::name username)</td></tr>
+<tr class="separator:a7656abf5a17ebefea6383719cd04e07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6872fd4eea15e12f04c4c0da85ef458"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#ab6872fd4eea15e12f04c4c0da85ef458">MarketInvest::has_agreement</a> (eosio::name coopname, eosio::name username, eosio::name braname)</td></tr>
+<tr class="separator:ab6872fd4eea15e12f04c4c0da85ef458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8350975af0574517b1f388c746f4e7e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#ae8350975af0574517b1f388c746f4e7e">MarketInvest::has_investments</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="memdesc:ae8350975af0574517b1f388c746f4e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Есть ли у пайщика строки инициатора: выходу нужно вычесть его из базы.  <a href="namespace_market_invest.html#ae8350975af0574517b1f388c746f4e7e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ae8350975af0574517b1f388c746f4e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6954a3f81a0f076596ba98bc18c356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_market_invest.html#acb6954a3f81a0f076596ba98bc18c356">MarketInvest::check_member_can_exit</a> (eosio::name coopname, eosio::name username)</td></tr>
+<tr class="separator:acb6954a3f81a0f076596ba98bc18c356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4279411aaf321ecd2b854b152c1da99c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a4279411aaf321ecd2b854b152c1da99c">Marketplace::add_investment</a> (eosio::name coopname, eosio::name braname, eosio::name username, eosio::asset money, eosio::asset property)</td></tr>
+<tr class="separator:a4279411aaf321ecd2b854b152c1da99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b901682a36fc015a598958028963d83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a7b901682a36fc015a598958028963d83">Marketplace::route_initiator_share</a> (eosio::name actor, eosio::name coopname, eosio::name braname, eosio::asset <a class="el" href="eosio_8token__tests_8cpp.html#aca469ae89ae00a572ad079f6d8515ce1">amount</a>, const checksum256 &amp;order_hash)</td></tr>
+<tr class="separator:a7b901682a36fc015a598958028963d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d4f4bdce0ec8bfe78b3fcf846c5d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_marketplace.html#a78d4f4bdce0ec8bfe78b3fcf846c5d7c">Marketplace::release_investments_on_exit</a> (eosio::name actor, eosio::name coopname, eosio::name username)</td></tr>
+<tr class="separator:a78d4f4bdce0ec8bfe78b3fcf846c5d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_7da415c6c9db060620fae2ab355398f8.html">core</a></li><li class="navelem"><a class="el" href="dir_65a4cdd495054e5f79deec68f06ba0fd.html">marketplace</a></li><li class="navelem"><a class="el" href="invest_8hpp.html">invest.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>

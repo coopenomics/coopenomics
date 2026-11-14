@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="COOPENOMICS" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="COOPENOMICS" />
+<meta name="twitter:description" content="Документация смарт-контрактов платформы Кооперативной Экономики на языке C/C++" />
+<!-- END twitter metadata -->
+<title>COOPENOMICS: Исходный файл cpp/lib/domain/table_marketplace_periods.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        // Initialize mermaid with auto theme based on current dark mode state
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+        console.log('success mermaid init with theme:', theme);
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/coopenomics" class="github-corner" title="Смотреть исходники на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">COOPENOMICS
+   &#160;<span id="projectnumber">v1</span>
+   </div>
+   <div id="projectbrief">Кооперативная Экономика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('table__marketplace__periods_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">table_marketplace_periods.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="table__marketplace__periods_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../core/ram_payer.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;eosio/asset.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;eosio/binary_extension.hpp&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;eosio/eosio.hpp&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;eosio/time.hpp&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../consts.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;../core/utils.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structkuperiod.html">   33</a></span><span class="keyword">struct </span>[[eosio::table, <a class="code hl_namespace" href="namespaceeosio.html">eosio</a>::<a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>(MARKETPLACE)]] <a class="code hl_struct" href="structkuperiod.html">kuperiod</a> {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structkuperiod.html#af4f71736825ff794688d75841de5a089">   34</a></span>  uint64_t     <a class="code hl_variable" href="structkuperiod.html#af4f71736825ff794688d75841de5a089">id</a>;                 </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structkuperiod.html#a44a240699a0447f6ecc818b9507702ed">   35</a></span>  eosio::name  <a class="code hl_variable" href="structkuperiod.html#a44a240699a0447f6ecc818b9507702ed">braname</a>;            </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3">   36</a></span>  uint32_t     <a class="code hl_variable" href="structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3">period</a>;             </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61">   38</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61">turnover</a>;           </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804">   39</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804">secured</a>;            </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structkuperiod.html#acc821942cb3d705387ff703ddecb2414">   40</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#acc821942cb3d705387ff703ddecb2414">planned</a>;            </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928">   41</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928">memos</a>;              </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structkuperiod.html#a8e09884972aef0fe7f0190404548c50f">   42</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a8e09884972aef0fe7f0190404548c50f">aid_paid</a>;           </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e">   43</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e">aid_reserve</a>;        </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0">   44</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0">aid_unpaid</a>;         </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6">   45</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6">expenses</a>;           </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6">   46</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6">membership</a>;         </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294">   47</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294">funds_amount</a>;       </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structkuperiod.html#ade8a612f5c165007b713279641d13c67">   48</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#ade8a612f5c165007b713279641d13c67">branch_amount</a>;      </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792">   49</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792">initiator_amount</a>;   </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0">   50</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0">return_amount</a>;      </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc">   51</a></span>  eosio::asset <a class="code hl_variable" href="structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc">deficit</a>;            </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4">   53</a></span>  uint64_t     <a class="code hl_variable" href="structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4">rate_branch</a>;        </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structkuperiod.html#a8499b655b991e1182173ebba77910efb">   54</a></span>  uint64_t     <a class="code hl_variable" href="structkuperiod.html#a8499b655b991e1182173ebba77910efb">rate_funds</a>;         </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8">   55</a></span>  uint64_t     <a class="code hl_variable" href="structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8">rate_initiator</a>;     </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166">   57</a></span>  eosio::name  <a class="code hl_variable" href="structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166">initiator</a>;          </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structkuperiod.html#aefdb5dd96c49c0714494431305e861a9">   58</a></span>  eosio::time_point_sec <a class="code hl_variable" href="structkuperiod.html#aefdb5dd96c49c0714494431305e861a9">closed_at</a>; </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// Расходы по цели резерва (задача 99D-34). Хвост строки — только</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">// binary_extension: строки до 99D-34 читаются без этих полей. Поля пишутся</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// всегда вместе; у строки, посчитанной старым узлом, их нет.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structkuperiod.html#a1d8746a504331d1618cc70961eed77b2">   63</a></span>  eosio::binary_extension&lt;eosio::asset&gt; <a class="code hl_variable" href="structkuperiod.html#a1d8746a504331d1618cc70961eed77b2">planned_target</a>; </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structkuperiod.html#a4b0756007e182b5291321d1f6a4cd931">   64</a></span>  eosio::binary_extension&lt;eosio::asset&gt; <a class="code hl_variable" href="structkuperiod.html#a4b0756007e182b5291321d1f6a4cd931">target</a>;         </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structkuperiod.html#a7eb581b4d4502f5e933a83fc439a2dc4">   65</a></span>  eosio::binary_extension&lt;eosio::asset&gt; <a class="code hl_variable" href="structkuperiod.html#a7eb581b4d4502f5e933a83fc439a2dc4">target_prev</a>;    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structkuperiod.html#aba3058114969aa111b1535c7cc83c1ca">   66</a></span>  eosio::binary_extension&lt;eosio::asset&gt; <a class="code hl_variable" href="structkuperiod.html#aba3058114969aa111b1535c7cc83c1ca">target_funded</a>;  </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structkuperiod.html#aa6c438c8518c5410b8c434591d174184">   68</a></span>  uint64_t  <a class="code hl_function" href="structkuperiod.html#aa6c438c8518c5410b8c434591d174184">primary_key</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="structkuperiod.html#af4f71736825ff794688d75841de5a089">id</a>; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structkuperiod.html#a54e5aba67a7cbc87094e21d6edad1ae1">   69</a></span>  uint64_t  <a class="code hl_function" href="structkuperiod.html#a54e5aba67a7cbc87094e21d6edad1ae1">by_branch</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> braname.value; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structkuperiod.html#ad71155e97a4500310a1209b9cc9e64e1">   70</a></span>  uint128_t <a class="code hl_function" href="structkuperiod.html#ad71155e97a4500310a1209b9cc9e64e1">by_branch_period</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_function" href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a>(braname.value, period); }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">typedef</span> eosio::multi_index&lt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="stringliteral">&quot;kuperiods&quot;</span>_n, <a class="code hl_struct" href="structkuperiod.html">kuperiod</a>,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bybranch&quot;</span>_n, eosio::const_mem_fun&lt;kuperiod, uint64_t, &amp;kuperiod::by_branch&gt;&gt;,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    eosio::indexed_by&lt;<span class="stringliteral">&quot;bybrperiod&quot;</span>_n, eosio::const_mem_fun&lt;kuperiod, uint128_t, &amp;kuperiod::by_branch_period&gt;&gt;&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="table__marketplace__periods_8hpp.html#a2a5658dbb165171b03af906968fa273c">   77</a></span>    <a class="code hl_typedef" href="table__marketplace__periods_8hpp.html#a2a5658dbb165171b03af906968fa273c">kuperiods_index</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">// Плательщик за оперативную память строк таблицы — правило в lib/core/ram_payer.hpp.</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="table__marketplace__periods_8hpp.html#a9f929f6b4eafe7542d9edb0a78bc12ec">   80</a></span><a class="code hl_function" href="table__marketplace__periods_8hpp.html#a9f929f6b4eafe7542d9edb0a78bc12ec">RAM_PAYER_CLASS</a>(<a class="code hl_struct" href="structkuperiod.html">kuperiod</a>, <a class="code hl_variable" href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a>);</div>
+<div class="ttc" id="aeosio_8msig__tests_8cpp_html_a2f004bfe4f7133f4d560065c2729e2c8"><div class="ttname"><a href="eosio_8msig__tests_8cpp.html#a2f004bfe4f7133f4d560065c2729e2c8">contract</a></div><div class="ttdeci">contract</div><div class="ttdef"><b>Definition:</b> eosio.msig_tests.cpp:977</div></div>
+<div class="ttc" id="anamespaceeosio_html"><div class="ttname"><a href="namespaceeosio.html">eosio</a></div><div class="ttdef"><b>Definition:</b> eosio.msig.hpp:34</div></div>
+<div class="ttc" id="astructkuperiod_html"><div class="ttname"><a href="structkuperiod.html">kuperiod</a></div><div class="ttdoc">Итог прогона списания обеспечительной части по кооперативному участку Стола заказов (задача 99D-21,...</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:33</div></div>
+<div class="ttc" id="astructkuperiod_html_a00c6118e206ef082e8eb0a8f06266b61"><div class="ttname"><a href="structkuperiod.html#a00c6118e206ef082e8eb0a8f06266b61">kuperiod::turnover</a></div><div class="ttdeci">eosio::asset turnover</div><div class="ttdoc">T — стоимость заказов прогона</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:38</div></div>
+<div class="ttc" id="astructkuperiod_html_a0dcb15ef67087044f1475c2556f546c6"><div class="ttname"><a href="structkuperiod.html#a0dcb15ef67087044f1475c2556f546c6">kuperiod::membership</a></div><div class="ttdeci">eosio::asset membership</div><div class="ttdoc">М — членский взнос участка за прогон</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:46</div></div>
+<div class="ttc" id="astructkuperiod_html_a1cab71326c46e6ea6f9b61aa70948928"><div class="ttname"><a href="structkuperiod.html#a1cab71326c46e6ea6f9b61aa70948928">kuperiod::memos</a></div><div class="ttdeci">eosio::asset memos</div><div class="ttdoc">СЗ — служебные записки сверх плана за месяц</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:41</div></div>
+<div class="ttc" id="astructkuperiod_html_a1d8746a504331d1618cc70961eed77b2"><div class="ttname"><a href="structkuperiod.html#a1d8746a504331d1618cc70961eed77b2">kuperiod::planned_target</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; planned_target</div><div class="ttdoc">ЦП — цель плановых расходов на следующий месяц</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:63</div></div>
+<div class="ttc" id="astructkuperiod_html_a37e40075d8f313dc0cfdbffabe076804"><div class="ttname"><a href="structkuperiod.html#a37e40075d8f313dc0cfdbffabe076804">kuperiod::secured</a></div><div class="ttdeci">eosio::asset secured</div><div class="ttdoc">C — собранная обеспечительная часть прогона</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:39</div></div>
+<div class="ttc" id="astructkuperiod_html_a41b108521897dd8eee3e523a076c7ec6"><div class="ttname"><a href="structkuperiod.html#a41b108521897dd8eee3e523a076c7ec6">kuperiod::expenses</a></div><div class="ttdeci">eosio::asset expenses</div><div class="ttdoc">РК — расходы участка за прогон</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:45</div></div>
+<div class="ttc" id="astructkuperiod_html_a44a240699a0447f6ecc818b9507702ed"><div class="ttname"><a href="structkuperiod.html#a44a240699a0447f6ecc818b9507702ed">kuperiod::braname</a></div><div class="ttdeci">eosio::name braname</div><div class="ttdoc">кооперативный участок</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:35</div></div>
+<div class="ttc" id="astructkuperiod_html_a4858c65cb4fc973b119d866dad9f02f8"><div class="ttname"><a href="structkuperiod.html#a4858c65cb4fc973b119d866dad9f02f8">kuperiod::rate_initiator</a></div><div class="ttdeci">uint64_t rate_initiator</div><div class="ttdoc">r_и — доля инициатору</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:55</div></div>
+<div class="ttc" id="astructkuperiod_html_a4b0756007e182b5291321d1f6a4cd931"><div class="ttname"><a href="structkuperiod.html#a4b0756007e182b5291321d1f6a4cd931">kuperiod::target</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; target</div><div class="ttdoc">T — цель резерва участка: плановые + право получателей помощи</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:64</div></div>
+<div class="ttc" id="astructkuperiod_html_a54e5aba67a7cbc87094e21d6edad1ae1"><div class="ttname"><a href="structkuperiod.html#a54e5aba67a7cbc87094e21d6edad1ae1">kuperiod::by_branch</a></div><div class="ttdeci">uint64_t by_branch() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:69</div></div>
+<div class="ttc" id="astructkuperiod_html_a6f4133fb7c4f2e496315596ad9a7e792"><div class="ttname"><a href="structkuperiod.html#a6f4133fb7c4f2e496315596ad9a7e792">kuperiod::initiator_amount</a></div><div class="ttdeci">eosio::asset initiator_amount</div><div class="ttdoc">И — инициатору участка</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:49</div></div>
+<div class="ttc" id="astructkuperiod_html_a7df41c5a6e2f9b6f554f8390546231b4"><div class="ttname"><a href="structkuperiod.html#a7df41c5a6e2f9b6f554f8390546231b4">kuperiod::rate_branch</a></div><div class="ttdeci">uint64_t rate_branch</div><div class="ttdoc">r_ку — доля стоимости заказа участку (HUNDR_PERCENTS = 100 %)</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:53</div></div>
+<div class="ttc" id="astructkuperiod_html_a7eb581b4d4502f5e933a83fc439a2dc4"><div class="ttname"><a href="structkuperiod.html#a7eb581b4d4502f5e933a83fc439a2dc4">kuperiod::target_prev</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; target_prev</div><div class="ttdoc">F_пр — собранная часть цели прошлой строки</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:65</div></div>
+<div class="ttc" id="astructkuperiod_html_a80025c163f1317a76a7cf4f9b62224a0"><div class="ttname"><a href="structkuperiod.html#a80025c163f1317a76a7cf4f9b62224a0">kuperiod::return_amount</a></div><div class="ttdeci">eosio::asset return_amount</div><div class="ttdoc">В — пайщикам обратно</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:50</div></div>
+<div class="ttc" id="astructkuperiod_html_a8499b655b991e1182173ebba77910efb"><div class="ttname"><a href="structkuperiod.html#a8499b655b991e1182173ebba77910efb">kuperiod::rate_funds</a></div><div class="ttdeci">uint64_t rate_funds</div><div class="ttdoc">r_ф — доля в фонды</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:54</div></div>
+<div class="ttc" id="astructkuperiod_html_a8e09884972aef0fe7f0190404548c50f"><div class="ttname"><a href="structkuperiod.html#a8e09884972aef0fe7f0190404548c50f">kuperiod::aid_paid</a></div><div class="ttdeci">eosio::asset aid_paid</div><div class="ttdoc">МП — материальная помощь, выплаченная за месяц</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:42</div></div>
+<div class="ttc" id="astructkuperiod_html_aa6c438c8518c5410b8c434591d174184"><div class="ttname"><a href="structkuperiod.html#aa6c438c8518c5410b8c434591d174184">kuperiod::primary_key</a></div><div class="ttdeci">uint64_t primary_key() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:68</div></div>
+<div class="ttc" id="astructkuperiod_html_aa89dd21e6379aeeb47bd86a64fe39be0"><div class="ttname"><a href="structkuperiod.html#aa89dd21e6379aeeb47bd86a64fe39be0">kuperiod::aid_unpaid</a></div><div class="ttdeci">eosio::asset aid_unpaid</div><div class="ttdoc">Н — невыплаченная часть прошлого резерва; по формуле 99D-34 — ноль</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:44</div></div>
+<div class="ttc" id="astructkuperiod_html_aba3058114969aa111b1535c7cc83c1ca"><div class="ttname"><a href="structkuperiod.html#aba3058114969aa111b1535c7cc83c1ca">kuperiod::target_funded</a></div><div class="ttdeci">eosio::binary_extension&lt; eosio::asset &gt; target_funded</div><div class="ttdoc">F — собранная часть цели этой строки</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:66</div></div>
+<div class="ttc" id="astructkuperiod_html_abb8ec7e413eb24720ea7a6af0e6fa01e"><div class="ttname"><a href="structkuperiod.html#abb8ec7e413eb24720ea7a6af0e6fa01e">kuperiod::aid_reserve</a></div><div class="ttdeci">eosio::asset aid_reserve</div><div class="ttdoc">ЦМ — накопленное право получателей помощи на следующий месяц (до 99D-34 — Р, сумма строк резерва)</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:43</div></div>
+<div class="ttc" id="astructkuperiod_html_abfce1afa9d0d0d00d74e83e35f0b69dc"><div class="ttname"><a href="structkuperiod.html#abfce1afa9d0d0d00d74e83e35f0b69dc">kuperiod::deficit</a></div><div class="ttdeci">eosio::asset deficit</div><div class="ttdoc">Д — дефицит участка</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:51</div></div>
+<div class="ttc" id="astructkuperiod_html_ac350cef6a0db5dd5c61af3165685e294"><div class="ttname"><a href="structkuperiod.html#ac350cef6a0db5dd5c61af3165685e294">kuperiod::funds_amount</a></div><div class="ttdeci">eosio::asset funds_amount</div><div class="ttdoc">Ф — в фонды накопления кооператива</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:47</div></div>
+<div class="ttc" id="astructkuperiod_html_acb35489fd6bbc8443497eaa419c22cb3"><div class="ttname"><a href="structkuperiod.html#acb35489fd6bbc8443497eaa419c22cb3">kuperiod::period</a></div><div class="ttdeci">uint32_t period</div><div class="ttdoc">номер прогона: год × 12 + месяц по часовому поясу кооператива (даёт ИСТОК)</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:36</div></div>
+<div class="ttc" id="astructkuperiod_html_acc821942cb3d705387ff703ddecb2414"><div class="ttname"><a href="structkuperiod.html#acc821942cb3d705387ff703ddecb2414">kuperiod::planned</a></div><div class="ttdeci">eosio::asset planned</div><div class="ttdoc">ПР — плановые расходы участка за месяц</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:40</div></div>
+<div class="ttc" id="astructkuperiod_html_ad71155e97a4500310a1209b9cc9e64e1"><div class="ttname"><a href="structkuperiod.html#ad71155e97a4500310a1209b9cc9e64e1">kuperiod::by_branch_period</a></div><div class="ttdeci">uint128_t by_branch_period() const</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:70</div></div>
+<div class="ttc" id="astructkuperiod_html_ade8a612f5c165007b713279641d13c67"><div class="ttname"><a href="structkuperiod.html#ade8a612f5c165007b713279641d13c67">kuperiod::branch_amount</a></div><div class="ttdeci">eosio::asset branch_amount</div><div class="ttdoc">У — участку на расходы</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:48</div></div>
+<div class="ttc" id="astructkuperiod_html_aee48da598d4f39cfaecd6efb7deb9166"><div class="ttname"><a href="structkuperiod.html#aee48da598d4f39cfaecd6efb7deb9166">kuperiod::initiator</a></div><div class="ttdeci">eosio::name initiator</div><div class="ttdoc">получатель доли инициатора на момент прогона</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:57</div></div>
+<div class="ttc" id="astructkuperiod_html_aefdb5dd96c49c0714494431305e861a9"><div class="ttname"><a href="structkuperiod.html#aefdb5dd96c49c0714494431305e861a9">kuperiod::closed_at</a></div><div class="ttdeci">eosio::time_point_sec closed_at</div><div class="ttdoc">время расчёта</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:58</div></div>
+<div class="ttc" id="astructkuperiod_html_af4f71736825ff794688d75841de5a089"><div class="ttname"><a href="structkuperiod.html#af4f71736825ff794688d75841de5a089">kuperiod::id</a></div><div class="ttdeci">uint64_t id</div><div class="ttdoc">суррогатный ключ (scope coopname)</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:34</div></div>
+<div class="ttc" id="atable__marketplace__periods_8hpp_html_a2a5658dbb165171b03af906968fa273c"><div class="ttname"><a href="table__marketplace__periods_8hpp.html#a2a5658dbb165171b03af906968fa273c">kuperiods_index</a></div><div class="ttdeci">eosio::multi_index&lt; &quot;kuperiods&quot;_n, kuperiod, eosio::indexed_by&lt;&quot;bybranch&quot;_n, eosio::const_mem_fun&lt; kuperiod, uint64_t, &amp;kuperiod::by_branch &gt; &gt;, eosio::indexed_by&lt;&quot;bybrperiod&quot;_n, eosio::const_mem_fun&lt; kuperiod, uint128_t, &amp;kuperiod::by_branch_period &gt; &gt; &gt; kuperiods_index</div><div class="ttdef"><b>Definition:</b> table_marketplace_periods.hpp:77</div></div>
+<div class="ttc" id="atable__marketplace__periods_8hpp_html_a9f929f6b4eafe7542d9edb0a78bc12ec"><div class="ttname"><a href="table__marketplace__periods_8hpp.html#a9f929f6b4eafe7542d9edb0a78bc12ec">RAM_PAYER_CLASS</a></div><div class="ttdeci">RAM_PAYER_CLASS(kuperiod, contract)</div></div>
+<div class="ttc" id="autils_8hpp_html_a9674246df019d9c71da6884b1fd0fe39"><div class="ttname"><a href="utils_8hpp.html#a9674246df019d9c71da6884b1fd0fe39">combine_ids</a></div><div class="ttdeci">static uint128_t combine_ids(const uint64_t &amp;x, const uint64_t &amp;y)</div><div class="ttdef"><b>Definition:</b> utils.hpp:7</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_df511e5bd85cec96854b39d5e1c27aa8.html">cpp</a></li><li class="navelem"><a class="el" href="dir_7a58a101592a95cebbfd07e6a75340e1.html">lib</a></li><li class="navelem"><a class="el" href="dir_99d6a2ec44a7d22665ead9c94e1d5c22.html">domain</a></li><li class="navelem"><a class="el" href="table__marketplace__periods_8hpp.html">table_marketplace_periods.hpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
