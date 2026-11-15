@@ -27,6 +27,7 @@ nav:
       - Мои заказы: marketplace/orderer/my-orders.md
       - Получение на пункте выдачи: marketplace/orderer/receive.md
       - Гарантийный возврат: marketplace/orderer/returns.md
+      - Обеспечительная часть паевого взноса: marketplace/orderer/order-secure-part-charged.md
       - Заказ до получения: marketplace/orderer/order-no-return-yet.md
       - Пустой каталог: marketplace/orderer/catalog-empty.md
       - Нет заказов: marketplace/orderer/orders-empty.md
@@ -51,6 +52,10 @@ nav:
       - Гарантийные возвраты: marketplace/operator/returns.md
       - Списание на участке: marketplace/operator/writeoffs.md
       - Экономика участка: marketplace/operator/economy.md
+      - Плановые расходы участка: marketplace/branch-chairman/expense-plans.md
+      - Итоги месяцев участка: marketplace/branch-chairman/economy-keu.md
+      - Инициаторы участка: marketplace/branch-chairman/initiators-money.md
+      - Взнос имуществом в участок: marketplace/branch-chairman/initiators-property.md
       - История заказов: marketplace/operator/orders-history.md
       - Поставки на чужом пункте: marketplace/operator/incoming-shipments-foreign.md
     - Стол администратора:

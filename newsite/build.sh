@@ -117,6 +117,16 @@ for key in re.findall(r'<!-- app:([\w-]+) -->', idx):
     idx = re.sub(r'<!-- app:' + key + r' -->.*?<!-- /app -->\n?', '', idx, flags=re.S)
     nav = re.sub(r'^  - [^\n]+:\n    - ' + key + r'/index\.md\n(?:    .*\n|\n)*?(?=^  - |\Z)', '', nav, flags=re.M)
     print(f"  ⓘ приложения {key} в mono нет — снято с обзора и из навигации")
+# То же для отдельной страницы: меню сайта обновляется раньше, чем её текст
+# доезжает с релизом mono, и пункт без файла вёл бы на 404.
+kept = []
+for line in nav.split('\n'):
+    m = re.match(r'^\s+- (?:.+: )?(\S+\.md)\s*$', line)
+    if m and not os.path.isfile(os.path.join(root, 'docs', m.group(1))):
+        print(f"  ⓘ страницы {m.group(1)} в mono нет — пункт снят из навигации")
+        continue
+    kept.append(line)
+nav = '\n'.join(kept)
 open(nav_path, 'w', encoding='utf-8').write(nav)
 open(idx_path, 'w', encoding='utf-8').write(idx)
 PYAPPS
