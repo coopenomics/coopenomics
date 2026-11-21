@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="CDT / eosiolib" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Документация библиотек Contract Development Toolkit (eosiolib)" />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="CDT / eosiolib" />
+<meta name="twitter:description" content="Документация библиотек Contract Development Toolkit (eosiolib)" />
+<!-- END twitter metadata -->
+<title>CDT: Шаблон класса eosio::multi_index&lt; TableName, T, Indices &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (window.mermaid) {
+      try {
+        const isDarkMode = document.documentElement.classList.contains('dark-mode');
+        const theme = isDarkMode ? 'dark' : 'neutral';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: theme,
+          securityLevel: 'loose',
+          fontFamily: 'arial',
+          fontSize: 14
+        });
+      } catch (error) {
+        console.warn('Mermaid initialization error:', error);
+      }
+    }
+  });
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<a href="https://github.com/AntelopeIO/cdt" class="github-corner" title="Исходники CDT на GitHub">
+    <svg viewBox="0 0 250 250" style="position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CDT
+   &#160;<span id="projectnumber">v4.2.0</span>
+   </div>
+   <div id="projectbrief">инструменты разработчика</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classeosio_1_1multi__index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classeosio_1_1multi__index-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Шаблон класса eosio::multi_index&lt; TableName, T, Indices &gt;<div class="ingroups"><a class="el" href="group__contracts.html">API контрактов</a> &raquo; <a class="el" href="group__multiindex.html">Многоиндексная таблица (Multi Index)</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Определяет многоиндексную таблицу COOPOS (Multi Index Table)  
+ <a href="classeosio_1_1multi__index.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="multi__index_8hpp_source.html">multi_index.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:ab46b850d4d0d3da39cd96e77ec10c51e"><td class="memItemLeft" align="right" valign="top">typedef std::reverse_iterator&lt; <a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">const_reverse_iterator</a></td></tr>
+<tr class="memdesc:ab46b850d4d0d3da39cd96e77ec10c51e"><td class="mdescLeft">&#160;</td><td class="mdescRight">struct <a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">multi_index::const_iterator</a>  <a href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab46b850d4d0d3da39cd96e77ec10c51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:gaa081f69f6fa288869d1d5881f0be04dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gaa081f69f6fa288869d1d5881f0be04dd.html#gaa081f69f6fa288869d1d5881f0be04dd">multi_index</a> (<a class="el" href="structeosio_1_1name.html">name</a> code, uint64_t scope)</td></tr>
+<tr class="memdesc:gaa081f69f6fa288869d1d5881f0be04dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">load_object_by_primary_iterator  <a href="group__multiindex_gaa081f69f6fa288869d1d5881f0be04dd.html#gaa081f69f6fa288869d1d5881f0be04dd">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaa081f69f6fa288869d1d5881f0be04dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ef0fb806ad6edf50b670a115fc3d5a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1name.html">name</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga6ef0fb806ad6edf50b670a115fc3d5a1.html#ga6ef0fb806ad6edf50b670a115fc3d5a1">get_code</a> () const</td></tr>
+<tr class="separator:ga6ef0fb806ad6edf50b670a115fc3d5a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0690e9e9a30254240fa0cb6bb12bebf3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga0690e9e9a30254240fa0cb6bb12bebf3.html#ga0690e9e9a30254240fa0cb6bb12bebf3">get_scope</a> () const</td></tr>
+<tr class="separator:ga0690e9e9a30254240fa0cb6bb12bebf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36ad6b1c1013b6f753660b334de96aef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga36ad6b1c1013b6f753660b334de96aef.html#ga36ad6b1c1013b6f753660b334de96aef">cbegin</a> () const</td></tr>
+<tr class="separator:ga36ad6b1c1013b6f753660b334de96aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga060b08a9da300e3a4ab669b35f07c9bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga060b08a9da300e3a4ab669b35f07c9bc.html#ga060b08a9da300e3a4ab669b35f07c9bc">begin</a> () const</td></tr>
+<tr class="separator:ga060b08a9da300e3a4ab669b35f07c9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaece639944fa9031debbd984bbd42485a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gaece639944fa9031debbd984bbd42485a.html#gaece639944fa9031debbd984bbd42485a">cend</a> () const</td></tr>
+<tr class="separator:gaece639944fa9031debbd984bbd42485a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga748fcb4d6a08962ad8a7c92da359e3d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga748fcb4d6a08962ad8a7c92da359e3d7.html#ga748fcb4d6a08962ad8a7c92da359e3d7">end</a> () const</td></tr>
+<tr class="separator:ga748fcb4d6a08962ad8a7c92da359e3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe296816f75cdb69e6698724e7b0c29d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gabe296816f75cdb69e6698724e7b0c29d.html#gabe296816f75cdb69e6698724e7b0c29d">crbegin</a> () const</td></tr>
+<tr class="separator:gabe296816f75cdb69e6698724e7b0c29d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacdc14cc71a43489507341d2709696e7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gacdc14cc71a43489507341d2709696e7d.html#gacdc14cc71a43489507341d2709696e7d">rbegin</a> () const</td></tr>
+<tr class="separator:gacdc14cc71a43489507341d2709696e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ce680bcec3a391e0ad89a1cd1143231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga6ce680bcec3a391e0ad89a1cd1143231.html#ga6ce680bcec3a391e0ad89a1cd1143231">crend</a> () const</td></tr>
+<tr class="separator:ga6ce680bcec3a391e0ad89a1cd1143231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga659b2744975d0a54162c44fbcbc28115"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classeosio_1_1multi__index_ab46b850d4d0d3da39cd96e77ec10c51e.html#ab46b850d4d0d3da39cd96e77ec10c51e">const_reverse_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga659b2744975d0a54162c44fbcbc28115.html#ga659b2744975d0a54162c44fbcbc28115">rend</a> () const</td></tr>
+<tr class="separator:ga659b2744975d0a54162c44fbcbc28115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40c5a0709cff9dbeb7d9e79738d43f53"><td class="memTemplParams" colspan="2">template&lt;typename PK &gt; </td></tr>
+<tr class="memitem:ga40c5a0709cff9dbeb7d9e79738d43f53"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga40c5a0709cff9dbeb7d9e79738d43f53.html#ga40c5a0709cff9dbeb7d9e79738d43f53">lower_bound</a> (PK primary) const</td></tr>
+<tr class="separator:ga40c5a0709cff9dbeb7d9e79738d43f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0170e32a35c3760661784c229d3a9b1a"><td class="memTemplParams" colspan="2">template&lt;typename PK &gt; </td></tr>
+<tr class="memitem:ga0170e32a35c3760661784c229d3a9b1a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga0170e32a35c3760661784c229d3a9b1a.html#ga0170e32a35c3760661784c229d3a9b1a">upper_bound</a> (PK primary) const</td></tr>
+<tr class="separator:ga0170e32a35c3760661784c229d3a9b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b2d26324eb34354f5db2abcf2d87853"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_ga1b2d26324eb34354f5db2abcf2d87853.html#ga1b2d26324eb34354f5db2abcf2d87853">available_primary_key</a> () const</td></tr>
+<tr class="separator:ga1b2d26324eb34354f5db2abcf2d87853"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98fecc3166ebb3746ee810f7f7d9beac"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structeosio_1_1name_a1d269720fd7434429216833187173656.html#a1d269720fd7434429216833187173656">name::raw</a> IndexName&gt; </td></tr>
+<tr class="memitem:ga98fecc3166ebb3746ee810f7f7d9beac"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga98fecc3166ebb3746ee810f7f7d9beac.html#ga98fecc3166ebb3746ee810f7f7d9beac">get_index</a> ()</td></tr>
+<tr class="separator:ga98fecc3166ebb3746ee810f7f7d9beac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6e01877b9862c8193df27f05c305f2c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="structeosio_1_1name_a1d269720fd7434429216833187173656.html#a1d269720fd7434429216833187173656">name::raw</a> IndexName&gt; </td></tr>
+<tr class="memitem:gae6e01877b9862c8193df27f05c305f2c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_gae6e01877b9862c8193df27f05c305f2c.html#gae6e01877b9862c8193df27f05c305f2c">get_index</a> () const</td></tr>
+<tr class="separator:gae6e01877b9862c8193df27f05c305f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad611e3ff51efdf038b934138d071cf83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gad611e3ff51efdf038b934138d071cf83.html#gad611e3ff51efdf038b934138d071cf83">iterator_to</a> (const T &amp;obj) const</td></tr>
+<tr class="separator:gad611e3ff51efdf038b934138d071cf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab64fbf4dd04be357ec0cbbf125a3da5e"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:gab64fbf4dd04be357ec0cbbf125a3da5e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_gab64fbf4dd04be357ec0cbbf125a3da5e.html#gab64fbf4dd04be357ec0cbbf125a3da5e">emplace</a> (<a class="el" href="structeosio_1_1name.html">name</a> payer, Lambda &amp;&amp;constructor)</td></tr>
+<tr class="separator:gab64fbf4dd04be357ec0cbbf125a3da5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b3556ef69c7faa917f185ae33a34442"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:ga4b3556ef69c7faa917f185ae33a34442"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga4b3556ef69c7faa917f185ae33a34442.html#ga4b3556ef69c7faa917f185ae33a34442">modify</a> (<a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a> itr, <a class="el" href="structeosio_1_1name.html">name</a> payer, Lambda &amp;&amp;updater)</td></tr>
+<tr class="separator:ga4b3556ef69c7faa917f185ae33a34442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab44fb8b993970f1b3b7ac5f37cd2d2c9"><td class="memTemplParams" colspan="2">template&lt;typename Lambda &gt; </td></tr>
+<tr class="memitem:gab44fb8b993970f1b3b7ac5f37cd2d2c9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_gab44fb8b993970f1b3b7ac5f37cd2d2c9.html#gab44fb8b993970f1b3b7ac5f37cd2d2c9">modify</a> (const T &amp;obj, <a class="el" href="structeosio_1_1name.html">name</a> payer, Lambda &amp;&amp;updater)</td></tr>
+<tr class="separator:gab44fb8b993970f1b3b7ac5f37cd2d2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02c39a16f0ff568d297f25eb7ed88ac3"><td class="memTemplParams" colspan="2">template&lt;typename PK &gt; </td></tr>
+<tr class="memitem:ga02c39a16f0ff568d297f25eb7ed88ac3"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga02c39a16f0ff568d297f25eb7ed88ac3.html#ga02c39a16f0ff568d297f25eb7ed88ac3">get</a> (PK primary, const char *error_msg=&quot;unable to <a class="el" href="group__multiindex_ga93e51f6a53639f1a45c352f67f5ba3ae.html#ga93e51f6a53639f1a45c352f67f5ba3ae">find</a> key&quot;) const</td></tr>
+<tr class="separator:ga02c39a16f0ff568d297f25eb7ed88ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93e51f6a53639f1a45c352f67f5ba3ae"><td class="memTemplParams" colspan="2">template&lt;typename PK &gt; </td></tr>
+<tr class="memitem:ga93e51f6a53639f1a45c352f67f5ba3ae"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga93e51f6a53639f1a45c352f67f5ba3ae.html#ga93e51f6a53639f1a45c352f67f5ba3ae">find</a> (PK primary) const</td></tr>
+<tr class="separator:ga93e51f6a53639f1a45c352f67f5ba3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50321aa0c8fbdc67768d421950c2ee14"><td class="memTemplParams" colspan="2">template&lt;typename PK &gt; </td></tr>
+<tr class="memitem:ga50321aa0c8fbdc67768d421950c2ee14"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__multiindex_ga50321aa0c8fbdc67768d421950c2ee14.html#ga50321aa0c8fbdc67768d421950c2ee14">require_find</a> (PK primary, const char *error_msg=&quot;unable to <a class="el" href="group__multiindex_ga93e51f6a53639f1a45c352f67f5ba3ae.html#ga93e51f6a53639f1a45c352f67f5ba3ae">find</a> key&quot;) const</td></tr>
+<tr class="separator:ga50321aa0c8fbdc67768d421950c2ee14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad28ac8d91e9af22cbbc12962a805d253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gad28ac8d91e9af22cbbc12962a805d253.html#gad28ac8d91e9af22cbbc12962a805d253">erase</a> (<a class="el" href="structeosio_1_1multi__index_1_1const__iterator.html">const_iterator</a> itr)</td></tr>
+<tr class="separator:gad28ac8d91e9af22cbbc12962a805d253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5f84064eacb4265ad44f15cecebb4be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__multiindex_gac5f84064eacb4265ad44f15cecebb4be.html#gac5f84064eacb4265ad44f15cecebb4be">erase</a> (const T &amp;obj)</td></tr>
+<tr class="separator:gac5f84064eacb4265ad44f15cecebb4be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="structeosio_1_1name_a1d269720fd7434429216833187173656.html#a1d269720fd7434429216833187173656">name::raw</a> TableName, typename T, typename... Indices&gt;<br />
+class eosio::multi_index&lt; TableName, T, Indices &gt;</div><p >Определяет многоиндексную таблицу COOPOS (Multi Index Table) </p>
+<p >API многоиндексных таблиц COOPOS даёт C++-интерфейс к базе данных COOPOS и устроен по образцу Boost Multi Index Container. Многоиндексная таблица COOPOS требует ровно один первичный ключ типа uint64_t. Чтобы таблица могла получать первичный ключ, у хранимого в ней объекта должна быть const-функция-член primary_key(), возвращающая uint64_t. Многоиндексная таблица COOPOS также поддерживает до 16 вторичных индексов. Тип вторичного индекса может быть одним из:</p><ul>
+<li>uint64_t</li>
+<li>uint128_t</li>
+<li>double</li>
+<li>long double</li>
+<li>eosio::checksum256</li>
+</ul>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TableName</td><td>— имя таблицы </td></tr>
+    <tr><td class="paramname">T</td><td>— тип данных, хранимых в таблице </td></tr>
+    <tr><td class="paramname">Indices</td><td>— вторичные индексы таблицы; поддерживается до 16 индексов</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Пример:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;eosiolib/eosio.hpp&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceeosio.html">eosio</a>;</div>
+<div class="line"><span class="keyword">class </span>mycontract: contract {</div>
+<div class="line">  <span class="keyword">struct </span>record {</div>
+<div class="line">    <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a02d21b61eb2a51a93d9af3e0a2a0989a.html#a02d21b61eb2a51a93d9af3e0a2a0989a">uint64_t</a>    primary;</div>
+<div class="line">    <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a02d21b61eb2a51a93d9af3e0a2a0989a.html#a02d21b61eb2a51a93d9af3e0a2a0989a">uint64_t</a>    secondary_1;</div>
+<div class="line">    uint128_t   secondary_2;</div>
+<div class="line">    checksum256 secondary_3;</div>
+<div class="line">    <span class="keywordtype">double</span>      secondary_4;</div>
+<div class="line">    <span class="keywordtype">long</span> <span class="keywordtype">double</span> secondary_5;</div>
+<div class="line">    <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a02d21b61eb2a51a93d9af3e0a2a0989a.html#a02d21b61eb2a51a93d9af3e0a2a0989a">uint64_t</a> primary_key()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> primary; }</div>
+<div class="line">    <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a02d21b61eb2a51a93d9af3e0a2a0989a.html#a02d21b61eb2a51a93d9af3e0a2a0989a">uint64_t</a> get_secondary_1()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> secondary_1; }</div>
+<div class="line">    uint128_t get_secondary_2()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> secondary_2; }</div>
+<div class="line">    checksum256 get_secondary_3()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> secondary_3; }</div>
+<div class="line">    <span class="keywordtype">double</span> get_secondary_4()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> secondary_4; }</div>
+<div class="line">    <span class="keywordtype">long</span> <span class="keywordtype">double</span> get_secondary_5()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> secondary_5; }</div>
+<div class="line">  };</div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    mycontract(name receiver, name <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a810409b760301c0d32156f81dc2da130.html#a810409b760301c0d32156f81dc2da130">code</a>, datastream&lt;const char*&gt; ds):contract(receiver, <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a810409b760301c0d32156f81dc2da130.html#a810409b760301c0d32156f81dc2da130">code</a>, ds){}</div>
+<div class="line">    <span class="keywordtype">void</span> myaction() {</div>
+<div class="line">      <span class="keyword">auto</span> <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a810409b760301c0d32156f81dc2da130.html#a810409b760301c0d32156f81dc2da130">code</a> = _self;</div>
+<div class="line">      <span class="keyword">auto</span> scope = _self;</div>
+<div class="line">      <a class="code hl_function" href="group__multiindex_gaa081f69f6fa288869d1d5881f0be04dd.html#gaa081f69f6fa288869d1d5881f0be04dd" title="load_object_by_primary_iterator">multi_index</a>&lt;<span class="stringliteral">&quot;mytable&quot;</span>_n, record,</div>
+<div class="line">        indexed_by&lt; <span class="stringliteral">&quot;bysecondary1&quot;</span>_n, const_mem_fun&lt;record, uint64_t, &amp;record::get_secondary_1&gt; &gt;,</div>
+<div class="line">        indexed_by&lt; <span class="stringliteral">&quot;bysecondary2&quot;</span>_n, const_mem_fun&lt;record, uint128_t, &amp;record::get_secondary_2&gt; &gt;,</div>
+<div class="line">        indexed_by&lt; <span class="stringliteral">&quot;bysecondary3&quot;</span>_n, const_mem_fun&lt;record, checksum256, &amp;record::get_secondary_3&gt; &gt;,</div>
+<div class="line">        indexed_by&lt; <span class="stringliteral">&quot;bysecondary4&quot;</span>_n, const_mem_fun&lt;record, double, &amp;record::get_secondary_4&gt; &gt;,</div>
+<div class="line">        indexed_by&lt; <span class="stringliteral">&quot;bysecondary5&quot;</span>_n, const_mem_fun&lt;record, long double, &amp;record::get_secondary_5&gt; &gt;</div>
+<div class="line">      &gt; table( <a class="code hl_variable" href="namespaceeosio_1_1internal__use__do__not__use_a810409b760301c0d32156f81dc2da130.html#a810409b760301c0d32156f81dc2da130">code</a>, scope);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"><a class="code hl_define" href="group__dispatcher_ga4c40fe6c9aa739424885e20ed613e545.html#ga4c40fe6c9aa739424885e20ed613e545">EOSIO_DISPATCH</a>( mycontract, (myaction) )</div>
+</div><!-- fragment --> 
+<p class="definition">См. определение в файле <a class="el" href="multi__index_8hpp_source.html">multi_index.hpp</a> строка <a class="el" href="multi__index_8hpp_source.html#l00438">438</a></p>
+</div><hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>libraries/eosiolib/contracts/eosio/<a class="el" href="multi__index_8hpp_source.html">multi_index.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.9.1-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceeosio.html">eosio</a></li><li class="navelem"><a class="el" href="classeosio_1_1multi__index.html">multi_index</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function() {
+     toggleButton = document.createElement('doxygen-awesome-dark-mode-toggle')
+     toggleButton.title = "Toggle Light/Dark Mode"
+     $(document).ready(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+     $(window).resize(function(){
+       document.getElementById("MSearchBox").parentNode.appendChild(toggleButton)
+     })
+   })
+</script>
+</body>
+</html>
