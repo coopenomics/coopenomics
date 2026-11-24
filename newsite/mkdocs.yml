@@ -83,6 +83,10 @@ extra:
     Пайщик: user
     Разработчик: dev
 
+# Описание страницы из первого абзаца, когда поля description нет (Bing Site Scan, 24.11.2026)
+hooks:
+  - hooks/description.py
+
 plugins:
   - search:
       lang: ru

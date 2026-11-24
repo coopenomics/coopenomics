@@ -33,6 +33,8 @@ cp "$NEWSITE/docs/css/blago.css" "$NEWSITE/docs/css/apps-layer.css" "$BUILD/docs
 # собственные ассеты нового сайта (логотипы) кладём ПОСЛЕ слияния чужих,
 # чтобы одноимённые файлы старых сайтов их не перекрыли — см. ниже
 [ -d "$NEWSITE/overrides" ] && cp -r "$NEWSITE/overrides" "$BUILD/overrides"
+# хуки сборки: путь в mkdocs.yml считается от каталога сборки
+cp -r "$NEWSITE/hooks" "$BUILD/hooks"
 
 # макросы SDK/GraphQL живут в mono и работают на весь сайт
 cp "$MONODOCS/main.py" "$BUILD/main.py"
